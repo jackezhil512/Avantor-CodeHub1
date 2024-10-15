@@ -556,7 +556,8 @@ function ApproveProductinMastor(){
 wait(10000);
 setDescription("Click on POU Request Approval");
 click(fallback(`span("PoU Order Request Approval")`));
-setDescription("Click on arrow");
+wait(10000);
+setDescription("Click on Expand All");
 //click(fallback(`custom("mat-icon", "keyboard_arrow_down[1]")`));
 click(fallback(`byXPath('//*[text() = " Expand All "]')`));
   wait(1000);

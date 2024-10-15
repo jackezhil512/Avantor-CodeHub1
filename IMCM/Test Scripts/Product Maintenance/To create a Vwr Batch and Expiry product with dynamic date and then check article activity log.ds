@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'To create a Vwr product with all details filled and then check article activity log.ds' description= '' author= 'null' version= ''>
+<testcase   name= 'To create a Vwr Batch and Expiry product with dynamic date and then check article activity log.ds' description= '' author= 'null' version= ''>
 <dpl filename='REPOSITORY/IMCM-Master-Repository/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
@@ -331,7 +331,6 @@
 <step action='setValue' value='"1"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='numberbox(/mat-input-.*/,_below(div(&quot;Month(s) *[1]&quot;)))' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='numberbox(/mat-input-.*/,_below(div(&quot;Month(s) *[1]&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
@@ -343,7 +342,6 @@
 <step action='setValue' value='"1"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='numberbox(/mat-input-.*/,_below(div(&quot;Days *[1]&quot;)))' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='numberbox(/mat-input-.*/,_below(div(&quot;Month(s) *[1]&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
@@ -481,12 +479,12 @@
    <accessor type='Text' value='div(&quot;PRODUCT ADDED&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='ValidateArtileActivityLogMovementType($VwrBatchExpiryProduct ,&quot;Product Created&quot;)' type='web' desc='Validate Product Created in Article Activity log -As discuss to suresh we hold this step ' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='js' value='ValidateArtileActivityLogMovementType($VwrBatchExpiryProduct ,&quot;Product Created&quot;)' type='web' desc='Validate Product Created in Article Activity log -As discuss to suresh we hold this step ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

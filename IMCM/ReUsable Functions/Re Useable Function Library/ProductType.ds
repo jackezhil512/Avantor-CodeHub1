@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'ProductType.ds' description= '' author= 'null' version= ''>
+<dpl filename='' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='wait' value='100' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='getProduct($producttype)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='getProduct' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='arrproduct' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='if' value='"UOM"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value=' ProductType  = &quot;UOM&quot;' fallback='true' selected='true'/>
+   <accessor type='unknown' value='ProductType' fallback='true' selected='false'/>
+   <accessor type='unknown' value=' ProductType  = &quot;UOM&quot;' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='store' value='"76276-980"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='  Product' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='elseif' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='ProductType = &quot;NormalProduct&quot;' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='"414004-680"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='  product ' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='elseif' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='ProductType = &quot;Batch alone&quot;' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='"500003-966"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='  Product ' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='elseif' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='ProductType = &quot;Batch and expiry&quot;' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='"500004-022"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='  Product ' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='elseif' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='ProductType = &quot;Expiry alone&quot;' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='"76409-318"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='  product' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='elseif' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='ProductType = &quot;Uom-Batch and Expiry with Dynamic&quot;' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='"89374-880"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='  Produt' fallback='true' selected='true'/>
+</dialect>
+</step>
+</testcase>

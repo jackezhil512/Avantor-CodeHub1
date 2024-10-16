@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'TestCase.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/IMCM/IMCM_INPUTFILE.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM Function Library.js"' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)&#10;' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Activities' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='submit(&quot;Activities expand_more&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Consume stock' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Consume Stock &quot;]&apos;).xy(0.41, 0.54 )' fallback='true' selected='true'/>
+   <accessor type='unknown' value='div(&quot;Consume Stock[1]&quot;).xy(0.41, 0.54 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Verify Consume Stock title' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;Consume Stock&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='span(&quot;Consume Stock[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='submit(&quot;align-items-center d-flex nav-label ng-tns-c98-7&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='submit(&quot;Overview expand_more&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/avantor-header/header/section[2]/nav/div/div[3]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/avantor-header/header/section[2]/nav/div/div[3]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/avantor-header[@class=&apos;ng-tns-c98-7 ng-star-inserted&apos;]/header[@class=&apos;toolbar zindex999 ng-tns-c98-7&apos;]/section[@class=&apos;toolbar-navigations ng-tns-c98-7 ng-star-inserted&apos;]/nav[@class=&apos;avantor-navigations ng-tns-c98-7&apos;]/div[@class=&apos;d-flex align-items-center ng-tns-c98-7&apos;]/div[@class=&apos;nav-item ng-tns-c98-7 ng-star-inserted&apos;]/button[@class=&apos;nav-label d-flex align-items-center ng-tns-c98-7&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;section[class=&quot;toolbar-navigations ng-tns-c98-7 ng-star-inserted&quot;] &gt; nav[class=&quot;avantor-navigations ng-tns-c98-7&quot;] &gt; div[class=&quot;d-flex align-items-center ng-tns-c98-7&quot;] &gt; div[class=&quot;nav-item ng-tns-c98-7 ng-star-inserted&quot;] &gt; button[class=&quot;nav-label d-flex align-items-center ng-tns-c98-7&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Parent' value='div(15, _in(custom(&quot;mat-tab-body&quot;, &quot;mat-tab-content-0-2&quot;))).xy(0.23, 0.52 )' fallback='true' selected='true'/>
+   <accessor type='Parent' value='div(15, _in(custom(&quot;mat-tab-body&quot;, {&apos;id&apos;:&apos;mat-tab-content-0-2&apos;}))).xy(0.23, 0.52 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;link-2 mega-menu-link ng-star-inserted ng-tns-c98-7&quot;).xy(0.23, 0.52 )' fallback='true' selected='false'/>
+   <accessor type='Text' value='div(&quot;Article Activity Log[1]&quot;).xy(0.23, 0.52 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-tab-body[@id=&apos;mat-tab-content-0-2&apos;]/div/section/div/div[2]/div/div[2]/div&quot;).xy(0.23, 0.52 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mega-menu-link link-2 ng-tns-c98-7 ng-star-inserted&quot;]&apos;).xy(0.23, 0.52 )' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Article Activity Log &quot;]&apos;).xy(0.23, 0.52 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/avantor-header/header/section[3]/mat-tab-group/div/mat-tab-body[3]/div/section/div/div[2]/div/div[2]/div&apos;).xy(0.23, 0.52 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-tab-content-0-2&apos;)/div[@class=&apos;mat-tab-body-content ng-tns-c105-23 ng-trigger ng-trigger-translateTab&apos;]/section[@class=&apos;route-menu ng-star-inserted&apos;]/div[@class=&apos;row ng-tns-c98-7&apos;]/div[@class=&apos;col route-section ng-tns-c98-7&apos;]/div[@class=&apos;section ng-tns-c98-7&apos;]/div[@class=&apos;ng-tns-c98-7 ng-star-inserted&apos;]/div[@class=&apos;mega-menu-link link-2 ng-tns-c98-7 ng-star-inserted&apos;]&quot;).xy(0.23, 0.52 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;row ng-tns-c98-7&quot;] &gt; div[class=&quot;col route-section ng-tns-c98-7&quot;] &gt; div[class=&quot;section ng-tns-c98-7&quot;] &gt; div[class=&quot;ng-tns-c98-7 ng-star-inserted&quot;] &gt; div[class=&quot;mega-menu-link link-2 ng-tns-c98-7 ng-star-inserted&quot;]&apos;).xy(0.23, 0.52 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.row.ng-tns-c98-7 &gt; .col.route-section.ng-tns-c98-7 &gt; .section.ng-tns-c98-7 &gt; .ng-tns-c98-7.ng-star-inserted &gt; .mega-menu-link.link-2.ng-tns-c98-7.ng-star-inserted&apos;).xy(0.23, 0.52 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='span(&quot;title&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='span(&quot;Activity Log&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-activity-log/div/app-avantor-page-title/div/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;title&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Activity Log&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-activity-log/div/app-avantor-page-title/div/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-activity-log[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4 activity-log-container&apos;]/app-avantor-page-title[1]/div[@class=&apos;page-title-div&apos;]/span[@class=&apos;title&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;page-title-div&quot;] &gt; span[class=&quot;title&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.page-title-div &gt; .title&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"VWR"' type='web' desc='Search Vendor name' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='textbox(/mat-input.*/,_below(span(&quot;Vendor Name&quot;)))' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"VWR"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Checkbox' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//span[@class=&apos;mat-checkbox-frame&apos;])[2]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='clearText' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//table/tbody//tr[1]/td[11]//input&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;(//table/tbody//tr[1]/td[11])&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"10"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//table/tbody//tr[1]/td[11]//input&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;(//table/tbody//tr[1]/td[11])&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Request &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='span(&quot;Request&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Submit Request &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='span(&quot;Submit Request&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Successfully requested products &quot;]&apos;).xy(0.20, 0.63 )' fallback='true' selected='true'/>
+   <accessor type='unknown' value='div(&quot;Successfully requested products[3]&quot;).xy(0.20, 0.63 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

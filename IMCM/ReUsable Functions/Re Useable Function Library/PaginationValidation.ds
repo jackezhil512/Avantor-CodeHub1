@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'PaginationValidation.ds' description= '' author= 'null' version= ''>
+<dpl filename='' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='wait' value='150' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='Verify showing Entries' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='paragraph(&quot;Showing 1  to 10  of  26 Entries&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/pagination-template/div/div[1]/p&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/pagination-template/div/div/p&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-department-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-department-maintenance[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col&apos;]/avantor-table[@class=&apos;ng-tns-c320-69 ng-star-inserted&apos;]/pagination-template[@class=&apos;ng-tns-c320-69 ng-star-inserted&apos;]/div[@class=&apos;pagination mt-5 ng-tns-c320-69&apos;]/div[@class=&apos;col-sm-5 col-lg-5 col-md-5 mobile-pagination ng-tns-c320-69&apos;]/p[@class=&apos;ng-tns-c320-69&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;avantor-table[class=&quot;ng-tns-c320-69 ng-star-inserted&quot;] &gt; pagination-template[class=&quot;ng-tns-c320-69 ng-star-inserted&quot;] &gt; div[class=&quot;pagination mt-5 ng-tns-c320-69&quot;] &gt; div[class=&quot;col-sm-5 col-lg-5 col-md-5 mobile-pagination ng-tns-c320-69&quot;] &gt; p[class=&quot;ng-tns-c320-69&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-tns-c320-69.ng-star-inserted &gt; .ng-tns-c320-69.ng-star-inserted &gt; .pagination.mt-5.ng-tns-c320-69 &gt; .col-sm-5.col-lg-5.col-md-5.mobile-pagination.ng-tns-c320-69 &gt; .ng-tns-c320-69&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='paragraph(&quot;ng-tns-c320-69&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='150' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click on 2nd page ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; 2 &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='span(&quot;2[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/pagination-template/div/div[2]/div[3]/button/span[1]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/pagination-template/div/div[2]/div[3]/button/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-department-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-department-maintenance[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col&apos;]/avantor-table[@class=&apos;ng-tns-c320-69 ng-star-inserted&apos;]/pagination-template[@class=&apos;ng-tns-c320-69 ng-star-inserted&apos;]/div[@class=&apos;pagination mt-5 ng-tns-c320-69&apos;]/div[@class=&apos;col-sm-7 col-lg-7 col-md-7 mobile-pagination-number ng-tns-c320-69&apos;]/div[@class=&apos;ng-tns-c320-69 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator btn-page text-primary mat-icon-button mat-button-base ng-tns-c320-69 ng-star-inserted&apos;]/span[@class=&apos;mat-button-wrapper&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;pagination mt-5 ng-tns-c320-69&quot;] &gt; div[class=&quot;col-sm-7 col-lg-7 col-md-7 mobile-pagination-number ng-tns-c320-69&quot;] &gt; div[class=&quot;ng-tns-c320-69 ng-star-inserted&quot;] &gt; button[class=&quot;mat-focus-indicator btn-page text-primary mat-icon-button mat-button-base ng-tns-c320-69 ng-star-inserted&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-button-wrapper[25]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Verify showing Entries After click on 2nd page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='paragraph(&quot;Showing 11  to 20  of  26 Entries&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/pagination-template/div/div[1]/p&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/pagination-template/div/div/p&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-department-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-department-maintenance[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col&apos;]/avantor-table[@class=&apos;ng-tns-c320-69 ng-star-inserted&apos;]/pagination-template[@class=&apos;ng-tns-c320-69 ng-star-inserted&apos;]/div[@class=&apos;pagination mt-5 ng-tns-c320-69&apos;]/div[@class=&apos;col-sm-5 col-lg-5 col-md-5 mobile-pagination ng-tns-c320-69&apos;]/p[@class=&apos;ng-tns-c320-69&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;avantor-table[class=&quot;ng-tns-c320-69 ng-star-inserted&quot;] &gt; pagination-template[class=&quot;ng-tns-c320-69 ng-star-inserted&quot;] &gt; div[class=&quot;pagination mt-5 ng-tns-c320-69&quot;] &gt; div[class=&quot;col-sm-5 col-lg-5 col-md-5 mobile-pagination ng-tns-c320-69&quot;] &gt; p[class=&quot;ng-tns-c320-69&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-tns-c320-69.ng-star-inserted &gt; .ng-tns-c320-69.ng-star-inserted &gt; .pagination.mt-5.ng-tns-c320-69 &gt; .col-sm-5.col-lg-5.col-md-5.mobile-pagination.ng-tns-c320-69 &gt; .ng-tns-c320-69&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='paragraph(&quot;ng-tns-c320-69&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

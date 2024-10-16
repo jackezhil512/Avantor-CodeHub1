@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'ShowEntries.ds' description= '' author= 'null' version= ''>
+<dpl filename='' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='wait' value='60' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click Show entries' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPath' value='byXPath(&quot;//mat-select[@id=&apos;mat-select-10&apos;]/div/div[2]&quot;).xy(0.13, 0.44 )' fallback='true' selected='true'/>
+   <accessor type='Parent' value='div(2, _in(custom(&quot;mat-select&quot;, {&apos;id&apos;:&apos;mat-select-10&apos;}))).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;mat-select-arrow-wrapper ng-tns-c89-72&quot;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-select-arrow-wrapper ng-tns-c89-72&quot;]&apos;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/div/app-avantor-table-limiter/div/div/div/div[2]/span[2]/mat-form-field/div/div/div[3]/mat-select/div/div[2]&apos;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-select-10&apos;)/div[@class=&apos;mat-select-trigger ng-tns-c89-72&apos;]/div[@class=&apos;mat-select-arrow-wrapper ng-tns-c89-72&apos;]&quot;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;mat-form-field-flex ng-tns-c49-71&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-71&quot;] &gt; mat-select[class=&quot;mat-select show-entries ng-tns-c89-72 ng-tns-c49-71 ng-pristine ng-valid ng-star-inserted ng-touched&quot;] &gt; div[class=&quot;mat-select-trigger ng-tns-c89-72&quot;] &gt; div[class=&quot;mat-select-arrow-wrapper ng-tns-c89-72&quot;]&apos;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-select-10 &gt; .mat-select-trigger.ng-tns-c89-72 &gt; .mat-select-arrow-wrapper.ng-tns-c89-72&apos;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='Parent' value='div(2, _in(custom(&quot;mat-select&quot;, &quot;mat-select-10&quot;))).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='Select All' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; All &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, {&apos;id&apos;:&apos;mat-option-62&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-option-text&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='span(&quot;All[2]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-option[@id=&apos;mat-option-62&apos;]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-option-text&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/mat-option/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-option-62&apos;)/span[@class=&apos;mat-option-text&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;cdk-overlay-pane&quot;] &gt; div[class=&quot;mat-select-panel-wrap ng-tns-c89-72 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted&quot;] &gt; div[class=&quot;ng-tns-c89-72 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary&quot;] &gt; mat-option[class=&quot;mat-option mat-focus-indicator ng-tns-c89-72 ng-star-inserted&quot;] &gt; span[class=&quot;mat-option-text&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-option-62 &gt; .mat-option-text&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, &quot;mat-option-62&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='100' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click Show entries' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPath' value='byXPath(&quot;//mat-select[@id=&apos;mat-select-10&apos;]/div/div[2]&quot;).xy(0.36, 0.74 )' fallback='true' selected='true'/>
+   <accessor type='Parent' value='div(2, _in(custom(&quot;mat-select&quot;, {&apos;id&apos;:&apos;mat-select-10&apos;}))).xy(0.36, 0.74 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;mat-select-arrow-wrapper ng-tns-c89-72&quot;).xy(0.36, 0.74 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-select-arrow-wrapper ng-tns-c89-72&quot;]&apos;).xy(0.36, 0.74 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/div/app-avantor-table-limiter/div/div/div/div[2]/span[2]/mat-form-field/div/div/div[3]/mat-select/div/div[2]&apos;).xy(0.36, 0.74 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-select-10&apos;)/div[@class=&apos;mat-select-trigger ng-tns-c89-72&apos;]/div[@class=&apos;mat-select-arrow-wrapper ng-tns-c89-72&apos;]&quot;).xy(0.36, 0.74 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;mat-form-field-flex ng-tns-c49-71&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-71&quot;] &gt; mat-select[class=&quot;mat-select show-entries ng-tns-c89-72 ng-tns-c49-71 ng-valid ng-star-inserted ng-touched ng-dirty&quot;] &gt; div[class=&quot;mat-select-trigger ng-tns-c89-72&quot;] &gt; div[class=&quot;mat-select-arrow-wrapper ng-tns-c89-72&quot;]&apos;).xy(0.36, 0.74 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-select-10 &gt; .mat-select-trigger.ng-tns-c89-72 &gt; .mat-select-arrow-wrapper.ng-tns-c89-72&apos;).xy(0.36, 0.74 )' fallback='true' selected='false'/>
+   <accessor type='Parent' value='div(2, _in(custom(&quot;mat-select&quot;, &quot;mat-select-10&quot;))).xy(0.36, 0.74 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Select 10 records' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; 10 &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, {&apos;id&apos;:&apos;mat-option-63&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-option-text[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='span(&quot;10&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-option[@id=&apos;mat-option-63&apos;]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/mat-option[2]/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-option-63&apos;)/span[@class=&apos;mat-option-text&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;cdk-overlay-pane&quot;] &gt; div[class=&quot;mat-select-panel-wrap ng-tns-c89-72 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted&quot;] &gt; div[class=&quot;ng-tns-c89-72 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary&quot;] &gt; mat-option[class=&quot;mat-option mat-focus-indicator ng-tns-c89-72 ng-star-inserted&quot;] &gt; span[class=&quot;mat-option-text&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-option-63 &gt; .mat-option-text&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, &quot;mat-option-63&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='150' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='Verify number of entries displayed Message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='paragraph(&quot;Showing 1  to 10  of  17 Entries&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/pagination-template/div/div[1]/p&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/pagination-template/div/div/p&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-department-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-department-maintenance[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col&apos;]/avantor-table[@class=&apos;ng-tns-c320-69 ng-star-inserted&apos;]/pagination-template[@class=&apos;ng-tns-c320-69 ng-star-inserted&apos;]/div[@class=&apos;pagination mt-5 ng-tns-c320-69&apos;]/div[@class=&apos;col-sm-5 col-lg-5 col-md-5 mobile-pagination ng-tns-c320-69&apos;]/p[@class=&apos;ng-tns-c320-69&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;avantor-table[class=&quot;ng-tns-c320-69 ng-star-inserted&quot;] &gt; pagination-template[class=&quot;ng-tns-c320-69 ng-star-inserted&quot;] &gt; div[class=&quot;pagination mt-5 ng-tns-c320-69&quot;] &gt; div[class=&quot;col-sm-5 col-lg-5 col-md-5 mobile-pagination ng-tns-c320-69&quot;] &gt; p[class=&quot;ng-tns-c320-69&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-tns-c320-69.ng-star-inserted &gt; .ng-tns-c320-69.ng-star-inserted &gt; .pagination.mt-5.ng-tns-c320-69 &gt; .col-sm-5.col-lg-5.col-md-5.mobile-pagination.ng-tns-c320-69 &gt; .ng-tns-c320-69&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='paragraph(&quot;ng-tns-c320-69&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='div(&quot;Show All Entries&quot;).xy(0.59, 0.25 )' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/div[1]&apos;).xy(0.59, 0.25 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;avantor-table-div table-limiter d-flex align-items-center justify-content-between table-limiter-container ng-tns-c320-69&quot;]&apos;).xy(0.59, 0.25 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/div&apos;).xy(0.59, 0.25 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-department-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-department-maintenance[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col&apos;]/avantor-table[@class=&apos;ng-tns-c320-69 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-div table-limiter d-flex align-items-center justify-content-between table-limiter-container ng-tns-c320-69&apos;]&quot;).xy(0.59, 0.25 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;app-department-maintenance[class=&quot;ng-star-inserted&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col&quot;] &gt; avantor-table[class=&quot;ng-tns-c320-69 ng-star-inserted&quot;] &gt; div[class=&quot;avantor-table-div table-limiter d-flex align-items-center justify-content-between table-limiter-container ng-tns-c320-69&quot;]&apos;).xy(0.59, 0.25 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .row &gt; .col &gt; .ng-tns-c320-69.ng-star-inserted &gt; .avantor-table-div.table-limiter.d-flex.align-items-center.justify-content-between.table-limiter-container.ng-tns-c320-69&apos;).xy(0.59, 0.25 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;align-items-center avantor-table-div d-flex justify-content-between ng-tns-c320-69 table-limiter table-limiter-container&quot;).xy(0.59, 0.25 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='150' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click Show entries' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPath' value='byXPath(&quot;//mat-select[@id=&apos;mat-select-10&apos;]/div/div[2]&quot;).xy(0.13, 0.44 )' fallback='true' selected='true'/>
+   <accessor type='Parent' value='div(2, _in(custom(&quot;mat-select&quot;, {&apos;id&apos;:&apos;mat-select-10&apos;}))).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;mat-select-arrow-wrapper ng-tns-c89-72&quot;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-select-arrow-wrapper ng-tns-c89-72&quot;]&apos;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/div/app-avantor-table-limiter/div/div/div/div[2]/span[2]/mat-form-field/div/div/div[3]/mat-select/div/div[2]&apos;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-select-10&apos;)/div[@class=&apos;mat-select-trigger ng-tns-c89-72&apos;]/div[@class=&apos;mat-select-arrow-wrapper ng-tns-c89-72&apos;]&quot;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;mat-form-field-flex ng-tns-c49-71&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-71&quot;] &gt; mat-select[class=&quot;mat-select show-entries ng-tns-c89-72 ng-tns-c49-71 ng-pristine ng-valid ng-star-inserted ng-touched&quot;] &gt; div[class=&quot;mat-select-trigger ng-tns-c89-72&quot;] &gt; div[class=&quot;mat-select-arrow-wrapper ng-tns-c89-72&quot;]&apos;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-select-10 &gt; .mat-select-trigger.ng-tns-c89-72 &gt; .mat-select-arrow-wrapper.ng-tns-c89-72&apos;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='Parent' value='div(2, _in(custom(&quot;mat-select&quot;, &quot;mat-select-10&quot;))).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Select All' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; All &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, {&apos;id&apos;:&apos;mat-option-62&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-option-text&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='span(&quot;All[2]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-option[@id=&apos;mat-option-62&apos;]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-option-text&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/mat-option/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-option-62&apos;)/span[@class=&apos;mat-option-text&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;cdk-overlay-pane&quot;] &gt; div[class=&quot;mat-select-panel-wrap ng-tns-c89-72 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted&quot;] &gt; div[class=&quot;ng-tns-c89-72 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary&quot;] &gt; mat-option[class=&quot;mat-option mat-focus-indicator ng-tns-c89-72 ng-star-inserted&quot;] &gt; span[class=&quot;mat-option-text&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-option-62 &gt; .mat-option-text&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, &quot;mat-option-62&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Verify number of entries displayed Message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='paragraph(&quot;Showing 1  to 25  of  26 Entries&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/pagination-template/div/div[1]/p&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/pagination-template/div/div/p&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-department-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-department-maintenance[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col&apos;]/avantor-table[@class=&apos;ng-tns-c320-461 ng-star-inserted&apos;]/pagination-template[@class=&apos;ng-tns-c320-461 ng-star-inserted&apos;]/div[@class=&apos;pagination mt-5 ng-tns-c320-461&apos;]/div[@class=&apos;col-sm-5 col-lg-5 col-md-5 mobile-pagination ng-tns-c320-461&apos;]/p[@class=&apos;ng-tns-c320-461&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;avantor-table[class=&quot;ng-tns-c320-461 ng-star-inserted&quot;] &gt; pagination-template[class=&quot;ng-tns-c320-461 ng-star-inserted&quot;] &gt; div[class=&quot;pagination mt-5 ng-tns-c320-461&quot;] &gt; div[class=&quot;col-sm-5 col-lg-5 col-md-5 mobile-pagination ng-tns-c320-461&quot;] &gt; p[class=&quot;ng-tns-c320-461&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-tns-c320-461.ng-star-inserted &gt; .ng-tns-c320-461.ng-star-inserted &gt; .pagination.mt-5.ng-tns-c320-461 &gt; .col-sm-5.col-lg-5.col-md-5.mobile-pagination.ng-tns-c320-461 &gt; .ng-tns-c320-461&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='paragraph(&quot;ng-tns-c320-461&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='150' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click Show entries' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPath' value='byXPath(&quot;//mat-select[@id=&apos;mat-select-10&apos;]/div/div[2]&quot;).xy(0.13, 0.44 )' fallback='true' selected='true'/>
+   <accessor type='Parent' value='div(2, _in(custom(&quot;mat-select&quot;, {&apos;id&apos;:&apos;mat-select-10&apos;}))).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;mat-select-arrow-wrapper ng-tns-c89-72&quot;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-select-arrow-wrapper ng-tns-c89-72&quot;]&apos;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/div/app-avantor-table-limiter/div/div/div/div[2]/span[2]/mat-form-field/div/div/div[3]/mat-select/div/div[2]&apos;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-select-10&apos;)/div[@class=&apos;mat-select-trigger ng-tns-c89-72&apos;]/div[@class=&apos;mat-select-arrow-wrapper ng-tns-c89-72&apos;]&quot;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;mat-form-field-flex ng-tns-c49-71&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-71&quot;] &gt; mat-select[class=&quot;mat-select show-entries ng-tns-c89-72 ng-tns-c49-71 ng-pristine ng-valid ng-star-inserted ng-touched&quot;] &gt; div[class=&quot;mat-select-trigger ng-tns-c89-72&quot;] &gt; div[class=&quot;mat-select-arrow-wrapper ng-tns-c89-72&quot;]&apos;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-select-10 &gt; .mat-select-trigger.ng-tns-c89-72 &gt; .mat-select-arrow-wrapper.ng-tns-c89-72&apos;).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='Parent' value='div(2, _in(custom(&quot;mat-select&quot;, &quot;mat-select-10&quot;))).xy(0.13, 0.44 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Select 25 records' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; 25 &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, {&apos;id&apos;:&apos;mat-option-34&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-option-text[2]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='span(&quot;25&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-option[@id=&apos;mat-option-34&apos;]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/mat-option[3]/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-option-34&apos;)/span[@class=&apos;mat-option-text&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-option-34 &gt; .mat-option-text&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, &quot;mat-option-34&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Verify number of entries displayed Message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='paragraph(&quot;Showing 1  to 25  of  26 Entries&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/pagination-template/div/div[1]/p&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-department-maintenance/div[3]/div/avantor-table/pagination-template/div/div/p&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-department-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-department-maintenance[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col&apos;]/avantor-table[@class=&apos;ng-tns-c320-461 ng-star-inserted&apos;]/pagination-template[@class=&apos;ng-tns-c320-461 ng-star-inserted&apos;]/div[@class=&apos;pagination mt-5 ng-tns-c320-461&apos;]/div[@class=&apos;col-sm-5 col-lg-5 col-md-5 mobile-pagination ng-tns-c320-461&apos;]/p[@class=&apos;ng-tns-c320-461&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;avantor-table[class=&quot;ng-tns-c320-461 ng-star-inserted&quot;] &gt; pagination-template[class=&quot;ng-tns-c320-461 ng-star-inserted&quot;] &gt; div[class=&quot;pagination mt-5 ng-tns-c320-461&quot;] &gt; div[class=&quot;col-sm-5 col-lg-5 col-md-5 mobile-pagination ng-tns-c320-461&quot;] &gt; p[class=&quot;ng-tns-c320-461&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-tns-c320-461.ng-star-inserted &gt; .ng-tns-c320-461.ng-star-inserted &gt; .pagination.mt-5.ng-tns-c320-461 &gt; .col-sm-5.col-lg-5.col-md-5.mobile-pagination.ng-tns-c320-461 &gt; .ng-tns-c320-461&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='paragraph(&quot;ng-tns-c320-461&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

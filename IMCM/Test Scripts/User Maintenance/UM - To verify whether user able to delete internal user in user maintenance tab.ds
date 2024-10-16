@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'UM - Create internal user in user maintenance tab and check stockroom activity log.ds' description= '' author= 'null' version= ''>
+<testcase   name= 'UM - To verify whether user able to delete internal user in user maintenance tab.ds' description= '' author= 'null' version= ''>
 <dpl filename='REPOSITORY/IMCM/IMCM_INPUTFILE.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
@@ -110,10 +110,10 @@
 </step>
 <step action='store' value='eval(&quot;&apos;Appvance&apos;+ Math.floor(Math.random()*1000000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='   strFirstName' fallback='true' selected='true'/>
+   <accessor type='unknown' value='strFirstName' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='  strFirstName ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='strFirstName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//input[@formcontrolname=&apos;firstName&apos;]&quot;)' fallback='true' selected='true'/>
 </dialect>
@@ -146,7 +146,7 @@
 </step>
 <step action='store' value='eval(&quot;&apos;Coimbatore&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='    strAddress' fallback='true' selected='true'/>
+   <accessor type='unknown' value='strAddress' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='setValue' value='strAddress' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -158,7 +158,7 @@
 </step>
 <step action='store' value='eval(&quot;&apos;Rathinam&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  strCity  ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='strCity' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='setValue' value='strCity' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -210,7 +210,6 @@
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/NavigateToStockRoomActivityLog.ds"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 </testcase>

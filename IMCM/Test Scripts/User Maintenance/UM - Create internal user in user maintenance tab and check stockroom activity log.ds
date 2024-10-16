@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testcase   name= 'UM - Create internal user in user maintenance tab and check stockroom activity log.ds' description= '' author= 'null' version= ''>
-<dpl filename='REPOSITORY/IMCM-Master-Repository-Harish/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='null'/>
+<dpl filename='REPOSITORY/IMCM-Repo/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='wait' value='60' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -18,8 +18,9 @@
 </step>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Repo/IMCM/ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -29,8 +30,9 @@
 </step>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/User Maintenance/User/NavigateToUserMaintenance.ds"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Repo/IMCM/ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/NavigateToUserMaintenance.ds"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/User Maintenance/User/NavigateToUserMaintenance.ds"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -201,8 +203,9 @@
 </step>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/User Maintenance/User/NavigateToUserMaintenance.ds"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Repo/IMCM/ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/NavigateToUserMaintenance.ds"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/User Maintenance/User/NavigateToUserMaintenance.ds"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='deleteinternaluser()' type='web' desc='Delete created internal user' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'TC12 To verify Customize table column by adding some columns to table.ds' description= '' author= 'null' version= ''>
+<dpl filename='{ds}/../IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/IMCM Login.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM_WEB/Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../IMCM_WEB/Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM_Master_Repo/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM Master repo2/IMCM Function Library.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login to IMCM as Normal User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on customized table link' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='image(0, _in(submit({&apos;aria-label&apos;:&apos;Table Customize&apos;})))' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"Created"' type='web' desc='Search with created' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='textbox(0, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-0&apos;})))' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click2' value='' type='web' desc='select the created column' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='click on save button' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;Save&quot;]&apos;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='verify the created column' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Created Date&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/thead/tr[1]/th[7]/div/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Created Date &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/thead/tr/th[7]/div/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-home-layout[@class=&apos;ng-star-inserted&apos;]/app-dashboard[@class=&apos;ng-tns-c369-11 ng-star-inserted&apos;]/main[@class=&apos;d-flex flex-row justify-content-between dashboard ng-tns-c369-11&apos;]/section[@class=&apos;container-fluid ng-tns-c369-11 dashboard-table-container&apos;]/div[@class=&apos;row ng-tns-c369-11 ng-star-inserted&apos;]/div[@class=&apos;w-100 ng-tns-c369-11&apos;]/app-quick-action-widget[@class=&apos;ng-tns-c369-11&apos;]/div[@class=&apos;quick-action-widget table-container&apos;]/avantor-table[@class=&apos;ng-tns-c320-14 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c320-14&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c320-14 table dashboard-main-table&apos;]/thead[1]/tr[@class=&apos;mat-header-row cdk-header-row row-header main-row-header ng-tns-c320-14 ng-star-inserted&apos;]/th[@class=&apos;mat-header-cell cdk-header-cell header cdk-column-createdDate mat-column-createdDate ng-tns-c320-14 ng-star-inserted mat-table-sticky&apos;]/div[@class=&apos;table-header ng-tns-c320-14 is-sortable&apos;]/span[@class=&apos;header-label ng-tns-c320-14&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;tr[class=&quot;mat-header-row cdk-header-row row-header main-row-header ng-tns-c320-14 ng-star-inserted&quot;] &gt; th[class=&quot;mat-header-cell cdk-header-cell header cdk-column-createdDate mat-column-createdDate ng-tns-c320-14 ng-star-inserted mat-table-sticky&quot;] &gt; div[class=&quot;table-header ng-tns-c320-14 is-sortable&quot;] &gt; span[class=&quot;header-label ng-tns-c320-14&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.mat-header-row.cdk-header-row.row-header.main-row-header.ng-tns-c320-14.ng-star-inserted &gt; .mat-header-cell.cdk-header-cell.header.cdk-column-createdDate.mat-column-createdDate.ng-tns-c320-14.ng-star-inserted.mat-table-sticky &gt; .table-header.ng-tns-c320-14.is-sortable &gt; .header-label.ng-tns-c320-14&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;header-label ng-tns-c320-14[4]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on customized table link' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='image(0, _in(submit({&apos;aria-label&apos;:&apos;Table Customize&apos;})))' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"Created"' type='web' desc='search with created' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Parent' value='textbox(0, _in(custom(&quot;mat-dialog-container&quot;, &quot;mat-dialog-1&quot;)))' fallback='true' selected='true'/>
+   <accessor type='Parent' value='textbox(0, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-1&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-23&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='textbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-tns-c49-71&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;mat-input-23&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-23&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-71 cdk-text-field-autofill-monitored&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-dialog-customize-table/mat-dialog-content/section/div/mat-form-field/div/div/div[4]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-23&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field drp-search-filter ng-tns-c49-71 mat-primary ng-star-inserted mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float mat-focused&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-71&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-71&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-71&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-71 cdk-text-field-autofill-monitored&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-23&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click2' value='' type='web' desc='unchecked the created column' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click2' value='' type='web' desc='click on save button' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;Save&quot;]&apos;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div(/Customize Table Successful.*/)' fallback='true' selected='true'/>
+</dialect>
+</step>
+</testcase>

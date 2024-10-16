@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'TC11 To verify Product details displayed by clicking catalog number and description.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/IMCM Master repo2/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM Master repo2/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/IMCM Login.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM_Master_Repo/Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM_Master_Repo/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login to IMCM as Normal User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"414004-680"' type='web' desc='Enter the catalog number' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='textbox(/mat-input-.*/,_below(span(&quot;Catalog Number&quot;)))' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click from catalog column' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='link(&quot;414004-680&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='Verify the Popup' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='heading2(&quot;VWR MASK BREATHABLE CS500&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Close the popup' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Close&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click from description column' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='link(&quot;VWR MASK BREATHABLE CS500&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='verify the popup' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='heading2(&quot;VWR MASK BREATHABLE CS500&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Close&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+</testcase>

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'TC07 To perform Stock correction in Dashboard action list and then check in Article Activity Log.ds' description= '' author= 'null' version= ''>
+<dpl filename='{ds}/../IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/IMCM Login.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository/Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository/IMCM Function Library.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login to IMCM as Normal User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='AddProductsToList([$NORMAL_PRODUCT,$UOM_PRODUCT,$BATCHANDEXPIRY_PRODUCT, $BATCHALONE_PRODUCT, $EXPIRYALONE_PRODUCT,$UOMBATCHANDEXPIRYWITHDYNAMIC_PRODUCT])' type='web' desc='Add Products to Action List' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click Action List' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;list&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Select Activities Drop Down in Action List' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Attribute' value='submit({&apos;type&apos;:&apos;submit&apos;})' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Select Stock Correction in Action List' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Stock Correction&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click Next' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;arrow_forward&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click Reason Code drop down' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos;Select Reason Code&apos;]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Selecting a reason code for stock correction' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Breakage&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"10"' type='web' desc='set actual quantity for UOM BATCH AND EXPIRY WITH DYNAMIC_PRODUCT' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='numberbox(/cdk-text-field-.*/,_below(span(&quot;Actual Qty[0]&quot;)))' fallback='true' selected='true'/>
+   <accessor type='unknown' value='numberbox(/cdk-text-field-.*/,_below(span(&quot;Actual Qty[1]&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"10"' type='web' desc='set actual quantity for EXPIRY ALONE_PRODUCT' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='numberbox(/cdk-text-field-.*/,_below(span(&quot;Actual Qty[1]&quot;)))' fallback='true' selected='true'/>
+   <accessor type='unknown' value='numberbox(/cdk-text-field-.*/,_below(span(&quot;Actual Qty[1]&quot;)))' fallback='true' selected='false'/>
+   <accessor type='unknown' value='numberbox(/cdk-text-field-.*/,_below(span(&quot;Actual Qty[1]&quot;)))' fallback='true' selected='false'/>
+   <accessor type='unknown' value='numberbox(/cdk-text-field-.*/,_below(span(&quot;Actual Qty[1]&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"10"' type='web' desc='set actual quantity for BATCH ALONE_PRODUCT' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='numberbox(/cdk-text-field-.*/,_below(span(&quot;Actual Qty[2]&quot;)))' fallback='true' selected='true'/>
+   <accessor type='unknown' value='numberbox(/cdk-text-field-.*/,_below(span(&quot;Actual Qty[1]&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"10"' type='web' desc='set actual quantity for BATCH AND EXPIRY_PRODUCT' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='numberbox(/cdk-text-field-.*/,_below(span(&quot;Actual Qty[3]&quot;)))' fallback='true' selected='true'/>
+   <accessor type='unknown' value='numberbox(/cdk-text-field-.*/,_below(span(&quot;Actual Qty[1]&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='store' value='&quot;(//a[contains(text(),&apos;Temp&apos;)]//following::input)[4]&quot;.replace(&quot;Temp&quot;,$BATCHALONE_PRODUCT)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='strxpath' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"10"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(strxpath)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;strxpath&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click Correct Stock' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Correct Stock&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='Verify if Stock Correction is successful pop up is displayed' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div([&quot;StockCorrection is successfully com&quot;])' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='setOperation(&quot;Stock Corrected&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='ValidateStockroomActivity([$NORMAL_PRODUCT,$UOM_PRODUCT,$BATCHANDEXPIRY_PRODUCT, $BATCHALONE_PRODUCT, $EXPIRYALONE_PRODUCT,$UOMBATCHANDEXPIRYWITHDYNAMIC_PRODUCT])' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+</testcase>

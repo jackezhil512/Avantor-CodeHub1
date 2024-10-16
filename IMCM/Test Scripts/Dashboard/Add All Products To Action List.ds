@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'Add All Products To Action List.ds' description= '' author= 'null' version= ''>
+<dpl filename='{ds}/../IMCM_INPUTFILE/IMCM_INPUTFILE.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;more_horiz&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[1]/app-kpi-widget/div/div/div[3]/button/span[1]/span/span[4]/span/mat-icon&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-icon notranslate clear-icon material-icons mat-icon-no-color action-upload-icon&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;more_horiz&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div/app-kpi-widget/div/div/div[3]/button/span/span/span[4]/span/mat-icon&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-home-layout[@class=&apos;ng-star-inserted&apos;]/app-dashboard[@class=&apos;ng-tns-c369-11 ng-star-inserted&apos;]/main[@class=&apos;d-flex flex-row justify-content-between dashboard ng-tns-c369-11&apos;]/section[@class=&apos;container-fluid ng-tns-c369-11 dashboard-table-container&apos;]/div[@class=&apos;pt-4 kpi-container ng-tns-c369-11 ng-star-inserted&apos;]/app-kpi-widget[@class=&apos;ng-tns-c369-11&apos;]/div[@class=&apos;w-100 justify-content-between mb-3 banner&apos;]/div[@class=&apos;row kpi-row&apos;]/div[@class=&apos;col-md-4 right-item pr-sm-0&apos;]/button[@class=&apos;mat-focus-indicator widget-item-dashboard flex-row align-items-center w-100 text-primary mat-button-disabled btn-items-onlist mat-stroked-button mat-button-base&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[@class=&apos;d-flex align-items-center pb-2 w-100&apos;]/span[@class=&apos;clear-container upload-box&apos;]/span[@class=&apos;mat-menu-trigger&apos;]/mat-icon[@class=&apos;mat-icon notranslate clear-icon material-icons mat-icon-no-color action-upload-icon&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;span[class=&quot;mat-button-wrapper&quot;] &gt; span[class=&quot;d-flex align-items-center pb-2 w-100&quot;] &gt; span[class=&quot;clear-container upload-box&quot;] &gt; span[class=&quot;mat-menu-trigger&quot;] &gt; mat-icon[class=&quot;mat-icon notranslate clear-icon material-icons mat-icon-no-color action-upload-icon&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.mat-button-wrapper &gt; .d-flex.align-items-center.pb-2.w-100 &gt; .clear-container.upload-box &gt; .mat-menu-trigger &gt; .mat-icon.notranslate.clear-icon.material-icons.mat-icon-no-color.action-upload-icon&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='custom(&quot;mat-icon&quot;, &quot;action-upload-icon clear-icon mat-icon mat-icon-no-color material-icons notranslate&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Clear products from action list' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Parent' value='listItem(0, _in(div(&quot;mat-menu-panel-1&quot;)))' fallback='true' selected='true'/>
+   <accessor type='Parent' value='listItem(0, _in(div({&apos;id&apos;:&apos;mat-menu-panel-1&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='listItem(&quot;cdk-focused cdk-mouse-focused mat-focus-indicator mat-menu-item ng-tns-c270-13&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='listItem(&quot;closeClear List&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;mat-menu-panel-1&apos;]/div/li&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-focus-indicator mat-menu-item ng-tns-c270-13 cdk-focused cdk-mouse-focused&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/li&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-menu-panel-1&apos;)/div[@class=&apos;mat-menu-content ng-tns-c270-13&apos;]/li[@class=&apos;mat-focus-indicator mat-menu-item ng-tns-c270-13 cdk-focused cdk-mouse-focused&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='listItem({&apos;tabindex&apos;:&apos;0&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;cdk-overlay-connected-position-bounding-box&quot;] &gt; div[class=&quot;cdk-overlay-pane&quot;] &gt; div[class=&quot;mat-menu-panel ng-trigger ng-trigger-transformMenu ng-tns-c270-13 clear-list-menu mat-menu-after mat-menu-below mat-elevation-z4 ng-star-inserted&quot;] &gt; div[class=&quot;mat-menu-content ng-tns-c270-13&quot;] &gt; li[class=&quot;mat-focus-indicator mat-menu-item ng-tns-c270-13 cdk-focused cdk-mouse-focused&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-menu-panel-1 &gt; .mat-menu-content.ng-tns-c270-13 &gt; .mat-focus-indicator.mat-menu-item.ng-tns-c270-13.cdk-focused.cdk-mouse-focused&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='$NORMAL_PRODUCT' type='web' desc='Set product' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-8&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='textbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-33 ng-touched ng-valid&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;mat-input-8&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-8&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-33 ng-valid cdk-text-field-autofill-monitored ng-dirty ng-touched&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/thead/tr[2]/th[3]/div/avantor-table-filter/mat-form-field/div/div/div[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-8&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field search-bar w-100 ng-tns-c49-33 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-can-float mat-form-field-should-float ng-valid ng-star-inserted ng-dirty ng-touched mat-focused&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-33&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-33&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-33&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-33 ng-valid cdk-text-field-autofill-monitored ng-dirty ng-touched&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-8&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='300' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"1"' type='web' desc='Set Quantity' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-33&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='numberbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-107 ng-untouched ng-valid text-center&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='numberbox(&quot;mat-input-33&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-33&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control text-center ng-tns-c49-107 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/tbody/tr/td[7]/div/mat-form-field/div/div/div[3]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-33&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='numberbox({&apos;min&apos;:&apos;0&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field txt-qty ng-tns-c49-107 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-valid ng-star-inserted mat-focused ng-dirty&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-107&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-107&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-107&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control text-center ng-tns-c49-107 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-33&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='300' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Add to List[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(1, _in(submit({&apos;id&apos;:&apos;dsh_action_list_03&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//button[@id=&apos;dsh_action_list_03&apos;]/span[1]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/tbody/tr/td[9]/div/button/span/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;dsh_action_list_03&apos;)/span[@class=&apos;mat-button-wrapper&apos;]/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(1, _in(submit(&quot;dsh_action_list_03&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='$UOM_PRODUCT' type='web' desc='Set product' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-8&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='textbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-33 ng-touched ng-valid&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;mat-input-8&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-8&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-33 ng-valid cdk-text-field-autofill-monitored ng-dirty ng-touched&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/thead/tr[2]/th[3]/div/avantor-table-filter/mat-form-field/div/div/div[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-8&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field search-bar w-100 ng-tns-c49-33 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-can-float mat-form-field-should-float ng-valid ng-star-inserted ng-dirty ng-touched mat-focused&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-33&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-33&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-33&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-33 ng-valid cdk-text-field-autofill-monitored ng-dirty ng-touched&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-8&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='300' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"1"' type='web' desc='Set Quantity' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-33&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='numberbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-107 ng-untouched ng-valid text-center&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='numberbox(&quot;mat-input-33&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-33&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control text-center ng-tns-c49-107 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/tbody/tr/td[7]/div/mat-form-field/div/div/div[3]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-33&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='numberbox({&apos;min&apos;:&apos;0&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field txt-qty ng-tns-c49-107 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-valid ng-star-inserted mat-focused ng-dirty&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-107&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-107&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-107&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control text-center ng-tns-c49-107 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-33&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='300' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Add to List[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(1, _in(submit({&apos;id&apos;:&apos;dsh_action_list_03&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//button[@id=&apos;dsh_action_list_03&apos;]/span[1]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/tbody/tr/td[9]/div/button/span/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;dsh_action_list_03&apos;)/span[@class=&apos;mat-button-wrapper&apos;]/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(1, _in(submit(&quot;dsh_action_list_03&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='$BATCHANDEXPIRY_PRODUCT' type='web' desc='Set product' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-8&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='textbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-33 ng-touched ng-valid&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;mat-input-8&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-8&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-33 ng-valid cdk-text-field-autofill-monitored ng-dirty ng-touched&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/thead/tr[2]/th[3]/div/avantor-table-filter/mat-form-field/div/div/div[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-8&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field search-bar w-100 ng-tns-c49-33 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-can-float mat-form-field-should-float ng-valid ng-star-inserted ng-dirty ng-touched mat-focused&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-33&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-33&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-33&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-33 ng-valid cdk-text-field-autofill-monitored ng-dirty ng-touched&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-8&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='300' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"1"' type='web' desc='Set Quantity' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-33&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='numberbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-107 ng-untouched ng-valid text-center&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='numberbox(&quot;mat-input-33&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-33&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control text-center ng-tns-c49-107 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/tbody/tr/td[7]/div/mat-form-field/div/div/div[3]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-33&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='numberbox({&apos;min&apos;:&apos;0&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field txt-qty ng-tns-c49-107 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-valid ng-star-inserted mat-focused ng-dirty&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-107&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-107&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-107&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control text-center ng-tns-c49-107 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-33&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='300' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Add to List[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(1, _in(submit({&apos;id&apos;:&apos;dsh_action_list_03&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//button[@id=&apos;dsh_action_list_03&apos;]/span[1]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/tbody/tr/td[9]/div/button/span/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;dsh_action_list_03&apos;)/span[@class=&apos;mat-button-wrapper&apos;]/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(1, _in(submit(&quot;dsh_action_list_03&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='$BATCHALONE_PRODUCT' type='web' desc='Set product' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-8&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='textbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-33 ng-touched ng-valid&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;mat-input-8&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-8&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-33 ng-valid cdk-text-field-autofill-monitored ng-dirty ng-touched&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/thead/tr[2]/th[3]/div/avantor-table-filter/mat-form-field/div/div/div[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-8&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field search-bar w-100 ng-tns-c49-33 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-can-float mat-form-field-should-float ng-valid ng-star-inserted ng-dirty ng-touched mat-focused&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-33&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-33&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-33&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-33 ng-valid cdk-text-field-autofill-monitored ng-dirty ng-touched&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-8&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='300' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"1"' type='web' desc='Set Quantity' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-33&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='numberbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-107 ng-untouched ng-valid text-center&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='numberbox(&quot;mat-input-33&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-33&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control text-center ng-tns-c49-107 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/tbody/tr/td[7]/div/mat-form-field/div/div/div[3]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-33&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='numberbox({&apos;min&apos;:&apos;0&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field txt-qty ng-tns-c49-107 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-valid ng-star-inserted mat-focused ng-dirty&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-107&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-107&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-107&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control text-center ng-tns-c49-107 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-33&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='300' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Add to List[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(1, _in(submit({&apos;id&apos;:&apos;dsh_action_list_03&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//button[@id=&apos;dsh_action_list_03&apos;]/span[1]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/tbody/tr/td[9]/div/button/span/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;dsh_action_list_03&apos;)/span[@class=&apos;mat-button-wrapper&apos;]/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(1, _in(submit(&quot;dsh_action_list_03&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='$EXPIRYALONE_PRODUCT' type='web' desc='Set product' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-8&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='textbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-33 ng-touched ng-valid&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;mat-input-8&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-8&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-33 ng-valid cdk-text-field-autofill-monitored ng-dirty ng-touched&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/thead/tr[2]/th[3]/div/avantor-table-filter/mat-form-field/div/div/div[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-8&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field search-bar w-100 ng-tns-c49-33 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-can-float mat-form-field-should-float ng-valid ng-star-inserted ng-dirty ng-touched mat-focused&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-33&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-33&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-33&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-33 ng-valid cdk-text-field-autofill-monitored ng-dirty ng-touched&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-8&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='300' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"1"' type='web' desc='Set Quantity' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-33&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='numberbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-107 ng-untouched ng-valid text-center&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='numberbox(&quot;mat-input-33&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-33&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control text-center ng-tns-c49-107 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/tbody/tr/td[7]/div/mat-form-field/div/div/div[3]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-33&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='numberbox({&apos;min&apos;:&apos;0&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field txt-qty ng-tns-c49-107 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-valid ng-star-inserted mat-focused ng-dirty&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-107&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-107&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-107&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control text-center ng-tns-c49-107 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-33&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='300' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Add to List[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(1, _in(submit({&apos;id&apos;:&apos;dsh_action_list_03&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//button[@id=&apos;dsh_action_list_03&apos;]/span[1]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/tbody/tr/td[9]/div/button/span/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;dsh_action_list_03&apos;)/span[@class=&apos;mat-button-wrapper&apos;]/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(1, _in(submit(&quot;dsh_action_list_03&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='$UOMBATCHANDEXPIRYWITHDYNAMIC_PRODUCT' type='web' desc='Set product' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-8&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='textbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-33 ng-touched ng-valid&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;mat-input-8&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-8&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-33 ng-valid cdk-text-field-autofill-monitored ng-dirty ng-touched&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/thead/tr[2]/th[3]/div/avantor-table-filter/mat-form-field/div/div/div[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-8&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field search-bar w-100 ng-tns-c49-33 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-can-float mat-form-field-should-float ng-valid ng-star-inserted ng-dirty ng-touched mat-focused&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-33&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-33&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-33&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-33 ng-valid cdk-text-field-autofill-monitored ng-dirty ng-touched&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-8&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='300' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"1"' type='web' desc='Set Quantity' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-33&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='numberbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-107 ng-untouched ng-valid text-center&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='numberbox(&quot;mat-input-33&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-33&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control text-center ng-tns-c49-107 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/tbody/tr/td[7]/div/mat-form-field/div/div/div[3]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-33&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='numberbox({&apos;min&apos;:&apos;0&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field txt-qty ng-tns-c49-107 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-valid ng-star-inserted mat-focused ng-dirty&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-107&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-107&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-107&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control text-center ng-tns-c49-107 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-33&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='300' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Add to List[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(1, _in(submit({&apos;id&apos;:&apos;dsh_action_list_03&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//button[@id=&apos;dsh_action_list_03&apos;]/span[1]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-home-layout/app-dashboard/main/section/div[3]/div/app-quick-action-widget/div/avantor-table/div[2]/table/tbody/tr/td[9]/div/button/span/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;dsh_action_list_03&apos;)/span[@class=&apos;mat-button-wrapper&apos;]/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(1, _in(submit(&quot;dsh_action_list_03&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

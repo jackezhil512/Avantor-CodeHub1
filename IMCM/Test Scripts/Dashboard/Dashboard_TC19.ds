@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'Dashboard_TC19.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/IMCM_Master_Repo/IMCM_INPUTFILE.csv' exectype='runspecificstep' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM_Master_Repo/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/IMCM Login.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM_Master_Repo/Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login to IMCM as Normal User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='$UOMBATCHANDEXPIRYWITHDYNAMIC_PRODUCT' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='textbox(/mat-input-.*/,_below(span(&quot;Catalog Number&quot;)))' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"1"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='numberbox(/mat-input-.*/)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='custom(&quot;mat-icon&quot;, &quot;keyboard_arrow_down[1]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Consume Stock&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"1"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='numberbox(/mat-input-.*/,_in(div(&quot;cdk-overlay-3&quot;)))' fallback='true' selected='true'/>
+   <accessor type='unknown' value='numberbox(/mat-input-.*/)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Consume&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div(&quot;STOCK CONSUMED SUCCESSFULLY!&quot;).xy(0.00, 0.33 )' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='setOperation(&quot;Stock Consumed&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='ValidateStockroomActivity([$UOMBATCHANDEXPIRYWITHDYNAMIC_PRODUCT])' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+</testcase>

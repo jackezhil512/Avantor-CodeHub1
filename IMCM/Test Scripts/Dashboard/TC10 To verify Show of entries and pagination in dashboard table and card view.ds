@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'TC10 To verify Show of entries and pagination in dashboard table and card view.ds' description= '' author= 'null' version= ''>
+<dpl filename='{ds}/../IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/IMCM Login.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository/Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository/IMCM Function Library.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login to IMCM as Normal User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Table view' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//button[@aria-label=&apos;Table View Preference Card&apos;]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//button[@aria-label=&apos;Table View Preference Card&apos;]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on show entries' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//mat-select[contains(@class,&apos;mat-select show-entries&apos;)]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='select 25 rows from option' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;25&apos;)]/parent::mat-option&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='TableRowCountVerify(25)' type='web' desc='Verify the total rows' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='TotalRowCount' fallback='true' selected='true'/>
+   <accessor type='unknown' value='  TotalRowCount' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on cart view' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//button[@aria-label=&apos;Table View Preference List&apos;]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='_eval(&quot;ds$(&apos;div.article-container.ng-star-inserted&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='TotalValueInListView' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='TotalValueInListView' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertEqual' value='25' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='TotalValueInListView ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='Validate the pagination icon' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;last_page&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='Validate the pagination icon' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;first_page&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='Validate the pagination icon' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;keyboard_arrow_right&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='Validate the pagination icon' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;keyboard_arrow_left&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+</testcase>

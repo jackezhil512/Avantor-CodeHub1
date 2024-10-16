@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'TC06 To perform Create Barcode in Dashboard action list and then check downloaded barcode.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/IMCM-Master-Repository/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/IMCM Login.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='AddProductsToList([$NORMAL_PRODUCT,$UOM_PRODUCT,$BATCHANDEXPIRY_PRODUCT, $BATCHALONE_PRODUCT, $EXPIRYALONE_PRODUCT,$UOMBATCHANDEXPIRYWITHDYNAMIC_PRODUCT])' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click Action List' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;list&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Select Activities Drop Down in Action List' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Attribute' value='submit({&apos;type&apos;:&apos;submit&apos;})' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='submit(&quot;Create Barcodes&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Create Barcodes &quot;]&apos;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos;Select PDF Format&apos;]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Avery 5161 2 Columns 10 Rows&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Print Barcodes&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='getDownloadedFiles()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='list' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='list.getJSONObject(0).getString(&quot;name&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='fileName' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='fileName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+</testcase>

@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'GlobalSearch_TC1.ds' description= '' author= 'null' version= ''>
+<dpl filename='{ds}/../IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/IMCM Login.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM_WEB/Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../IMCM_WEB/Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM_Harish-Master/IMCM Function Library.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login to IMCM as Normal User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"Beakers"' type='web' desc='Set Beakers as search keyword' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Id' value='textbox(&quot;mat-input-2&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click Search Button' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='image(/search-icon.*/)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertContainsText' value='"Search Result"' type='web' desc='Verify if navigated to Search Results' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;title&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-search-result-layout/div/app-avantor-page-title/div/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='span(&quot;Search Result&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"89370-880"' type='web' desc='Set catalog number to filter' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='textbox(/mat-input-.*/,_below(span(&quot;Catalog #&quot;)))' fallback='true' selected='true'/>
+   <accessor type='unknown' value='numberbox(/cdk-text-field-.*/,_below(link($BATCHANDEXPIRY_PRODUCT)))' fallback='true' selected='false'/>
+   <accessor type='unknown' value='textbox(/cdk-text-field-.*/,_below(link($BATCHANDEXPIRY_PRODUCT)))' fallback='true' selected='false'/>
+   <accessor type='unknown' value='textbox(/mat-input-.*/,_below(link($BATCHANDEXPIRY_PRODUCT)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click the filtered catalog' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; 89370-880 &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrHref' value='link(&quot;javascript:void(0)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='link(&quot;89370-880&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-search-result-layout/div/div[2]/app-search-result-products/div/div/avantor-table/div[2]/table/tbody/tr[1]/td[1]/a&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-search-result-layout/div/div[2]/app-search-result-products/div/div/avantor-table/div[2]/table/tbody/tr/td/a&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-search-result-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/div[@class=&apos;mb-3&apos;]/app-search-result-products[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;no-whitespace row&apos;]/div[@class=&apos;col&apos;]/avantor-table[@class=&apos;ng-tns-c320-68 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c320-68&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c320-68 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c320-68 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-catalogNo mat-column-catalogNo ng-tns-c320-68 ng-star-inserted mat-table-sticky&apos;]/a[@class=&apos;ng-star-inserted&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[1]//a[@class=&quot;ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[1]//a[text()=&quot; 89370-880 &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;tr[class=&quot;mat-row cdk-row ng-tns-c320-68 striped-rows ng-star-inserted&quot;] &gt; td[class=&quot;mat-cell cdk-cell cdk-column-catalogNo mat-column-catalogNo ng-tns-c320-68 ng-star-inserted mat-table-sticky&quot;] &gt; a[class=&quot;ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c320-68.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-catalogNo.mat-column-catalogNo.ng-tns-c320-68.ng-star-inserted.mat-table-sticky &gt; .ng-star-inserted&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;javascript:void(0)&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='link(&quot;ng-star-inserted&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='Verify if product title is displayed in the pop up dialog' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='heading2(/BEAKERS.*/)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Closing the pop up dialog' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Close&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(8, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-0&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-button-wrapper[15]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-dialog-container[@id=&apos;mat-dialog-0&apos;]/app-dialog-product-details/div/div[3]/mat-dialog-actions/button[1]/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Close &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-dialog-product-details/div/div[3]/mat-dialog-actions/button/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-dialog-0&apos;)/app-dialog-product-details[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;prod-details-container&apos;]/div[@class=&apos;actions-container&apos;]/mat-dialog-actions[@class=&apos;mat-dialog-actions px-3&apos;]/button[@class=&apos;mat-focus-indicator py-1 mat-button mat-button-base&apos;]/span[@class=&apos;mat-button-wrapper&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;prod-details-container&quot;] &gt; div[class=&quot;actions-container&quot;] &gt; mat-dialog-actions[class=&quot;mat-dialog-actions px-3&quot;] &gt; button[class=&quot;mat-focus-indicator py-1 mat-button mat-button-base&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.prod-details-container &gt; .actions-container &gt; .mat-dialog-actions.px-3 &gt; .mat-focus-indicator.py-1.mat-button.mat-button-base &gt; .mat-button-wrapper&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(8, _in(custom(&quot;mat-dialog-container&quot;, &quot;mat-dialog-0&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

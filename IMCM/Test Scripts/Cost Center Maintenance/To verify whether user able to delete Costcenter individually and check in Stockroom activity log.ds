@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'To verify whether user able to delete Costcenter individually and check in Stockroom activity log.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/IMCM/IMCM_INPUTFILE.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM_Test/To verify whether user able to add costcenter by assigning user and check in Stockroom activity log.ds"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login To Application' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM_Test/EV_LoginApplication.ds"' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='include' value='' type='web' desc='Navigate to cost center' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM_Test/NavigateToCostCentermaintenance.ds"' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Ellipsis' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrAlt' value='image(&quot;ellipsis&quot;).xy(0.90, 0.28 )' fallback='true' selected='true'/>
+   <accessor type='Src' value='image(&quot;https://im-stage3.avantorsciences.com/assets/icons/ellipsis-icon.svg&quot;).xy(0.90, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-cost-center-maintenance-layout/div/app-cost-center-maintenance/div[3]/div/avantor-table/div[2]/table/tbody/tr[1]/td[9]/button/span[1]/img&apos;).xy(0.90, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-cost-center-maintenance-layout/div/app-cost-center-maintenance/div[3]/div/avantor-table/div[2]/table/tbody/tr/td[9]/button/span/img&apos;).xy(0.90, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-cost-center-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-cost-center-maintenance[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col&apos;]/avantor-table[@class=&apos;ng-tns-c320-120 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c320-120&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c320-120 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c320-120 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-ellipsis mat-column-ellipsis ng-tns-c320-120 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator mat-menu-trigger mat-icon-button mat-button-base ng-star-inserted&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/img[1]&quot;).xy(0.90, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='image({&apos;src&apos;:&apos;/assets/icons/ellipsis-icon.svg&apos;}).xy(0.90, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;img[alt=&quot;ellipsis&quot;]&apos;).xy(0.90, 0.28 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click on Delete' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Delete&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(0, _in(div({&apos;id&apos;:&apos;mat-menu-panel-29&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;mat-menu-panel-29&apos;]/div/button[1]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Edit&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/button/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-menu-panel-29&apos;)/div[@class=&apos;mat-menu-content ng-tns-c270-89&apos;]/button[@class=&apos;mat-focus-indicator mat-menu-item ng-tns-c270-89 ng-star-inserted cdk-focused cdk-program-focused&apos;]/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='span({&apos;style&apos;:&apos;color: #1e90ff;&apos;})' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(0, _in(div(&quot;mat-menu-panel-29&quot;)))' fallback='true' selected='false'/>
+   <accessor type='Text' value='span(&quot;Edit&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;CONFIRM DELETE[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(4, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-0&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-dialog-container[@id=&apos;mat-dialog-0&apos;]/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button/span[1]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; CONFIRM DELETE &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button/span/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-dialog-0&apos;)/app-confirm-dialog[@class=&apos;ng-star-inserted&apos;]/mat-dialog-content[@class=&apos;mat-dialog-content no-scroll av-confirm-dialog&apos;]/section[@class=&apos;px-5 py-5 text-center&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(4, _in(custom(&quot;mat-dialog-container&quot;, &quot;mat-dialog-0&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='Validate Success message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div(&quot;COST CENTER DELETED SUCCESSFULLY[9]&quot;).xy(0.30, 0.75 )' fallback='true' selected='true'/>
+   <accessor type='Parent' value='div(7, _in(div({&apos;id&apos;:&apos;cdk-overlay-8&apos;}))).xy(0.30, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;title&quot;).xy(0.30, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-overlay-8&apos;]/snack-bar-container/div/div/avantor-toast/div/div[1]/div[2]/div/div[1]&quot;).xy(0.30, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Successfully updated cost center. &quot;]&apos;).xy(0.30, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div/div/snack-bar-container/div/div/avantor-toast/div/div/div[2]/div/div&apos;).xy(0.30, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-overlay-8&apos;)/snack-bar-container[@class=&apos;mat-snack-bar-container ng-tns-c40-159 ng-trigger ng-trigger-state mat-snack-bar-center ng-star-inserted&apos;]/div[@class=&apos;ng-tns-c40-159&apos;]/div[@class=&apos;ng-tns-c40-159&apos;]/avantor-toast[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;toast-wrapper d-flex align-items-center justify-content-between&apos;]/div[@class=&apos;d-flex ng-star-inserted&apos;]/div[2]/div[1]/div[@class=&apos;title&apos;]&quot;).xy(0.30, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;title&quot;]&apos;).xy(0.30, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='Parent' value='div(7, _in(div(&quot;cdk-overlay-8&quot;))).xy(0.30, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='Text' value='div(&quot;Successfully updated cost center.[3]&quot;).xy(0.30, 0.54 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='navigateToStockroomActivityLog()' type='web' desc='Navigate to stockroom activity log' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"CostCenter Delete"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-63&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='textbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-171 ng-untouched ng-valid&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;mat-input-63&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-63&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-171 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-activity-log/div/app-stockroom-activity-log/div[2]/avantor-table/div[2]/table/thead/tr[2]/th[5]/div/avantor-table-filter/mat-form-field/div/div/div[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-63&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field search-bar w-100 ng-tns-c49-171 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-can-float mat-form-field-should-float ng-untouched ng-valid ng-star-inserted mat-focused ng-dirty&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-171&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-171&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-171&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-171 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-63&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='100' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='Validation Success update message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;Cost Center Deleted&quot;]&apos;).xy(0.11, 0.54 )' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;Cost Center Updated&quot;]&apos;).xy(0.11, 0.54 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

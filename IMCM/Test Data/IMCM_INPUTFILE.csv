@@ -1,1 +1,275 @@
-41cf554384ca8dccf14971a53375930b74f63cd15918d4ebd8eaeeb46a2e96f9c309becfe276fa2fe99e697d610c261263aa58b4377af12eaebcf2941c57b5382ef3d8f8bddeaca7e77014fe5400274c57d83f6588ed8f29827a529372cfb53d55c15da972e8d7fb5173d10517dde2533e54a6bfab16eb0d308ccd15dda3f98f4b297c9f3af91ab15ed09913d9ec4fd54d551f8aae79e586ae192f2b10097fcb23f3037dcf5692bd2374eec6a52d166d55462631ad6c7d93fdb31846ebcd1bc234272c979b32c1d0d1aadd1cd82c5c3a60cd8becb1ae645752c76658e86bd3045a1e657b5b7fce6547eea82e7ecf1a4a9151a7935419f3de28fe9433ce46b1ebbd5773e294c8247dfdb25250e71fbd95a0f6645f5e30e88a7222bb0c33040d4a78910b12d3f7b2439a626011010a4551e1f6b90a531f92c2cf35d74a22d93e6a3e63ca606dfd9d9f65fc8e70d61a9e513fb17b9f9137f724e16e685b2f31375a88cf0f31ac663f17fc48d1545af553af89bee879c3084f6481ccf81362272e0a0080788f78051e6d5527d20beb20bb074a031580edfe43abca51734b6d43f1f8c17f0f0ffeabf3a28937c34fbfdba5034e25315b365d5fcf381ce7a28d19e6ef3c97a8658f8abc51197bfc795a0d2fef6d66a560ac9d5f4e9be702d75df7364116e4661c6f63bd00bf39cd55bb08f8738932504bcf5fb82f4fa3cb90f8f3ea3396f33fb8d62d1ef6d905b084f633de3ece055ae58f4986eb155621239aba7248635098e53d9fcc3dc849d8c0b22193cc257c8dfb004f79e43dd2b8712bb6aee716823653be280c9afa5b15752850c11a38ca0a8054d1b32a4d8c42798c864ed2f337a1ca6e78ba689764b4064a7cc50b2ba32b76949e12e915f067377b5dc1a5b8e0954e03274341d2f5678bc23cc0bbf54cbc1262f7a5eb017cb296a45c99efe5417925a2c2653ceadfa6fae6cc43df05feeb4ea298f6959332d82af6b585327296e782432a31837a65261180426fb679275bb6439372be2bc860c0b4f14bbed598759cab7d37d6f0c7d1bec5987346974cd6dece798265c6005245ea2bc633449ad9ab372af40edc134c0ecfa0c936de5810083e0cc35954c445a61e3d4fd4cc82958880d9a4ce87e6e3722b237033dabd9b0283efd1a155cb7d4164d45ff2bfb6191f6ecfbc92e82dea4d728ca262a5c9a9e66a8be60544ef9943d4e0b7d29a988ce9ca5b78d5403fae4001ec5a1bd7df5e3d5a52487859877124bdc72be3b63ff5a1dd9204be22aa323f5338dcf50659bbc1e08dc1ee4612cd0448a649091d46ce479727f14f8fca2c0678e3b00590136873bd9d2ba3e1e89baab71ee34881706d473f0ba18d9cfefa8450d102fd0e0d27a1eb6d49379c72af08f0ad42fafb0badb0d01194beffe129f9fa129c24d6c220349890c8b39161d69c605a436fafbf582ab0829b3d8b2e7cdac57e37d919db291dc5592495baa2d3def35ab72277676d11d1d3dc343247f0640d1e9cf8a2e0cd6ee770f33f1c798e615c341c1755cb905f6219ba6779cd5ca1348ec4315180e690728bfe0cc1fbd2ccbed736309dd7f2abe53d81816a97beb2661ebe7ee2398e2207adf59eaf926dab5e6d52253b6c1306ee78b6e6c84bd426e3a92da4a92fa08d9d98fa2be790aa3fdfe068cea9646be864508a7e0f9ff54230efc82767fca50204c9c7e7738178bc292874c9d4aab3a128c85eb7c200b64765243d38cba8097b3322788e129712910fa2e9b4f77cb055e9c5145f91bcc7a204e30cf23d8083ef0f0fda5b3851a2cf2868466f9f17eb88634b0cc8f842fa019aa7b023c27bf313c079f6720469a1eed23b63c5c8e09e7fca2430fa75ee22f933bbe015a9470f48a9501e6f9b73337c105706d1516a8e0f5485e79d4bf73b205aacb60fe7bd39a5384b010388dcd7485978b518811c7851f6421618d3cf567e6fb0b4a6ef4bd09dd642d1331f9409c8c626debb69d7add3af06d0dbdddfe8f8c02ddf0d6e20b3c03d626bbb144baddfec8c92005063f545bdb3b6577166b786c1d58eabb54810174415d7abf071e2a5f1f269ab771521835deffff26f69bc939c987f095cb9049a5c199bacef874382de36286eeff50df1a8452c1133be81e2cc87bd0dcd8f3d7d5e44fe47123109a384d668c6
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'UM - To vrify show of entries and pagntion in active and inactive user tabs of User maintenance page.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/IMCM-Master-Repository-Harish/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='null'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM Function Library.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/User Maintenance/User/NavigateToUserMaintenance.ds"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/NavigateToUserMaintenance.ds"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/IMCM Function Library.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;User Maintenance&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='span(&quot;title&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='select Inactive User tab' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div(&quot;Inactive Users[1]&quot;).xy(0.66, 0.77 )' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"User Test"' type='web' desc='search user name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='textbox(/mat-input.*/,_below(span(&quot;Name&quot;)))' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='100' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Three dot' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//table/tbody//tr[1]/td[last()]/button&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Edit' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//div[@class=&apos;cdk-overlay-container&apos;]//button/font[contains(text(),&apos;Edit&apos;)]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='//div[@class=&quot;cdk-overlay-container&quot;]//button/font[contains(text(),&apos;Edit&apos;)]' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click Inactive' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div(&quot;Inactive[5]&quot;).xy(0.35, 0.63 )' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Active' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Active &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='span(&quot;Active&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Stockroom tab' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Stockroom  Back to top&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='100' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Assign Stockroom and Groups&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(6, _in(div({&apos;id&apos;:&apos;cdk-accordion-child-2&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-button-wrapper[11]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-accordion-child-2&apos;]/div/section/section/div/div[3]/button/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Assign Stockroom and Groups &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-view-user/main/app-avantor-user-settings/main/div[2]/div/form/mat-accordion/mat-expansion-panel[3]/div/div/section/section/div/div[3]/button/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-accordion-child-2&apos;)/div[@class=&apos;mat-expansion-panel-body ng-tns-c226-144&apos;]/section[@class=&apos;pt-4 ng-star-inserted&apos;]/section[@class=&apos;d-flex justify-content-end pb-2 ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col mb-1&apos;]/button[@class=&apos;mat-focus-indicator lg-button m-sm-100 mat-stroked-button mat-button-base mat-primary ng-star-inserted&apos;]/span[@class=&apos;mat-button-wrapper&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;section[class=&quot;d-flex justify-content-end pb-2 ng-star-inserted&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col mb-1&quot;] &gt; button[class=&quot;mat-focus-indicator lg-button m-sm-100 mat-stroked-button mat-button-base mat-primary ng-star-inserted&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(6, _in(div(&quot;cdk-accordion-child-2&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Assign stockroom group Button' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Assign Stockroom and Groups&apos;)]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='select Assign stockroom check box' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//h2[text()=&apos; Assign Stockroom &apos;]/following::input[@type=&apos;checkbox&apos;][2]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Select group' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;Select Group&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='span(&quot;Select Group[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Select User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; USER &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='span(&quot;USER&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click Group user Button' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Assign Stockroom &amp; Group to User &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='span(&quot;Assign Stockroom &amp; Group to User&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='Verify Success Message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Successfully updated user account settings &quot;]&apos;).xy(0.48, 0.46 )' fallback='true' selected='true'/>
+   <accessor type='unknown' value='div([&quot;Successfully updated user account s&quot;]).xy(0.48, 0.46 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='150' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='include' value='' type='web' desc='Navigate Usermaintenance' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/User Maintenance/User/NavigateToUserMaintenance.ds"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/NavigateToUserMaintenance.ds"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"User Test"' type='web' desc='Search User name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='textbox(/mat-input.*/,_below(span(&quot;Name&quot;)))' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Attribute' value='image({&apos;src&apos;:&apos;/assets/icons/ellipsis-icon.svg&apos;}).xy(0.37, 0.46 )' fallback='true' selected='true'/>
+   <accessor type='Parent' value='image(22, _in(custom(&quot;mat-tab-body&quot;, {&apos;id&apos;:&apos;mat-tab-content-4-0&apos;}))).xy(0.37, 0.46 )' fallback='true' selected='false'/>
+   <accessor type='Src' value='image(&quot;https://im-stage3.avantorsciences.com/assets/icons/ellipsis-icon.svg&quot;).xy(0.37, 0.46 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-tab-body[@id=&apos;mat-tab-content-4-0&apos;]/div/app-list-user/avantor-table/div[2]/table/tbody/tr[1]/td[10]/button/span[1]/img&quot;).xy(0.37, 0.46 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-user-maintenance-layout/main/app-home/mat-tab-group/div/mat-tab-body/div/app-list-user/avantor-table/div[2]/table/tbody/tr/td[10]/button/span/img&apos;).xy(0.37, 0.46 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-tab-content-4-0&apos;)/div[@class=&apos;mat-tab-body-content ng-tns-c105-330 ng-trigger ng-trigger-translateTab&apos;]/app-list-user[@class=&apos;ng-star-inserted&apos;]/avantor-table[@class=&apos;ng-tns-c320-334 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c320-334&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c320-334 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c320-334 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-ellipsis mat-column-ellipsis ng-tns-c320-334 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator mat-menu-trigger mat-flat-button mat-button-base ng-star-inserted&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/img[1]&quot;).xy(0.37, 0.46 )' fallback='true' selected='false'/>
+   <accessor type='Parent' value='image(22, _in(custom(&quot;mat-tab-body&quot;, &quot;mat-tab-content-4-0&quot;))).xy(0.37, 0.46 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click three dots' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//table/tbody//tr[1]/td[last()]/button&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Edit&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='custom(&quot;font&quot;, 0, _in(div({&apos;id&apos;:&apos;mat-menu-panel-78&apos;})))' fallback='true' selected='false'/>
+   <accessor type='Text' value='custom(&quot;font&quot;, &quot;Edit&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;mat-menu-panel-78&apos;]/div/button/font&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/button/font&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-menu-panel-78&apos;)/div[@class=&apos;mat-menu-content ng-tns-c270-367&apos;]/button[@class=&apos;mat-focus-indicator mat-menu-item ng-tns-c270-367 cdk-focused cdk-mouse-focused&apos;]/font[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='custom(&quot;font&quot;, {&apos;style&apos;:&apos;color: #1e90ff;&apos;})' fallback='true' selected='false'/>
+   <accessor type='Parent' value='custom(&quot;font&quot;, 0, _in(div(&quot;mat-menu-panel-78&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Edit Button' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//div[@class=&apos;cdk-overlay-container&apos;]//button/font[contains(text(),&apos;Edit&apos;)]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on active' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='div(&quot;Active[5]&quot;).xy(0.23, 0.44 )' fallback='true' selected='true'/>
+   <accessor type='Parent' value='div(1, _in(custom(&quot;mat-select&quot;, {&apos;id&apos;:&apos;mat-select-166&apos;}))).xy(0.23, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-select-value-167&quot;]&apos;).xy(0.23, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;mat-select-value ng-tns-c89-388&quot;).xy(0.23, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='Id' value='div(&quot;mat-select-value-167&quot;).xy(0.23, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-select-value ng-tns-c89-388&quot;]&apos;).xy(0.23, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-view-user/main/app-avantor-user-settings/main/div[2]/div/form/mat-accordion/mat-expansion-panel/div/div/section/div/div/div[2]/div/mat-form-field/div/div/div[3]/mat-select/div/div&apos;).xy(0.23, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-select-value-167&apos;)&quot;).xy(0.23, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;mat-form-field-flex ng-tns-c49-387&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-387&quot;] &gt; mat-select[class=&quot;mat-select ng-tns-c89-388 ng-tns-c49-387 mat-select-required ng-valid ng-star-inserted ng-touched ng-dirty&quot;] &gt; div[class=&quot;mat-select-trigger ng-tns-c89-388&quot;] &gt; div[class=&quot;mat-select-value ng-tns-c89-388&quot;]&apos;).xy(0.23, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-select-value-167&apos;).xy(0.23, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='Parent' value='div(1, _in(custom(&quot;mat-select&quot;, &quot;mat-select-166&quot;))).xy(0.23, 0.44 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;mat-select-value-167&apos;]&quot;).xy(0.23, 0.44 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Select Inactive' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Inactive &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, {&apos;id&apos;:&apos;mat-option-1763&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-option-text[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-option[@id=&apos;mat-option-1763&apos;]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/mat-option[2]/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-option-1763&apos;)/span[@class=&apos;mat-option-text&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;cdk-overlay-pane&quot;] &gt; div[class=&quot;mat-select-panel-wrap ng-tns-c89-388 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted&quot;] &gt; div[class=&quot;ng-tns-c89-388 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary&quot;] &gt; mat-option[class=&quot;mat-option mat-focus-indicator ng-tns-c89-388&quot;] &gt; span[class=&quot;mat-option-text&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-option-1763 &gt; .mat-option-text&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, &quot;mat-option-1763&quot;)))' fallback='true' selected='false'/>
+   <accessor type='Text' value='span(&quot;Inactive&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Update' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Update &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='span(&quot;Update&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='select check box' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos;Ev_Automation_consumption&apos;]/parent::td/preceding-sibling::td//input&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='//span[text()=&apos;Ev_Automation_consumption&apos;]/parent::td/preceding-sibling::td//input' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click on Deactiviate' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Deactivate User From Selected Site(s) &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='span([&quot;Deactivate User From Selected Site(&quot;])' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-dialog-container[@id=&apos;mat-dialog-1&apos;]/app-dialog-user-maintenance-set-user-status/mat-dialog-actions/button[2]/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-dialog-user-maintenance-set-user-status/mat-dialog-actions/button[2]/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-dialog-1&apos;)/app-dialog-user-maintenance-set-user-status[@class=&apos;ng-star-inserted&apos;]/mat-dialog-actions[@class=&apos;mat-dialog-actions px-3&apos;]/button[@class=&apos;mat-focus-indicator lg-button mat-flat-button mat-button-base mat-primary ng-star-inserted&apos;]/span[@class=&apos;mat-button-wrapper&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-dialog-container[class=&quot;mat-dialog-container ng-tns-c31-401 ng-trigger ng-trigger-dialogContainer ng-star-inserted&quot;] &gt; app-dialog-user-maintenance-set-user-status[class=&quot;ng-star-inserted&quot;] &gt; mat-dialog-actions[class=&quot;mat-dialog-actions px-3&quot;] &gt; button[class=&quot;mat-focus-indicator lg-button mat-flat-button mat-button-base mat-primary ng-star-inserted&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-dialog-1 &gt; .ng-star-inserted &gt; .mat-dialog-actions.px-3 &gt; .mat-focus-indicator.lg-button.mat-flat-button.mat-button-base.mat-primary.ng-star-inserted &gt; .mat-button-wrapper&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-button-wrapper[23]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Parent' value='div(0, _in(div(&quot;mat-tab-label-6-2&quot;))).xy(0.41, 0.54 )' fallback='true' selected='true'/>
+   <accessor type='Parent' value='div(0, _in(div({&apos;id&apos;:&apos;mat-tab-label-6-2&apos;}))).xy(0.41, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;mat-tab-label-content[5]&quot;).xy(0.41, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='Text' value='div(&quot;Inactive Users[1]&quot;).xy(0.41, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;mat-tab-label-6-2&apos;]/div&quot;).xy(0.41, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Inactive Users&quot;]&apos;).xy(0.41, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-user-maintenance-layout/main/app-home/mat-tab-group/mat-tab-header/div[2]/div/div/div[3]/div&apos;).xy(0.41, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-tab-label-6-2&apos;)/div[@class=&apos;mat-tab-label-content&apos;]&quot;).xy(0.41, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-tab-label-6-2 &gt; .mat-tab-label-content&apos;).xy(0.41, 0.54 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Verify Deactiviated message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Deactivated Successfully &quot;]&apos;).xy(0.22, 0.75 )' fallback='true' selected='true'/>
+   <accessor type='Parent' value='div(7, _in(div({&apos;id&apos;:&apos;cdk-overlay-10&apos;}))).xy(0.22, 0.75 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;title&quot;).xy(0.22, 0.75 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-overlay-10&apos;]/snack-bar-container/div/div/avantor-toast/div/div[1]/div[2]/div/div[1]&quot;).xy(0.22, 0.75 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div/div/snack-bar-container/div/div/avantor-toast/div/div/div[2]/div/div&apos;).xy(0.22, 0.75 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-overlay-10&apos;)/snack-bar-container[@class=&apos;mat-snack-bar-container ng-tns-c40-409 ng-trigger ng-trigger-state mat-snack-bar-center ng-star-inserted&apos;]/div[@class=&apos;ng-tns-c40-409&apos;]/div[@class=&apos;ng-tns-c40-409&apos;]/avantor-toast[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;toast-wrapper d-flex align-items-center justify-content-between&apos;]/div[@class=&apos;d-flex ng-star-inserted&apos;]/div[2]/div[1]/div[@class=&apos;title&apos;]&quot;).xy(0.22, 0.75 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;title&quot;]&apos;).xy(0.22, 0.75 )' fallback='true' selected='false'/>
+   <accessor type='Parent' value='div(7, _in(div(&quot;cdk-overlay-10&quot;))).xy(0.22, 0.75 )' fallback='true' selected='false'/>
+   <accessor type='Text' value='div(&quot;Deactivated Successfully&quot;).xy(0.22, 0.75 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/User Maintenance/User/NavigateToUserMaintenance.ds"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/NavigateToStockRoomActivityLog.ds"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;Deactivate User&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;User Updated&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

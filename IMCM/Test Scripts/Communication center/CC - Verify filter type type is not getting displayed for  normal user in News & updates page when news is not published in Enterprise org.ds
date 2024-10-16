@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'CC - Verify filter type type is not getting displayed for  normal user in News & updates page when news is not published in Enterprise org.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/IMCM/IMCM_INPUTFILE.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM Function Library.js"' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//button[@id=&apos;header_communication_center_click&apos;]/div&quot;).xy(0.45, 0.63 )' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;News &amp; Updates&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='span(&quot;News &amp; Updates&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertNotExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;(//*[text()=&quot; FILTER BY TYPE ])[1]&apos;)  ' fallback='true' selected='true'/>
+</dialect>
+</step>
+</testcase>

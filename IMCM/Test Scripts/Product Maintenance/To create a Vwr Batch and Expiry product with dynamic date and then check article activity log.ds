@@ -38,7 +38,7 @@
 </step>
 <step action='if' value='""' type='web' desc='Verifying if catalog exist or not?' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='isVisible(link($CreateVWRProductCatalog))' fallback='true' selected='true'/>
+   <accessor type='unknown' value='isVisible(link($VwrBatchExpiryProduct))' fallback='true' selected='true'/>
    <accessor type='AttrHref' value='link(&quot;javascript:void(0)&quot;)' fallback='true' selected='false'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-list-product/div[2]/div[3]/avantor-table/div[2]/table/tbody/tr[1]/td[2]/a&apos;)' fallback='true' selected='false'/>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; 83008-822 &quot;]&apos;)' fallback='true' selected='false'/>
@@ -54,6 +54,7 @@
    <accessor type='unknown' value=' isVisible(link(&quot;83008-822&quot;) )' fallback='true' selected='false'/>
    <accessor type='unknown' value='  isVisible(link($CreateVWRProductCatalog) ) ' fallback='true' selected='false'/>
    <accessor type='unknown' value='   isVisible(link($CreateVWRProductCatalog))  ' fallback='true' selected='false'/>
+   <accessor type='unknown' value='isVisible(link($CreateVWRProductCatalog))' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -63,8 +64,9 @@
 </step>
 <step action='click' value='' type='web' desc='click on check box if exist' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link($CreateVWRProductCatalog)))' fallback='true' selected='true'/>
+   <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link($VwrBatchExpiryProduct)))' fallback='true' selected='true'/>
    <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link(&quot;$CreateVWRProductCatalog&quot;)))' fallback='true' selected='false'/>
+   <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link($CreateVWRProductCatalog)))' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

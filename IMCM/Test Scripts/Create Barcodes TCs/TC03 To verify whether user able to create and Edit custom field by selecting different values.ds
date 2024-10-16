@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testcase   name= 'TC03 To verify whether user able to create and Edit custom field by selecting different values.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../IMCM_INPUTFILE.csv' exectype='runspecificstep' errorhandling='' type='HashDPL' locale='en_US'/>
+<dpl filename='REPOSITORY/Central_Repo99/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='false'/>
 <shadowDOM useShadowDOM='false'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../IMCM_Function/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/Central_Repo99/IMCM/IMCM_Function/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM_Gopal/IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../../IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='log in with normal user' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -59,10 +60,10 @@
 </step>
 <step action='store' value='eval(&quot;&apos;Auto&apos;+ Math.floor(Math.random()*10000)+&apos;GT&apos;&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  Value1' fallback='true' selected='true'/>
+   <accessor type='unknown' value='Value1' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value=' Value1 ' type='web' desc='Enter the value in name field' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='Value1' type='web' desc='Enter the value in name field' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//input[@formcontrolname=&apos;filterName&apos;]&quot;)' fallback='true' selected='true'/>
 </dialect>
@@ -133,7 +134,7 @@
 </step>
 <step action='store' value='&quot;//span[contains(text(),&apos;Temp&apos;)]/following::button[2]&quot;.replace(&quot;Temp&quot;,Value1)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  strXPath ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='strXPath' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='Click on edit button' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -185,7 +186,7 @@
 </step>
 <step action='store' value='&quot;//span[contains(text(),&apos;Temp&apos;)]/following::button[1]&quot;.replace(&quot;Temp&quot;,Value1)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='   strXPath1' fallback='true' selected='true'/>
+   <accessor type='unknown' value='strXPath1' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='click on delete' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

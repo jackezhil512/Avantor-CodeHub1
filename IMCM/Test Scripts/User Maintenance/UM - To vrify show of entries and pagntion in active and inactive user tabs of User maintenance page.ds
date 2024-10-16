@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'UM - To verify whether user able to deactivate user from active user tab and then check in stockroom activity log.ds' description= '' author= 'null' version= ''>
+<testcase   name= 'UM - To vrify show of entries and pagntion in active and inactive user tabs of User maintenance page.ds' description= '' author= 'null' version= ''>
 <dpl filename='REPOSITORY/IMCM-Repo/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
@@ -26,22 +26,22 @@
    <accessor type='unknown' value='span(&quot;title&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='select Inactive User tab' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='select Inactive User tab' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='div(&quot;Inactive Users[1]&quot;).xy(0.66, 0.77 )' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='"User Test"' type='web' desc='search user name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"User Test"' type='web' desc='search user name' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='textbox(/mat-input.*/,_below(span(&quot;Name&quot;)))' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='100' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='Click on Three dot' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='Click on Three dot' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//table/tbody//tr[1]/td[last()]/button&quot;)' fallback='true' selected='true'/>
 </dialect>

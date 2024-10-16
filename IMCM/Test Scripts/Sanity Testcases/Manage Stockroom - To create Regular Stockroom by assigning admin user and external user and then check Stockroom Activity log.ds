@@ -21,7 +21,7 @@
 </step>
 <step action='store' value='eval(&quot;&apos;TestAutomationStockroom&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='     StockroomName  ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='StockroomName' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='store' value='$ConsumptionStockroom' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -31,7 +31,7 @@
 </step>
 <step action='store' value='$ExternalUser' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value=' ExternalUser' fallback='true' selected='true'/>
+   <accessor type='unknown' value='ExternalUser' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='store' value='$NormalUser' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -94,7 +94,7 @@
    <accessor type='unknown' value='span(&quot;mat-option-text[1]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='StockroomName ' type='web' desc='Enter stock room name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='StockroomName' type='web' desc='Enter stock room name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='textbox(0, _in(div(&quot;cdk-accordion-child-0&quot;)))' fallback='true' selected='true'/>
 </dialect>
@@ -175,7 +175,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='NormalUser ' type='web' desc='Serch with user name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='NormalUser' type='web' desc='Serch with user name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//th[contains(@class,&quot;column-search-fullName&quot;)]&apos;)' fallback='true' selected='true'/>
 </dialect>
@@ -220,7 +220,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='ExternalUser ' type='web' desc='Enter external user name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='ExternalUser' type='web' desc='Enter external user name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//input[@placeholder=&quot;Login ID&quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>

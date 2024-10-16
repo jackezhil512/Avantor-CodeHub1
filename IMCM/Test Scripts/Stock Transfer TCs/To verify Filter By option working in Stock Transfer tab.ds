@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'To verify Filter By option working in Stock Transfer tab.ds' description= '' author= 'null' version= ''>
+<dpl filename='{ds}/../IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM_Gopal/IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../../IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login the application with Normal user' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click on activities' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='submit(&quot;Activities expand_more&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/avantor-header/header/section[2]/nav/div/div[2]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;nav-label d-flex align-items-center ng-tns-c98-7&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/avantor-header/header/section[2]/nav/div/div[2]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/avantor-header[@class=&apos;ng-tns-c98-7 ng-star-inserted&apos;]/header[@class=&apos;toolbar zindex999 ng-tns-c98-7&apos;]/section[@class=&apos;toolbar-navigations ng-tns-c98-7 ng-star-inserted&apos;]/nav[@class=&apos;avantor-navigations ng-tns-c98-7&apos;]/div[@class=&apos;d-flex align-items-center ng-tns-c98-7&apos;]/div[@class=&apos;nav-item ng-tns-c98-7 ng-star-inserted&apos;]/button[@class=&apos;nav-label d-flex align-items-center ng-tns-c98-7&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;section[class=&quot;toolbar-navigations ng-tns-c98-7 ng-star-inserted&quot;] &gt; nav[class=&quot;avantor-navigations ng-tns-c98-7&quot;] &gt; div[class=&quot;d-flex align-items-center ng-tns-c98-7&quot;] &gt; div[class=&quot;nav-item ng-tns-c98-7 ng-star-inserted&quot;] &gt; button[class=&quot;nav-label d-flex align-items-center ng-tns-c98-7&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='submit(&quot;align-items-center d-flex nav-label ng-tns-c98-7&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on stock transfer' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Stock transfer &quot;]&apos;).xy(0.36, 0.54 )' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='"Auto123"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='   SLocation ' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='//span[contains(text(),&apos;Temp&apos;)]/parent::mat-option.replace(&quot;Temp&quot;,SLocation)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='   strXPath   ' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='   strXPath   ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on source location drop down' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Source Location&apos;)]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Select the option : Auto123' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(strXPath)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Auto123&apos;)]/parent::mat-option&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-locationName&apos;)])[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='  strTemp1' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-locationName&apos;)])[2]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='   strTemp2' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='strTemp1' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='strTemp2' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertEqual' value='SLocation ' type='web' desc='Validate before and after filter value' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='strTemp1' fallback='true' selected='true'/>
+   <accessor type='unknown' value='RowData1' fallback='true' selected='false'/>
+   <accessor type='unknown' value='RowData1' fallback='true' selected='false'/>
+   <accessor type='unknown' value='   strXPath   ' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertEqual' value='SLocation ' type='web' desc='Validate before and after filter valure' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='strTemp2' fallback='true' selected='true'/>
+   <accessor type='unknown' value='RowData1' fallback='true' selected='false'/>
+   <accessor type='unknown' value='RowData2' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

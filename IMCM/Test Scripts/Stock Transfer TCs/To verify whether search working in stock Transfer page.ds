@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'To verify whether search working in stock Transfer page.ds' description= '' author= 'null' version= ''>
+<dpl filename='{ds}/../IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM_Gopal/IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../../IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login the EV application with normal user' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Expand the Activities tab' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='submit(&quot;Activities expand_more&quot;)' fallback='true' selected='true'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/avantor-header/header/section[2]/nav/div/div[2]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='submit(&quot;align-items-center d-flex nav-label ng-tns-c98-7&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;nav-label d-flex align-items-center ng-tns-c98-7&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;section[class=&quot;toolbar-navigations ng-tns-c98-7 ng-star-inserted&quot;] &gt; nav[class=&quot;avantor-navigations ng-tns-c98-7&quot;] &gt; div[class=&quot;d-flex align-items-center ng-tns-c98-7&quot;] &gt; div[class=&quot;nav-item ng-tns-c98-7 ng-star-inserted&quot;] &gt; button[class=&quot;nav-label d-flex align-items-center ng-tns-c98-7&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/avantor-header[@class=&apos;ng-tns-c98-7 ng-star-inserted&apos;]/header[@class=&apos;toolbar zindex999 ng-tns-c98-7&apos;]/section[@class=&apos;toolbar-navigations ng-tns-c98-7 ng-star-inserted&apos;]/nav[@class=&apos;avantor-navigations ng-tns-c98-7&apos;]/div[@class=&apos;d-flex align-items-center ng-tns-c98-7&apos;]/div[@class=&apos;nav-item ng-tns-c98-7 ng-star-inserted&apos;]/button[@class=&apos;nav-label d-flex align-items-center ng-tns-c98-7&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/avantor-header/header/section[2]/nav/div/div[2]/button&apos;)' fallback='false' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on stock transfer link' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Stock transfer &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='div(39, _in(custom(&quot;mat-tab-body&quot;, &quot;mat-tab-content-0-1&quot;))).xy(0.41, 0.50 )' fallback='true' selected='false'/>
+   <accessor type='Parent' value='div(39, _in(custom(&quot;mat-tab-body&quot;, {&apos;id&apos;:&apos;mat-tab-content-0-1&apos;}))).xy(0.41, 0.50 )' fallback='true' selected='false'/>
+   <accessor type='Text' value='div(&quot;Stock transfer[1]&quot;)' fallback='false' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-tab-body[@id=&apos;mat-tab-content-0-1&apos;]/div/section/div/div[8]/div/div[1]/div&quot;)' fallback='false' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/avantor-header/header/section[3]/mat-tab-group/div/mat-tab-body[2]/div/section/div/div[8]/div/div/div&apos;)' fallback='false' selected='false'/>
+   <accessor type='Text' value='div(&quot;Stock transfer[1]&quot;).xy(0.41, 0.50 )' fallback='false' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Stock transfer &quot;]&apos;).xy(0.41, 0.50 )' fallback='false' selected='false'/>
+   <accessor type='Parent' value='div(39, _in(custom(&quot;mat-tab-body&quot;, &quot;mat-tab-content-0-1&quot;)))' fallback='false' selected='false'/>
+   <accessor type='Parent' value='div(39, _in(custom(&quot;mat-tab-body&quot;, {&apos;id&apos;:&apos;mat-tab-content-0-1&apos;})))' fallback='false' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;mega-menu-link ng-star-inserted ng-tns-c98-7[1]&quot;)' fallback='false' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;mega-menu-link ng-star-inserted ng-tns-c98-7[1]&quot;).xy(0.41, 0.50 )' fallback='false' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-tab-body[@id=&apos;mat-tab-content-0-1&apos;]/div/section/div/div[8]/div/div[1]/div&quot;).xy(0.41, 0.50 )' fallback='false' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/avantor-header/header/section[3]/mat-tab-group/div/mat-tab-body[2]/div/section/div/div[8]/div/div/div&apos;).xy(0.41, 0.50 )' fallback='false' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='2000' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"Automation"' type='web' desc='Enter value in Product catalog Search field' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-28&apos;]&quot;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='textbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-83 ng-untouched ng-valid&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;mat-input-28&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-83 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-stock-transfer-layout/div/app-stock-transfer/div/div[3]/div/avantor-table/div[2]/table/thead/tr[2]/th[4]/div/avantor-table-filter/mat-form-field/div/div/div[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-28&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field search-bar w-100 ng-tns-c49-83 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-can-float mat-form-field-should-float ng-untouched ng-valid ng-star-inserted mat-focused ng-dirty&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-83&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-83&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-83&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-83 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-28&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-28&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='4000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='getText(byXPath(&quot;//tbody//tr[1]/td[4]&quot;))' type='web' desc='Retrive the value from first row' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='data1' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value=' data1 ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//tr[contains(@class,&apos;striped-rows&apos;)])[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Close the filter' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;close[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-stock-transfer-layout/div/app-stock-transfer/div/div[3]/div/avantor-table/div[2]/table/thead/tr[2]/th[4]/div/avantor-table-filter/mat-form-field/div/div[1]/div[3]/button/span[1]/mat-icon&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-stock-transfer-layout/div/app-stock-transfer/div/div[3]/div/avantor-table/div[2]/table/thead/tr[2]/th[4]/div/avantor-table-filter/mat-form-field/div/div/div[3]/button/span/mat-icon&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-stock-transfer-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-stock-transfer[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;stock-transfer&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col&apos;]/avantor-table[@class=&apos;avantor-table-editable-cells ng-tns-c320-71 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c320-71&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c320-71 table -table&apos;]/thead[1]/tr[@class=&apos;mat-header-row cdk-header-row row-header ng-tns-c320-71 ng-star-inserted&apos;]/th[@class=&apos;mat-header-cell cdk-header-cell cdk-column-search-catalogNo mat-column-search-catalogNo ng-tns-c320-71 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top mat-table-sticky-border-elem-left&apos;]/div[@class=&apos;search-input ng-tns-c320-71 ng-star-inserted&apos;]/avantor-table-filter[@class=&apos;ng-tns-c320-71&apos;]/mat-form-field[@class=&apos;mat-form-field search-bar w-100 ng-tns-c49-83 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-can-float mat-form-field-should-float ng-untouched ng-valid ng-star-inserted mat-focused ng-dirty&apos;]/div[@class=&apos;mat-form-field-wrapper ng-tns-c49-83&apos;]/div[@class=&apos;mat-form-field-flex ng-tns-c49-83&apos;]/div[@class=&apos;mat-form-field-suffix ng-tns-c49-83 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator mat-button mat-icon-button mat-button-base ng-tns-c49-83 ng-star-inserted&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/mat-icon[@class=&apos;mat-icon notranslate material-icons mat-icon-no-color&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;mat-form-field-flex ng-tns-c49-83&quot;] &gt; div[class=&quot;mat-form-field-suffix ng-tns-c49-83 ng-star-inserted&quot;] &gt; button[class=&quot;mat-focus-indicator mat-button mat-icon-button mat-button-base ng-tns-c49-83 ng-star-inserted&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;] &gt; mat-icon[class=&quot;mat-icon notranslate material-icons mat-icon-no-color&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.mat-form-field-flex.ng-tns-c49-83 &gt; .mat-form-field-suffix.ng-tns-c49-83.ng-star-inserted &gt; .mat-focus-indicator.mat-button.mat-icon-button.mat-button-base.ng-tns-c49-83.ng-star-inserted &gt; .mat-button-wrapper &gt; .mat-icon.notranslate.material-icons.mat-icon-no-color&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='custom(&quot;mat-icon&quot;, &quot;mat-icon mat-icon-no-color material-icons notranslate[2]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"Auto"' type='web' desc='Enter the value from Description Search fi' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-29&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='textbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-84 ng-untouched ng-valid&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;mat-input-29&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-29&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-84 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-stock-transfer-layout/div/app-stock-transfer/div/div[3]/div/avantor-table/div[2]/table/thead/tr[2]/th[5]/div/avantor-table-filter/mat-form-field/div/div/div[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-29&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field search-bar w-100 ng-tns-c49-84 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-can-float mat-form-field-should-float ng-untouched ng-valid ng-star-inserted mat-focused ng-dirty&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-84&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-84&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-84&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-84 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-29&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='getText(byXPath(&quot;//tbody//tr[1]/td[5]&quot;))' type='web' desc='Retrive the data from first row' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value=' data2' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='data2' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//tr[contains(@class,&apos;striped-rows&apos;)])[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Close the filter' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;close[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-stock-transfer-layout/div/app-stock-transfer/div/div[3]/div/avantor-table/div[2]/table/thead/tr[2]/th[5]/div/avantor-table-filter/mat-form-field/div/div[1]/div[3]/button/span[1]/mat-icon&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-stock-transfer-layout/div/app-stock-transfer/div/div[3]/div/avantor-table/div[2]/table/thead/tr[2]/th[5]/div/avantor-table-filter/mat-form-field/div/div/div[3]/button/span/mat-icon&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-stock-transfer-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-stock-transfer[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;stock-transfer&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col&apos;]/avantor-table[@class=&apos;avantor-table-editable-cells ng-tns-c320-71 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c320-71&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c320-71 table -table&apos;]/thead[1]/tr[@class=&apos;mat-header-row cdk-header-row row-header ng-tns-c320-71 ng-star-inserted&apos;]/th[@class=&apos;mat-header-cell cdk-header-cell cdk-column-search-description mat-column-search-description ng-tns-c320-71 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top&apos;]/div[@class=&apos;search-input ng-tns-c320-71 ng-star-inserted&apos;]/avantor-table-filter[@class=&apos;ng-tns-c320-71&apos;]/mat-form-field[@class=&apos;mat-form-field search-bar w-100 ng-tns-c49-84 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-can-float mat-form-field-should-float ng-untouched ng-valid ng-star-inserted mat-focused ng-dirty&apos;]/div[@class=&apos;mat-form-field-wrapper ng-tns-c49-84&apos;]/div[@class=&apos;mat-form-field-flex ng-tns-c49-84&apos;]/div[@class=&apos;mat-form-field-suffix ng-tns-c49-84 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator mat-button mat-icon-button mat-button-base ng-tns-c49-84 ng-star-inserted&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/mat-icon[@class=&apos;mat-icon notranslate material-icons mat-icon-no-color&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;mat-form-field-flex ng-tns-c49-84&quot;] &gt; div[class=&quot;mat-form-field-suffix ng-tns-c49-84 ng-star-inserted&quot;] &gt; button[class=&quot;mat-focus-indicator mat-button mat-icon-button mat-button-base ng-tns-c49-84 ng-star-inserted&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;] &gt; mat-icon[class=&quot;mat-icon notranslate material-icons mat-icon-no-color&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.mat-form-field-flex.ng-tns-c49-84 &gt; .mat-form-field-suffix.ng-tns-c49-84.ng-star-inserted &gt; .mat-focus-indicator.mat-button.mat-icon-button.mat-button-base.ng-tns-c49-84.ng-star-inserted &gt; .mat-button-wrapper &gt; .mat-icon.notranslate.material-icons.mat-icon-no-color&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='custom(&quot;mat-icon&quot;, &quot;mat-icon mat-icon-no-color material-icons notranslate[2]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"VWR"' type='web' desc='Enter the value in verdor search field' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-31&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='textbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-86 ng-untouched ng-valid&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;mat-input-31&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-31&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-86 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-stock-transfer-layout/div/app-stock-transfer/div/div[3]/div/avantor-table/div[2]/table/thead/tr[2]/th[7]/div/avantor-table-filter/mat-form-field/div/div/div[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-31&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field search-bar w-100 ng-tns-c49-86 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-can-float mat-form-field-should-float ng-untouched ng-valid ng-star-inserted mat-focused ng-dirty&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-86&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-86&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-86&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-86 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-31&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='getText(byXPath(&quot;//tbody//tr[1]/td[7]&quot;))' type='web' desc='Retrive the value from first row' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='  data3' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='data3' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//tr[contains(@class,&apos;striped-rows&apos;)])[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Close the filter' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;close[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-stock-transfer-layout/div/app-stock-transfer/div/div[3]/div/avantor-table/div[2]/table/thead/tr[2]/th[7]/div/avantor-table-filter/mat-form-field/div/div[1]/div[3]/button/span[1]/mat-icon&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-stock-transfer-layout/div/app-stock-transfer/div/div[3]/div/avantor-table/div[2]/table/thead/tr[2]/th[7]/div/avantor-table-filter/mat-form-field/div/div/div[3]/button/span/mat-icon&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-stock-transfer-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-stock-transfer[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;stock-transfer&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col&apos;]/avantor-table[@class=&apos;avantor-table-editable-cells ng-tns-c320-71 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c320-71&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c320-71 table -table&apos;]/thead[1]/tr[@class=&apos;mat-header-row cdk-header-row row-header ng-tns-c320-71 ng-star-inserted&apos;]/th[@class=&apos;mat-header-cell cdk-header-cell cdk-column-search-vendorName mat-column-search-vendorName ng-tns-c320-71 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top&apos;]/div[@class=&apos;search-input ng-tns-c320-71 ng-star-inserted&apos;]/avantor-table-filter[@class=&apos;ng-tns-c320-71&apos;]/mat-form-field[@class=&apos;mat-form-field search-bar w-100 ng-tns-c49-86 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-can-float mat-form-field-should-float ng-untouched ng-valid ng-star-inserted mat-focused ng-dirty&apos;]/div[@class=&apos;mat-form-field-wrapper ng-tns-c49-86&apos;]/div[@class=&apos;mat-form-field-flex ng-tns-c49-86&apos;]/div[@class=&apos;mat-form-field-suffix ng-tns-c49-86 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator mat-button mat-icon-button mat-button-base ng-tns-c49-86 ng-star-inserted&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/mat-icon[@class=&apos;mat-icon notranslate material-icons mat-icon-no-color&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;mat-form-field-flex ng-tns-c49-86&quot;] &gt; div[class=&quot;mat-form-field-suffix ng-tns-c49-86 ng-star-inserted&quot;] &gt; button[class=&quot;mat-focus-indicator mat-button mat-icon-button mat-button-base ng-tns-c49-86 ng-star-inserted&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;] &gt; mat-icon[class=&quot;mat-icon notranslate material-icons mat-icon-no-color&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.mat-form-field-flex.ng-tns-c49-86 &gt; .mat-form-field-suffix.ng-tns-c49-86.ng-star-inserted &gt; .mat-focus-indicator.mat-button.mat-icon-button.mat-button-base.ng-tns-c49-86.ng-star-inserted &gt; .mat-button-wrapper &gt; .mat-icon.notranslate.material-icons.mat-icon-no-color&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='custom(&quot;mat-icon&quot;, &quot;mat-icon mat-icon-no-color material-icons notranslate[2]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

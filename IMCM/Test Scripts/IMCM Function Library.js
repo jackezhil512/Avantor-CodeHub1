@@ -1,0 +1,1036 @@
+/**
+ * @aiq.testdesigner
+ * This script requires AIQ Test Designer
+ */
+var operationValue;
+
+function setOperation(operation) {
+    operationValue = operation;
+}
+
+function getOperation() {
+    return operationValue;
+}
+
+function VerifyRecord(catalogNumber) {
+    var operation = getOperation();
+    setValue(fallback(`textbox(/mat-input.*/,_below(span("Product Catalog #")))`,
+       `textbox(/mat-input.*/,_below(span("Product Catalog #")))`), catalogNumber);
+    setValue(fallback(`textbox(/mat-input.*/,_below(span("Operation/Transaction")))`,
+       `textbox(/mat-input.*/,_below(span("Product Catalog #")))`), operation);
+     assertExists(fallback(`link("${operation}")`));
+}
+
+function navigateToStockroomActivityLog() {
+    setShadowDOM(true);
+    click(fallback(`submit("Overview expand_more")`));
+    wait(500);
+    click(fallback(`byXPath('//*[text()=" Stockroom Activity Log "]').xy(0.23, 0.38 )`));
+}
+
+function ValidateStockroomActivity(catalogNumbers) {
+    navigateToStockroomActivityLog();
+    catalogNumbers.forEach(function(catalogNumber) {
+        VerifyRecord(catalogNumber);
+    });
+}
+
+
+
+
+function Login(url, username, password, org, stockroom) {
+    setVariablesIfNeeded('{ds}/../IMCM_INPUTFILE/IMCM_INPUTFILE.csv','HashDPL',0,'en_US');
+    setShadowDOM(true);
+    navigateTo(url);
+    setValue(fallback(`byXPath('//*[@id="email"]')`), username);
+    setValue(fallback(`byXPath('//*[@id="password"]')`), password);
+    click(fallback(`byXPath('//*[@id="btn-login"]')`));
+    click(fallback(`div(2, _in(custom("mat-select", "mat-select-0"))).xy(0.51, 0.02 )`));
+    click(fallback(`byXPath('//*[normalize-space(text())="${org}"]')`));
+    click(fallback(`div(2, _in(custom("mat-select", "mat-select-2"))).xy(0.23, -0.04 )`));
+    click(fallback(`byXPath('//*[text()="${stockroom}"]')`));
+    click(fallback(`span("arrow_forward")`,
+       `byXPath('//app-root/app-org-and-stockroom/div/mat-card/mat-card-content/section/form/div/button[1]/span[1]/span[2]')`));
+ 	 wait(10000);
+     //let value = _isVisible(fallback(`custom("mat-icon", "close[1]")`));
+     let value = _isVisible(fallback(`byXPath('//*[text() = " News "]/following::button')`));
+    log(value);
+      if (true == value){
+       //click(fallback(`custom("mat-icon", "close[1]")`));
+       click(fallback(`byXPath('//*[text() = " News "]/following::button')`));
+         wait(10000);
+
+       }
+}
+
+
+function AddProductsToList(products) {
+    setVariablesIfNeeded('{ds}/../IMCM_INPUTFILE/IMCM_INPUTFILE.csv','HashDPL',0,'en_US');
+    setShadowDOM(true);
+    click(fallback(`byXPath('//*[text()="more_horiz"]')`));
+    click(fallback(`listItem("closeClear List")`));
+    
+    products.forEach(function(product) {
+        setValue(fallback(`textbox(/mat-input-.*/,_below(span("Catalog Number")))`), product);
+        wait(300);
+        setDescription("Set Quantity");
+        setValue(fallback(`numberbox(/mat-input-.*/)`),"1");
+        wait(300);
+        click(fallback(`span("Add to List[1]")`));
+         wait(300);
+    });
+    
+}
+
+function NavigateToCostcentermaintanance(){
+setShadowDOM(true);
+wait(100);
+click(fallback(`submit("Administration expand_more")`));
+wait(100);
+click(fallback(`byXPath('//*[text()=" Cost Center Maintenance "]').xy(0.23, 0.62 )`));
+wait(1000);
+assertExists(fallback(`span("Add New Cost Center[1]")`));
+wait(100);
+
+}
+
+
+function SearchFieldWithoutClose(SearchEditField,SearchValue){
+setValue(fallback(`textbox(/mat-input.*/,_below(span("${SearchEditField}")))`),SearchValue);
+wait(100);
+//assertExists(fallback(`cell("${SearchValue}")`));
+//wait(100);
+//click(fallback(`custom("mat-icon", "close[1]")`));
+wait(1000);
+}
+
+function SearchField(SearchEditField,SearchValue){
+setValue(fallback(`textbox(/mat-input.*/,_below(span("${SearchEditField}")))`),SearchValue);
+wait(100);
+assertExists(fallback(`cell("${SearchValue}")`));
+wait(100);
+click(fallback(`custom("mat-icon", "close[1]")`));
+wait(1000);
+}
+
+function SearchPageValidation(PageName){
+if (PageName === "CostCenterMaintenance") {
+wait(1000);
+setDescription("NavigateToCostcenterPage");
+NavigateToCostcentermaintanance();
+setDescription("Search for Cost center name");
+SearchField("Cost Center Name","Costcenter");
+setDescription("Search for Vat Exempt setting");
+SearchField("Vat Exempt Setting","N");
+setDescription("search for Number of user");
+SearchField("Number of Users","1");
+setDescription("Search for Description");
+SearchField("Description","Costcenter");
+setDescription("Click on Select");
+click(fallback(`div("Select[10]").xy(0.90, 0.39 )`));
+wait(500);
+setDescription("Click on Online");
+click(fallback(`span("Online[10]")`));
+wait(500);
+setDescription("Click on Calender");
+click(fallback(`image(0, _in(button({'aria-label':'Open calendar'}))).xy(0.71, 0.36 )`));
+wait(500);
+setDescription("Click on 30");
+click(fallback(`div("30").xy(0.57, 0.67 )`));
+wait(500);
+setDescription("Verfy for NORecords Found");
+assertExists(fallback(`heading3("No Records Found")`));
+
+}else if(PageName === "DepartmentMaintenance"){
+
+}else if(PageName === "LocationMaintenance"){
+setDescription("NavigateToLocationMaintenance");
+NavigateToLocationMaintanance();
+setDescription("Search for Location Name");
+SearchField("Location Name","Automation"); 
+ setDescription("Search for Number Of Products");
+SearchField("Number Of Products","0");  
+  wait(200);
+setDescription("Click on Created date");
+click(fallback(`image(0, _in(button({'aria-label':'Open calendar'}))).xy(0.38, 0.83 )`));
+setDescription("div(\"30\").xy(0.64, 0.75 )");
+click(fallback(`div("30").xy(0.64, 0.75 )`));
+setDescription("Verfy No Records Found");
+assertExists(fallback(`heading3("No Records Found")`));
+setDescription("Click clear");
+click(fallback(`custom("mat-icon", "clear")`));
+wait(200);
+setDescription("image(1, _in(button({'aria-label':'Open calendar'}))).xy(0.62, 0.66 )");
+click(fallback(`byXPath('//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-location-maintenance-layout/main/app-list-location/div[2]/div/avantor-table/div[2]/table/thead/tr[2]/th[5]/div/avantor-table-filter/mat-form-field/div/div[1]/div[1]/mat-datepicker-toggle/button/span[1]/img').xy(0.62, 0.66 )`));
+setDescription("Click 30 day");
+click(fallback(`div("30").xy(0.57, 0.78 )`));
+setDescription("Verfy No Records Found");
+assertExists(fallback(`heading3("No Records Found")`));
+
+}else{
+  
+}
+
+}
+
+
+function GettextFromfirstCell(){
+  var val1 = gettext(cell("cdk-cell cdk-column-costCenterName mat-cell mat-column-costCenterName ng-star-inserted ng-tns-c320-69"));
+  log(val1)
+  return val1;
+}
+
+function NavigateToLocationMaintanance(){
+  setDescription("Click Admin menu");
+  click(fallback(`submit("Administration expand_more")`));
+  wait(5);
+  setDescription("Click on Location Maintanance in Admin Menu");
+  click(fallback(`div("Location Maintenance[1]").xy(0.29, 0.67 )`));
+  wait(5);
+}
+
+function AddLocation(LocationName){
+  setDescription("Click Add Location");
+  click(fallback(`span("Add New Location")`));
+  wait(1000);
+  setDescription("Enter Location Name");
+  setValue(fallback(`textbox(0, _in(custom("mat-dialog-container", "mat-dialog-0")))`), LocationName);
+  setDescription("Click on Save button");
+  click(fallback(`submit("Save")`));
+  setDescription("Validate Success Message");
+  assertExists(fallback(`byXPath('//*[text()=" Successfully created location "]').xy(0.11, 0.54 )`));
+  wait(5000);
+}
+
+
+function VerifyRecordsSorting(elementToBeCompared,elementName){
+
+    var element1 = `(//td[contains(@class,'${elementName}')])[1]`;
+    var value1 = getText(byXPath(element1));
+    var element2 = `(//td[contains(@class,'${elementName}')])[2]`;
+    var value2 = getText(byXPath(element2));
+   click(fallback(`image(/asc-arrow-key.*/,_rightOf(span("${elementToBeCompared}")))`));
+    var element3 = `(//td[contains(@class,'${elementName}')])[1]`;
+    var value3 = getText(byXPath(element3));
+    var element4 = `(//td[contains(@class,'${elementName}')])[2]`;
+    var value4 = getText(byXPath(element4));
+    if (value3 < value4) { 
+        log("records are sorted in ascending order");
+    }else{
+        log("records are not sorted in ascending order");
+    }
+
+   //Descending Order
+   click(fallback(`image(/desc-arrow-key.*/,_rightOf(span("${elementToBeCompared}")))`));
+    var element5 = `(//td[contains(@class,'${elementName}')])[1]`;
+    var value5 = getText(byXPath(element5));
+    var element6 = `(//td[contains(@class,'${elementName}')])[2]`;
+    var value6 = getText(byXPath(element6));
+    if (value5 > value6) { 
+        log("records are sorted in descending order");
+    }else{
+        log("records are not sorted in descending order");
+    }
+
+  //REset Order
+   click(fallback(`image(/asc-arrow-key.*/,_rightOf(span("${elementToBeCompared}")))`));
+    var element7 = `(//td[contains(@class,'${elementName}')])[1]`;
+    var value7 = getText(byXPath(element7));
+    var element8 = `(//td[contains(@class,'${elementName}')])[2]`;
+    var value8 = getText(byXPath(element8));
+    if ((value1 === value7) && (value2 === value8)) { 
+        log("records are reset to orginal order");
+    }else{
+        log("records are not reset to original order");
+    }
+
+}
+function NavigateStockCorrection(){
+  click(fallback(`submit("Activities expand_more")`));
+  click(fallback(`byXPath('//*[text()=" Stock Correction "]').xy(0.83, 0.63 )`));
+  wait(1000);
+  assertExists(fallback(`span("Stock Correction[1]")`));
+}
+
+function NavigateReplenishStock(){
+  setDescription("Click on Activities");
+  click(fallback(`submit("Activities expand_more")`));
+  setDescription("Click on Replenish Stock");
+  click(fallback(`byXPath('//*[text()=" Replenish Stock "]').xy(0.83, 0.63 )`));
+  wait(1000);
+  setDescription("Validate Replenish Stock");
+  assertExists(fallback(`span("Replenish Stock[1]")`));
+}
+
+
+	function searchcatlogNoinReplenishPage(CatLog,QTY){
+   let value = _isVisible(fallback(`byXPath('//*[text()=" No Records Found "]')`));
+    log(value);
+if (true == value){
+    click(fallback(`strong("Add Product")`));
+    click(fallback(`span("Add Stockroom Product")`));
+     wait(1000);
+      //SearchFieldWithoutClose("Add Stockroom Product",CatLog)
+  setValue(fallback(`byXPath('//h2[@id="mat-dialog-title-0"]/following::input[2]')`),  CatLog  );
+     //setValue(fallback(`byXPath('//*[@id="mat-input-47"]')`),    CatLog );
+      //setValue(fallback(`byXPath('//h2[text()=" Assign Stockroom "]/following::input[@type="checkbox"][2]')`), CatLog);
+      //setValue(byXPath("//h2[text()=' Assign Stockroom ']/following::input[@type='checkbox'][2]"),CatLog);
+      //setValue(fallback(`byXPath("//th[contains(@class,'search-catalogNo value')]//input[1]")`),    CatLog );
+
+     // setValue(byXPath("//th[contains(@class,'search-catalogNo value')]//input[1]",CatLog)
+       wait(5000);
+     //setValue(fallback(`numberbox(/mat-input-.*/)`),"1");
+     //click(byXPath(element));
+    //setValue(byXPath(element),"250");
+      //setValue(fallback(`number(/mat-input.*/,_below(span("Quantity")))`),"250");
+     //Click(byXPath(element));
+      //sendText(fallback(`byXPath((//input[@type='number'])[11])`) ,10);
+      setValue(fallback(`numberbox("ng-star-inserted")`),QTY);
+     wait(10000);
+   //click(fallback(`span("Confirm")`));
+  click2(fallback(`byXPath('//span[text()=" Confirm "]')`));
+  //click2(fallback(`span("Confirm")`));
+  //click2(fallback(`span("Confirm")`));
+  //click2(byXPath('//span[text()=" Confirm "]'));
+    wait(1000);
+}else{
+  
+  setValue(fallback(`byXPath('//input[@type="number"]')`),QTY);
+}
+}
+
+function NavigateArticleActivityLog(){
+  wait(1000);
+setDescription("Click on Overview");
+click(fallback(`submit("Overview expand_more")`));
+wait(1000);
+setDescription("Click on Article Activity Log");
+//click(fallback(`byXPath('//*[text()=" Article Activity Log "]').xy(0.10, 0.43 )`));
+ click(fallback(`byXPath('//*[text()=" Article Activity Log " or text()=" Article Activity log "]').xy(0.10, 0.43 )`));
+wait(10000);
+setDescription("Validate Activity Log");
+//assertExists(fallback(`span("Activity Log")`));
+ assertExists(fallback(`byXPath('//*[text() = "Activity Log" or text() = "Activity log"]')`));
+}
+
+function ValidateArtileActivityLogMovementType(CatlogNo,MovementType){
+  wait(1000);
+NavigateArticleActivityLog();
+  wait(10000);
+setDescription("Enter CatLog No");
+SearchFieldWithoutClose("Catalog #",CatlogNo);
+wait(5000);
+setDescription("Click on first catlog link");
+//click(fallback(`link("cursor-pointer ng-star-inserted")`));
+ click(fallback(`byXPath('(//a[text()=" ${CatlogNo} "])[1]')`));
+wait(1000);
+ setDescription("Today");
+var   date=currdate();
+log(   date );
+click(fallback(`image(0, _in(button({'aria-label':'Open calendar'}))).xy(0.75, 0.60 )`));
+click(fallback(`byXPath('//div[text()=" ${date } "]').xy(0.72, 0.57 )`,
+   `div(0, _in(cell({'aria-label':'${date }'}))).xy(0.36, 0.63 )`));
+wait(10000);
+  setDescription("Enter CatLog No");
+  var Stage=$Env;
+  if (Stage == "Stage3"){
+    setValue(fallback(`textbox(/mat-input.*/,_rightOf(span("Movement Type")))`),MovementType);
+  } else{
+   //SearchFieldWithoutClose("Movement Type",MovementType);
+    //setValue(fallback(`textbox(/mat-input.*/,_leftOf(span("Movement Type")))`),MovementType);
+    setValue(fallback(`byXPath('(//span[text()=" Movement Type "])/following::input[2]')`),MovementType);
+  }
+ 
+wait(1000);
+assertExists(fallback(`link("${MovementType}")`));
+//assertExists(fallback(`link(MovementType)`));
+  
+}
+
+function ValidateStockroomActivityPage(CatlogNo,TransactionType){
+      navigateToStockroomActivityLog();
+wait(1000);
+SearchFieldWithoutClose("Product Catalog #",CatlogNo);
+wait(1000);
+  setDescription("Today");
+var   date=currdate();
+log(   date );
+click(fallback(`image(0, _in(button({'aria-label':'Open calendar'}))).xy(0.75, 0.60 )`));
+click(fallback(`byXPath('//div[text()=" ${date } "]').xy(0.72, 0.57 )`,
+   `div(0, _in(cell({'aria-label':'${date }'}))).xy(0.36, 0.63 )`));
+wait(10000);
+ 	 setValue(fallback(`byXPath('//span[text()=" Operation / Transaction " or text()=" Operation/Transaction "]/following::input[3]')`),TransactionType);
+  
+     //let valuetr = _isVisible(fallback(`byXPath('(//span[text()=" Operation/Transaction "])/following::input[3]')`));
+   
+  
+
+wait(1000);
+setDescription("Validating ${TransactionType} success in stockroom Activity log");
+//assertExists(fallback(`byXPath('//*[text()="Location Created"]').xy(0.11, 0.54 )`));
+  let value = _isVisible(fallback(`link("${TransactionType}")`));
+    log(value);
+  if (true == value) {
+      	assertExists(fallback(`link("${TransactionType}")`));
+      }else{
+      	assertExists(fallback(`byXPath('//*[text()="${TransactionType}"]').xy(0.11, 0.54 )`));
+      }
+   }
+function NavigateReceiveStock(){
+setDescription("Click on Activities");
+click(fallback(`submit("Activities expand_more")`));
+setDescription("Click on Receive Stock");
+click(fallback(`byXPath('//*[text()=" Receive Stock "]').xy(0.83, 0.63 )`));
+wait(1000);
+setDescription("Validate Receive Stock");
+assertExists(fallback(`span("Receive Stock[1]")`));
+}
+function StockFullreceiveORStockFullReject(CatlogNo,ActivetyType){
+  NavigateReceiveStock();
+wait(1000);
+setDescription("Click on Orders");
+click(fallback(`div("Orders[4]").xy(0.36, 0.39 )`));
+wait(1000);
+setDescription("Select Articles");
+click(fallback(`span("Articles")`));
+wait(1000);
+  log(CatlogNo);
+setDescription("Enter CatLog No");
+SearchFieldWithoutClose("Product Catalog #",CatlogNo);
+wait(1000);
+setDescription("Click on First Arrow");
+click(fallback(`custom("mat-icon", "keyboard_arrow_down[1]")`));
+wait(1000);
+setDescription("Click on First Arrow");
+click(fallback(`custom("mat-icon", "keyboard_arrow_down[1]")`));
+wait(1000);
+setDescription("Click on Ples symble");
+click(fallback(`custom("mat-icon", "add[1]")`));
+wait(1000);
+setDescription("Click on first check box");
+click2(fallback(`byXPath("(//span[@class='mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin'])[1]")`));
+wait(1000);
+if(ActivetyType == "fullreceive"){
+     setDescription("Click on Receive Stock Button");
+    click(fallback(`span("Receive Stock[3]")`));
+    setDescription("Validate Stock received success message");
+    assertExists(fallback(`div("STOCK RECEIVED!").xy(0.16, 0.50 )`));
+    wait(1000);  
+ }else if(ActivetyType == "fullreject"){
+   
+ }else{
+          
+  }
+ }
+function SearchProductinReplenishPage(CatlogNo,QTY){
+  setDescription("Enter CatLog No");
+  SearchFieldWithoutClose("Catalog Number",CatlogNo);
+  wait(1000);
+  searchcatlogNoinReplenishPage(CatlogNo,QTY );
+  wait(5000);
+}
+
+function ReplenishProduct(CatlogNo,QTY){
+  NavigateReplenishStock();
+  wait(2000);
+  SearchProductinReplenishPage(CatlogNo,QTY);
+  wait(5000);
+  setDescription("Click place your order");
+  click(fallback(`span("Place Your Order")`));
+  wait(10000);
+  click(fallback(`span("Checkout")`));
+  setDescription("Verfy Success message");
+  assertExists(fallback(`byXPath('//*[text()=" Stock Replenished Successfully! Your products were successfully replenished. "]').xy(0.24, 0.33 )`));
+  setDescription("Verfy receipt button");
+  assertExists(fallback(`span("Receipt")`));
+  wait(10000);
+}
+
+function ReplenishProductinApprovalPage(CatlogNo,QTY){
+  NavigateReplenishStock();
+  wait(1000);
+  SearchProductinReplenishPage(CatlogNo,QTY);
+  wait(5000);
+  setDescription("Click place your order");
+  click(fallback(`span("Place Your Order")`));
+  wait(10000);
+  click(fallback(`span("Checkout")`));
+  setDescription("Verfy Success message");
+  //assertExists(fallback(`byXPath('//*[text()=" Stock Replenished Successfully! Your products were successfully replenished. "]').xy(0.24, 0.33 )`));
+  //assertExists(fallback(`div(["Your order has been placed successf"]).xy(0.53, 0.50 )`));
+  assertExists(fallback(`div(["Your order has been sent as picking"]).xy(0.34, 0.33 )`));
+  setDescription("Verfy receipt button");
+  assertExists(fallback(`span("Receipt")`));
+  wait(10000);
+}
+
+function datefunc()
+{
+var d = eval('new Date()');
+var curr_date = d.getDate();if(curr_date<10){curr_date='0'+curr_date;}
+var curr_month = d.getMonth();if(curr_month<10){curr_month='0'+curr_month;}
+//var curr_month = d.getMonth();
+var curr_year = d.getFullYear();
+//var finaldate = curr_date + "-" + m_names[curr_month]+ "-" + curr_year;
+var finaldate = curr_month + "-" +curr_date + "-" + curr_year;
+return finaldate
+}
+function currdate()
+{
+var d = eval('new Date()');
+var curr_date = d.getDate();
+return curr_date
+}
+function NavigateConsumeStock(){
+setDescription("Click on Activities");
+click(fallback(`submit("Activities expand_more")`));
+setDescription("Click on Consume Stock");
+click(fallback(`byXPath('//*[text()=" Consume Stock "]').xy(0.83, 0.63 )`));
+wait(1000);
+setDescription("Validate Consume Stock");
+assertExists(fallback(`span("Consume Stock[1]")`));
+}
+
+function Consumeproduct(CatlogNo,QTY){
+  NavigateConsumeStock();
+wait(1000);
+setDescription("Set value Catalog No");
+SearchFieldWithoutClose("Catalog #",CatlogNo);
+wait(1000);
+setDescription("Set value to QTY");
+setValue(fallback(`byXPath('//input[@type="number"]')`),QTY);
+wait(1000);
+setDescription("Click on Consume");
+  click(fallback(`byXPath('(//span[@class="mat-button-wrapper" and contains(text()," Consume ")])[1]')`));
+//click(fallback(`span("Consume")`));
+wait(1000);
+setDescription("Click on Consume");
+click(fallback(`span("Consume Stock[2]")`));
+wait(1000);
+setDescription("Validate success mesage");
+assertExists(fallback(`div("STOCK CONSUMED SUCCESSFULLY!").xy(0.50, 0.50 )`));
+wait(1000);
+
+}
+
+function NavigateToManageStockRoom(){
+wait(1000);
+click(fallback(`submit("Administration expand_more")`));
+wait(1000);
+click(fallback(`div("Manage Stockroom[1]").xy(0.20, 0.29 )`));
+wait(1000);
+assertExists(fallback(`span("ADD STOCKROOM")`));
+wait(1000);
+
+}
+
+function ChangeStockroom(stockroom){
+	setDescription("Click on Change");
+	click(fallback(`span("CHANGE")`));
+  wait(3000);
+	setDescription("Click Stock room");
+	click(fallback(`byXPath('//div[text()=" Stockroom "]/following::mat-select[1]')`));
+  wait(1000);
+	setDescription("StockroomName");
+  click2(fallback(`byXPath('//input[@placeholder="Search stockroom"]')`));
+	setValue(fallback(`byXPath('//input[@placeholder="Search stockroom"]')`),stockroom);
+	wait(1000);
+	click(fallback(`byXPath('//*[text()="${stockroom}"]')`));
+	wait(1000);
+	setDescription("Click on Continue");
+	click(fallback(`span("Continue[1]")`));
+	wait(10000);
+}
+function NavigateApproval(){
+setDescription("Click on Activities");
+click(fallback(`submit("Activities expand_more")`));
+setDescription("Click on Approval");
+//click(fallback(`byXPath('//*[text()=" Approval "]').xy(0.83, 0.63 )`));
+  click(fallback(`span("Approval")`));
+wait(1000);
+setDescription("Validate Approval");
+//assertExists(fallback(`span("Approval[1]")`));
+}
+
+function ApproveProductinMastor(){
+wait(10000);
+setDescription("Click on POU Request Approval");
+click(fallback(`span("PoU Order Request Approval")`));
+setDescription("Click on arrow");
+click(fallback(`custom("mat-icon", "keyboard_arrow_down[1]")`));
+  wait(1000);
+setDescription("Click on first check box");
+//click2(fallback(`byXPath("(//span[@class='mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin'])[1]")`));
+ click2(fallback(`byXPath("(//span[@class='mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin'])[2]")`));
+setDescription("Click on Approve");
+click(fallback(`byXPath('//*[text()=" Approve "]')`));
+assertExists(fallback(`div("REQUEST APPROVED").xy(0.31, 0.42 )`));
+
+}
+function NavigateReports(){
+setDescription("Click on Overview");
+click(fallback(`submit("Overview expand_more")`));
+wait(10000);
+setDescription("Click on Reports");
+click(fallback(`byXPath('//*[text()=" Reports "]').xy(0.10, 0.43 )`));
+wait(10000);
+setDescription("Validate Reporting");
+assertExists(fallback(`span("Reporting")`));
+}
+
+function NavigateToReferenceCodeFieldUOM(){
+setDescription("Click Admin menu");
+click(fallback(`submit("Administration expand_more")`));
+wait(5);
+setDescription("Click on Reference Code Field UOM in Admin Menu");
+click(fallback(`div("Reference Code Field UOM[1]").xy(0.29, 0.67 )`));
+wait(5);
+}
+function NavigateToProductMaintenancePage() {
+    setShadowDOM(true);
+    click(fallback(`submit("Administration expand_more")`));
+    wait(300);
+    click(fallback(`byXPath('//*[text()=" Product Maintenance "]').xy(0.15, 0.76 )`));
+  	wait(500);
+    assertExists(fallback(`byXPath('//*[text()=" Add Product "]')`));
+    wait(300);
+
+}
+
+function LoginToHome(url, username, password) {
+    setVariablesIfNeeded('{ds}/../IMCM_INPUTFILE/IMCM_INPUTFILE.csv','HashDPL',0,'en_US');
+    setShadowDOM(true);
+    navigateTo(url);
+    setValue(fallback(`byXPath('//*[@id="email"]')`), username);
+    setValue(fallback(`byXPath('//*[@id="password"]')`), password);
+    click(fallback(`byXPath('//*[@id="btn-login"]')`));
+    
+}
+
+
+function returnCurrentDay() {
+var myDate = new Date();
+myDate.setDate(myDate.getDate()+1); 
+var day = myDate.getDay(); 
+  return Math.round(day);
+}
+
+function dataEnterWithLoop(){
+var Length = _eval("ds$('td.mat-column-expansion').find('a').length");
+log(Length);
+var x=1;
+if(Length > 0){
+while ( x <= Length){
+   click(byXPath("(//mat-icon[contains(text(),'add')]//ancestor::a)[1]"));
+   var x=x+1;
+}
+}
+var strLength = _eval("ds$('td.mat-column-expansion').find('a').length");
+var strtotalRow = _eval("ds$('td.mat-column-variationQty').length");
+log(strtotalRow);
+var actTotalRow = strtotalRow - strLength;
+log(actTotalRow);
+for(var i=1; i<=actTotalRow; i++){
+  var strXpath =  "(//td[contains(@class,'variationQty')]/mat-form-field[not(contains(@class,'mat-form-field-disabled'))]//input)[Temp]".replace("Temp",i);
+  setValue(byXPath(strXpath),"10");
+}
+}
+
+function LoginWithoutURL(url, username, password, org, stockroom) {
+    setVariablesIfNeeded('{ds}/../IMCM_INPUTFILE/IMCM_INPUTFILE.csv','HashDPL',0,'en_US');
+    setShadowDOM(true);
+    //navigateTo(url);
+    setValue(fallback(`byXPath('//*[@id="email"]')`), username);
+    setValue(fallback(`byXPath('//*[@id="password"]')`), password);
+    click(fallback(`byXPath('//*[@id="btn-login"]')`));
+    click(fallback(`div(2, _in(custom("mat-select", "mat-select-0"))).xy(0.51, 0.02 )`));
+    click(fallback(`byXPath('//*[normalize-space(text())="${org}"]')`));
+    click(fallback(`div(2, _in(custom("mat-select", "mat-select-2"))).xy(0.23, -0.04 )`));
+    click(fallback(`byXPath('//*[text()="${stockroom}"]')`));
+    click(fallback(`span("arrow_forward")`,
+       `byXPath('//app-root/app-org-and-stockroom/div/mat-card/mat-card-content/section/form/div/button[1]/span[1]/span[2]')`));
+}
+
+function verifyTableAscendingOrder(ColumnNum){
+let stringsTemp1 = [];
+let stringsTemp2 = [];
+  wait(1000);
+var TotalRows = _eval("ds$(\'tbody[role=\"rowgroup\"] tr.striped-rows\').length");
+  var TR = Number(TotalRows);
+log(TR);
+  let j = 1;
+for(let i=1; i<TR; i++){
+  var Row1Data = getText(byXPath('//tbody//tr['+j+']//td['+ColumnNum+']'));
+  log(Row1Data);
+  stringsTemp1.push(Row1Data);
+  stringsTemp2.push(Row1Data);
+  j=j+4;
+  log(j);
+}
+log(stringsTemp2);
+log(stringsTemp1);
+stringsTemp1.sort();
+
+var length = stringsTemp2.length;
+for(var i=0;i<=length-1;i++){
+  assertEquals(stringsTemp2[i],stringsTemp1[i]);
+}
+}
+
+function verifyTableDescendingOrder(ColumnNum){
+let stringsTemp1 = [];
+let stringsTemp2 = [];
+  wait(1000);
+var TotalRows = _eval("ds$(\'tbody[role=\"rowgroup\"] tr.striped-rows\').length");
+var TR = Number(TotalRows);
+log(TR);
+  let j = 1;
+for(let i=1; i<TR; i++){
+  var Row1Data = getText(byXPath('//tbody//tr['+j+']//td['+ColumnNum+']'));
+  log(Row1Data);
+  stringsTemp1.push(Row1Data);
+  stringsTemp2.push(Row1Data);
+  j=j+4;
+  log(j);
+}
+log("Application Data");
+log(stringsTemp2);
+stringsTemp1.sort();
+stringsTemp1.reverse();
+log("Data after descending order");
+log(stringsTemp1);
+var length = stringsTemp2.length;
+for(var i=0;i<=length-1;i++){
+  assertEquals(stringsTemp2[i],stringsTemp1[i]);
+}
+}
+
+function TableRowCount(){
+  var nameCountLength = _eval("ds$(\'tbody[role=\"rowgroup\"] tr.striped-rows\').length");
+  log(nameCountLength);
+  TableRowCount = nameCountLength;
+
+}
+
+function TableRowCountVerify(num){
+  var nameCountLength = _eval("ds$(\'tbody[role=\"rowgroup\"] tr.striped-rows\').length");
+  var temp = Number(nameCountLength);
+  assertEquals(num,Math.floor(nameCountLength));
+}
+
+function LoginToHomeWURL(username, password) {
+    setVariablesIfNeeded('{ds}/../IMCM_INPUTFILE/IMCM_INPUTFILE.csv','HashDPL',0,'en_US');
+    setShadowDOM(true);
+    //navigateTo(url);
+    setValue(fallback(`byXPath('//*[@id="email"]')`), username);
+    setValue(fallback(`byXPath('//*[@id="password"]')`), password);
+    click(fallback(`byXPath('//*[@id="btn-login"]')`));
+}
+
+function showentries(){
+wait(2000);
+setDescription("Click on show entries");
+click(byXPath("//span[@class='table-limiter-show-entries']/following::mat-select"));
+setDescription("select 25 in show entries");
+click(byXPath('//*[text()=" 25 "]'));
+wait(2500);
+setDescription("Verify the total rows");
+TableRowCountVerify(25);
+setDescription("Click on show entries");
+click(byXPath("//span[@class='table-limiter-show-entries']/following::mat-select"));
+setDescription("select 10 in show entries");
+click(byXPath('//*[text()=" 10 "]'));
+wait(2500);
+setDescription("Verify the total rows");
+TableRowCountVerify(10);
+setDescription("Validate the pagination icon");
+assertExists(custom("mat-icon", "last_page"));
+setDescription("Validate the pagination icon");
+assertExists(byXPath('//*[text()="first_page"]'));
+setDescription("Validate the pagination icon");
+assertExists(custom("mat-icon", "keyboard_arrow_right"));
+setDescription("Validate the pagination icon");
+assertExists(custom("mat-icon", "keyboard_arrow_left"));
+}
+
+function TableRowCount(){
+  var nameCountLength = _eval("ds$(\'tbody[role=\"rowgroup\"] tr.striped-rows\').length");
+  log(nameCountLength);
+}
+
+function TableRowCountVerify(num){
+  var nameCountLength = _eval("ds$(\'tbody[role=\"rowgroup\"] tr.striped-rows\').length");
+  var temp = Number(nameCountLength);
+  assertEquals(num,Math.floor(nameCountLength));
+}
+
+function deleteinternaluser(){
+assertExists(fallback(`byXPath('//*[text()="User Maintenance"]')`,
+   `span("User Maintenance")`));
+click(fallback(`byXPath('//*[text()="Internal Users"]').xy(0.30, 0.54 )`,
+   `div("Internal Users[1]").xy(0.30, 0.54 )`));
+setValue(fallback(`textbox(/mat-input.*/,_below(span("First & Last Name")))`),strFirstName);
+wait(2000);
+click(fallback(`image(/ellipsis-icon.svg.*/)`));
+click(fallback(`custom("font", "Delete")`));
+click(fallback(`span("Confirm[1]")`));
+click(fallback(`div("Internal user deleted successfully[9]").xy(0.42, 0.55 )`));
+}
+
+function editandsaveduserdetails(){
+assertExists(fallback(`span("User Maintenance")`));
+click(fallback(`div("New Users in Organization[1]").xy(0.41, 0.38 )`));
+click(fallback(`div("Active Users[1]").xy(0.43, 0.58 )`));
+click(fallback(`image("https://im-stage3.avantorsciences.com/assets/icons/ellipsis-icon.svg").xy(0.38, 0.78 )`));
+click(fallback(`byXPath('//*[text()=" Edit"]')`,
+   `custom("font", "Edit")`));
+click(fallback(`span("User Maintenance")`,
+   `byXPath('//*[text()="User Maintenance"]')`,
+   `span("title")`));
+var         StrAddress=eval("'VWR Lab Products Pvt Ltd'+ Math.floor(Math.random()*1000)");
+click(fallback(`byXPath("//input[contains(@id,'mat-input') and @formcontrolname='address']")`));
+setValue(fallback(`byXPath("//input[contains(@id,'mat-input') and @formcontrolname='address']")`),"");
+setValue(fallback(`byXPath("//input[contains(@id,'mat-input') and @formcontrolname='address']")`),StrAddress);
+click(fallback(`span("Save & Update[1]")`));
+assertExists(fallback(`byXPath('//*[text()=" You have successfully updated the User details. "]').xy(0.56, 0.50 )`));
+wait(150);
+}
+
+function deleteinternaluser(){
+assertExists(fallback(`byXPath('//*[text()="User Maintenance"]')`,
+   `span("User Maintenance")`));
+click(fallback(`byXPath('//*[text()="Internal Users"]').xy(0.30, 0.54 )`,
+   `div("Internal Users[1]").xy(0.30, 0.54 )`));
+setValue(fallback(`textbox(/mat-input.*/,_below(span("First & Last Name")))`),strFirstName);
+wait(2000);
+click(fallback(`image(/ellipsis-icon.svg.*/)`));
+click(fallback(`custom("font", "Delete")`));
+click(fallback(`span("Confirm[1]")`));
+click(fallback(`div("Internal user deleted successfully[9]").xy(0.42, 0.55 )`));
+}
+
+function enterQty(ProductNum){
+var tempValue = ProductNum;
+var tempXPath1 = "(//a[contains(text(),'Temp')]//following::input)[2]".replace("Temp",tempValue);
+setValue(byXPath(tempXPath1),"1");
+}
+
+function NavigateConsumeStock(){
+setDescription("Click on Activities");
+click(fallback(`submit("Activities expand_more")`));
+setDescription("Click on Consume Stock");
+click(fallback(`byXPath('//*[text()=" Consume Stock "]').xy(0.83, 0.63 )`));
+wait(1000);
+setDescription("Validate Consume Stock");
+assertExists(fallback(`span("Consume Stock[1]")`));
+}
+
+function addbatchproductstoconsumeproduct(products){
+
+    setVariablesIfNeeded('{ds}/../IMCM_INPUTFILE/IMCM_INPUTFILE.csv','HashDPL',0,'en_US');
+    setShadowDOM(true);    
+    products.forEach(function(product) {
+
+    setValue(fallback(`textbox(/mat-input.*/,_below(span("Catalog #")))`,
+     `textbox(/mat-input.*/,_below(span(" Catalog #")))`),product);
+    wait(4000);
+    click(fallback(`byXPath('//*[text()=" add"]')`,
+   `custom("mat-icon", "add")`));
+    wait(4000); 
+    click(fallback(`byXPath("//table/tbody//tr[1]/td[5]//input")`));
+    clearText(fallback(`byXPath("//table/tbody//tr[1]/td[5]//input")`));
+    setValue(fallback(`byXPath("//table/tbody//tr[1]/td[5]//input")`),"1");
+    wait(1000);
+     });
+}
+
+function addproductstoconsumeproduct(products){
+
+    setVariablesIfNeeded('{ds}/../IMCM_INPUTFILE/IMCM_INPUTFILE.csv','HashDPL',0,'en_US');
+    setShadowDOM(true);    
+    products.forEach(function(product) {
+
+    setValue(fallback(`textbox(/mat-input.*/,_below(span("Catalog #")))`,
+     `textbox(/mat-input.*/,_below(span(" Catalog #")))`),product);
+    wait(1500);
+    click(fallback(`byXPath("//table/tbody//tr[1]/td[11]//input")`));
+    clearText(fallback(`byXPath("//table/tbody//tr[1]/td[11]//input")`));
+    setValue(fallback(`byXPath("//table/tbody//tr[1]/td[11]//input")`),"2");
+    });
+}
+
+function clickconsumestock(){
+setDescription("Click on Consume");
+    click(fallback(`span("Consume")`));
+    wait(1500);
+    setDescription("Click on Consume stock");
+    click(fallback(`span("Consume Stock[2]")`));
+    wait(1000);
+   setDescription("Validate success mesage");
+   assertExists(fallback(`div("STOCK CONSUMED SUCCESSFULLY!").xy(0.50, 0.50 )`));
+  wait(1000);
+} 
+
+
+
+function ValidateArtileActivityLogMovementTypes(products,MovementType){
+
+  wait(1000);
+
+NavigateArticleActivityLog();
+
+  wait(3000);
+
+setVariablesIfNeeded('{ds}/../IMCM_INPUTFILE/IMCM_INPUTFILE.csv','HashDPL',0,'en_US');
+    setShadowDOM(true);    
+    products.forEach(function(product) {
+
+
+setDescription("Enter CatLog No");
+
+SearchFieldWithoutClose("Catalog #",product);
+
+wait(4000);
+
+setDescription("Click on first catlog link");
+
+click(fallback(`byXPath("//table/tbody/tr[1]/td[contains(@class,'catalogNo')]/a")`));
+
+wait(3000);
+setValue(fallback(`byXPath('(//span[text()=" Movement Type "])/following::input[2]')`),"Stock Consumed");
+wait(10000);
+assertExists(fallback(`byXPath("//table/tbody/tr[1]/td[contains(@class,'activityType')]/a[text()='Stock Consumed']")`));
+wait (3000);
+
+click(fallback(`byXPath("//span[text()='Back']")`));
+wait (4000);      
+  });
+
+}
+function clickonsubmitrequest(){
+
+ click(fallback(`byXPath('//*[text()=" Request "]')`,
+ `span("Request")`));
+ click(fallback(`byXPath('//*[text()=" Submit Request "]')`,
+ `span("Submit Request")`));
+ assertExists(fallback(`byXPath('//*[text()=" Successfully requested products "]').xy(0.20, 0.63 )`,
+ `div("Successfully requested products[3]").xy(0.20, 0.63 )`));
+ wait(500);
+}
+
+function ValidateArtileActivityLogMovementTypess(products){
+
+  wait(1000);
+
+NavigateArticleActivityLog();
+
+  wait(3000);
+
+setVariablesIfNeeded('{ds}/../IMCM_INPUTFILE/IMCM_INPUTFILE.csv','HashDPL',0,'en_US');
+    setShadowDOM(true);    
+    products.forEach(function(product) {
+
+
+setDescription("Enter CatLog No");
+
+SearchFieldWithoutClose("Catalog #",product);
+
+wait(4000);
+
+setDescription("Click on first catlog link");
+
+click(fallback(`byXPath("//table/tbody/tr[1]/td[contains(@class,'catalogNo')]/a")`));
+
+wait(3000);
+setValue(fallback(`byXPath('(//span[text()=" Movement Type "])/following::input[2]')`),"Requested");
+
+ wait(10000);
+ assertExists(fallback(`byXPath("//table/tbody/tr[1]/td[contains(@class,'activityType')]/a[text()='Consumption Requested']")`));     
+wait (3000);
+
+click(fallback(`byXPath("//span[text()='Back']")`));
+wait (4000);      
+  });
+
+}
+
+function addproductstoconsumeproduct(products){
+
+    setVariablesIfNeeded('{ds}/../IMCM_INPUTFILE/IMCM_INPUTFILE.csv','HashDPL',0,'en_US');
+    setShadowDOM(true);    
+    products.forEach(function(product) {
+
+    setValue(fallback(`textbox(/mat-input.*/,_below(span("Catalog #")))`,
+     `textbox(/mat-input.*/,_below(span(" Catalog #")))`),product);
+    wait(100);
+    click(fallback(`byXPath("//table/tbody//tr[1]/td[11]//input")`));
+    clearText(fallback(`byXPath("//table/tbody//tr[1]/td[11]//input")`));
+    setValue(fallback(`byXPath("//table/tbody//tr[1]/td[11]//input")`),"1");
+    });
+}
+
+
+function addbatchproductstoconsumeproduct(products){
+
+    setVariablesIfNeeded('{ds}/../IMCM_INPUTFILE/IMCM_INPUTFILE.csv','HashDPL',0,'en_US');
+    setShadowDOM(true);    
+    products.forEach(function(product) {
+
+    setValue(fallback(`textbox(/mat-input.*/,_below(span("Catalog #")))`,
+     `textbox(/mat-input.*/,_below(span(" Catalog #")))`),product);
+    wait(4000);
+    click(fallback(`byXPath('//*[text()=" add"]')`,
+   `custom("mat-icon", "add")`));
+    wait(4000); 
+    click(fallback(`byXPath("//table/tbody//tr[1]/td[5]//input")`));
+    clearText(fallback(`byXPath("//table/tbody//tr[1]/td[5]//input")`));
+    setValue(fallback(`byXPath("//table/tbody//tr[1]/td[5]//input")`),"1");
+    wait(1000);
+     });
+}
+
+
+function verifycatalognumberandDescription(){
+
+setDescription("Click first Catalog number");
+click(fallback(`byXPath("//table/tbody//tr[1]/td[4]/a")`));
+assertExists(fallback(`byXPath('//*[text()=" Catalog Number "]').xy(0.61, 0.58 )`,
+   `div("Catalog Number").xy(0.61, 0.58 )`));
+assertExists(fallback(`byXPath('//*[text()=" Available Quantity "]').xy(0.52, 0.62 )`,
+   `div("Available Quantity").xy(0.52, 0.62 )`));
+assertExists(fallback(`byXPath('//*[text()=" Quantity in Transfer "]').xy(0.64, 0.58 )`,
+   `div("Quantity in Transfer").xy(0.64, 0.58 )`));
+click(fallback(`byXPath('//*[text()="Full Details"]')`,
+   `span("Full Details")`));
+assertExists(fallback(`byXPath('//*[text()=" Technical Article Number "]').xy(0.26, 0.47 )`,
+   `div("Technical Article Number").xy(0.26, 0.47 )`));
+assertExists(fallback(`byXPath('//*[text()=" Vendor Catalog Number "]').xy(0.22, 0.64 )`,
+   `div("Vendor Catalog Number").xy(0.22, 0.64 )`));
+click(fallback(`span("Close")`,
+   `byXPath('//*[text()=" Close "]')`));
+}
+
+function verifycatalognumberdescriptionandvendorname(){
+setDescription("Search");
+setValue(fallback(`textbox(/mat-input.*/,_below(span("Catalog #")))`,
+   `textbox(/mat-input.*/,_below(span("Catalog #")))`,
+   `textbox(/mat-input.*/,_below(span("Catalog #")))`),"451");
+setDescription("Verify Search result");
+VerifyRecordsSorting("Catalog #","catalogNo");
+setDescription("Close search string");
+click(fallback(`custom("mat-icon", "close[1]")`));
+setDescription("Search");
+setValue(fallback(`textbox(/mat-input.*/,_below(span("Description")))`),"Auto");
+setDescription("Verify Search result");
+VerifyRecordsSorting("Description","description");
+setDescription("Close search string");
+click(fallback(`custom("mat-icon", "close[1]")`));
+setDescription("Search");
+setValue(fallback(`textbox(/mat-input.*/,_below(span("Vendor Name")))`,
+   `textbox(/mat-input.*/,_below(span("Catalog #")))`,
+   `textbox(/mat-input.*/,_below(span("Catalog #")))`),"VWR");
+setDescription("Verify Search result");
+VerifyRecordsSorting("Vendor Name","vendorName");
+setDescription("Close search string");
+click(fallback(`custom("mat-icon", "close[1]")`));
+}

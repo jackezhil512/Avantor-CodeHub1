@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'NavigateToStockRoomActivityLog.ds' description= '' author= 'null' version= ''>
+<dpl filename='' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/Login.ds"' fallback='true' selected='true'/>
+   <accessor type='Text' value='link(&quot;Dashboard&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;nav-label d-flex align-items-center ng-tns-c98-7 active-label&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Dashboard &quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='Verify Dashboard' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Dashboard &quot;]&apos;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Overview' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='submit(&quot;Overview expand_more&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Stockroom Activity Long' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='div(&quot;Stockroom Activity Log[1]&quot;).xy(0.13, 0.71 )' fallback='true' selected='true'/>
+   <accessor type='Parent' value='div(17, _in(custom(&quot;mat-tab-body&quot;, {&apos;id&apos;:&apos;mat-tab-content-0-2&apos;}))).xy(0.13, 0.71 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;link-2 mega-menu-link ng-star-inserted ng-tns-c98-7[1]&quot;).xy(0.13, 0.71 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-tab-body[@id=&apos;mat-tab-content-0-2&apos;]/div/section/div/div[2]/div/div[3]/div&quot;).xy(0.13, 0.71 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/avantor-header/header/section[3]/mat-tab-group/div/mat-tab-body[3]/div/section/div/div[2]/div/div[3]/div&apos;).xy(0.13, 0.71 )' fallback='true' selected='false'/>
+   <accessor type='Parent' value='div(17, _in(custom(&quot;mat-tab-body&quot;, &quot;mat-tab-content-0-2&quot;))).xy(0.13, 0.71 )' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Stockroom Activity Log &quot;]&apos;).xy(0.13, 0.71 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div(&quot;Stockroom Activity Log[1]&quot;).xy(0.13, 0.71 )' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Stockroom Activity Log &quot;]&apos;).xy(0.13, 0.71 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='300' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Select Today ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='div(&quot;mat-select-arrow-wrapper ng-tns-c89-78&quot;).xy(0.01, 0.53 )' fallback='true' selected='true'/>
+   <accessor type='Parent' value='div(2, _in(custom(&quot;mat-select&quot;, {&apos;id&apos;:&apos;mat-select-16&apos;}))).xy(0.01, 0.53 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-select[@id=&apos;mat-select-16&apos;]/div/div[2]&quot;).xy(0.01, 0.53 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-select-arrow-wrapper ng-tns-c89-78&quot;]&apos;).xy(0.01, 0.53 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-activity-log/div/app-stockroom-activity-log/div/div/mat-form-field/div/div/div[3]/mat-select/div/div[2]&apos;).xy(0.01, 0.53 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-select-16&apos;)/div[@class=&apos;mat-select-trigger ng-tns-c89-78&apos;]/div[@class=&apos;mat-select-arrow-wrapper ng-tns-c89-78&apos;]&quot;).xy(0.01, 0.53 )' fallback='true' selected='false'/>
+   <accessor type='Parent' value='div(2, _in(custom(&quot;mat-select&quot;, &quot;mat-select-16&quot;))).xy(0.01, 0.53 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click on Today ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Today&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, {&apos;id&apos;:&apos;mat-option-48&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-option-text&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-option[@id=&apos;mat-option-48&apos;]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-option-text&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Today &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/mat-option/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-option-48&apos;)/span[@class=&apos;mat-option-text&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;cdk-overlay-pane&quot;] &gt; div[class=&quot;mat-select-panel-wrap ng-tns-c89-68 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted&quot;] &gt; div[class=&quot;ng-tns-c89-68 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary&quot;] &gt; mat-option[class=&quot;mat-option mat-focus-indicator mat-active ng-tns-c89-68&quot;] &gt; span[class=&quot;mat-option-text&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-option-48 &gt; .mat-option-text&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, &quot;mat-option-48&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='300' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click on Update Result Button' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Update Results&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-activity-log/div/app-stockroom-activity-log/div[1]/div[4]/button/span[1]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-activity-log/div/app-stockroom-activity-log/div/div[4]/button/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .filters-container &gt; .button-container &gt; .mat-focus-indicator.mx-1.mat-raised-button.mat-button-base.mat-primary &gt; .mat-button-wrapper&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Update Results &quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

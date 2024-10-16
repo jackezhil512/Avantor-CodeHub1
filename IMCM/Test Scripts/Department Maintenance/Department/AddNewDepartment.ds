@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'AddNewDepartment.ds' description= '' author= 'null' version= ''>
+<dpl filename='' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='wait' value='60' type='web' desc='Click On Add new Department Button' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/Login.ds"' fallback='true' selected='true'/>
+   <accessor type='Text' value='span(&quot;Add New Department[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Add New Department &quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click On Add new Department Button' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Add New Department &quot;]&apos;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='eval(&quot;&apos;Department&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='Generate Department Name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='    DepartName' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='    DepartName' type='web' desc='Enter Department Name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-30&apos;]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='textbox(0, _in(div({&apos;id&apos;:&apos;cdk-accordion-child-0&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-30&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='textbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-95 ng-untouched ng-valid&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;mat-input-30&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-95 ng-untouched ng-valid cdk-text-field-autofill-monitored ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-30&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='false'/>
+   <accessor type='Parent' value='textbox(0, _in(div(&quot;cdk-accordion-child-0&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click Required' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Required &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='custom(&quot;mat-panel-description&quot;, 0, _in(custom(&quot;mat-expansion-panel-header&quot;, {&apos;id&apos;:&apos;mat-expansion-panel-header-1&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='custom(&quot;mat-panel-description&quot;, &quot;mat-expansion-panel-header-description ng-tns-c228-97&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='custom(&quot;mat-panel-description&quot;, &quot;Required&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-expansion-panel-header[@id=&apos;mat-expansion-panel-header-1&apos;]/span/mat-panel-description&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-expansion-panel-header-description ng-tns-c228-97&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-expansion-panel-header-1&apos;)/span[@class=&apos;mat-content ng-tns-c228-97&apos;]/mat-panel-description[@class=&apos;mat-expansion-panel-header-description ng-tns-c228-97&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-add-new-department/div[2]/div/mat-accordion/mat-expansion-panel[2]/mat-expansion-panel-header/span/mat-panel-description&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='custom(&quot;mat-panel-description&quot;, 0, _in(custom(&quot;mat-expansion-panel-header&quot;, &quot;mat-expansion-panel-header-1&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click on Add User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Add User(s) to Department&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(0, _in(div({&apos;id&apos;:&apos;cdk-accordion-child-1&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-button-wrapper[8]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[1]/div/button/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Add User(s) to Department &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-accordion-child-1&apos;)/div[@class=&apos;mat-expansion-panel-body ng-tns-c226-96&apos;]/section[@class=&apos;pt-4 ng-tns-c226-96&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-md-6 col-sm-12&apos;]/button[@class=&apos;mat-focus-indicator lg-button mat-flat-button mat-button-base mat-primary&apos;]/span[@class=&apos;mat-button-wrapper&apos;]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Select User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//h2[text()=&apos; Add User(s) to Department &apos;]/following::input[@type=&apos;checkbox&apos;][2]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='//h2[text()=&apos; Add User(s) to Department &apos;]/following::input[@type=&apos;checkbox&apos;][2]' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Select User' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='checkbox(0,_near(cell([&quot;mat-cell cdk-cell cdk-column-firstName&quot;])))' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-checkbox&quot;, {&apos;id&apos;:&apos;mat-checkbox-23&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-checkbox[@id=&apos;mat-checkbox-23&apos;]/label/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-dialog-add-new-user-to-department/mat-dialog-content/div/avantor-table/div[2]/table/tbody/tr/td/mat-checkbox/label/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-checkbox-23&apos;)/label[@class=&apos;mat-checkbox-layout&apos;]/span[@class=&apos;mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;tr[class=&quot;mat-row cdk-row ng-tns-c320-100 striped-rows ng-star-inserted&quot;] &gt; td[class=&quot;mat-cell cdk-cell cdk-column-_select mat-column-_select ng-tns-c320-100 ng-star-inserted&quot;] &gt; mat-checkbox[class=&quot;mat-checkbox mat-accent ng-tns-c320-100 ng-star-inserted&quot;] &gt; label[class=&quot;mat-checkbox-layout&quot;] &gt; span[class=&quot;mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-checkbox-23 &gt; .mat-checkbox-layout &gt; .mat-checkbox-inner-container.mat-checkbox-inner-container-no-side-margin&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-checkbox&quot;, &quot;mat-checkbox-23&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click on Save' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Save[2]&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-dialog-container[@id=&apos;mat-dialog-0&apos;]/app-dialog-add-new-user-to-department/mat-dialog-actions/button[2]/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-dialog-add-new-user-to-department/mat-dialog-actions/button[2]/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-dialog-0&apos;)/app-dialog-add-new-user-to-department[@class=&apos;ng-star-inserted&apos;]/mat-dialog-actions[@class=&apos;mat-dialog-actions&apos;]/button[@class=&apos;mat-focus-indicator px-3 mr-2 mat-flat-button mat-button-base mat-primary&apos;]/span[@class=&apos;mat-button-wrapper&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-button-wrapper[21]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click on Save' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Save &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='span(&quot;Save&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-add-new-department/div[1]/div[2]/div/button[2]/span[1]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-department-maintenance-layout/div/app-add-new-department/div/div[2]/div/button[2]/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-button-wrapper[6]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='Verify Successfully Add Department msg' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Successfully added department. &quot;]&apos;).xy(0.17, 0.63 )' fallback='true' selected='true'/>
+   <accessor type='Parent' value='div(7, _in(div({&apos;id&apos;:&apos;cdk-overlay-3&apos;}))).xy(0.17, 0.63 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;title&quot;).xy(0.17, 0.63 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-overlay-3&apos;)/snack-bar-container[@class=&apos;mat-snack-bar-container ng-tns-c40-105 ng-trigger ng-trigger-state mat-snack-bar-center ng-star-inserted&apos;]/div[@class=&apos;ng-tns-c40-105&apos;]/div[@class=&apos;ng-tns-c40-105&apos;]/avantor-toast[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;toast-wrapper d-flex align-items-center justify-content-between&apos;]/div[@class=&apos;d-flex ng-star-inserted&apos;]/div[2]/div[1]/div[@class=&apos;title&apos;]&quot;).xy(0.17, 0.63 )' fallback='true' selected='false'/>
+   <accessor type='Text' value='div(&quot;Successfully added department.[3]&quot;).xy(0.17, 0.63 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

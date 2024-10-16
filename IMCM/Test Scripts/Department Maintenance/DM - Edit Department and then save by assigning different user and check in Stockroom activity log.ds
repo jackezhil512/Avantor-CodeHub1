@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'DM - Edit Department and then save by assigning different user and check in Stockroom activity log.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/IMCM-Master-Repository-Harish/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='null'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/Login.ds"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM Function Library.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)&#10;' type='web' desc='Login to IMCM EV' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='include' value='' type='web' desc='Navigate to Department' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/Department Maintenance/Department/NavigateToDepartmaintenance.ds"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/NavigateToDepartmaintenance.ds"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/Department Maintenance/DM - Add Dpt by assi usr frm multiple pge and chk in Stkroom act log.ds"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/Department/AddNewDepartment.ds"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/Department Maintenance/Department/AddNewDepartment.ds"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='include' value='' type='web' desc='Edit Department' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/Department Maintenance/Department/EditDepartment.ds"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/EditDepartment.ds"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='include' value='' type='web' desc='Navigate to Stockroom' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/Department Maintenance/Department/NavigateToStockRoomActivityLog.ds"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/NavigateToStockRoomActivityLog.ds"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/Department/NavigateToStockRoomActivityLog.ds"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='Verify Department Updated Log from stock room activity' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Department Updated&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='span(&quot;Department Updated&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-activity-log/div/app-stockroom-activity-log/div[2]/avantor-table/div[2]/table/tbody/tr[1]/td[5]/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-activity-log/div/app-stockroom-activity-log/div[2]/avantor-table/div[2]/table/tbody/tr/td[5]/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-activity-log[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4 activity-log-container&apos;]/app-stockroom-activity-log[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;article-table&apos;]/avantor-table[@class=&apos;ng-tns-c320-142 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c320-142&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c320-142 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c320-142 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-activityTypes mat-column-activityTypes ng-tns-c320-142 ng-star-inserted&apos;]/span[@class=&apos;ng-star-inserted&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[5]//span[@class=&quot;ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[5]//span[text()=&quot;Department Updated&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;tr[class=&quot;mat-row cdk-row ng-tns-c320-142 striped-rows ng-star-inserted&quot;] &gt; td[class=&quot;mat-cell cdk-cell cdk-column-activityTypes mat-column-activityTypes ng-tns-c320-142 ng-star-inserted&quot;] &gt; span[class=&quot;ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c320-142.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-activityTypes.mat-column-activityTypes.ng-tns-c320-142.ng-star-inserted &gt; .ng-star-inserted&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;ng-star-inserted[5]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

@@ -26,6 +26,11 @@
    <accessor type='unknown' value='span(&quot;title&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
 <step action='click' value='' type='web' desc='select Inactive User tab' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='div(&quot;Inactive Users[1]&quot;).xy(0.66, 0.77 )' fallback='true' selected='true'/>
@@ -269,12 +274,12 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;Deactivate User&quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;User Updated&quot;]&apos;)' fallback='true' selected='false'/>

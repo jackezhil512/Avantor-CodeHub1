@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'TC03 To perform Receive Stock in Dashboard action list and then check print barcode and Article Activity Log.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/IMCM-Master-Repository/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/IMCM Login.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/IMCM Function Library.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login to IMCM as Normal User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='AddProductsToList([$NORMAL_PRODUCT,$UOM_PRODUCT,$BATCHANDEXPIRY_PRODUCT, $BATCHALONE_PRODUCT, $EXPIRYALONE_PRODUCT,$UOMBATCHANDEXPIRYWITHDYNAMIC_PRODUCT])' type='web' desc='Add Products to Action List' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='Click Action List' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;list&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='click Select Action' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;keyboard_arrow_down &quot;]&apos;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Receive Stock&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click2' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-checkbox&quot;, {&apos;id&apos;:&apos;mat-checkbox-26&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/div/mat-stepper/div[2]/div[2]/app-receive-stock-panel/div/div/main/div/div[3]/div/avantor-table/div[2]/table/thead/tr/th/mat-checkbox/label/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-checkbox-26&apos;)/label[@class=&apos;mat-checkbox-layout&apos;]/span[@class=&apos;mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;tr[class=&quot;mat-header-row cdk-header-row row-header main-row-header ng-tns-c320-99 ng-star-inserted&quot;] &gt; th[class=&quot;mat-header-cell cdk-header-cell header cdk-column-_select mat-column-_select ng-tns-c320-99 ng-star-inserted mat-table-sticky&quot;] &gt; mat-checkbox[class=&quot;mat-checkbox mat-accent ng-tns-c320-99 ng-star-inserted&quot;] &gt; label[class=&quot;mat-checkbox-layout&quot;] &gt; span[class=&quot;mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-checkbox-26 &gt; .mat-checkbox-layout &gt; .mat-checkbox-inner-container.mat-checkbox-inner-container-no-side-margin&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-checkbox&quot;, &quot;mat-checkbox-26&quot;)))' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-checkbox[@id=&apos;mat-checkbox-26&apos;]/label/span[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Add Batch&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"1"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='textbox(/mat-input-.*/,_below(span(&quot;Batch #&quot;)))' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='path(0, _in(button({&apos;aria-label&apos;:&apos;Open calendar&apos;})))' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-focus-indicator mat-calendar-next-button mat-icon-button mat-button-base&quot;]&apos;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div(&quot;25&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"1"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='numberbox(/mat-input-.*/,_below(span(&quot;Received Qty[1]&quot;)))' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Next&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Receive Products&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div(&quot;STOCK RECEIVED!&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='setOperation(&quot;Stock Received&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='ValidateStockroomActivity([$NORMAL_PRODUCT,$UOM_PRODUCT,$BATCHANDEXPIRY_PRODUCT, $BATCHALONE_PRODUCT, $EXPIRYALONE_PRODUCT,$UOMBATCHANDEXPIRYWITHDYNAMIC_PRODUCT])' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+</testcase>

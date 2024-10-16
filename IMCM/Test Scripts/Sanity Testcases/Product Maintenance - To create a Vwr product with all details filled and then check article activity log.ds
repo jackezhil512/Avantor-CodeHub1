@@ -41,7 +41,7 @@
 </step>
 <step action='if' value='""' type='web' desc='Verifying if catalog exist or not?' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='    isVisible(link($CreateVWRProductCatalog)) ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='isVisible(link($CreateVWRProductCatalog))' fallback='true' selected='true'/>
    <accessor type='AttrHref' value='link(&quot;javascript:void(0)&quot;)' fallback='true' selected='false'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-list-product/div[2]/div[3]/avantor-table/div[2]/table/tbody/tr[1]/td[2]/a&apos;)' fallback='true' selected='false'/>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; 83008-822 &quot;]&apos;)' fallback='true' selected='false'/>
@@ -157,7 +157,7 @@
 </step>
 <step action='if' value='""' type='web' desc='verify product  need to reactive message exist' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value=' isVisible(byXPath(&apos;//*[text()=&quot; No &quot;]&apos;)) ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='isVisible(byXPath(&apos;//*[text()=&quot; No &quot;]&apos;))' fallback='true' selected='true'/>
    <accessor type='Parent' value='span(0, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-0&apos;})))' fallback='true' selected='false'/>
    <accessor type='AttrClass' value='span(&quot;mat-button-wrapper[12]&quot;)' fallback='true' selected='false'/>
    <accessor type='Text' value='span(&quot;No&quot;)' fallback='true' selected='false'/>
@@ -221,7 +221,7 @@
 </step>
 <step action='if' value='' type='web' desc='Verify Select UOM  exist or not?' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='isVisible(div(&quot;Select Unit of Measure[1]&quot;).xy(0.39, 0.72 ))   ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='isVisible(div(&quot;Select Unit of Measure[1]&quot;).xy(0.39, 0.72 ))' fallback='true' selected='true'/>
    <accessor type='Parent' value='div(113, _in(div({&apos;id&apos;:&apos;cdk-accordion-child-0&apos;}))).xy(0.39, 0.72 )' fallback='true' selected='false'/>
    <accessor type='AttrClass' value='div(&quot;mat-form-field-infix ng-tns-c49-187&quot;).xy(0.39, 0.72 )' fallback='true' selected='false'/>
    <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-accordion-child-0&apos;]/div/section/div[3]/div[1]/mat-form-field/div/div[1]/div[3]&quot;).xy(0.39, 0.72 )' fallback='true' selected='false'/>

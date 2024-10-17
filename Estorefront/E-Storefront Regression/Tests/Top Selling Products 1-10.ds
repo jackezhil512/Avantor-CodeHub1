@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'Top Selling Products 1-10.ds' description= '' author= 'null' version= ''>
+<dpl filename='{ds}/../Test Data/TopSellingProducts.csv' exectype='runstepbystep5' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='Loading Reusable function' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$UserId,$Password)' type='web' desc='Login to application and validate login page successfully loaded or not' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='ClearCart()' type='web' desc='Clear the existing cart' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='NavigatetoProductpagetoSearch($CATALOGID_2)' type='web' desc='Search Catlog Number and Verify if  PDP page navigated or not' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='AddingSearchcatlogNumberTocartpageInPdp($CATALOGID_2)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div($CATALOGID_1,_below(div(&quot;attribute catalog-attribute&quot;)))' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='getText(div($CATALOGID_1,_below(div(&quot;attribute catalog-attribute&quot;))))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='CatlogNumber' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='CatlogNumber' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='10000' type='web' desc='wait for some to page loaded' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='Validate to Ordering table is displaying or not' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;item item-container sticky-header-pdp&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[5]/app-avtr-product-variant-details/app-avtr-product-variant-table/section[2]/ul/li[1]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[5]/app-avtr-product-variant-details/app-avtr-product-variant-table/section[2]/ul/li&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;ProductDetailsPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;ProductDetailsPageTemplate&apos;]/cx-page-slot[@class=&apos;orderTableComponent has-components&apos;]/app-avtr-product-variant-details[1]/app-avtr-product-variant-table[1]/section[2]/ul[@class=&apos;collection collection-container header&apos;]/li[@class=&apos;item item-container sticky-header-pdp&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;ul[class=&quot;collection collection-container header&quot;] &gt; li[class=&quot;item item-container sticky-header-pdp&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.collection.collection-container.header &gt; .item.item-container.sticky-header-pdp&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='listItem(&quot;item item-container sticky-header-pdp&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Add qty like searh product' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='button(&quot;aria-label==Add one more&quot;,rightOf(div($CATALOGID_1,_below(div(&quot;attribute catalog-attribute&quot;)))))' fallback='true' selected='true'/>
+   <accessor type='unknown' value='$CATALOGID_1' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='add to cart' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='button(&quot;Add to cart&quot;,rightOf(div($CATALOGID_1,_below(div(&quot;attribute catalog-attribute&quot;)))))' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='ViewCart()' type='web' desc='Verify like added product is navigate to cart page or not' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='link(&quot;${CatlogNumber}&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='link(&quot;76322-150&quot;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='link(&quot;$CATALOGID_1&quot;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='link(&quot;$CatlogNumber&quot;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='link(&quot;$[CatlogNumber]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='store' value='getText(link(&quot;${CatlogNumber}&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='CartPageCatlogNumber' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='CartPageCatlogNumber' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='getText((//div[text() = &quot;52877-398&quot;]/following :: button)[5])' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='Test' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='$CATALOGID_2' fallback='true' selected='true'/>
+</dialect>
+</step>
+</testcase>

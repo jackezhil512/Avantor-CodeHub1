@@ -1,13 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testcase   name= 'TC08 To verify whether user able to Create,Edit and delete pi count location.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../IMCM_INPUTFILE.csv' exectype='runspecificstep' errorhandling='' type='HashDPL' locale='en_US'/>
+<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='false'/>
 <shadowDOM useShadowDOM='false'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM_Gopal/IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"{ds}/../../IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -56,7 +57,7 @@
    <accessor type='unknown' value='btXPath(&quot;(//span[text()=&apos;Add New Location&apos;]//preceding-sibling::span)[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='strLocation ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='strLocation' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//input[@placeholder=&apos;New Location Name&apos;]&quot;)' fallback='true' selected='true'/>
 </dialect>
@@ -84,7 +85,7 @@
    <accessor type='unknown' value='btXPath(&quot;(//span[text()=&apos;Add New Location&apos;]//preceding-sibling::span)[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='strUpdate ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='strUpdate' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//input[@placeholder=&apos;New Location Name&apos;]&quot;)' fallback='true' selected='true'/>
 </dialect>
@@ -152,7 +153,7 @@
    <accessor type='unknown' value='byXPath(&quot;//strong[contains(text(),&apos;Create Physical Invetory Location&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='strLocation  ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='strLocation' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;(//font[contains(text(),&apos;Pi Count Name&apos;)]//following::input)[1]&quot;)' fallback='true' selected='true'/>
 </dialect>

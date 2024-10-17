@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testcase   name= 'TC04 To verify whether user able to delete custom fields in Product barcodes.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../IMCM_INPUTFILE.csv' exectype='runspecificstep' errorhandling='' type='HashDPL' locale='en_US'/>
+<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='false'/>
 <shadowDOM useShadowDOM='false'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../IMCM_Function/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM_Gopal/IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../../IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='log in with normal user' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

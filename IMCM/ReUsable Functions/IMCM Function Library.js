@@ -119,7 +119,7 @@ wait(1000);
 setDescription("NavigateToCostcenterPage");
 NavigateToCostcentermaintanance();
 setDescription("Search for Cost center name");
-SearchField("Cost Center Name","Costcenter");
+SearchField("Cost Center Name","ZCostcenter");
 setDescription("Search for Vat Exempt setting");
 SearchField("Vat Exempt Setting","N");
 setDescription("search for Number of user");

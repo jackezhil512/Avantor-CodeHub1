@@ -42,9 +42,10 @@
 </step>
 <step action='include' value='' type='web' desc='add Department' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/Department Maintenance/Department/AddNewDepartment.ds"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Repo/IMCM/ReUsable Functions/Re Useable Function Library/AddNewDepartment.ds"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/EditDepartment.ds"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/AddNewDepartment.ds"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/Department Maintenance/Department/AddNewDepartment.ds"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -52,7 +53,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='include' value='' type='web' desc='Navigate to Stockroom' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='include' value='' type='web' desc='Navigate to Stockroom' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/Department Maintenance/Department/NavigateToStockRoomActivityLog.ds"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/NavigateToStockRoomActivityLog.ds"' fallback='true' selected='false'/>

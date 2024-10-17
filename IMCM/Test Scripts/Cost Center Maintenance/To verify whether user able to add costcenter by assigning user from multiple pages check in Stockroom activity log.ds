@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'To verify whether user able to delete Costcenter using bulk option and check in Stockroom activity log.ds' description= '' author= 'null' version= ''>
+<testcase   name= 'To verify whether user able to add costcenter by assigning user from multiple pages check in Stockroom activity log.ds' description= '' author= 'null' version= ''>
 <dpl filename='REPOSITORY/IMCM/IMCM_INPUTFILE.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
@@ -49,10 +49,10 @@
 </step>
 <step action='store' value='eval(&quot;&apos;Test cost center&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  Costcenter' fallback='true' selected='true'/>
+   <accessor type='unknown' value='Costcenter' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='   Costcenter ' type='web' desc='Enter Cost center name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='Costcenter' type='web' desc='Enter Cost center name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='true'/>
    <accessor type='Parent' value='textbox(0, _in(div({&apos;id&apos;:&apos;cdk-accordion-child-0&apos;})))' fallback='true' selected='false'/>
@@ -68,7 +68,7 @@
    <accessor type='Parent' value='textbox(0, _in(div(&quot;cdk-accordion-child-0&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='  Costcenter ' type='web' desc='Enter cost cener description' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='Costcenter' type='web' desc='Enter cost cener description' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Attribute' value='textbox({&apos;formcontrolname&apos;:&apos;description&apos;})' fallback='true' selected='true'/>
    <accessor type='Parent' value='textbox(1, _in(div({&apos;id&apos;:&apos;cdk-accordion-child-0&apos;})))' fallback='true' selected='false'/>
@@ -214,10 +214,10 @@
 </step>
 <step action='store' value='eval(&quot;&apos;Test cost center&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  Costcenter' fallback='true' selected='true'/>
+   <accessor type='unknown' value='Costcenter' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='   Costcenter ' type='web' desc='Enter Cost center name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='Costcenter' type='web' desc='Enter Cost center name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='true'/>
    <accessor type='Parent' value='textbox(0, _in(div({&apos;id&apos;:&apos;cdk-accordion-child-0&apos;})))' fallback='true' selected='false'/>
@@ -233,7 +233,7 @@
    <accessor type='Parent' value='textbox(0, _in(div(&quot;cdk-accordion-child-0&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='  Costcenter ' type='web' desc='Enter cost cener description' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='Costcenter' type='web' desc='Enter cost cener description' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Attribute' value='textbox({&apos;formcontrolname&apos;:&apos;description&apos;})' fallback='true' selected='true'/>
    <accessor type='Parent' value='textbox(1, _in(div({&apos;id&apos;:&apos;cdk-accordion-child-0&apos;})))' fallback='true' selected='false'/>

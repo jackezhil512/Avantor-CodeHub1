@@ -153,9 +153,9 @@
     <controller name="Iteration1">
       <round iterations="1" totalusers="1"/>
     </controller>
-    <testcase name="Testcase1" importance="normal">
+    <testcase name="Global Search" importance="normal">
       <test>
-        <run name="Untitled1" langtype="bulkds3" resource="IMCM/Test Scripts/Global News TCs/" method="ds" testclass="Chrome" regex="*.ds">
+        <run name="Untitled1" langtype="bulkds3" resource="IMCM/Test Scripts/Global Search/" method="ds" testclass="Chrome" regex="*.ds">
           <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
         </run>
       </test>
@@ -166,7 +166,7 @@
   <monitoring enablednodes="true" enabledtarget="false"/>
   <execution type="functionaltest" subtype="bulk">
     <iteration name="Iteration1" controller="Iteration1">
-      <testcase name="Testcase1" users="1" totalexecutions="1"/>
+      <testcase name="Global Search" users="1" totalexecutions="1"/>
     </iteration>
   </execution>
   <logs/>

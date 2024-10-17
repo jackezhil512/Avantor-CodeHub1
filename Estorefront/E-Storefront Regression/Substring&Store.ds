@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'Hover.ds' description= '' author= 'appvance' version= ''>
+<dpl filename='' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='prepareDomain' value='"https://avantor-gqp.us.auth0.com/"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='navigateTo' value='"https://p2.avantorsciences.com/ca/en/"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrHref' value='link(&quot;/ca/en/login&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='link(&quot;Login&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[3]/app-login/div/a[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Login&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[3]/app-login/div/a&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SiteLogin has-components&apos;]/app-login[1]/div[@class=&apos;login-link&apos;]/a[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='link({&apos;role&apos;:&apos;link&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/login&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"automationreguser@yopmail.com"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;email&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='textbox(&quot;form-control&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;email&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;email&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;form-control&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div/div/form/div/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;email&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;form-group&quot;] &gt; input[class=&quot;form-control&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#email&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"Admin@123"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;password&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='password(&quot;form-control&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='password(&quot;password&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;password&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div/div/form/div[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;password&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='password({&apos;type&apos;:&apos;password&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#password&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;btn-login&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='submit(&quot;btn btn-block btn-primary&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='submit(&quot;btn-login&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='submit(&quot;Log In&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//button[@id=&apos;btn-login&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary btn-block&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div/div/form/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;btn-login&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='submit({&apos;type&apos;:&apos;submit&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;button[class=&quot;btn btn-primary btn-block&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#btn-login&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"414004-146"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='textbox(&quot;ng-dirty ng-untouched ng-valid searchbox-quotes-input&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[10]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;searchbox-quotes-input ng-untouched ng-valid ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[10]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-my-quotes[1]/div[@class=&apos;container my-quotes-container&apos;]/div[@class=&apos;fliter-wrapper col-3&apos;]/div[@class=&apos;searchbox-quotes&apos;]/input[@class=&apos;searchbox-quotes-input ng-untouched ng-valid ng-dirty&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;container my-quotes-container&quot;] &gt; div[class=&quot;fliter-wrapper col-3&quot;] &gt; div[class=&quot;searchbox-quotes&quot;] &gt; input[class=&quot;searchbox-quotes-input ng-untouched ng-valid ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.container.my-quotes-container &gt; .fliter-wrapper.col-3 &gt; .searchbox-quotes &gt; .searchbox-quotes-input.ng-untouched.ng-valid.ng-dirty&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='12000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='link(&quot;Request a Quote&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='submit(&quot;Accept all cookies&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/footer/cx-page-layout/cx-page-slot/app-consent-banner/div/div[2]/div/div[1]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary btn-block font-bold&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Accept all cookies &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/footer/cx-page-layout/cx-page-slot/app-consent-banner/div/div[2]/div/div/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/footer[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;footer&apos;]/cx-page-slot[@class=&apos;Footer has-components&apos;]/app-consent-banner[1]/div[@class=&apos;consent-banner&apos;]/div[@class=&apos;cookie-content&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-md-5 col-lg-4 col-xs-12 consent-margin mt-3&apos;]/button[@class=&apos;btn btn-primary btn-block font-bold&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='submit({&apos;type&apos;:&apos;submit&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;consent-banner&quot;] &gt; div[class=&quot;cookie-content&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col-md-5 col-lg-4 col-xs-12 consent-margin mt-3&quot;] &gt; button[class=&quot;btn btn-primary btn-block font-bold&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.consent-banner &gt; .cookie-content &gt; .row &gt; .col-md-5.col-lg-4.col-xs-12.consent-margin.mt-3 &gt; .btn.btn-primary.btn-block.font-bold&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='submit(&quot;btn btn-block btn-primary font-bold&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='clickXY' value='"97,24"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='div(&quot;quick-order-form-input&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-request-quote/div/div/div[5]/div[1]/div[2]/app-avtr-order-entry-form/form/div[1]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;quick-order-form-input&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-request-quote/div/div/div[5]/div/div[2]/app-avtr-order-entry-form/form/div&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;quick-order-searchbox-is-active&apos;]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-request-quote[1]/div[@class=&apos;container request-quote-container&apos;]/div[1]/div[@class=&apos;req-quote-upload&apos;]/div[1]/div[@class=&apos;mb-4&apos;]/app-avtr-order-entry-form[1]/form[@class=&apos;quick-order-form-container ng-untouched ng-pristine ng-valid&apos;]/div[@class=&apos;quick-order-form-input&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;form[class=&quot;quick-order-form-container ng-untouched ng-pristine ng-valid&quot;] &gt; div[class=&quot;quick-order-form-input&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.quick-order-form-container.ng-untouched.ng-pristine.ng-valid &gt; .quick-order-form-input&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"414004-146"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='textbox(&quot;form-control ng-dirty ng-untouched ng-valid&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-request-quote/div/div/div[5]/div[1]/div[2]/app-avtr-order-entry-form/form/div[1]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;form-control ng-untouched ng-valid ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-request-quote/div/div/div[5]/div/div[2]/app-avtr-order-entry-form/form/div/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;quick-order-searchbox-is-active&apos;]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-request-quote[1]/div[@class=&apos;container request-quote-container&apos;]/div[1]/div[@class=&apos;req-quote-upload&apos;]/div[1]/div[@class=&apos;mb-4&apos;]/app-avtr-order-entry-form[1]/form[@class=&apos;quick-order-form-container ng-untouched ng-valid ng-dirty&apos;]/div[@class=&apos;quick-order-form-input&apos;]/input[@class=&apos;form-control ng-untouched ng-valid ng-dirty&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;formcontrolname&apos;:&apos;product&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;form[class=&quot;quick-order-form-container ng-untouched ng-valid ng-dirty&quot;] &gt; div[class=&quot;quick-order-form-input&quot;] &gt; input[class=&quot;form-control ng-untouched ng-valid ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.quick-order-form-container.ng-untouched.ng-valid.ng-dirty &gt; .quick-order-form-input &gt; .form-control.ng-untouched.ng-valid.ng-dirty&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;414004-146[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-request-quote/div/div/div[5]/div[1]/div[2]/app-avtr-order-entry-form/form/div[2]/ul/li[1]/button/span[1]/span/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;highlight&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;414004-146&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-request-quote/div/div/div[5]/div/div[2]/app-avtr-order-entry-form/form/div[2]/ul/li/button/span/span/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;quick-order-searchbox-is-active&apos;]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-request-quote[1]/div[@class=&apos;container request-quote-container&apos;]/div[1]/div[@class=&apos;req-quote-upload&apos;]/div[1]/div[@class=&apos;mb-4&apos;]/app-avtr-order-entry-form[1]/form[@class=&apos;quick-order-form-container ng-valid ng-dirty ng-touched&apos;]/div[@class=&apos;quick-order-results&apos;]/ul[@class=&apos;quick-order-results-products&apos;]/li[@class=&apos;quick-order-results-product-container&apos;]/button[@class=&apos;quick-order-results-product has-media&apos;]/span[@class=&apos;id&apos;]/span[1]/span[@class=&apos;highlight&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;span[class=&quot;highlight&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.highlight&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;highlight&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='button(&quot;+&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-request-quote/div/div/div[8]/app-request-quote-item/div/div/div/div/div[5]/div/cx-item-counter/button[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-request-quote/div/div/div[8]/app-request-quote-item/div/div/div/div/div[5]/div/cx-item-counter/button[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-request-quote[1]/div[@class=&apos;container request-quote-container&apos;]/div[1]/div[@class=&apos;cx-quick-order-table-row&apos;]/app-request-quote-item[1]/div[@class=&apos;cx-quick-order-table-item request-quotes-table-item&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-md-12 cx-quick-order-info-container&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;product-info-lg col-md-2 col-lg-2 col-xl-2&apos;]/div[@class=&apos;cx-value&apos;]/cx-item-counter[1]/button[2]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='button({&apos;type&apos;:&apos;button&apos;})' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='submit(&quot;btn btn-primary req-quote-btn&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='submit(&quot;Request a Quote&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-request-quote/div/div/div[13]/button[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary req-quote-btn&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Request a Quote&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-request-quote/div/div/div[13]/button[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-request-quote[1]/div[@class=&apos;container request-quote-container&apos;]/div[1]/div[@class=&apos;btn-action-grp&apos;]/button[@class=&apos;btn btn-primary req-quote-btn&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;btn-action-grp&quot;] &gt; button[class=&quot;btn btn-primary req-quote-btn&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.btn-action-grp &gt; .btn.btn-primary.req-quote-btn&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='getText(div(&quot;web-quote-number&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='Test' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='Test' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='Test.substring(Test.lastIndexOf(&quot;is&quot;)+2)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='Test1' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='addToLocalWhiteboard' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='Test1' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
+</dialect>
+</step>
+<step action='log' value='Test1' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+</testcase>

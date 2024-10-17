@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'BackOffice-CR-79-AdminCockpit-VWR-ArticalNumber.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/HOME/BackOffice_Vijay/Backoffice_input_file.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='navigateTo' value='"https://s2.supplier.avantorsciences.com/productmanagement/login.zul"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='$UserId' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='textbox(&quot;j_username&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"Production@123"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrName' value='password(&quot;j_password&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='password(0, _in(div({&apos;id&apos;:&apos;d5nPy&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;d5nP_0&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='password(&quot;login z-textbox&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathName' value='byXPath(&apos;//*[@name=&quot;j_password&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='password(&quot;d5nP_0&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;d5nP_0&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div/div/div/div/div/form/div/table/tbody/tr/td/table/tbody/tr/td/div/table[2]/tbody/tr/td/table/tbody/tr/td[3]/div/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;d5nP_0&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[3]//div//input[@id=&quot;d5nP_0&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[3]//div//input[@name=&quot;j_password&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='password({&apos;type&apos;:&apos;password&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#d5nP_0&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;input[name=&quot;j_password&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='password(0, _in(div(&quot;d5nPy&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='button(&quot;Sign In&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='button(&quot;PROCEED&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='navigateTo' value='"https://s2.supplier.avantorsciences.com/productmanagement/"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"product"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[@class=&quot;z-bandbox-input&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='textbox(0, _in(span({&apos;id&apos;:&apos;kDNB8e&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;kDNB8e-real&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='textbox(&quot;z-bandbox-hover z-bandbox-input&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;kDNB8e-real&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;kDNB8e-real&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;z-bandbox-input z-bandbox-hover&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;kDNB8e-real&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;yw-panel-navigation yw-explorerTree-mainCnt yw-navigationCnt z-vlayout z-flex z-flex-column&quot;] &gt; div[class=&quot;z-vlayout-inner&quot;] &gt; div[class=&quot;yw-explorerTree-filterDiv z-div&quot;] &gt; span[class=&quot;yw-explorerTree-filterTextbox yw-filter-textbox y-general-textinput z-bandbox&quot;] &gt; input[class=&quot;z-bandbox-input z-bandbox-hover&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#kDNB8e-real&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;input[value=&quot;&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='textbox(0, _in(span(&quot;kDNB8e&quot;)))' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[2]/div/div[2]/div/span/input&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Products&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(0, _in(div({&apos;id&apos;:&apos;kDNBmb7&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;kDNBpb7&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;z-label[3]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='span(&quot;kDNBpb7&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//span[@id=&apos;kDNBpb7&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Products&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[2]/div/div[3]/div/div/div/table/tbody/tr[2]/td/div/div/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;kDNBpb7&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[2]//td[1]//div//div//span[@id=&quot;kDNBpb7&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[2]//td[1]//div//div//span[@class=&quot;z-label&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[2]//td[1]//div//div//span[text()=&quot;Products&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;tr[class=&quot;yw-navigationNode-level2 yw-navigationnode-first z-treerow&quot;] &gt; td[class=&quot;y-tree-icon-hmc_typenode_product z-treecell&quot;] &gt; div[class=&quot;z-treecell-content&quot;] &gt; div[class=&quot;yw-treeCellInner z-div&quot;] &gt; span[class=&quot;z-label&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#kDNBpb7&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(0, _in(div(&quot;kDNBmb7&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrTitle' value='button(&quot;Switch search mode&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='button(1, _in(div({&apos;id&apos;:&apos;kDNBdk&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;kDNBgk&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='button(&quot;yw-toggle-advanced-search yw-toggle-closed z-button&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='button(&quot;kDNBgk&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//button[@id=&apos;kDNBgk&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;yw-toggle-advanced-search yw-toggle-closed z-button&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div/div/div[2]/button[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;kDNBgk&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;button[title=&quot;Switch search mode&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;z-div&quot;] &gt; div[class=&quot;widgetSlotLabelHolder z-div&quot;] &gt; div[class=&quot;yw-textsearch yw-toggle-closed z-div&quot;] &gt; div[class=&quot;yw-textsearch-toolbar z-div&quot;] &gt; button[class=&quot;yw-toggle-advanced-search yw-toggle-closed z-button&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#kDNBgk&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='button(1, _in(div(&quot;kDNBdk&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"MFLS31307-81"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[@class=&quot;ye-input-text ye-rows-height ye-com_hybris_cockpitng_editor_defaulttext z-textbox&quot;]&apos;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[@class=&quot;yw-textsearch-searchbutton y-btn-primary z-button&quot;]&apos;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div&apos;).xy(1.00, 0.45 )' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div[2]/div[2]/div[2]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div&apos;).xy(1.00, 0.72 )' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertContainsText' value='"MFLS31307-81"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div(&quot;MFLS31307-81&quot;).xy(0.46, 0.68 )' fallback='true' selected='true'/>
+</dialect>
+</step>
+</testcase>

@@ -1,15 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'To Perform Stock transfer using multiple products and then check article activity log in both source and destination stockroom.ds' description= '' author= 'null' version= ''>
+<testcase   name= 'To perform show of entries and pagination working in Stock Transfer.ds' description= '' author= 'null' version= ''>
 <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"REPOSITORY/Central_Repo99/IMCM/ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM_Gopal/IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"{ds}/../../IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"REPOSITORY/Central_Repo99/IMCM/Test Scripts/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/Central_Repo99/IMCM/ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login the EV application with normal user' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

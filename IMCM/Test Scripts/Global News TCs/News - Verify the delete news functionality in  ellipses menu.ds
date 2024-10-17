@@ -75,7 +75,7 @@
 </step>
 <step action='store' value='eval(&quot;&apos;Auto Title&apos;+ Math.floor(Math.random()*10000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='    strTitle  ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='strTitle' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='setValue' value='strTitle' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -142,20 +142,20 @@
 </step>
 <step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-startDate&apos;)]/span)[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value=' DateTime ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='DateTime' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-status&apos;)]//span)[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value=' Status ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='Status' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value=' DateTime ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='DateTime' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='Status ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='Status' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

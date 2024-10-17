@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testcase   name= 'DM - Edit Department and then save by assigning different user and check in Stockroom activity log.ds' description= '' author= 'null' version= ''>
-<dpl filename='REPOSITORY/IMCM-Master-Repository-Harish/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='null'/>
+<dpl filename='REPOSITORY/IMCM-Repo/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -56,7 +56,7 @@
    <accessor type='unknown' value='"{ds}/Department/NavigateToStockRoomActivityLog.ds"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='navigateToStockroomActivityLog()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

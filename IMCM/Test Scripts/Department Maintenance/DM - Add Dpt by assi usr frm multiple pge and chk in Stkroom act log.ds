@@ -23,9 +23,10 @@
 </step>
 <step action='include' value='' type='web' desc='Navigate Department Maintenance' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/Department Maintenance/Department/NavigateToDepartmaintenance.ds"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Repo/IMCM/ReUsable Functions/Re Useable Function Library/NavigateToDepartmaintenance.ds"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/NavigateToDepartmaintenance.ds"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"{ds}/../../IMCM/Re Useable Function Library/NavigateToDepartmaintenance.ds"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/Department Maintenance/Department/NavigateToDepartmaintenance.ds"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='300' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -35,9 +36,10 @@
 </step>
 <step action='include' value='' type='web' desc='Assigning users from multiple pages' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/Department Maintenance/Department/AssigninguserfromMultiplePages.ds"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Repo/IMCM/ReUsable Functions/Re Useable Function Library/AssigninguserfromMultiplePages.ds"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/AddNewDepartment.ds"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"{ds}/../../Re Useable Function Library/AssigninguserfromMultiplePages.ds"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/Department Maintenance/Department/AssigninguserfromMultiplePages.ds"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='300' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -45,7 +47,12 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='include' value='' type='web' desc='Navigate stockroom' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='include' value='' type='web' desc='Navigate stockroom' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository-Harish/Department Maintenance/Department/NavigateToStockRoomActivityLog.ds"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/NavigateToStockRoomActivityLog.ds"' fallback='true' selected='false'/>

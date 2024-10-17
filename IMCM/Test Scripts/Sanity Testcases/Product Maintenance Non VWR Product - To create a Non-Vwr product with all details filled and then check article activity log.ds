@@ -1,13 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testcase   name= 'Product Maintenance Non VWR Product - To create a Non-Vwr product with all details filled and then check article activity log.ds' description= '' author= 'null' version= ''>
-<dpl filename='REPOSITORY/IMCM_Mohan/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='null'/>
+<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"REPOSITORY/Harish_EV/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='Login($URL,$SuperUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Log into EV ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -81,7 +82,7 @@
 </step>
 <step action='store' value='eval(&quot;&apos;Automation&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='   AutomationProduct ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='AutomationProduct' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

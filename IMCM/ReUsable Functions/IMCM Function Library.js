@@ -42,6 +42,7 @@ function Login(url, username, password, org, stockroom) {
     setVariablesIfNeeded('{ds}/../IMCM_INPUTFILE/IMCM_INPUTFILE.csv','HashDPL',0,'en_US');
     setShadowDOM(true);
     navigateTo(url);
+    wait(3000);
     setValue(fallback(`byXPath('//*[@id="email"]')`), username);
     setValue(fallback(`byXPath('//*[@id="password"]')`), password);
     click(fallback(`byXPath('//*[@id="btn-login"]')`));
@@ -58,7 +59,7 @@ function Login(url, username, password, org, stockroom) {
       if (true == value){
        //click(fallback(`custom("mat-icon", "close[1]")`));
        click(fallback(`byXPath('//*[text() = " News "]/following::button')`));
-         wait(10000);
+         wait(6000);
 
        }
 }

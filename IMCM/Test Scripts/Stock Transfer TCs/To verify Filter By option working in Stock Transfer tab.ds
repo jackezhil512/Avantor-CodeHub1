@@ -5,9 +5,10 @@
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM_Gopal/IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"{ds}/../../IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login the application with Normal user' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -43,15 +44,15 @@
 </step>
 <step action='store' value='"Auto123"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='   SLocation ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='SLocation' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='store' value='//span[contains(text(),&apos;Temp&apos;)]/parent::mat-option.replace(&quot;Temp&quot;,SLocation)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='   strXPath   ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='strXPath' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='   strXPath   ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='strXPath' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
@@ -74,12 +75,12 @@
 </step>
 <step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-locationName&apos;)])[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  strTemp1' fallback='true' selected='true'/>
+   <accessor type='unknown' value='strTemp1' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-locationName&apos;)])[2]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='   strTemp2' fallback='true' selected='true'/>
+   <accessor type='unknown' value='strTemp2' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='log' value='strTemp1' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -92,7 +93,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='assertEqual' value='SLocation ' type='web' desc='Validate before and after filter value' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertEqual' value='SLocation' type='web' desc='Validate before and after filter value' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='strTemp1' fallback='true' selected='true'/>
    <accessor type='unknown' value='RowData1' fallback='true' selected='false'/>
@@ -100,7 +101,7 @@
    <accessor type='unknown' value='   strXPath   ' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertEqual' value='SLocation ' type='web' desc='Validate before and after filter valure' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertEqual' value='SLocation' type='web' desc='Validate before and after filter valure' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='strTemp2' fallback='true' selected='true'/>
    <accessor type='unknown' value='RowData1' fallback='true' selected='false'/>

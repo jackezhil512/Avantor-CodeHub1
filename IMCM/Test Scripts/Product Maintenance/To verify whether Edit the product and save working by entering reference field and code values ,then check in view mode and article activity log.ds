@@ -106,7 +106,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='div(&quot;cdk-overlay-backdrop cdk-overlay-backdrop-showing cdk-overlay-transparent-backdrop&quot;).xy(0.08, 0.53 )' fallback='true' selected='true'/>
    <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&quot;]&apos;).xy(0.08, 0.53 )' fallback='true' selected='false'/>
@@ -114,6 +114,19 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/div[@class=&apos;cdk-overlay-container&apos;]/div[@class=&apos;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&apos;]&quot;).xy(0.08, 0.53 )' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;cdk-overlay-container&quot;] &gt; div[class=&quot;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&quot;]&apos;).xy(0.08, 0.53 )' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.08, 0.53 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Location Details &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='custom(&quot;mat-panel-title&quot;, &quot;Location Details&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-expansion-panel-header[@id=&apos;mat-expansion-panel-header-18&apos;]/span/mat-panel-title&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-expansion-panel-header-title ng-tns-c282-214&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-view-product/div[5]/div/mat-accordion/mat-expansion-panel[3]/mat-expansion-panel-header/span/mat-panel-title&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-expansion-panel-header-18&apos;)/span[@class=&apos;mat-content ng-tns-c282-214&apos;]/mat-panel-title[@class=&apos;mat-expansion-panel-header-title ng-tns-c282-214&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-accordion[class=&quot;mat-accordion product-management mat-accordion-multi&quot;] &gt; mat-expansion-panel[class=&quot;mat-expansion-panel ng-tns-c280-213 ng-star-inserted&quot;] &gt; mat-expansion-panel-header[class=&quot;mat-expansion-panel-header mat-focus-indicator ng-tns-c282-214 ng-tns-c280-213 mat-expansion-toggle-indicator-after ng-star-inserted cdk-focused cdk-mouse-focused&quot;] &gt; span[class=&quot;mat-content ng-tns-c282-214&quot;] &gt; mat-panel-title[class=&quot;mat-expansion-panel-header-title ng-tns-c282-214&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-expansion-panel-header-18 &gt; .mat-content.ng-tns-c282-214 &gt; .mat-expansion-panel-header-title.ng-tns-c282-214&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='custom(&quot;mat-panel-title&quot;, &quot;mat-expansion-panel-header-title ng-tns-c282-214&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='Select Reference code' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

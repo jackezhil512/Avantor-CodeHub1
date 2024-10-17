@@ -148,7 +148,7 @@ assertExists(fallback(`heading3("No Records Found")`));
 setDescription("NavigateToLocationMaintenance");
 NavigateToLocationMaintanance();
 setDescription("Search for Location Name");
-SearchField("Location Name","Automation"); 
+SearchField("Location Name","ZAutomation"); 
  setDescription("Search for Number Of Products");
 SearchField("Number Of Products","0");  
   wait(200);

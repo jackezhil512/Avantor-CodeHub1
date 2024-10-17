@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testcase   name= 'TC09 To verify whether user able to print barcodes by reason code barcodes.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../IMCM_INPUTFILE.csv' exectype='runspecificstep' errorhandling='' type='HashDPL' locale='en_US'/>
+<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='false'/>
 <shadowDOM useShadowDOM='false'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -102,15 +102,15 @@
 </step>
 <step action='store' value='getDownloadedFiles()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  list' fallback='true' selected='true'/>
+   <accessor type='unknown' value='list' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='store' value='list.getJSONObject(0).getString(&quot;name&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='   fileName ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='fileName' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='fileName ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='fileName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testcase   name= 'Report - Able to download replenish in xlxs format.ds' description= '' author= 'null' version= ''>
-<dpl filename='REPOSITORY/IMCM/IMCM_INPUTFILE.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
+<dpl filename='REPOSITORY/IMCM CentralRepo/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -197,10 +197,10 @@
 </step>
 <step action='store' value='getText(byXPath(&apos;//*[@class=&quot;align-middle title mb-2&quot;]&apos;))' type='web' desc='Store Value' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  textPop' fallback='true' selected='true'/>
+   <accessor type='unknown' value='textPop' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='  textPop ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='textPop' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
@@ -227,17 +227,17 @@
 </step>
 <step action='store' value='' type='web' desc='list.getJSONObject(0).getString(&quot;name&quot;)' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  fileName' fallback='true' selected='true'/>
+   <accessor type='unknown' value='fileName' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='  fileName' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='log' value='fileName' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='assertEqual' value=' textPop ' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='assertEqual' value='textPop' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  fileName' fallback='true' selected='true'/>
+   <accessor type='unknown' value='fileName' fallback='true' selected='true'/>
 </dialect>
 </step>
 </testcase>

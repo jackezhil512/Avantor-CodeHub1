@@ -21,7 +21,7 @@
 </step>
 <step action='store' value='eval(&quot;&apos;AutomationReport&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='   ReportName ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='ReportName' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='js' value='NavigateReports()' type='web' desc='Navigate to Reports Page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -126,7 +126,7 @@
 </step>
 <step action='store' value='eval(&quot;&apos;AutomationReport&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  ReportName' fallback='true' selected='true'/>
+   <accessor type='unknown' value='ReportName' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -144,7 +144,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='ReportName ' type='web' desc='Set Report Name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='ReportName' type='web' desc='Set Report Name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='textbox(0, _in(custom(&quot;mat-dialog-container&quot;, &quot;mat-dialog-0&quot;)))' fallback='true' selected='true'/>
 </dialect>
@@ -196,7 +196,7 @@
 </step>
 <step action='store' value='currdate()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  date' fallback='true' selected='true'/>
+   <accessor type='unknown' value='date' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='Click on Today date' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -333,7 +333,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='ReportName ' type='web' desc='Serch with Report name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='ReportName' type='web' desc='Serch with Report name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;(//input[@placeholder=&quot;Search&quot;])[2]&apos;)' fallback='true' selected='true'/>
 </dialect>

@@ -132,6 +132,9 @@
     </options>
     <options type="jira">
       <opt name="useJira" value="false"/>
+      <opt name="jiraIssueTypes" value="[object Object]"/>
+      <opt name="jiraFailure" value="[object Object]"/>
+      <opt name="jiraSuccess" value="[object Object]"/>
     </options>
     <options type="lr">
       <opt name="saveCompleteLrOutputLog" value="false"/>
@@ -244,6 +247,13 @@
         </run>
       </test>
     </testcase>
+    <testcase name="Productpage" importance="normal">
+      <test>
+        <run name="Untitled1" langtype="bulkds3" resource="Estorefront/E-Storefront Regression/TestScripts/Productpage/" method="ds" testclass="Chrome" regex="*.ds">
+          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
+        </run>
+      </test>
+    </testcase>
     <assertsuite xmlns="www.pushtotest.com/tm5" name="Optional"/>
     <storesuite xmlns="www.pushtotest.com/tm5" name="Optional"/>
   </templates>
@@ -263,6 +273,7 @@
       <testcase name="Registration" users="1" totalexecutions="1"/>
       <testcase name="Search" users="1" totalexecutions="1"/>
       <testcase name="Shopping List" users="1" totalexecutions="1"/>
+      <testcase name="Productpage" users="1" totalexecutions="1"/>
     </iteration>
   </execution>
   <logs/>

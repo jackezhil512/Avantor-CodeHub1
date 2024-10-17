@@ -1,13 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testcase   name= 'TC03  To verify show entries and pagination in card view and table view.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
+<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='false'/>
 <shadowDOM useShadowDOM='false'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/Central_Repo99/IMCM/ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM_Gopal/IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"{ds}/../../IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -89,7 +90,7 @@
 </step>
 <step action='js' value='TableRowCountVerify(25)' type='web' desc='Verify the total rows' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='   TotalRowCount ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='TotalRowCount' fallback='true' selected='true'/>
    <accessor type='unknown' value='  TotalRowCount' fallback='true' selected='false'/>
 </dialect>
 </step>
@@ -132,7 +133,7 @@
 </step>
 <step action='js' value='TableRowCountVerify(10)' type='web' desc='Verify the total rows' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='   TotalRowCount ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='TotalRowCount' fallback='true' selected='true'/>
    <accessor type='unknown' value='  TotalRowCount' fallback='true' selected='false'/>
 </dialect>
 </step>
@@ -182,12 +183,12 @@
    <accessor type='Parent' value='custom(&quot;mat-icon&quot;, 0, _in(submit({&apos;aria-label&apos;:&apos;Previous Page&apos;})))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='store' value='getText(byXPath(&quot;//p[contains(@class,&apos;ng-tns-&apos;)]&quot;)) ' type='web' desc='Extract the text from application' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getText(byXPath(&quot;//p[contains(@class,&apos;ng-tns-&apos;)]&quot;))' type='web' desc='Extract the text from application' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value=' TextMessage' fallback='true' selected='true'/>
+   <accessor type='unknown' value='TextMessage' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value=' TextMessage' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='TextMessage' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
@@ -205,24 +206,24 @@
    <accessor type='Parent' value='custom(&quot;mat-icon&quot;, 0, _in(submit({&apos;aria-label&apos;:&apos;Next Page&apos;})))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='store' value='getText(byXPath(&quot;//p[contains(@class,&apos;ng-tns-&apos;)]&quot;)) ' type='web' desc='Extract the text from application' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getText(byXPath(&quot;//p[contains(@class,&apos;ng-tns-&apos;)]&quot;))' type='web' desc='Extract the text from application' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  TextMessage1' fallback='true' selected='true'/>
+   <accessor type='unknown' value='TextMessage1' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value=' TextMessage1' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='TextMessage1' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value=' TextMessage.substring(0, TextMessage.lastIndexOf(&quot;of&quot;)-2)' type='web' desc='Extract the substring from text' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='TextMessage.substring(0, TextMessage.lastIndexOf(&quot;of&quot;)-2)' type='web' desc='Extract the substring from text' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='TextMessage2' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='store' value=' TextMessage1.substring(0, TextMessage1.lastIndexOf(&quot;of&quot;)-2)' type='web' desc='Extract the substring from text' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='TextMessage1.substring(0, TextMessage1.lastIndexOf(&quot;of&quot;)-2)' type='web' desc='Extract the substring from text' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value=' TextMessage3' fallback='true' selected='true'/>
+   <accessor type='unknown' value='TextMessage3' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='log' value='TextMessage2' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -230,9 +231,9 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='TextMessage3 ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='TextMessage3' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='TextMessage3 ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='TextMessage3' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='assertEqual' value='"Showing 1  to 10"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

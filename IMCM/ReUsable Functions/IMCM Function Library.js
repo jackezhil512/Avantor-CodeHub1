@@ -126,7 +126,7 @@ SearchField("Vat Exempt Setting","N");
 setDescription("search for Number of user");
 SearchField("Number of Users","1");
 setDescription("Search for Description");
-SearchField("Description","Costcenter");
+SearchField("Description","ZCostcenter");
 setDescription("Click on Select");
 click(fallback(`div("Select[10]").xy(0.90, 0.39 )`));
 wait(500);

@@ -311,4 +311,57 @@
    <accessor type='AttrClass' value='div(&quot;text-right&quot;).xy(0.86, 0.47 )' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/invoice-search[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='link(&quot;Return to Invoice Search&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-invoice-search-results/app-invoice-payment/div[6]/a&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Return to Invoice Search&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/div[6]/a&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-invoice-search-results[1]/app-invoice-payment[1]/div[@class=&apos;pt-4&apos;]/a[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-invoice-search[1]/div[@class=&apos;d-flex invoice-search&apos;]/div[@class=&apos;invoice-search-by-number&apos;]/form[@class=&apos;ng-untouched ng-pristine ng-invalid&apos;]/div[@class=&apos;mb-3&apos;]&quot;).xy(0.26, 0.78 )' fallback='true' selected='true'/>
+   <accessor type='Text' value='div(&quot;Invoice Number&quot;).xy(0.26, 0.78 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-invoice-search/div/div[2]/form/div[2]&apos;).xy(0.26, 0.78 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mb-3&quot;]&apos;).xy(0.26, 0.78 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search/div/div[2]/form/div[2]&apos;).xy(0.26, 0.78 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;d-flex invoice-search&quot;] &gt; div[class=&quot;invoice-search-by-number&quot;] &gt; form[class=&quot;ng-untouched ng-pristine ng-invalid&quot;] &gt; div[class=&quot;mb-3&quot;]&apos;).xy(0.26, 0.78 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;mb-3&quot;).xy(0.26, 0.78 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"8655072494"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='textbox(&quot;ng-dirty ng-untouched ng-valid&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-invoice-search/div/div[2]/form/div[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;ng-untouched ng-valid ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search/div/div[2]/form/div[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-invoice-search[1]/div[@class=&apos;d-flex invoice-search&apos;]/div[@class=&apos;invoice-search-by-number&apos;]/form[@class=&apos;ng-untouched ng-dirty ng-valid&apos;]/div[@class=&apos;mb-3&apos;]/input[@class=&apos;ng-untouched ng-valid ng-dirty&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;formcontrolname&apos;:&apos;invoiceNumber&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;d-flex invoice-search&quot;] &gt; div[class=&quot;invoice-search-by-number&quot;] &gt; form[class=&quot;ng-untouched ng-dirty ng-valid&quot;] &gt; div[class=&quot;mb-3&quot;] &gt; input[class=&quot;ng-untouched ng-valid ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.d-flex.invoice-search &gt; .invoice-search-by-number &gt; .ng-untouched.ng-dirty.ng-valid &gt; .mb-3 &gt; .ng-untouched.ng-valid.ng-dirty&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='submit(&quot;btn btn-white[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='submit(&quot;Search[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-invoice-search/div/div[2]/form/div[5]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search/div/div[2]/form/div[5]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-invoice-search[1]/div[@class=&apos;d-flex invoice-search&apos;]/div[@class=&apos;invoice-search-by-number&apos;]/form[@class=&apos;ng-dirty ng-valid ng-touched&apos;]/div[@class=&apos;invoice-search-by-number-button&apos;]/button[@class=&apos;btn btn-white&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;d-flex invoice-search&quot;] &gt; div[class=&quot;invoice-search-by-number&quot;] &gt; form[class=&quot;ng-dirty ng-valid ng-touched&quot;] &gt; div[class=&quot;invoice-search-by-number-button&quot;] &gt; button[class=&quot;btn btn-white&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.d-flex.invoice-search &gt; .invoice-search-by-number &gt; .ng-dirty.ng-valid.ng-touched &gt; .invoice-search-by-number-button &gt; .btn.btn-white&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='div(&quot;col-md-1 d-flex justify-content-center p-0 text-break[7]&quot;).xy(0.54, 0.31 )' fallback='true' selected='true'/>
+   <accessor type='Text' value='div(&quot;Paid&quot;).xy(0.54, 0.31 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-invoice-search-results/app-invoice-search-results-item/div[1]/div/div[9]&apos;).xy(0.54, 0.31 )' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Paid &quot;]&apos;).xy(0.54, 0.31 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-search-results-item/div/div/div[9]&apos;).xy(0.54, 0.31 )' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

@@ -183,7 +183,7 @@
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/form/div/div/div[2]&apos;).xy(0.40, 0.56 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"Test"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;c-cardname&quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='AttrClass' value='textbox(&quot;form-control&quot;)' fallback='true' selected='false'/>
@@ -198,6 +198,27 @@
    <accessor type='JQuery' value='byJQuery(&apos;input[class=&quot;form-control&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;#c-cardname&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;form[name=&quot;iframe-form&quot;] &gt; div[name=&quot;html-main-content&quot;] &gt; div[name=&quot;c-content&quot;] &gt; div[name=&quot;div&quot;] &gt; input[name=&quot;c-chn&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrName' value='div(&quot;div[2]&quot;).xy(0.44, 0.54 )' fallback='true' selected='true'/>
+   <accessor type='Text' value='div(&quot;Card Number&quot;).xy(0.44, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/form/div/div/div[3]&apos;).xy(0.44, 0.54 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"5424 1802 7979 1773"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;c-cardnumber&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='XPathName' value='byXPath(&apos;//*[@name=&quot;c-cn&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;c-cardnumber&quot;)' fallback='true' selected='false'/>
+   <accessor type='AttrName' value='textbox(&quot;c-cn&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;c-cardnumber&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/form/div/div/div[3]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;c-cardnumber&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;xi-tokenize&apos;:&apos;1&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#c-cardnumber&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;form[name=&quot;iframe-form&quot;] &gt; div[name=&quot;html-main-content&quot;] &gt; div[name=&quot;c-content&quot;] &gt; div[name=&quot;div&quot;] &gt; input[name=&quot;c-cn&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

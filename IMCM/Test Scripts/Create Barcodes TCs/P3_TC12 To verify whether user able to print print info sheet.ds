@@ -91,9 +91,10 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='assertTextPresent' value='byXPath(&quot;//div[contains(text(),&apos;File has been downloaded succesfully&apos;)]&quot;)' type='web' desc='Verify the message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='byXPath(&quot;//div[contains(text(),&apos;File has been downloaded succesfully&apos;)]&quot;)' type='web' desc='Verify the message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;File has been downloaded succesfully&apos;)]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

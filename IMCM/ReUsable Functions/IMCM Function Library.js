@@ -108,14 +108,11 @@ function SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email){
 setShadowDOM(true);
 wait(1000);
 click(fallback(`byXPath("//span[contains(text(),'All Vendors')]")`));
-//(click(fallback(`byXPath(("//span[contains(text(),'All Vendors')]")[1])`));
-click(fallback(`byXPath(("//span[contains(text(),"${Vendor}")]")[1]`));
+click(fallback(`byXPath("//span[contains(text(),'${Vendor}')]/parent::mat-option")`));
 click(fallback(`byXPath("//span[contains(text(),'All Stockrooms')]")`));
-click(fallback(`byXPath(("//span[contains(text(),"${Stockroom}")]")[1]`));
-//click(fallback(`byXPath("//span[contains(text(),"${Stockroom}")]")`));
+click(fallback(`byXPath("//span[contains(text(),'${Stockroom}')]/parent::mat-option")`));
 click(fallback(`byXPath("//span[contains(text(),'All Emails')]")`));
-click(fallback(`byXPath(("//span[contains(text(),"${Email}")]")[1]`));
-//click(fallback(`byXPath("//span[contains(text(),"${Email}")]")`));
+click(fallback(`byXPath("//span[contains(text(),'${Email}')]/parent::mat-option")`));
 }
 
 

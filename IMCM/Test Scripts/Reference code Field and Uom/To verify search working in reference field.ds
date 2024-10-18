@@ -128,6 +128,11 @@
    <accessor type='Text' value='span(&quot;Unpublished&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
 <step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='heading3(&quot;No Records Found&quot;)' fallback='true' selected='true'/>

@@ -1,21 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'Product Maintenance - To create a Vwr product with all details filled and then check article activity log.ds' description= '' author= 'null' version= ''>
-<dpl filename='REPOSITORY/IMCM_Mohan/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='null'/>
+<testcase   name= 'To create a vwr metrics product and then check article activity log.ds' description= '' author= 'null' version= ''>
+<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"REPOSITORY/Harish_EV/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-AvantorCodeHub-Repo/IMCM/ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='Login($URL,$SuperUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Log into EV ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Log into EV ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
@@ -25,104 +20,72 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
 <step action='click' value='""' type='web' desc='click on add product' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;add  Add Product&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Text' value='div(&quot;VWR[4]&quot;).xy(0.84, 0.67 )' fallback='true' selected='true'/>
-   <accessor type='Parent' value='div(1, _in(custom(&quot;mat-select&quot;, {&apos;id&apos;:&apos;mat-select-22&apos;}))).xy(0.84, 0.67 )' fallback='true' selected='false'/>
-   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-select-value-23&quot;]&apos;).xy(0.84, 0.67 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;mat-select-value ng-tns-c89-107&quot;).xy(0.84, 0.67 )' fallback='true' selected='false'/>
-   <accessor type='Id' value='div(&quot;mat-select-value-23&quot;).xy(0.84, 0.67 )' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;mat-select-value-23&apos;]&quot;).xy(0.84, 0.67 )' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-select-value ng-tns-c89-107&quot;]&apos;).xy(0.84, 0.67 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-list-stockroom/div[3]/div/mat-form-field/div/div/div[3]/mat-select/div/div&apos;).xy(0.84, 0.67 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-select-value-23&apos;)&quot;).xy(0.84, 0.67 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;mat-form-field-flex ng-tns-c49-106&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-106&quot;] &gt; mat-select[class=&quot;mat-select ng-tns-c89-107 ng-tns-c49-106 ng-untouched ng-pristine ng-valid ng-star-inserted&quot;] &gt; div[class=&quot;mat-select-trigger ng-tns-c89-107&quot;] &gt; div[class=&quot;mat-select-value ng-tns-c89-107&quot;]&apos;).xy(0.84, 0.67 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;#mat-select-value-23&apos;).xy(0.84, 0.67 )' fallback='true' selected='false'/>
-   <accessor type='Parent' value='div(1, _in(custom(&quot;mat-select&quot;, &quot;mat-select-22&quot;))).xy(0.84, 0.67 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-button-wrapper[8]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='span(&quot;Select VWR Metrics&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-list-stockroom/div[6]/div[3]/button[2]/span[1]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-list-stockroom/div[6]/div[3]/button[2]/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-product-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/main[@class=&apos;container-fluid px-5&apos;]/app-list-stockroom[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row d-flex align-items-center&apos;]/div[@class=&apos;col-12 list-stockroom cust-list d-md-flex justify-content-md-end col-xl-6&apos;]/button[@class=&apos;mat-focus-indicator add-product-manually ml-3 py-1 px-3 mat-stroked-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;app-list-stockroom[class=&quot;ng-star-inserted&quot;] &gt; div[class=&quot;row d-flex align-items-center&quot;] &gt; div[class=&quot;col-12 list-stockroom cust-list d-md-flex justify-content-md-end col-xl-6&quot;] &gt; button[class=&quot;mat-focus-indicator add-product-manually ml-3 py-1 px-3 mat-stroked-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .row.d-flex.align-items-center &gt; .col-12.list-stockroom.cust-list.d-md-flex.justify-content-md-end.col-xl-6 &gt; .mat-focus-indicator.add-product-manually.ml-3.py-1.px-3.mat-stroked-button.mat-button-base.mat-primary.ng-star-inserted.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='selectWindow' value='"Avantor Inventory Manager"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
+   <accessor type='AttrClass' value='span(&quot;mat-radio-outer-circle&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-radio-button[@id=&apos;mat-radio-4&apos;]/label/span[1]/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-radio-outer-circle&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-select-vwr-metrics/avantor-table/div[2]/table/tbody/tr/td/mat-radio-button/label/span/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-radio-4&apos;)/label[@class=&apos;mat-radio-label&apos;]/span[@class=&apos;mat-radio-container&apos;]/span[@class=&apos;mat-radio-outer-circle&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;td[class=&quot;mat-cell cdk-cell cdk-column-radio mat-column-radio ng-tns-c328-106 ng-star-inserted&quot;] &gt; mat-radio-button[class=&quot;mat-radio-button mat-accent ng-star-inserted&quot;] &gt; label[class=&quot;mat-radio-label&quot;] &gt; span[class=&quot;mat-radio-container&quot;] &gt; span[class=&quot;mat-radio-outer-circle&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-radio-4 &gt; .mat-radio-label &gt; .mat-radio-container &gt; .mat-radio-outer-circle&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Text' value='span(&quot;Automation&quot;)' fallback='true' selected='true'/>
-   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, {&apos;id&apos;:&apos;mat-option-1296&apos;})))' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='span(&quot;mat-option-text[2]&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//mat-option[@id=&apos;mat-option-1296&apos;]/span&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Automation &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/mat-option[3]/span&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-option-1296&apos;)/span[@class=&apos;mat-option-text&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;#mat-option-1296 &gt; .mat-option-text&apos;)' fallback='true' selected='false'/>
-   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, &quot;mat-option-1296&quot;)))' fallback='true' selected='false'/>
+   <accessor type='Text' value='submit(&quot;Select VWR Metrics&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-list-stockroom/div[6]/div[3]/button[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-focus-indicator add-product-manually ml-3 py-1 px-3 mat-stroked-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-list-stockroom/div[6]/div[3]/button[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-product-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/main[@class=&apos;container-fluid px-5&apos;]/app-list-stockroom[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row d-flex align-items-center&apos;]/div[@class=&apos;col-12 list-stockroom cust-list d-md-flex justify-content-md-end col-xl-6&apos;]/button[@class=&apos;mat-focus-indicator add-product-manually ml-3 py-1 px-3 mat-stroked-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;main[class=&quot;container-fluid px-5&quot;] &gt; app-list-stockroom[class=&quot;ng-star-inserted&quot;] &gt; div[class=&quot;row d-flex align-items-center&quot;] &gt; div[class=&quot;col-12 list-stockroom cust-list d-md-flex justify-content-md-end col-xl-6&quot;] &gt; button[class=&quot;mat-focus-indicator add-product-manually ml-3 py-1 px-3 mat-stroked-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.container-fluid.px-5 &gt; .ng-star-inserted &gt; .row.d-flex.align-items-center &gt; .col-12.list-stockroom.cust-list.d-md-flex.justify-content-md-end.col-xl-6 &gt; .mat-focus-indicator.add-product-manually.ml-3.py-1.px-3.mat-stroked-button.mat-button-base.mat-primary.ng-star-inserted.cdk-focused.cdk-mouse-focused&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='submit(&quot;add-product-manually cdk-focused cdk-mouse-focused mat-button-base mat-focus-indicator mat-primary mat-stroked-button ml-3 ng-star-inserted px-3 py-1&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
+   <accessor type='AttrClass' value='span(&quot;mat-radio-outer-circle&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-radio-button[@id=&apos;mat-radio-4&apos;]/label/span[1]/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-radio-outer-circle&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-select-vwr-metrics/avantor-table/div[2]/table/tbody/tr/td/mat-radio-button/label/span/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-radio-4&apos;)/label[@class=&apos;mat-radio-label&apos;]/span[@class=&apos;mat-radio-container&apos;]/span[@class=&apos;mat-radio-outer-circle&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;td[class=&quot;mat-cell cdk-cell cdk-column-radio mat-column-radio ng-tns-c327-85 ng-star-inserted&quot;] &gt; mat-radio-button[class=&quot;mat-radio-button mat-accent ng-star-inserted&quot;] &gt; label[class=&quot;mat-radio-label&quot;] &gt; span[class=&quot;mat-radio-container&quot;] &gt; span[class=&quot;mat-radio-outer-circle&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-radio-4 &gt; .mat-radio-label &gt; .mat-radio-container &gt; .mat-radio-outer-circle&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;ADD PRODUCT&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-select-vwr-metrics/div[2]/button/span[1]/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;px-1&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; ADD PRODUCT &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-select-vwr-metrics/div[2]/button/span/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-product-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/main[@class=&apos;container-fluid px-5&apos;]/app-select-vwr-metrics[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex justify-content-end&apos;]/button[@class=&apos;mat-focus-indicator px-3 py-2 add-product-btn mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[@class=&apos;px-1&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;app-select-vwr-metrics[class=&quot;ng-star-inserted&quot;] &gt; div[class=&quot;d-flex justify-content-end&quot;] &gt; button[class=&quot;mat-focus-indicator px-3 py-2 add-product-btn mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;] &gt; span[class=&quot;px-1&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .d-flex.justify-content-end &gt; .mat-focus-indicator.px-3.py-2.add-product-btn.mat-flat-button.mat-button-base.mat-primary.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper &gt; .px-1&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;px-1&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='""' type='web' desc='click on general details' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; General Details &quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='eval(&quot;&apos;Automation&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='AutomationProduct' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setValue' value='AutomationProduct' type='web' desc='enter product catalog number' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='textbox(/mat-input-.*/,_below(div(&quot;Product Catalog Number *[1]&quot;)))' fallback='true' selected='true'/>
-   <accessor type='unknown' value='textbox(/mat-input-.*/,_below(div(&quot;Reorder Point *[1]&quot;)))' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setValue' value='AutomationProduct' type='web' desc='enter technical article number' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='textbox(/mat-input-.*/,_below(div(&quot;Technical Article Number*[1]&quot;)))' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setValue' value='AutomationProduct' type='web' desc='enter description' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='textbox(/mat-input-.*/,_below(div(&quot;Description *[1]&quot;)))' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setValue' value='"Each"' type='web' desc='enter UOM details' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='textbox(/mat-input-.*/,_below(div(&quot;Unit of Measure *[1]&quot;)))' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -193,19 +156,6 @@
    <accessor type='XPath' value='byXPath(&quot;//mat-option[@id=&apos;mat-option-1271&apos;]/span&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Automation &quot;]&apos;).xy(0.13, 0.25 )' fallback='true' selected='true'/>
-   <accessor type='Parent' value='div(0, _in(custom(&quot;mat-option&quot;, {&apos;id&apos;:&apos;mat-option-1403&apos;}))).xy(0.13, 0.25 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;font-weight-bold mat-form-label[3]&quot;).xy(0.13, 0.25 )' fallback='true' selected='false'/>
-   <accessor type='Text' value='div(&quot;Automation[5]&quot;).xy(0.13, 0.25 )' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//mat-option[@id=&apos;mat-option-1403&apos;]/span/div&quot;).xy(0.13, 0.25 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/div/div[2]/mat-option[5]/span/div&apos;).xy(0.13, 0.25 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-option-1403&apos;)/span[@class=&apos;mat-option-text&apos;]/div[@class=&apos;mat-form-label font-weight-bold&apos;]&quot;).xy(0.13, 0.25 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;#mat-option-1403 &gt; .mat-option-text &gt; .mat-form-label.font-weight-bold&apos;).xy(0.13, 0.25 )' fallback='true' selected='false'/>
-   <accessor type='Parent' value='div(0, _in(custom(&quot;mat-option&quot;, &quot;mat-option-1403&quot;))).xy(0.13, 0.25 )' fallback='true' selected='false'/>
-</dialect>
-</step>
 <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
@@ -226,12 +176,12 @@
    <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-56&apos;]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='select location' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='select location' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='div(&quot;Automation&quot;).xy(0.06, 0.13 )' fallback='true' selected='true'/>
    <accessor type='Parent' value='div(0, _in(custom(&quot;mat-option&quot;, {&apos;id&apos;:&apos;mat-option-1385&apos;}))).xy(0.06, 0.13 )' fallback='true' selected='false'/>
@@ -271,26 +221,6 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-overlay-6&apos;)/snack-bar-container[@class=&apos;mat-snack-bar-container ng-tns-c40-187 ng-trigger ng-trigger-state mat-snack-bar-center ng-star-inserted&apos;]/div[@class=&apos;ng-tns-c40-187&apos;]/div[@class=&apos;ng-tns-c40-187&apos;]/avantor-toast[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;toast-wrapper d-flex align-items-center justify-content-between&apos;]/div[@class=&apos;d-flex ng-star-inserted&apos;]/div[2]/div[1]/div[@class=&apos;title&apos;]&quot;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;title&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='Parent' value='div(7, _in(div(&quot;cdk-overlay-6&quot;)))' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ValidateArtileActivityLogMovementType(AutomationProduct ,&quot;Product Created&quot;)' type='web' desc='Validate Product Created in Article Activity log ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ValidateStockroomActivityPage(AutomationProduct ,&quot;Product Created&quot;)' type='web' desc='Validate Product Created in StockRoom Activity log ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 </testcase>

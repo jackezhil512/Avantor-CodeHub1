@@ -980,5 +980,10 @@ log("add the credit card details")
 click(fallback(`submit("+Add a new card")`));
 assertExists(fallback(`heading3("Add a New Credit Card")`));
 
+}
 
+function TableRowCountVerify(num){
+  var nameCountLength = _eval("ds$(\'tbody[role=\"rowgroup\"] tr.striped-rows\').length");
+  var temp = Number(nameCountLength);
+  assertEquals(num,Math.floor(nameCountLength));
 }

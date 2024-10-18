@@ -917,7 +917,7 @@ function InvoicePaybyCreditcard(){
 
 assertExists(fallback(`submit("Pay by Credit Card")`));
 wait(2000);
-setSelected(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/select')`));
+setSelected(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/select')`),"Open");
 assertExists(fallback(`div("Open")`));
 log("Click on invoice check box")
 click(fallback(`checkbox("ml-1 mt-0 ng-pristine ng-untouched ng-valid")`));

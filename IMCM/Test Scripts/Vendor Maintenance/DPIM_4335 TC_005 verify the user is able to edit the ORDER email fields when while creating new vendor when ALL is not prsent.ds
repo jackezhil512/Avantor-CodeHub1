@@ -37,7 +37,7 @@
    <accessor type='unknown' value='Date' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='&quot;Automation&quot; +Date' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='&quot;Automation&quot; +Date+RandomVal' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='VendorName' fallback='true' selected='true'/>
 </dialect>
@@ -72,7 +72,7 @@
    <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot; Create New Vendor &quot;]/following::input[1]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='"12345678"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='RandomVal' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot; Create New Vendor &quot;]/following::input[4]&apos;)' fallback='true' selected='true'/>
 </dialect>

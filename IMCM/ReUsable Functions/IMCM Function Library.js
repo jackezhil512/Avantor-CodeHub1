@@ -52,7 +52,7 @@ function Login(url, username, password, org, stockroom) {
     click(fallback(`byXPath('//*[text()="${stockroom}"]')`));
     click(fallback(`span("arrow_forward")`,
        `byXPath('//app-root/app-org-and-stockroom/div/mat-card/mat-card-content/section/form/div/button[1]/span[1]/span[2]')`));
- 	 wait(3000);
+ 	 wait(5000);
      //let value = _isVisible(fallback(`custom("mat-icon", "close[1]")`));
      let value = _isVisible(fallback(`byXPath('//*[text() = " News "]/following::button')`));
     log(value);

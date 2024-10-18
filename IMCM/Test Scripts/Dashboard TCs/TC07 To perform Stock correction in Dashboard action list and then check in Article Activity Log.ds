@@ -79,12 +79,12 @@
    <accessor type='unknown' value='numberbox(/cdk-text-field-.*/,_below(span(&quot;Actual Qty[1]&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='store' value='&quot;(//a[contains(text(),&apos;Temp&apos;)]//following::input)[4]&quot;.replace(&quot;Temp&quot;,$BATCHALONE_PRODUCT)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='&quot;(//a[contains(text(),&apos;Temp&apos;)]//following::input)[4]&quot;.replace(&quot;Temp&quot;,$BATCHALONE_PRODUCT)' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='strxpath' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='"10"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"10"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(strxpath)' fallback='true' selected='true'/>
    <accessor type='unknown' value='byXPath(&quot;strxpath&quot;)' fallback='true' selected='false'/>

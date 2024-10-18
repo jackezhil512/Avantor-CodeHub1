@@ -179,6 +179,9 @@ SearchField("Vendor","VWR");
   wait(200);
 setDescription("Search for Location");
 SearchField("Location","Automation");
+  wait(200);
+setDescription("Search for Location");
+SearchField("Available Quantity","0");
 }else{
   
 }

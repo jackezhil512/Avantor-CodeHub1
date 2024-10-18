@@ -486,4 +486,18 @@
    <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='Click on Save' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;save&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;save&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[1]/div[2]/div/span/span/span/mat-icon&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-icon notranslate mx-2 mat-primary material-icons ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div/div[2]/div/span/span/span/mat-icon&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-invalid ng-dirty ng-touched&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/div[@class=&apos;row mb-5 ml-2 ng-invalid ng-touched ng-dirty&apos;]/div[@class=&apos;col-md-12&apos;]/div[@class=&apos;ng-touched ng-dirty ng-valid&apos;]/div[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex ng-star-inserted&apos;]/span[@class=&apos;mx-3 mt-1 d-flex align-items-center&apos;]/span[1]/span[@class=&apos;ng-star-inserted&apos;]/mat-icon[@class=&apos;mat-icon notranslate mx-2 mat-primary material-icons ng-star-inserted&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='custom(&quot;mat-icon&quot;, {&apos;color&apos;:&apos;primary&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;span[class=&quot;ng-star-inserted&quot;] &gt; mat-icon[class=&quot;mat-icon notranslate mx-2 mat-primary material-icons ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .mat-icon.notranslate.mx-2.mat-primary.material-icons.ng-star-inserted&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='custom(&quot;mat-icon&quot;, &quot;mat-icon mat-primary material-icons mx-2 ng-star-inserted notranslate&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

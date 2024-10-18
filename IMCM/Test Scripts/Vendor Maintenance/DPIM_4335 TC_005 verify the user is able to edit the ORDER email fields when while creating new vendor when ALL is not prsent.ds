@@ -34,7 +34,12 @@
 </step>
 <step action='store' value='"Automation1023"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='&quot;Automation-&quot; +Date' fallback='true' selected='true'/>
+   <accessor type='unknown' value='VendorName' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 </testcase>

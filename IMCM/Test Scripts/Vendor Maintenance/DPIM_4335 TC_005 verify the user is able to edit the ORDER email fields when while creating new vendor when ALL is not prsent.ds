@@ -155,8 +155,9 @@
 </step>
 <step action='setValue' value='Email' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='//*[text() =&quot;Primary Email(s) &quot;]/following::input[1]' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot;Primary Email(s) &quot;]/following::input[1]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='//*[text() =&quot;Primary Email(s) &quot;]/following::input[1]' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

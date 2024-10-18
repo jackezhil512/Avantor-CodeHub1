@@ -30,13 +30,11 @@
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;keyboard_arrow_down &quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;Replenish Stock&quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='setValue' value='"1"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -47,19 +45,16 @@
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Skip Adding &quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Checkout &quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='div([&quot;Stock Replenished Successfully!&quot;])' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='navigateToRecieveStock()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -70,25 +65,21 @@
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='custom(&quot;mat-icon&quot;, &quot;keyboard_arrow_down[1]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;add &quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='span(&quot;Add Batch&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='setValue' value='"1"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='textbox(/mat-input-.*/,_below(span(&quot;Batch #&quot;)))' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='setValue' value='"12-25-2024"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -138,7 +129,6 @@
 <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='div(&quot;STOCK RECEIVED!&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='setOperation(&quot;Stock Received&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

@@ -943,7 +943,7 @@ click(fallback(`byXPath('//ngb-modal-window/div/div/app-add-credit-card-dialog/d
 click(fallback(`submit("Continue")`));
 click(fallback(`radio("creditCardType[19]")`));
 click(fallback(`div("align-end cvv-section")`));
-setValue(fallback(`password("ng-dirty ng-untouched ng-valid")`));
+setValue(fallback(`password("ng-dirty ng-untouched ng-valid")`),"208");
 click(fallback(`submit("btn btn-primary")`));
 wait(10000);
 log("After click on submit total paid amount should be displayed");

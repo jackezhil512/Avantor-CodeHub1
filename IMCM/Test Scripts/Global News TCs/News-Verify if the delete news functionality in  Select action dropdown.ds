@@ -114,21 +114,6 @@
    <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;You have successfully published your news.&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertTextPresent' value='"You have successfully saved the news!"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertTextPresent' value='"You have successfully published your news."' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
 <step action='click' value='' type='web' desc='Click on Organization button' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//button[contains(text(),&apos;Organization&apos;)]/span&quot;)' fallback='true' selected='true'/>

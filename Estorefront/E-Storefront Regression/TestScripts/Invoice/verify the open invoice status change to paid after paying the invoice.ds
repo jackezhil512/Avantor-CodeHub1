@@ -93,23 +93,23 @@
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Text' value='link(&quot;8655072494&quot;)' fallback='true' selected='true'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/app-invoice-search-results-item/div/div/div/div/a&apos;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-invoice-search-results/app-invoice-payment/app-invoice-search-results-item/div[1]/div/div[1]/div/a&apos;)' fallback='true' selected='false'/>
    <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cx-link&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;8655072494&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/app-invoice-search-results-item/div/div/div/div/a&apos;)' fallback='true' selected='false'/>
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-invoice-search-results[1]/app-invoice-payment[1]/app-invoice-search-results-item[1]/div[@class=&apos;col-12 col-md-12 pt-2 pb-2 border-bottom invoice-result-items-desktop&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-md-2 col-lg-2 col-xl-2 d-flex invoice-results-invoice-num text-break text-center pl-0&apos;]/div[1]/a[@class=&apos;cx-link&apos;]&quot;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;a[class=&quot;cx-link&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;.cx-link&apos;)' fallback='true' selected='false'/>
    <accessor type='AttrClass' value='link(&quot;cx-link&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='link(&quot;8655072494&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='store' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getText(VerifyinvoiceresultswithBilltoNumberasAll)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
+   <accessor type='unknown' value='InvoiceNumber' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testcase   name= 'To verify search working in reference field.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='null'/>
+<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -59,9 +59,10 @@
 </step>
 <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot;//*[text() = &quot;${FieldName }&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot;//*[text() = &quot;${FieldName}&quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot;//*[text() = &quot;${ReferenceFields}&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot;//*[text() = &quot;${FieldName }&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -99,6 +100,7 @@
    <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot;//*[text() = &quot;${ReferenceFields}&quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot;//*[text() = &quot;${ReferenceFields}&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot;//*[text() = &quot;${FieldName }&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

@@ -335,9 +335,14 @@
    <accessor type='JQuery' value='byJQuery(&apos;.radio-button &gt; .credit-options-radio.ml-0 &gt; .checkboxes &gt; .text-color.py-1&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='store' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getText(label(&quot;py-1 text-color&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='Defultcreditcard' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 </testcase>

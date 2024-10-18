@@ -181,6 +181,11 @@
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;Automation &quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Parent' value='cell(0, _in(custom(&quot;mat-tab-body&quot;, &quot;mat-tab-content-1-2&quot;)))' fallback='true' selected='true'/>
@@ -198,7 +203,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .fixed-width-column&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='cell(&quot;PDF OUTPUT&quot;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='cell(2, _in(custom(&quot;mat-tab-body&quot;, {&apos;id&apos;:&apos;mat-tab-content-1-2&apos;})))' fallback='true' selected='false'/>

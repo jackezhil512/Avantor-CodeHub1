@@ -95,7 +95,7 @@ wait(100);
 
 }
 
-function NavigateToIntegrationmaintanance(){
+function NavigateToIntegrationmaintenance(){
 setShadowDOM(true);
 wait(1000);
 click(fallback(`//button[contains(text(),"Administration")]`));

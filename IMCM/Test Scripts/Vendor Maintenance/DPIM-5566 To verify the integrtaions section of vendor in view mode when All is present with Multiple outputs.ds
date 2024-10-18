@@ -280,12 +280,13 @@
   <dialect type='sahi'>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='Click on &quot;Select vendpr&quot;' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
+   <accessor type='unknown' value='span(&quot;Select Vendor&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='span(&quot;Select Vendor&quot;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='span(0, _in(div({&apos;id&apos;:&apos;mat-select-value-37&apos;})))' fallback='true' selected='false'/>

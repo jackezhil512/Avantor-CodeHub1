@@ -54,7 +54,7 @@
 </step>
 <step action='setValue' value='"1"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos;Qty:&apos;]/following-sibling::input&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;(//input[contains(@class,&apos;value quantityInput&apos;)])[1]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

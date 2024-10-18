@@ -28,6 +28,20 @@
    <accessor type='AttrClass' value='submit(&quot;align-items-center d-flex nav-label ng-tns-c231-7[2]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, &quot;mat-option-1308&quot;)))' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, {&apos;id&apos;:&apos;mat-option-1308&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;mat-option-text[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='span(&quot;Automation[4]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-option[@id=&apos;mat-option-1308&apos;]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Automation &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/mat-option[2]/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-option-1308&apos;)/span[@class=&apos;mat-option-text&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;cdk-overlay-pane&quot;] &gt; div[class=&quot;mat-select-panel-wrap ng-tns-c89-78 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted&quot;] &gt; div[class=&quot;ng-tns-c89-78 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary&quot;] &gt; mat-option[class=&quot;mat-option mat-focus-indicator ng-tns-c89-78 ng-star-inserted mat-selected mat-active&quot;] &gt; span[class=&quot;mat-option-text&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-option-1308 &gt; .mat-option-text&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Integration Maintenance &quot;]&apos;).xy(0.26, 0.76 )' fallback='true' selected='true'/>
@@ -53,6 +67,19 @@
 <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Parent' value='div(2, _in(custom(&quot;mat-select&quot;, &quot;mat-select-16&quot;))).xy(0.35, 0.28 )' fallback='true' selected='true'/>
+   <accessor type='Parent' value='div(2, _in(custom(&quot;mat-select&quot;, {&apos;id&apos;:&apos;mat-select-16&apos;}))).xy(0.35, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;mat-select-arrow-wrapper ng-tns-c89-78&quot;).xy(0.35, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-select[@id=&apos;mat-select-16&apos;]/div/div[2]&quot;).xy(0.35, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-select-arrow-wrapper ng-tns-c89-78&quot;]&apos;).xy(0.35, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[3]/div/div/div/mat-form-field/div/div/div[4]/mat-select/div/div[2]&apos;).xy(0.35, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-select-16&apos;)/div[@class=&apos;mat-select-trigger ng-tns-c89-78&apos;]/div[@class=&apos;mat-select-arrow-wrapper ng-tns-c89-78&apos;]&quot;).xy(0.35, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;mat-form-field-flex ng-tns-c49-77&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-77&quot;] &gt; mat-select[class=&quot;mat-select drp-ucd ng-tns-c89-78 ng-tns-c49-77 ng-valid ng-star-inserted ng-touched ng-dirty&quot;] &gt; div[class=&quot;mat-select-trigger ng-tns-c89-78&quot;] &gt; div[class=&quot;mat-select-arrow-wrapper ng-tns-c89-78&quot;]&apos;).xy(0.35, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-select-16 &gt; .mat-select-trigger.ng-tns-c89-78 &gt; .mat-select-arrow-wrapper.ng-tns-c89-78&apos;).xy(0.35, 0.28 )' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='NavigateToProductMaintenancePage()' type='web' desc='Navigate to product maintenance page' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>

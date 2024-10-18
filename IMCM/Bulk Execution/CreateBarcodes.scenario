@@ -29,7 +29,7 @@
     <userinfo/>
   </basics>
   <resources>
-    <resource name="IMCM" type="folder" path="REPOSITORY/Central_Repo99/IMCM/"/>
+    <resource name="IMCM" type="folder" path="{scenario}/../"/>
   </resources>
   <testnodes>
     <node name="localhost" location="https://vwr.appvance.net:/TMServer/ws/TestNode"/>
@@ -156,7 +156,9 @@
     <testcase name="Create Barcodes TCs" importance="normal">
       <test>
         <run name="CreateBarcodesTCs" langtype="bulkds3" resource="IMCM/Test Scripts/Create Barcodes TCs/" method="ds" testclass="ChromeHeadless" regex="*.ds">
-          <argument name="Untitled1" method="getData" dpl="TheLocker"/>
+          <argument name="Untitled1" method="getDataByIndex" dpl="Test Data">
+            <argument name="index" value="1"/>
+          </argument>
         </run>
       </test>
     </testcase>

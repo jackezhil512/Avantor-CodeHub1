@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'TC_06 Verify selecting a vendor, stockroom, and email updates the integration table with acurate results that match the filters.ds' description= '' author= 'null' version= ''>
+<testcase   name= 'TC_11 Verify clicking  Clear Filters  resets all filters to the default values  All Vendors  All Stockrooms  All Emails and the integration table shows all records.ds' description= '' author= 'null' version= ''>
 <dpl filename='REPOSITORY/IMCM-AvantorCodeHub-Repo/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
@@ -24,19 +24,16 @@
 <step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;TestAutomation&apos;,&apos;ActivateDeactivateStockRoomTesting&apos;,&apos;Automation@gmail.com&apos;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Update Results&apos;)]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='assertExists' value='VendorData' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;vendorData&apos;])&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
@@ -120,7 +117,6 @@
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Automation@mailinator.com &quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>

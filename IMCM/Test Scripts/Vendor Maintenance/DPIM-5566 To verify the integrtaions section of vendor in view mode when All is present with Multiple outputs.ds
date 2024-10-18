@@ -326,13 +326,13 @@
    <accessor type='JQuery' value='byJQuery(&apos;#mat-input-109&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='VendorName' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//input[@placeholder=&quot;Search Vendor &quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='Select First check box' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Parent' value='custom(&quot;mat-pseudo-checkbox&quot;, 0, _in(custom(&quot;mat-option&quot;, &quot;mat-option-424&quot;)))' fallback='true' selected='true'/>
    <accessor type='Parent' value='custom(&quot;mat-pseudo-checkbox&quot;, 0, _in(custom(&quot;mat-option&quot;, {&apos;id&apos;:&apos;mat-option-424&apos;})))' fallback='true' selected='false'/>

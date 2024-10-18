@@ -105,49 +105,6 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='Click on Stock Transfer button' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='span(&quot;Transfer Stock&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Transfer Stock&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-stock-transfer-layout/div/app-stock-transfer/div/div[2]/div[2]/div/button/span[1]/span&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-stock-transfer-layout/div/app-stock-transfer/div/div[2]/div[2]/div/button/span/span&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-stock-transfer-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-stock-transfer[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;stock-transfer&apos;]/div[@class=&apos;d-flex flex-wrap align-items-center justify-content-between&apos;]/div[@class=&apos;text-right&apos;]/div[@class=&apos;pb-1&apos;]/button[@class=&apos;mat-focus-indicator lg-button mb-1 mat-flat-button mat-button-base mat-primary&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='verifyExists' value='' type='web' desc='validate popup message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Parent' value='div(4, _in(div({&apos;id&apos;:&apos;cdk-overlay-3&apos;}))).xy(0.12, 0.76 )' fallback='true' selected='true'/>
-   <accessor type='AttrClass' value='div(&quot;d-flex&quot;).xy(0.12, 0.76 )' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-overlay-3&apos;]/snack-bar-container/div/div/app-modal-print-pick-ticket-toast/div/div[1]/div[1]&quot;).xy(0.12, 0.76 )' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;d-flex&quot;]&apos;).xy(0.12, 0.76 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div/div/snack-bar-container/div/div/app-modal-print-pick-ticket-toast/div/div/div&apos;).xy(0.12, 0.76 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-overlay-3&apos;)/snack-bar-container[@class=&apos;mat-snack-bar-container ng-tns-c40-104 ng-trigger ng-trigger-state mat-snack-bar-center ng-star-inserted&apos;]/div[@class=&apos;ng-tns-c40-104&apos;]/div[@class=&apos;ng-tns-c40-104&apos;]/app-modal-print-pick-ticket-toast[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;toast-wrapper d-flex align-items-center justify-content-between&apos;]/div[1]/div[@class=&apos;d-flex&apos;]&quot;).xy(0.12, 0.76 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;d-flex&quot;]&apos;).xy(0.12, 0.76 )' fallback='true' selected='false'/>
-   <accessor type='Parent' value='div(4, _in(div(&quot;cdk-overlay-3&quot;))).xy(0.12, 0.76 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertTextPresent' value='"Stock Transferred Successfully"' type='web' desc='Validate message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='"11,12"' type='web' desc='close the popup window' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='div(&quot;close[1]&quot;)' fallback='true' selected='true'/>
-   <accessor type='Parent' value='div(12, _in(div(&quot;cdk-overlay-3&quot;)))' fallback='true' selected='false'/>
-   <accessor type='Parent' value='div(12, _in(div({&apos;id&apos;:&apos;cdk-overlay-3&apos;})))' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;close-icon material-icons&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;material-icons close-icon&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-overlay-3&apos;]/snack-bar-container/div/div/app-modal-print-pick-ticket-toast/div/div[2]/button/span[1]/div&quot;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div/div/snack-bar-container/div/div/app-modal-print-pick-ticket-toast/div/div[2]/button/span/div&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.toast-wrapper.d-flex.align-items-center.justify-content-between &gt; .ml-3 &gt; .mat-focus-indicator.mat-icon-button.mat-button-base.ng-star-inserted &gt; .mat-button-wrapper &gt; .material-icons.close-icon&apos;)' fallback='false' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;toast-wrapper d-flex align-items-center justify-content-between&quot;] &gt; div[class=&quot;ml-3&quot;] &gt; button[class=&quot;mat-focus-indicator mat-icon-button mat-button-base ng-star-inserted&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;] &gt; div[class=&quot;material-icons close-icon&quot;]&apos;)' fallback='false' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.toast-wrapper.d-flex.align-items-center.justify-content-between &gt; .ml-3 &gt; .mat-focus-indicator.mat-icon-button.mat-button-base.ng-star-inserted.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper &gt; .material-icons.close-icon&apos;)' fallback='false' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;toast-wrapper d-flex align-items-center justify-content-between&quot;] &gt; div[class=&quot;ml-3&quot;] &gt; button[class=&quot;mat-focus-indicator mat-icon-button mat-button-base ng-star-inserted cdk-focused cdk-mouse-focused&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;] &gt; div[class=&quot;material-icons close-icon&quot;]&apos;)' fallback='false' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-overlay-3&apos;)/snack-bar-container[@class=&apos;mat-snack-bar-container ng-tns-c40-104 ng-trigger ng-trigger-state mat-snack-bar-center ng-star-inserted&apos;]/div[@class=&apos;ng-tns-c40-104&apos;]/div[@class=&apos;ng-tns-c40-104&apos;]/app-modal-print-pick-ticket-toast[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;toast-wrapper d-flex align-items-center justify-content-between&apos;]/div[@class=&apos;ml-3&apos;]/button[@class=&apos;mat-focus-indicator mat-icon-button mat-button-base ng-star-inserted&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/div[@class=&apos;material-icons close-icon&apos;]&quot;)' fallback='false' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-overlay-3&apos;)/snack-bar-container[@class=&apos;mat-snack-bar-container ng-tns-c40-104 ng-trigger ng-trigger-state mat-snack-bar-center ng-star-inserted ng-animating&apos;]/div[@class=&apos;ng-tns-c40-104&apos;]/div[@class=&apos;ng-tns-c40-104&apos;]/app-modal-print-pick-ticket-toast[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;toast-wrapper d-flex align-items-center justify-content-between&apos;]/div[@class=&apos;ml-3&apos;]/button[@class=&apos;mat-focus-indicator mat-icon-button mat-button-base ng-star-inserted cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/div[@class=&apos;material-icons close-icon&apos;]&quot;)' fallback='false' selected='false'/>
-</dialect>
-</step>
 <step action='click' value='""' type='web' desc='expand Overview tab' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;Overview expand_more&quot;)' fallback='true' selected='true'/>

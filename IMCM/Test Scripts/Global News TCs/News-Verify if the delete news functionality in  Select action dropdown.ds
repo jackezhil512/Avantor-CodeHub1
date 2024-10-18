@@ -124,32 +124,7 @@
    <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;Create News&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-startDate&apos;)]/span)[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='DateTime' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-status&apos;)]//span)[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='Status' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='DateTime' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='Status' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='7000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='Delete news and click on NO' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

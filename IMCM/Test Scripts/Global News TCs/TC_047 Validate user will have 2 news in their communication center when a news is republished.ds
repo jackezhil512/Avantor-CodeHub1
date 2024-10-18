@@ -5,10 +5,11 @@
 <shadowDOM useShadowDOM='false'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM_Gopal/IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"{ds}/../../IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='LoginToHome($URL,$SuperUser,$Password)' type='web' desc='Log in with Super User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -107,7 +108,7 @@
 </step>
 <step action='store' value='eval(&quot;&apos;Auto Title&apos;+ Math.floor(Math.random()*10000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  strTitle' fallback='true' selected='true'/>
+   <accessor type='unknown' value='strTitle' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='setValue' value='strTitle' type='web' desc='Enter the title' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -190,17 +191,17 @@
 </step>
 <step action='store' value='getText(byXPath(&quot;(//div[@class=&apos;title&apos;])[1]&quot;))' type='web' desc='Exreact the title1' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value=' Title2' fallback='true' selected='true'/>
+   <accessor type='unknown' value='Title2' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='store' value='getText(byXPath(&quot;(//div[@class=&apos;date ng-star-inserted&apos;])[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='   DateTime2 ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='DateTime2' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='assertEqual' value='strTitle' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='Title2 ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='Title2' fallback='true' selected='true'/>
    <accessor type='unknown' value='Title2 ' fallback='true' selected='false'/>
    <accessor type='unknown' value='Title3' fallback='true' selected='false'/>
    <accessor type='unknown' value='Title4' fallback='true' selected='false'/>
@@ -396,7 +397,7 @@
 </step>
 <step action='assertEqual' value='"Auto Message  855658Auto Message"' type='web' desc='Validate the body message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='BodyMsg ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='BodyMsg' fallback='true' selected='true'/>
 </dialect>
 </step>
 </testcase>

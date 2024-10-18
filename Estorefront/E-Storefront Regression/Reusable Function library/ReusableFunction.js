@@ -912,3 +912,50 @@ assertExists(fallback(`div("standard-header")`));
 
 
 }
+
+function InvoicePaybyCreditcard(){
+
+assertExists(fallback(`submit("Pay by Credit Card")`));
+setSelected(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/select')`));
+assertExists(fallback(`div("Open")`));
+log("Click on invoice check box")
+click(fallback(`checkbox("ml-1 mt-0 ng-pristine ng-untouched ng-valid")`));
+log("click on pay by credit card option")
+click(fallback(`submit("btn btn-primary")`));
+log("verify pay by invoice option is displaying or not")
+assertExists(fallback(`span("Pay Invoices")`));
+assertExists(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/app-invoice-search-results-item/div/div/div/div/a')`));
+log("get the invoice number")
+var InvoiceNumber=getText(byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/app-invoice-search-results-item/div/div/div/div/a'));
+log(InvoiceNumber);
+wait(5000);
+log("add the credit card details")
+click(fallback(`submit("+Add a new card")`));
+assertExists(fallback(`heading3("Add a New Credit Card")`));
+setSelected(fallback(`select("c-ct")`), "MasterCard");
+setValue(fallback(`byXPath('//*[@id="c-cardname"]')`),"Test");
+setValue(fallback(`byXPath('//*[@id="c-cardnumber"]')`), "5424180279791773");
+setSelected(fallback(`byXPath('//*[@id="c-exmth"]')`), "Apr");
+setSelected(fallback(`byXPath('//*[@id="c-exyr"]')`), "2026");
+setValue(fallback(`byXPath('//*[@id="c-cvv"]')`), "208");
+click(fallback(`byXPath('//ngb-modal-window/div/div/app-add-credit-card-dialog/div/div/div[3]/div[1]/input')`));
+click(fallback(`submit("Continue")`));
+click(fallback(`radio("creditCardType[19]")`));
+click(fallback(`div("align-end cvv-section")`);
+setValue(fallback(`password("ng-dirty ng-untouched ng-valid")`));
+click(fallback(`submit("btn btn-primary")`));
+wait(10000);
+log("After click on submit total paid amount should be displayed");
+assertExists(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/div[3]').xy(0.86, 0.47 )`));
+wait(10000);
+click(fallback(`link("Return to Invoice Search")`));
+click(fallback(`link("Return to Invoice Search")`));
+setValue(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search/div/div[2]/form/div[2]/input')`));
+click(fallback(`submit("Search[1]")`));
+assertExists(fallback(`byXPath('//*[text()=" Paid "]').xy(0.54, 0.31 )`));
+
+
+
+
+
+}

@@ -115,7 +115,7 @@
 </step>
 <step action='store' value='eval(&quot;&apos;AutoTitle&apos;+ Math.floor(Math.random()*10000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  strTitle' fallback='true' selected='true'/>
+   <accessor type='unknown' value='strTitle' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='setValue' value='strTitle' type='web' desc='Enter the title' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -162,35 +162,35 @@
 </step>
 <step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-startDate&apos;)]/span)[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value=' DateTime ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='DateTime' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-status&apos;)]//span)[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value=' Status ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='Status' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='store' value='getText(byXPath(&quot;//td[contains(@class,&apos;mat-column-subject&apos;)]//a&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value=' Title ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='Title' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value=' DateTime ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='DateTime' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='Status ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='Status' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 <step action='assertEqual' value='"Published"' type='web' desc='Validate the status' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='Status ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='Status' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertEqual' value='Title ' type='web' desc='Validate the title' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertEqual' value='Title' type='web' desc='Validate the title' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='strTitle' fallback='true' selected='true'/>
 </dialect>
@@ -228,37 +228,37 @@
 </step>
 <step action='store' value='getText(byXPath(&quot;(//div[@class=&apos;title&apos;])[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value=' Title2' fallback='true' selected='true'/>
+   <accessor type='unknown' value='Title2' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='store' value='getText(byXPath(&quot;(//div[@class=&apos;date ng-star-inserted&apos;])[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='   DateTime2 ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='DateTime2' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='  Title2 ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='Title2' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='DateTime2 ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='DateTime2' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 <step action='store' value='DateTime.replace(&quot; EST&quot;,&quot;&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  DateTime3 ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='DateTime3' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='DateTime3 ' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='DateTime3' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 <step action='assertEqual' value='Title' type='web' desc='Validate the title' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='Title2 ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='Title2' fallback='true' selected='true'/>
 </dialect>
 </step>
 </testcase>

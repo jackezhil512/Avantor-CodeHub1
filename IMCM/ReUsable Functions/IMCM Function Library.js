@@ -100,8 +100,8 @@ setShadowDOM(true);
 wait(1000);
 click(fallback(`byXPath("//button[contains(text(),'Administration')]")`));
 click(fallback(`byXPath("//div[contains(text(),'Integration Maintenance')]")`));
-assertExists(fallback(`byXPath("//span[text(),'Integration Maintenance']")`));
-
+assertExists(fallback(`byXPath("//span[contains(text(),'Integration Maintenance')]")`));
+wait(3000);
 }
 
 

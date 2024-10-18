@@ -58,24 +58,10 @@
    <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot; Create New Vendor &quot;]/following::input[1]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
-</dialect>
-</step>
-<step action='setValue' value='"Automation"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-28&quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='AttrClass' value='textbox(&quot;cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-62 ng-untouched ng-valid&quot;)' fallback='true' selected='false'/>
-   <accessor type='Id' value='textbox(&quot;mat-input-28&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;mat-input-28&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-62 ng-untouched cdk-text-field-autofill-monitored ng-dirty ng-valid&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/section/form/mat-tab-group/div/mat-tab-body/div/app-vendor-information-tab/form/div[2]/div/div[2]/div/mat-form-field/div/div/div[3]/input&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-28&apos;)&quot;)' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='textbox({&apos;formcontrolname&apos;:&apos;vendorName&apos;})' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class=&quot;mat-form-field w-100 ng-tns-c49-62 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-star-inserted mat-focused ng-dirty ng-valid&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-62&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-62&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-62&quot;] &gt; input[class=&quot;mat-input-element mat-form-field-autofill-control ng-tns-c49-62 ng-untouched cdk-text-field-autofill-monitored ng-dirty ng-valid&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;#mat-input-28&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

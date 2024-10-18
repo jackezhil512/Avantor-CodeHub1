@@ -916,6 +916,7 @@ assertExists(fallback(`div("standard-header")`));
 function InvoicePaybyCreditcard(){
 
 assertExists(fallback(`submit("Pay by Credit Card")`));
+wait(2000);
 setSelected(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/select')`));
 assertExists(fallback(`div("Open")`));
 log("Click on invoice check box")

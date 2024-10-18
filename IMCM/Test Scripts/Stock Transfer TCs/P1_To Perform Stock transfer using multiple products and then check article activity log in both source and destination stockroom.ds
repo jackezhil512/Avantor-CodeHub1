@@ -163,14 +163,14 @@
 </step>
 <step action='verifyExists' value='' type='web' desc='validate popup message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Parent' value='div(4, _in(div(&quot;cdk-overlay-3&quot;))).xy(0.12, 0.76 )' fallback='true' selected='true'/>
-   <accessor type='Parent' value='div(4, _in(div({&apos;id&apos;:&apos;cdk-overlay-3&apos;}))).xy(0.12, 0.76 )' fallback='true' selected='false'/>
+   <accessor type='Parent' value='div(4, _in(div({&apos;id&apos;:&apos;cdk-overlay-3&apos;}))).xy(0.12, 0.76 )' fallback='true' selected='true'/>
    <accessor type='AttrClass' value='div(&quot;d-flex&quot;).xy(0.12, 0.76 )' fallback='true' selected='false'/>
    <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-overlay-3&apos;]/snack-bar-container/div/div/app-modal-print-pick-ticket-toast/div/div[1]/div[1]&quot;).xy(0.12, 0.76 )' fallback='true' selected='false'/>
    <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;d-flex&quot;]&apos;).xy(0.12, 0.76 )' fallback='true' selected='false'/>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div/div/snack-bar-container/div/div/app-modal-print-pick-ticket-toast/div/div/div&apos;).xy(0.12, 0.76 )' fallback='true' selected='false'/>
    <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-overlay-3&apos;)/snack-bar-container[@class=&apos;mat-snack-bar-container ng-tns-c40-104 ng-trigger ng-trigger-state mat-snack-bar-center ng-star-inserted&apos;]/div[@class=&apos;ng-tns-c40-104&apos;]/div[@class=&apos;ng-tns-c40-104&apos;]/app-modal-print-pick-ticket-toast[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;toast-wrapper d-flex align-items-center justify-content-between&apos;]/div[1]/div[@class=&apos;d-flex&apos;]&quot;).xy(0.12, 0.76 )' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;d-flex&quot;]&apos;).xy(0.12, 0.76 )' fallback='true' selected='false'/>
+   <accessor type='Parent' value='div(4, _in(div(&quot;cdk-overlay-3&quot;))).xy(0.12, 0.76 )' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='assertTextPresent' value='"Stock Transferred Successfully"' type='web' desc='Validate message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

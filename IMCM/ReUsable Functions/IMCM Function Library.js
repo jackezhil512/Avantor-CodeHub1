@@ -104,6 +104,17 @@ assertExists(fallback(`byXPath("//span[contains(text(),'Integration Maintenance'
 wait(3000);
 }
 
+function SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email){
+setShadowDOM(true);
+wait(1000);
+click(fallback(`byXPath("//span[contains(text(),'All Vendors')]")`));
+click(fallback(`byXPath('//*[text()="{Vendor}"]')`));
+click(fallback(`byXPath("//span[contains(text(),'All Stockrooms')]")`));
+click(fallback(`byXPath('//*[text()="{Stockroom}"]')`));
+click(fallback(`byXPath("//span[contains(text(),'All Emails')]")`));
+click(fallback(`byXPath('//*[text()="{Email}"]')`));
+}
+
 
 function SearchFieldWithoutClose(SearchEditField,SearchValue){
 setValue(fallback(`textbox(/mat-input.*/,_below(span("${SearchEditField}")))`),SearchValue);

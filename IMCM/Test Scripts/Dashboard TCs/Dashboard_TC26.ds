@@ -5,9 +5,10 @@
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"REPOSITORY/IMCM Master repo2/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/Central_Repo99/IMCM/ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"{ds}/IMCM Login.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"{ds}/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM Master repo2/IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login to IMCM as Normal User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -21,7 +22,7 @@
    <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value=' 2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

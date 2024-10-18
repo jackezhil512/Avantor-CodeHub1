@@ -202,12 +202,12 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getText(byXPath(&quot;//span[text()=&apos;News &amp; Updates&apos;]/preceding-sibling::span/span&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='NewsBubbleCount' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='NewsBubbleCount' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

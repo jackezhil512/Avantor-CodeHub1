@@ -274,6 +274,11 @@
    <accessor type='unknown' value='byXPath(strXPath )' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
 <step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-status&apos;)]//span)[1]&quot;))' type='web' desc='Extract the data from application' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='strTemp1' fallback='true' selected='true'/>

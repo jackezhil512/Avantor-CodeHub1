@@ -97,7 +97,7 @@
 </step>
 <step action='assertExists' value='' type='web' desc='Verify if Stock Correction is successful pop up is displayed' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='div([&quot;StockCorrection is successfully com&quot;])' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;StockCorrection is successfully com&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='js' value='setOperation(&quot;Stock Corrected&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

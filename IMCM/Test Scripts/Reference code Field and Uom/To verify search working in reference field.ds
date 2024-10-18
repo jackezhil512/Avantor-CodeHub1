@@ -22,7 +22,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='eval(&quot;&apos;Reference Field Name&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='Store Field name ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='"Reference field 1"' type='web' desc='Store Field name ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='FieldName' fallback='true' selected='true'/>
 </dialect>
@@ -52,7 +52,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='sendText' value='Reference field 1' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='sendText' value='FieldName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot; Reference Field Name &quot;]/following::input[1]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>

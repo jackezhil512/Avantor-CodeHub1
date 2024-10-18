@@ -130,7 +130,7 @@
    <accessor type='XPath' value='byXPath(&quot;//mat-option[@id=&apos;mat-option-108&apos;]/span&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='Select the checkbox for product catalog' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='Select the checkbox for product catalog' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPath' value='byXPath(&quot;//mat-checkbox[@id=&apos;mat-checkbox-21&apos;]/label/span[1]&quot;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='span(0, _in(custom(&quot;mat-checkbox&quot;, &quot;mat-checkbox-21&quot;)))' fallback='true' selected='false'/>
@@ -142,7 +142,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;tr[class=&quot;mat-row cdk-row ng-tns-c320-71 striped-rows ng-star-inserted&quot;] &gt; td[class=&quot;mat-cell cdk-cell cdk-column-_select mat-column-_select ng-tns-c320-71 ng-star-inserted mat-table-sticky&quot;] &gt; mat-checkbox[class=&quot;mat-checkbox mat-accent ng-tns-c320-71 ng-star-inserted&quot;] &gt; label[class=&quot;mat-checkbox-layout&quot;] &gt; span[class=&quot;mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='""' type='web' desc='Verify the  ProdCatalogNum cell' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='Verify the  ProdCatalogNum cell' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//tbody//tr[1]//td[4]&apos;)' fallback='true' selected='true'/>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-stock-transfer-layout/div/app-stock-transfer/div/div[3]/div/avantor-table/div[2]/table/tbody/tr/td[4]&apos;)' fallback='true' selected='false'/>
@@ -157,12 +157,12 @@
    <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-stock-transfer-layout/div/app-stock-transfer/div/div[3]/div/avantor-table/div[2]/table/tbody/tr[1]/td[4]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='store' value='getText(byXPath(&apos;//tbody//tr[1]//td[4]&apos;))' type='web' desc='Save the product catalog number' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getText(byXPath(&apos;//tbody//tr[1]//td[4]&apos;))' type='web' desc='Save the product catalog number' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='ProdCatalogNum' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='ProdCatalogNum' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='ProdCatalogNum' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

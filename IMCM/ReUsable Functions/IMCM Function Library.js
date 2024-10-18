@@ -107,9 +107,9 @@ wait(1000);
 
 function SearchField(SearchEditField,SearchValue){
 setValue(fallback(`textbox(/mat-input.*/,_below(span("${SearchEditField}")))`),SearchValue);
-wait(100);
+wait(1000);
 assertExists(fallback(`cell("${SearchValue}")`));
-wait(100);
+wait(1000);
 click(fallback(`custom("mat-icon", "close[1]")`));
 wait(1000);
 }
@@ -167,7 +167,7 @@ setDescription("Verfy No Records Found");
 assertExists(fallback(`heading3("No Records Found")`));
 
 }else if(PageName === "ProductMaintenancePage"){
-setDescription("Seach for catalog");
+
 NavigateToProductMaintenancePage();
 setDescription("Search for catalog");
 SearchField("Catalog #","automation748"); 

@@ -144,8 +144,8 @@ assertExists(fallback(`heading3("No Records Found")`));
 
 }else if(PageName === "DepartmentMaintenance"){
 
-}else if(PageName === "LocationMaintenance"){
-setDescription("NavigateToLocationMaintenance");
+}else if(PageName === "ProductMaintenancePage"){
+setDescription("NavigateToProductMaintenancePage");
 NavigateToLocationMaintanance();
 setDescription("Search for Location Name");
 SearchField("Location Name","ZAutomation"); 

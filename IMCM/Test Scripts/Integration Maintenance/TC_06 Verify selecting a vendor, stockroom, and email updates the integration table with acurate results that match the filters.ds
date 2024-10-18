@@ -16,27 +16,27 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='NavigateToProductMaintenancePage()' type='web' desc='Navigate to product maintenance page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='NavigateToProductMaintenancePage()' type='web' desc='Navigate to product maintenance page' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='$VwrBatchExpiryProduct' type='web' desc='search for prodcut in product maintenance page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='$VwrBatchExpiryProduct' type='web' desc='search for prodcut in product maintenance page' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='textbox(/mat-input-.*/,_below(span(&quot;Catalog #&quot;)))' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='if' value='""' type='web' desc='Verifying if catalog exist or not?' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='if' value='""' type='web' desc='Verifying if catalog exist or not?' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='isVisible(link($VwrBatchExpiryProduct))' fallback='true' selected='true'/>
    <accessor type='AttrHref' value='link(&quot;javascript:void(0)&quot;)' fallback='true' selected='false'/>
@@ -57,99 +57,99 @@
    <accessor type='unknown' value='isVisible(link($CreateVWRProductCatalog))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='click on check box if exist' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='click on check box if exist' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link($VwrBatchExpiryProduct )))' fallback='true' selected='true'/>
    <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link(&quot;$CreateVWRProductCatalog&quot;)))' fallback='true' selected='false'/>
    <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link($CreateVWRProductCatalog)))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='click on delete product' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='click on delete product' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;Delete&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='click  on confirm delete' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='click  on confirm delete' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;CONFIRM DELETE&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='NavigateToProductMaintenancePage()' type='web' desc='Navigate to product maintenance page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='NavigateToProductMaintenancePage()' type='web' desc='Navigate to product maintenance page' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='click on Add product' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='click on Add product' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;add  Add Product&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='$VwrBatchExpiryProduct' type='web' desc='enter catalog number' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='$VwrBatchExpiryProduct' type='web' desc='enter catalog number' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='textbox(/mat-input-.*/,_below(div(&quot;Enter Catalog Number[1]&quot;)))' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='click on search' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='click on search' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='strong(&quot;SEARCH&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='click on search' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='click on search' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='strong(&quot;SEARCH&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='click on add product' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='click on add product' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='span(&quot;Add Product&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='if' value='""' type='web' desc='verify product  need to reactive message exist' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='if' value='""' type='web' desc='verify product  need to reactive message exist' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='isVisible(byXPath(&apos;//*[text()=&quot; No &quot;]&apos;))' fallback='true' selected='true'/>
    <accessor type='Parent' value='span(0, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-0&apos;})))' fallback='true' selected='false'/>
@@ -164,7 +164,7 @@
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; No &quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='product  need to reactive select no' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='product  need to reactive select no' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; No &quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='span(0, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-0&apos;})))' fallback='true' selected='false'/>
@@ -179,12 +179,12 @@
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; No &quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='Submit ok' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='Submit ok' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;Ok&quot;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='submit(0, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-1&apos;})))' fallback='true' selected='false'/>
@@ -198,22 +198,22 @@
    <accessor type='Parent' value='submit(0, _in(custom(&quot;mat-dialog-container&quot;, &quot;mat-dialog-1&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='click on general details' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='click on general details' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; General Details &quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='if' value='' type='web' desc='Verify Select UOM  exist or not?' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='if' value='' type='web' desc='Verify Select UOM  exist or not?' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='isVisible(div(&quot;Select Unit of Measure[1]&quot;).xy(0.39, 0.72 ))' fallback='true' selected='true'/>
    <accessor type='Parent' value='div(113, _in(div({&apos;id&apos;:&apos;cdk-accordion-child-0&apos;}))).xy(0.39, 0.72 )' fallback='true' selected='false'/>
@@ -230,58 +230,58 @@
    <accessor type='unknown' value='  div(&quot;Select Unit of Measure[1]&quot;).xy(0.39, 0.72 )  ' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='Click on select UOM' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='Click on select UOM' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='div(&quot;Select Unit of Measure[1]&quot;).xy(0.39, 0.72 )' fallback='true' selected='true'/>
    <accessor type='Text' value='div(&quot;Select Unit of Measure[2]&quot;).xy(0.39, 0.72 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='Select Each from UOM list' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='Select Each from UOM list' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Each ( EA ) &quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='Click on stocfkroom details' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='Click on stocfkroom details' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Stockroom Details &quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='"900"' type='web' desc='Enter reoder point' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"900"' type='web' desc='Enter reoder point' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='numberbox(/mat-input-.*/,_below(div(&quot;Reorder Point *[1]&quot;)))' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='"990"' type='web' desc='enter maxium stock Quantity' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"990"' type='web' desc='enter maxium stock Quantity' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='numberbox(/mat-input-.*/,_below(div(&quot;Maximum Stock Quantity *[1]&quot;)))' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Additional Details &quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&quot;//mat-expansion-panel-header[@id=&apos;mat-expansion-panel-header-3&apos;]/span/mat-panel-title&quot;)' fallback='true' selected='false'/>
@@ -294,7 +294,7 @@
    <accessor type='Text' value='custom(&quot;mat-panel-title&quot;, &quot;Additional Details&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='span([&quot;Enable batch management for this pr&quot;])' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&quot;//mat-checkbox[@id=&apos;mat-checkbox-22&apos;]/label/span[2]&quot;)' fallback='true' selected='false'/>
@@ -305,7 +305,7 @@
    <accessor type='AttrClass' value='span(&quot;mat-checkbox-label[2]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='span(&quot;Enable Expiry Date Management&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&quot;//mat-checkbox[@id=&apos;mat-checkbox-23&apos;]/label/span[2]&quot;)' fallback='true' selected='false'/>
@@ -316,7 +316,7 @@
    <accessor type='AttrClass' value='span(&quot;mat-checkbox-label[3]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='span(&quot;Dynamic Expiry Date&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&quot;//mat-checkbox[@id=&apos;mat-checkbox-24&apos;]/label/span[2]&quot;)' fallback='true' selected='false'/>
@@ -326,77 +326,77 @@
    <accessor type='AttrClass' value='span(&quot;mat-checkbox-label[4]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='"1"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"1"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='numberbox(/mat-input-.*/,_below(div(&quot;Month(s) *[1]&quot;)))' fallback='true' selected='true'/>
    <accessor type='unknown' value='numberbox(/mat-input-.*/,_below(div(&quot;Month(s) *[1]&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='"1"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"1"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='numberbox(/mat-input-.*/,_below(div(&quot;Days *[1]&quot;)))' fallback='true' selected='true'/>
    <accessor type='unknown' value='numberbox(/mat-input-.*/,_below(div(&quot;Month(s) *[1]&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='clcik on location details' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='clcik on location details' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Location Details &quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='click on select location' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='click on select location' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Select Location&quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='""' type='web' desc='this is from expanded list' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='this is from expanded list' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='span(&quot;Select Location[2]&quot;)' fallback='true' selected='true'/>
    <accessor type='AttrClass' value='span(&quot;mat-option-text&quot;)' fallback='true' selected='false'/>
    <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, &quot;mat-option-1271&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='selectblocation from dropdown' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='selectblocation from dropdown' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='div(&quot;Automation&quot;).xy(0.06, 0.13 )' fallback='true' selected='true'/>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Automation &quot;]&apos;).xy(0.06, 0.13 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='click on Save' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='click on Save' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='strong(&quot;Save[1]&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-add-product/div[5]/div/div[2]/button[2]/span[1]/strong&apos;)' fallback='true' selected='false'/>
@@ -404,12 +404,12 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-product-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/main[@class=&apos;container-fluid px-5&apos;]/app-add-product[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row my-3 pb-5&apos;]/div[@class=&apos;col d-flex justify-content-between add-product-btns&apos;]/div[2]/button[@class=&apos;mat-focus-indicator py-1 px-3 mx-2 save-product mat-stroked-button mat-button-base mat-primary&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/strong[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='if' value='""' type='web' desc='clik on reactive yes' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='if' value='""' type='web' desc='clik on reactive yes' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='isVisible(submit(&quot;Yes&quot;))' fallback='true' selected='true'/>
    <accessor type='Parent' value='submit(1, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-2&apos;})))' fallback='true' selected='false'/>
@@ -424,7 +424,7 @@
    <accessor type='Text' value='submit(&quot;Yes&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;Yes&quot;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='submit(1, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-2&apos;})))' fallback='true' selected='false'/>
@@ -444,7 +444,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='reactivate prouct click on Yes' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='reactivate prouct click on Yes' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;Yes&quot;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='submit(1, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-2&apos;})))' fallback='true' selected='false'/>
@@ -459,33 +459,33 @@
    <accessor type='Text' value='submit(&quot;Yes&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='"60,14"' type='web' desc='Verify Product added success message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='"60,14"' type='web' desc='Verify Product added success message' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; PRODUCT ADDED &quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='Text' value='div(&quot;PRODUCT ADDED&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='ValidateArtileActivityLogMovementType($VwrBatchExpiryProduct ,&quot;Product Updated&quot;)' type='web' desc='Validate Product Created in Article Activity log -As discuss to suresh we hold this step ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='ValidateArtileActivityLogMovementType($VwrBatchExpiryProduct ,&quot;Product Updated&quot;)' type='web' desc='Validate Product Created in Article Activity log -As discuss to suresh we hold this step ' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='ValidateStockroomActivityPage($VwrBatchExpiryProduct  ,&quot;Product Updated&quot;)' type='web' desc='Validate Product Updated in StockRoom Activity log ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='ValidateStockroomActivityPage($VwrBatchExpiryProduct  ,&quot;Product Updated&quot;)' type='web' desc='Validate Product Updated in StockRoom Activity log ' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

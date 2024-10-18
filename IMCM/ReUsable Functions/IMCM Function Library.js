@@ -170,7 +170,7 @@ assertExists(fallback(`heading3("No Records Found")`));
 
 NavigateToProductMaintenancePage();
 setDescription("Search for catalog");
-SearchField("Catalog #","automation748"); 
+SearchField("Catalog #","Automation748"); 
  setDescription("Search for description");
 SearchField("Description","VWR COUNTER MT PIP ASSY 36H 8D");  
   wait(200);

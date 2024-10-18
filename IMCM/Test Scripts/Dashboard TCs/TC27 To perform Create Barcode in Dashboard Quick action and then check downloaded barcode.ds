@@ -72,26 +72,6 @@
    <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
-<step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;(//tr[contains(@class,&apos;striped-rows&apos;)]//td[@role=&apos;cell&apos;]//mat-checkbox)[1]&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Receive&apos;)]/parent::button&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='div(&quot;STOCK RECEIVED!&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
 <step action='js' value='setOperation(&quot;STOCK CORRECTED&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>

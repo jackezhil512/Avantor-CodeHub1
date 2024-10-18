@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'BackOffice-CR-84-Add Rich text editor for Body text attributes.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/HOME/BackOffice_Vijay/Backoffice_input_file.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='navigateTo' value='"https://s2.supplier.avantorsciences.com/productmanagement/login.zul"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='$UserId' type='web' desc='Entering Username' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='textbox(&quot;j_username&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"Production@123"' type='web' desc='Entering Password' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='password(&quot;j_password&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Clicking on sign on' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='button(&quot;Sign In&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='navigateTo' value='"https://s2.supplier.avantorsciences.com/productmanagement/"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='choose Administrator role and clicking on proceed' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='button(&quot;PROCEED&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='navigateTo' value='"https://s2.supplier.avantorsciences.com/productmanagement/"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Clicking on Cockpit portal' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[@class=&quot;z-icon-angle-down z-menu-icon z-div&quot;]&apos;).xy(-0.05, 0.63 )' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Clicking on product cockpit' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Product Cockpit&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Clicking on products' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Products&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Clicking on Search icon' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='button(&quot;Search&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"NA5198634"' type='web' desc='Entering value we want to search' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;(//input[@class=&quot;z-bandbox-input&quot;])[3]&apos;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Clicking on search' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='button(&quot;Search&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertContainsText' value='"NA5198634"' type='web' desc='Result true' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div(&quot;NA5198634&quot;).xy(0.44, 0.50 )' fallback='true' selected='true'/>
+</dialect>
+</step>
+</testcase>

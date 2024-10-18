@@ -91,7 +91,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='assertTextPresent' value='"File has been downloaded succesfully"' type='web' desc='Verify the message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertTextPresent' value='byXPath(&quot;//div[contains(text(),&apos;File has been downloaded succesfully&apos;)]&quot;)' type='web' desc='Verify the message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

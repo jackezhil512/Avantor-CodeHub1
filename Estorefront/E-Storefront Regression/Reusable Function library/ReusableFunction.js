@@ -961,8 +961,6 @@ assertExists(fallback(`byXPath('//*[text()=" Paid "]').xy(0.54, 0.31 )`));
 
 function InvoiceBillingAddresschange(){
 
-function InvoicePaybyCreditcard(){
-
 assertExists(fallback(`submit("Pay by Credit Card")`));
 wait(2000);
 setSelected(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/select')`),"Open");

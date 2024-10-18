@@ -59,8 +59,9 @@
 </step>
 <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot;//*[text() = &quot;${ReferenceFields}&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot;//*[text() = &quot;${FieldName }&quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot;//*[text() = &quot;${ReferenceFields}&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;description&apos;)])[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -92,6 +93,7 @@
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot;//*[text() = &quot;${ReferenceFields}&quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot;//*[text() = &quot;${ReferenceFields}&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

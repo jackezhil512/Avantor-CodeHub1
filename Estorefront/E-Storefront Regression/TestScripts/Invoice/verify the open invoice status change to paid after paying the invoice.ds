@@ -311,7 +311,7 @@
    <accessor type='AttrClass' value='div(&quot;text-right&quot;).xy(0.86, 0.47 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
@@ -326,12 +326,7 @@
    <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/invoice-search[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-invoice-search[1]/div[@class=&apos;d-flex invoice-search&apos;]/div[@class=&apos;invoice-search-by-number&apos;]/form[@class=&apos;ng-untouched ng-pristine ng-invalid&apos;]/div[@class=&apos;mb-3&apos;]&quot;).xy(0.26, 0.78 )' fallback='true' selected='true'/>
    <accessor type='Text' value='div(&quot;Invoice Number&quot;).xy(0.26, 0.78 )' fallback='true' selected='false'/>

@@ -845,4 +845,58 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Integrations&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='custom(&quot;mat-panel-title&quot;, &quot;Integrations&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//mat-expansion-panel-header[@id=&apos;mat-expansion-panel-header-1&apos;]/span/mat-panel-title&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-expansion-panel-header-title ng-tns-c282-326&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-vendor-maintenance-layout/div/app-vendor-view/div[3]/div/mat-accordion/mat-expansion-panel[2]/mat-expansion-panel-header/span/mat-panel-title&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-expansion-panel-header-1&apos;)/span[@class=&apos;mat-content ng-tns-c282-326&apos;]/mat-panel-title[@class=&apos;mat-expansion-panel-header-title ng-tns-c282-326&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;mat-accordion[class=&quot;mat-accordion vendor-information mat-accordion-multi&quot;] &gt; mat-expansion-panel[class=&quot;mat-expansion-panel ng-tns-c280-325 ng-star-inserted&quot;] &gt; mat-expansion-panel-header[class=&quot;mat-expansion-panel-header mat-focus-indicator ng-tns-c282-326 ng-tns-c280-325 mat-expansion-toggle-indicator-after ng-star-inserted cdk-focused cdk-mouse-focused&quot;] &gt; span[class=&quot;mat-content ng-tns-c282-326&quot;] &gt; mat-panel-title[class=&quot;mat-expansion-panel-header-title ng-tns-c282-326&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-expansion-panel-header-1 &gt; .mat-content.ng-tns-c282-326 &gt; .mat-expansion-panel-header-title.ng-tns-c282-326&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='custom(&quot;mat-panel-title&quot;, &quot;mat-expansion-panel-header-title ng-tns-c282-326&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;PDF OUTPUT&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[1]/td[3]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;PDF OUTPUT&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-vendor-maintenance-layout/div/app-vendor-view/div[3]/div/mat-accordion/mat-expansion-panel[2]/div/div/section/div[2]/avantor-table/div[2]/table/tbody/tr/td[3]/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-accordion-child-1&apos;)/div[@class=&apos;mat-expansion-panel-body ng-tns-c280-325&apos;]/section[@class=&apos;pt-4 ng-tns-c280-325&apos;]/div[@class=&apos;row&apos;]/avantor-table[@class=&apos;w-100 ng-tns-c328-327 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c328-327&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c328-327 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c328-327 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-outputType mat-column-outputType ng-tns-c328-327 ng-star-inserted&apos;]/span[@class=&apos;ng-star-inserted&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[3]//span[@class=&quot;ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[3]//span[text()=&quot;PDF OUTPUT&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;tr[class=&quot;mat-row cdk-row ng-tns-c328-327 striped-rows ng-star-inserted&quot;] &gt; td[class=&quot;mat-cell cdk-cell cdk-column-outputType mat-column-outputType ng-tns-c328-327 ng-star-inserted&quot;] &gt; span[class=&quot;ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c328-327.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-outputType.mat-column-outputType.ng-tns-c328-327.ng-star-inserted &gt; .ng-star-inserted&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;ng-star-inserted[2]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;EMAIL XML&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[9]/td[3]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;EMAIL XML&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-vendor-maintenance-layout/div/app-vendor-view/div[3]/div/mat-accordion/mat-expansion-panel[2]/div/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[9]/td[3]/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[9]//td[3]//span[@class=&quot;ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[9]//td[3]//span[text()=&quot;EMAIL XML&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;ng-star-inserted[6]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;CSV&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[5]/td[3]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;CSV&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-vendor-maintenance-layout/div/app-vendor-view/div[3]/div/mat-accordion/mat-expansion-panel[2]/div/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[5]/td[3]/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[5]//td[3]//span[@class=&quot;ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[5]//td[3]//span[text()=&quot;CSV&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;ng-star-inserted[4]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

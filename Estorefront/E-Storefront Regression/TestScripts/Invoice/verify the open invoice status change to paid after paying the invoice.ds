@@ -294,28 +294,21 @@
    <accessor type='JQuery' value='byJQuery(&apos;.text-right &gt; .btn.btn-primary&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='"After click on submit total paid amount should be displayed"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='AttrClass' value='div(&quot;text-right&quot;).xy(0.86, 0.47 )' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/div[3]&apos;).xy(0.86, 0.47 )' fallback='true' selected='true'/>
    <accessor type='Text' value='div(&quot;Total paid : 254.51&quot;).xy(0.86, 0.47 )' fallback='true' selected='false'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-invoice-search-results/app-invoice-payment/div[3]&apos;).xy(0.86, 0.47 )' fallback='true' selected='false'/>
    <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;text-right&quot;]&apos;).xy(0.86, 0.47 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/div[3]&apos;).xy(0.86, 0.47 )' fallback='true' selected='false'/>
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-invoice-search-results[1]/app-invoice-payment[1]/div[@class=&apos;text-right&apos;]&quot;).xy(0.86, 0.47 )' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;text-right&quot;]&apos;).xy(0.86, 0.47 )' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;.text-right&apos;).xy(0.86, 0.47 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='div(&quot;w-100&quot;).xy(0.75, 0.27 )' fallback='true' selected='true'/>
-   <accessor type='Text' value='div(&quot;8655072494[1]&quot;).xy(0.75, 0.27 )' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-invoice-search-results/app-invoice-payment/app-invoice-search-results-item/div[1]/div/div[1]/div&apos;).xy(0.75, 0.27 )' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;w-100&quot;]&apos;).xy(0.75, 0.27 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/app-invoice-search-results-item/div/div/div/div&apos;).xy(0.75, 0.27 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-invoice-search-results[1]/app-invoice-payment[1]/app-invoice-search-results-item[1]/div[@class=&apos;col-12 col-md-12 pt-2 pb-2 border-bottom invoice-result-items-desktop&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-md-2 col-lg-2 col-xl-2 d-flex invoice-results-invoice-num text-break text-center pl-0&apos;]/div[@class=&apos;w-100&apos;]&quot;).xy(0.75, 0.27 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;col-12 col-md-12 pt-2 pb-2 border-bottom invoice-result-items-desktop&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col-md-2 col-lg-2 col-xl-2 d-flex invoice-results-invoice-num text-break text-center pl-0&quot;] &gt; div[class=&quot;w-100&quot;]&apos;).xy(0.75, 0.27 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.col-12.col-md-12.pt-2.pb-2.border-bottom.invoice-result-items-desktop &gt; .row &gt; .col-md-2.col-lg-2.col-xl-2.d-flex.invoice-results-invoice-num.text-break.text-center.pl-0 &gt; .w-100&apos;).xy(0.75, 0.27 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;text-right&quot;).xy(0.86, 0.47 )' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

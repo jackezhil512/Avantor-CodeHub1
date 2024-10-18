@@ -86,7 +86,8 @@
 </step>
 <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;News in published status cannot be deleted.&apos;)]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;temp&apos;)]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

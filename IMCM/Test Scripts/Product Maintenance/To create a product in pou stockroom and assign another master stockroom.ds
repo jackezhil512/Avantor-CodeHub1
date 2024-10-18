@@ -11,7 +11,7 @@
    <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$AutomationPOU )' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
@@ -62,11 +62,12 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='click on check box if exist' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='$AutomationPOU' type='web' desc='click on check box if exist' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link($VwrBatchExpiryProduct)))' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='true' selected='true'/>
    <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link(&quot;$CreateVWRProductCatalog&quot;)))' fallback='true' selected='false'/>
    <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link($CreateVWRProductCatalog)))' fallback='true' selected='false'/>
+   <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link($VwrBatchExpiryProduct)))' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

@@ -97,14 +97,11 @@ wait(100);
 
 function NavigateToIntegrationmaintanance(){
 setShadowDOM(true);
-wait(100);
-click(fallback(`submit("Administration expand_more")`));
-wait(100);
-click(fallback(`byXPath('//*[text()=" Cost Center Maintenance "]').xy(0.23, 0.62 )`));
-wait(1000);
-assertExists(fallback(`span("Add New Cost Center[1]")`));
-wait(100);
-
+click(fallback(`//button[contains(text(),'Administration')]`));
+wait(2000);
+click(fallback(`//button[contains(text(),'Integration Maintenance')]`));
+wait(2000);
+assertExists(fallback(`//span[text()='Integration Maintenance']`));
 }
 
 

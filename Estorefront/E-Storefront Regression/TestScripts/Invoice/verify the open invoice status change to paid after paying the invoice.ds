@@ -250,4 +250,48 @@
    <accessor type='AttrClass' value='submit(&quot;btn btn-primary[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrName' value='radio(&quot;creditCardType[19]&quot;)' fallback='true' selected='true'/>
+   <accessor type='AttrValue' value='radio(&quot;cardType[19]&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/div[3]/div[20]/div/label/input&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='div(&quot;align-end cvv-section&quot;).xy(0.03, 0.80 )' fallback='true' selected='true'/>
+   <accessor type='Text' value='div(&quot;Security Code (CVV) *&quot;).xy(0.03, 0.80 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-invoice-search-results/app-invoice-payment/form/div&apos;).xy(0.03, 0.80 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cvv-section align-end&quot;]&apos;).xy(0.03, 0.80 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/form/div&apos;).xy(0.03, 0.80 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-invoice-search-results[1]/app-invoice-payment[1]/form[@class=&apos;py-3 ng-untouched ng-pristine ng-invalid&apos;]/div[@class=&apos;cvv-section align-end&apos;]&quot;).xy(0.03, 0.80 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;form[class=&quot;py-3 ng-untouched ng-pristine ng-invalid&quot;] &gt; div[class=&quot;cvv-section align-end&quot;]&apos;).xy(0.03, 0.80 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.py-3.ng-untouched.ng-pristine.ng-invalid &gt; .cvv-section.align-end&apos;).xy(0.03, 0.80 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"208"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='password(&quot;ng-dirty ng-untouched ng-valid&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-invoice-search-results/app-invoice-payment/form/div/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;ng-untouched ng-dirty ng-valid&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/form/div/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-invoice-search-results[1]/app-invoice-payment[1]/form[@class=&apos;py-3 ng-untouched ng-dirty ng-valid&apos;]/div[@class=&apos;cvv-section align-end&apos;]/input[@class=&apos;ng-untouched ng-dirty ng-valid&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='password({&apos;maxlength&apos;:&apos;4&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;form[class=&quot;py-3 ng-untouched ng-dirty ng-valid&quot;] &gt; div[class=&quot;cvv-section align-end&quot;] &gt; input[class=&quot;ng-untouched ng-dirty ng-valid&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.py-3.ng-untouched.ng-dirty.ng-valid &gt; .cvv-section.align-end &gt; .ng-untouched.ng-dirty.ng-valid&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='submit(&quot;btn btn-primary&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='submit(&quot;Submit Payment&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-invoice-search-results/app-invoice-payment/div[6]/button[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Submit Payment&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/div[6]/button[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-invoice-search-results[1]/app-invoice-payment[1]/div[@class=&apos;text-right&apos;]/button[@class=&apos;btn btn-primary&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;text-right&quot;] &gt; button[class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.text-right &gt; .btn.btn-primary&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

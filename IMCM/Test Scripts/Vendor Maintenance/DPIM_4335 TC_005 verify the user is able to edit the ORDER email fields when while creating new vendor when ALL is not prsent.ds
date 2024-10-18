@@ -288,24 +288,9 @@
    <accessor type='Text' value='span(&quot;Save &amp; Add Vendor[1]&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&quot;//mat-dialog-container[@id=&apos;mat-dialog-0&apos;]/app-create-update-wizard/mat-dialog-actions/button[3]/span[1]/span&quot;)' fallback='true' selected='false'/>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Save &amp; Add Vendor &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-actions/button[3]/span/span&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-dialog-0&apos;)/app-create-update-wizard[@class=&apos;ng-star-inserted&apos;]/mat-dialog-actions[@class=&apos;mat-dialog-actions px-3 vendor-btns&apos;]/button[@class=&apos;mat-focus-indicator py-1 add-vendor mat-flat-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='div(&quot;VENDOR CREATED SUCCESSFULLY[9]&quot;).xy(0.41, 0.32 )' fallback='true' selected='true'/>
-   <accessor type='Parent' value='div(7, _in(div({&apos;id&apos;:&apos;cdk-overlay-4&apos;}))).xy(0.41, 0.32 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;title&quot;).xy(0.41, 0.32 )' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-overlay-4&apos;]/snack-bar-container/div/div/avantor-toast/div/div[1]/div[2]/div/div[1]&quot;).xy(0.41, 0.32 )' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; VENDOR CREATED SUCCESSFULLY &quot;]&apos;).xy(0.41, 0.32 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div/div/snack-bar-container/div/div/avantor-toast/div/div/div[2]/div/div&apos;).xy(0.41, 0.32 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-overlay-4&apos;)/snack-bar-container[@class=&apos;mat-snack-bar-container ng-tns-c40-98 ng-trigger ng-trigger-state mat-snack-bar-center ng-star-inserted&apos;]/div[@class=&apos;ng-tns-c40-98&apos;]/div[@class=&apos;ng-tns-c40-98&apos;]/avantor-toast[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;toast-wrapper d-flex align-items-center justify-content-between&apos;]/div[@class=&apos;d-flex ng-star-inserted&apos;]/div[2]/div[1]/div[@class=&apos;title&apos;]&quot;).xy(0.41, 0.32 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;title&quot;]&apos;).xy(0.41, 0.32 )' fallback='true' selected='false'/>
-   <accessor type='Parent' value='div(7, _in(div(&quot;cdk-overlay-4&quot;))).xy(0.41, 0.32 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Validate Success Message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='div(&quot;VENDOR CREATED SUCCESSFULLY[9]&quot;).xy(0.41, 0.32 )' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>

@@ -58,6 +58,12 @@
    <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
+<step action='setValue' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot; Create New Vendor &quot;]/following::input[1]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
+</dialect>
+</step>
 <step action='setValue' value='"Automation"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;mat-input-28&quot;]&apos;)' fallback='true' selected='true'/>

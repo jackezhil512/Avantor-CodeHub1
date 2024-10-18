@@ -213,7 +213,8 @@
 </step>
 <step action='setValue' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;(//label[contains(text(),&apos;Primary Email&apos;)]/following::input)[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 </testcase>

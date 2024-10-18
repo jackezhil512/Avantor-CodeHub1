@@ -146,6 +146,11 @@
    <accessor type='unknown' value='byXPath(&quot;(//span[contains(text(),&apos;All&apos;)]/ancestor::mat-select)[1]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
+<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Exclude Non VWR Vendor Integrations&apos;)]&quot;)' fallback='true' selected='true'/>
@@ -164,6 +169,11 @@
 <step action='setValue' value='"{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;All Stockrooms&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

@@ -146,7 +146,7 @@
 </step>
 <step action='if' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; No &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='isVisible(byXPath(&apos;//*[text()=&quot; No &quot;]&apos;))' fallback='true' selected='true'/>
    <accessor type='Parent' value='span(0, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-1&apos;})))' fallback='true' selected='false'/>
    <accessor type='AttrClass' value='span(&quot;mat-button-wrapper[12]&quot;)' fallback='true' selected='false'/>
    <accessor type='Text' value='span(&quot;No&quot;)' fallback='true' selected='false'/>
@@ -156,6 +156,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;section[class=&quot;px-5 py-5 text-center&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col-12 col-sm-12 col-md-12 col-lg-6 mb-2 ng-star-inserted&quot;] &gt; button[class=&quot;mat-focus-indicator w-100 py-2 cancel-text mat-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;.px-5.py-5.text-center &gt; .row &gt; .col-12.col-sm-12.col-md-12.col-lg-6.mb-2.ng-star-inserted &gt; .mat-focus-indicator.w-100.py-2.cancel-text.mat-button.mat-button-base.mat-primary.ng-star-inserted.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper&apos;)' fallback='true' selected='false'/>
    <accessor type='Parent' value='span(0, _in(custom(&quot;mat-dialog-container&quot;, &quot;mat-dialog-1&quot;)))' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; No &quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -170,6 +171,12 @@
    <accessor type='JQuery' value='byJQuery(&apos;section[class=&quot;px-5 py-5 text-center&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col-12 col-sm-12 col-md-12 col-lg-6 mb-2 ng-star-inserted&quot;] &gt; button[class=&quot;mat-focus-indicator w-100 py-2 cancel-text mat-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;.px-5.py-5.text-center &gt; .row &gt; .col-12.col-sm-12.col-md-12.col-lg-6.mb-2.ng-star-inserted &gt; .mat-focus-indicator.w-100.py-2.cancel-text.mat-button.mat-button-base.mat-primary.ng-star-inserted.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper&apos;)' fallback='true' selected='false'/>
    <accessor type='Parent' value='span(0, _in(custom(&quot;mat-dialog-container&quot;, &quot;mat-dialog-1&quot;)))' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; No &quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

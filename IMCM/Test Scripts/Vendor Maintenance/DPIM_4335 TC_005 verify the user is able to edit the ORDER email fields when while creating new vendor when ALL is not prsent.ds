@@ -200,25 +200,24 @@
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Parent' value='cell(2, _in(custom(&quot;mat-tab-body&quot;, &quot;mat-tab-content-1-2&quot;)))' fallback='true' selected='true'/>
+   <accessor type='Text' value='cell(&quot;PDF OUTPUT&quot;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='cell(2, _in(custom(&quot;mat-tab-body&quot;, {&apos;id&apos;:&apos;mat-tab-content-1-2&apos;})))' fallback='true' selected='false'/>
-   <accessor type='Text' value='cell(&quot;PDF OUTPUT&quot;)' fallback='true' selected='false'/>
    <accessor type='XPath' value='byXPath(&quot;//mat-tab-body[@id=&apos;mat-tab-content-1-2&apos;]/div/app-review-tab/div/table[2]/tbody/tr[1]/td[3]&quot;)' fallback='true' selected='false'/>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;PDF OUTPUT&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/section/form/mat-tab-group/div/mat-tab-body[3]/div/app-review-tab/div/table[2]/tbody/tr/td[3]&apos;)' fallback='true' selected='false'/>
    <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-tab-content-1-2&apos;)/div[@class=&apos;mat-tab-body-content ng-tns-c102-93 ng-trigger ng-trigger-translateTab&apos;]/app-review-tab[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;w-100&apos;]/table[@class=&apos;integration-table&apos;]/tbody[1]/tr[@class=&apos;ng-star-inserted&apos;]/td[3]&quot;)' fallback='true' selected='false'/>
    <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[3][text()=&quot;PDF OUTPUT&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='cell(2, _in(custom(&quot;mat-tab-body&quot;, &quot;mat-tab-content-1-2&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Parent' value='div(108, _in(custom(&quot;mat-tab-body&quot;, &quot;mat-tab-content-1-2&quot;))).xy(0.29, 0.42 )' fallback='true' selected='true'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; A@gmail.com &quot;]&apos;).xy(0.29, 0.42 )' fallback='true' selected='true'/>
    <accessor type='Parent' value='div(108, _in(custom(&quot;mat-tab-body&quot;, {&apos;id&apos;:&apos;mat-tab-content-1-2&apos;}))).xy(0.29, 0.42 )' fallback='true' selected='false'/>
    <accessor type='AttrClass' value='div(&quot;ng-star-inserted p-2&quot;).xy(0.29, 0.42 )' fallback='true' selected='false'/>
    <accessor type='Text' value='div(&quot;A@gmail.com[1]&quot;).xy(0.29, 0.42 )' fallback='true' selected='false'/>
    <accessor type='XPath' value='byXPath(&quot;//mat-tab-body[@id=&apos;mat-tab-content-1-2&apos;]/div/app-review-tab/div/table[2]/tbody/tr[2]/td/table/tbody/tr/td[2]/div/app-email-integartion/div/div&quot;).xy(0.29, 0.42 )' fallback='true' selected='false'/>
    <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;p-2 ng-star-inserted&quot;]&apos;).xy(0.29, 0.42 )' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; A@gmail.com &quot;]&apos;).xy(0.29, 0.42 )' fallback='true' selected='false'/>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/section/form/mat-tab-group/div/mat-tab-body[3]/div/app-review-tab/div/table[2]/tbody/tr[2]/td/table/tbody/tr/td[2]/div/app-email-integartion/div/div&apos;).xy(0.29, 0.42 )' fallback='true' selected='false'/>
    <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-tab-content-1-2&apos;)/div[@class=&apos;mat-tab-body-content ng-tns-c102-93 ng-trigger ng-trigger-translateTab&apos;]/app-review-tab[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;w-100&apos;]/table[@class=&apos;integration-table&apos;]/tbody[1]/tr[@class=&apos;ng-star-inserted&apos;]/td[1]/table[@class=&apos;nested-table&apos;]/tbody[1]/tr[1]/td[2]/div[@class=&apos;ng-star-inserted&apos;]/app-email-integartion[1]/div[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;p-2 ng-star-inserted&apos;]&quot;).xy(0.29, 0.42 )' fallback='true' selected='false'/>
    <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[2]//div//app-email-integartion//div//div[@class=&quot;p-2 ng-star-inserted&quot;]&apos;).xy(0.29, 0.42 )' fallback='true' selected='false'/>
@@ -226,6 +225,7 @@
    <accessor type='Attribute' value='div({&apos;style&apos;:&apos;overflow-wrap: break-word;&apos;}).xy(0.29, 0.42 )' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;ng-star-inserted&quot;] &gt; div[class=&quot;p-2 ng-star-inserted&quot;]&apos;).xy(0.29, 0.42 )' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .p-2.ng-star-inserted&apos;).xy(0.29, 0.42 )' fallback='true' selected='false'/>
+   <accessor type='Parent' value='div(108, _in(custom(&quot;mat-tab-body&quot;, &quot;mat-tab-content-1-2&quot;))).xy(0.29, 0.42 )' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

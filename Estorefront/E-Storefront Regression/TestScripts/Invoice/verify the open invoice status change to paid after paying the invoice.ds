@@ -82,7 +82,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;.d-flex.mt-4.justify-content-between.invoice-results-btn-check &gt; .invoice-results-pay-download-btn.d-flex &gt; .btn.btn-primary&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='span(&quot;Pay Invoices&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-invoice-search-results/app-invoice-payment/h2/span&apos;)' fallback='true' selected='false'/>

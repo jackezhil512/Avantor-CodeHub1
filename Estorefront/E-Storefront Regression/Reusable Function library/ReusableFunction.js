@@ -131,12 +131,6 @@ function NegativeSceanrio_CertificateSearch(FieldNames,input){
    assertExists(fallback(`heading2(["Please try again. We couldn't find "])`));
 }
 
-
-
-
-
-
-
 function ManufacturerSearch(Index0,input0,Index1,input1,Index2,input2){
    setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
    setShadowDOM(true);
@@ -194,6 +188,16 @@ function QuickSearchNavigateToHomePage(input){
    assertExists(fallback(`heading2(0, _in(section({'aria-label':'Product Results List'})))`)); 
    click(fallback(`image(0, _in(header("cx-header"))).xy(0.64, 0.58 )`)),
    assertExists(fallback(`link("Learn more")`));
+}
+
+//function of nagetive scenarios for quick serach
+function QuickSearchwith_invalid_Searchkeyword(input){
+   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
+   setShadowDOM(true);
+   setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
+   click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
+   assertNotExists(fallback(`heading2(0, _in(section({'aria-label':'Product Results List'})))`)); 
+   
 }
 
 function SupplierNameLeftNavigationFilterSearch(input){

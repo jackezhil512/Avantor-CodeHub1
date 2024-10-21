@@ -109,7 +109,7 @@ function NegativeSceanrio_CertificateSearch(FieldNames,input){
    setValue(fallback(`textbox({'formcontrolname':'${FieldNames}'})`), input);
    click(fallback(`submit("Search")`));
    wait(3000);
-   assertExists(fallback(`span("hide-mobile[0]")`));
+   assertNotExists(fallback(`span("hide-mobile[0]")`));
 }
 
 

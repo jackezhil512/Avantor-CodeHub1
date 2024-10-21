@@ -36,6 +36,26 @@
    <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/custom-catalog&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='link(&quot;cx-link[2]&quot;)' fallback='true' selected='true'/>
+   <accessor type='AttrHref' value='link(&quot;/ca/en/custom-catalog/custom-catalog-details?catalogid=AutomationCC&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='link(&quot;Auto Custom Catalogs&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-custom-catalog/div/div[2]/div[4]/app-custom-catalog-items/div/div/div/div[1]/div/a&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Auto Custom Catalogs&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-custom-catalog/div/div[2]/div[4]/app-custom-catalog-items/div/div/div/div/div/a&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-custom-catalog[1]/div[1]/div[@class=&apos;mb-5&apos;]/div[4]/app-custom-catalog-items[1]/div[1]/div[@class=&apos;col-12 col-md-12 custom-catalog-row&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;custom-catalog-items col-md-4 col-lg-4 col-xl-4&apos;]/div[@class=&apos;cx-value custom-catalog-name&apos;]/a[@class=&apos;cx-link&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/custom-catalog/custom-catalog-details?catalogid=AutomationCC&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='custom(&quot;cx-item-counter&quot;, &quot;-  +&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-custom-catalog-details/div[5]/app-custom-catalog-cart-items[1]/div/div/div/div[3]/span[2]/form/cx-item-counter&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-custom-catalog-details/div[5]/app-custom-catalog-cart-items/div/div/div/div[3]/span[2]/form/cx-item-counter&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-custom-catalog-details[1]/div[@class=&apos;pl-2 pr-2&apos;]/app-custom-catalog-cart-items[1]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-md-12 custom-catalog-row&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;custom-catalog-details-items col-md-3 col-lg-3 col-xl-3 custom-catalog-cart-details-responsive&apos;]/span[@class=&apos;cx-label&apos;]/form[@class=&apos;ng-untouched ng-pristine ng-valid&apos;]/cx-item-counter[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 <step action='js' value='CustomCatlogAddProductToCart()' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>

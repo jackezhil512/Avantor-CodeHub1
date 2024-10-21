@@ -37,4 +37,26 @@
    <accessor type='Parent' value='textbox(6, _in(div(&quot;ProductDetail&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='label(&quot;Search Again:&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-product-lists/div/div/div/label&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Search Again:&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-product-lists/div/div/div/label&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;has-searchbox-results&apos;]/app-root[1]/cx-storefront[@class=&apos;SearchResultsListPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;SearchResultsListPageTemplate&apos;]/cx-page-slot[@class=&apos;SearchResultsListSlot has-components&apos;]/app-avtr-product-lists[1]/div[@class=&apos;cx-page&apos;]/div[@class=&apos;no-results&apos;]/div[@class=&apos;serach-field&apos;]/label[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='heading1([&quot;Your search for cas_number=67-67-7 &quot;])' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-product-lists/div/div/h1&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;total-results text-break&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Your search for cas_number=67-67-7 did not match any products. &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-product-lists/div/div/h1&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;has-searchbox-results&apos;]/app-root[1]/cx-storefront[@class=&apos;SearchResultsListPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;SearchResultsListPageTemplate&apos;]/cx-page-slot[@class=&apos;SearchResultsListSlot has-components&apos;]/app-avtr-product-lists[1]/div[@class=&apos;cx-page&apos;]/div[@class=&apos;no-results&apos;]/h1[@class=&apos;total-results text-break&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;cx-page&quot;] &gt; div[class=&quot;no-results&quot;] &gt; h1[class=&quot;total-results text-break&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.cx-page &gt; .no-results &gt; .total-results.text-break&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='heading1(&quot;text-break total-results&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

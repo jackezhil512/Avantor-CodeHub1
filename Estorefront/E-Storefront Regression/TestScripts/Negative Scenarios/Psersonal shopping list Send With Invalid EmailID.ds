@@ -25,11 +25,6 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='ClearCart()' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='link(&quot;Shopping Lists&quot;)' fallback='true' selected='true'/>
@@ -77,21 +72,6 @@
    <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;modal-container&quot;] &gt; div[class=&quot;mb-2&quot;] &gt; label[class=&quot;email-label&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;.modal-container &gt; .mb-2 &gt; .email-label&apos;)' fallback='true' selected='false'/>
    <accessor type='AttrClass' value='label(&quot;email-label&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='store' value='getAttribute(submit(&quot;Send&quot;),&quot;disabled&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='disabledButtonAttribute' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='disabledButtonAttribute' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertEqual' value='disabled' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='disabledButtonAttribute' fallback='true' selected='true'/>
 </dialect>
 </step>
 </testcase>

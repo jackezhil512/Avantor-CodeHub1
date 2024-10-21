@@ -143,6 +143,28 @@ setDescription("Verfy for NORecords Found");
 assertExists(fallback(`heading3("No Records Found")`));
 
 }else if(PageName === "DepartmentMaintenance"){
+  setDescription("NavigateToProductMaintenancePage");
+NavigateToLocationMaintanance();
+setDescription("Search for Location Name");
+SearchField("Location Name","ZAutomation"); 
+ setDescription("Search for Number Of Products");
+SearchField("Number Of Products","0");  
+  wait(200);
+setDescription("Click on Created date");
+click(fallback(`image(0, _in(button({'aria-label':'Open calendar'}))).xy(0.38, 0.83 )`));
+setDescription("div(\"30\").xy(0.64, 0.75 )");
+click(fallback(`div("30").xy(0.64, 0.75 )`));
+setDescription("Verfy No Records Found");
+assertExists(fallback(`heading3("No Records Found")`));
+setDescription("Click clear");
+click(fallback(`custom("mat-icon", "clear")`));
+wait(200);
+setDescription("image(1, _in(button({'aria-label':'Open calendar'}))).xy(0.62, 0.66 )");
+click(fallback(`byXPath('//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-location-maintenance-layout/main/app-list-location/div[2]/div/avantor-table/div[2]/table/thead/tr[2]/th[5]/div/avantor-table-filter/mat-form-field/div/div[1]/div[1]/mat-datepicker-toggle/button/span[1]/img').xy(0.62, 0.66 )`));
+setDescription("Click 30 day");
+click(fallback(`div("30").xy(0.57, 0.78 )`));
+setDescription("Verfy No Records Found");
+assertExists(fallback(`heading3("No Records Found")`));
 
 }else if(PageName === "ProductMaintenancePage"){
 setDescription("NavigateToProductMaintenancePage");

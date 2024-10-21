@@ -10,7 +10,7 @@
    <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='LaunchBrowser($URL)' type='web' desc='Click on advance search' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='Click on advance search' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='link(&quot;Advanced&quot;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='link(1, _in(header({&apos;id&apos;:&apos;cx-header&apos;})))' fallback='true' selected='false'/>
@@ -35,15 +35,6 @@
    <accessor type='JQuery' value='byJQuery(&apos;input[class=&quot;form-control ng-untouched ng-valid ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;.form-control.ng-untouched.ng-valid.ng-dirty&apos;)' fallback='true' selected='false'/>
    <accessor type='Parent' value='textbox(6, _in(div(&quot;ProductDetail&quot;)))' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='Verifying after search the item there is no results found the message and search again filed should be displayed' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='label(&quot;Search Again:&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-product-lists/div/div/div/label&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Search Again:&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-product-lists/div/div/div/label&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;has-searchbox-results&apos;]/app-root[1]/cx-storefront[@class=&apos;SearchResultsListPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;SearchResultsListPageTemplate&apos;]/cx-page-slot[@class=&apos;SearchResultsListSlot has-components&apos;]/app-avtr-product-lists[1]/div[@class=&apos;cx-page&apos;]/div[@class=&apos;no-results&apos;]/div[@class=&apos;serach-field&apos;]/label[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

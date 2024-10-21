@@ -717,7 +717,7 @@ function WithoutQtyaddItemtoNewshoppinglist(){
   //setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
    //setShadowDOM(true);
   
-  click(fallback(`link("icon-angle[2]")`));
+  click(fallback(`span("icon-angle[2]")`));
   //click(fallback(`span("icon-angle")`));
   //click(fallback(`link("Add to Shopping List")`));
   click(fallback(`link("Add to Shopping List[3]")`));

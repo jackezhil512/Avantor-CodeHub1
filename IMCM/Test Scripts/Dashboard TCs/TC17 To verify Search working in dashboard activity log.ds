@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'TC16 To verify Article activity log for a product in both table and card view.ds' description= '' author= 'null' version= ''>
+<testcase   name= 'TC17 To verify Search working in dashboard activity log.ds' description= '' author= 'null' version= ''>
 <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
@@ -22,7 +22,6 @@
 <step action='setValue' value='"STOCK REPLENISHED"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//h4[contains(text(),&apos;ACTIVITY&apos;)]//following::input[@placeholder=&apos;Search&apos;]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -43,7 +42,6 @@
 <step action='assertEqual' value='"STOCK REPLENISHED"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='strText1' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -54,7 +52,6 @@
 <step action='setValue' value='"STOCK CORRECTED"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//h4[contains(text(),&apos;ACTIVITY&apos;)]//following::input[@placeholder=&apos;Search&apos;]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -75,7 +72,6 @@
 <step action='assertEqual' value='"STOCK CORRECTED"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='strText1' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 </testcase>

@@ -46,6 +46,22 @@ function AdvanceSearch(Index,input) {
                    
  }
 
+
+
+function NegativeScenario_AdvanceSearch(Index,input) {
+   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
+    setShadowDOM(true);
+  click(fallback(`link("Advanced")`));
+
+     setValue(fallback(`textbox(${Index}, _in(div("ProductDetail")))`), input);
+  	click(fallback(`submit("Search")`));
+ // assertExists(fallback(`heading1("//*You searched for: ${input}")`));
+  assertExists(fallback(`heading2(0, _in(section({'aria-label':'Product Results List'})))`));
+  
+                   
+ }
+ 
+
 function LaunchBrowser(url){
   
     setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');

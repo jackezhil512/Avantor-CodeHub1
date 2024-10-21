@@ -712,6 +712,15 @@ setValue(fallback(`textbox("NEW_LIST")`,), NewShoppingList);
   
 }
 
+function NegativeSceanrio_withoutQtyAdditem_in_newshoppinglist_pdp(){
+
+ // setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
+   setShadowDOM(true);
+  
+  //click(fallback(`button("+")`));
+  click(fallback(`span("icon-angle")`));
+  click(fallback(`link("Add to Shopping List")`));
+}
 
 function LeftNavigationInvoice(){
  

@@ -106,16 +106,11 @@
    <accessor type='AttrClass' value='button(&quot;btn btn-primary&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='AttrClass' value='button(&quot;close&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/cx-global-message/div/div/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;close&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/cx-global-message/div/div/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/cx-global-message[1]/div[1]/div[@class=&apos;alert alert-success&apos;]/button[@class=&apos;close&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='button({&apos;type&apos;:&apos;button&apos;})' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;alert alert-success&quot;] &gt; button[class=&quot;close&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.alert.alert-success &gt; .close&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/cx-global-message/div&apos;).xy(0.34, 0.46 )' fallback='true' selected='true'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/cx-global-message[1]/div[1]&quot;).xy(0.34, 0.46 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/cx-global-message/div&apos;).xy(0.34, 0.46 )' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -131,47 +126,30 @@
    <accessor type='JQuery' value='byJQuery(&apos;.d-flex.mt-2.cart-header-wrapper &gt; .cart-header-options.pl-3 &gt; .cursor-pointer.mb-2 &gt; .cart-shopping-list-icon.shopping-list-link&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='div(&quot;shopping-list-form&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='div(&quot;Enter the Shopping List Name:&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-shopping-list-dialog-ui/div[2]/form/div[2]/div&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;shopping-list-form&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-shopping-list-dialog-ui/div[2]/form/div[2]/div&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-md&apos;]/div[@class=&apos;modal-content&apos;]/app-shopping-list-dialog-ui[1]/div[@class=&apos;modal-body&apos;]/form[@class=&apos;ng-untouched ng-pristine ng-invalid&apos;]/div[@class=&apos;d-flex justify-content-start align-items-end w-100 submit-container&apos;]/div[@class=&apos;shopping-list-form&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;modal-body&quot;] &gt; form[class=&quot;ng-untouched ng-pristine ng-invalid&quot;] &gt; div[class=&quot;d-flex justify-content-start align-items-end w-100 submit-container&quot;] &gt; div[class=&quot;shopping-list-form&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.modal-body &gt; .ng-untouched.ng-pristine.ng-invalid &gt; .d-flex.justify-content-start.align-items-end.w-100.submit-container &gt; .shopping-list-form&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='div(&quot;ng-value-container[8]&quot;).xy(0.47, 0.46 )' fallback='true' selected='true'/>
-   <accessor type='Text' value='div(&quot;Select List[1]&quot;).xy(0.47, 0.46 )' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-shopping-list-dialog-ui/div[2]/form/div[2]/div/ng-select/div/div&apos;).xy(0.47, 0.46 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-shopping-list-dialog-ui/div[2]/form/div[2]/div/ng-select/div/div&apos;).xy(0.47, 0.46 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-md&apos;]/div[@class=&apos;modal-content&apos;]/app-shopping-list-dialog-ui[1]/div[@class=&apos;modal-body&apos;]/form[@class=&apos;ng-pristine ng-invalid ng-touched&apos;]/div[@class=&apos;d-flex justify-content-start align-items-end w-100 submit-container&apos;]/div[@class=&apos;shopping-list-form&apos;]/ng-select[@class=&apos;ng-select ng-select-single ng-untouched ng-pristine ng-valid ng-select-focused ng-select-opened ng-select-bottom&apos;]/div[@class=&apos;ng-select-container&apos;]/div[@class=&apos;ng-value-container&apos;]&quot;).xy(0.47, 0.46 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;d-flex justify-content-start align-items-end w-100 submit-container&quot;] &gt; div[class=&quot;shopping-list-form&quot;] &gt; ng-select[class=&quot;ng-select ng-select-single ng-untouched ng-pristine ng-valid ng-select-focused ng-select-opened ng-select-bottom&quot;] &gt; div[class=&quot;ng-select-container&quot;] &gt; div[class=&quot;ng-value-container&quot;]&apos;).xy(0.47, 0.46 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.d-flex.justify-content-start.align-items-end.w-100.submit-container &gt; .shopping-list-form &gt; .ng-select.ng-select-single.ng-untouched.ng-pristine.ng-valid.ng-select-focused.ng-select-opened.ng-select-bottom &gt; .ng-select-container &gt; .ng-value-container&apos;).xy(0.47, 0.46 )' fallback='true' selected='false'/>
-</dialect>
-</step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='AttrClass' value='button(&quot;btn btn-primary&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='button(&quot;Add&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-shopping-list-dialog-ui/div[2]/form/div[2]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Add &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-shopping-list-dialog-ui/div[2]/form/div[2]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-md&apos;]/div[@class=&apos;modal-content&apos;]/app-shopping-list-dialog-ui[1]/div[@class=&apos;modal-body&apos;]/form[@class=&apos;ng-invalid ng-touched ng-dirty&apos;]/div[@class=&apos;d-flex justify-content-start align-items-end w-100 submit-container&apos;]/button[@class=&apos;btn btn-primary&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;modal-body&quot;] &gt; form[class=&quot;ng-invalid ng-touched ng-dirty&quot;] &gt; div[class=&quot;d-flex justify-content-start align-items-end w-100 submit-container&quot;] &gt; button[class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.modal-body &gt; .ng-invalid.ng-touched.ng-dirty &gt; .d-flex.justify-content-start.align-items-end.w-100.submit-container &gt; .btn.btn-primary&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;EXISTING_LIST&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Id' value='radio(&quot;EXISTING_LIST&quot;)' fallback='true' selected='false'/>
+   <accessor type='AttrName' value='radio(&quot;shoppingListSelection[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='AttrValue' value='radio(&quot;EXISTING_LIST&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;EXISTING_LIST&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-shopping-list-dialog-ui/div[2]/form/div/div[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;EXISTING_LIST&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#EXISTING_LIST&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;input[value=&quot;EXISTING_LIST&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/cx-global-message/div&apos;).xy(0.34, 0.46 )' fallback='true' selected='true'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/cx-global-message[1]/div[1]&quot;).xy(0.34, 0.46 )' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/cx-global-message/div&apos;).xy(0.34, 0.46 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;ng-option ng-option-marked&quot;).xy(0.27, 0.46 )' fallback='true' selected='true'/>
+   <accessor type='Text' value='div(&quot;March&quot;).xy(0.27, 0.46 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;acb06d238255-0&apos;]&quot;).xy(0.27, 0.46 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;ng-option ng-option-marked&quot;]&apos;).xy(0.27, 0.46 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-shopping-list-dialog-ui/div[2]/form/div[2]/div/ng-select/ng-dropdown-panel/div/div[2]/div&apos;).xy(0.27, 0.46 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;acb06d238255-0&apos;)&quot;).xy(0.27, 0.46 )' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='div({&apos;role&apos;:&apos;option&apos;}).xy(0.27, 0.46 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;ng-option ng-option-marked&quot;]&apos;).xy(0.27, 0.46 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#acb06d238255-0&apos;).xy(0.27, 0.46 )' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

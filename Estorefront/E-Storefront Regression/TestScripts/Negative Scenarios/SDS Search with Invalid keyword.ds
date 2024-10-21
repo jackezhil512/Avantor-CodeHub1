@@ -37,4 +37,15 @@
    <accessor type='Parent' value='textbox(6, _in(div(&quot;ProductDetail&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='heading3(&quot;No matches were found.&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='heading3(0, _in(div({&apos;id&apos;:&apos;ProductDetail&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;ProductDetail&apos;]/div[2]/app-sds-search/div/div[2]/h3&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;No matches were found. &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[4]/app-avtr-tab-container/div/div[2]/app-sds-search/div/div[2]/h3&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;ProductDetail&apos;)/div[@class=&apos;generic-tab active&apos;]/app-sds-search[1]/div[@class=&apos;desktop-tab-container row&apos;]/div[@class=&apos;col-sm-7 col-12&apos;]/h3[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='heading3(0, _in(div(&quot;ProductDetail&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

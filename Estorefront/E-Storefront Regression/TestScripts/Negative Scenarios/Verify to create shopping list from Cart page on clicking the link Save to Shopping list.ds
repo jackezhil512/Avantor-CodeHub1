@@ -75,29 +75,14 @@
    <accessor type='AttrClass' value='div(&quot;ng-input[8]&quot;).xy(0.90, 0.38 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='store' value='getAttribute()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getAttribute(button(&quot;Add&quot;),&quot;disabled&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='DisabledButtonAttribute' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Text' value='button(&quot;Add&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-shopping-list-dialog-ui/div[2]/form/div[2]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-shopping-list-dialog-ui/div[2]/form/div[2]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-md&apos;]/div[@class=&apos;modal-content&apos;]/app-shopping-list-dialog-ui[1]/div[@class=&apos;modal-body&apos;]/form[@class=&apos;ng-invalid ng-touched ng-dirty&apos;]/div[@class=&apos;d-flex justify-content-start align-items-end w-100 submit-container&apos;]/button[@class=&apos;btn btn-primary&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;modal-body&quot;] &gt; form[class=&quot;ng-invalid ng-touched ng-dirty&quot;] &gt; div[class=&quot;d-flex justify-content-start align-items-end w-100 submit-container&quot;] &gt; button[class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.modal-body &gt; .ng-invalid.ng-touched.ng-dirty &gt; .d-flex.justify-content-start.align-items-end.w-100.submit-container &gt; .btn.btn-primary&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='button(&quot;btn btn-primary&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Add &quot;]&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/cx-global-message/div&apos;).xy(0.34, 0.46 )' fallback='true' selected='true'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/cx-global-message[1]/div[1]&quot;).xy(0.34, 0.46 )' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/cx-global-message/div&apos;).xy(0.34, 0.46 )' fallback='true' selected='false'/>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 </testcase>

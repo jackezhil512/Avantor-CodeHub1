@@ -48,15 +48,36 @@
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='heading1([&quot;Your search for cas_number=67-67-7 &quot;])' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-product-lists/div/div/h1&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;total-results text-break&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Your search for cas_number=67-67-7 did not match any products. &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-product-lists/div/div/h1&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;has-searchbox-results&apos;]/app-root[1]/cx-storefront[@class=&apos;SearchResultsListPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;SearchResultsListPageTemplate&apos;]/cx-page-slot[@class=&apos;SearchResultsListSlot has-components&apos;]/app-avtr-product-lists[1]/div[@class=&apos;cx-page&apos;]/div[@class=&apos;no-results&apos;]/h1[@class=&apos;total-results text-break&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;cx-page&quot;] &gt; div[class=&quot;no-results&quot;] &gt; h1[class=&quot;total-results text-break&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.cx-page &gt; .no-results &gt; .total-results.text-break&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='heading1(&quot;text-break total-results&quot;)' fallback='true' selected='false'/>
+   <accessor type='AttrHref' value='link(&quot;/ca/en/advanced-search&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='link(&quot;Advanced&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[2]/app-avtr-search-box/div[1]/a&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Advanced&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[2]/app-avtr-search-box/div/a&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SearchBox has-components&apos;]/app-avtr-search-box[1]/div[@class=&apos;advanced-link&apos;]/a[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/advanced-search&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='label(&quot;Keywords&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;ProductDetail&apos;]/div[2]/app-advanced-search/form/div[1]/div[1]/label&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[4]/app-avtr-tab-container/div/div[2]/app-advanced-search/form/div/div/label&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;ProductDetail&apos;)/div[@class=&apos;generic-tab active&apos;]/app-advanced-search[1]/form[@class=&apos;ng-untouched ng-pristine ng-valid&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;form-group col-12 col-sm-6&apos;]/label[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Parent' value='submit(4, _in(div(&quot;ProductDetail&quot;)))' fallback='true' selected='true'/>
+   <accessor type='Parent' value='submit(4, _in(div({&apos;id&apos;:&apos;ProductDetail&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='submit(&quot;btn btn-primary&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='submit(&quot;Search&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;ProductDetail&apos;]/div[2]/app-advanced-search/form/div[2]/button&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Search &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[4]/app-avtr-tab-container/div/div[2]/app-advanced-search/form/div[2]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;ProductDetail&apos;)/div[@class=&apos;generic-tab active&apos;]/app-advanced-search[1]/form[@class=&apos;ng-untouched ng-valid ng-dirty&apos;]/div[@class=&apos;button-section&apos;]/button[@class=&apos;btn btn-primary&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;form[class=&quot;ng-untouched ng-valid ng-dirty&quot;] &gt; div[class=&quot;button-section&quot;] &gt; button[class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-untouched.ng-valid.ng-dirty &gt; .button-section &gt; .btn.btn-primary&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

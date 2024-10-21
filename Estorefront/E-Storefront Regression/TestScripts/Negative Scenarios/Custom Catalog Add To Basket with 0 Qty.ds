@@ -48,24 +48,12 @@
    <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/custom-catalog/custom-catalog-details?catalogid=AutomationCC&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='AttrClass' value='submit(&quot;add-to-cart btn btn-primary mt-2&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='submit(&quot;Add To Cart&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-custom-catalog-details/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary mt-2 add-to-cart&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Add To Cart &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-custom-catalog-details/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-custom-catalog-details[1]/button[@class=&apos;btn btn-primary mt-2 add-to-cart&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;button[class=&quot;btn btn-primary mt-2 add-to-cart&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.btn.btn-primary.mt-2.add-to-cart&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-custom-catalog-details&apos;)' fallback='true' selected='true'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-custom-catalog-details&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-custom-catalog-details[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='heading1(&quot;Custom Catalog Details&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-custom-catalog-details/h1&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-custom-catalog-details/h1&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-custom-catalog-details[1]/h1[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='CustomCatlogAddProductToCart()' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>

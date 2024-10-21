@@ -82,6 +82,15 @@
    <accessor type='JQuery' value='byJQuery(&apos;.btn.btn-primary.mt-2.add-to-cart&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='heading2(&quot;Your shopping cart is empty&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-paragraph/h2&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Your shopping cart is empty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-paragraph/h2&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;EmptyCartMiddleContent has-components&apos;]/app-avtr-paragraph[1]/h2[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 <step action='js' value='CustomCatlogAddProductToCart()' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>

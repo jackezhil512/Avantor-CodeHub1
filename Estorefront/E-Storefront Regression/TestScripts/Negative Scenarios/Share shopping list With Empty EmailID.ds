@@ -53,9 +53,19 @@
    <accessor type='AttrClass' value='heading1(&quot;mb-4&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='store' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getAttribute(submit(&quot;Send&quot;),&quot;disabled&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='disabledButtonAttribute' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='disabledButtonAttribute' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 </testcase>

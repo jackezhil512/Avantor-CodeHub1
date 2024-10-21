@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'VerifyLinksOnShoppingBasketPage.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/Estorefront/E-Storefront Regression/Test Data/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='ClearCart()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='search($Product)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='span(&quot;cart-request-quote-icon&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='span(&quot;Request a Quote&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cart-request-quote-icon&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Request a Quote&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/div[2]/div/div/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-cart-details/div[2]/div/div[1]/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;TopContent has-components&apos;]/app-avtr-cart-details[1]/div[@class=&apos;d-flex mt-2 cart-header-wrapper ng-star-inserted&apos;]/div[@class=&apos;cart-header-options pl-3&apos;]/div[@class=&apos;cursor-pointer mb-2 ng-star-inserted&apos;]/span[@class=&apos;cart-request-quote-icon&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.d-flex.mt-2.cart-header-wrapper.ng-star-inserted &gt; .cart-header-options.pl-3 &gt; .cursor-pointer.mb-2.ng-star-inserted &gt; .cart-request-quote-icon&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;d-flex mt-2 cart-header-wrapper ng-star-inserted&quot;] &gt; div[class=&quot;cart-header-options pl-3&quot;] &gt; div[class=&quot;cursor-pointer mb-2 ng-star-inserted&quot;] &gt; span[class=&quot;cart-request-quote-icon&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='div(&quot;ng-star-inserted request-quote-title&quot;).xy(0.20, 0.55 )' fallback='true' selected='true'/>
+   <accessor type='Text' value='div(&quot;Request a Quote&quot;).xy(0.20, 0.55 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;request-quote-title ng-star-inserted&quot;]&apos;).xy(0.20, 0.55 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-request-quote/div/div/div&apos;).xy(0.20, 0.55 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-request-quote/div/div/div[1]&apos;).xy(0.20, 0.55 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate ng-star-inserted&apos;]/cx-page-slot[@class=&apos;BodyContent has-components ng-star-inserted&apos;]/app-avtr-request-quote[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;container request-quote-container&apos;]/div[1]/div[@class=&apos;request-quote-title ng-star-inserted&apos;]&quot;).xy(0.20, 0.55 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.request-quote-title.ng-star-inserted&apos;).xy(0.20, 0.55 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;request-quote-title ng-star-inserted&quot;]&apos;).xy(0.20, 0.55 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='span(&quot;cart-shopping-list-icon shopping-list-link&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='span(&quot;Save to Shopping list&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cart-shopping-list-icon shopping-list-link&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Save to Shopping list&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/div[2]/div/div[2]/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-cart-details/div[2]/div/div[2]/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate ng-star-inserted&apos;]/cx-page-slot[@class=&apos;TopContent has-components ng-star-inserted&apos;]/app-avtr-cart-details[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex mt-2 cart-header-wrapper ng-star-inserted&apos;]/div[@class=&apos;cart-header-options pl-3&apos;]/div[@class=&apos;cursor-pointer mb-2&apos;]/span[@class=&apos;cart-shopping-list-icon shopping-list-link&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .d-flex.mt-2.cart-header-wrapper.ng-star-inserted &gt; .cart-header-options.pl-3 &gt; .cursor-pointer.mb-2 &gt; .cart-shopping-list-icon.shopping-list-link&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;app-avtr-cart-details[class=&quot;ng-star-inserted&quot;] &gt; div[class=&quot;d-flex mt-2 cart-header-wrapper ng-star-inserted&quot;] &gt; div[class=&quot;cart-header-options pl-3&quot;] &gt; div[class=&quot;cursor-pointer mb-2&quot;] &gt; span[class=&quot;cart-shopping-list-icon shopping-list-link&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='heading5(&quot;Add to Shopping List&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;modal-title&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Add to Shopping List &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-shopping-list-dialog-ui/div/h5&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-shopping-list-dialog-ui/div[1]/h5&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-md&apos;]/div[@class=&apos;modal-content&apos;]/app-shopping-list-dialog-ui[1]/div[@class=&apos;modal-header&apos;]/h5[@class=&apos;modal-title&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.modal-header &gt; .modal-title&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;modal-header&quot;] &gt; h5[class=&quot;modal-title&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='heading5(&quot;modal-title&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='button(&quot;btn-close&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='button(&quot;X&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn-close&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; X &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-shopping-list-dialog-ui/div/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-shopping-list-dialog-ui/div[1]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-md&apos;]/div[@class=&apos;modal-content&apos;]/app-shopping-list-dialog-ui[1]/div[@class=&apos;modal-header&apos;]/button[@class=&apos;btn-close&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.modal-header &gt; .btn-close&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;modal-header&quot;] &gt; button[class=&quot;btn-close&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='button({&apos;aria-label&apos;:&apos;Close&apos;})' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='span(&quot;cart-save-to-org-chart-icon&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='span(&quot;Save to Organization Cart&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cart-save-to-org-chart-icon&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Save to Organization Cart&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/div[2]/div/div[3]/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-cart-details/div[2]/div/div[3]/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate ng-star-inserted&apos;]/cx-page-slot[@class=&apos;TopContent has-components ng-star-inserted&apos;]/app-avtr-cart-details[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex mt-2 cart-header-wrapper ng-star-inserted&apos;]/div[@class=&apos;cart-header-options pl-3&apos;]/div[@class=&apos;cursor-pointer mb-2 ng-star-inserted&apos;]/span[@class=&apos;cart-save-to-org-chart-icon&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .d-flex.mt-2.cart-header-wrapper.ng-star-inserted &gt; .cart-header-options.pl-3 &gt; .cursor-pointer.mb-2.ng-star-inserted &gt; .cart-save-to-org-chart-icon&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;app-avtr-cart-details[class=&quot;ng-star-inserted&quot;] &gt; div[class=&quot;d-flex mt-2 cart-header-wrapper ng-star-inserted&quot;] &gt; div[class=&quot;cart-header-options pl-3&quot;] &gt; div[class=&quot;cursor-pointer mb-2 ng-star-inserted&quot;] &gt; span[class=&quot;cart-save-to-org-chart-icon&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='button(&quot;close&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;close&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/cx-global-message/div/div/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/cx-global-message/div/div/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/cx-global-message[1]/div[1]/div[@class=&apos;alert alert-success ng-star-inserted&apos;]/button[@class=&apos;close&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.alert.alert-success.ng-star-inserted &gt; .close&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;alert alert-success ng-star-inserted&quot;] &gt; button[class=&quot;close&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='button({&apos;type&apos;:&apos;button&apos;})' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='span(&quot;cart-view-org-chart-icon&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='span(&quot;View Organization Cart&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cart-view-org-chart-icon&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;View Organization Cart&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/div[2]/div/div[4]/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-cart-details[1]/div[2]/div/div[4]/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate ng-star-inserted&apos;]/cx-page-slot[@class=&apos;EmptyCartMiddleContent has-components ng-star-inserted&apos;]/app-avtr-cart-details[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex mt-2 cart-header-wrapper ng-star-inserted&apos;]/div[@class=&apos;cart-header-options pl-3&apos;]/div[@class=&apos;cursor-pointer mb-2 ng-star-inserted&apos;]/span[@class=&apos;cart-view-org-chart-icon&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .d-flex.mt-2.cart-header-wrapper.ng-star-inserted &gt; .cart-header-options.pl-3 &gt; .cursor-pointer.mb-2.ng-star-inserted &gt; .cart-view-org-chart-icon&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;app-avtr-cart-details[class=&quot;ng-star-inserted&quot;] &gt; div[class=&quot;d-flex mt-2 cart-header-wrapper ng-star-inserted&quot;] &gt; div[class=&quot;cart-header-options pl-3&quot;] &gt; div[class=&quot;cursor-pointer mb-2 ng-star-inserted&quot;] &gt; span[class=&quot;cart-view-org-chart-icon&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='heading2(&quot;Organization Shopping Cart&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Organization Shopping Cart&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-avtr-organization-cart/div/div/h2&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-avtr-organization-cart/div/div[1]/h2&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg&apos;]/div[@class=&apos;modal-content&apos;]/app-avtr-organization-cart[@class=&apos;component-host-scrollable&apos;]/div[@class=&apos;p-4&apos;]/div[@class=&apos;d-flex justify-content-between mb-1&apos;]/h2[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='span(&quot;fa fa-lg fa-times mt-2&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;fa fa-times mt-2 fa-lg&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-avtr-organization-cart/div/div/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-avtr-organization-cart/div/div[1]/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg&apos;]/div[@class=&apos;modal-content&apos;]/app-avtr-organization-cart[@class=&apos;component-host-scrollable&apos;]/div[@class=&apos;p-4&apos;]/div[@class=&apos;d-flex justify-content-between mb-1&apos;]/span[@class=&apos;fa fa-times mt-2 fa-lg&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.modal-content &gt; .component-host-scrollable &gt; .p-4 &gt; .d-flex.justify-content-between.mb-1 &gt; .fa.fa-times.mt-2.fa-lg&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;modal-content&quot;] &gt; app-avtr-organization-cart[class=&quot;component-host-scrollable&quot;] &gt; div[class=&quot;p-4&quot;] &gt; div[class=&quot;d-flex justify-content-between mb-1&quot;] &gt; span[class=&quot;fa fa-times mt-2 fa-lg&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='span({&apos;style&apos;:&apos;color: #858585;&apos;})' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='span(&quot;import-export-products-label&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='span(&quot;Import Products&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;import-export-products-label&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Import Products&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/div[2]/div/div[5]/app-import-products/button/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-cart-details[1]/div[2]/div/div[5]/app-import-products/button/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate ng-star-inserted&apos;]/cx-page-slot[@class=&apos;EmptyCartMiddleContent has-components ng-star-inserted&apos;]/app-avtr-cart-details[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex mt-2 cart-header-wrapper ng-star-inserted&apos;]/div[@class=&apos;cart-header-options pl-3&apos;]/div[@class=&apos;cart-import-products ng-star-inserted&apos;]/app-import-products[1]/button[@class=&apos;btn btn-tertiary cx-import-btn px-0 cart-import-btn ng-star-inserted&apos;]/span[@class=&apos;import-export-products-label&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.btn.btn-tertiary.cx-import-btn.px-0.cart-import-btn.ng-star-inserted &gt; .import-export-products-label&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;button[class=&quot;btn btn-tertiary cx-import-btn px-0 cart-import-btn ng-star-inserted&quot;] &gt; span[class=&quot;import-export-products-label&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='div(&quot;cx-import-entries-title modal-title&quot;).xy(0.65, 0.65 )' fallback='true' selected='true'/>
+   <accessor type='Text' value='div(&quot;Import Products[2]&quot;).xy(0.65, 0.65 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cx-import-entries-title modal-title&quot;]&apos;).xy(0.65, 0.65 )' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Import Products &quot;]&apos;).xy(0.65, 0.65 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avtr-import-entries-dialog/div/div/div/div&apos;).xy(0.65, 0.65 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avtr-import-entries-dialog/div/div/div/div&apos;).xy(0.65, 0.65 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/app-root[1]/app-avtr-import-entries-dialog[@class=&apos;d-block fade modal show&apos;]/div[@class=&apos;cx-import-entries-dialog&apos;]/div[@class=&apos;cx-import-entries-container&apos;]/div[@class=&apos;modal-header cx-import-entries-header&apos;]/div[@class=&apos;cx-import-entries-title modal-title&apos;]&quot;).xy(0.65, 0.65 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.d-block.fade.modal.show &gt; .cx-import-entries-dialog &gt; .cx-import-entries-container &gt; .modal-header.cx-import-entries-header &gt; .cx-import-entries-title.modal-title&apos;).xy(0.65, 0.65 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;app-avtr-import-entries-dialog[class=&quot;d-block fade modal show&quot;] &gt; div[class=&quot;cx-import-entries-dialog&quot;] &gt; div[class=&quot;cx-import-entries-container&quot;] &gt; div[class=&quot;modal-header cx-import-entries-header&quot;] &gt; div[class=&quot;cx-import-entries-title modal-title&quot;]&apos;).xy(0.65, 0.65 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='span(&quot;cart-clear-icon&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='span(&quot;Clear Cart&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cart-clear-icon&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Clear Cart&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/div[2]/div/div[6]/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-cart-details[1]/div[2]/div/div[6]/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate ng-star-inserted&apos;]/cx-page-slot[@class=&apos;EmptyCartMiddleContent has-components ng-star-inserted&apos;]/app-avtr-cart-details[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex mt-2 cart-header-wrapper ng-star-inserted&apos;]/div[@class=&apos;cart-header-options pl-3&apos;]/div[@class=&apos;cursor-pointer&apos;]/span[@class=&apos;cart-clear-icon&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .d-flex.mt-2.cart-header-wrapper.ng-star-inserted &gt; .cart-header-options.pl-3 &gt; .cursor-pointer &gt; .cart-clear-icon&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;app-avtr-cart-details[class=&quot;ng-star-inserted&quot;] &gt; div[class=&quot;d-flex mt-2 cart-header-wrapper ng-star-inserted&quot;] &gt; div[class=&quot;cart-header-options pl-3&quot;] &gt; div[class=&quot;cursor-pointer&quot;] &gt; span[class=&quot;cart-clear-icon&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

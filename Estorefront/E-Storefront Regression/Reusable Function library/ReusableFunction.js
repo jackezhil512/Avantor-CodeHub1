@@ -56,7 +56,7 @@ function NegativeScenario_AdvanceSearch(Index,input) {
      setValue(fallback(`textbox(${Index}, _in(div("ProductDetail")))`), input);
   	click(fallback(`submit("Search")`));
  // assertExists(fallback(`heading1("//*You searched for: ${input}")`));
-  assertExists(fallback(`heading2(0, _in(section({'aria-label':'Product Results List'})))`));
+  assertNotExists(fallback(`heading2(0, _in(section({'aria-label':'Product Results List'})))`));
   
                    
  }

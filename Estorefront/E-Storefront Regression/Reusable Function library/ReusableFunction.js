@@ -53,8 +53,9 @@ function NegativeScenario_AdvanceSearch(Index,input) {
     setShadowDOM(true);
   click(fallback(`link("Advanced")`));
 
-     setValue(fallback(`textbox(${Index}, _in(div("ProductDetail")))`), input);
-  	click(fallback(`submit("Search")`));
+     //setValue(fallback(`textbox(${Index}, _in(div("ProductDetail")))`), input);
+  	setValue(fallback(`textbox({'formcontrolname':${Index}})`), input);
+    click(fallback(`submit("Search")`));
  // assertExists(fallback(`heading1("//*You searched for: ${input}")`));
   assertNotExists(fallback(`heading2(0, _in(section({'aria-label':'Product Results List'})))`));
   

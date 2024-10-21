@@ -53,17 +53,9 @@
    <accessor type='AttrClass' value='heading1(&quot;mb-4&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Text' value='submit(&quot;Send&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn-primary send-btn&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Send &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-avtr-shared-shopping-list-modal/div/div[3]/form/div[2]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-dialog-centered modal-md&apos;]/div[@class=&apos;modal-content&apos;]/app-avtr-shared-shopping-list-modal[1]/div[@class=&apos;modal-container&apos;]/div[@class=&apos;mb-2&apos;]/form[@class=&apos;row ng-touched ng-dirty ng-valid ng-submitted&apos;]/div[@class=&apos;col-3 pl-0 pr-1&apos;]/button[@class=&apos;btn-primary send-btn&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;modal-container&quot;] &gt; div[class=&quot;mb-2&quot;] &gt; form[class=&quot;row ng-touched ng-dirty ng-valid ng-submitted&quot;] &gt; div[class=&quot;col-3 pl-0 pr-1&quot;] &gt; button[class=&quot;btn-primary send-btn&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.modal-container &gt; .mb-2 &gt; .row.ng-touched.ng-dirty.ng-valid.ng-submitted &gt; .col-3.pl-0.pr-1 &gt; .btn-primary.send-btn&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='submit(&quot;btn-primary send-btn&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-avtr-shared-shopping-list-modal/div/div[3]/form/div[2]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='disabledButtonAttribute' fallback='true' selected='true'/>
 </dialect>
 </step>
 </testcase>

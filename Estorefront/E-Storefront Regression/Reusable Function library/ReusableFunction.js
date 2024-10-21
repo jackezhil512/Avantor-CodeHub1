@@ -99,6 +99,25 @@ function CertificateSearch(Index,input){
    assertExists(fallback(`span("hide-mobile[0]")`));
 }
 
+function NegativeSceanrio_CertificateSearch(FieldNames,input){
+
+   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
+   setShadowDOM(true);
+   click(fallback(`link("Advanced")`));
+   click(fallback(`submit("Certificate Search")`));
+   //setValue(fallback(`textbox(${Index}, _in(div("ProductDetail")))`), input);  
+   setValue(fallback(`textbox({'formcontrolname':'${FieldNames}'})`), input);
+   click(fallback(`submit("Search")`));
+   wait(3000);
+   assertExists(fallback(`span("hide-mobile[0]")`));
+}
+
+
+
+
+
+
+
 function ManufacturerSearch(Index0,input0,Index1,input1,Index2,input2){
    setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
    setShadowDOM(true);

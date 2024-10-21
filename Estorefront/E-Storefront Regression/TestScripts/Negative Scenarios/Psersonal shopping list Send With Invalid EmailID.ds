@@ -74,4 +74,25 @@
    <accessor type='AttrClass' value='label(&quot;email-label&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='setValue' value='"Test@com"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='textbox(&quot;ng-dirty ng-invalid ng-untouched w-100&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-avtr-shared-shopping-list-modal/div/div[3]/form/div[1]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;w-100 ng-untouched ng-invalid ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-avtr-shared-shopping-list-modal/div/div[3]/form/div/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-dialog-centered modal-md&apos;]/div[@class=&apos;modal-content&apos;]/app-avtr-shared-shopping-list-modal[1]/div[@class=&apos;modal-container&apos;]/div[@class=&apos;mb-2&apos;]/form[@class=&apos;row ng-untouched ng-invalid ng-dirty&apos;]/div[@class=&apos;col-9 pr-1&apos;]/input[@class=&apos;w-100 ng-untouched ng-invalid ng-dirty&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;formcontrolname&apos;:&apos;shareShoppingListEmail&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;modal-container&quot;] &gt; div[class=&quot;mb-2&quot;] &gt; form[class=&quot;row ng-untouched ng-invalid ng-dirty&quot;] &gt; div[class=&quot;col-9 pr-1&quot;] &gt; input[class=&quot;w-100 ng-untouched ng-invalid ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.modal-container &gt; .mb-2 &gt; .row.ng-untouched.ng-invalid.ng-dirty &gt; .col-9.pr-1 &gt; .w-100.ng-untouched.ng-invalid.ng-dirty&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='paragraph([&quot;Please check for valid email addres&quot;])' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-avtr-shared-shopping-list-modal/div/div[3]/form/div[1]/cx-form-errors/p&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Please check for valid email addresses &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-avtr-shared-shopping-list-modal/div/div[3]/form/div/cx-form-errors/p&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-dialog-centered modal-md&apos;]/div[@class=&apos;modal-content&apos;]/app-avtr-shared-shopping-list-modal[1]/div[@class=&apos;modal-container&apos;]/div[@class=&apos;mb-2&apos;]/form[@class=&apos;row ng-invalid ng-dirty ng-touched&apos;]/div[@class=&apos;col-9 pr-1&apos;]/cx-form-errors[@class=&apos;control-invalid control-dirty control-touched&apos;]/p[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

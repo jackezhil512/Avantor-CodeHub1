@@ -132,6 +132,9 @@
     </options>
     <options type="jira">
       <opt name="useJira" value="false"/>
+      <opt name="jiraIssueTypes" value="[object Object]"/>
+      <opt name="jiraFailure" value="[object Object]"/>
+      <opt name="jiraSuccess" value="[object Object]"/>
     </options>
     <options type="lr">
       <opt name="saveCompleteLrOutputLog" value="false"/>
@@ -155,7 +158,7 @@
     </controller>
     <testcase name="Negative Sceario" importance="normal">
       <test>
-        <run name="Untitled1" langtype="bulkds3" resource="Estorefront/E-Storefront Regression/TestScripts/Negative Scenarios/" method="ds" testclass="Chrome" regex="p1*.ds">
+        <run name="Untitled1" langtype="bulkds3" resource="Estorefront/E-Storefront Regression/TestScripts/Negative Scenarios/" method="ds" testclass="Chrome" regex="p3*.ds">
           <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
         </run>
       </test>

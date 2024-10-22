@@ -54,7 +54,8 @@
 </step>
 <step action='assertExists' value='' type='web' desc='Verify Output type' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//label[text()=&quot; Output Type  -&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&apos;//label[text()=&quot; Output Type  - &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&apos;//label[text()=&quot; Output Type  -&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

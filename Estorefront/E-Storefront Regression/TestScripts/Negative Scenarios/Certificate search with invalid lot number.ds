@@ -37,4 +37,14 @@
    <accessor type='Parent' value='textbox(6, _in(div(&quot;ProductDetail&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='heading2([&quot;Please try again. We couldn&apos;t find &quot;])' fallback='true' selected='true'/>
+   <accessor type='Parent' value='heading2(0, _in(div({&apos;id&apos;:&apos;ProductDetail&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;ProductDetail&apos;]/div[2]/app-certificate-search/div/div/div[2]/h2&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[4]/app-avtr-tab-container/div/div[2]/app-certificate-search/div/div/div[2]/h2&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;ProductDetail&apos;)/div[@class=&apos;generic-tab active&apos;]/app-certificate-search[1]/div[@class=&apos;container-fluid&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-sm-7 col-12 flex-column&apos;]/h2[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='heading2(0, _in(div(&quot;ProductDetail&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

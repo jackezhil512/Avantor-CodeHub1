@@ -99,7 +99,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
@@ -122,6 +122,16 @@
 <step action='setValue' value='$VwrBatchExpiryProduct' type='web' desc='enter catalog number' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='textbox(/mat-input-.*/,_below(div(&quot;Enter Catalog Number[1]&quot;)))' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='click on search' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='strong(&quot;SEARCH&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 <step action='click' value='""' type='web' desc='click on search' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

@@ -197,7 +197,7 @@ function QuickSearchwith_invalid_Searchkeyword(input){
    setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
    click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
    assertNotExists(fallback(`heading2(0, _in(section({'aria-label':'Product Results List'})))`)); 
-   
+   assertExists(fallback(`label("Search Again:")`));
 }
 
 function SupplierNameLeftNavigationFilterSearch(input){

@@ -43,40 +43,6 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='select Assign stockroom check box' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//h2[text()=&apos; Assign Stockroom &apos;]/following::input[@type=&apos;checkbox&apos;][2]&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='Select group' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;Select Group&quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='span(&quot;Select Group[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='Select User' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; USER &quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='span(&quot;USER&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='Click Group user Button' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Assign Stockroom &amp; Group to User &quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='span(&quot;Assign Stockroom &amp; Group to User&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='Verify Success Message' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Successfully updated user account settings &quot;]&apos;).xy(0.48, 0.46 )' fallback='true' selected='true'/>
-   <accessor type='unknown' value='div([&quot;Successfully updated user account s&quot;]).xy(0.48, 0.46 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='150' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
 <step action='include' value='' type='web' desc='Navigate Usermaintenance' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='"REPOSITORY/IMCM-Repo/IMCM/ReUsable Functions/Re Useable Function Library/NavigateToUserMaintenance.ds"' fallback='true' selected='true'/>

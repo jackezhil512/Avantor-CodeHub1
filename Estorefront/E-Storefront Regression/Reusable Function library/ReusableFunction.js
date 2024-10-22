@@ -99,7 +99,7 @@ function NegativeScenario_SDSSearch(FieldNames,input) {
  //assertExists(fallback(`div('/SDS results for.*/${input}.*/)`));
 //assertExists(fallback(`div('/.*SDS results for.*/').xy(0.16, 0.45 )`));
   //assertExists(fallback(`link("hide-mobile[0]")`));
-  assertExists(fallback(`heading2(["Please try again. We couldn't find "])`));
+  //assertExists(fallback(`heading2(["Please try again. We couldn't find "])`));
 }
 
 

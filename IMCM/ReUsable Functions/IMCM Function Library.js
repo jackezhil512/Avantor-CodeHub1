@@ -1051,3 +1051,14 @@ VerifyRecordsSorting("Vendor Name","vendorName");
 setDescription("Close search string");
 click(fallback(`custom("mat-icon", "close[1]")`));
 }
+
+function NavigateToVendorMaintenancePage() {
+    setShadowDOM(true);
+    click(fallback(`submit("Administration expand_more")`));
+    wait(300);
+    click(fallback(`byXPath('//*[text()=" Vendor Maintenance "]').xy(0.19, 0.57 )`));
+    wait(1000);
+    assertExists(fallback(`byXPath('//*[text()="Vendor Maintenance"]')`));
+    wait(300);
+
+}

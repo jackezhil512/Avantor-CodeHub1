@@ -22,7 +22,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='eval(&quot;&apos;Reference Field Name&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='Store Field name ' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='store' value='eval(&quot;&apos;Reference Field Name&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='Store Field name ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='FieldName' fallback='true' selected='true'/>
 </dialect>
@@ -70,6 +70,12 @@
 <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot;//*[text() = &quot;${ReferenceFields}&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 </testcase>

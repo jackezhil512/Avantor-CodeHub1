@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'TC_003 Validate the unread count once user click Mark all as read.ds' description= '' author= 'null' version= ''>
+<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='false'/>
+<shadowDOM useShadowDOM='false'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM_Gopal/IMCM_Function/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='LoginToHome($URL,$Super_User,$Password)' type='web' desc='Log in with Super User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='clickIfFound' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//mat-icon[contains(text(),&apos;close&apos;)])[2]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Enter Admin Console Button' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Enter Admin Console&apos;)]/parent::button&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Organization button' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//button[contains(text(),&apos;Organization&apos;)]/span&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Create news link' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;Create News&apos;)]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='Validate the create news page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos;Create News&apos; and @class=&apos;title&apos;]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos;Create News&apos;]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on create news' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//span[contains(text(),&apos;Create News&apos;) and @class=&apos;px-1&apos;])[1]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on start date' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//strong[text()=&apos;Start Date&apos;]//following::mat-datepicker-toggle[1]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='eval(&quot;new Date().getDate()&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='currentDay' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='currentDay' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='&quot;//tbody[@class=&apos;mat-calendar-body&apos;]//div[text()=&apos; temp &apos;]&quot;.replace(&quot;temp&quot;,currentDay)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='strXPath' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='strXPath' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Slect the date' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(strXPath)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//tbody[@class=&apos;mat-calendar-body&apos;]//div[text()=&apos; {currentDay} &apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='byXPath(&quot;//tbody[@class=&apos;mat-calendar-body&apos;]//div[text()=&apos; 1 &apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='byXPath(&quot;//tbody[@class=&apos;mat-calendar-body&apos;]//div[text()=&apos; 2 &apos;]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Select the Share with field' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//strong[text()=&apos;Share with&apos;]//following::mat-select[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//strong[text()=&apos;Share with&apos;]//following::mat-select[1&quot;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='byXPath(&quot;//strong[text()=&apos;Share with&apos;]//following::mat-select[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//mat-pseudo-checkbox//following::span[contains(text(),&apos;All&apos;)]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//mat-pseudo-checkbox//following::span[contains(text(),&apos;All&apos;)]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//strong[text()=&apos;Share with&apos;]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//strong[text()=&apos;Share with&apos;]//following::mat-select[1&quot;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='byXPath(&quot;//strong[text()=&apos;Share with&apos;]//following::mat-select[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='store' value='eval(&quot;&apos;AutoTitle&apos;+ Math.floor(Math.random()*10000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='strTitle' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='strTitle' type='web' desc='Enter the title' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//strong[contains(text(),&apos;Title&apos;)]//following::input[1]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//div[contains(@data-placeholder,&apos;Insert text here&apos;)]/p&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//div[@data-placeholder=&apos;Insert text here …&apos;]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"Auto Message"' type='web' desc='Enter the body message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//div[contains(@data-placeholder,&apos;Insert text here&apos;)]/p&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//div[@data-placeholder=&apos;Insert text here …&apos;]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Publish&apos;) and @class=&apos;px-1&apos;]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='30000, isVisible(byXPath(&quot;//div[contains(text(),&apos;You have successfully published your news.&apos;)]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;You have successfully published your news.&apos;)]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='strTitle' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//th[contains(@class,&apos;mat-column-search-subject&apos;)]//input&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//tr[contains(@class,&apos;striped-rows&apos;)])[1]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//button[contains(@class,&apos;username-border&apos;)]//mat-icon&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;Out&apos;) and contains(@class,&apos;menu-item-title&apos;)]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='LoginWithoutURL($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Log in with normal user' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='clickIfFound' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//mat-icon[contains(text(),&apos;close&apos;)])[2]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//li[contains(@class,&apos;avantor-message-btn&apos;)]/button&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//li[contains(@class,&apos;avantor-message-btn&apos;)]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos;News &amp; Updates&apos;]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='getText(byXPath(&quot;//span[text()=&apos;News &amp; Updates&apos;]/preceding-sibling::span/span&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='NewsBubbleCount' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='NewsBubbleCount' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//a[contains(text(),&apos;Mark All As Read&apos;)]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='getText(byXPath(&quot;//span[text()=&apos;News &amp; Updates&apos;]/preceding-sibling::span/span&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='NewsBubbleCount1' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='NewsBubbleCount1' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertEqual' value='"0"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='NewsBubbleCount1' fallback='true' selected='true'/>
+</dialect>
+</step>
+</testcase>

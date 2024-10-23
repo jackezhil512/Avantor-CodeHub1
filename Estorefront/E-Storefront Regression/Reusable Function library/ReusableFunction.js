@@ -46,6 +46,23 @@ function AdvanceSearch(Index,input) {
                    
  }
 
+
+
+function NegativeScenario_AdvanceSearch(FieldNames,input) {
+   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
+    setShadowDOM(true);
+  click(fallback(`link("Advanced")`));
+
+     //setValue(fallback(`textbox(${Index}, _in(div("ProductDetail")))`), input);
+  	setValue(fallback(`textbox({'formcontrolname':'${FieldNames}'})`), input);
+    click(fallback(`submit("Search")`));
+ // assertExists(fallback(`heading1("//*You searched for: ${input}")`));
+  assertNotExists(fallback(`heading2(0, _in(section({'aria-label':'Product Results List'})))`));
+  
+                   
+ }
+ 
+
 function LaunchBrowser(url){
   
     setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
@@ -70,6 +87,24 @@ function SDSSearch(Index,input) {
   
 }
 
+function NegativeScenario_SDSSearch(FieldNames,input) {
+   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
+    setShadowDOM(true);
+  click(fallback(`link("Advanced")`));
+  click(fallback(`submit("SDS Search")`));
+  //setValue(fallback(`textbox(${Index}, _in(div("ProductDetail")))`), input);
+   setValue(fallback(`textbox({'formcontrolname':'${FieldNames}'})`), input);
+  click(fallback(`submit("Search")`));
+  wait(3000);
+ //assertExists(fallback(`div('/SDS results for.*/${input}.*/)`));
+//assertExists(fallback(`div('/.*SDS results for.*/').xy(0.16, 0.45 )`));
+  //assertExists(fallback(`link("hide-mobile[0]")`));
+  //assertExists(fallback(`heading2(["Please try again. We couldn't find "])`));
+  assertExists(fallback(`heading3("No matches were found.")`));
+}
+
+
+
 function CertificateSearch(Index,input){
 
    setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
@@ -80,6 +115,20 @@ function CertificateSearch(Index,input){
    click(fallback(`submit("Search")`));
    wait(3000);
    assertExists(fallback(`span("hide-mobile[0]")`));
+}
+
+function NegativeSceanrio_CertificateSearch(FieldNames,input){
+
+   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
+   setShadowDOM(true);
+   click(fallback(`link("Advanced")`));
+   click(fallback(`submit("Certificate Search")`));
+   //setValue(fallback(`textbox(${Index}, _in(div("ProductDetail")))`), input);  
+   setValue(fallback(`textbox({'formcontrolname':'${FieldNames}'})`), input);
+   click(fallback(`submit("Search")`));
+   wait(3000);
+   //assertNotExists(fallback(`span("hide-mobile[0]")`));
+   assertExists(fallback(`heading2(["Please try again. We couldn't find "])`));
 }
 
 function ManufacturerSearch(Index0,input0,Index1,input1,Index2,input2){
@@ -139,6 +188,26 @@ function QuickSearchNavigateToHomePage(input){
    assertExists(fallback(`heading2(0, _in(section({'aria-label':'Product Results List'})))`)); 
    click(fallback(`image(0, _in(header("cx-header"))).xy(0.64, 0.58 )`)),
    assertExists(fallback(`link("Learn more")`));
+}
+
+//function of nagetive scenarios for quick serach with keyword
+function QuickSearchwith_invalid_Searchkeyword(input){
+   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
+   setShadowDOM(true);
+   setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
+   click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
+   assertNotExists(fallback(`heading2(0, _in(section({'aria-label':'Product Results List'})))`)); 
+   assertExists(fallback(`label("Search Again:")`));
+}
+
+//function of nagetive scenarios for quick serach with no kwyword
+function QuickSearchwith_No_Searchkeyword(input){
+   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
+   setShadowDOM(true);
+   setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
+   click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
+   assertNotExists(fallback(`heading2(0, _in(section({'aria-label':'Product Results List'})))`)); 
+   assertNotExists(fallback(`label("Search Again:")`));
 }
 
 function SupplierNameLeftNavigationFilterSearch(input){
@@ -446,7 +515,7 @@ setShadowDOM(true);
   
 }
 
-
+//adding customcatlogproduct to cart page
 function CustomCatlogAddProductToCart(){
  setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
 setShadowDOM(true);

@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'verify Invoice link in Invoice Results page.ds' description= '' author= 'appvance' version= ''>
+<dpl filename='REPOSITORY/Estorefront/E-Storefront Regression/Test Data/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$InvoiceUser,$InvoicePwd);' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='VerifyInvoiceResultsSearchByInvoice($InvoiceNumber);' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-search-results-item/div/div/div/div/a&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='link(&quot;cx-link[2]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-invoice-search-results/app-invoice-search-results-item/div[1]/div/div[1]/div/a&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-invoice-search-results[1]/app-invoice-search-results-item[1]/div[@class=&apos;col-12 col-md-12 pt-2 pb-2 border-bottom invoice-result-items-desktop&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-md-2 col-lg-2 col-xl-2 d-flex invoice-results-invoice-num text-break text-center pl-0&apos;]/div[1]/a[@class=&apos;cx-link&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='link(&quot;8655072405&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;8655072405&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Image' value='byImg(imgSection(readImg(&apos;{resources}/img-9242908.png&apos;),{x:0,y:0,w:1,h:1,cx:0.50,cy:0.50}))' coords='{x:0,y:0,w:1,h:1,cx:0.50,cy:0.50}' imgPath='img-9242908.png' fallback='false' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='link(&quot;8655072405&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-invoice-search-results/app-invoice-search-results-item/div[1]/div/div[1]/div/a&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-invoice-search-results[1]/app-invoice-search-results-item[1]/div[@class=&apos;col-12 col-md-12 pt-2 pb-2 border-bottom invoice-result-items-desktop&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-md-2 col-lg-2 col-xl-2 d-flex invoice-results-invoice-num text-break text-center pl-0&apos;]/div[1]/a[@class=&apos;cx-link&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;8655072405&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Image' value='byImg(imgSection(readImg(&apos;{resources}/img-6326477.png&apos;),{x:0,y:0,w:1,h:1,cx:0.50,cy:0.50}))' coords='{x:0,y:0,w:1,h:1,cx:0.50,cy:0.50}' imgPath='img-6326477.png' fallback='false' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-search-results-item/div/div/div/div/a&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='link(&quot;cx-link[2]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='navigateTo' value='blob:https://p2.avantorsciences.com/0d4644f7-a095-4f0a-8249-f8503f6f6282' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='custom(&quot;cx-page-layout&quot;, &quot;header&quot;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='custom(&quot;cx-page-layout&quot;, &quot;header&quot;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='custom(&quot;cx-page-layout&quot;, 0, _in(header(&quot;cx-header&quot;)))' fallback='true' selected='false'/>
+   <accessor type='Parent' value='custom(&quot;cx-page-layout&quot;, 0, _in(header({&apos;id&apos;:&apos;cx-header&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;header&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#cx-header &gt; .header&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;cx-storefront[class=&quot;AccountPageTemplate stop-navigating&quot;] &gt; header[class=&quot;mouse-focus stickyHeader&quot;] &gt; cx-page-layout[class=&quot;header&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='custom(&quot;cx-page-layout&quot;, {&apos;section&apos;:&apos;header&apos;})' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

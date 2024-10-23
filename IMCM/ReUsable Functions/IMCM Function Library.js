@@ -107,9 +107,9 @@ wait(1000);
 
 function SearchField(SearchEditField,SearchValue){
 setValue(fallback(`textbox(/mat-input.*/,_below(span("${SearchEditField}")))`),SearchValue);
-wait(100);
+wait(1000);
 assertExists(fallback(`cell("${SearchValue}")`));
-wait(100);
+wait(1000);
 click(fallback(`custom("mat-icon", "close[1]")`));
 wait(1000);
 }
@@ -143,9 +143,7 @@ setDescription("Verfy for NORecords Found");
 assertExists(fallback(`heading3("No Records Found")`));
 
 }else if(PageName === "DepartmentMaintenance"){
-
-}else if(PageName === "LocationMaintenance"){
-setDescription("NavigateToLocationMaintenance");
+  setDescription("NavigateToProductMaintenancePage");
 NavigateToLocationMaintanance();
 setDescription("Search for Location Name");
 SearchField("Location Name","ZAutomation"); 
@@ -168,6 +166,22 @@ click(fallback(`div("30").xy(0.57, 0.78 )`));
 setDescription("Verfy No Records Found");
 assertExists(fallback(`heading3("No Records Found")`));
 
+}else if(PageName === "ProductMaintenancePage"){
+
+NavigateToProductMaintenancePage();
+setDescription("Search for catalog");
+SearchField("Catalog #","Automation748"); 
+ setDescription("Search for description");
+SearchField("Description","VWR COUNTER MT PIP ASSY 36H 8D");  
+  wait(200);
+setDescription("Search for Vendor");
+SearchField("Vendor","VWR");
+  wait(200);
+setDescription("Search for Location");
+SearchField("Location","Automation");
+  wait(200);
+setDescription("Search for Location");
+SearchField("Available Quantity","0");
 }else{
   
 }

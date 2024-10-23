@@ -1,15 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testcase   name= 'TC08 To verify KPI Filter working in dashboard.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
+<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"{ds}/IMCM Login.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"{ds}/IMCM Function Library.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository/Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login to IMCM as Normal User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -19,7 +20,8 @@
 </step>
 <step action='click' value='' type='web' desc='Click on out of stock button' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//button[@id=&apos;dashboard_out_of_stock_click&apos;]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos;Out of Stock&apos;]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//button[@id=&apos;dashboard_out_of_stock_click&apos;]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='Click on Table view' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -96,9 +98,9 @@
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='Click on running low' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//button[@id=&apos;dashboard_running_low_click&apos;]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos;Running Low &apos;]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='Click on Table view' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

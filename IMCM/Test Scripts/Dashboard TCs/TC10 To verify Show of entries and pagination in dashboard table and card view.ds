@@ -1,15 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testcase   name= 'TC10 To verify Show of entries and pagination in dashboard table and card view.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
+<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"{ds}/IMCM Login.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"{ds}/IMCM Function Library.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository/Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login to IMCM as Normal User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -66,8 +67,7 @@
 </step>
 <step action='assertEqual' value='25' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='TotalValueInListView ' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='TotalValueInListView' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='assertExists' value='""' type='web' desc='Validate the pagination icon' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

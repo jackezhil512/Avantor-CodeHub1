@@ -1,14 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'TC02 To perform Replenish Stock in Dashboard action list and then check save receipt and Article Activity Log.ds' description= '' author= 'null' version= ''>
-<dpl filename='REPOSITORY/IMCM-Master-Repository/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
+<testcase   name= 'Verify the delete news functionality in  ellipses menu.ds.ds' description= '' author= 'null' version= ''>
+<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"REPOSITORY/IMCM-Master-Repository/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"{ds}/IMCM Login.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM_WEB/Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../IMCM_WEB/Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"{ds}/IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"REPOSITORY/IMCM_Master_Repo/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
@@ -17,93 +19,35 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='clickIfFound' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='Click &quot;All&quot; list box' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;(//mat-icon[contains(text(),&apos;close&apos;)])[2]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;All&quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='AddProductsToList([$NORMAL_PRODUCT,$UOM_PRODUCT,$BATCHANDEXPIRY_PRODUCT, $BATCHALONE_PRODUCT, $EXPIRYALONE_PRODUCT,$UOMBATCHANDEXPIRYWITHDYNAMIC_PRODUCT])' type='web' desc='Add Products to Action List' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='Select orders from drop down' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
+   <accessor type='unknown' value='span(&quot;Orders&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='span(&quot;Products&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='Click Action List' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='Click in search box ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;list&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='textbox(&quot;mat-input-2&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='click Select Action' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='Select ORDERS' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;keyboard_arrow_down &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='label(&quot;ORDERS&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='Select Replenish Stock' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Verify if navigated to orders tab' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='span(&quot;Replenish Stock&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='div(&quot;Order Number&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='wait time added for the products to load on the screen' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Verify if Orders are displayed' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setValue' value='"1"' type='web' desc='Enter quantity as 1 for UOMBATCHANDEXPIRYWITHDYNAMIC_PRODUCT' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='numberbox(&quot;quantityInput value&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='setValue' value='"1"' type='web' desc='Enter quantity as 1 for EXPIRYALONE_PRODUCT' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='numberbox(&quot;quantityInput value[1]&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='setValue' value='"1"' type='web' desc='Enter quantity as 1 for BATCHALONE_PRODUCT' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='numberbox(&quot;quantityInput value[2]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='numberbox(&quot;quantityInput value[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='setValue' value='"1"' type='web' desc='Enter quantity as 1 for BATCHANDEXPIRY_PRODUCT' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='numberbox(&quot;quantityInput value[3]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='numberbox(&quot;quantityInput value[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='setValue' value='"1"' type='web' desc='Enter quantity as 1 for UOM_PRODUCT' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='numberbox(&quot;quantityInput value[4]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='numberbox(&quot;quantityInput value[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='setValue' value='"1"' type='web' desc='Enter quantity as 1 for NORMAL_PRODUCT' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='numberbox(&quot;quantityInput value[5]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='numberbox(&quot;quantityInput value[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='Click Skip Adding' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='span(&quot;Skip Adding&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='Click Checkout' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='span(&quot;Checkout&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='replenished successfully' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='div([&quot;Stock Replenished Successfully! You&quot;])' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='setOperation(&quot;Stock Replenished&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ValidateStockroomActivity([$NORMAL_PRODUCT,$UOM_PRODUCT,$BATCHANDEXPIRY_PRODUCT, $BATCHALONE_PRODUCT, $EXPIRYALONE_PRODUCT,$UOMBATCHANDEXPIRYWITHDYNAMIC_PRODUCT])' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
+   <accessor type='unknown' value='link(/IMSTAGE.*/)' fallback='true' selected='true'/>
 </dialect>
 </step>
 </testcase>

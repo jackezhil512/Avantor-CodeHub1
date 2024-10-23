@@ -90,30 +90,20 @@
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-share-shopping-cart/div/div[2]/div[2]/button&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='textbox(&quot;form-control ng-invalid ng-pristine ng-touched&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-share-shopping-cart/div/form/div/div[2]/div/div[1]/label/input&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;form-control ng-pristine ng-invalid ng-touched&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-share-shopping-cart/div/form/div/div[2]/div/div/label/input&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-share-shopping-cart[1]/div[@class=&apos;container share-cart-container&apos;]/form[@class=&apos;ng-pristine ng-invalid ng-touched&apos;]/div[@class=&apos;d-flex flex-sm-row flex-column&apos;]/div[@class=&apos;col-12 col-md-6 px-0&apos;]/div[@class=&apos;mt-3&apos;]/div[@class=&apos;form-group&apos;]/label[1]/input[@class=&apos;form-control ng-pristine ng-invalid ng-touched&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='textbox({&apos;formcontrolname&apos;:&apos;emails&apos;})' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;input[class=&quot;form-control ng-pristine ng-invalid ng-touched&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.form-control.ng-pristine.ng-invalid.ng-touched&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='AttrClass' value='submit(&quot;btn btn-block btn-primary font-bold&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='submit(&quot;Accept all cookies&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/footer/cx-page-layout/cx-page-slot/app-consent-banner/div/div[2]/div/div[1]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary btn-block font-bold&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Accept all cookies &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/footer/cx-page-layout/cx-page-slot/app-consent-banner/div/div[2]/div/div/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/footer[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;footer&apos;]/cx-page-slot[@class=&apos;Footer has-components&apos;]/app-consent-banner[1]/div[@class=&apos;consent-banner&apos;]/div[@class=&apos;cookie-content&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-md-5 col-lg-4 col-xs-12 consent-margin mt-3&apos;]/button[@class=&apos;btn btn-primary btn-block font-bold&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='submit({&apos;type&apos;:&apos;submit&apos;})' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;consent-banner&quot;] &gt; div[class=&quot;cookie-content&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col-md-5 col-lg-4 col-xs-12 consent-margin mt-3&quot;] &gt; button[class=&quot;btn btn-primary btn-block font-bold&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.consent-banner &gt; .cookie-content &gt; .row &gt; .col-md-5.col-lg-4.col-xs-12.consent-margin.mt-3 &gt; .btn.btn-primary.btn-block.font-bold&apos;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='label(&quot;Your Name*&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-share-shopping-cart/div/form/div/div[1]/div/div/label&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-share-shopping-cart/div/form/div/div/div/div/label&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-share-shopping-cart[1]/div[@class=&apos;container share-cart-container&apos;]/form[@class=&apos;ng-touched ng-pristine ng-invalid&apos;]/div[@class=&apos;d-flex flex-sm-row flex-column&apos;]/div[@class=&apos;col-12 col-md-6 px-0&apos;]/div[@class=&apos;mt-3&apos;]/div[@class=&apos;form-group&apos;]/label[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='label(&quot;Your Name*&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-share-shopping-cart/div/form/div/div[1]/div/div/label&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-share-shopping-cart/div/form/div/div/div/div/label&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-share-shopping-cart[1]/div[@class=&apos;container share-cart-container&apos;]/form[@class=&apos;ng-touched ng-pristine ng-invalid&apos;]/div[@class=&apos;d-flex flex-sm-row flex-column&apos;]/div[@class=&apos;col-12 col-md-6 px-0&apos;]/div[@class=&apos;mt-3&apos;]/div[@class=&apos;form-group&apos;]/label[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

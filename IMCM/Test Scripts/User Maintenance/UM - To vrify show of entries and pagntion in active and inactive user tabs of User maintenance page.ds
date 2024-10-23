@@ -43,61 +43,6 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='Click on Three dot' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//table/tbody//tr[1]/td[last()]/button&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='Click on Edit' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//div[@class=&apos;cdk-overlay-container&apos;]//button/font[contains(text(),&apos;Edit&apos;)]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='//div[@class=&quot;cdk-overlay-container&quot;]//button/font[contains(text(),&apos;Edit&apos;)]' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='Click Inactive' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='div(&quot;Inactive[5]&quot;).xy(0.35, 0.63 )' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='Click on Active' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Active &quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='span(&quot;Active&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='Click on Stockroom tab' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='span(&quot;Stockroom  Back to top&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='100' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='span(&quot;Assign Stockroom and Groups&quot;)' fallback='true' selected='true'/>
-   <accessor type='Parent' value='span(6, _in(div({&apos;id&apos;:&apos;cdk-accordion-child-2&apos;})))' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='span(&quot;mat-button-wrapper[11]&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-accordion-child-2&apos;]/div/section/section/div/div[3]/button/span[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Assign Stockroom and Groups &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-view-user/main/app-avantor-user-settings/main/div[2]/div/form/mat-accordion/mat-expansion-panel[3]/div/div/section/section/div/div[3]/button/span&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-accordion-child-2&apos;)/div[@class=&apos;mat-expansion-panel-body ng-tns-c226-144&apos;]/section[@class=&apos;pt-4 ng-star-inserted&apos;]/section[@class=&apos;d-flex justify-content-end pb-2 ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col mb-1&apos;]/button[@class=&apos;mat-focus-indicator lg-button m-sm-100 mat-stroked-button mat-button-base mat-primary ng-star-inserted&apos;]/span[@class=&apos;mat-button-wrapper&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;section[class=&quot;d-flex justify-content-end pb-2 ng-star-inserted&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col mb-1&quot;] &gt; button[class=&quot;mat-focus-indicator lg-button m-sm-100 mat-stroked-button mat-button-base mat-primary ng-star-inserted&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='Parent' value='span(6, _in(div(&quot;cdk-accordion-child-2&quot;)))' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='Click on Assign stockroom group Button' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Assign Stockroom and Groups&apos;)]&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
 <step action='click' value='' type='web' desc='select Assign stockroom check box' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//h2[text()=&apos; Assign Stockroom &apos;]/following::input[@type=&apos;checkbox&apos;][2]&quot;)' fallback='true' selected='true'/>

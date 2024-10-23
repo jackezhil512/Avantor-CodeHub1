@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'AddProductToCartFromQuickSearchResults.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/Estorefront/E-Storefront Regression/Test Data/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='search($Product)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Share Shopping Cart&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-cart-details/div[2]/div/div[3]/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cart-shopping-list-icon share-cart-link&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Share Shopping Cart&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/div[2]/div/div[3]/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;CartPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;TopContent has-components&apos;]/app-avtr-cart-details[1]/div[@class=&apos;d-flex mt-2 cart-header-wrapper&apos;]/div[@class=&apos;cart-header-options pl-3&apos;]/div[@class=&apos;cursor-pointer mb-2&apos;]/span[@class=&apos;cart-shopping-list-icon share-cart-link&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;d-flex mt-2 cart-header-wrapper&quot;] &gt; div[class=&quot;cart-header-options pl-3&quot;] &gt; div[class=&quot;cursor-pointer mb-2&quot;] &gt; span[class=&quot;cart-shopping-list-icon share-cart-link&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.d-flex.mt-2.cart-header-wrapper &gt; .cart-header-options.pl-3 &gt; .cursor-pointer.mb-2 &gt; .cart-shopping-list-icon.share-cart-link&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;cart-shopping-list-icon share-cart-link&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Share Shopping Cart&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-cart-details/div[2]/div/div[3]/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cart-shopping-list-icon share-cart-link&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Share Shopping Cart&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/div[2]/div/div[3]/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;CartPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;TopContent has-components&apos;]/app-avtr-cart-details[1]/div[@class=&apos;d-flex mt-2 cart-header-wrapper&apos;]/div[@class=&apos;cart-header-options pl-3&apos;]/div[@class=&apos;cursor-pointer mb-2&apos;]/span[@class=&apos;cart-shopping-list-icon share-cart-link&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;d-flex mt-2 cart-header-wrapper&quot;] &gt; div[class=&quot;cart-header-options pl-3&quot;] &gt; div[class=&quot;cursor-pointer mb-2&quot;] &gt; span[class=&quot;cart-shopping-list-icon share-cart-link&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.d-flex.mt-2.cart-header-wrapper &gt; .cart-header-options.pl-3 &gt; .cursor-pointer.mb-2 &gt; .cart-shopping-list-icon.share-cart-link&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;cart-shopping-list-icon share-cart-link&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div(&quot;Share Shopping Cart&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-share-shopping-cart/div/div[1]/div[1]&apos;).xy(0.00, 0.50 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;share-cart-title my-2&quot;]&apos;).xy(0.00, 0.50 )' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Share Shopping Cart &quot;]&apos;).xy(0.00, 0.50 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-share-shopping-cart/div/div/div&apos;).xy(0.00, 0.50 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-share-shopping-cart[1]/div[@class=&apos;container share-cart-container&apos;]/div[1]/div[@class=&apos;share-cart-title my-2&apos;]&quot;).xy(0.00, 0.50 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;share-cart-title my-2&quot;]&apos;).xy(0.00, 0.50 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.share-cart-title.my-2&apos;).xy(0.00, 0.50 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;my-2 share-cart-title&quot;).xy(0.00, 0.50 )' fallback='true' selected='false'/>
+   <accessor type='Text' value='div(&quot;Share Shopping Cart&quot;).xy(0.00, 0.50 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Attribute' value='textbox({&apos;formcontrolname&apos;:&apos;name&apos;})' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-share-shopping-cart/div/form/div/div[1]/div/div/label/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;form-control ng-untouched ng-valid ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-share-shopping-cart/div/form/div/div/div/div/label/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-share-shopping-cart[1]/div[@class=&apos;container share-cart-container&apos;]/form[@class=&apos;ng-untouched ng-invalid ng-dirty&apos;]/div[@class=&apos;d-flex flex-sm-row flex-column&apos;]/div[@class=&apos;col-12 col-md-6 px-0&apos;]/div[@class=&apos;mt-3&apos;]/div[@class=&apos;form-group&apos;]/label[1]/input[@class=&apos;form-control ng-untouched ng-valid ng-dirty&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;input[class=&quot;form-control ng-untouched ng-valid ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.form-control.ng-untouched.ng-valid.ng-dirty&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='textbox(&quot;form-control ng-dirty ng-untouched ng-valid&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='paragraph(&quot;Name is required&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-share-shopping-cart/div/form/div/div[1]/div/div/label/cx-form-errors/p&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Name is required &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-share-shopping-cart/div/form/div/div/div/div/label/cx-form-errors/p&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-share-shopping-cart[1]/div[@class=&apos;container share-cart-container&apos;]/form[@class=&apos;ng-invalid ng-dirty ng-touched&apos;]/div[@class=&apos;d-flex flex-sm-row flex-column&apos;]/div[@class=&apos;col-12 col-md-6 px-0&apos;]/div[@class=&apos;mt-3&apos;]/div[@class=&apos;form-group&apos;]/label[1]/cx-form-errors[@class=&apos;control-invalid control-dirty control-touched&apos;]/p[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

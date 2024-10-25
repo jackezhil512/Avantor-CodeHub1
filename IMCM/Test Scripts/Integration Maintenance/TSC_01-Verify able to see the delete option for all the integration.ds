@@ -1,105 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testcase   name= 'TSC_01-Verify able to see the delete option for all the integration.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
+<dpl filename='' exectype='runstepbystep' errorhandling='' type='HashDPL' locale=''/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='navigateTo' value='"https://im-stage3.avantorsciences.com/"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; ADD NEW INTEGRATION &quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='Click on all stockrooms' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; All Stockrooms &quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='link(&quot;All Stockrooms&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='Verify Vendor' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//label[text()=&quot; Vendor &quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='Verify Output type' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//label[text()=&quot; Output Type  -  &quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;(//label[text()=&quot; Output Type  -  &quot;]/following :: span)[1]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='Verify Stock room' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//h5[text()=&quot; Stockrooms &quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;text-primary&apos;)])[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='Val1' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='Val1' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='Val1' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='500' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;text-primary&apos;)])[2]&quot;))' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='Val2' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='Val2' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='Val1' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='VerifyRecordsSortingasscendingOrder()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 </testcase>

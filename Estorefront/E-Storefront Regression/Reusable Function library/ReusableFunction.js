@@ -717,9 +717,11 @@ function NegativeSceanrio_withoutQtyAdditem_in_newshoppinglist_pdp(){
   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
    setShadowDOM(true);
   
-  //click(fallback(`button("+")`));
-  click(fallback(`span("icon-angle")`));
-  click(fallback(`link("Add to Shopping List")`));
+  click(fallback(`link("icon-angle[2]")`));
+  //click(fallback(`span("icon-angle")`));
+  //click(fallback(`link("Add to Shopping List")`));
+  click(fallback(`link("Add to Shopping List[3]")`));
+  assertExists(fallback(`byXPath('//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[5]/app-avtr-product-variant-details/app-avtr-product-variant-table/section[2]/ul/li[2]/div[3]/div[8]/div[1]/div[2]/app-shared-add-to-cart/form/div[1]/cx-form-errors/p')`));
 }
 
 function LeftNavigationInvoice(){

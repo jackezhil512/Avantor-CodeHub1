@@ -98,11 +98,10 @@ wait(100);
 function NavigateToIntegrationmaintenance(){
 setShadowDOM(true);
 wait(1000);
-click(fallback(`//button[contains(text(),"Administration")]`));
-wait(2000);
-click(fallback(`//button[contains(text(),"Integration Maintenance")]`));
-wait(2000);
-assertExists(fallback(`//span[text()="Integration Maintenance"]`));
+click(fallback(`byXPath("//button[contains(text(),'Administration')]")`));
+click(fallback(`byXPath("//div[contains(text(),'Integration Maintenance')]")`));
+assertExists(fallback(`byXPath("//span[text(),'Integration Maintenance']")`));
+
 }
 
 

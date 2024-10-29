@@ -294,7 +294,7 @@
 </step>
 <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//span[text(),&apos;Integration Maintenance&apos;]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Integration Maintenance&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
 </testcase>

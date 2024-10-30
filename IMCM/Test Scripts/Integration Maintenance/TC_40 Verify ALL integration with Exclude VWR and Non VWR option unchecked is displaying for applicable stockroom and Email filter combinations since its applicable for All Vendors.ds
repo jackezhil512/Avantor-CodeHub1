@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'TC_40 Verify ALL integration with Exclude VWR and Non VWR option unchecked is displaying for applicable stockroom and Email filter combinations since its applicable for All Vendors.ds' description= '' author= 'null' version= ''>
-<dpl filename='REPOSITORY/IMCM-AvantorCodeHub-Repo/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
+<testcase   name= 'TC_34 Verify all the stockrooms and vendors in organisation should be displayed eventhough the user has access only to limited stockrooms (1).ds' description= '' author= 'null' version= ''>
+<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -11,41 +11,35 @@
    <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='Login($URL,$IntegrationUSer,$Password,$IntegrationOrg,$IntegrationStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='Navigate to Integration Maintennace Page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;all&apos;,&apos;All Stockrooms&apos;,&apos;All Emails&apos;)' type='web' desc='Select Vendor ALL from the select vendor drop down' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='click on update results' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Update Results&apos;)]&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;mat-column-excludeVWR&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;mat-column-excludeNonVWRVendor&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]&quot;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='verify exclude Non-VWR is disabled' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='To get No of stockrooms per page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;mat-column-excludeNonVWRVendor&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;mat-column-excludeNonVWRVendor&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]&quot;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='StockroomCount' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertGreaterThan' value='3' type='web' desc='Stockroom only access 3 but it should show all the stockrooms tied to user' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='StockroomCount' fallback='true' selected='true'/>
+   <accessor type='unknown' value='strData' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

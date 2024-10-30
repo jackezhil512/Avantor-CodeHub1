@@ -1,14 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'TC_01 To verify the stockroom column ALL Stockroom have hyperlink.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
+<testcase   name= 'UM - To verify sort working in all three tabs of user maintenance.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/IMCM-Repo/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Repo/IMCM/ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -21,25 +20,13 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; ADD NEW INTEGRATION &quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='Click on all stockrooms' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; All Stockrooms &quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='link(&quot;All Stockrooms&quot;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/Re Useable Function Library/NavigateToUserMaintenance.ds"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/AssigninguserfromMultiplePages.ds"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/NavigateToUserMaintenance.ds"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/NavigateToDepartmaintenance.ds"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM-Repo/IMCM/ReUsable Functions/Re Useable Function Library/NavigateToUserMaintenance.ds"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -47,27 +34,17 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='Verify Vendor' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//label[text()=&quot; Vendor &quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='Verify Output type' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//label[text()=&quot; Output Type  -  &quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='Verify Stock room' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//h5[text()=&quot; Stockrooms &quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='VerifyRecordsSorting(&quot;Name&quot;,&quot;firstName&quot;)' type='web' desc='sorting first name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='VerifyRecordsSorting(&quot;111Automation&quot;,&quot;Automation&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='VerifyRecordsSorting(&quot;Login ID&quot;,&quot;loginId&quot;)' type='web' desc='sorting Id' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='VerifyRecordsSorting(&quot;User ID&quot;,&quot;vwrUserId&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

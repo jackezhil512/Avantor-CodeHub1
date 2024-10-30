@@ -30,6 +30,7 @@
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;(//div[text()=&apos; Vendor &apos;]/following::mat-select)[1]&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='byXPath(&quot;(//div[text()=&apos; Vendor &apos;]/following::mat-select)[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='byXPath(&quot;(//div[text()=&apos;  Stockroom &apos;]/following::mat-select)[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -49,11 +50,17 @@
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;(//div[text()=&apos;  Stockroom &apos;]/following::mat-select)[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;(//div[text()=&apos;  Stockrooms &apos;]/following::mat-select)[1]&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='byXPath(&quot;(//div[text()=&apos; Vendor &apos;]/following::mat-select)[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='byXPath(&quot;(//div[text()=&apos;  Stockroom &apos;]/following::mat-select)[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='VendorCount' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

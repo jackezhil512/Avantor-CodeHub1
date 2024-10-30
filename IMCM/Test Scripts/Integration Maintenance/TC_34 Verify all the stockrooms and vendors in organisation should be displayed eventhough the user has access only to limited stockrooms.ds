@@ -28,26 +28,26 @@
 </step>
 <step action='store' value='getText(byXPath(&quot;//td[contains(@class,&apos;mat-column-vendorData&apos;)]//span&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='strData' fallback='true' selected='true'/>
+   <accessor type='unknown' value='StockroomCount' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='click on update results' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='click on update results' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Update Results&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;mat-column-excludeVWR&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;mat-column-excludeNonVWRVendor&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='verify exclude Non-VWR is disabled' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='verify exclude Non-VWR is disabled' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;mat-column-excludeNonVWRVendor&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;mat-column-excludeNonVWRVendor&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]&quot;)' fallback='true' selected='false'/>

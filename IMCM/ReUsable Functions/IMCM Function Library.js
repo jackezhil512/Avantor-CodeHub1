@@ -236,7 +236,7 @@ function AddLocation(LocationName){
   assertExists(fallback(`byXPath('//*[text()=" Successfully created location "]').xy(0.11, 0.54 )`));
   wait(5000);
 }
-function VerifyRecordsSortingasscendingOrder()
+function VerifyRecordsSortingasscendingOrder(){
   wait(500);
   var Val1=getText(byXPath("(//td[contains(@class,'text-primary')])[1]"));
   log(Val1);
@@ -248,7 +248,7 @@ function VerifyRecordsSortingasscendingOrder()
       }else{
           log("records are not sorted in ascending order");
       }
-
+}
 
 function VerifyRecordsSorting(elementToBeCompared,elementName){
 

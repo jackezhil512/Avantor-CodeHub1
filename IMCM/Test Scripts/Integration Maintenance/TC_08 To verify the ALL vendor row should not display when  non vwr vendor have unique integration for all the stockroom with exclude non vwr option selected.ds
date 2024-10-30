@@ -55,6 +55,21 @@
    <accessor type='unknown' value='strRows' fallback='true' selected='true'/>
 </dialect>
 </step>
+<step action='store' value='eval(&quot;ds$(tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='strRows1' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;(//img[contains(@src,&apos;ellipsis-icon.svg&apos;)]/ancestor::button)[1]&quot;)' fallback='true' selected='true'/>

@@ -864,7 +864,7 @@ var tempXPath1 = "(//a[contains(text(),'Temp')]//following::input)[2]".replace("
 setValue(byXPath(tempXPath1),"1");
 }
 
-function NavigateConsumeStock(){
+function navigateConsumeStock(){
 setDescription("Click on Activities");
 click(fallback(`submit("Activities expand_more")`));
 setDescription("Click on Consume Stock");

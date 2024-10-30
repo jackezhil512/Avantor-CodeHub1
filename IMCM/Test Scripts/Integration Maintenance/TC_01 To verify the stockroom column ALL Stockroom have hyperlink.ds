@@ -67,7 +67,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='getText(&quot;byXPath(&quot;(//td[contains(@class,&apos;text-primary&apos;)])[1]&quot;)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;text-primary&apos;)])[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='Val1' fallback='true' selected='true'/>
 </dialect>
@@ -75,6 +75,12 @@
 <step action='log' value='Val1' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='Val1' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='500' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>

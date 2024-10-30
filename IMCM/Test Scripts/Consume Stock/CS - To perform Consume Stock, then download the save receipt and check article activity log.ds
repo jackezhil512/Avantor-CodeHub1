@@ -86,43 +86,43 @@
    <accessor type='unknown' value='byXPath(&apos;//input[@placeholder=&quot;Search cost centers&quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;&quot;+strCostCenter+&quot;&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='div(&quot;Select department[4]&quot;).xy(0.71, 0.61 )' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Add Department &quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='span(&quot;Add Department[2]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='store' value='eval(&quot;&apos;Vwr Labs&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='store' value='eval(&quot;&apos;Vwr Labs&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='strDepartmentName' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='strDepartmentName' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='setValue' value='strDepartmentName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//div[text()=&quot; Department Name &quot;]/following::input[1]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='strDepartmentName' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='setValue' value='strDepartmentName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//input[@data-placeholder=&quot;One-time name&quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Save &quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='span(&quot;Save&quot;)' fallback='true' selected='false'/>

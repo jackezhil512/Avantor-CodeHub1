@@ -51,11 +51,6 @@
    <accessor type='unknown' value='strRows2' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='getText(byXPath(&quot;//td[contains(@class,&apos;mat-column-vendorData&apos;)]//span&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='strData' fallback='true' selected='true'/>
-</dialect>
-</step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='div(&quot;cdk-overlay-backdrop cdk-overlay-backdrop-showing cdk-overlay-transparent-backdrop&quot;).xy(0.36, 0.40 )' fallback='true' selected='true'/>
@@ -79,6 +74,16 @@
    <accessor type='JQuery' value='byJQuery(&apos;mat-select[class=&quot;mat-select drp-ucd ng-tns-c89-54 ng-tns-c49-53 ng-pristine ng-valid ng-star-inserted ng-touched&quot;] &gt; div[class=&quot;mat-select-trigger ng-tns-c89-54&quot;] &gt; div[class=&quot;mat-select-value ng-tns-c89-54&quot;] &gt; span[class=&quot;mat-select-value-text ng-tns-c89-54 ng-star-inserted&quot;] &gt; span[class=&quot;mat-select-min-line ng-tns-c89-54 ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;#mat-select-value-19 &gt; .mat-select-value-text.ng-tns-c89-54.ng-star-inserted &gt; .mat-select-min-line.ng-tns-c89-54.ng-star-inserted&apos;)' fallback='true' selected='false'/>
    <accessor type='Parent' value='span(1, _in(div(&quot;mat-select-value-19&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='store' value='_eval(&quot;ds$(&apos;mat-option&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='VendorCount' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='VendorCount' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 <step action='log' value='strData' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

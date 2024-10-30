@@ -65,19 +65,20 @@
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Text' value='link(&quot;42&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; 42 &quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[9]/td[5]/div/div[2]/div/a&apos;)' fallback='true' selected='false'/>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[9]/td[5]/div/div[2]/div/a&apos;)' fallback='true' selected='false'/>
    <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[9]//td[5]//div//div//div//a[@class=&quot;cursor-pointer&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[9]//td[5]//div//div//div//a[text()=&quot; 42 &quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='AttrClass' value='link(&quot;cursor-pointer[2]&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; 42 &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='link(&quot;42&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; 42 &quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='link(&quot;42&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

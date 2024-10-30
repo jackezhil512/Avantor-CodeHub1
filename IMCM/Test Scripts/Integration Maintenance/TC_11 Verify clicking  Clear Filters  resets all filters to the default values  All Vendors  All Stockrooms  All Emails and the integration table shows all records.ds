@@ -76,22 +76,22 @@
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;All Stockrooms&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Verify all emails exists in dropdown' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;All Emails&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;Automation&apos;,&apos;ActivateDeactivateStockRoomTesting&apos;,&apos;Automation@gmail.com&apos;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;Automation&apos;,&apos;ActivateDeactivateStockRoomTesting&apos;,&apos;Automation@gmail.com&apos;)' type='web' desc='select data for No records found' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='click on update results' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Update Results&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='verify no records found' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; No Records Found &quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='Text' value='heading3(&quot;No Records Found&quot;)' fallback='true' selected='false'/>

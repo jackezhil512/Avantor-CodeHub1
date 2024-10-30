@@ -1,69 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'To verify delete product working in Product Maintenance With open orders.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='null'/>
+<testcase   name= 'TC17 To verify Search working in dashboard activity log.ds' description= '' author= 'null' version= ''>
+<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"REPOSITORY/IMCM_Harish-Master/IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/IMCM Login.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../IMCM_WEB/Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM_WEB/Dashboard/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/IMCM Master repo2/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"REPOSITORY/Central_Repo99/IMCM/ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login to IMCM as Normal User' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"STOCK REPLENISHED"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='NavigateReplenishStock()' type='web' desc='Replenish product in Replenish Page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='SearchFieldWithoutClose(&quot;Catalog Number&quot;,&apos;Automation&apos;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ReplenishProduct(&apos;Automation&apos;,&apos;1&apos;)' type='web' desc='Replenish product in Replenish Page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='NavigateToProductMaintenancePage()' type='web' desc='Navigate To Location Maintenance Page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setValue' value='"Automation"' type='web' desc='search for prodcut in product maintenance page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='textbox(/mat-input-.*/,_below(span(&quot;Catalog #&quot;)))' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setValue' value='$VwrBatchExpiryProduct' type='web' desc='search for prodcut in product maintenance page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='textbox(/mat-input-.*/,_below(span(&quot;Catalog #&quot;)))' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//h4[contains(text(),&apos;ACTIVITY&apos;)]//following::input[@placeholder=&apos;Search&apos;]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -71,35 +29,19 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='if' value='""' type='web' desc='Verifying if catalog exist or not?' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getText(byXPath(&quot;(//mat-card-title[contains(@class,&apos;card-title&apos;)]/strong)[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='isVisible(link($VwrBatchExpiryProduct))' fallback='true' selected='true'/>
-   <accessor type='AttrHref' value='link(&quot;javascript:void(0)&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-list-product/div[2]/div[3]/avantor-table/div[2]/table/tbody/tr[1]/td[2]/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; 83008-822 &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-list-product/div[2]/div[3]/avantor-table/div[2]/table/tbody/tr/td[2]/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-product-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/main[@class=&apos;container-fluid px-5&apos;]/app-list-product[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;list_table ng-star-inserted&apos;]/div[@class=&apos;ng-star-inserted&apos;]/avantor-table[@class=&apos;list-product-table ng-tns-c324-77 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c324-77&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c324-77 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c324-77 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-catalogNo mat-column-catalogNo ng-tns-c324-77 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-left&apos;]/a[@class=&apos;ng-star-inserted&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[2]//a[@class=&quot;ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[2]//a[text()=&quot; 83008-822 &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;tr[class=&quot;mat-row cdk-row ng-tns-c324-77 striped-rows ng-star-inserted&quot;] &gt; td[class=&quot;mat-cell cdk-cell cdk-column-catalogNo mat-column-catalogNo ng-tns-c324-77 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-left&quot;] &gt; a[class=&quot;ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c324-77.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-catalogNo.mat-column-catalogNo.ng-tns-c324-77.ng-star-inserted.mat-table-sticky.mat-table-sticky-border-elem-left &gt; .ng-star-inserted&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;javascript:void(0)&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='link(&quot;ng-star-inserted&quot;)' fallback='true' selected='false'/>
-   <accessor type='Text' value='link(&quot;83008-822&quot;)' fallback='true' selected='false'/>
-   <accessor type='unknown' value=' isVisible(link(&quot;83008-822&quot;) )' fallback='true' selected='false'/>
-   <accessor type='unknown' value='  isVisible(link($CreateVWRProductCatalog) ) ' fallback='true' selected='false'/>
-   <accessor type='unknown' value='   isVisible(link($CreateVWRProductCatalog))  ' fallback='true' selected='false'/>
-   <accessor type='unknown' value='isVisible(link($CreateVWRProductCatalog))' fallback='true' selected='false'/>
+   <accessor type='unknown' value='strText1' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='strText1' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='click on check box if exist' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertEqual' value='"STOCK REPLENISHED"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link($VwrBatchExpiryProduct )))' fallback='true' selected='true'/>
+   <accessor type='unknown' value='strText1' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -107,24 +49,29 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='click on delete product' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"STOCK CORRECTED"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Text' value='submit(&quot;Delete&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//h4[contains(text(),&apos;ACTIVITY&apos;)]//following::input[@placeholder=&apos;Search&apos;]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='click  on confirm delete' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getText(byXPath(&quot;(//mat-card-title[contains(@class,&apos;card-title&apos;)]/strong)[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Text' value='submit(&quot;CONFIRM DELETE&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='strText1' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='strText1' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertEqual' value='"STOCK CORRECTED"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='strText1' fallback='true' selected='true'/>
 </dialect>
 </step>
 </testcase>

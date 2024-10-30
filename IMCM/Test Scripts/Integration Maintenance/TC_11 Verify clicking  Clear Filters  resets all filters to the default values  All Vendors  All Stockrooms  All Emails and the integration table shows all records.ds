@@ -31,6 +31,11 @@
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Update Results&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
 <step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
@@ -58,11 +63,6 @@
    <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;col&quot;] &gt; div[class=&quot;d-flex return-stock&quot;] &gt; div[class=&quot;col-lg-3 col-md-6 col-sm-12 pr-3 px-0 text-left mt-3 mt-md-0 d-flex&quot;] &gt; div[class=&quot;d-flex align-items-center justify-content-start&quot;] &gt; button[class=&quot;mat-focus-indicator mr-2 md-button mat-stroked-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;.col &gt; .d-flex.return-stock &gt; .col-lg-3.col-md-6.col-sm-12.pr-3.px-0.text-left.mt-3.mt-md-0.d-flex &gt; .d-flex.align-items-center.justify-content-start &gt; .mat-focus-indicator.mr-2.md-button.mat-stroked-button.mat-button-base.mat-primary.cdk-focused.cdk-mouse-focused&apos;)' fallback='true' selected='false'/>
    <accessor type='AttrClass' value='submit(&quot;cdk-focused cdk-mouse-focused mat-button-base mat-focus-indicator mat-primary mat-stroked-button md-button mr-2&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 <step action='assertExists' value='' type='web' desc='verify all vendors exist in drop down' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

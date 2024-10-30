@@ -60,14 +60,14 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='VendorCount' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
 <step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='To get No of stockrooms per page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='StockroomCount' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='StockroomCount' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 <step action='assertGreaterThan' value='3' type='web' desc='Stockroom only access 3 but it should show all the stockrooms tied to user' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

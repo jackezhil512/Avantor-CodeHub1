@@ -91,7 +91,7 @@
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Update Results&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='verify no records found' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; No Records Found &quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='Text' value='heading3(&quot;No Records Found&quot;)' fallback='true' selected='false'/>

@@ -29,7 +29,7 @@
     <userinfo/>
   </basics>
   <resources>
-    <resource name="IMCM" type="folder" path="REPOSITORY/IMCM-AvantorCodeHub-Repo/IMCM/"/>
+    <resource name="IMCM" type="folder" path="{scenario}/../"/>
   </resources>
   <testnodes>
     <node name="localhost" location="https://vwr.appvance.net:/TMServer/ws/TestNode"/>
@@ -40,7 +40,13 @@
     <bundle name="oracle" version="10.2.0.5"/>
     <bundle name="ds" version="3.0"/>
   </bundles>
-  <datasources/>
+  <datasources>
+    <dpl name="TestData" type="HashDPL" langtype="java" method="setup">
+      <argument name="resource" dpl="Resources" method="getResourceByName">
+        <argument name="file" value="IMCM/Test Data/IMCM_INPUTFILE.csv"/>
+      </argument>
+    </dpl>
+  </datasources>
   <options>
     <options type="global">
       <opt name="trustAllSSLCertificates" value="false"/>
@@ -149,7 +155,11 @@
     </controller>
     <testcase name="BulkTest" importance="normal">
       <test>
-        <run name="BulkTest" langtype="bulkds3" resource="IMCM/Test Scripts/Integration Maintenance/" method="ds" testclass="Chrome" regex="*.ds"/>
+        <run name="BulkTest" langtype="bulkds3" resource="IMCM/Test Scripts/Integration Maintenance/" method="ds" testclass="Chrome" regex="*.ds">
+          <argument name="Untitled1" method="getDataByIndex" dpl="TestData">
+            <argument name="index" value="0"/>
+          </argument>
+        </run>
       </test>
     </testcase>
     <assertsuite xmlns="www.pushtotest.com/tm5" name="Optional"/>

@@ -45,27 +45,27 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='div(&quot;Select cost center[4]&quot;).xy(0.93, 0.44 )' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='eval(&quot;&apos;Vwr Labs&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='Generate one time cost center' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='store' value='eval(&quot;&apos;Vwr Labs&apos;+ Math.floor(Math.random()*1000)&quot;)' type='web' desc='Generate one time cost center' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='strCostCenter' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='strCostCenter' type='web' desc='Search one time cost center' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='setValue' value='strCostCenter' type='web' desc='Search one time cost center' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//input[@data-placeholder=&quot;One-time name&quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='Click save' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='Click save' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='submit(&quot;Save&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='Verify Cost center msg' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Verify Cost center msg' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='div(&quot;Cost Center has been added[9]&quot;).xy(0.31, 0.63 )' fallback='true' selected='true'/>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Cost Center has been added &quot;]&apos;).xy(0.31, 0.63 )' fallback='true' selected='false'/>
@@ -76,12 +76,12 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='div(&quot;Select cost center[4]&quot;).xy(0.93, 0.44 )' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='strCostCenter' type='web' desc='Search cost center' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='setValue' value='strCostCenter' type='web' desc='Search cost center' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//input[@placeholder=&quot;Search cost centers&quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>

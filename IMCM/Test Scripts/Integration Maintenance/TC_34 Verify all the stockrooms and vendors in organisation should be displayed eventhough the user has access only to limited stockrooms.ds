@@ -33,12 +33,13 @@
 </step>
 <step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='strRows2' fallback='true' selected='true'/>
+   <accessor type='unknown' value='StockroomCount' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertEqual' value='"10/1 alternates delete"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertGreaterThan' value='"10/1 alternates delete"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='strData' fallback='true' selected='true'/>
+   <accessor type='unknown' value='StockroomCount' fallback='true' selected='true'/>
+   <accessor type='unknown' value='strData' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

@@ -36,9 +36,9 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='byXPath(&quot;(//td[contains(@class,&apos;mat-column-vendorData&apos;)])[1]&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;(//td[contains(@class,&apos;mat-column-vendorData&apos;)])[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='assertEqual' value='&apos;TestAutomation&apos;' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

@@ -168,14 +168,14 @@
    <accessor type='unknown' value='cell(&quot;PDF OUTPUT&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Validate email' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot; ${Email} &quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot; ${Email} &quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot;${Email}&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='Click on Save and ADD vendor' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='span(&quot;Save &amp; Add Vendor[1]&quot;)' fallback='true' selected='true'/>
 </dialect>
@@ -243,29 +243,6 @@
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Yes &quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Cancel &quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='span(&quot;Cancel&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//mat-dialog-container[@id=&apos;mat-dialog-3&apos;]/app-create-update-wizard/mat-dialog-actions/button[1]/span[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-actions/button/span&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-dialog-3&apos;)/app-create-update-wizard[@class=&apos;ng-star-inserted&apos;]/mat-dialog-actions[@class=&apos;mat-dialog-actions px-3 vendor-btns&apos;]/button[@class=&apos;mat-focus-indicator py-1 cancel mat-button mat-button-base cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;mat-dialog-container[class=&quot;mat-dialog-container ng-tns-c31-149 ng-trigger ng-trigger-dialogContainer ng-star-inserted&quot;] &gt; app-create-update-wizard[class=&quot;ng-star-inserted&quot;] &gt; mat-dialog-actions[class=&quot;mat-dialog-actions px-3 vendor-btns&quot;] &gt; button[class=&quot;mat-focus-indicator py-1 cancel mat-button mat-button-base cdk-focused cdk-mouse-focused&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;#mat-dialog-3 &gt; .ng-star-inserted &gt; .mat-dialog-actions.px-3.vendor-btns &gt; .mat-focus-indicator.py-1.cancel.mat-button.mat-button-base.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='span(&quot;mat-button-wrapper[30]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Yes &quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='Parent' value='span(4, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-4&apos;})))' fallback='true' selected='false'/>
-   <accessor type='Text' value='span(&quot;Yes[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//mat-dialog-container[@id=&apos;mat-dialog-4&apos;]/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button/span[1]/span&quot;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/mat-dialog-container/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button/span/span&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-dialog-4&apos;)/app-confirm-dialog[@class=&apos;ng-star-inserted&apos;]/mat-dialog-content[@class=&apos;mat-dialog-content no-scroll av-confirm-dialog&apos;]/section[@class=&apos;px-5 py-5 text-center&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='Parent' value='span(4, _in(custom(&quot;mat-dialog-container&quot;, &quot;mat-dialog-4&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

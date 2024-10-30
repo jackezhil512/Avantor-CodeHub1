@@ -987,3 +987,9 @@ function TableRowCountVerify(num){
   var temp = Number(nameCountLength);
   assertEquals(num,Math.floor(nameCountLength));
 }
+
+function TableRowCount(){
+  var nameCountLength = _eval("ds$(\'tbody[role=\"rowgroup\"] tr.striped-rows\').length");
+  var temp = Number(nameCountLength);
+  TableRowCount = temp;
+}

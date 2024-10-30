@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'TC_11 Verify clicking  Clear Filters  resets all filters to the default values  All Vendors  All Stockrooms  All Emails and the integration table shows all records.ds' description= '' author= 'null' version= ''>
+<testcase   name= 'TC_40 Verify ALL integration with Exclude VWR and Non VWR option unchecked is displaying for applicable stockroom and Email filter combinations since its applicable for All Vendors.ds' description= '' author= 'null' version= ''>
 <dpl filename='REPOSITORY/IMCM-AvantorCodeHub-Repo/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
@@ -21,7 +21,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;TestAutomation&apos;,&apos;ActivateDeactivateStockRoomTesting&apos;,&apos;Automation@gmail.com&apos;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;ALL&apos;,&apos;All Stockrooms&apos;,&apos;All Emails&apos;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email)' fallback='true' selected='true'/>
 </dialect>
@@ -31,12 +31,23 @@
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Update Results&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//td[contains(@class,&apos;mat-column-excludeVWR&apos;)]//input[@aria-checked=&apos;false&apos;])[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;(//td[contains(@class,&apos;mat-column-excludeVWR&apos;)]//input[@aria-checked=&apos;false&apos;])[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//td[contains(@class,&apos;excludeNonVWRVendor&apos;)]//input[@aria-checked=&apos;false&apos;])[1]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;Clear filters&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[3]/div/div/div[4]/div/button[1]&apos;)' fallback='true' selected='false'/>
@@ -48,7 +59,7 @@
    <accessor type='AttrClass' value='submit(&quot;cdk-focused cdk-mouse-focused mat-button-base mat-focus-indicator mat-primary mat-stroked-button md-button mr-2&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;Clear filters&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[3]/div/div/div[4]/div/button[1]&apos;)' fallback='true' selected='false'/>
@@ -60,9 +71,48 @@
    <accessor type='AttrClass' value='submit(&quot;cdk-focused cdk-mouse-focused mat-button-base mat-focus-indicator mat-primary mat-stroked-button md-button mr-2&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='selectWindow' value='"Avantor Inventory Manager"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='span(&quot;header-label ng-tns-c328-87 unsort-key[4]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='span(&quot;Stockroom&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/thead/tr[1]/th[5]/div/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Stockroom &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/thead/tr/th[5]/div/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col customTable&apos;]/avantor-table[@class=&apos;table-container fullWidth ng-tns-c328-87 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c328-87&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c328-87 table -table&apos;]/thead[1]/tr[@class=&apos;mat-header-row cdk-header-row row-header main-row-header ng-tns-c328-87 ng-star-inserted&apos;]/th[@class=&apos;mat-header-cell cdk-header-cell header cdk-column-stockroomData mat-column-stockroomData ng-tns-c328-87 ng-star-inserted mat-table-sticky&apos;]/div[@class=&apos;table-header ng-tns-c328-87&apos;]/span[@class=&apos;header-label ng-tns-c328-87 unsort-key&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;tr[class=&quot;mat-header-row cdk-header-row row-header main-row-header ng-tns-c328-87 ng-star-inserted&quot;] &gt; th[class=&quot;mat-header-cell cdk-header-cell header cdk-column-stockroomData mat-column-stockroomData ng-tns-c328-87 ng-star-inserted mat-table-sticky&quot;] &gt; div[class=&quot;table-header ng-tns-c328-87&quot;] &gt; span[class=&quot;header-label ng-tns-c328-87 unsort-key&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.mat-header-row.cdk-header-row.row-header.main-row-header.ng-tns-c328-87.ng-star-inserted &gt; .mat-header-cell.cdk-header-cell.header.cdk-column-stockroomData.mat-column-stockroomData.ng-tns-c328-87.ng-star-inserted.mat-table-sticky &gt; .table-header.ng-tns-c328-87 &gt; .header-label.ng-tns-c328-87.unsort-key&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='JQuery' value='byJQuery(&apos;tr[class=&quot;mat-row cdk-row ng-tns-c328-87 striped-rows ng-star-inserted&quot;] &gt; td[class=&quot;mat-cell cdk-cell cdk-column-excludeVWR-VWR3 mat-column-excludeVWR-VWR3 ng-tns-c328-87 ng-star-inserted&quot;] &gt; div[class=&quot;w-100 text-center ng-star-inserted&quot;]&apos;).xy(0.50, 0.19 )' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[3]/div&apos;).xy(0.50, 0.19 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;w-100 text-center ng-star-inserted&quot;]&apos;).xy(0.50, 0.19 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr/td[3]/div&apos;).xy(0.50, 0.19 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col customTable&apos;]/avantor-table[@class=&apos;table-container fullWidth ng-tns-c328-87 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c328-87&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c328-87 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c328-87 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-excludeVWR-VWR3 mat-column-excludeVWR-VWR3 ng-tns-c328-87 ng-star-inserted&apos;]/div[@class=&apos;w-100 text-center ng-star-inserted&apos;]&quot;).xy(0.50, 0.19 )' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[3]//div[@class=&quot;w-100 text-center ng-star-inserted&quot;]&apos;).xy(0.50, 0.19 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c328-87.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-excludeVWR-VWR3.mat-column-excludeVWR-VWR3.ng-tns-c328-87.ng-star-inserted &gt; .w-100.text-center.ng-star-inserted&apos;).xy(0.50, 0.19 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;ng-star-inserted text-center w-100&quot;).xy(0.50, 0.19 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='JQuery' value='byJQuery(&apos;tr[class=&quot;mat-row cdk-row ng-tns-c328-87 striped-rows ng-star-inserted&quot;] &gt; td[class=&quot;mat-cell cdk-cell cdk-column-excludeNonVWRVendor mat-column-excludeNonVWRVendor ng-tns-c328-87 ng-star-inserted&quot;] &gt; div[class=&quot;w-100 text-center ng-star-inserted&quot;]&apos;).xy(0.50, 0.31 )' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[4]/div&apos;).xy(0.50, 0.31 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr/td[4]/div&apos;).xy(0.50, 0.31 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col customTable&apos;]/avantor-table[@class=&apos;table-container fullWidth ng-tns-c328-87 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c328-87&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c328-87 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c328-87 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-excludeNonVWRVendor mat-column-excludeNonVWRVendor ng-tns-c328-87 ng-star-inserted&apos;]/div[@class=&apos;w-100 text-center ng-star-inserted&apos;]&quot;).xy(0.50, 0.31 )' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[4]//div[@class=&quot;w-100 text-center ng-star-inserted&quot;]&apos;).xy(0.50, 0.31 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c328-87.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-excludeNonVWRVendor.mat-column-excludeNonVWRVendor.ng-tns-c328-87.ng-star-inserted &gt; .w-100.text-center.ng-star-inserted&apos;).xy(0.50, 0.31 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;ng-star-inserted text-center w-100[1]&quot;).xy(0.50, 0.31 )' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
@@ -70,33 +120,33 @@
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(), &apos;Clear filters&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;All Vendors&apos;)]&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;All Stockrooms&apos;)]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;All Stockrooms&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;All Emails&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;Automation&apos;,&apos;ActivateDeactivateStockRoomTesting&apos;,&apos;Automation@gmail.com&apos;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;Automation&apos;,&apos;ActivateDeactivateStockRoomTesting&apos;,&apos;Automation@gmail.com&apos;)' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Update Results&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; No Records Found &quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='Text' value='heading3(&quot;No Records Found&quot;)' fallback='true' selected='false'/>

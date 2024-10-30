@@ -21,14 +21,9 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='byXPath(&quot;(//tr[contains(@class,&apos;striped-rows&apos;)])[1]&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getText(byXPath(&quot;(//tr[contains(@class,&apos;striped-rows&apos;)])[1]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='Rows' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='addEncryptedDPL' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 <step action='log' value='Rows' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

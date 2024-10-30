@@ -55,11 +55,6 @@
    <accessor type='unknown' value='strCostCenter' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='strCostCenter' type='web' desc='Search one time cost center' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//input[@data-placeholder=&quot;One-time name&quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
 <step action='setValue' value='strCostCenter' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//div[text()=&quot; Cost Center Name &quot;]/following::input[1]&apos;)' fallback='true' selected='true'/>

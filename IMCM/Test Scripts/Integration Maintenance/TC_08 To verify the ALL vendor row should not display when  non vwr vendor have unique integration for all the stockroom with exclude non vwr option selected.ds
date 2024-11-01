@@ -151,6 +151,11 @@
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;ALL&apos;) and @class=&apos;vendor-option&apos;]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
 <step action='click2' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//h4[contains(text(),&apos;Add New Integration&apos;)]&quot;)' fallback='true' selected='true'/>
@@ -176,7 +181,12 @@
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;All Stockrooms&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click2' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//h4[contains(text(),&apos;Add New Integration&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>

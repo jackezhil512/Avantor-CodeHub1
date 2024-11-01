@@ -11,7 +11,7 @@
    <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='Login($URL,$Super_User,$Password,$IntegrationOrg,$IntegrationStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='Login($URL,$IntegrationUSer,$Password,$IntegrationOrg,$IntegrationStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
@@ -41,14 +41,6 @@
    <accessor type='unknown' value='strRows2' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='strRows2strRows2' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='$IntegrationStockroom' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
-   <accessor type='unknown' value='$IntegrationOrg' fallback='true' selected='false'/>
-   <accessor type='unknown' value='1' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

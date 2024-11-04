@@ -49,7 +49,7 @@
    <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/payment-options&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='heading1(&quot;Payment Options&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-payment-options/div/h1&apos;)' fallback='true' selected='false'/>
@@ -82,7 +82,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;.container.credit-card-container &gt; .row &gt; .col-sm-6&apos;).xy(0.67, 0.16 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='heading3(&quot;Add a New Credit Card&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-add-credit-card-dialog/div/div/div[1]/div[1]/h3&apos;)' fallback='true' selected='false'/>

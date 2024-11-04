@@ -278,6 +278,7 @@ function ProductPageValidationwithoutaddItemToBasket(){
    setShadowDOM(true); 
  // click(fallback(`button("+")`));
  // click(fallback(`submit("Add to cart")`));
+ 
   click(fallback(`submit("Add to cart[2]")`));
   wait(10000);
   click(fallback(`paragraph("Please select quantity.")`));

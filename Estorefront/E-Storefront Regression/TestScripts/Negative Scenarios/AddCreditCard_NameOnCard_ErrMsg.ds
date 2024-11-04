@@ -59,8 +59,7 @@
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='AttrClass' value='submit(&quot;btn btn-white&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='submit(&quot;Add Card&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='submit(&quot;Add Card&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-payment-options/div/div[2]/div[3]/button&apos;)' fallback='true' selected='false'/>
    <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-white&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Add Card &quot;]&apos;)' fallback='true' selected='false'/>
@@ -68,6 +67,28 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-payment-options[1]/div[@class=&apos;payment-options-container&apos;]/div[2]/div[@class=&apos;add-credit-card&apos;]/button[@class=&apos;btn btn-white&apos;]&quot;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;add-credit-card&quot;] &gt; button[class=&quot;btn btn-white&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;.add-credit-card &gt; .btn.btn-white&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='submit(&quot;btn btn-white&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='div(&quot;col-sm-6&quot;).xy(0.67, 0.16 )' fallback='true' selected='true'/>
+   <accessor type='Text' value='div(&quot;Add a New Credit Card&quot;).xy(0.67, 0.16 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-add-credit-card-dialog/div/div/div[1]&apos;).xy(0.67, 0.16 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;col-sm-6&quot;]&apos;).xy(0.67, 0.16 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-add-credit-card-dialog/div/div/div&apos;).xy(0.67, 0.16 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-dialog-centered modal-lg&apos;]/div[@class=&apos;modal-content&apos;]/app-add-credit-card-dialog[1]/div[@class=&apos;container credit-card-container&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-sm-6&apos;]&quot;).xy(0.67, 0.16 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;container credit-card-container&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col-sm-6&quot;]&apos;).xy(0.67, 0.16 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.container.credit-card-container &gt; .row &gt; .col-sm-6&apos;).xy(0.67, 0.16 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='heading3(&quot;Add a New Credit Card&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-add-credit-card-dialog/div/div/div[1]/div[1]/h3&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Add a New Credit Card&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-add-credit-card-dialog/div/div/div/div/h3&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-dialog-centered modal-lg&apos;]/div[@class=&apos;modal-content&apos;]/app-add-credit-card-dialog[1]/div[@class=&apos;container credit-card-container&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-sm-6&apos;]/div[@class=&apos;add-new-credit-header mt-2&apos;]/h3[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

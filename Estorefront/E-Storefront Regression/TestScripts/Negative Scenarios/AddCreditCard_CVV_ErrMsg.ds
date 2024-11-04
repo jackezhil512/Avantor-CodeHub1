@@ -83,6 +83,19 @@
    <accessor type='AttrClass' value='submit(&quot;btn btn-primary&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='submit(&quot;btn btn-primary&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='submit(&quot;Continue&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-add-credit-card-dialog/div/div/div[4]/div/div[2]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Continue &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-add-credit-card-dialog/div/div/div[4]/div/div[2]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-dialog-centered modal-lg&apos;]/div[@class=&apos;modal-content&apos;]/app-add-credit-card-dialog[1]/div[@class=&apos;container credit-card-container&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-sm-6&apos;]/div[@class=&apos;d-flex button-styles&apos;]/div[@class=&apos;mt-3 ml-2&apos;]/button[@class=&apos;btn btn-primary&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;row&quot;] &gt; div[class=&quot;col-sm-6&quot;] &gt; div[class=&quot;d-flex button-styles&quot;] &gt; div[class=&quot;mt-3 ml-2&quot;] &gt; button[class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.row &gt; .col-sm-6 &gt; .d-flex.button-styles &gt; .mt-3.ml-2 &gt; .btn.btn-primary&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>

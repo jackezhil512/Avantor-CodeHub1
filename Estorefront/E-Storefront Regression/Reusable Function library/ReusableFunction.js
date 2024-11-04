@@ -279,6 +279,7 @@ function ProductPageValidationwithoutaddItemToBasket(){
  // click(fallback(`button("+")`));
   click(fallback(`submit("Add to cart")`));
   wait(10000);
+  click(fallback(`paragraph("Please select quantity.")`));
  // click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));
   //click(fallback(`submit("View My Cart")`));
   //assertExists(fallback(`heading3("Cart Summary")`));

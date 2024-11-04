@@ -70,4 +70,29 @@
    <accessor type='AttrClass' value='submit(&quot;btn btn-white&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div(&quot;div[2]&quot;)' fallback='true' selected='true'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/form/div/div/div[3]&apos;).xy(0.10, 0.41 )' fallback='true' selected='false'/>
+   <accessor type='AttrName' value='div(&quot;div[2]&quot;).xy(0.10, 0.41 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='div(&quot;Please enter the card holder name&quot;).xy(0.05, 0.56 )' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='div(&quot;valmsg&quot;).xy(0.05, 0.56 )' fallback='true' selected='false'/>
+   <accessor type='Id' value='div(&quot;c-cardname-error&quot;).xy(0.05, 0.56 )' fallback='true' selected='false'/>
+   <accessor type='AttrName' value='div(&quot;valmsg-c-cardname&quot;).xy(0.05, 0.56 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;c-cardname-error&apos;]&quot;).xy(0.05, 0.56 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;valmsg&quot;]&apos;).xy(0.05, 0.56 )' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Please enter the card holder name&quot;]&apos;).xy(0.05, 0.56 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/form/div/div/div[2]/div&apos;).xy(0.05, 0.56 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;c-cardname-error&apos;)&quot;).xy(0.05, 0.56 )' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='div({&apos;xi-elem&apos;:&apos;c-cardname&apos;}).xy(0.05, 0.56 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;valmsg&quot;]&apos;).xy(0.05, 0.56 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#c-cardname-error&apos;).xy(0.05, 0.56 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;form[name=&quot;iframe-form&quot;] &gt; div[name=&quot;html-main-content&quot;] &gt; div[name=&quot;c-content&quot;] &gt; div[name=&quot;div&quot;] &gt; div[name=&quot;valmsg-c-cardname&quot;]&apos;).xy(0.05, 0.56 )' fallback='true' selected='false'/>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;c-cardname-error&quot;]&apos;).xy(0.05, 0.56 )' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

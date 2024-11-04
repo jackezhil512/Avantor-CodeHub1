@@ -25,43 +25,6 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='ProductPageNavigation($Product)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ProductPageValidationwithoutaddItemToBasket()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='submit(&quot;Add to cart[2]&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[5]/app-avtr-product-variant-details/app-avtr-product-variant-table/section[2]/ul/li[2]/div[4]/div[10]/div[1]/div[2]/app-shared-add-to-cart/form/div[2]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[5]/app-avtr-product-variant-details/app-avtr-product-variant-table/section[2]/ul/li[2]/div[4]/div[10]/div/div[2]/app-shared-add-to-cart/form/div[2]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating ProductDetailsPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;ProductDetailsPageTemplate&apos;]/cx-page-slot[@class=&apos;orderTableComponent has-components&apos;]/app-avtr-product-variant-details[1]/app-avtr-product-variant-table[1]/section[2]/ul[@class=&apos;collection collection-container header&apos;]/li[@class=&apos;item item-container spec-border&apos;]/div[4]/div[@class=&apos;attribute-container multi-value&apos;]/div[@class=&apos;attribute display-price-sm-grid1 border-attribute&apos;]/div[2]/app-shared-add-to-cart[1]/form[@class=&apos;ng-untouched ng-pristine ng-valid&apos;]/div[@class=&apos;addtocart-btn-wrapper&apos;]/button[@class=&apos;btn btn-primary btn-block font-bold&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='submit(&quot;btn btn-block btn-primary font-bold[2]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='paragraph(&quot;Please select quantity.&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[5]/app-avtr-product-variant-details/app-avtr-product-variant-table/section[2]/ul/li[2]/div[4]/div[10]/div[1]/div[2]/app-shared-add-to-cart/form/div[1]/cx-form-errors/p&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Please select quantity. &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[5]/app-avtr-product-variant-details/app-avtr-product-variant-table/section[2]/ul/li[2]/div[4]/div[10]/div/div[2]/app-shared-add-to-cart/form/div/cx-form-errors/p&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating ProductDetailsPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;ProductDetailsPageTemplate&apos;]/cx-page-slot[@class=&apos;orderTableComponent has-components&apos;]/app-avtr-product-variant-details[1]/app-avtr-product-variant-table[1]/section[2]/ul[@class=&apos;collection collection-container header&apos;]/li[@class=&apos;item item-container spec-border&apos;]/div[4]/div[@class=&apos;attribute-container multi-value&apos;]/div[@class=&apos;attribute display-price-sm-grid1 border-attribute&apos;]/div[2]/app-shared-add-to-cart[1]/form[@class=&apos;ng-untouched ng-dirty ng-invalid ng-submitted&apos;]/div[@class=&apos;quantity mb-2&apos;]/cx-form-errors[@class=&apos;control-dirty control-invalid&apos;]/p[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='paragraph(&quot;Please select quantity.&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[5]/app-avtr-product-variant-details/app-avtr-product-variant-table/section[2]/ul/li[2]/div[4]/div[10]/div[1]/div[2]/app-shared-add-to-cart/form/div[1]/cx-form-errors/p&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Please select quantity. &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[5]/app-avtr-product-variant-details/app-avtr-product-variant-table/section[2]/ul/li[2]/div[4]/div[10]/div/div[2]/app-shared-add-to-cart/form/div/cx-form-errors/p&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating ProductDetailsPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;ProductDetailsPageTemplate&apos;]/cx-page-slot[@class=&apos;orderTableComponent has-components&apos;]/app-avtr-product-variant-details[1]/app-avtr-product-variant-table[1]/section[2]/ul[@class=&apos;collection collection-container header&apos;]/li[@class=&apos;item item-container spec-border&apos;]/div[4]/div[@class=&apos;attribute-container multi-value&apos;]/div[@class=&apos;attribute display-price-sm-grid1 border-attribute&apos;]/div[2]/app-shared-add-to-cart[1]/form[@class=&apos;ng-untouched ng-dirty ng-invalid ng-submitted&apos;]/div[@class=&apos;quantity mb-2&apos;]/cx-form-errors[@class=&apos;control-dirty control-invalid&apos;]/p[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
 <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;Search&quot;)' fallback='true' selected='true'/>

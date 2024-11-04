@@ -381,6 +381,20 @@ function AddproductToCartFromOrderEntry(input){
   
 }
 
+function OrderEntryEmptyPartNumberValidation(input){
+ setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
+  setShadowDOM(true);
+  click(fallback(`link("Order Entry")`));
+  assertExists(fallback(`heading3("Order Entry")`));
+  setValue(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-order-entry/div[2]/app-avtr-order-entry-form/form/div/input')`), input);
+  
+ // click(fallback(`byXPath('//*[@class="price"]')`));
+  click(fallback(`byXPath('//*[text()=" Add to cart "]')`));
+  //assertExists(fallback(`heading3("Cart Summary")`));
+  
+}
+
+
 function AddproductToCartFromCustomCatalog(){
   
 setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');

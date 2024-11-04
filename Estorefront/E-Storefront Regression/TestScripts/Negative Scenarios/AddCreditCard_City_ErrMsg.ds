@@ -124,6 +124,11 @@
    <accessor type='AttrClass' value='div(&quot;address-text pb-12&quot;).xy(0.13, 0.38 )' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
 <step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='paragraph(&quot;This field is required&quot;)' fallback='true' selected='true'/>

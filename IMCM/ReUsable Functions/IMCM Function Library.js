@@ -1094,3 +1094,14 @@ function NavigateToVendorMaintenancePage() {
     wait(300);
 
 }
+
+function NavigateToIntegrationMaintenance() {
+    setShadowDOM(true);
+    click(fallback(`submit("Administration expand_more")`));
+    wait(300);
+    click(fallback(`byXPath('//*[text()=" Integration Maintenance "]').xy(0.19, 0.57 )`));
+    wait(1000);
+    assertExists(fallback(`byXPath('//*[text()="Integration Maintenance"]')`));
+    wait(300);
+
+}

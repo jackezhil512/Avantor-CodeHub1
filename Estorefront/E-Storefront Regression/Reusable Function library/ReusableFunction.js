@@ -272,6 +272,21 @@ function ProductPageValidationAdditemToBasket(){
   assertExists(fallback(`heading3("Cart Summary")`));
 }
 
+
+function ProductPageValidationwithoutaddItemToBasket(){
+  setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
+   setShadowDOM(true); 
+  click(fallback(`button("+")`));
+  click(fallback(`submit("Add to cart")`));
+  wait(10000);
+  click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));
+  click(fallback(`submit("View My Cart")`));
+  assertExists(fallback(`heading3("Cart Summary")`));
+}
+
+
+
+
 function NavigateProductpageFromProductlinkShoppingcartDrawdown(input){
   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
    setShadowDOM(true); 

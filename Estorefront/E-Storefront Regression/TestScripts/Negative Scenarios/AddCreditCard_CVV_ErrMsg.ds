@@ -83,9 +83,9 @@
    <accessor type='AttrClass' value='submit(&quot;btn btn-primary&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Text' value='div(&quot;Please enter a card number&quot;).xy(0.06, 0.42 )' fallback='true' selected='true'/>
+   <accessor type='unknown' value='div(&quot;Please enter the card security code&quot;)' fallback='true' selected='true'/>
    <accessor type='AttrClass' value='div(&quot;valmsg[1]&quot;).xy(0.06, 0.42 )' fallback='true' selected='false'/>
    <accessor type='Id' value='div(&quot;c-cardnumber-error&quot;).xy(0.06, 0.42 )' fallback='true' selected='false'/>
    <accessor type='AttrName' value='div(&quot;valmsg-c-cardnumber&quot;).xy(0.06, 0.42 )' fallback='true' selected='false'/>
@@ -97,6 +97,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;#c-cardnumber-error&apos;).xy(0.06, 0.42 )' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;form[name=&quot;iframe-form&quot;] &gt; div[name=&quot;html-main-content&quot;] &gt; div[name=&quot;c-content&quot;] &gt; div[name=&quot;div&quot;] &gt; div[name=&quot;valmsg-c-cardnumber&quot;]&apos;).xy(0.06, 0.42 )' fallback='true' selected='false'/>
    <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;c-cardnumber-error&quot;]&apos;).xy(0.06, 0.42 )' fallback='true' selected='false'/>
+   <accessor type='Text' value='div(&quot;Please enter a card number&quot;).xy(0.06, 0.42 )' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

@@ -100,17 +100,6 @@
    <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-add-credit-card-dialog/div/div/div[2]/div[2]/form/div[1]/input&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-add-credit-card-dialog/div/div/div[2]/div[2]/form/div[2]/div[2]&apos;).xy(0.13, 0.38 )' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-add-credit-card-dialog/div/div/div[2]/div[2]/form/div[2]/div[2]&apos;).xy(0.13, 0.38 )' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;address-text pb-12&quot;]&apos;).xy(0.13, 0.38 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-dialog-centered modal-lg&apos;]/div[@class=&apos;modal-content&apos;]/app-add-credit-card-dialog[1]/div[@class=&apos;container credit-card-container&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-sm-6&apos;]/div[2]/form[@class=&apos;ng-untouched ng-pristine ng-invalid&apos;]/div[@class=&apos;content-box&apos;]/div[@class=&apos;address-text pb-12&apos;]&quot;).xy(0.13, 0.38 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;form[class=&quot;ng-untouched ng-pristine ng-invalid&quot;] &gt; div[class=&quot;content-box&quot;] &gt; div[class=&quot;address-text pb-12&quot;]&apos;).xy(0.13, 0.38 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.ng-untouched.ng-pristine.ng-invalid &gt; .content-box &gt; .address-text.pb-12&apos;).xy(0.13, 0.38 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;address-text pb-12&quot;).xy(0.13, 0.38 )' fallback='true' selected='false'/>
-</dialect>
-</step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='submit(&quot;btn btn-primary&quot;)' fallback='true' selected='true'/>
@@ -151,10 +140,11 @@
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Text' value='div(&quot;City * This field is required&quot;).xy(0.25, 0.42 )' fallback='true' selected='true'/>
+   <accessor type='unknown' value='div(&quot;City * This field is required&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-add-credit-card-dialog/div/div/div[2]/div[2]/form/div[2]/div[5]/div[1]&apos;).xy(0.25, 0.42 )' fallback='true' selected='false'/>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/ngb-modal-window/div/div/app-add-credit-card-dialog/div/div/div[2]/div[2]/form/div[2]/div[5]/div&apos;).xy(0.25, 0.42 )' fallback='true' selected='false'/>
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-dialog-centered modal-lg&apos;]/div[@class=&apos;modal-content&apos;]/app-add-credit-card-dialog[1]/div[@class=&apos;container credit-card-container&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-sm-6&apos;]/div[2]/form[@class=&apos;ng-pristine ng-invalid ng-touched&apos;]/div[@class=&apos;content-box&apos;]/div[@class=&apos;d-flex w-90&apos;]/div[1]&quot;).xy(0.25, 0.42 )' fallback='true' selected='false'/>
+   <accessor type='Text' value='div(&quot;City * This field is required&quot;).xy(0.25, 0.42 )' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

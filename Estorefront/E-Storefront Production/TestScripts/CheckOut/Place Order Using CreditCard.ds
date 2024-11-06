@@ -233,49 +233,4 @@
    <accessor type='Attribute' value='submit({&apos;type&apos;:&apos;submit&apos;})' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='submit(&quot;btn btn-block btn-primary mt-4 ng-star-inserted&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='submit(&quot;Place Order&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary btn-block mt-4 ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Place Order &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-checkout-order-summary/div/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-checkout-order-summary/div/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;MultiStepCheckoutSummaryPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;MultiStepCheckoutSummaryPageTemplate ng-star-inserted&apos;]/cx-page-slot[@class=&apos;SideContent has-components ng-star-inserted&apos;]/app-avtr-checkout-order-summary[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;avtr-order-summary-container terms-padding ng-star-inserted&apos;]/button[@class=&apos;btn btn-primary btn-block mt-4 ng-star-inserted&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.MultiStepCheckoutSummaryPageTemplate.ng-star-inserted &gt; .SideContent.has-components.ng-star-inserted &gt; .ng-star-inserted &gt; .avtr-order-summary-container.terms-padding.ng-star-inserted &gt; .btn.btn-primary.btn-block.mt-4.ng-star-inserted&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;cx-page-layout[class=&quot;MultiStepCheckoutSummaryPageTemplate ng-star-inserted&quot;] &gt; cx-page-slot[class=&quot;SideContent has-components ng-star-inserted&quot;] &gt; app-avtr-checkout-order-summary[class=&quot;ng-star-inserted&quot;] &gt; div[class=&quot;avtr-order-summary-container terms-padding ng-star-inserted&quot;] &gt; button[class=&quot;btn btn-primary btn-block mt-4 ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='submit({&apos;type&apos;:&apos;submit&apos;})' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='div(&quot;order-number&quot;).xy(0.13, 0.70 )' fallback='true' selected='true'/>
-   <accessor type='Text' value='div(&quot;CCW01173007&quot;).xy(0.13, 0.70 )' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;order-number&quot;]&apos;).xy(0.13, 0.70 )' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;CCW01173007&quot;]&apos;).xy(0.13, 0.70 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-order-confirmation-thank-you-message/div/div/div/div[2]/div[2]&apos;).xy(0.13, 0.70 )' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-order-confirmation-thank-you-message/div[1]/div/div[1]/div[2]/div[2]&apos;).xy(0.13, 0.70 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;OrderConfirmationPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;OrderConfirmationPageTemplate ng-star-inserted&apos;]/cx-page-slot[@class=&apos;BodyContent has-components ng-star-inserted&apos;]/app-avtr-order-confirmation-thank-you-message[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row ng-star-inserted&apos;]/div[@class=&apos;confirmation-container col-12&apos;]/div[@class=&apos;d-none d-md-flex confirmation-message-container&apos;]/div[@class=&apos;order-info col-4&apos;]/div[@class=&apos;order-number&apos;]&quot;).xy(0.13, 0.70 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.row.ng-star-inserted &gt; .confirmation-container.col-12 &gt; .d-none.d-md-flex.confirmation-message-container &gt; .order-info.col-4 &gt; .order-number&apos;).xy(0.13, 0.70 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;row ng-star-inserted&quot;] &gt; div[class=&quot;confirmation-container col-12&quot;] &gt; div[class=&quot;d-none d-md-flex confirmation-message-container&quot;] &gt; div[class=&quot;order-info col-4&quot;] &gt; div[class=&quot;order-number&quot;]&apos;).xy(0.13, 0.70 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-order-confirmation-thank-you-message/div/div/div/div[2]/div[2]&apos;).xy(0.55, 0.47 )' fallback='true' selected='true'/>
-   <accessor type='Text' value='div(&quot;CCW01173007&quot;).xy(0.55, 0.47 )' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;order-number&quot;]&apos;).xy(0.55, 0.47 )' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;CCW01173007&quot;]&apos;).xy(0.55, 0.47 )' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-order-confirmation-thank-you-message/div[1]/div/div[1]/div[2]/div[2]&apos;).xy(0.55, 0.47 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;OrderConfirmationPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;OrderConfirmationPageTemplate ng-star-inserted&apos;]/cx-page-slot[@class=&apos;BodyContent has-components ng-star-inserted&apos;]/app-avtr-order-confirmation-thank-you-message[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row ng-star-inserted&apos;]/div[@class=&apos;confirmation-container col-12&apos;]/div[@class=&apos;d-none d-md-flex confirmation-message-container&apos;]/div[@class=&apos;order-info col-4&apos;]/div[@class=&apos;order-number&apos;]&quot;).xy(0.55, 0.47 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.row.ng-star-inserted &gt; .confirmation-container.col-12 &gt; .d-none.d-md-flex.confirmation-message-container &gt; .order-info.col-4 &gt; .order-number&apos;).xy(0.55, 0.47 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;row ng-star-inserted&quot;] &gt; div[class=&quot;confirmation-container col-12&quot;] &gt; div[class=&quot;d-none d-md-flex confirmation-message-container&quot;] &gt; div[class=&quot;order-info col-4&quot;] &gt; div[class=&quot;order-number&quot;]&apos;).xy(0.55, 0.47 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;order-number&quot;).xy(0.55, 0.47 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
 </testcase>

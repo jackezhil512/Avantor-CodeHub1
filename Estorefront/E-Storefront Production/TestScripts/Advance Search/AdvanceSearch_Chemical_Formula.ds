@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'AdvanceSearch_Chemical_Formula.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/Estorefront/E-Storefront Regression/Test Data/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../Login/Login.ds"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='LaunchBrowser($URL)' type='web' desc='click advance search' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='link(&quot;Advanced&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='link(1, _in(header({&apos;id&apos;:&apos;cx-header&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrHref' value='link(&quot;/ca/en/advanced-search&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[2]/app-avtr-search-box/div[1]/a&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Advanced&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[2]/app-avtr-search-box/div/a&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SearchBox has-components&apos;]/app-avtr-search-box[1]/div[@class=&apos;advanced-link&apos;]/a[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/advanced-search&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='link(1, _in(header(&quot;cx-header&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='AdvanceSearch(&quot;1&quot;,$ChemicalFormula)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='AdvanceSearch(&quot;0&quot;,$ChemicalFormula)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='AdvanceSearch(&quot;0&quot;,$Keyword)' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

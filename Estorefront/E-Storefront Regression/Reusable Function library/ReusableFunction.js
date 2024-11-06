@@ -654,7 +654,7 @@ function placeorder_Prod(){
   assertExists(fallback(`heading3("Order Summary")`));
   click(fallback(`submit("Continue to Payment")`));
   assertExists(fallback(`byXPath('//*[text()=" Payment Types "]')`));
-  click(fallback(`submit("Review Order")`));
+  assertExists(fallback(`submit("Review Order")`));
   
 }
 

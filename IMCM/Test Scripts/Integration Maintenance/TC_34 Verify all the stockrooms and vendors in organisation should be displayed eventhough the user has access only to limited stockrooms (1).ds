@@ -93,7 +93,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.48, 0.29 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='store' value='ds$(&apos;div[role=&quot;listbox&quot;] mat-option&apos;).length' type='web' desc='To get No of stockrooms per page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='_eval(&quot;ds$(&apos;div[role=&quot;listbox&quot;] mat-option&apos;).length&quot;)' type='web' desc='To get No of stockrooms per page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='StockroomCount' fallback='true' selected='true'/>
 </dialect>

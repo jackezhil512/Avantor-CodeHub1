@@ -57,12 +57,32 @@
    <accessor type='Parent' value='span(1, _in(div(&quot;mat-select-value-17&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='store' value='_eval(&quot;ds$(&apos;mat-ripple mat-option-ripple&apos;).length&quot;)' type='web' desc='To get No of stockrooms per page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='_eval(&quot;ds$(&apos;mat-option-ripple&apos;).length&quot;)' type='web' desc='To get No of stockrooms per page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='StockroomCount' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='log' value='StockroomCount' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='_eval(&quot;ds$(&apos;mat-option-text&apos;).length&quot;)' type='web' desc='To get No of stockrooms per page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='StockroomCount1' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='StockroomCount1' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='_eval(&quot;ds$(&apos;mat-option-text&apos;).length&quot;)' type='web' desc='To get No of stockrooms per page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='StockroomCount2' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='StockroomCount2' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

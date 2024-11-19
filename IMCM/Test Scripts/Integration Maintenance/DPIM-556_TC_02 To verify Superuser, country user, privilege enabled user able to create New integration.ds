@@ -403,15 +403,12 @@
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e5550f1a-e156-407d-99f8-0c3d1e3b6756' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),$ConsumptionOrg)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),${ConsumptionOrg})]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;${ConsumptionStockroom}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;${ConsumptionOrg}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;{$ConsumptionOrg}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;{ConsumptionOrg}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;$ConsumptionOrg&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6ffdbfba-0879-4fb2-b30a-f92604fafaf3' uiType='base'>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b1a99bb5-f808-488a-ad07-506b7752342a' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
     <step action='setValue' value=' "{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ce7d77c9-e114-4250-b01f-cb5844f44f5d' uiType='base'>

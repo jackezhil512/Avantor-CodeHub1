@@ -38,7 +38,7 @@
     <step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5530dfc0-fd3b-495f-a4a9-3ce9324dda2c' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='store' value='$ConsumptionStockroom  ' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d981bfff-6dc4-46a6-926d-cbf4b2e07001' uiType='base'>
+    <step action='store' value='$ConsumptionStockroom' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d981bfff-6dc4-46a6-926d-cbf4b2e07001' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='StockRoomName' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value='' selected='false' fallback='true'></accessor>
@@ -363,7 +363,7 @@
     <step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c1edbb78-6fa7-44dd-9f67-2c6436e42576' uiType='end' sibling='ca7d8e64-1e82-4719-897e-011d4d3c2ebd'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='85a8c5c1-3e59-4037-a646-705a8247c644' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='true' indentLevel='0' isVisible='true' parentId='' uid='85a8c5c1-3e59-4037-a646-705a8247c644' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;ADD NEW INTEGRATION&apos;)]/ancestor::button")' selected='true' fallback='true'></accessor>
       </dialect>
@@ -371,8 +371,11 @@
     <step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e7c58f06-0c5c-439e-ae8b-a032d8e1e25a' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//td[contains(@class,&apos;mat-excludeVWR&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//td[contains(@class,&apos;mat-column-excludeVWR&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//td[contains(@class,&apos;mat-column-excludeNonVWRVendor&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='eeeb0283-f79a-4d0d-8d37-4c10cc23b48a' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//td[contains(@class,&apos;mat-excludeVWR&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='35cef2b1-2319-4aca-bd36-e4fbc231cbf5' uiType='base'>

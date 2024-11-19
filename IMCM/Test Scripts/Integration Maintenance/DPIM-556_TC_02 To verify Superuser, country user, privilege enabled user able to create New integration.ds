@@ -749,4 +749,50 @@
         <accessor type='JQuery' value='byJQuery(&apos;#mat-option-179 &gt; .mat-option-text &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;TestAutomation&apos;,&apos;ActivateDeactivateStockRoomTesting&apos;,&apos;Automation@gmail.com&apos;)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c91ed209-eaad-4768-b888-b2fe4521a1f6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='065cbdb0-e7a6-4126-a107-c42720e18356' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Update Results&apos;)]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c09894d2-dd88-45ba-85cf-140e76f9acc2' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value=' getText(byXPath("(//td[contains(@class,&apos;mat-column-vendorData&apos;)])[1]"))' type='web' desc='Get Vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='91e6f6e2-1be5-4ff9-be68-11af47ff8931' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='VendorName' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value=' getText(byXPath("(//td[contains(@class,&apos;mat-column-stockroomData&apos;)])[1]"))' type='web' desc='Get Stockroom Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3818c6e5-a172-4cf0-b062-ba384f7b6237' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='StockroomName' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value=' getText(byXPath("(//td[contains(@class,&apos;mat-column-requisitionEmailId&apos;)])[1]"))' type='web' desc='get email id' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9adbefe4-9833-498d-9d7d-fdb57bb4242e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='EmailID' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e95c8a06-7d3d-4861-8369-070fef4a2a3e' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertEqual' value='&apos;TestAutomation&apos;' type='web' desc='verify updfated and searched vendor results are same or not?' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64ce3165-2093-4595-9060-0a58c40bb61c' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='VendorName' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertEqual' value='&apos;ActivateDeactivateStockRoomTesting&apos;' type='web' desc='verify updfated and searched stockroom results are same or not?' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d61447d2-5f2e-4bfb-ae7e-5376b5610d04' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='StockroomName' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertEqual' value='&apos;Automation@gmail.com&apos;' type='web' desc='verify updfated and searched results Email are same or not?' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dbd38c96-eada-418d-91a6-7513238eea56' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='EmailID' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
   </testcase>

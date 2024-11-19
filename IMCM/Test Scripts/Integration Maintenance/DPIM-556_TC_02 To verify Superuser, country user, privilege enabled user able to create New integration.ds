@@ -403,7 +403,8 @@
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e5550f1a-e156-407d-99f8-0c3d1e3b6756' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;${ConsumptionStockroom}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),"${ConsumptionStockroom}")]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;${ConsumptionStockroom}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;${ConsumptionOrg}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;{ConsumptionOrg}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
       </dialect>
@@ -686,6 +687,20 @@
     <step action='assertEqual' value=' "10/1 alternates delete"' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='56a763a7-d29c-488d-8a3b-37f4934ed7fa' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='strData' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='40b04794-2e0b-40ba-a609-82576d04cde3' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value=' span("Automation-Consignment Stockroom[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value=' span(1, _in(custom("mat-option", "mat-option-179")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value=' span(1, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-179&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' span("vendor-option[2]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//mat-option[@id=&apos;mat-option-179&apos;]/span/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()="Automation-Consignment Stockroom"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option[3]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-option-179&apos;)/span[@class=&apos;mat-option-text&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;div[class="ng-tns-c89-179 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; div[class="ng-tns-c89-179"] &gt; mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted mat-active"] &gt; span[class="mat-option-text"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-179 &gt; .mat-option-text &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
   </testcase>

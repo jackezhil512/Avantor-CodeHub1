@@ -38,6 +38,15 @@
     <step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5530dfc0-fd3b-495f-a4a9-3ce9324dda2c' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
+    <step action='store' value='$ConsumptionStockroom  ' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d981bfff-6dc4-46a6-926d-cbf4b2e07001' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='StockRoomName' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='StockRoomName' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a59c8e9c-3f21-48d6-9f8a-cd0e032dc00b' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
     <step action='store' value=' "Automation"+RandomVal+"@gmail.com"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f5607dfb-c843-4334-86ff-a7ca728ba963' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='Email' selected='true' fallback='true'></accessor>
@@ -401,7 +410,7 @@
         <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;Stockroom&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c5539ec3-ab74-4c1b-b968-8906430131b0' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c5539ec3-ab74-4c1b-b968-8906430131b0' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='byXPath(&apos;//*[text()=$ConsumptionStockroom]&apos;)' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath(&apos;//*[text()="$ConsumptionStockroom"]&apos;)' selected='false' fallback='true'></accessor>
@@ -419,9 +428,11 @@
         <accessor type='JQuery' value='byJQuery(&apos;#mat-option-155 &gt; .mat-option-text &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e5550f1a-e156-407d-99f8-0c3d1e3b6756' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e5550f1a-e156-407d-99f8-0c3d1e3b6756' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),${ConsumptionStockroom})]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;{ConsumptionStockroom}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),{ConsumptionStockroom})]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),${ConsumptionStockroom})]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),"${ConsumptionStockroom}")]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;${ConsumptionStockroom}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;${ConsumptionOrg}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>

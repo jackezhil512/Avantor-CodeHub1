@@ -202,52 +202,6 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='_eval(&quot;ds$(&apos;button.mat-button-base.mat-secondary&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='TCount' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='TCount' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='if' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='TCount&gt;1' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='while' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='TCount&gt;1' fallback='true' selected='true'/>
-   <accessor type='unknown' value='TCount=1' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;(//img[@src=&apos;/assets/icons/delete-secondary.svg&apos;])[2]&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;YES&apos;)]/ancestor::button&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='_eval(&quot;ds$(&apos;button.mat-button-base.mat-secondary&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='TCount' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//mat-icon[text()=&apos;arrow_forward&apos;]&quot;)' fallback='true' selected='true'/>

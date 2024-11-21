@@ -113,16 +113,6 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='_eval(&quot;ds$(&apos;button.mat-button-base.mat-secondary&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='TCount' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='TCount' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
 <step action='while' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='1500, isVisible(fallback(`byXPath(&quot;((//th[text()=&apos;Request Email&apos;]/ancestor::table)[2]//td[1]//img[@src=&apos;/assets/icons/delete-secondary.svg&apos;])[2]&quot;)`))' fallback='true' selected='true'/>

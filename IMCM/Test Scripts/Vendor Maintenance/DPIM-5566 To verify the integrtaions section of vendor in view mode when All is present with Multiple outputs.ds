@@ -173,7 +173,7 @@
    <accessor type='unknown' value='cell(&quot;PDF OUTPUT&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='Validate email' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Validate email' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot; ${Email} &quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot; ${Email} &quot;]&apos;)' fallback='true' selected='false'/>

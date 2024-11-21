@@ -791,7 +791,7 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-step-content-0-2&apos;)/app-review-section[@class=&apos;review-integration ng-star-inserted&apos;]/div[@class=&apos;px-2 vendor-btns integration-actions mt-2&apos;]/button[@class=&apos;mat-focus-indicator py-1 next ml-sm-2 px-md-4 px-3 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='Validate Success Message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Validate Success Message' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='div(&quot;Integration created successfully[3]&quot;).xy(0.41, 0.45 )' fallback='true' selected='true'/>
    <accessor type='Parent' value='div(7, _in(div({&apos;id&apos;:&apos;cdk-overlay-12&apos;}))).xy(0.41, 0.45 )' fallback='true' selected='false'/>

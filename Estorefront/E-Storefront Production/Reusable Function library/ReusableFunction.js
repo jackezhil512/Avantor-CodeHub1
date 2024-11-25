@@ -231,7 +231,8 @@ function CatalogNumberLinkinCartNavigatetPDP(){
 }
 
 function RecommendedProductsInPDP(){
-  assertExists(fallback(`div(["Customers Who Bought This Also Boug"])`));
+ // assertExists(fallback(`div(["Customers Who Bought This Also Boug"])`));
+  assertExists(fallback(`div(["Frequently Bought Together"])`));
   assertExists(fallback(`byXPath('//*[@class="cx-link cursor-pointer"]')`));
 }
 

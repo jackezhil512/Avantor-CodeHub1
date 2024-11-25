@@ -499,7 +499,8 @@ function Verifyaddtocartfromshoppinglistdetailspage(){
   click(fallback(`byXPath('//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-shopping-list-details/div[5]/div/app-shopping-list-cart-items-ui/div/div/div/div[1]/div[1]/div/form/input')`));
 wait(2000);
   click(fallback(`submit("Add To Cart")`));
-  assertExists(fallback(`link("10536-518[1]")`));
+  //assertExists(fallback(`link("10536-518[1]")`));
+  assertExists(fallback(`link("414004-146[1]")`));
   assertExists(fallback(`heading3("Cart Summary")`));
   
 }

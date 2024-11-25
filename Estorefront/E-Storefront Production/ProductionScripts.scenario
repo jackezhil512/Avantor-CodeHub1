@@ -39,6 +39,7 @@
     <bundle name="mysql" version="5.1.39"/>
     <bundle name="oracle" version="10.2.0.5"/>
     <bundle name="ds" version="3.0"/>
+    <bundle name="mobile" version="1.0"/>
   </bundles>
   <datasources>
     <dpl name="Untitled1" type="HashDPL" langtype="java" method="setup">
@@ -160,6 +161,76 @@
         </run>
       </test>
     </testcase>
+    <testcase name="Cart-Module" importance="normal">
+      <test>
+        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/Cart-Module/" method="ds" testclass="Chrome" regex="*.ds">
+          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
+        </run>
+      </test>
+    </testcase>
+    <testcase name="Invoice" importance="normal">
+      <test>
+        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/Invoice/" method="ds" testclass="Chrome" regex="*.ds">
+          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
+        </run>
+      </test>
+    </testcase>
+    <testcase name="OrderEntry" importance="normal">
+      <test>
+        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/OrderEntry/" method="ds" testclass="Chrome" regex="*.ds">
+          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
+        </run>
+      </test>
+    </testcase>
+    <testcase name="Orders" importance="normal">
+      <test>
+        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/Orders/" method="ds" testclass="Chrome" regex="*.ds">
+          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
+        </run>
+      </test>
+    </testcase>
+    <testcase name="payment option" importance="normal">
+      <test>
+        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/payment option/" method="ds" testclass="Chrome" regex="*.ds">
+          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
+        </run>
+      </test>
+    </testcase>
+    <testcase name="Productpage" importance="normal">
+      <test>
+        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/Productpage/" method="ds" testclass="Chrome" regex="*.ds">
+          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
+        </run>
+      </test>
+    </testcase>
+    <testcase name="Quotes" importance="normal">
+      <test>
+        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/Quotes/" method="ds" testclass="Chrome" regex="*.ds">
+          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
+        </run>
+      </test>
+    </testcase>
+    <testcase name="Registration" importance="normal">
+      <test>
+        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/Registration/" method="ds" testclass="Chrome" regex="*.ds">
+          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
+        </run>
+      </test>
+    </testcase>
+    <testcase name="Search" importance="normal">
+      <test>
+        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/Search/" method="ds" testclass="Chrome" regex="*.ds">
+          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
+        </run>
+      </test>
+    </testcase>
+    <testcase name="Shopping List" importance="normal">
+      <test>
+        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/Shopping List/" method="ds" testclass="Chrome" regex="*.ds">
+          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
+        </run>
+      </test>
+    </testcase>
     <assertsuite xmlns="www.pushtotest.com/tm5" name="Optional"/>
     <storesuite xmlns="www.pushtotest.com/tm5" name="Optional"/>
   </templates>
@@ -167,6 +238,15 @@
   <execution type="functionaltest" subtype="bulk">
     <iteration name="Iteration1" controller="Iteration1">
       <testcase name="AdvanceSearch" users="1" totalexecutions="1"/>
+      <testcase name="Cart-Module" users="1" totalexecutions="1"/>
+      <testcase name="Invoice" users="1" totalexecutions="1"/>
+      <testcase name="OrderEntry" users="1" totalexecutions="1"/>
+      <testcase name="Orders" users="1" totalexecutions="1"/>
+      <testcase name="payment option" users="1" totalexecutions="1"/>
+      <testcase name="Productpage" users="1" totalexecutions="1"/>
+      <testcase name="Registration" users="1" totalexecutions="1"/>
+      <testcase name="Search" users="1" totalexecutions="1"/>
+      <testcase name="Shopping List" users="1" totalexecutions="1"/>
     </iteration>
   </execution>
   <logs/>

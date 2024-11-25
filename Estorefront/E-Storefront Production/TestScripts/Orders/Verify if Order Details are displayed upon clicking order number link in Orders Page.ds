@@ -15,8 +15,9 @@
 </step>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -39,7 +40,7 @@
 </step>
 <step action='store' value='getText(byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[3]/app-order-history-list/div/div/div[4]&apos;).xy(0.18, 0.28 ))' type='web' desc='webtracking' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='  WebTrackingNumber' fallback='true' selected='true'/>
+   <accessor type='unknown' value='WebTrackingNumber' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='Price' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

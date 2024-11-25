@@ -225,8 +225,8 @@ function NavigateProductpageFromProductlinkShoppingcartDrawdown(input){
 }
 
 function CatalogNumberLinkinCartNavigatetPDP(){
-  click(fallback(`byXPath('//*[@class="cx-link cart-catalog-link-color ng-star-inserted"]')`));
-  
+  //click(fallback(`byXPath('//*[@class="cx-link cart-catalog-link-color ng-star-inserted"]')`));
+  click(fallback(`link("cart-catalog-link-color cx-link")`));
   wait(5000);
   //assertExists(fallback(`byXPath('//*[text()="About this item "]')`));
   assertExists(fallback(`byXPath('//*[text()="Related Information "]')`));

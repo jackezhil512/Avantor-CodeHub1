@@ -433,12 +433,12 @@
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;PDF OUTPUT&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f93db982-b29b-4cb1-b3e5-dd5306f6e575' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f93db982-b29b-4cb1-b3e5-dd5306f6e575' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//button[contains(@class,&apos;mat-button-disabled&apos;) and @cdisabled=&apos;true&apos;]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='978eade3-4ff7-426c-8cc1-8ac3de91af81' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='978eade3-4ff7-426c-8cc1-8ac3de91af81' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//button[text()= &apos;Next&apos; and contains(@class,&apos;mat-button-disabled&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
@@ -446,8 +446,18 @@
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2129c3f7-02a1-4ffc-94f3-4ce8044ec0c5' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value=' getAttribute(byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span"),"cdisabled")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c67631b0-a1d2-481b-9703-c40535862dbc' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='NextLog' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
       </dialect>
+    </step>
+    <step action='log' value='NextLog' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7b91b45d-a321-4d17-a7e9-44deda4b265b' uiType='base'>
+      <dialect type='sahi'></dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64db9b2d-8ea2-450d-854e-4c8c5a664fa6' uiType='base'>
       <dialect type='sahi'>

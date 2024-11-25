@@ -94,6 +94,23 @@
         <accessor type='unknown' value=' span("Select Stockroom")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='636c1c70-f1cd-4c3f-8a85-0f677efcb33b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath(&apos;//*[text()="${StockRoomName}"]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath(&apos;//*[text()=&apos;{StockRoomName}&apos;]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath(&apos;//*[text()=&apos;${StockRoomName}&apos;]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()="Automation Regular Stockroom"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value=' span(1, _in(custom("mat-option", "mat-option-155")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value=' span(1, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-155&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' span("vendor-option[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value=' span("Automation Regular Stockroom[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//mat-option[@id=&apos;mat-option-155&apos;]/span/span")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option[2]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-option-155&apos;)/span[@class=&apos;mat-option-text&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;div[class="ng-tns-c89-179 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; div[class="ng-tns-c89-179"] &gt; mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted"] &gt; span[class="mat-option-text"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-155 &gt; .mat-option-text &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c0066e21-704a-4187-a7a6-0e3bd713b71c' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Parent' value=' custom("mat-pseudo-checkbox", 0, _in(custom("mat-option", "mat-option-376")))' selected='true' fallback='true'></accessor>

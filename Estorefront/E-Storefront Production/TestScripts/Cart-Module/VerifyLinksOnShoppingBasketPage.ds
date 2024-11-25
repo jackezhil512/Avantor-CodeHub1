@@ -53,6 +53,33 @@
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
+   <accessor type='Parent' value='span(1, _in(link({&apos;aria-label&apos;:&apos;1 item currently in your cart&apos;})))' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='span(&quot;total&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='span(&quot;Total : $149.06&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/div/span[2]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;total&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Total : $149.06 &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[6]/app-avtr-mini-cart/div/a/div/span[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;MiniCart has-components&apos;]/app-avtr-mini-cart[1]/div[1]/a[1]/div[@class=&apos;cart-value&apos;]/span[@class=&apos;total&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;cart-value&quot;] &gt; span[class=&quot;total&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.cart-value &gt; .total&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='submit(&quot;btn btn-primary col-md-6&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='submit(&quot;View My Cart&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div[2]/div/div[2]/div[4]/button&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;col-md-6 btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; View My Cart &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[6]/app-avtr-mini-cart/div[2]/div/div[2]/div[4]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;MiniCart has-components&apos;]/app-avtr-mini-cart[1]/div[@class=&apos;minicart-menu minicart-menu-right&apos;]/div[@class=&apos;mini-cart&apos;]/div[2]/div[@class=&apos;text-right&apos;]/button[@class=&apos;col-md-6 btn btn-primary&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;text-right&quot;] &gt; button[class=&quot;col-md-6 btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.text-right &gt; .col-md-6.btn.btn-primary&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
    <accessor type='AttrClass' value='span(&quot;cart-shopping-list-icon shopping-list-link&quot;)' fallback='true' selected='true'/>
    <accessor type='Text' value='span(&quot;Save to Shopping list&quot;)' fallback='true' selected='false'/>
    <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cart-shopping-list-icon shopping-list-link&quot;]&apos;)' fallback='true' selected='false'/>

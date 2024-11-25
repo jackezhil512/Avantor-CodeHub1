@@ -368,56 +368,15 @@
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;ADD NEW INTEGRATION&apos;)]/ancestor::button")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e7c58f06-0c5c-439e-ae8b-a032d8e1e25a' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='verify exclude Non VWR is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e5f4a21d-c9fd-412d-b00e-e48906bdbcb8' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//td[contains(@class,&apos;mat-excludeVWR&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='log' value='DisableButton' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='875d57d8-af07-4e7f-a1bb-e38f6a504ba9' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e14b16de-ff8c-4f76-8704-3721b6a9d5b7' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='Text' value=' span("Exclude VWR, VWR3P, VWR Metrics[2]")' selected='true' fallback='true'></accessor>
-        <accessor type='AttrClass' value=' span("vendor-option")' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value=' byXPath("//mat-checkbox[@id=&apos;mat-checkbox-41&apos;]/label/span[2]/span[2]")' selected='false' fallback='true'></accessor>
-        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/div[2]/mat-checkbox/label/span[2]/span[2]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-checkbox-41&apos;)/label[@class=&apos;mat-checkbox-layout&apos;]/span[@class=&apos;mat-checkbox-label&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value=' byJQuery(&apos;mat-checkbox[class="mat-checkbox large mat-accent ng-valid ng-dirty ng-touched"] &gt; label[class="mat-checkbox-layout"] &gt; span[class="mat-checkbox-label"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;#mat-checkbox-41 &gt; .mat-checkbox-layout &gt; .mat-checkbox-label &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e5f4a21d-c9fd-412d-b00e-e48906bdbcb8' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Exclude VWR, VWR3P, VWR Metrics&apos;)]/parent::span/preceding-sibling::span/input[@disabled=&apos;&apos;]")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//div[contains(@class,&apos;mat-excludeVWR&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeNonVwrVendor&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='eeeb0283-f79a-4d0d-8d37-4c10cc23b48a' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//div[contains(@class,&apos;mat-excludeVWR&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='35cef2b1-2319-4aca-bd36-e4fbc231cbf5' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;Vendor&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='eb46361b-785d-489a-81cc-cd9a03c0e4ea' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;Vendor&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='663bca53-2f42-4cf1-8219-6e2bb852dd30' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;VendorName&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5be53c94-0874-4e07-8d7b-aeeb400555f2' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;{VendorName}&apos;) and @class=&apos;vendor-option&apos;]")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;${VendorName}&apos;) and @class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeVWR&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//div[contains(@class,&apos;mat-excludeVWR&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d5d54aa5-eb27-4d15-b166-1d84480845a3' uiType='base'>
@@ -430,11 +389,6 @@
     </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f0f0a541-f467-4460-9f87-be88e49243b8' uiType='base'>
       <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e18dfd59-7178-4ea4-a4a1-f837b11f8c26' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Exclude Non VWR Vendor Integrations&apos;)]")' selected='true' fallback='true'></accessor>
-      </dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8f911675-d8c3-4e35-a13d-862801737fc7' uiType='base'>
       <dialect type='sahi'>
@@ -458,34 +412,6 @@
         <accessor type='JQuery' value='byJQuery(&apos;#mat-option-155 &gt; .mat-option-text &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='store' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='77bdbdc8-bf57-4505-b146-52f3ce53e0b6' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' //span[contains(text(),&apos;Temp&apos;)]/following::button[2].replace("Temp",Value1)' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value='' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='58cc588f-401a-466a-89e6-0b038cc05ef4' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e5550f1a-e156-407d-99f8-0c3d1e3b6756' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;${StockRoomName}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;{StockRoomName}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;{ConsumptionStockroom}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),{ConsumptionStockroom})]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),${ConsumptionStockroom})]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),"${ConsumptionStockroom}")]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;${ConsumptionStockroom}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;${ConsumptionOrg}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;{ConsumptionOrg}&apos;)]/parent::span/preceding-sibling::mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='699ec381-2303-4dba-9a9e-50970ed1a70c' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXpath("//span[contains(text(),&apos;${StockRoomName}&apos;)]/ancestor::mat-option")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXpath("//span[contains(text(),&apos;{StockRoomName}&apos;)]/ancestor::mat-option")' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b1a99bb5-f808-488a-ad07-506b7752342a' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
@@ -507,10 +433,24 @@
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;PDF OUTPUT&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d6ce727c-c66c-4e57-84af-69c4df46563d' uiType='base'>
+    <step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='21fdd6f0-10ac-4727-81aa-6043a28618a9' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f93db982-b29b-4cb1-b3e5-dd5306f6e575' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64db9b2d-8ea2-450d-854e-4c8c5a664fa6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;Vendor&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cb40bc5a-5524-4b4c-90e4-be5929809f6d' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;{VendorName}&apos;) and @class=&apos;vendor-option&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;${VendorName}&apos;) and @class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b43b48fc-d47b-4530-a124-6e3f89c61459' uiType='base'>

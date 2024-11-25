@@ -27,8 +27,7 @@
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='AttrClass' value='span(&quot;cart-request-quote-icon&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='span(&quot;Request a Quote&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='span(&quot;Request a Quote&quot;)' fallback='true' selected='true'/>
    <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cart-request-quote-icon&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Request a Quote&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/div[2]/div/div/span[2]&apos;)' fallback='true' selected='false'/>
@@ -36,6 +35,7 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;TopContent has-components&apos;]/app-avtr-cart-details[1]/div[@class=&apos;d-flex mt-2 cart-header-wrapper ng-star-inserted&apos;]/div[@class=&apos;cart-header-options pl-3&apos;]/div[@class=&apos;cursor-pointer mb-2 ng-star-inserted&apos;]/span[@class=&apos;cart-request-quote-icon&apos;]&quot;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;.d-flex.mt-2.cart-header-wrapper.ng-star-inserted &gt; .cart-header-options.pl-3 &gt; .cursor-pointer.mb-2.ng-star-inserted &gt; .cart-request-quote-icon&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;d-flex mt-2 cart-header-wrapper ng-star-inserted&quot;] &gt; div[class=&quot;cart-header-options pl-3&quot;] &gt; div[class=&quot;cursor-pointer mb-2 ng-star-inserted&quot;] &gt; span[class=&quot;cart-request-quote-icon&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;cart-request-quote-icon&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

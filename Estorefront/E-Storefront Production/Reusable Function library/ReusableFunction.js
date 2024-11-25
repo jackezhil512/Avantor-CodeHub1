@@ -453,7 +453,9 @@ setShadowDOM(true);
  wait(5000);
  click(fallback(`link("Custom Catalogs")`));
   wait(10000);
-click(fallback(`link("QA Automation CC")`));
+//click(fallback(`link("QA Automation CC")`));
+click(fallback(`link("Beaker CC CC")`));
+//Beaker CC CC
 click(fallback(`heading1("Custom Catalog Details")`));
 click(fallback(`button("+")`));
 click(fallback(`submit("Add To Cart")`));

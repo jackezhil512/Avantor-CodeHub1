@@ -81,7 +81,7 @@
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div/div/div[5]/strong&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='Price' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Price' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[1]/div/div[5]/div&apos;)' fallback='true' selected='true'/>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;$42.15&quot;]&apos;).xy(0.66, 0.84 )' fallback='true' selected='false'/>

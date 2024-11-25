@@ -435,7 +435,8 @@
     </step>
     <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f93db982-b29b-4cb1-b3e5-dd5306f6e575' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//button[contains(@class, &apos;mat-button-disabled&apos;) and contains(text(), &apos;Next&apos;)]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//button[contains(@class,&apos;mat-button-disabled&apos;) and contains(text(), &apos;Next&apos;)]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//button[contains(@class, &apos;mat-button-disabled&apos;) and contains(text(), &apos;Next&apos;)]")' selected='false' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("//button[text()= &apos;Next&apos; and contains(@class,&apos;mat-button-disabled&apos;)]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>

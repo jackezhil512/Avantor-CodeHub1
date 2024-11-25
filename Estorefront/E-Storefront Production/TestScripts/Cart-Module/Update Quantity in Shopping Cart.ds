@@ -92,12 +92,22 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='verifyGreaterThan' value='PriceBeforeQty' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='verifyGreaterThan' value='PriceBeforeQty' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='PriceAfterUpdateQty' fallback='true' selected='true'/>
    <accessor type='unknown' value='PriceAfterUpdateQty' fallback='true' selected='false'/>
    <accessor type='unknown' value='PriceBeforeQty' fallback='true' selected='false'/>
    <accessor type='unknown' value='int(PriceBeforeQty)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='PriceAfterUpdateQty' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='verifyGreaterThan' value='PriceBeforeQty' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='PriceAfQty' fallback='true' selected='true'/>
+   <accessor type='unknown' value='PriceAfterUpdateQty' fallback='true' selected='false'/>
+   <accessor type='unknown' value='PriceBeforeQty' fallback='true' selected='false'/>
+   <accessor type='unknown' value='int(PriceBeforeQty)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='PriceAfterUpdateQty' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

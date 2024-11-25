@@ -85,9 +85,9 @@
    <accessor type='unknown' value='AfterUpdateQtyPrice' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='BeforeQtyPrice.substring(BeforeQtyPrice.lastIndexOf(&quot;$&quot;)+1)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
+   <accessor type='unknown' value='' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='assertGreaterThan' value='BeforeQtyPrice' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

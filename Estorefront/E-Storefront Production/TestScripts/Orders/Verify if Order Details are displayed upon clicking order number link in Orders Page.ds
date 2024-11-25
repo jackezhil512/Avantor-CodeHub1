@@ -38,6 +38,23 @@
    <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/orders&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='div(&quot;8612807522[1]&quot;).xy(0.55, 0.77 )' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-order-history/div/div/div[4]/app-order-history-list[1]/div/div[1]/div[2]/div&apos;).xy(0.55, 0.77 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[4]/app-order-history-list/div/div/div[2]/div&apos;).xy(0.55, 0.77 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-history[1]/div[@class=&apos;order-history&apos;]/div[@class=&apos;order-history-right&apos;]/div[4]/app-order-history-list[1]/div[1]/div[@class=&apos;row order-history-row-desktop&apos;]/div[@class=&apos;col-md-1 col-lg-1 col-xl-1 text-break pl-0&apos;]/div[1]&quot;).xy(0.55, 0.77 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='div(&quot;Order#[1]&quot;).xy(0.51, 0.35 )' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-order-history/div/div/div[3]/div[2]/div&apos;).xy(0.51, 0.35 )' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Order#&quot;]&apos;).xy(0.51, 0.35 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[3]/div[2]/div&apos;).xy(0.51, 0.35 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-history[1]/div[@class=&apos;order-history&apos;]/div[@class=&apos;order-history-right&apos;]/div[@class=&apos;row order-history-table-header&apos;]/div[@class=&apos;d-flex justify-content-between align-items-center col-md-1 col-lg-1 col-xl-1 text-break pl-0&apos;]/div[1]&quot;).xy(0.51, 0.35 )' fallback='true' selected='false'/>
+</dialect>
+</step>
 <step action='store' value='getText(byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[3]/app-order-history-list/div/div/div[4]&apos;).xy(0.18, 0.28 ))' type='web' desc='webtracking' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='WebTrackingNumber' fallback='true' selected='true'/>

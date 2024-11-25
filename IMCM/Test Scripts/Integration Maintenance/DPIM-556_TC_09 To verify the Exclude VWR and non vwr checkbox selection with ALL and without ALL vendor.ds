@@ -129,6 +129,41 @@
         <accessor type='unknown' value=' byXPath("//h4[contains(text(),&apos;Add New Integration&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e9615e8f-1663-464d-80fc-bb6ce08fd9e2' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeVWR&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='839cc219-a962-4d09-a80a-de3ad10ed925' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeNonVwrVendor&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4a0092d1-89b0-4d4a-9502-4044cf702656' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;Vendor&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='54be3024-2779-4931-bd37-ae14b4059d90' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;{VendorName}&apos;) and @class=&apos;vendor-option&apos;]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value=' "{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0d09f09a-e4da-4087-b584-96edb943693a' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//h4[contains(text(),&apos;Add New Integration&apos;)]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9d3973d6-81f4-4fcb-a70e-0dc66b5a45d0' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeVWR&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6eee829f-565d-4884-9a7f-93f5af666a56' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeNonVwrVendor&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b43b48fc-d47b-4530-a124-6e3f89c61459' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>

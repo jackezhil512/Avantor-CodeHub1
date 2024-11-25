@@ -433,14 +433,6 @@
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;PDF OUTPUT&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='store' value=' getAttribute(byXPath("(//div[contains(text(),&apos;Vendor&apos;)]/span/following::mat-select)[1]"),"disable")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='21fdd6f0-10ac-4727-81aa-6043a28618a9' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='NextDisabled' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='log' value='NextDisabled' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='46d778a1-7bd5-4f67-b4ed-1261bae6a7a1' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
     <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f93db982-b29b-4cb1-b3e5-dd5306f6e575' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//button[text()= &apos;Next&apos; and contains(@class,&apos;mat-button-disabled&apos;)]")' selected='true' fallback='true'></accessor>

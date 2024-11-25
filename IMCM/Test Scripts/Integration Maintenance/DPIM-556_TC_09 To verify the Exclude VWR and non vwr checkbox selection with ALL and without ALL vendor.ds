@@ -37,7 +37,8 @@
     </step>
     <step action='assertExists' value='' type='web' desc='verify Next Button Is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d8452606-f2e0-4d37-afa2-6eb22a941a48' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//button[contains(@class,&apos;mat-button-disabled&apos;)]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//button[contains(@class, &apos;mat-button-disabled&apos;) and @disabled=&apos;true&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//button[contains(@class,&apos;mat-button-disabled&apos;)]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='store' value=' "ALL"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5242d5fc-541e-4c3b-9073-0563ed000dc8' uiType='base'>

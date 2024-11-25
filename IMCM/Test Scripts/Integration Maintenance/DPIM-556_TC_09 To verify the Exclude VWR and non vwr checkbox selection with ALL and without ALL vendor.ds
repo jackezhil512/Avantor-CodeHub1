@@ -368,9 +368,10 @@
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;ADD NEW INTEGRATION&apos;)]/ancestor::button")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='verify exclude Non VWR is disabled' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e5f4a21d-c9fd-412d-b00e-e48906bdbcb8' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='verify exclude Non VWR is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e5f4a21d-c9fd-412d-b00e-e48906bdbcb8' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeNonVwrVendor&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//button[contains(@class, &apos;mat-button-disabled&apos;)]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeNonVwrVendor&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='eeeb0283-f79a-4d0d-8d37-4c10cc23b48a' uiType='base'>

@@ -99,7 +99,7 @@
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[3]/app-order-history-list/div/div/div[8]/div&apos;).xy(0.30, 0.27 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='ordernumner' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='ordernumner' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='link(&quot;cx-link&quot;)' fallback='true' selected='true'/>
    <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/sapOrderDetails?orderDetailsToken=8D6390E39A5B8F2514D75123C8539940&quot;)' fallback='true' selected='false'/>
@@ -114,15 +114,6 @@
    <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/sapOrderDetails?orderDetailsToken=8D6390E39A5B8F2514D75123C8539940&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='heading4(&quot;Shipping&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[3]/div[1]/h4&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Shipping&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div[3]/div/h4&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-approval-order-details[1]/div[@class=&apos;container p-0&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;order-details-container font-description col-lg-9 col-sm-12 p-0&apos;]/div[@class=&apos;shipping-payment-container container-fluid p-2 pl-3 d-flex pt-4&apos;]/div[@class=&apos;col-sm-6 p-0&apos;]/h4[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
 <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;container p-0&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;order-details-container font-description col-lg-9 col-sm-12 p-0&quot;] &gt; div[class=&quot;desktop-only text-break&quot;] &gt; div[class=&quot;d-flex justify-content-between order-detail-box&quot;]&apos;).xy(0.22, 0.38 )' fallback='true' selected='true'/>
@@ -134,7 +125,7 @@
    <accessor type='AttrClass' value='div(&quot;d-flex justify-content-between order-detail-box&quot;).xy(0.22, 0.38 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='div(&quot;8612843333&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[1]/div/div[2]/div&apos;).xy(0.43, 0.47 )' fallback='true' selected='false'/>

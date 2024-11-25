@@ -191,8 +191,8 @@ setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',
  click(fallback(`heading2(1, _in(section({'aria-label':'Product Results List'})))`));
   //click(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-product-lists/div/section/div/div/div[2]/div[2]/app-avtr-product-list-item/div/div[2]/a/h2')`));
   //assertExists(fallback(`heading6("About this item")`));
-  //assertExists(fallback(`byXPath('//*[text()="About this item "]')`));
-   assertExists(fallback(`byXPath('//*[text()="Related Information "]')`));
+  assertExists(fallback(`byXPath('//*[text()="About this item "]')`));
+   //assertExists(fallback(`byXPath('//*[text()="Related Information "]')`));
 }
 function ProductPageValidationAdditemToBasket(){
   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');

@@ -193,9 +193,47 @@
         <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='selectWindow' value=' "Avantor Inventory Manager"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6a16f483-286e-4af4-9ec6-31cf05b08d66' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='' value='' selected='true' fallback='false'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5fa011aa-ceeb-4a5f-b33b-312b301ecd63' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value=' span("Exclude VWR, VWR3P, VWR Metrics[2]")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' span("vendor-option")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//mat-checkbox[@id=&apos;mat-checkbox-41&apos;]/label/span[2]/span[2]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/div[2]/mat-checkbox/label/span[2]/span[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-checkbox-41&apos;)/label[@class=&apos;mat-checkbox-layout&apos;]/span[@class=&apos;mat-checkbox-label&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;mat-checkbox[class="mat-checkbox large mat-accent ng-untouched ng-pristine ng-valid"] &gt; label[class="mat-checkbox-layout"] &gt; span[class="mat-checkbox-label"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-checkbox-41 &gt; .mat-checkbox-layout &gt; .mat-checkbox-label &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fb63319e-fcd4-4084-a58f-eff94f290fc7' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value=' span("vendor-option")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//mat-checkbox[@id=&apos;mat-checkbox-42&apos;]/label/span[2]/span[2]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/div[2]/mat-checkbox[2]/label/span[2]/span[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-checkbox-42&apos;)/label[@class=&apos;mat-checkbox-layout&apos;]/span[@class=&apos;mat-checkbox-label&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;mat-checkbox[class="mat-checkbox large pb-2 mat-accent ng-untouched ng-pristine ng-valid"] &gt; label[class="mat-checkbox-layout"] &gt; span[class="mat-checkbox-label"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-checkbox-42 &gt; .mat-checkbox-layout &gt; .mat-checkbox-label &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64db9b2d-8ea2-450d-854e-4c8c5a664fa6' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;Vendor&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='082d7d73-49b2-4dae-9888-ff07e6005d44' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value=' span("vendor-option vendor-option-selected[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//mat-checkbox[@id=&apos;mat-checkbox-42&apos;]/label/span[2]/span[2]")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/div[2]/mat-checkbox[2]/label/span[2]/span[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-checkbox-42&apos;)/label[@class=&apos;mat-checkbox-layout&apos;]/span[@class=&apos;mat-checkbox-label&apos;]/span[@class=&apos;vendor-option vendor-option-selected&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;mat-checkbox[class="mat-checkbox large pb-2 mat-accent ng-valid mat-checkbox-checked ng-dirty ng-touched"] &gt; label[class="mat-checkbox-layout"] &gt; span[class="mat-checkbox-label"] &gt; span[class="vendor-option vendor-option-selected"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-checkbox-42 &gt; .mat-checkbox-layout &gt; .mat-checkbox-label &gt; .vendor-option.vendor-option-selected&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cb40bc5a-5524-4b4c-90e4-be5929809f6d' uiType='base'>

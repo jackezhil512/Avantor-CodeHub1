@@ -245,12 +245,9 @@
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Save&apos;)]/parent::span&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Integration created successfully &quot;]&apos;).xy(0.25, 0.98 )' fallback='true' selected='true'/>
-   <accessor type='Parent' value='div(7, _in(div({&apos;id&apos;:&apos;cdk-overlay-11&apos;}))).xy(0.25, 0.98 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;title&quot;).xy(0.25, 0.98 )' fallback='true' selected='false'/>
-   <accessor type='Text' value='div(&quot;Integration created successfully[3]&quot;).xy(0.25, 0.98 )' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

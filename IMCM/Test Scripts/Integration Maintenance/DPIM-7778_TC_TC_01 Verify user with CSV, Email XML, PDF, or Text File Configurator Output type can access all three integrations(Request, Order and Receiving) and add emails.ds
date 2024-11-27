@@ -125,9 +125,9 @@
         <accessor type='unknown' value='' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='Click on "Select vendpr"' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a69af049-3a20-4437-bf07-058167bc62e5' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5077b979-7aa6-4111-b252-a9152d5a418d' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' span("Select Vendor")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//mat-select[@formcontrolname=&apos;vendor&apos;]/div[contains(@class, &apos;mat-select-trigger&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='setValue' value='VendorName1' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='71140832-d0f0-41bd-a519-f92e33fae231' uiType='base'>

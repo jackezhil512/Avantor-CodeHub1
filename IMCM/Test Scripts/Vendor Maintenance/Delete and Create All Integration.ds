@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'DPIM 7742 TC_04 To verify whether user able to update integration email for a vendor through view mode menu and check whether it is retained in View mode and reflects in integration module.ds' description= '' author= 'null' version= ''>
+<testcase   name= 'Delete and Create All Integration.ds' description= '' author= 'null' version= ''>
 <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
@@ -52,13 +52,11 @@
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//img[@src=&apos;/assets/icons/delete.svg&apos;]/ancestor::button&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Yes&apos;)]/parent::button&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
 </dialect>
 </step>
 <step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

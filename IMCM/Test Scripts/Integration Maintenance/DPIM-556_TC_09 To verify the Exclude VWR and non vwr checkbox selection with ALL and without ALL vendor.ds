@@ -229,7 +229,6 @@
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bcdcbabc-2e03-454a-b544-f7d09f1abe91' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;{VendorName1}&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;Vendor&apos;)]/span/following::mat-select)[1]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='setValue' value='VendorName1' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='017df8a2-c0ce-4f13-9738-9a1e0dc9547a' uiType='base'>
@@ -251,7 +250,7 @@
         <accessor type='JQuery' value='byJQuery(&apos;#mat-option-424 &gt; .mat-pseudo-checkbox.mat-option-pseudo-checkbox.ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='34cf2fb8-8244-4e98-b8e1-a9f6fa616599' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='34cf2fb8-8244-4e98-b8e1-a9f6fa616599' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Text' value=' span("Automation[1]")' selected='true' fallback='true'></accessor>
         <accessor type='Parent' value=' span(1, _in(custom("mat-option", "mat-option-159")))' selected='false' fallback='true'></accessor>
@@ -266,9 +265,15 @@
         <accessor type='JQuery' value='byJQuery(&apos;#mat-option-159 &gt; .mat-option-text &gt; .vendor-option.vendor-option-selected&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='selectWindow' value=' "Avantor Inventory Manager"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7588fc98-8836-407e-b828-492d6166bf31' uiType='base'>
+    <step action='selectWindow' value=' "Avantor Inventory Manager"' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7588fc98-8836-407e-b828-492d6166bf31' uiType='base'>
       <dialect type='sahi'>
         <accessor type='' value='' selected='true' fallback='false'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b7373e0d-654b-4344-9506-0bb0dbc6e076' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[text()=&apos;Automation&apos;]/preceding-sibling::input[@type=&apos;checkbox&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;{VendorName1}&apos;)]/span/following::mat-select)[1]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='setValue' value='VendorName' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='467eb0da-0590-48db-82f8-faaec1f08454' uiType='base'>

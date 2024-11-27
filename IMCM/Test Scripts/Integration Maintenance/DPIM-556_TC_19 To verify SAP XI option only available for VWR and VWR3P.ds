@@ -106,15 +106,30 @@
         <accessor type='JQuery' value='byJQuery(&apos;#mat-option-157 &gt; .mat-option-text &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c0fa1589-043d-4976-a4eb-9d337a62c0d4' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='96f1d157-b064-4919-ac10-bc4f991b023a' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value=' span("ALL[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value=' span(1, _in(custom("mat-option", "mat-option-157")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value=' span(1, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-157&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' span("vendor-option")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//mat-option[@id=&apos;mat-option-157&apos;]/span/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()=" ALL "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-option-157&apos;)/span[@class=&apos;mat-option-text&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;div[class="ng-tns-c89-100 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; div[class="ng-tns-c89-100"] &gt; mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted mat-active"] &gt; span[class="mat-option-text"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-157 &gt; .mat-option-text &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='store' value=' "ALL"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5242d5fc-541e-4c3b-9073-0563ed000dc8' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='VendorName' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value='V' selected='false' fallback='true'></accessor>
         <accessor type='unknown' value='' selected='false' fallback='true'></accessor>
       </dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ff907029-88e5-476d-a2e9-53bb6c80332c' uiType='base'>
-      <dialect type='sahi'></dialect>
     </step>
     <step action='store' value=' "ALL"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64c4e0a3-73bf-41bb-8338-2beaf570b1c1' uiType='base'>
       <dialect type='sahi'>

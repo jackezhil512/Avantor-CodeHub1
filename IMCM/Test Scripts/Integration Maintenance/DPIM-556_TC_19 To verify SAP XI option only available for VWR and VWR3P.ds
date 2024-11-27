@@ -196,7 +196,7 @@
         <accessor type='unknown' value=' span("Select Vendor")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d78d9716-5992-4f28-8919-d90ec6cc6ae5' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d78d9716-5992-4f28-8919-d90ec6cc6ae5' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Text' value=' span("Automation[1]")' selected='true' fallback='true'></accessor>
         <accessor type='Parent' value=' span(1, _in(custom("mat-option", "mat-option-159")))' selected='false' fallback='true'></accessor>
@@ -209,6 +209,11 @@
         <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-option-159&apos;)/span[@class=&apos;mat-option-text&apos;]/span[@class=&apos;vendor-option vendor-option-selected&apos;]")' selected='false' fallback='true'></accessor>
         <accessor type='JQuery' value=' byJQuery(&apos;div[class="ng-tns-c89-100 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; div[class="ng-tns-c89-100"] &gt; mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted mat-selected"] &gt; span[class="mat-option-text"] &gt; span[class="vendor-option vendor-option-selected"]&apos;)' selected='false' fallback='true'></accessor>
         <accessor type='JQuery' value='byJQuery(&apos;#mat-option-159 &gt; .mat-option-text &gt; .vendor-option.vendor-option-selected&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6629fd8a-c912-475b-983c-042fb8928023' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//mat-select[@formcontrolname=&apos;vendor&apos;]/div[contains(@class, &apos;mat-select-trigger&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='setValue' value='VendorName1' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='017df8a2-c0ce-4f13-9738-9a1e0dc9547a' uiType='base'>

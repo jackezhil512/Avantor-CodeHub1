@@ -233,6 +233,16 @@
         <accessor type='JQuery' value='byJQuery(&apos;#mat-option-424 &gt; .mat-pseudo-checkbox.mat-option-pseudo-checkbox.ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='setValue' value=' "{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fe0bd3c6-5b2f-443f-a5f2-2369976595ea' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//h4[contains(text(),&apos;Add New Integration&apos;)]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='Verify SAP Xi is disabled and grayed out' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e69588f5-c6f5-453e-b6ab-d0703020b2b5' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXpath("//span[@class=&apos;vendor-disabled&apos; and text()=&apos; SAP XI &apos;]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5dab6265-0f88-45d9-ad84-65396c63b9f6' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>

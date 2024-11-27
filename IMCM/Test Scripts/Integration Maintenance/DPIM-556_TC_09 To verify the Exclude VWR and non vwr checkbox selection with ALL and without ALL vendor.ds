@@ -241,11 +241,6 @@
         <accessor type='JQuery' value='byJQuery(&apos;#mat-option-159 &gt; .mat-option-text &gt; .vendor-option.vendor-option-selected&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bcdcbabc-2e03-454a-b544-f7d09f1abe91' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;{VendorName1}&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
     <step action='setValue' value='VendorName1' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='017df8a2-c0ce-4f13-9738-9a1e0dc9547a' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath(&apos;//input[@placeholder="Search Vendor "]&apos;)' selected='true' fallback='true'></accessor>
@@ -255,45 +250,6 @@
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//mat-pseudo-checkbox[contains(@class,&apos;mat-pseudo-checkbox-checked&apos;)]")' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value=' "byXPath("//mat-pseudo-checkbox[contains(@class,&apos;mat-pseudo-checkbox-checked&apos;)]")' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;{VendorName1}&apos;)]/span/following::mat-select)[1]")' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1b9a9bee-385f-4819-a702-40139d26fa2e' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='Parent' value=' custom("mat-pseudo-checkbox", 0, _in(custom("mat-option", "mat-option-159")))' selected='true' fallback='true'></accessor>
-        <accessor type='Parent' value=' custom("mat-pseudo-checkbox", 0, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-159&apos;})))' selected='false' fallback='true'></accessor>
-        <accessor type='AttrClass' value=' custom("mat-pseudo-checkbox", "mat-option-pseudo-checkbox mat-pseudo-checkbox mat-pseudo-checkbox-checked ng-star-inserted")' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value=' byXPath("//mat-option[@id=&apos;mat-option-159&apos;]/mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
-        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted mat-pseudo-checkbox-checked"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option/mat-pseudo-checkbox&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-option-159&apos;)/mat-pseudo-checkbox[@class=&apos;mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted mat-pseudo-checkbox-checked&apos;]")' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value=' byJQuery(&apos;div[class="mat-select-panel-wrap ng-tns-c89-100 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted"] &gt; div[class="ng-tns-c89-100 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; div[class="ng-tns-c89-100"] &gt; mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted mat-selected"] &gt; mat-pseudo-checkbox[class="mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted mat-pseudo-checkbox-checked"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-159 &gt; .mat-pseudo-checkbox.mat-option-pseudo-checkbox.ng-star-inserted.mat-pseudo-checkbox-checked&apos;)' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='Select First check box' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ac5a7fe5-10a8-4a56-be38-1a3b8cc0fe6a' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' custom("mat-pseudo-checkbox", 1, _in(custom("mat-option", "mat-option-424")))' selected='true' fallback='true'></accessor>
-        <accessor type='Parent' value=' custom("mat-pseudo-checkbox", 0, _in(custom("mat-option", "mat-option-424")))' selected='false' fallback='true'></accessor>
-        <accessor type='Parent' value=' custom("mat-pseudo-checkbox", 0, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-424&apos;})))' selected='false' fallback='true'></accessor>
-        <accessor type='AttrClass' value=' custom("mat-pseudo-checkbox", "mat-option-pseudo-checkbox mat-pseudo-checkbox ng-star-inserted")' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value=' byXPath("//mat-option[@id=&apos;mat-option-424&apos;]/mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
-        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option/mat-pseudo-checkbox&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-option-424&apos;)/mat-pseudo-checkbox[@class=&apos;mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value=' byJQuery(&apos;div[class="mat-select-panel-wrap ng-tns-c89-231 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted"] &gt; div[class="ng-tns-c89-231 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; div[class="ng-tns-c89-231"] &gt; mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted"] &gt; mat-pseudo-checkbox[class="mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-424 &gt; .mat-pseudo-checkbox.mat-option-pseudo-checkbox.ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='selectWindow' value=' "Avantor Inventory Manager"' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7588fc98-8836-407e-b828-492d6166bf31' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='' value='' selected='true' fallback='false'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b7373e0d-654b-4344-9506-0bb0dbc6e076' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[text()=&apos;Automation&apos;]")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[text()=&apos;Automation&apos;]/preceding-sibling::input[@type=&apos;checkbox&apos;]")' selected='false' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;{VendorName1}&apos;)]/span/following::mat-select)[1]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
@@ -340,22 +296,22 @@
         <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeNonVwrVendor&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4a0092d1-89b0-4d4a-9502-4044cf702656' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4a0092d1-89b0-4d4a-9502-4044cf702656' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;Vendor&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='54be3024-2779-4931-bd37-ae14b4059d90' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='54be3024-2779-4931-bd37-ae14b4059d90' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;{VendorName}&apos;) and @class=&apos;vendor-option&apos;]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='setValue' value=' "{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0d09f09a-e4da-4087-b584-96edb943693a' uiType='base'>
+    <step action='setValue' value=' "{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0d09f09a-e4da-4087-b584-96edb943693a' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//h4[contains(text(),&apos;Add New Integration&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9d3973d6-81f4-4fcb-a70e-0dc66b5a45d0' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='true' indentLevel='0' isVisible='true' parentId='' uid='9d3973d6-81f4-4fcb-a70e-0dc66b5a45d0' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeVWR&apos; and contains(@class,&apos;mat-checkbox&apos;)]")' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeVWR&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='false' fallback='true'></accessor>

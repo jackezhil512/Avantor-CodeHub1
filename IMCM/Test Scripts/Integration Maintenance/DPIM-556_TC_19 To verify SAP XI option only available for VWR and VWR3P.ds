@@ -696,13 +696,13 @@
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5a98d672-6e96-4084-b738-d57b74aa458d' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='store' value=' getText(byXPath("(//td[contains(@class,&apos;mat-column-vendorData&apos;)])[1]"))' type='web' desc='Get Vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='91e6f6e2-1be5-4ff9-be68-11af47ff8931' uiType='base'>
+    <step action='store' value=' getText(byXPath("(//td[contains(@class,&apos;mat-column-vendorData&apos;)])[1]"))' type='web' desc='Get Vendor Name' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='91e6f6e2-1be5-4ff9-be68-11af47ff8931' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='VendorNameInFirstRow' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value='VendorName' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='assertEqual' value='VendorName' type='web' desc='verify updfated and searched vendor results are same or not?' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64ce3165-2093-4595-9060-0a58c40bb61c' uiType='base'>
+    <step action='assertEqual' value='VendorName' type='web' desc='verify updfated and searched vendor results are same or not?' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64ce3165-2093-4595-9060-0a58c40bb61c' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='VendorNameInFirstRow' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value='VendorName' selected='false' fallback='true'></accessor>

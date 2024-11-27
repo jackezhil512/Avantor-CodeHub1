@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
   <testcase name='' description='script generated from Web Designer' author='Harish@avantorsciences.com' version='webDesigner'>
-    <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep01' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'></dpl>
     <fallback useFallback='true'></fallback>
     <shadowDOM useShadowDOM='true'></shadowDOM>
     <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9ab37f6b-ef87-4616-8f6a-41ed490cb85c' uiType='base'>
@@ -158,6 +158,14 @@
         <accessor type='unknown' value='' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='store' value=' "VWR3P"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c7857bee-1e4c-49c7-acdb-6db5940a6872' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='VendorName1' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='VendorName' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='V' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='click' value='' type='web' desc='Click on Select Stockroom' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f5b3ba75-1459-4e0c-a14a-68149441c25f' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' span("Select Stockroom")' selected='true' fallback='true'></accessor>
@@ -305,7 +313,7 @@
         <accessor type='unknown' value=' byXPath("//h4[contains(text(),&apos;Add New Integration&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='10e38367-912b-48d8-acbb-67258a657f70' uiType='base'>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='true' indentLevel='0' isVisible='true' parentId='' uid='10e38367-912b-48d8-acbb-67258a657f70' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6f1416fc-de96-4f8f-b18c-d7f0e8fee442' uiType='base'>

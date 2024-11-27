@@ -696,6 +696,57 @@
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5a98d672-6e96-4084-b738-d57b74aa458d' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e4507746-1dc6-44b9-ad9b-af1e26820ec2' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value=' link("2")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' link("cursor-pointer")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[1]/div/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="cursor-pointer"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()=" 2 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr/td/div/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col customTable&apos;]/avantor-table[@class=&apos;table-container fullWidth ng-tns-c329-93 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c329-93&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c329-93 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c329-93 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-vendorData mat-column-vendorData ng-tns-c329-93 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-left&apos;]/div[@class=&apos;w-100 px-3 ng-star-inserted&apos;]/a[@class=&apos;cursor-pointer&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value=' byXPath(&apos;//tbody//tr[1]//td[1]//div//a[@class="cursor-pointer"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value=' byXPath(&apos;//tbody//tr[1]//td[1]//div//a[text()=" 2 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;tr[class="mat-row cdk-row ng-tns-c329-93 striped-rows ng-star-inserted"] &gt; td[class="mat-cell cdk-cell cdk-column-vendorData mat-column-vendorData ng-tns-c329-93 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-left"] &gt; div[class="w-100 px-3 ng-star-inserted"] &gt; a[class="cursor-pointer"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c329-93.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-vendorData.mat-column-vendorData.ng-tns-c329-93.ng-star-inserted.mat-table-sticky.mat-table-sticky-border-elem-left &gt; .w-100.px-3.ng-star-inserted &gt; .cursor-pointer&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8a07b296-beac-4096-a3b4-2d11dc810c38' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='verify integration output SAP XI selected successfully' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='29a1bbf8-14ae-4d16-a25f-be231eeeeee9' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value=' span("SAP XI[2]")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' span("pl-2")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//mat-dialog-container[@id=&apos;mat-dialog-3&apos;]/app-view-details-model/div[2]/div[1]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="pl-2"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-view-details-model/div[2]/div/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-dialog-3&apos;)/app-view-details-model[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-2 mt-2 d-flex justify-content-between align-items-center&apos;]/div[@class=&apos;d-flex align-items-center&apos;]/span[@class=&apos;pl-2&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;mat-dialog-container[class="mat-dialog-container ng-tns-c31-150 ng-trigger ng-trigger-dialogContainer ng-star-inserted"] &gt; app-view-details-model[class="ng-star-inserted"] &gt; div[class="px-2 mt-2 d-flex justify-content-between align-items-center"] &gt; div[class="d-flex align-items-center"] &gt; span[class="pl-2"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-dialog-3 &gt; .ng-star-inserted &gt; .px-2.mt-2.d-flex.justify-content-between.align-items-center &gt; .d-flex.align-items-center &gt; .pl-2&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='Verify Vendor VWR exist in vendor list' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5d444a96-549a-4608-9f89-b7dfba55e2af' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()=" VWR "]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' cell("ng-star-inserted")' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value=' cell("VWR")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//mat-dialog-container[@id=&apos;mat-dialog-3&apos;]/app-view-details-model/mat-dialog-content/table/tr[1]/td")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-view-details-model/mat-dialog-content/table/tr/td&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-dialog-3&apos;)/app-view-details-model[@class=&apos;ng-star-inserted&apos;]/mat-dialog-content[@class=&apos;mat-dialog-content&apos;]/table[@class=&apos;vendors-list&apos;]/tr[@class=&apos;vendor-row ng-star-inserted&apos;]/td[@class=&apos;ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;app-view-details-model[class="ng-star-inserted"] &gt; mat-dialog-content[class="mat-dialog-content"] &gt; table[class="vendors-list"] &gt; tr[class="vendor-row ng-star-inserted"] &gt; td[class="ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .mat-dialog-content &gt; .vendors-list &gt; .vendor-row.ng-star-inserted &gt; .ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='Verify Vendor VWR3P exist in vendor list' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='abc463cc-a82a-4b30-a8f4-c3426b3e3085' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()=" VWR3P "]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' cell("ng-star-inserted[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value=' cell("VWR3P")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//mat-dialog-container[@id=&apos;mat-dialog-3&apos;]/app-view-details-model/mat-dialog-content/table/tr[2]/td")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-view-details-model/mat-dialog-content/table/tr[2]/td&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='store' value=' getText(byXPath("(//td[contains(@class,&apos;mat-column-vendorData&apos;)])[1]"))' type='web' desc='Get Vendor Name' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='91e6f6e2-1be5-4ff9-be68-11af47ff8931' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='VendorNameInFirstRow' selected='true' fallback='true'></accessor>

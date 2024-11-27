@@ -1171,3 +1171,36 @@ wait(4000);
 click(fallback(`byXPath("//span[contains(text(),'Save')]/ancestor::button")`));
 assertExists(fallback(`byXPath('//*[text()=" Integration created successfully "]')`));
 }
+
+function IntegrationAndReviewTabs() {
+click(fallback(`byXPath("//span[contains(text(),'Request Integration')]/ancestor::label")`));
+wait(2000);
+click(fallback(`byXPath("(//span[contains(text(),'Request Integration') and @class='mat-checkbox-label']/following::div[contains(text(),'Add email')])[1]")`));
+wait(2000);
+var TempEmail=eval("'Auto'+ Math.floor(Math.random()*10000) + '@gmail.com'");
+log(TempEmail);
+setValue(fallback(`byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`,
+   `byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`,
+   `byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`),TempEmail);
+click(fallback(`byXPath("//mat-icon[text()='save']")`));
+click(fallback(`byXPath("//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']")`));
+click(fallback(`byXPath("(//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']/following::div[contains(text(),'Add email')])[1]")`));
+wait(2000);
+var TempEmail=eval("'Auto'+ Math.floor(Math.random()*10000) + '@gmail.com'");
+log(TempEmail);
+setValue(fallback(`byXPath("(//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']/following::input)[1]")`),TempEmail);
+click(fallback(`byXPath("//mat-icon[text()='save']")`));
+wait(2000);
+click(fallback(`byXPath("//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']")`));
+click(fallback(`byXPath("(//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']/following::div[contains(text(),'Add email')])[1]")`));
+wait(2000);
+var TempEmail=eval("'Auto'+ Math.floor(Math.random()*10000) + '@gmail.com'");
+log(TempEmail);
+setValue(fallback(`byXPath("(//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']/following::input)[1]")`),TempEmail);
+click(fallback(`byXPath("//mat-icon[text()='save']")`));
+wait(4000);
+click(fallback(`byXPath("(//span[contains(text(),'Next')]/ancestor::button)[2]")`));
+wait(4000);
+click(fallback(`byXPath("//span[contains(text(),'Save')]/ancestor::button")`));
+assertExists(fallback(`byXPath('//*[text()=" Integration created successfully "]')`));
+}

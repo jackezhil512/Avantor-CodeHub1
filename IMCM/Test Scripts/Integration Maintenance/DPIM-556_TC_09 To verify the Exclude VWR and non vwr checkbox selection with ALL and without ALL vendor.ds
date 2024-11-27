@@ -322,21 +322,6 @@
         <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeNonVwrVendor&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4a0092d1-89b0-4d4a-9502-4044cf702656' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;Vendor&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='54be3024-2779-4931-bd37-ae14b4059d90' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;{VendorName}&apos;) and @class=&apos;vendor-option&apos;]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='setValue' value=' "{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0d09f09a-e4da-4087-b584-96edb943693a' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//h4[contains(text(),&apos;Add New Integration&apos;)]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6f094054-fcd2-4d77-8e7d-6b572f9410dd' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Text' value=' span("Exclude VWR, VWR3P, VWR Metrics[2]")' selected='true' fallback='true'></accessor>
@@ -461,30 +446,10 @@
         <accessor type='unknown' value='VendorName' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='store' value=' getText(byXPath("(//td[contains(@class,&apos;mat-column-stockroomData&apos;)])[1]"))' type='web' desc='Get Stockroom Name' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3818c6e5-a172-4cf0-b062-ba384f7b6237' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='StockroomNameFirstRow' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value='StockroomName' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='store' value=' getText(byXPath("(//td[contains(@class,&apos;mat-column-requisitionEmailId&apos;)])[1]"))' type='web' desc='get email id' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9adbefe4-9833-498d-9d7d-fdb57bb4242e' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='EmailID' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e95c8a06-7d3d-4861-8369-070fef4a2a3e' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
     <step action='assertEqual' value='VendorName' type='web' desc='verify updfated and searched vendor results are same or not?' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64ce3165-2093-4595-9060-0a58c40bb61c' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='VendorNameInFirstRow' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value='VendorName' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='assertEqual' value='StockRoomName' type='web' desc='verify updfated and searched stockroom results are same or not?' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d61447d2-5f2e-4bfb-ae7e-5376b5610d04' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='StockroomNameFirstRow' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value='StockroomName' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
   </testcase>

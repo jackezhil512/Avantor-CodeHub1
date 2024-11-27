@@ -275,6 +275,108 @@
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0312ee76-486d-400a-9a92-49a9f0467d93' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a5ba17f8-237a-47ec-90bc-0959f6d6f806' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div[2]/button/span/div&apos;).xy(0.62, 0.61 )' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value=' div("add  Add email[1]").xy(0.62, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' div("align-items-center d-flex model-add-email[1]").xy(0.62, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[2]/button/span[1]/div").xy(0.62, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-invalid ng-dirty ng-touched&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/div[@class=&apos;row mb-5 ml-2 ng-untouched ng-invalid ng-dirty&apos;]/div[@class=&apos;col-md-12&apos;]/div[@class=&apos;mt-3 ng-untouched ng-pristine ng-valid&apos;]/button[@class=&apos;mat-focus-indicator p-0 d-flex align-items-center mat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/div[@class=&apos;d-flex align-items-center model-add-email&apos;]").xy(0.62, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;div[class="col-md-12"] &gt; div[class="mt-3 ng-untouched ng-pristine ng-valid"] &gt; button[class="mat-focus-indicator p-0 d-flex align-items-center mat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused"] &gt; span[class="mat-button-wrapper"] &gt; div[class="d-flex align-items-center model-add-email"]&apos;).xy(0.62, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.col-md-12 &gt; .mt-3.ng-untouched.ng-pristine.ng-valid &gt; .mat-focus-indicator.p-0.d-flex.align-items-center.mat-button.mat-button-base.mat-primary.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper &gt; .d-flex.align-items-center.model-add-email&apos;).xy(0.62, 0.61 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value=' "TempEmail"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='77278d24-eb0b-45c4-8436-c743bf22e876' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathId' value=' byXPath(&apos;//*[@id="mat-input-33"]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' textbox("cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-invalid ng-tns-c49-121 ng-untouched")' selected='false' fallback='true'></accessor>
+        <accessor type='Id' value=' textbox("mat-input-33")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//input[@id=&apos;mat-input-33&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-input-element mat-form-field-autofill-control ng-tns-c49-121 ng-untouched cdk-text-field-autofill-monitored ng-dirty ng-invalid"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div[2]/div[2]/div/mat-form-field/div/div/div[3]/input&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-input-33&apos;)")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;mat-form-field[class="mat-form-field w-50 ng-tns-c49-121 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-star-inserted mat-focused ng-dirty ng-invalid"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-121"] &gt; div[class="mat-form-field-flex ng-tns-c49-121"] &gt; div[class="mat-form-field-infix ng-tns-c49-121"] &gt; input[class="mat-input-element mat-form-field-autofill-control ng-tns-c49-121 ng-untouched cdk-text-field-autofill-monitored ng-dirty ng-invalid"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-input-33&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3f78afd6-9871-4cd3-a5e4-3de6c0ad8d5b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='JQuery' value='byJQuery(&apos;.ng-dirty.ng-touched.ng-valid &gt; .ng-star-inserted &gt; .d-flex.ng-star-inserted &gt; .mat-form-field.w-50.readonly.ng-tns-c49-122.mat-primary.mat-form-field-type-mat-input.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float.ng-dirty.ng-valid.ng-star-inserted.ng-touched &gt; .mat-form-field-wrapper.ng-tns-c49-122&apos;).xy(0.13, 1.00 )' selected='true' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-form-field-wrapper ng-tns-c49-122"]&apos;).xy(0.13, 1.00 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' div("mat-form-field-wrapper ng-tns-c49-122").xy(0.13, 1.00 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[1]/div[2]/div[1]/mat-form-field/div").xy(0.13, 1.00 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div/div[2]/div/mat-form-field/div&apos;).xy(0.13, 1.00 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-invalid ng-dirty ng-touched&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/div[@class=&apos;row mb-5 ml-2 ng-invalid ng-dirty ng-touched&apos;]/div[@class=&apos;col-md-12&apos;]/div[@class=&apos;ng-dirty ng-touched ng-valid&apos;]/div[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex ng-star-inserted&apos;]/mat-form-field[@class=&apos;mat-form-field w-50 readonly ng-tns-c49-122 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-dirty ng-valid ng-star-inserted ng-touched&apos;]/div[@class=&apos;mat-form-field-wrapper ng-tns-c49-122&apos;]").xy(0.13, 1.00 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;div[class="ng-dirty ng-touched ng-valid"] &gt; div[class="ng-star-inserted"] &gt; div[class="d-flex ng-star-inserted"] &gt; mat-form-field[class="mat-form-field w-50 readonly ng-tns-c49-122 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-dirty ng-valid ng-star-inserted ng-touched"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-122"]&apos;).xy(0.13, 1.00 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cf3d8c09-9c49-4c8d-b0fa-2567016ad0cf' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value=' custom("mat-icon", "cancel")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' custom("mat-icon", "mat-icon mat-icon-no-color mat-remove-email material-icons notranslate[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[1]/div[3]/div[1]/span/span/mat-icon")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()="cancel"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div/div[3]/div/span/span/mat-icon&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='250102a9-44da-4250-ad7f-b102ca08d8ad' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='74a71cb7-72e6-448d-b16c-b1db5f2cce32' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div[2]/button/span/div&apos;).xy(0.62, 0.61 )' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value=' div("add  Add email[1]").xy(0.62, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' div("align-items-center d-flex model-add-email[1]").xy(0.62, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[2]/button/span[1]/div").xy(0.62, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-invalid ng-dirty ng-touched&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/div[@class=&apos;row mb-5 ml-2 ng-untouched ng-invalid ng-dirty&apos;]/div[@class=&apos;col-md-12&apos;]/div[@class=&apos;mt-3 ng-untouched ng-pristine ng-valid&apos;]/button[@class=&apos;mat-focus-indicator p-0 d-flex align-items-center mat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/div[@class=&apos;d-flex align-items-center model-add-email&apos;]").xy(0.62, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;div[class="col-md-12"] &gt; div[class="mt-3 ng-untouched ng-pristine ng-valid"] &gt; button[class="mat-focus-indicator p-0 d-flex align-items-center mat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused"] &gt; span[class="mat-button-wrapper"] &gt; div[class="d-flex align-items-center model-add-email"]&apos;).xy(0.62, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.col-md-12 &gt; .mt-3.ng-untouched.ng-pristine.ng-valid &gt; .mat-focus-indicator.p-0.d-flex.align-items-center.mat-button.mat-button-base.mat-primary.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper &gt; .d-flex.align-items-center.model-add-email&apos;).xy(0.62, 0.61 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value=' "Auto1212123@gmail.com"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a6425ba5-d0ff-4bc0-9498-054f9131486f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathId' value=' byXPath(&apos;//*[@id="mat-input-33"]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' textbox("cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-invalid ng-tns-c49-121 ng-untouched")' selected='false' fallback='true'></accessor>
+        <accessor type='Id' value=' textbox("mat-input-33")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//input[@id=&apos;mat-input-33&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-input-element mat-form-field-autofill-control ng-tns-c49-121 ng-untouched cdk-text-field-autofill-monitored ng-dirty ng-invalid"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div[2]/div[2]/div/mat-form-field/div/div/div[3]/input&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-input-33&apos;)")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;mat-form-field[class="mat-form-field w-50 ng-tns-c49-121 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-star-inserted mat-focused ng-dirty ng-invalid"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-121"] &gt; div[class="mat-form-field-flex ng-tns-c49-121"] &gt; div[class="mat-form-field-infix ng-tns-c49-121"] &gt; input[class="mat-input-element mat-form-field-autofill-control ng-tns-c49-121 ng-untouched cdk-text-field-autofill-monitored ng-dirty ng-invalid"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-input-33&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fb39b44c-bf9a-45bf-8e62-e717b423129a' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//mat-icon[text()=&apos;save&apos;]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9e265d57-50c0-417b-8a5c-a18ee0f00e67' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value=' custom("mat-icon", "mat-icon mat-primary material-icons mx-2 ng-star-inserted notranslate")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value=' custom("mat-icon", "save")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[2]/div[2]/div/span/span/span/mat-icon")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-icon notranslate mx-2 mat-primary material-icons ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()="save"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div[2]/div[2]/div/span/span/span/mat-icon&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-invalid ng-dirty ng-touched&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/div[@class=&apos;row mb-5 ml-2 ng-invalid ng-dirty ng-touched&apos;]/div[@class=&apos;col-md-12&apos;]/div[@class=&apos;mt-3 ng-dirty ng-valid ng-touched&apos;]/div[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex ng-star-inserted&apos;]/span[@class=&apos;mx-3 mt-1 d-flex align-items-center&apos;]/span[1]/span[@class=&apos;ng-star-inserted&apos;]/mat-icon[@class=&apos;mat-icon notranslate mx-2 mat-primary material-icons ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;span[class="ng-star-inserted"] &gt; mat-icon[class="mat-icon notranslate mx-2 mat-primary material-icons ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .mat-icon.notranslate.mx-2.mat-primary.material-icons.ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value=' "Auto7138@gmail.com"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='81a415f9-a478-4b00-9e05-78648426618e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathId' value=' byXPath(&apos;//*[@id="mat-input-33"]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' textbox("cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-invalid ng-tns-c49-121 ng-untouched")' selected='false' fallback='true'></accessor>
+        <accessor type='Id' value=' textbox("mat-input-33")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//input[@id=&apos;mat-input-33&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-input-element mat-form-field-autofill-control ng-tns-c49-121 ng-untouched cdk-text-field-autofill-monitored ng-dirty ng-invalid"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div[2]/div[2]/div/mat-form-field/div/div/div[3]/input&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-input-33&apos;)")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;mat-form-field[class="mat-form-field w-50 ng-tns-c49-121 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-star-inserted mat-focused ng-dirty ng-invalid"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-121"] &gt; div[class="mat-form-field-flex ng-tns-c49-121"] &gt; div[class="mat-form-field-infix ng-tns-c49-121"] &gt; input[class="mat-input-element mat-form-field-autofill-control ng-tns-c49-121 ng-untouched cdk-text-field-autofill-monitored ng-dirty ng-invalid"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-input-33&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ce4abdeb-72d3-4d2c-a74c-9c67dad5969e' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("(//label[contains(text(),&apos;CC Email&apos;)]/following::div[contains(text(),&apos;Add email&apos;)])[1]")' selected='true' fallback='true'></accessor>
@@ -282,6 +384,17 @@
     </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c07456c9-8795-47f5-91a2-95ca1dd5da92' uiType='base'>
       <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='645a769f-880e-4131-a00c-2c4562c73793' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-invalid ng-dirty ng-touched&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/div[@class=&apos;row mb-5 ml-2 ng-invalid ng-dirty ng-touched&apos;]/div[@class=&apos;col-md-12&apos;]/div[@class=&apos;mt-3 ng-dirty ng-valid ng-touched&apos;]/div[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex ng-star-inserted&apos;]/mat-form-field[@class=&apos;mat-form-field w-50 readonly ng-tns-c49-122 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-touched ng-dirty ng-valid ng-star-inserted mat-focused&apos;]/div[@class=&apos;mat-form-field-wrapper ng-tns-c49-122&apos;]/div[@class=&apos;mat-form-field-flex ng-tns-c49-122&apos;]/div[@class=&apos;mat-form-field-infix ng-tns-c49-122&apos;]").xy(0.16, 0.56 )' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' div("mat-form-field-infix ng-tns-c49-122").xy(0.16, 0.56 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[2]/div[2]/div/mat-form-field/div/div[1]/div[3]").xy(0.16, 0.56 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-form-field-infix ng-tns-c49-122"]&apos;).xy(0.16, 0.56 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div[2]/div[2]/div/mat-form-field/div/div/div[3]&apos;).xy(0.16, 0.56 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;div[class="d-flex ng-star-inserted"] &gt; mat-form-field[class="mat-form-field w-50 readonly ng-tns-c49-122 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-touched ng-dirty ng-valid ng-star-inserted mat-focused"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-122"] &gt; div[class="mat-form-field-flex ng-tns-c49-122"] &gt; div[class="mat-form-field-infix ng-tns-c49-122"]&apos;).xy(0.16, 0.56 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.d-flex.ng-star-inserted &gt; .mat-form-field.w-50.readonly.ng-tns-c49-122.mat-primary.mat-form-field-type-mat-input.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float.ng-touched.ng-dirty.ng-valid.ng-star-inserted.mat-focused &gt; .mat-form-field-wrapper.ng-tns-c49-122 &gt; .mat-form-field-flex.ng-tns-c49-122 &gt; .mat-form-field-infix.ng-tns-c49-122&apos;).xy(0.16, 0.56 )' selected='false' fallback='true'></accessor>
+      </dialect>
     </step>
     <step action='setValue' value='TempEmail' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c56f188c-0312-412b-95a5-d56945c80546' uiType='base'>
       <dialect type='sahi'>
@@ -337,13 +450,21 @@
         <accessor type='unknown' value=' byXPath("//div[@class=&apos;input-error ng-star-inserted&apos;")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='601ff181-438a-48cf-b740-275c99ec16d0' uiType='base'>
+    <step action='click' value='' type='web' desc='CC email created successfully' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8af7a5e7-e4de-4aaf-8584-180f702d3767' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[2]/div[2]/div/mat-form-field/div/div[1]/div[3]").xy(0.20, 0.51 )' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' div("mat-form-field-infix ng-tns-c49-122").xy(0.20, 0.51 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-form-field-infix ng-tns-c49-122"]&apos;).xy(0.20, 0.51 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div[2]/div[2]/div/mat-form-field/div/div/div[3]&apos;).xy(0.20, 0.51 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-invalid ng-dirty ng-touched&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/div[@class=&apos;row mb-5 ml-2 ng-invalid ng-dirty ng-touched&apos;]/div[@class=&apos;col-md-12&apos;]/div[@class=&apos;mt-3 ng-dirty ng-valid ng-touched&apos;]/div[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex ng-star-inserted&apos;]/mat-form-field[@class=&apos;mat-form-field w-50 readonly ng-tns-c49-122 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-touched ng-dirty ng-valid ng-star-inserted mat-focused&apos;]/div[@class=&apos;mat-form-field-wrapper ng-tns-c49-122&apos;]/div[@class=&apos;mat-form-field-flex ng-tns-c49-122&apos;]/div[@class=&apos;mat-form-field-infix ng-tns-c49-122&apos;]").xy(0.20, 0.51 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;div[class="d-flex ng-star-inserted"] &gt; mat-form-field[class="mat-form-field w-50 readonly ng-tns-c49-122 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-touched ng-dirty ng-valid ng-star-inserted mat-focused"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-122"] &gt; div[class="mat-form-field-flex ng-tns-c49-122"] &gt; div[class="mat-form-field-infix ng-tns-c49-122"]&apos;).xy(0.20, 0.51 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.d-flex.ng-star-inserted &gt; .mat-form-field.w-50.readonly.ng-tns-c49-122.mat-primary.mat-form-field-type-mat-input.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float.ng-touched.ng-dirty.ng-valid.ng-star-inserted.mat-focused &gt; .mat-form-field-wrapper.ng-tns-c49-122 &gt; .mat-form-field-flex.ng-tns-c49-122 &gt; .mat-form-field-infix.ng-tns-c49-122&apos;).xy(0.20, 0.51 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8a9f1cf3-231c-4dff-9782-e75a6f1a6541' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8a9f1cf3-231c-4dff-9782-e75a6f1a6541' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d9f8f461-9177-45d5-9b5a-bdd62edace04' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d9f8f461-9177-45d5-9b5a-bdd62edace04' uiType='base'>
       <dialect type='sahi'>
         <accessor type='AttrClass' value=' div("align-items-center d-flex model-add-email[1]").xy(0.42, -0.88 )' selected='true' fallback='true'></accessor>
         <accessor type='Text' value=' div("add  Add email[1]").xy(0.42, -0.88 )' selected='false' fallback='true'></accessor>
@@ -354,7 +475,7 @@
         <accessor type='JQuery' value='byJQuery(&apos;.col-md-12 &gt; .mt-3.ng-untouched.ng-pristine.ng-valid &gt; .mat-focus-indicator.p-0.d-flex.align-items-center.mat-button.mat-button-base.mat-primary.mat-button-disabled &gt; .mat-button-wrapper &gt; .d-flex.align-items-center.model-add-email&apos;).xy(0.42, -0.88 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='526f08cd-a232-40fb-8bbc-4126b8ba9b3f' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='526f08cd-a232-40fb-8bbc-4126b8ba9b3f' uiType='base'>
       <dialect type='sahi'>
         <accessor type='AttrClass' value=' custom("mat-icon", "mat-icon mat-icon-no-color mat-remove-email material-icons notranslate[2]")' selected='true' fallback='true'></accessor>
         <accessor type='Text' value=' custom("mat-icon", "cancel[1]")' selected='false' fallback='true'></accessor>
@@ -363,7 +484,7 @@
         <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-invalid ng-dirty ng-touched&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/div[@class=&apos;row mb-5 ml-2 ng-invalid ng-dirty ng-touched&apos;]/div[@class=&apos;col-md-12&apos;]/div[@class=&apos;mt-3 ng-untouched ng-pristine ng-valid&apos;]/div[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex ng-star-inserted&apos;]/span[@class=&apos;mx-3 mt-1 d-flex align-items-center&apos;]/span[1]/mat-icon[@class=&apos;mat-icon notranslate mat-remove-email material-icons mat-icon-no-color&apos;]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fd3e6377-f6e6-4b3b-baa0-889153b0052b' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fd3e6377-f6e6-4b3b-baa0-889153b0052b' uiType='base'>
       <dialect type='sahi'>
         <accessor type='AttrClass' value=' div("mat-form-field-infix ng-tns-c49-125")' selected='true' fallback='true'></accessor>
         <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[1]/div[3]/div/mat-form-field/div/div[1]/div[3]")' selected='false' fallback='true'></accessor>
@@ -374,7 +495,7 @@
         <accessor type='JQuery' value='byJQuery(&apos;.d-flex.ng-star-inserted &gt; .mat-form-field.w-50.ng-tns-c49-125.mat-primary.mat-form-field-type-mat-input.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float.ng-pristine.ng-invalid.ng-star-inserted.mat-form-field-invalid.ng-touched.mat-focused &gt; .mat-form-field-wrapper.ng-tns-c49-125 &gt; .mat-form-field-flex.ng-tns-c49-125 &gt; .mat-form-field-infix.ng-tns-c49-125&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='setValue' value=' "auto2915@gmail.com"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e20b30d5-1c10-4dc2-9bdd-5c86bb503d8d' uiType='base'>
+    <step action='setValue' value=' "auto2915@gmail.com"' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e20b30d5-1c10-4dc2-9bdd-5c86bb503d8d' uiType='base'>
       <dialect type='sahi'>
         <accessor type='XPathId' value=' byXPath(&apos;//*[@id="mat-input-34"]&apos;)' selected='true' fallback='true'></accessor>
         <accessor type='AttrClass' value=' textbox("cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-invalid ng-tns-c49-125 ng-touched")' selected='false' fallback='true'></accessor>
@@ -388,7 +509,7 @@
         <accessor type='JQuery' value='byJQuery(&apos;#mat-input-34&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d2ae70a7-b7a6-4c39-9f24-a825bd611c5d' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d2ae70a7-b7a6-4c39-9f24-a825bd611c5d' uiType='base'>
       <dialect type='sahi'>
         <accessor type='AttrClass' value=' div("align-items-center d-flex model-add-email[1]").xy(0.58, 0.39 )' selected='true' fallback='true'></accessor>
         <accessor type='Text' value=' div("add  Add email[1]").xy(0.58, 0.39 )' selected='false' fallback='true'></accessor>
@@ -399,7 +520,7 @@
         <accessor type='JQuery' value='byJQuery(&apos;.col-md-12 &gt; .mt-3.ng-untouched.ng-pristine.ng-valid &gt; .mat-focus-indicator.p-0.d-flex.align-items-center.mat-button.mat-button-base.mat-primary.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper &gt; .d-flex.align-items-center.model-add-email&apos;).xy(0.58, 0.39 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f32d7028-6000-4d4d-84c5-01c7259b438e' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f32d7028-6000-4d4d-84c5-01c7259b438e' uiType='base'>
       <dialect type='sahi'>
         <accessor type='AttrClass' value=' div("d-flex ng-star-inserted[2]")' selected='true' fallback='true'></accessor>
         <accessor type='Text' value=' div("cancel[1]")' selected='false' fallback='true'></accessor>
@@ -410,7 +531,7 @@
         <accessor type='JQuery' value='byJQuery(&apos;.row.mb-5.ml-2.ng-invalid.ng-dirty.ng-touched &gt; .col-md-12 &gt; .mt-3.ng-untouched.ng-pristine.ng-valid &gt; .ng-star-inserted &gt; .d-flex.ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7424c658-3021-48d1-8ed7-e0d09b16197b' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7424c658-3021-48d1-8ed7-e0d09b16197b' uiType='base'>
       <dialect type='sahi'>
         <accessor type='AttrClass' value=' div("mat-form-field-infix ng-tns-c49-125").xy(0.52, 0.55 )' selected='true' fallback='true'></accessor>
         <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[1]/div[3]/div[1]/mat-form-field/div/div[1]/div[3]").xy(0.52, 0.55 )' selected='false' fallback='true'></accessor>
@@ -421,7 +542,7 @@
         <accessor type='JQuery' value='byJQuery(&apos;.d-flex.ng-star-inserted &gt; .mat-form-field.w-50.ng-tns-c49-125.mat-primary.mat-form-field-type-mat-input.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float.ng-star-inserted.ng-touched.ng-dirty.ng-valid.mat-focused &gt; .mat-form-field-wrapper.ng-tns-c49-125 &gt; .mat-form-field-flex.ng-tns-c49-125 &gt; .mat-form-field-infix.ng-tns-c49-125&apos;).xy(0.52, 0.55 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='setValue' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9ed2131e-9f52-4768-9377-74c581f38c3b' uiType='base'>
+    <step action='setValue' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9ed2131e-9f52-4768-9377-74c581f38c3b' uiType='base'>
       <dialect type='sahi'>
         <accessor type='XPathId' value=' byXPath(&apos;//*[@id="mat-input-34"]&apos;)' selected='true' fallback='true'></accessor>
         <accessor type='AttrClass' value=' textbox("cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-invalid ng-tns-c49-125 ng-touched")' selected='false' fallback='true'></accessor>
@@ -453,7 +574,7 @@
         <accessor type='unknown' value='VendorName' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='setValue' value=' "Auto2915@gmail.com"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9b1ee203-4784-479e-9d4b-d67395d45f8e' uiType='base'>
+    <step action='setValue' value=' "Auto2915@gmail.com"' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9b1ee203-4784-479e-9d4b-d67395d45f8e' uiType='base'>
       <dialect type='sahi'>
         <accessor type='XPathId' value=' byXPath(&apos;//*[@id="mat-input-32"]&apos;)' selected='true' fallback='true'></accessor>
         <accessor type='AttrClass' value=' textbox("cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-tns-c49-123 ng-touched ng-valid")' selected='false' fallback='true'></accessor>
@@ -466,7 +587,7 @@
         <accessor type='JQuery' value='byJQuery(&apos;#mat-input-32&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='66a3225b-ef44-4251-b9d9-9998324024a1' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='66a3225b-ef44-4251-b9d9-9998324024a1' uiType='base'>
       <dialect type='sahi'>
         <accessor type='JQuery' value='byJQuery(&apos;.ng-dirty.ng-touched.ng-valid &gt; .ng-star-inserted &gt; .d-flex.ng-star-inserted &gt; .mat-form-field.w-50.readonly.ng-tns-c49-122.mat-primary.mat-form-field-type-mat-input.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float.ng-dirty.ng-valid.ng-star-inserted.ng-touched &gt; .mat-form-field-wrapper.ng-tns-c49-122&apos;).xy(0.13, 1.00 )' selected='true' fallback='true'></accessor>
         <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-form-field-wrapper ng-tns-c49-122"]&apos;).xy(0.13, 1.00 )' selected='false' fallback='true'></accessor>
@@ -477,7 +598,7 @@
         <accessor type='JQuery' value=' byJQuery(&apos;div[class="ng-dirty ng-touched ng-valid"] &gt; div[class="ng-star-inserted"] &gt; div[class="d-flex ng-star-inserted"] &gt; mat-form-field[class="mat-form-field w-50 readonly ng-tns-c49-122 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-dirty ng-valid ng-star-inserted ng-touched"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-122"]&apos;).xy(0.13, 1.00 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e38ea1e5-fdb8-4e26-99d3-2584240811a4' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e38ea1e5-fdb8-4e26-99d3-2584240811a4' uiType='base'>
       <dialect type='sahi'>
         <accessor type='AttrClass' value=' div("mat-form-field-wrapper ng-tns-c49-122").xy(0.21, 1.00 )' selected='true' fallback='true'></accessor>
         <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[1]/div[2]/div[1]/mat-form-field/div").xy(0.21, 1.00 )' selected='false' fallback='true'></accessor>
@@ -488,7 +609,7 @@
         <accessor type='JQuery' value='byJQuery(&apos;.ng-dirty.ng-touched.ng-valid &gt; .ng-star-inserted &gt; .d-flex.ng-star-inserted &gt; .mat-form-field.w-50.readonly.ng-tns-c49-122.mat-primary.mat-form-field-type-mat-input.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float.ng-dirty.ng-valid.ng-star-inserted.ng-touched &gt; .mat-form-field-wrapper.ng-tns-c49-122&apos;).xy(0.21, 1.00 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cf2b1687-f2e7-4ed4-bdac-dc87ed407226' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cf2b1687-f2e7-4ed4-bdac-dc87ed407226' uiType='base'>
       <dialect type='sahi'>
         <accessor type='AttrClass' value=' div("align-items-center d-flex model-add-email[1]").xy(0.74, 0.44 )' selected='true' fallback='true'></accessor>
         <accessor type='Text' value=' div("add  Add email[1]").xy(0.74, 0.44 )' selected='false' fallback='true'></accessor>
@@ -499,7 +620,7 @@
         <accessor type='JQuery' value='byJQuery(&apos;.col-md-12 &gt; .mt-3.ng-untouched.ng-pristine.ng-valid &gt; .mat-focus-indicator.p-0.d-flex.align-items-center.mat-button.mat-button-base.mat-primary.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper &gt; .d-flex.align-items-center.model-add-email&apos;).xy(0.74, 0.44 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='56c7324d-67df-4884-b22b-6ec657604024' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='56c7324d-67df-4884-b22b-6ec657604024' uiType='base'>
       <dialect type='sahi'>
         <accessor type='AttrClass' value=' custom("mat-icon", "mat-icon mat-icon-no-color mat-remove-email material-icons notranslate[1]")' selected='true' fallback='true'></accessor>
         <accessor type='Text' value=' custom("mat-icon", "cancel")' selected='false' fallback='true'></accessor>
@@ -509,7 +630,7 @@
         <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-invalid ng-dirty ng-touched&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/div[@class=&apos;row mb-5 ml-2 ng-invalid ng-dirty ng-touched&apos;]/div[@class=&apos;col-md-12&apos;]/div[@class=&apos;mt-3 ng-untouched ng-pristine ng-valid&apos;]/div[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex ng-star-inserted&apos;]/span[@class=&apos;mx-3 mt-1 d-flex align-items-center&apos;]/span[1]/mat-icon[@class=&apos;mat-icon notranslate mat-remove-email material-icons mat-icon-no-color&apos;]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='07d23050-71b0-42f7-8036-64dc77ba41d2' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='07d23050-71b0-42f7-8036-64dc77ba41d2' uiType='base'>
       <dialect type='sahi'>
         <accessor type='AttrClass' value=' div("mat-form-field-infix ng-tns-c49-125").xy(0.21, 0.48 )' selected='true' fallback='true'></accessor>
         <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[1]/div[3]/div/mat-form-field/div/div[1]/div[3]").xy(0.21, 0.48 )' selected='false' fallback='true'></accessor>

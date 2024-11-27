@@ -162,32 +162,17 @@
         <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5aa1257b-18ba-45db-a6a0-2e569a58d9ba' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' span("Select Vendor")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d78d9716-5992-4f28-8919-d90ec6cc6ae5' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='Text' value=' span("Automation[1]")' selected='true' fallback='true'></accessor>
-        <accessor type='Parent' value=' span(1, _in(custom("mat-option", "mat-option-159")))' selected='false' fallback='true'></accessor>
-        <accessor type='Parent' value=' span(1, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-159&apos;})))' selected='false' fallback='true'></accessor>
-        <accessor type='AttrClass' value=' span("vendor-option vendor-option-selected")' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value=' byXPath("//mat-option[@id=&apos;mat-option-159&apos;]/span/span")' selected='false' fallback='true'></accessor>
-        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="vendor-option vendor-option-selected"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='XPathText' value=' byXPath(&apos;//*[text()=" Automation "]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[6]/div/div/div/div[2]/mat-option/span/span&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-option-159&apos;)/span[@class=&apos;mat-option-text&apos;]/span[@class=&apos;vendor-option vendor-option-selected&apos;]")' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value=' byJQuery(&apos;div[class="ng-tns-c89-100 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; div[class="ng-tns-c89-100"] &gt; mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted mat-selected"] &gt; span[class="mat-option-text"] &gt; span[class="vendor-option vendor-option-selected"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-159 &gt; .mat-option-text &gt; .vendor-option.vendor-option-selected&apos;)' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2af66929-3544-4c7d-922f-4449fad5cd1e' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a9e84c66-be76-4560-8277-7e472dacf3ef' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;Output Type&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='Verify SAP Xi is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e06e63f6-9c6e-4130-97f8-cd7fa6ee56c0' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXpath("//span[@class=&apos;vendor-disabled&apos; and text()=&apos; SAP XI &apos;]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e25e978b-ac13-4e3f-abf7-82e4359124da' uiType='base'>

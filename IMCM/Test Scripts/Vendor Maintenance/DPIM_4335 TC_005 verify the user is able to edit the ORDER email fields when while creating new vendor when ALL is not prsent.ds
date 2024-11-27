@@ -317,6 +317,18 @@
    <accessor type='unknown' value='byXPath(&quot;(//th[text()=&apos;Order Email&apos;]/following::span[contains(text(),&apos;Add Email&apos;)])[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='setValue' value='&quot;CC&quot;+Email' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//h6[contains(text(),&apos;CC Email(s)&apos;)]/following::input)[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='byXPath(&quot;CC Email(s)&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
 <step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>

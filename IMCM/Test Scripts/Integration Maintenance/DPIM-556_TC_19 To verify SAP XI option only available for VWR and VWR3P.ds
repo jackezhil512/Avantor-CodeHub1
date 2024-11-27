@@ -365,7 +365,7 @@
         <accessor type='unknown' value=' byXPath("//h4[contains(text(),&apos;Add New Integration&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='63d9f3c2-07ab-488b-89db-5f6b2aca6b0b' uiType='base'>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='true' indentLevel='0' isVisible='true' parentId='' uid='63d9f3c2-07ab-488b-89db-5f6b2aca6b0b' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='940f2a49-be38-49b4-81b9-dc2f6d237a0c' uiType='base'>
@@ -373,7 +373,7 @@
         <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;Output Type&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='user should able to select SAP XI' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4a09aee9-9817-4423-a74e-fd7e2a189e17' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='user should able to select SAP XI' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4a09aee9-9817-4423-a74e-fd7e2a189e17' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//span[@class=&apos;vendor-option&apos; and text()=&apos; SAP XI &apos;]")' selected='true' fallback='true'></accessor>
       </dialect>
@@ -386,17 +386,17 @@
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e0d4173f-b9ff-4ae7-8e81-8114e72caf71' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e4f73f73-7267-4c04-91c4-6c2895f441c6' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e4f73f73-7267-4c04-91c4-6c2895f441c6' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//mat-select[@formcontrolname=&apos;vendor&apos;]/div[contains(@class, &apos;mat-select-trigger&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='setValue' value='VendorName' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f5797fd7-edaa-463a-b7fd-3f368d00f6b2' uiType='base'>
+    <step action='setValue' value='VendorName' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f5797fd7-edaa-463a-b7fd-3f368d00f6b2' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath(&apos;//input[@placeholder="Search Vendor "]&apos;)' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='Select First check box' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='90f62fad-94a4-4da9-b501-2859fefe13cf' uiType='base'>
+    <step action='click' value='' type='web' desc='Select First check box' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='90f62fad-94a4-4da9-b501-2859fefe13cf' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Parent' value=' custom("mat-pseudo-checkbox", 0, _in(custom("mat-option", "mat-option-424")))' selected='true' fallback='true'></accessor>
         <accessor type='Parent' value=' custom("mat-pseudo-checkbox", 0, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-424&apos;})))' selected='false' fallback='true'></accessor>
@@ -409,12 +409,12 @@
         <accessor type='JQuery' value='byJQuery(&apos;#mat-option-424 &gt; .mat-pseudo-checkbox.mat-option-pseudo-checkbox.ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='setValue' value=' "{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1e924991-7f51-47ec-8ffa-9446ef9c6610' uiType='base'>
+    <step action='setValue' value=' "{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1e924991-7f51-47ec-8ffa-9446ef9c6610' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//h4[contains(text(),&apos;Add New Integration&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='590f844a-9db3-41ff-8877-12f19ddce65b' uiType='base'>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='590f844a-9db3-41ff-8877-12f19ddce65b' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d874edd8-a05a-4d08-9ac9-907db48e508b' uiType='base'>

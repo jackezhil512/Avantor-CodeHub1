@@ -272,7 +272,8 @@
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b7373e0d-654b-4344-9506-0bb0dbc6e076' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[text()=&apos;Automation&apos;]/preceding-sibling::input[@type=&apos;checkbox&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[text()=&apos;Automation&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[text()=&apos;Automation&apos;]/preceding-sibling::input[@type=&apos;checkbox&apos;]")' selected='false' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;{VendorName1}&apos;)]/span/following::mat-select)[1]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>

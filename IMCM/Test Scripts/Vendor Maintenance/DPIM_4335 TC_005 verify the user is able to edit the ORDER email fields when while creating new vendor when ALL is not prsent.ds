@@ -175,9 +175,11 @@
 </step>
 <step action='setValue' value='Email' type='web' desc='Enter Email ID' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot;Primary Email(s) &quot;]/following::input[1]&apos;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;(//h6[contains(text(),&apos;Primary Email(s)&apos;)]/following::input)[1]&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='//*[text() =&quot;Primary Email(s) &quot;]/following::input[1]' fallback='true' selected='false'/>
    <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot;Primary Email(s) &quot;]/following::input[1]&apos;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot;Primary Email(s) &quot;]/following::input[1]&apos;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='""' type='web' desc='Click on Save' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

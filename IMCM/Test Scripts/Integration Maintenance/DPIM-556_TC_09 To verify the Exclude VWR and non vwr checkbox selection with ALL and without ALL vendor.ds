@@ -163,6 +163,32 @@
         <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeVWR&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f0335255-311c-448c-9485-93e6692ea0d6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Parent' value=' div(1, _in(custom("mat-select", "mat-select-20"))).xy(0.92, 0.85 )' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value=' div(1, _in(custom("mat-select", {&apos;id&apos;:&apos;mat-select-20&apos;}))).xy(0.92, 0.85 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathId' value=' byXPath(&apos;//*[@id="mat-select-value-21"]&apos;).xy(0.92, 0.85 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' div("mat-select-value ng-tns-c89-100").xy(0.92, 0.85 )' selected='false' fallback='true'></accessor>
+        <accessor type='Id' value=' div("mat-select-value-21").xy(0.92, 0.85 )' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value=' div("Select Vendor[4]").xy(0.92, 0.85 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;mat-select-value-21&apos;]").xy(0.92, 0.85 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-select-value ng-tns-c89-100"]&apos;).xy(0.92, 0.85 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/mat-form-field/div/div/div[4]/mat-select/div/div&apos;).xy(0.92, 0.85 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-select-value-21&apos;)").xy(0.92, 0.85 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;div[class="mat-form-field-flex ng-tns-c49-99"] &gt; div[class="mat-form-field-infix ng-tns-c49-99"] &gt; mat-select[class="mat-select ng-tns-c89-100 ng-tns-c49-99 mat-select-required mat-select-empty mat-select-multiple ng-untouched ng-pristine ng-invalid ng-star-inserted"] &gt; div[class="mat-select-trigger ng-tns-c89-100"] &gt; div[class="mat-select-value ng-tns-c89-100"]&apos;).xy(0.92, 0.85 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-select-value-21&apos;).xy(0.92, 0.85 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='44f15ab7-5de3-46d9-9da3-be1097255990' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value=' div("cdk-overlay-backdrop cdk-overlay-backdrop-showing cdk-overlay-transparent-backdrop").xy(0.63, 0.45 )' selected='true' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.63, 0.45 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[3]&apos;).xy(0.63, 0.45 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("/html[@class=&apos;cdk-global-scrollblock&apos;]/body[1]/div[@class=&apos;cdk-overlay-container&apos;]/div[@class=&apos;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&apos;]").xy(0.63, 0.45 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;div[class="cdk-overlay-container"] &gt; div[class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.63, 0.45 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.63, 0.45 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dc6bb647-dc7d-4f57-abef-7e623b6d0cc4' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeNonVwrVendor&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
@@ -311,34 +337,62 @@
         <accessor type='unknown' value=' byXPath("//h4[contains(text(),&apos;Add New Integration&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='true' indentLevel='0' isVisible='true' parentId='' uid='9d3973d6-81f4-4fcb-a70e-0dc66b5a45d0' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6f094054-fcd2-4d77-8e7d-6b572f9410dd' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeVWR&apos; and contains(@class,&apos;mat-checkbox&apos;)]")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeVWR&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value=' span("Exclude VWR, VWR3P, VWR Metrics[2]")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' span("vendor-option")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//mat-checkbox[@id=&apos;mat-checkbox-39&apos;]/label/span[2]/span[2]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/div[2]/mat-checkbox/label/span[2]/span[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-checkbox-39&apos;)/label[@class=&apos;mat-checkbox-layout&apos;]/span[@class=&apos;mat-checkbox-label&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;mat-checkbox[class="mat-checkbox large mat-accent ng-untouched ng-pristine ng-valid"] &gt; label[class="mat-checkbox-layout"] &gt; span[class="mat-checkbox-label"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-checkbox-39 &gt; .mat-checkbox-layout &gt; .mat-checkbox-label &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6eee829f-565d-4884-9a7f-93f5af666a56' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fd74bdaa-31fc-482a-adb0-40c0566f80c3' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeNonVwrVendor&apos; and contains(@class,&apos;mat-checkbox&apos;)]")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeNonVwrVendor&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//mat-checkbox[@id=&apos;mat-checkbox-40&apos;]/label/span[2]/span[2]")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' span("vendor-option")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/div[2]/mat-checkbox[2]/label/span[2]/span[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-checkbox-40&apos;)/label[@class=&apos;mat-checkbox-layout&apos;]/span[@class=&apos;mat-checkbox-label&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;mat-checkbox[class="mat-checkbox large pb-2 mat-accent ng-untouched ng-pristine ng-valid"] &gt; label[class="mat-checkbox-layout"] &gt; span[class="mat-checkbox-label"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-checkbox-40 &gt; .mat-checkbox-layout &gt; .mat-checkbox-label &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e77e959f-20c1-4263-bedb-7bf696f355af' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='53bd2346-839b-43d7-9085-4d2228f037a9' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeVWR&apos; and contains(@class,&apos;mat-checkbox&apos;)]")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeVWR&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value=' span("Exclude VWR, VWR3P, VWR Metrics[2]")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' span("vendor-option")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//mat-checkbox[@id=&apos;mat-checkbox-39&apos;]/label/span[2]/span[2]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/div[2]/mat-checkbox/label/span[2]/span[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-checkbox-39&apos;)/label[@class=&apos;mat-checkbox-layout&apos;]/span[@class=&apos;mat-checkbox-label&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;mat-checkbox[class="mat-checkbox large mat-accent ng-untouched ng-pristine ng-valid"] &gt; label[class="mat-checkbox-layout"] &gt; span[class="mat-checkbox-label"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-checkbox-39 &gt; .mat-checkbox-layout &gt; .mat-checkbox-label &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='53319e1d-8306-48db-8707-60a535810825' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ca0b40ec-fae1-4528-a57e-91d601d088ac' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeNonVwrVendor&apos; and contains(@class,&apos;mat-checkbox&apos;)]")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeNonVwrVendor&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//mat-checkbox[@id=&apos;mat-checkbox-40&apos;]/label/span[2]/span[2]")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' span("vendor-option")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/div[2]/mat-checkbox[2]/label/span[2]/span[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-checkbox-40&apos;)/label[@class=&apos;mat-checkbox-layout&apos;]/span[@class=&apos;mat-checkbox-label&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;mat-checkbox[class="mat-checkbox large pb-2 mat-accent ng-untouched ng-pristine ng-valid"] &gt; label[class="mat-checkbox-layout"] &gt; span[class="mat-checkbox-label"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-checkbox-40 &gt; .mat-checkbox-layout &gt; .mat-checkbox-label &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5927e57d-f03a-4ca3-a378-44ede5b86d6f' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bfb640f3-64c8-4cd3-9396-61df7794d9c3' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeVWR&apos; and contains(@class,&apos;mat-checkbox&apos;)]")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeVWR&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value=' span("Exclude VWR, VWR3P, VWR Metrics[2]")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' span("vendor-option")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//mat-checkbox[@id=&apos;mat-checkbox-39&apos;]/label/span[2]/span[2]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/div[2]/mat-checkbox/label/span[2]/span[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-checkbox-39&apos;)/label[@class=&apos;mat-checkbox-layout&apos;]/span[@class=&apos;mat-checkbox-label&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;mat-checkbox[class="mat-checkbox large mat-accent ng-untouched ng-pristine ng-valid"] &gt; label[class="mat-checkbox-layout"] &gt; span[class="mat-checkbox-label"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-checkbox-39 &gt; .mat-checkbox-layout &gt; .mat-checkbox-label &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b43b48fc-d47b-4530-a124-6e3f89c61459' uiType='base'>

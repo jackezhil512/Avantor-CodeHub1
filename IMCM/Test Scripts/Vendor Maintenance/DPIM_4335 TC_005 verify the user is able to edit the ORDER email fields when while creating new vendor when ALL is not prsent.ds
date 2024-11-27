@@ -414,7 +414,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='Click on Elipsis' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='Click on Elipsis' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrAlt' value='image(&quot;..[2]&quot;).xy(0.61, -0.14 )' fallback='true' selected='true'/>
    <accessor type='Src' value='image(&quot;https://im-stage1.avantorsciences.com/assets/icons/ellipsis-icon.svg&quot;).xy(0.61, -0.14 )' fallback='true' selected='false'/>
@@ -427,6 +427,13 @@
 <step action='click' value='' type='web' desc='Click on Edit' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Edit &quot;]&apos;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//tr[contains(@class,&apos;striped-rows&apos;)])[1]//td[2]/span&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='' type='web' desc='Click on forward arrow' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

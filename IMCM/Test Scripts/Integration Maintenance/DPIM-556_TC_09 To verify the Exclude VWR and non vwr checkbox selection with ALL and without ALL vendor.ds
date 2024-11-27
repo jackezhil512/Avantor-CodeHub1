@@ -241,6 +241,16 @@
         <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d764ffd4-bc73-469d-b324-f38ccdf574e4' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeVWR&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b5534fc3-a0c9-40a5-a3a0-9676bf1b4260' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeNonVwrVendor&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='assertExists' value='' type='web' desc='verify Next Button Is disabled' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a7f0e26e-5056-41c9-b34d-1e064a407786' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//button[contains(@class,&apos;mat-button-disabled&apos;)]")' selected='true' fallback='true'></accessor>

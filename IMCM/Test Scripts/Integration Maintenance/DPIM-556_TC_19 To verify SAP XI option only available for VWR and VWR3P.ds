@@ -239,7 +239,8 @@
     </step>
     <step action='assertExists' value='' type='web' desc='Verify SAP Xi is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e06e63f6-9c6e-4130-97f8-cd7fa6ee56c0' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXpath("//span[@class=&apos;vendor-disabled&apos; and text()=&apos; SAP XI &apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[@class=&apos;vendor-disabled&apos; and text()=&apos; SAP XI &apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXpath("//span[@class=&apos;vendor-disabled&apos; and text()=&apos; SAP XI &apos;]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='setValue' value=' "{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='602f3390-dbf7-4c73-80b0-fac077e317fe' uiType='base'>

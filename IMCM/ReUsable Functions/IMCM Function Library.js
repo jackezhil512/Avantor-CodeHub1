@@ -1117,7 +1117,7 @@ click(fallback(`byXPath("//span[text()=' Yes ']/parent::button")`));
 assertExists(fallback(`byXPath('//*[text()=" You have successfully deleted integration "]')`));  
 }
 
-function AddAllintegration(){
+function AddALLintegration(){
 NavigateToIntegrationMaintenance();
 click(fallback(`byXPath("//span[contains(text(),'ADD NEW INTEGRATION')]/ancestor::button")`));
 click(fallback(`byXPath("(//div[contains(text(),'Vendor')]/span/following::mat-select)[1]")`));

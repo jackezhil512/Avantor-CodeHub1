@@ -121,24 +121,6 @@
         <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a76657b0-6949-4adc-a1f7-cdde14691d97' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2a4330e4-c7fc-4ee2-8e65-74691b2f4dfd' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;Output Type&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f106b6ff-7043-4515-96c9-3e6c000730c6' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;PDF OUTPUT&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='setValue' value=' "{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5abcf4da-573b-462c-889f-c07677dacd9f' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//h4[contains(text(),&apos;Add New Integration&apos;)]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='79dc8af8-f93f-44d0-9b21-f5248440ef6a' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
@@ -198,6 +180,24 @@
         <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-option-159&apos;)/span[@class=&apos;mat-option-text&apos;]/span[@class=&apos;vendor-option vendor-option-selected&apos;]")' selected='false' fallback='true'></accessor>
         <accessor type='JQuery' value=' byJQuery(&apos;div[class="ng-tns-c89-100 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; div[class="ng-tns-c89-100"] &gt; mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted mat-selected"] &gt; span[class="mat-option-text"] &gt; span[class="vendor-option vendor-option-selected"]&apos;)' selected='false' fallback='true'></accessor>
         <accessor type='JQuery' value='byJQuery(&apos;#mat-option-159 &gt; .mat-option-text &gt; .vendor-option.vendor-option-selected&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2af66929-3544-4c7d-922f-4449fad5cd1e' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a9e84c66-be76-4560-8277-7e472dacf3ef' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;Output Type&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e25e978b-ac13-4e3f-abf7-82e4359124da' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;PDF OUTPUT&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value=' "{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ff997402-552d-43ad-993f-392796949e71' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//h4[contains(text(),&apos;Add New Integration&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6629fd8a-c912-475b-983c-042fb8928023' uiType='base'>

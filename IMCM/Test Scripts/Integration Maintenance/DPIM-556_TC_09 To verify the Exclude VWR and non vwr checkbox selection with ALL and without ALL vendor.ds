@@ -14,6 +14,108 @@
     <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='047dd808-045d-470e-b2f8-b4faf582dfe7' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
+    <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7d711381-56c4-4b4d-bceb-4d125c3c9945' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='51331f11-c8ff-4610-9497-f8432ccf2c06' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("(//div[text()=&apos; Vendor &apos;]/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ecc78558-c7ee-4d42-8dae-a0b66561b556' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[text()=&apos; all &apos;]/parent::mat-option")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[text()=&apos; ALL &apos;]/parent::mat-option")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d8d8d08b-c6e4-4ad7-ac4c-4c28585964ee' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[text()=&apos;Update Results&apos;]/ancestor::button")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f2c95a47-e2af-40c9-9e55-f171dfba0e67' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b9a3341b-c728-40b7-b769-24e722da5a01' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='strRows2' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='strRows2' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8aba4331-0918-46b6-b7dd-8b1fb771eb14' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='if' value='strRows2&gt;0' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e523bca3-20d0-4b4c-add2-5f6f61a36120' uiType='conditional'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='strRows2&gt;0' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='e76ec53b-cd3e-43b5-afb8-413660fc41cd' uid='3e2750f0-b901-49fe-a139-7ca7d018d70b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("(//img[contains(@src,&apos;ellipsis-icon.svg&apos;)]/ancestor::button)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='e76ec53b-cd3e-43b5-afb8-413660fc41cd' uid='b1060eaf-fb0e-4607-83d5-72c53dd9d89f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//button[text()=&apos; Delete &apos;]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='e76ec53b-cd3e-43b5-afb8-413660fc41cd' uid='5d58efc3-ad41-4cab-b473-43fa48ef1e16' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[text()=&apos; Yes &apos;]/parent::button")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b5a610fc-f019-4954-9703-ff043743754c' uiType='end' sibling='e76ec53b-cd3e-43b5-afb8-413660fc41cd'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='86c3373c-a5b8-48c1-9e46-d69a5aec5699' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("(//div[text()=&apos; Vendor &apos;]/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='56bd2b6a-354e-45a4-a31d-1338c068014b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[text()=&apos; 10/1 alternates delete &apos;]/parent::mat-option")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7a3862ca-f957-4698-add7-598c06bf3aac' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[text()=&apos;Update Results&apos;]/ancestor::button")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='93c0eae2-d411-4821-a0fc-12312582de58' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='698c7ba9-5a3f-4302-8f03-3a6b19a8c3a2' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='strRows2' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='strRows2' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9e1fad86-d35f-472a-a7f5-33c491d48777' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='if' value='strRows2&gt;0' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4cf874dd-765f-4a39-9583-851fa2540ff0' uiType='conditional'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='strRows2&gt;0' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='a4effa29-75dc-481d-9da2-c8eb7808acbb' uid='68e80322-bd5a-4d43-9fc7-66bfc0d03e01' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("(//img[contains(@src,&apos;ellipsis-icon.svg&apos;)]/ancestor::button)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='a4effa29-75dc-481d-9da2-c8eb7808acbb' uid='d87d65a8-86d0-4eeb-8cf1-615af9141b8b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//button[text()=&apos; Delete &apos;]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='a4effa29-75dc-481d-9da2-c8eb7808acbb' uid='ec13ba9e-ea6d-43a3-9a66-4d326121e434' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[text()=&apos; Yes &apos;]/parent::button")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0f1a4c3c-7409-4cae-ba5c-4bb42ac602ba' uiType='end' sibling='a4effa29-75dc-481d-9da2-c8eb7808acbb'>
+      <dialect type='sahi'></dialect>
+    </step>
     <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dc6785f1-7a6e-4e3e-a4d6-0930194fe593' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>

@@ -193,8 +193,6 @@
     <step action='click' value='' type='web' desc='Un select selected check box' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6725d437-5ec4-4221-bad8-4bc38a882460' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//mat-pseudo-checkbox[contains(@class,&apos;mat-pseudo-checkbox-checked&apos;)]")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' "byXPath("//mat-pseudo-checkbox[contains(@class,&apos;mat-pseudo-checkbox-checked&apos;)]")' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;{VendorName1}&apos;)]/span/following::mat-select)[1]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='setValue' value=' "VWR"' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f8ef0e2f-e677-46bc-b5bb-986d1b1eb51e' uiType='base'>
@@ -339,22 +337,14 @@
         <accessor type='unknown' value=' byXPath("//h4[contains(text(),&apos;Add New Integration&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='setValue' value=' "VWR"' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='622edc17-a7e2-405b-bdea-20b319a98775' uiType='base'>
+    <step action='setValue' value=' "VWR3P"' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='622edc17-a7e2-405b-bdea-20b319a98775' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath(&apos;//input[@placeholder="Search Vendor "]&apos;)' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='Select First check box' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0b5afbce-8f60-44a9-9eab-01bf82ad53ad' uiType='base'>
+    <step action='click' value='' type='web' desc='Un select selected check box' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='00a42805-8dcd-4f6d-bc91-e6b351554061' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='Parent' value=' custom("mat-pseudo-checkbox", 0, _in(custom("mat-option", "mat-option-424")))' selected='true' fallback='true'></accessor>
-        <accessor type='Parent' value=' custom("mat-pseudo-checkbox", 0, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-424&apos;})))' selected='false' fallback='true'></accessor>
-        <accessor type='AttrClass' value=' custom("mat-pseudo-checkbox", "mat-option-pseudo-checkbox mat-pseudo-checkbox ng-star-inserted")' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value=' byXPath("//mat-option[@id=&apos;mat-option-424&apos;]/mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
-        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option/mat-pseudo-checkbox&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-option-424&apos;)/mat-pseudo-checkbox[@class=&apos;mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value=' byJQuery(&apos;div[class="mat-select-panel-wrap ng-tns-c89-231 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted"] &gt; div[class="ng-tns-c89-231 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; div[class="ng-tns-c89-231"] &gt; mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted"] &gt; mat-pseudo-checkbox[class="mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-424 &gt; .mat-pseudo-checkbox.mat-option-pseudo-checkbox.ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//mat-pseudo-checkbox[contains(@class,&apos;mat-pseudo-checkbox-checked&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='setValue' value=' "{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f72ddbce-f52c-4c39-a21e-039aab83cfa7' uiType='base'>

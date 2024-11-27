@@ -78,22 +78,6 @@
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;ADD NEW INTEGRATION&apos;)]/ancestor::button")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='eeeb0283-f79a-4d0d-8d37-4c10cc23b48a' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeVWR&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='155b23b1-ac15-44e7-b202-47702fd95247' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//mat-checkbox[@formcontrolname=&apos;excludeNonVwrVendor&apos; and contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='assertExists' value='' type='web' desc='verify Next Button Is disabled' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d8452606-f2e0-4d37-afa2-6eb22a941a48' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//button[contains(@class, &apos;mat-button-disabled&apos;) and @disabled=&apos;true&apos;]")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//button[contains(@class,&apos;mat-button-disabled&apos;)]")' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
     <step action='store' value=' "ALL"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5242d5fc-541e-4c3b-9073-0563ed000dc8' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='VendorName' selected='true' fallback='true'></accessor>

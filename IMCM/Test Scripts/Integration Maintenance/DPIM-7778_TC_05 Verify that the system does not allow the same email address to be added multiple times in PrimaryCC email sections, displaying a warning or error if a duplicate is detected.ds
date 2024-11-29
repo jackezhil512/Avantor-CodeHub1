@@ -79,6 +79,9 @@
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;ADD NEW INTEGRATION&apos;)]/ancestor::button")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='adb49334-c5a0-409d-bdfe-78b758355732' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
     <step action='assertExists' value='' type='web' desc='Verify Vendor Tab exist' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ec27538d-2707-4fcf-8838-3fbfa16caad0' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//strong[text()=&apos;Vendor, Stockroom &amp; Output Type&apos;]")' selected='true' fallback='true'></accessor>

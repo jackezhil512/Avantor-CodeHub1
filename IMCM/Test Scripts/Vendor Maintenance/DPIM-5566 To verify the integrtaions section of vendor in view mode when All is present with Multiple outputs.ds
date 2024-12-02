@@ -27,11 +27,6 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='AddALLintegration()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
 <step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
@@ -42,7 +37,7 @@
    <accessor type='unknown' value='TotalRow' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
@@ -75,6 +70,11 @@
 <step action='store' value='&quot;Auto&quot;+RandomVal+&quot;@avantorsciences.com&quot;' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='Email' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='AddALLintegration()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 <step action='js' value='NavigateToVendorMaintenancePage()' type='web' desc='Vendor Maintenance' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

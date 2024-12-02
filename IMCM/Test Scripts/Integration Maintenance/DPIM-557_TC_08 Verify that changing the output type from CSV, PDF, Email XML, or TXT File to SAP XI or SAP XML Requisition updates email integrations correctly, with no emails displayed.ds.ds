@@ -107,9 +107,7 @@
       </dialect>
     </step>
     <step action='selectWindow' value=' "Avantor Inventory Manager"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='70ccc6d5-a831-4a4b-a1ee-ca88a76ad8c1' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='' value='' selected='true' fallback='false'></accessor>
-      </dialect>
+      <dialect type='sahi'></dialect>
     </step>
     <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f71bae68-6c49-4cb6-a8fc-bc674a6758a1' uiType='base'>
       <dialect type='sahi'></dialect>
@@ -223,5 +221,18 @@
     </step>
     <step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a447d887-27dc-4237-8534-01f6be15431c' uiType='base'>
       <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8f9d14b7-5904-4215-bb3b-d82abac58dce' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='strRows2' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='strRows2' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d9a0479e-75ca-4a41-9e71-f3d6edbbfb72' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertEqual' value='0' type='web' desc='verify no records found for email' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7b6032ae-41bb-4b42-96a3-d00ecddc21ff' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='strRows2' selected='true' fallback='true'></accessor>
+      </dialect>
     </step>
   </testcase>

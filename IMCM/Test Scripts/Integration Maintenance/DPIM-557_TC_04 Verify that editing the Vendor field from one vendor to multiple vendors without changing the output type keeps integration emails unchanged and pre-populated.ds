@@ -162,6 +162,17 @@
     <step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='51067d02-2425-4523-847d-9c980663c7df' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6aef0bea-444b-4aae-a8d4-b4662709f2f7' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value=' eval("&apos;Auto&apos;+ Math.floor(Math.random()*10000) + &apos;@gmail.com&apos;")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3f362d73-5f40-4d8c-be2d-84dd999f9eb2' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TempEmail' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='TempEmail' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b9f18d6e-d8f6-4afe-ae10-714907cd9b1f' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
     <step action='js' value='CreateSecondVendorAndAddIntegrationWithEMAILXML()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c45744f1-351f-4bbc-9111-d881efe5ed94' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>

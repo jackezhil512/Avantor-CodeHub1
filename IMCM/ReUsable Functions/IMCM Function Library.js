@@ -1316,7 +1316,9 @@ assertExists(fallback(`byXPath('//*[text()=" Integration created successfully "]
 function AddALLintegrationWithText(){
 NavigateToIntegrationMaintenance();
 click(fallback(`byXPath("//span[contains(text(),'ADD NEW INTEGRATION')]/ancestor::button")`));
+wait(2000);
 click(fallback(`byXPath("(//div[contains(text(),'Vendor')]/span/following::mat-select)[1]")`));
+wait(2000);
 click(fallback(`byXPath("//span[contains(text(),'ALL') and @class='vendor-option']")`));
 wait(2000);
 setValue(fallback(`byXPath("//h4[contains(text(),'Add New Integration')]")`),"{{TAB}}");

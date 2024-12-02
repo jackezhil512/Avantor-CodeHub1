@@ -145,45 +145,19 @@
     <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='babe8d14-6629-4e91-9f84-7a14a3642147' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='verify Email exists on review tab' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4bb2ddea-290b-43fc-b52d-230f643826fd' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' paragraph("${TempEmail }")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b0f0167c-9550-4bed-8ab9-21cd6ef9fa76' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ffd4abf4-4b6b-4641-ae8f-66ce92294d8d' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='assertExists' value='' type='web' desc='verify Email exists on review tab' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4bb2ddea-290b-43fc-b52d-230f643826fd' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' paragraph("${TempEmail }")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c4aa7a6d-d555-40c9-a7fe-71fe8e97c8dd' uiType='base'>
       <dialect type='sahi'></dialect>
-    </step>
-    <step action='selectWindow' value=' "Avantor Inventory Manager"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='37734221-b9d6-4aba-b8f1-923f131e21f9' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='' value='' selected='true' fallback='false'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1dbfc3a3-9131-490c-b1f0-3b4bebc6cb24' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='Text' value=' span("Save[1]")' selected='true' fallback='true'></accessor>
-        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-1-2&apos;]/app-review-section/div/button[3]/span[1]/span")' selected='false' fallback='true'></accessor>
-        <accessor type='XPathText' value=' byXPath(&apos;//*[text()=" Save"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[3]/app-review-section/div/button[3]/span/span&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-1-2&apos;)/app-review-section[@class=&apos;review-integration ng-star-inserted&apos;]/div[@class=&apos;px-2 vendor-btns integration-actions mt-2&apos;]/button[@class=&apos;mat-focus-indicator py-1 next ml-sm-2 px-md-4 px-3 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]")' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='84c14534-c33d-48b9-9d32-46b3be220232' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='Parent' value=' div(0, _in(div("cdk-step-content-1-2"))).xy(0.52, 0.88 )' selected='true' fallback='true'></accessor>
-        <accessor type='Parent' value='div(0, _in(div({&apos;id&apos;:&apos;cdk-step-content-1-2&apos;}))).xy(0.52, 0.88 )' selected='false' fallback='true'></accessor>
-        <accessor type='AttrClass' value=' div("row[5]").xy(0.52, 0.88 )' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-1-2&apos;]/app-review-section/section/form/section/div").xy(0.52, 0.88 )' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[3]/app-review-section/section/form/section/div&apos;).xy(0.52, 0.88 )' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-1-2&apos;)/app-review-section[@class=&apos;review-integration ng-star-inserted&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/form[@class=&apos;integration-vendors ng-untouched ng-pristine ng-valid&apos;]/section[@class=&apos;px-2 py-3&apos;]/div[@class=&apos;row&apos;]").xy(0.52, 0.88 )' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value=' byJQuery(&apos;app-review-section[class="review-integration ng-star-inserted"] &gt; section[class="px-1 py-2 pr-3 email_integration-div"] &gt; form[class="integration-vendors ng-untouched ng-pristine ng-valid"] &gt; section[class="px-2 py-3"] &gt; div[class="row"]&apos;).xy(0.52, 0.88 )' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;.review-integration.ng-star-inserted &gt; .px-1.py-2.pr-3.email_integration-div &gt; .integration-vendors.ng-untouched.ng-pristine.ng-valid &gt; .px-2.py-3 &gt; .row&apos;).xy(0.52, 0.88 )' selected='false' fallback='true'></accessor>
-      </dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a9bd14ee-ab32-401d-b3f1-cd0925267037' uiType='base'>
       <dialect type='sahi'>

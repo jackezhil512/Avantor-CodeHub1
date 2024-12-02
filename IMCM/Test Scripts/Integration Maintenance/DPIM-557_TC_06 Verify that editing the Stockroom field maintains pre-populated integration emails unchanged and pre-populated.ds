@@ -208,14 +208,14 @@
         <accessor type='unknown' value='VendorName1' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64d46175-b1fd-4229-98ff-3f6ad9e1a3fb' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64d46175-b1fd-4229-98ff-3f6ad9e1a3fb' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//mat-select[@formcontrolname=&apos;vendor&apos;]/div[contains(@class, &apos;mat-select-trigger&apos;)]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//mat-select[@formcontrolname=&apos;Stockroom &apos;]/div[contains(@class, &apos;mat-select-trigger&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='setValue' value='VendorName1' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a27f3ea5-aacc-4cc5-bf0c-0d59d7c09179' uiType='base'>
+    <step action='setValue' value='StockRoomName' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a27f3ea5-aacc-4cc5-bf0c-0d59d7c09179' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath(&apos;//input[@placeholder="Search Vendor "]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath(&apos;//input[@placeholder="Search Stockroom "]&apos;)' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='45cff65e-137d-4966-b760-8887d07424f1' uiType='base'>

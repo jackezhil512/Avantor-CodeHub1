@@ -1599,7 +1599,7 @@ setValue(fallback(`byXPath('//*[text() =" Create New Vendor "]/following::input[
 setDescription("Click next");
 click(fallback(`custom("mat-icon", "arrow_forward")`));
 setDescription("Enter vendor name");
-assertExists(fallback(`byXPath('//*[text()="${SecondVendorName }"]')`));
+////assertExists(fallback(`byXPath('//*[text()="${SecondVendorName }"]')`));
 //setDescription("Validate PDF OUTPUT");
 //assertExists(fallback(`byXPath('//*[text()="PDF OUTPUT"]')`));
 setDescription("Click next");

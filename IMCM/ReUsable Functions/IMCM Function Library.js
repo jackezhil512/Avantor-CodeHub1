@@ -1683,8 +1683,6 @@ click(fallback(`byXPath("//span[contains(text(),'Request Integration')]/ancestor
 wait(2000);
 click(fallback(`byXPath("(//label[contains(text(),'Primary Email')]/following::div[contains(text(),'Add email')])[1]")`));
 wait(2000);
-var TempEmail=eval("'Auto'+ Math.floor(Math.random()*10000) + '@gmail.com'");
-log(TempEmail);
 setValue(fallback(`byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`),TempEmail);
 click(fallback(`byXPath("//mat-icon[text()='save']")`));
 wait(2000);

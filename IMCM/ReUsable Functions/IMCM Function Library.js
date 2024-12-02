@@ -1563,7 +1563,7 @@ click(fallback(`byXPath("//mat-icon[text()='save']")`));
 click(fallback(`byXPath("//span[contains(text(),'Next')]/parent::span")`,
    `byXPath("//span[contains(text(),'Next')]/parent::span")`));
 click(fallback(`byXPath("//span[contains(text(),'Save')]/parent::span")`));
-wait(2000);
+wait(3000);
 setDescription("Get Vendor Name");
 var VendorNameInFirstRow=getText(byXPath("(//td[contains(@class,'mat-column-vendorData')])[1]"));
 setDescription("Get Stockroom Name");

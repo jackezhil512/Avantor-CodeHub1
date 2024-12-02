@@ -60,6 +60,32 @@
     <step action='js' value='AddAutomationVendorintegrationWithText()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='184ef92e-ddcb-4f11-80c1-d4e7a92fb873' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
+    <step action='store' value=' eval("&apos;Auto&apos;+ Math.floor(Math.random()*10000) + &apos;@gmail.com&apos;")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8cffd2aa-2317-42dc-9dae-26ba83dcf6f6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TempEmail' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='TempEmail' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d64c5d66-60a8-44e0-98f0-d15a5e077db6' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value=' eval("&apos;Automation&apos;+ Math.floor(Math.random()*10000) + &apos;@gmail.com&apos;")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='548e78cc-68c8-4a91-bccb-c722224f2c8c' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TempEmail1' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='TempEmail' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='TempEmail1' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1913950f-3cd3-4945-8e39-0b1f176298dd' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value=' eval("&apos;Autotech&apos;+ Math.floor(Math.random()*10000) + &apos;@gmail.com&apos;")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='67b9d878-638b-4058-a29b-b48059b3b5f6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TempEmail2' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='TempEmail' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='TempEmail2' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2fb5e4da-a62e-4bef-9da6-a8b6fd04643d' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
     <step action='js' value=' AddIntegrationWithVendorAndOutPutTpe("auto1215","TEXT FILE CONFIGURATOR")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f7af59bc-9641-4ef7-bfca-05aacccc893f' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>

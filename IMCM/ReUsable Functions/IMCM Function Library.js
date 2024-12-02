@@ -1257,3 +1257,107 @@ wait(4000);
 click(fallback(`byXPath("//span[contains(text(),'Save')]/ancestor::button")`));
 assertExists(fallback(`byXPath('//*[text()=" Integration created successfully "]')`));
 }
+
+function AddALLintegrationWithXML(){
+NavigateToIntegrationMaintenance();
+click(fallback(`byXPath("//span[contains(text(),'ADD NEW INTEGRATION')]/ancestor::button")`));
+click(fallback(`byXPath("(//div[contains(text(),'Vendor')]/span/following::mat-select)[1]")`));
+click(fallback(`byXPath("//span[contains(text(),'ALL') and @class='vendor-option']")`));
+wait(2000);
+setValue(fallback(`byXPath("//h4[contains(text(),'Add New Integration')]")`),"{{TAB}}");
+wait(2000);
+click(fallback(`byXPath("//span[contains(text(),'Exclude Non VWR Vendor Integrations')]")`));
+click(fallback(`byXPath("(//div[contains(text(),'Stockroom')]/span/following::mat-select)[1]")`));
+click(fallback(`byXPath("//span[contains(text(),'All Stockrooms')]/parent::span/preceding-sibling::mat-pseudo-checkbox")`));
+wait(2000);
+setValue(fallback(`byXPath("//h4[contains(text(),'Add New Integration')]")`),"{{TAB}}");
+wait(2000);
+click(fallback(`byXPath("(//div[contains(text(),'Output Type')]/span/following::mat-select)[1]")`));
+click(fallback(`byXPath("//span[contains(text(),'EMAIL XML')]/parent::span")`));
+
+click(fallback(`byXPath("//span[contains(text(),'Next')]/parent::span")`,
+   `byXPath("//span[contains(text(),'Next')]/parent::span")`));
+wait(2000);
+click(fallback(`byXPath("//span[contains(text(),'Request Integration')]/ancestor::label")`));
+wait(2000);
+click(fallback(`byXPath("(//span[contains(text(),'Request Integration') and @class='mat-checkbox-label']/following::div[contains(text(),'Add email')])[1]")`));
+wait(2000);
+var TempEmail=eval("'Auto'+ Math.floor(Math.random()*10000) + '@gmail.com'");
+log(TempEmail);
+setValue(fallback(`byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`,
+   `byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`,
+   `byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`),TempEmail);
+click(fallback(`byXPath("//mat-icon[text()='save']")`));
+click(fallback(`byXPath("//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']")`));
+click(fallback(`byXPath("(//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']/following::div[contains(text(),'Add email')])[1]")`));
+wait(2000);
+var TempEmail=eval("'Auto'+ Math.floor(Math.random()*10000) + '@gmail.com'");
+log(TempEmail);
+setValue(fallback(`byXPath("(//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']/following::input)[1]")`),TempEmail);
+click(fallback(`byXPath("//mat-icon[text()='save']")`));
+wait(2000);
+click(fallback(`byXPath("//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']")`));
+click(fallback(`byXPath("(//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']/following::div[contains(text(),'Add email')])[1]")`));
+wait(2000);
+var TempEmail=eval("'Auto'+ Math.floor(Math.random()*10000) + '@gmail.com'");
+log(TempEmail);
+setValue(fallback(`byXPath("(//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']/following::input)[1]")`),TempEmail);
+click(fallback(`byXPath("//mat-icon[text()='save']")`));
+wait(4000);
+click(fallback(`byXPath("(//span[contains(text(),'Next')]/ancestor::button)[2]")`));
+wait(4000);
+click(fallback(`byXPath("//span[contains(text(),'Save')]/ancestor::button")`));
+assertExists(fallback(`byXPath('//*[text()=" Integration created successfully "]')`));
+}
+
+function AddALLintegrationWithText(){
+NavigateToIntegrationMaintenance();
+click(fallback(`byXPath("//span[contains(text(),'ADD NEW INTEGRATION')]/ancestor::button")`));
+click(fallback(`byXPath("(//div[contains(text(),'Vendor')]/span/following::mat-select)[1]")`));
+click(fallback(`byXPath("//span[contains(text(),'ALL') and @class='vendor-option']")`));
+wait(2000);
+setValue(fallback(`byXPath("//h4[contains(text(),'Add New Integration')]")`),"{{TAB}}");
+wait(2000);
+click(fallback(`byXPath("//span[contains(text(),'Exclude Non VWR Vendor Integrations')]")`));
+click(fallback(`byXPath("(//div[contains(text(),'Stockroom')]/span/following::mat-select)[1]")`));
+click(fallback(`byXPath("//span[contains(text(),'All Stockrooms')]/parent::span/preceding-sibling::mat-pseudo-checkbox")`));
+wait(2000);
+setValue(fallback(`byXPath("//h4[contains(text(),'Add New Integration')]")`),"{{TAB}}");
+wait(2000);
+click(fallback(`byXPath("(//div[contains(text(),'Output Type')]/span/following::mat-select)[1]")`));
+click(fallback(`byXPath("//span[contains(text(),'TEXT FILE CONFIGURATOR')]/parent::span")`));
+
+click(fallback(`byXPath("//span[contains(text(),'Next')]/parent::span")`,
+   `byXPath("//span[contains(text(),'Next')]/parent::span")`));
+wait(2000);
+click(fallback(`byXPath("//span[contains(text(),'Request Integration')]/ancestor::label")`));
+wait(2000);
+click(fallback(`byXPath("(//span[contains(text(),'Request Integration') and @class='mat-checkbox-label']/following::div[contains(text(),'Add email')])[1]")`));
+wait(2000);
+var TempEmail=eval("'Auto'+ Math.floor(Math.random()*10000) + '@gmail.com'");
+log(TempEmail);
+setValue(fallback(`byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`,
+   `byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`,
+   `byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`),TempEmail);
+click(fallback(`byXPath("//mat-icon[text()='save']")`));
+click(fallback(`byXPath("//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']")`));
+click(fallback(`byXPath("(//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']/following::div[contains(text(),'Add email')])[1]")`));
+wait(2000);
+var TempEmail=eval("'Auto'+ Math.floor(Math.random()*10000) + '@gmail.com'");
+log(TempEmail);
+setValue(fallback(`byXPath("(//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']/following::input)[1]")`),TempEmail);
+click(fallback(`byXPath("//mat-icon[text()='save']")`));
+wait(2000);
+click(fallback(`byXPath("//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']")`));
+click(fallback(`byXPath("(//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']/following::div[contains(text(),'Add email')])[1]")`));
+wait(2000);
+var TempEmail=eval("'Auto'+ Math.floor(Math.random()*10000) + '@gmail.com'");
+log(TempEmail);
+setValue(fallback(`byXPath("(//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']/following::input)[1]")`),TempEmail);
+click(fallback(`byXPath("//mat-icon[text()='save']")`));
+wait(4000);
+click(fallback(`byXPath("(//span[contains(text(),'Next')]/ancestor::button)[2]")`));
+wait(4000);
+click(fallback(`byXPath("//span[contains(text(),'Save')]/ancestor::button")`));
+assertExists(fallback(`byXPath('//*[text()=" Integration created successfully "]')`));
+}

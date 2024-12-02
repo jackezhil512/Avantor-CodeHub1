@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
   <testcase name='' description='script generated from Web Designer' author='Harish@avantorsciences.com' version='webDesigner'>
-    <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep00' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'></dpl>
     <fallback useFallback='true'></fallback>
     <shadowDOM useShadowDOM='true'></shadowDOM>
     <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='714dcd6a-d205-4477-b9b8-2f6ac8043e69' uiType='base'>
@@ -200,6 +200,17 @@
     </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9ef24bd5-e724-4d03-9034-d43cfbcd717b' uiType='base'>
       <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value=' getText(byXPath("(//td[contains(@class,&apos;mat-column-vendorData&apos;)])[1]"))' type='web' desc='Get Vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fc4a5459-0dd5-4fab-b34e-7d06609d383e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='VendorNameInFirstRow' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertEqual' value=' "auto1215"' type='web' desc='verify updfated and searched vendor results are same or not?' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4176aea3-ef0b-4f4e-a6a6-9bb5e781744e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='VendorNameInFirstRow' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='VendorName' selected='false' fallback='true'></accessor>
+      </dialect>
     </step>
     <step action='assertExists' value='' type='web' desc='verify stockroom hyper link exist' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3caa132a-241a-41f5-8ce0-7fc121217603' uiType='base'>
       <dialect type='sahi'>

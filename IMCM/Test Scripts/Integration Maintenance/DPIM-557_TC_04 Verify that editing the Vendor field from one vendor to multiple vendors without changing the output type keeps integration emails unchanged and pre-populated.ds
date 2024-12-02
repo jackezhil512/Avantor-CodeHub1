@@ -88,12 +88,20 @@
         <accessor type='unknown' value='Date' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='store' value=' "AutomationSecond"+Date+RandomVal' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bcb5545c-0cc5-42e2-90a6-4048599d1ebb' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='SecondVendorName' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='store' value=' "Automation" +Date+RandomVal' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='71a040c3-4aeb-4a47-a937-1d6faa554ade' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='VendorName' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='51067d02-2425-4523-847d-9c980663c7df' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='CreateSecondVendorAndAddIntegrationWithEMAILXML()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c45744f1-351f-4bbc-9111-d881efe5ed94' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
     <step action='js' value='CreateVendorAndAddIntegration()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='af9240c0-02a1-42f5-8cc2-c03dc140177c' uiType='base'>

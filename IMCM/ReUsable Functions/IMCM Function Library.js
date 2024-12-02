@@ -1480,6 +1480,12 @@ click(fallback(`byXPath("//span[text()=' ALL ']/parent::mat-option")`));
 click(fallback(`byXPath("//span[text()='Update Results']/ancestor::button")`));
 }
 
+function updateResultWithAutomationVendor() {
+click(fallback(`byXPath("(//div[text()=' Vendor ']/following::mat-select)[1]")`));
+click(fallback(`byXPath("//span[text()=' auto1215 ']/parent::mat-option")`));
+click(fallback(`byXPath("//span[text()='Update Results']/ancestor::button")`));
+}
+
 function deleteAll() {
 let value = _isVisible(fallback(`byXPath("//img[@src='/assets/icons/ellipsis-icon.svg']/parent::span")`));
 log(value);

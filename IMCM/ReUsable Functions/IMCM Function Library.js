@@ -1580,7 +1580,89 @@ click(fallback(`byXPath("//span[contains(text(),'Next')]/parent::span")`,
 click(fallback(`byXPath("//span[contains(text(),'Save')]/parent::span")`));
 wait(3000);
 
-
 }
 
+function CreateSecondVendorAndAddIntegrationWithEMAILXML(){ 
+wait(5000);
+log(VendorName);
+var StockRoomName=$ConsumptionStockroom;
+log(StockRoomName);
+var Email="Automation"+RandomVal+"@gmail.com";
+setDescription("Vendor Maintenance");
+NavigateToVendorMaintenancePage();
+wait(1000);
+setDescription("Click Add new vendor");
+click(fallback(`byXPath('//*[text()=" Add New Vendor "]')`));
+setDescription("Set vender Naame");
+setValue(fallback(`byXPath('//*[text() =" Create New Vendor "]/following::input[1]')`),VendorName);
+setValue(fallback(`byXPath('//*[text() =" Create New Vendor "]/following::input[4]')`),RandomVal);
+setDescription("Click next");
+click(fallback(`custom("mat-icon", "arrow_forward")`));
+setDescription("Enter vendor name");
+assertExists(fallback(`byXPath('//*[text()="${SecondVendorName }"]')`));
+setDescription("Validate PDF OUTPUT");
+assertExists(fallback(`byXPath('//*[text()="PDF OUTPUT"]')`));
+setDescription("Click next");
+click(fallback(`custom("mat-icon", "arrow_forward")`));
+setDescription("Validate Vendor Name");
+assertExists(fallback(`byXPath('//*[text()="${SecondVendorName }"]')`));
+setDescription("Validate out Put type");
+assertExists(fallback(`cell("PDF OUTPUT")`));
+setDescription("Click on Save and Add Vendor");
+wait(2000);
+click(fallback(`button("Save & Add Vendor")`,
+   `button("add-vendor cdk-focused cdk-mouse-focused mat-button-base mat-flat-button mat-focus-indicator mat-primary ng-star-inserted py-1")`,
+   `byXPath("//mat-dialog-container[@id='mat-dialog-0']/app-create-update-wizard/mat-dialog-actions/button[3]")`,
+   `byXPath('//*[@class="mat-focus-indicator py-1 add-vendor mat-flat-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused"]')`,
+   `byXPath('/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-actions/button[3]')`,
+   `byXPath("id('mat-dialog-0')/app-create-update-wizard[@class='ng-star-inserted']/mat-dialog-actions[@class='mat-dialog-actions px-3 vendor-btns']/button[@class='mat-focus-indicator py-1 add-vendor mat-flat-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused']")`,
+   `byJQuery('div[class="cdk-overlay-pane avantor-dialog"] > mat-dialog-container[class="mat-dialog-container ng-tns-c31-153 ng-trigger ng-trigger-dialogContainer ng-star-inserted"] > app-create-update-wizard[class="ng-star-inserted"] > mat-dialog-actions[class="mat-dialog-actions px-3 vendor-btns"] > button[class="mat-focus-indicator py-1 add-vendor mat-flat-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused"]')`,
+   `byJQuery('#mat-dialog-0 > .ng-star-inserted > .mat-dialog-actions.px-3.vendor-btns > .mat-focus-indicator.py-1.add-vendor.mat-flat-button.mat-button-base.mat-primary.ng-star-inserted.cdk-focused.cdk-mouse-focused')`));
+setDescription("Validate Success Message");
+assertExists(fallback(`div("VENDOR CREATED SUCCESSFULLY[9]").xy(0.41, 0.32 )`));
+wait(1000);
+NavigateToIntegrationmaintenance();
+click(fallback(`byXPath("//span[contains(text(),'ADD NEW INTEGRATION')]/ancestor::button")`));
+click(fallback(`byXPath("(//div[contains(text(),'Vendor')]/span/following::mat-select)[1]")`));
+click(fallback(`byXPath("//span[contains(text(),'{VendorName}') and @class='vendor-option']")`,
+   `byXPath("//span[contains(text(),'${SecondVendorName}') and @class='vendor-option']")`));
+wait(2000);
+setValue(fallback(`byXPath("//h4[contains(text(),'Add New Integration')]")`),"{{TAB}}");
+wait(2000);
+click(fallback(`byXPath("(//div[contains(text(),'Stockroom')]/span/following::mat-select)[1]")`));
+click(fallback(`byXPath('//*[text()="${StockRoomName}"]')`,
+   `byXPath('//*[text()='{StockRoomName}']')`,
+   `byXPath('//*[text()='${StockRoomName}']')`,
+   `byXPath('//*[text()="Automation Regular Stockroom"]')`,
+   `span(1, _in(custom("mat-option", "mat-option-155")))`,
+   `span(1, _in(custom("mat-option", {'id':'mat-option-155'})))`,
+   `span("vendor-option[1]")`,
+   `span("Automation Regular Stockroom[1]")`,
+   `byXPath("//mat-option[@id='mat-option-155']/span/span")`,
+   `byXPath('/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option[2]/span/span')`,
+   `byXPath("id('mat-option-155')/span[@class='mat-option-text']/span[@class='vendor-option']")`,
+   `byJQuery('div[class="ng-tns-c89-179 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] > div[class="ng-tns-c89-179"] > mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted"] > span[class="mat-option-text"] > span[class="vendor-option"]')`,
+   `byJQuery('#mat-option-155 > .mat-option-text > .vendor-option')`));
+wait(2000);
+setValue(fallback(`byXPath("//h4[contains(text(),'Add New Integration')]")`),"{{TAB}}");
+wait(2000);
+click(fallback(`byXPath("(//div[contains(text(),'Output Type')]/span/following::mat-select)[1]")`));
+click(fallback(`byXPath("//span[contains(text(),'EMAIL XML')]/parent::span")`));
+click(fallback(`byXPath("//span[contains(text(),'Next')]/parent::span")`,
+   `byXPath("//span[contains(text(),'Next')]/parent::span")`));
+wait(2000);
+click(fallback(`byXPath("//span[contains(text(),'Request Integration')]/ancestor::label")`));
+wait(2000);
+click(fallback(`byXPath("(//label[contains(text(),'Primary Email')]/following::div[contains(text(),'Add email')])[1]")`));
+wait(2000);
+var TempEmail=eval("'Auto'+ Math.floor(Math.random()*10000) + '@gmail.com'");
+log(TempEmail);
+setValue(fallback(`byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`),TempEmail);
+click(fallback(`byXPath("//mat-icon[text()='save']")`));
+click(fallback(`byXPath("//span[contains(text(),'Next')]/parent::span")`,
+   `byXPath("//span[contains(text(),'Next')]/parent::span")`));
+click(fallback(`byXPath("//span[contains(text(),'Save')]/parent::span")`));
+wait(3000);
+
+}
 

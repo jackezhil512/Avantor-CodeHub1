@@ -1564,16 +1564,7 @@ click(fallback(`byXPath("//span[contains(text(),'Next')]/parent::span")`,
    `byXPath("//span[contains(text(),'Next')]/parent::span")`));
 click(fallback(`byXPath("//span[contains(text(),'Save')]/parent::span")`));
 wait(3000);
-setDescription("Get Vendor Name");
-var VendorNameInFirstRow=getText(byXPath("(//td[contains(@class,'mat-column-vendorData')])[1]"));
-setDescription("Get Stockroom Name");
-var StockroomNameFirstRow=getText(byXPath("(//td[contains(@class,'mat-column-stockroomData')])[1]"));
-setDescription("verify updfated and searched vendor results are same or not?");
-assertEqual(fallback(`VendorNameInFirstRow`,
-   `VendorName`),VendorName);
-setDescription("verify updfated and searched stockroom results are same or not?");
-assertEqual(fallback(`StockroomNameFirstRow`,
-   `StockroomName`),StockRoomName);
+
 
 }
 

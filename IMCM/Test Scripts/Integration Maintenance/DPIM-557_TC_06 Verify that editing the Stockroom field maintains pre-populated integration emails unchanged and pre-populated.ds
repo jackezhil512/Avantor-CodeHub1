@@ -69,6 +69,32 @@
     <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='28605810-bec7-4ab5-89c4-c054dd5f8c59' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
+    <step action='store' value=' eval(" Math.floor(Math.random()*1000000000)")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5fb43fa6-4d71-4353-8167-6afaf55b2e8c' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='RandomVal' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value='datefunc()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5f550bf9-264f-42c8-b9a4-b91a16a40ce1' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='Date' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value=' "AutomationSecond"+Date+RandomVal' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c92cfd68-93e3-49d2-b344-5d0bd8e9aaf3' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='SecondVendorName' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value=' "Automation" +Date+RandomVal' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4a431bc3-4e9d-4bf7-9f60-65b77f8551d7' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='VendorName' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9a61f65c-22aa-41e6-915b-8e44353d5264' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='CreateSecondVendorAndAddIntegrationWithEMAILXML()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d50b622e-f2e9-4ba7-80e4-a089e5ee136b' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
     <step action='js' value='createALLIntegrationIfNotExist()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3f4ae41c-6b53-4047-bfcf-c0200e0336b5' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>

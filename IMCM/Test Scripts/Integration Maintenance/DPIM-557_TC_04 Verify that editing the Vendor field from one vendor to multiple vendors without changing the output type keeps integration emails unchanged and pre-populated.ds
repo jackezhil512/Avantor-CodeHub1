@@ -182,7 +182,39 @@
         <accessor type='unknown' value=' byXPath("//mat-icon[text()=&apos;save&apos;]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='Click on empty Space' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fb809a3d-6894-480c-adff-f2a02dc4992f' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d08a7fe5-9d68-47b4-909f-371f4080ed7d' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value=' div("mt-3 ng-pristine ng-untouched ng-valid").xy(0.86, 0.55 )' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value=' div("CC Email(s) add  Add email").xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-2-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[2]").xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mt-3 ng-untouched ng-pristine ng-valid"]&apos;).xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div[2]&apos;).xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-2-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-dirty ng-touched ng-valid&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/div[@class=&apos;row mb-5 ml-2 ng-untouched ng-dirty ng-valid&apos;]/div[@class=&apos;col-md-12&apos;]/div[@class=&apos;mt-3 ng-untouched ng-pristine ng-valid&apos;]").xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='div({&apos;formarrayname&apos;:&apos;requestCCEmails&apos;}).xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;form[class="mt-2 ng-dirty ng-touched ng-valid"] &gt; section[class="px-1 py-2 pr-3 email_integration-div"] &gt; div[class="row mb-5 ml-2 ng-untouched ng-dirty ng-valid"] &gt; div[class="col-md-12"] &gt; div[class="mt-3 ng-untouched ng-pristine ng-valid"]&apos;).xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mt-2.ng-dirty.ng-touched.ng-valid &gt; .px-1.py-2.pr-3.email_integration-div &gt; .row.mb-5.ml-2.ng-untouched.ng-dirty.ng-valid &gt; .col-md-12 &gt; .mt-3.ng-untouched.ng-pristine.ng-valid&apos;).xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6f06bd71-feb2-4cfd-bc2a-6434e1dba1ac' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='55ea7239-0153-456d-9990-47335c23e0b9' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value=' span("Next[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-2-1&apos;]/app-integrations-emails-section/div/button[3]/span[1]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/div/button[3]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-2-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-2 vendor-btns integration-actions mt-2&apos;]/button[@class=&apos;mat-focus-indicator py-1 next ml-sm-2 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='68ffba43-0c53-4ffd-b493-be4779284d36' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value=' span("Previous[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-2-2&apos;]/app-review-section/div/button[2]/span[1]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[3]/app-review-section/div/button[2]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-2-2&apos;)/app-review-section[@class=&apos;review-integration ng-star-inserted&apos;]/div[@class=&apos;px-2 vendor-btns integration-actions mt-2&apos;]/button[@class=&apos;mat-focus-indicator py-1 previous mat-stroked-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='Click on empty Space' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fb809a3d-6894-480c-adff-f2a02dc4992f' uiType='base'>
       <dialect type='sahi'>
         <accessor type='AttrClass' value=' div("cdk-overlay-backdrop cdk-overlay-backdrop-showing cdk-overlay-transparent-backdrop").xy(0.51, 0.28 )' selected='true' fallback='true'></accessor>
         <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
@@ -195,7 +227,7 @@
     <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='babe8d14-6629-4e91-9f84-7a14a3642147' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ffd4abf4-4b6b-4641-ae8f-66ce92294d8d' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ffd4abf4-4b6b-4641-ae8f-66ce92294d8d' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>

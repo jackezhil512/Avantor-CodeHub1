@@ -262,10 +262,31 @@
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='rightClick' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fd7a7225-b90a-44cb-9fb2-23279dc7e006' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value=' custom("mat-icon", "mat-icon mat-icon-no-color mat-remove-email material-icons notranslate")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value=' custom("mat-icon", "delete")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-3-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[1]/div[2]/div/span/span/mat-icon[2]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-icon notranslate mat-remove-email material-icons mat-icon-no-color"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()="delete"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div/div[2]/div/span/span/mat-icon[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-3-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-pristine ng-valid ng-touched&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/div[@class=&apos;row mb-5 ml-2 ng-pristine ng-valid ng-touched&apos;]/div[@class=&apos;col-md-12&apos;]/div[@class=&apos;ng-pristine ng-valid ng-touched&apos;]/div[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex ng-star-inserted&apos;]/span[@class=&apos;mx-3 mt-1 d-flex align-items-center&apos;]/span[1]/mat-icon[@class=&apos;mat-icon notranslate mat-remove-email material-icons mat-icon-no-color&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value=' custom("mat-icon", {&apos;color&apos;:&apos;remove-email&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;mat-icon[class="mat-icon notranslate mat-remove-email material-icons mat-icon-no-color"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-icon.notranslate.mat-remove-email.material-icons.mat-icon-no-color&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='327de83f-c7db-4a2e-82e7-c6d64f074c44' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='verify Email exists on review tab' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ae381f1f-eb70-4bb0-9ebc-83cd7298af69' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='Verify Email value is pre populated' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d0063175-ee69-4071-86c5-658fa4b07286' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//mat-icon[text()=&apos;delete&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='verify Email exists on review tab' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ae381f1f-eb70-4bb0-9ebc-83cd7298af69' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' paragraph("${TempEmail }")' selected='true' fallback='true'></accessor>
       </dialect>

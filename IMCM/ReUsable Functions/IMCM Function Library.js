@@ -1498,8 +1498,7 @@ assertExists(fallback(`byXPath('//*[text()=" Integration created successfully "]
 }
 
 
-function CreateVendorAndAddIntegration(){
-   
+function CreateVendorAndAddIntegration(){ 
 wait(5000);
 var RandomVal=eval(" Math.floor(Math.random()*1000)");
 var Date=datefunc();
@@ -1531,7 +1530,14 @@ setDescription("Validate out Put type");
 assertExists(fallback(`cell("PDF OUTPUT")`));
 setDescription("Click on Save and Add Vendor");
 wait(2000);
-click(fallback(`span("Save & Add Vendor[1]")`));
+click(fallback(`button("Save & Add Vendor")`,
+   `button("add-vendor cdk-focused cdk-mouse-focused mat-button-base mat-flat-button mat-focus-indicator mat-primary ng-star-inserted py-1")`,
+   `byXPath("//mat-dialog-container[@id='mat-dialog-0']/app-create-update-wizard/mat-dialog-actions/button[3]")`,
+   `byXPath('//*[@class="mat-focus-indicator py-1 add-vendor mat-flat-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused"]')`,
+   `byXPath('/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-actions/button[3]')`,
+   `byXPath("id('mat-dialog-0')/app-create-update-wizard[@class='ng-star-inserted']/mat-dialog-actions[@class='mat-dialog-actions px-3 vendor-btns']/button[@class='mat-focus-indicator py-1 add-vendor mat-flat-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused']")`,
+   `byJQuery('div[class="cdk-overlay-pane avantor-dialog"] > mat-dialog-container[class="mat-dialog-container ng-tns-c31-153 ng-trigger ng-trigger-dialogContainer ng-star-inserted"] > app-create-update-wizard[class="ng-star-inserted"] > mat-dialog-actions[class="mat-dialog-actions px-3 vendor-btns"] > button[class="mat-focus-indicator py-1 add-vendor mat-flat-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused"]')`,
+   `byJQuery('#mat-dialog-0 > .ng-star-inserted > .mat-dialog-actions.px-3.vendor-btns > .mat-focus-indicator.py-1.add-vendor.mat-flat-button.mat-button-base.mat-primary.ng-star-inserted.cdk-focused.cdk-mouse-focused')`));
 setDescription("Validate Success Message");
 assertExists(fallback(`div("VENDOR CREATED SUCCESSFULLY[9]").xy(0.41, 0.32 )`));
 wait(1000);

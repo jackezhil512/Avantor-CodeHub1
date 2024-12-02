@@ -1500,7 +1500,6 @@ assertExists(fallback(`byXPath('//*[text()=" Integration created successfully "]
 
 function CreateVendorAndAddIntegration(){ 
 wait(5000);
-
 log(VendorName);
 var StockRoomName=$ConsumptionStockroom;
 log(StockRoomName);

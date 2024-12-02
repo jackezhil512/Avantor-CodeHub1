@@ -72,71 +72,53 @@
     <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0ae26b07-04a4-473d-a54c-f5399db877b9' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='js' value='createALLIntegrationIfNotExist()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='822aec5a-09ba-407f-b678-002e2c5b0c7d' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
     <step action='js' value='AddAutomationVendorintegrationWithText()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='184ef92e-ddcb-4f11-80c1-d4e7a92fb873' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4ee36cca-36e0-4d30-a081-a89235db3655' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3757ed87-41a3-4132-9d38-40f6442ef1b2' uiType='base'>
+    <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3757ed87-41a3-4132-9d38-40f6442ef1b2' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='83e811fc-5551-449f-a2e3-951a287805b8' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='Text' value=' button("Save &amp; Add Vendor")' selected='true' fallback='true'></accessor>
-        <accessor type='AttrClass' value=' button("add-vendor cdk-focused cdk-mouse-focused mat-button-base mat-flat-button mat-focus-indicator mat-primary ng-star-inserted py-1")' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value=' byXPath("//mat-dialog-container[@id=&apos;mat-dialog-0&apos;]/app-create-update-wizard/mat-dialog-actions/button[3]")' selected='false' fallback='true'></accessor>
-        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-focus-indicator py-1 add-vendor mat-flat-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-actions/button[3]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-dialog-0&apos;)/app-create-update-wizard[@class=&apos;ng-star-inserted&apos;]/mat-dialog-actions[@class=&apos;mat-dialog-actions px-3 vendor-btns&apos;]/button[@class=&apos;mat-focus-indicator py-1 add-vendor mat-flat-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused&apos;]")' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value=' byJQuery(&apos;div[class="cdk-overlay-pane avantor-dialog"] &gt; mat-dialog-container[class="mat-dialog-container ng-tns-c31-153 ng-trigger ng-trigger-dialogContainer ng-star-inserted"] &gt; app-create-update-wizard[class="ng-star-inserted"] &gt; mat-dialog-actions[class="mat-dialog-actions px-3 vendor-btns"] &gt; button[class="mat-focus-indicator py-1 add-vendor mat-flat-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;#mat-dialog-0 &gt; .ng-star-inserted &gt; .mat-dialog-actions.px-3.vendor-btns &gt; .mat-focus-indicator.py-1.add-vendor.mat-flat-button.mat-button-base.mat-primary.ng-star-inserted.cdk-focused.cdk-mouse-focused&apos;)' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2cef9fe8-5d19-48a0-b7de-ef67df7c4d88' uiType='base'>
+    <step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2cef9fe8-5d19-48a0-b7de-ef67df7c4d88' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3a019171-c616-417f-873a-2f164587cdd4' uiType='base'>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3a019171-c616-417f-873a-2f164587cdd4' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='88b62ef1-9011-4bc7-8c26-a4e1c3eb6513' uiType='base'>
+    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='88b62ef1-9011-4bc7-8c26-a4e1c3eb6513' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='TotalRow' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='337ddc8f-c96e-4ff8-ac63-669643e4ab3d' uiType='base'>
+    <step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='337ddc8f-c96e-4ff8-ac63-669643e4ab3d' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='while' value='TotalRow&gt;=1' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7448859d-ba73-4176-be53-d3a0974a56ed' uiType='conditional'>
+    <step action='while' value='TotalRow&gt;=1' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7448859d-ba73-4176-be53-d3a0974a56ed' uiType='conditional'>
       <dialect type='sahi'>
         <accessor type='unknown' value='TotalRow&gt;=1' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value='TotalRow&gt;1' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='js' value='deleteAll()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='98e78934-b1cc-4c38-af83-a8ba563825be' uid='9f414f96-b706-4517-b35c-6dca6337363d' uiType='base'>
+    <step action='js' value='deleteAll()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='98e78934-b1cc-4c38-af83-a8ba563825be' uid='9f414f96-b706-4517-b35c-6dca6337363d' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='98e78934-b1cc-4c38-af83-a8ba563825be' uid='7f96967c-e19d-4b94-bd07-72da5b81fc74' uiType='base'>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='98e78934-b1cc-4c38-af83-a8ba563825be' uid='7f96967c-e19d-4b94-bd07-72da5b81fc74' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='98e78934-b1cc-4c38-af83-a8ba563825be' uid='86dee50c-1d03-4c2f-ad0c-e0acb416e0b4' uiType='base'>
+    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='98e78934-b1cc-4c38-af83-a8ba563825be' uid='86dee50c-1d03-4c2f-ad0c-e0acb416e0b4' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='TotalRow' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9844aa16-d96a-4604-9bbf-1e57491cb8c1' uiType='end' sibling='98e78934-b1cc-4c38-af83-a8ba563825be'>
+    <step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9844aa16-d96a-4604-9bbf-1e57491cb8c1' uiType='end' sibling='98e78934-b1cc-4c38-af83-a8ba563825be'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6fb8d12e-f85b-40ee-a7dc-61fb56369e32' uiType='base'>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6fb8d12e-f85b-40ee-a7dc-61fb56369e32' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='js' value='createALLIntegrationIfNotExist()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='905d26aa-db32-4962-bd08-b9ffeeece220' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='AddALLintegration()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e4fbb387-4136-4ca5-b0a5-a116fac9b0fe' uiType='base'>
+    <step action='js' value='AddALLintegration()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e4fbb387-4136-4ca5-b0a5-a116fac9b0fe' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
     <step action='store' value=' eval(" Math.floor(Math.random()*1000000000)")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7922e42f-bc3e-4c7a-a528-ebb4e5d8bc4a' uiType='base'>

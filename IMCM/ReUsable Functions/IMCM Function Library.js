@@ -1367,3 +1367,14 @@ click(fallback(`byXPath("(//div[text()=' Vendor ']/following::mat-select)[1]")`)
 click(fallback(`byXPath("//span[text()=' ALL ']/parent::mat-option")`));
 click(fallback(`byXPath("//span[text()='Update Results']/ancestor::button")`));
 }
+
+function deleteAll() {
+let value = _isVisible(fallback(`byXPath("//img[@src='/assets/icons/ellipsis-icon.svg']/parent::span")`));
+log(value);
+if(true == value){
+click(fallback(`byXPath("//img[@src='/assets/icons/ellipsis-icon.svg']/parent::span")`));
+click(fallback(`byXPath("//img[@src='/assets/icons/delete.svg']/parent::button")`));
+click(fallback(`byXPath("//span[text()=' Yes ']/parent::button")`));
+assertExists(fallback(`byXPath('//*[text()=" You have successfully deleted integration "]')`));  
+}
+}

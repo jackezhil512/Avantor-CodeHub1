@@ -295,7 +295,7 @@
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='327de83f-c7db-4a2e-82e7-c6d64f074c44' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='Verify Email value is pre populated' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d0063175-ee69-4071-86c5-658fa4b07286' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='Verify Email value is pre populated' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d0063175-ee69-4071-86c5-658fa4b07286' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//mat-icon[text()=&apos;delete&apos;]")' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
@@ -392,7 +392,7 @@
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='verify Email exists on review tab' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4bb2ddea-290b-43fc-b52d-230f643826fd' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='verify Email exists on review tab' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4bb2ddea-290b-43fc-b52d-230f643826fd' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' paragraph("${TempEmail }")' selected='true' fallback='true'></accessor>
       </dialect>

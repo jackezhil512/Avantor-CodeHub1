@@ -79,22 +79,22 @@
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='AttrClass' value='div(&quot;order-history-facetvalue-label[2]&quot;).xy(0.96, 0.65 )' fallback='true' selected='true'/>
-   <accessor type='Text' value='div(&quot;Last 30 Days&quot;).xy(0.96, 0.65 )' fallback='true' selected='false'/>
+   <accessor type='Text' value='div(&quot;Last 30 Days&quot;).xy(0.96, 0.65 )' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div[1]/div/div/div/a[3]/div&apos;).xy(0.96, 0.65 )' fallback='true' selected='false'/>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Last 30 Days &quot;]&apos;).xy(0.96, 0.65 )' fallback='true' selected='false'/>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div/div/div/div/a[3]/div&apos;).xy(0.96, 0.65 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;order-history-facetvalue-label[2]&quot;).xy(0.96, 0.65 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='AttrClass' value='link(&quot;active-facet[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='link(&quot;Last 30 daysx&quot;)' fallback='true' selected='true'/>
    <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/orders?query=:date-desc&quot;)' fallback='true' selected='false'/>
-   <accessor type='Text' value='link(&quot;Last 30 daysx&quot;)' fallback='true' selected='false'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[2]&apos;)' fallback='true' selected='false'/>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[2]&apos;)' fallback='true' selected='false'/>
    <accessor type='Attribute' value='link({&apos;routerlink&apos;:&apos;./&apos;})' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/orders?query=:date-desc&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='link(&quot;active-facet[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

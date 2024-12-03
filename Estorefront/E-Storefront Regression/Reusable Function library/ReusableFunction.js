@@ -1110,7 +1110,7 @@ function OrderEntryEmptyPartNumberValidation(input){
 
   function InvoicePaybyCreditcard(){
 
-  assertExists(fallback(`submit("Pay by Credit Card")`));
+   assertExists(fallback(`submit("Pay by Credit Card")`));
   wait(2000);
   setSelected(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/select')`),"Open");
   assertExists(fallback(`div("Open")`));

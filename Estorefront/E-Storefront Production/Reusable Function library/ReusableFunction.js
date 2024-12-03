@@ -930,7 +930,7 @@ function VerifyOrderNumberAndPONumberInOrderHistorypage(){
 
   var OrderNumber = _isVisible(fallback(`link("8612832103")`));
   log(OrderNumber);
-  if (true == OrderNumber){
+  if (8612832103 == OrderNumber){
  log("Verify OrderNumber is displayed");   
   
   }else{
@@ -939,6 +939,19 @@ function VerifyOrderNumberAndPONumberInOrderHistorypage(){
  
  click(fallback(`submit("clear-filter")`));
 
+ setValue(fallback(`byXPath('//*[@id="search"]')`, "4500564265"));
+  click(fallback(`submit({'type':'submit'})`));
+  assertExists(fallback(`div("4500564265[1]")`));
 
+
+  var PoNumber = _isVisible(fallback(`div("4500564265[1]")`));
+  log(PoNumber);
+  if (4500564265 == PoNumber){
+ log("Verify PoNumber is displayed");   
+  
+  }else{
+    log("PoNumber should not displayed")
+  }  
+ 
 
 }

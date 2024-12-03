@@ -1198,14 +1198,14 @@ function globalWebAddingSearchcatlogNumberTocartpageInPdp(catlog){
   click(fallback(`byXPath('//*[@class="icon icon-lg"]')`));
   wait(30000);
   assertExists(fallback(`span("${Catlog}",_below(tableHeader("VWR Catalog Number")))`));
-  (//fallback(`span("${Catlog}",_below(tableHeader("VWR Catalog Number")))`));
+  //(fallback(`span("${Catlog}",_below(tableHeader("VWR Catalog Number")))`));
  
   //var CatlogNumber=getText(div(Catlog,_below(div("attribute catalog-attribute"))));
   //log(CatlogNumber);
 
 
  
-  click(fallback(`button("input-number-increment btn btn-default btn-number",rightOf(span("${Catlog}",_below(tableHeader("VWR Catalog Number")))))`);
+  click(fallback(`button("input-number-increment btn btn-default btn-number",rightOf(span("${catlog}",_below(tableHeader("VWR Catalog Number")))))`));
   click(fallback(`byXPath('//*[@id="addItemToCart"]')`));
   wait (10000);
   click(fallback(`span("cart-label")`));

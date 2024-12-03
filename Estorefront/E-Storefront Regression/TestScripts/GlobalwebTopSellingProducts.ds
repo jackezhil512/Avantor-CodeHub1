@@ -66,4 +66,20 @@
    <accessor type='unknown' value='button(&quot;input-number-increment btn btn-default btn-number&quot;,rightOf(span(&quot;89108-162&quot;,_below(tableHeader(&quot;VWR Catalog Number&quot;)))))' fallback='true' selected='true'/>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;addItemToCart&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='button(&quot;btn btn-primary&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='button(&quot;addItemToCart&quot;)' fallback='true' selected='false'/>
+   <accessor type='AttrValue' value='button(&quot;Add to Cart&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;addItemToCart&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/div[6]/div/div[2]/div/div[2]/div/div/div/div/div/span[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;addItemToCart&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='button({&apos;onclick&apos;:&apos;javascript:addToCartAjax();&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;input[class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#addItemToCart&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;input[value=&quot;Add to Cart&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

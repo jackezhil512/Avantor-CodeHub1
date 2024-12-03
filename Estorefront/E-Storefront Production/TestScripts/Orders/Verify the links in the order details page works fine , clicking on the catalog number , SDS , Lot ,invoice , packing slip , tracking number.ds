@@ -59,4 +59,13 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div(&quot;Completely Shipped[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-order-history/div/div/div[4]/app-order-history-list/div/div[1]/div[9]/div&apos;).xy(0.01, 0.24 )' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Completely Shipped &quot;]&apos;).xy(0.01, 0.24 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[4]/app-order-history-list/div/div/div[9]/div&apos;).xy(0.01, 0.24 )' fallback='true' selected='false'/>
+   <accessor type='Text' value='div(&quot;Completely Shipped[1]&quot;).xy(0.01, 0.24 )' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

@@ -963,7 +963,7 @@ function VerifyclickingonthecatalognumberInOrderDetailsPage(){
   click(fallback(`label("d-flex justify-content-between search-facet")`));
   setValue(fallback(`byXPath('//*[@id="search"]')`), "8612823727");
   click(fallback(`submit({'type':'submit'})`));
-  assertExists(fallback(`link("8612832103")`));
+  assertExists(fallback(`link("8612823727")`));
 
   var OrderNumber = getText(fallback(`link("8612823727")`));
   log(OrderNumber);

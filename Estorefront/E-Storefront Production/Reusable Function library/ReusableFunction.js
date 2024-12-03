@@ -1024,6 +1024,8 @@ function VerifyCancelbuttonInOrderdetaispage(){
     log("Verify OrderStatus is Processing is not displayed");
   }  
  
+ click(fallback(`link("8612849014")`));
+ assertExists(fallback(`div("order-details")`)); 
 
 }
 

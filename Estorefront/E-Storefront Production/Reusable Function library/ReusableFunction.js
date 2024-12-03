@@ -919,18 +919,3 @@ assertExists(fallback(`div("standard-header")`));
 
 
 }
-
-
-function VerifyordernumberandPONumber(){
-
-var Acceptallcookies = _isVisible(fallback(`submit("Accept all cookies")`));
-  log(Acceptallcookies);
-  if (true == Acceptallcookies){
- log("Verify accept all cookies message is displayed");   
-  click(fallback(`submit("Accept all cookies")`));
-  }else{
-    log("Verify accept all cookies message is disabled after login failed")
-  }  
- 
-
-}

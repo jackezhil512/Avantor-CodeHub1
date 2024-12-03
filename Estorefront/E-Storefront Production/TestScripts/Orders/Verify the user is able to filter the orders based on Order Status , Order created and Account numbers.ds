@@ -54,16 +54,16 @@
    <accessor type='AttrClass' value='link(&quot;active-facet[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='AttrClass' value='link(&quot;active-facet&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='link(&quot;All Status&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='link(&quot;All Status&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[1]&apos;)' fallback='true' selected='false'/>
    <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;active-facet&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a&apos;)' fallback='true' selected='false'/>
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;SideContent has-components&apos;]/app-order-history-facet-list[1]/div[1]/div[@class=&apos;order-history-filter-desktop-view&apos;]/div[@class=&apos;border-facet&apos;]/section[@class=&apos;mb-4&apos;]/app-order-history-active-facets[1]/div[@class=&apos;active&apos;]/div[@class=&apos;order-history-active-facet-list&apos;]/a[@class=&apos;active-facet&apos;]&quot;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;active&quot;] &gt; div[class=&quot;order-history-active-facet-list&quot;] &gt; a[class=&quot;active-facet&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;.active &gt; .order-history-active-facet-list &gt; .active-facet&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='link(&quot;active-facet&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

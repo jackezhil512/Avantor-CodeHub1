@@ -122,4 +122,27 @@
    <accessor type='Text' value='div(&quot;RQ-00886001&quot;).xy(0.20, 0.60 )' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='div(&quot;WEB&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[3]/div[2]/app-my-quotes-item/div[1]/div/div/div/div[5]/div&apos;).xy(0.34, 0.50 )' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; WEB &quot;]&apos;).xy(0.34, 0.50 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[3]/div[2]/app-my-quotes-item/div/div/div/div/div[5]/div&apos;).xy(0.34, 0.50 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;cx-value[3]&quot;).xy(0.34, 0.50 )' fallback='true' selected='false'/>
+   <accessor type='Text' value='div(&quot;WEB&quot;).xy(0.34, 0.50 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='submit(&quot;btn btn-outline-primary reset-filters&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='submit(&quot;Reset Filters&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[4]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-outline-primary reset-filters&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Reset Filters&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[4]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-my-quotes[1]/div[@class=&apos;container my-quotes-container&apos;]/div[@class=&apos;fliter-wrapper col-3&apos;]/div[4]/button[@class=&apos;btn btn-outline-primary reset-filters&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;button[class=&quot;btn btn-outline-primary reset-filters&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.btn.btn-outline-primary.reset-filters&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

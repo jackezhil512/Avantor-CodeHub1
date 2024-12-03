@@ -132,6 +132,9 @@
     </options>
     <options type="jira">
       <opt name="useJira" value="false"/>
+      <opt name="jiraIssueTypes" value="[object Object]"/>
+      <opt name="jiraFailure" value="[object Object]"/>
+      <opt name="jiraSuccess" value="[object Object]"/>
     </options>
     <options type="lr">
       <opt name="saveCompleteLrOutputLog" value="false"/>
@@ -156,7 +159,7 @@
     <testcase name="Product Validations" importance="normal">
       <test>
         <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Regression/TestScripts/TopSellingProducts/" method="ds" testclass="Chrome" regex="*.ds">
-          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
+          <argument name="Untitled1" method="getData" dpl="Untitled1"/>
         </run>
       </test>
     </testcase>

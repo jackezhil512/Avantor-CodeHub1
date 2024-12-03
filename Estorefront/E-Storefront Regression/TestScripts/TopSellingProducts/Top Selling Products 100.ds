@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'Top Selling Products 100.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../../TestData/TopSellingProducts.csv' exectype='runstepbystep5' errorhandling='' type='HashDPL' locale='en_US'/>
+<testcase   name= 'Top Selling Products 1-10.ds' description= '' author= 'null' version= ''>
+<dpl filename='{ds}/../../TestData/TopSellingProducts.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='Loading Reusable function' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
@@ -10,7 +10,7 @@
    <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='LoginUS($URL,$UserId,$Password)' type='web' desc='Login to application and validate login page successfully loaded or not' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='LoginUS($URL,$USerId,$Password)' type='web' desc='Login to application and validate login page successfully loaded or not' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
@@ -20,12 +20,12 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='NavigatetoProductpagetoSearch($CATALOGID_10)' type='web' desc='Search Catlog Number and Verify if  PDP page navigated or not' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='NavigatetoProductpagetoSearch($CATALOGID_1)' type='web' desc='Search Catlog Number and Verify if  PDP page navigated or not' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='AddingSearchcatlogNumberTocartpageInPdp($CATALOGID_10)' type='web' desc='Validate Catlog Number in PDP page and Cartpage' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='AddingSearchcatlogNumberTocartpageInPdp($CATALOGID_1)' type='web' desc='Validate Catlog Number in PDP page and Cartpage' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

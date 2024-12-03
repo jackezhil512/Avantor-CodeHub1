@@ -916,9 +916,10 @@ function AddingSearchcatlogNumberTocartpageInPdp(Catlog){
 wait (10000);  
   click(fallback(`button("aria-label==Add one more",rightOf(div("${Catlog}",_below(div("attribute catalog-attribute")))))`));
   log("add qty on searched catlognumber in pdp")
+  takePicture(fallback(`button("Add to cart",rightOf(div("${Catlog}",_below(div("attribute catalog-attribute")))))`));
   click(fallback(`button("Add to cart",rightOf(div("${Catlog}",_below(div("attribute catalog-attribute")))))`));
    log("click on add to cart")
-   takePicture(fallback(`button("Add to cart",rightOf(div("${Catlog}",_below(div("attribute catalog-attribute")))))`));
+   
 wait(10000);
   click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));
   wait(2000);

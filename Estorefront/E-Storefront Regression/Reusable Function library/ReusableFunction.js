@@ -911,7 +911,7 @@ function AddingSearchcatlogNumberTocartpageInPdp(Catlog){
   var CatlogNumber=getText(div(Catlog,_below(div("attribute catalog-attribute"))));
   log(CatlogNumber);
 
-  
+wait (10000);  
   click(fallback(`button("aria-label==Add one more",rightOf(div("${Catlog}",_below(div("attribute catalog-attribute")))))`));
   log("add qty on searched catlognumber in pdp")
   click(fallback(`button("Add to cart",rightOf(div("${Catlog}",_below(div("attribute catalog-attribute")))))`));

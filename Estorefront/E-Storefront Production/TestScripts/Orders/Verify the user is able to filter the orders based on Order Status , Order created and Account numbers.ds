@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'Verify the user is able to search with Order number and PO Number .ds' description= '' author= 'null' version= ''>
+<testcase   name= 'Verify the user is able to filter the orders based on Order Status , Order created and Account numbers.ds' description= '' author= 'null' version= ''>
 <dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Production/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
@@ -52,11 +52,6 @@
    <accessor type='Attribute' value='link({&apos;routerlink&apos;:&apos;./&apos;})' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/orders?query=:date-desc&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='AttrClass' value='link(&quot;active-facet[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='VerifyOrderNumberAndPONumberInOrderHistorypage()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 </testcase>

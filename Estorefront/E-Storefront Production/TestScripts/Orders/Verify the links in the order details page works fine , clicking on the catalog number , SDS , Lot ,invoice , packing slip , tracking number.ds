@@ -59,4 +59,33 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='submit(&quot;clear-filter&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='submit(&quot;Reset Filters&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;clear-filter&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Reset Filters &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;SideContent has-components&apos;]/app-order-history-facet-list[1]/div[1]/div[@class=&apos;order-history-filter-desktop-view&apos;]/div[@class=&apos;border-facet&apos;]/section[@class=&apos;mb-4&apos;]/app-order-history-active-facets[1]/div[@class=&apos;active&apos;]/button[@class=&apos;clear-filter&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;active&quot;] &gt; button[class=&quot;clear-filter&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.active &gt; .clear-filter&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='div(&quot;Method[1]&quot;).xy(0.27, 0.70 )' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-order-history/div/div/div[3]/div[3]/div&apos;).xy(0.27, 0.70 )' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Method&quot;]&apos;).xy(0.27, 0.70 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[3]/div[3]/div&apos;).xy(0.27, 0.70 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='div(&quot;8612823727[1]&quot;).xy(0.82, 0.56 )' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-order-history/div/div/div[4]/app-order-history-list[2]/div/div[1]/div[2]/div&apos;).xy(0.82, 0.56 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[4]/app-order-history-list[2]/div/div/div[2]/div&apos;).xy(0.82, 0.56 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-history[1]/div[@class=&apos;order-history&apos;]/div[@class=&apos;order-history-right&apos;]/div[4]/app-order-history-list[2]/div[1]/div[@class=&apos;row order-history-row-desktop&apos;]/div[@class=&apos;col-md-1 col-lg-1 col-xl-1 text-break pl-0&apos;]/div[1]&quot;).xy(0.82, 0.56 )' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

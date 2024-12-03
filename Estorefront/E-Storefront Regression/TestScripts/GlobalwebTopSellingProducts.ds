@@ -112,4 +112,12 @@
    <accessor type='AttrClass' value='link(&quot;btn btn-primary&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='heading1(&quot;Shopping Cart&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;content&apos;]/div/div[2]/div/div[1]/h1&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/div[6]/div/div[2]/div/div/h1&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;content&apos;)/div[@class=&apos;container&apos;]/div[@class=&apos;row pb-2&apos;]/div[@class=&apos;col-xs-12&apos;]/div[@class=&apos;page-title&apos;]/h1[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

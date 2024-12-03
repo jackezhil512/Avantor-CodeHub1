@@ -1205,7 +1205,7 @@ function globalWebAddingSearchcatlogNumberTocartpageInPdp(catlog){
 
 
  
-  click(fallback(`button("input-number-increment btn btn-default btn-number",rightOf(span("${Catlog}",_below(tableHeader("VWR Catalog Number")))))`));
+  click(fallback(`button("input-number-increment btn btn-default btn-number",rightOf(span("${Catlog}",_below(tableHeader("VWR Catalog Number")))))`);
   click(fallback(`byXPath('//*[@id="addItemToCart"]')`));
   wait (10000);
   click(fallback(`span("cart-label")`));

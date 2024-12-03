@@ -1064,8 +1064,6 @@ function VerifyRetunbuttonInOrderdetaispage(){
 
 function placeorderProd(){
 
-  setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
-	setShadowDOM(true);
  	wait(3000);
   click(fallback(`submit("Proceed to Checkout")`));
   assertExists(fallback(`heading3("Order Summary")`));

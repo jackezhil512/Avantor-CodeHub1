@@ -11,7 +11,8 @@ function Login(url, username, password) {
     navigateTo(url);
     wait(5000);
     click(fallback(`submit("Accept all cookies")`));
-    click(fallback(`link("/ca/en/login")`)),
+    //click(fallback(`link("/ca/en/login")`)),
+    click(fallback(`link("Login")`));
     wait(5000);
     setValue(fallback(`byXPath('//*[@id="email"]')`), username);
     setValue(fallback(`byXPath('//*[@id="password"]')`), password);

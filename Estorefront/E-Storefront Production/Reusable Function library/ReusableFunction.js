@@ -1013,7 +1013,7 @@ function VerifyCancelbuttonInOrderdetaispage(){
   }else{
     log("Order Number should not displayed")
   }
-  assertExists(fallback(`div("Processing")`,));
+  assertExists(fallback(`div("Processing")`));
 
   var OrderStatus = getText(fallback(`div("Processing")`));
   log(OrderStatus);

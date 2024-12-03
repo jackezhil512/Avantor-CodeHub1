@@ -937,6 +937,7 @@ function VerifyOrderNumberAndPONumberInOrderHistorypage(){
     log("Order Number should not displayed")
   }  
  
+ click(fallback(`submit("clear-filter")`));
 
 
 

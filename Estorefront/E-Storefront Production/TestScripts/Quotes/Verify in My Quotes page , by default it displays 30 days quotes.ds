@@ -69,4 +69,22 @@
    <accessor type='Text' value='div(&quot;My Quotes[1]&quot;).xy(0.02, 0.51 )' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Add to Cart&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[3]/div[2]/app-my-quotes-item/div[1]/div/div/div/div[10]/div/a/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Add to Cart &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[3]/div[2]/app-my-quotes-item/div/div/div/div/div[10]/div/a/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-my-quotes[1]/div[@class=&apos;container my-quotes-container&apos;]/div[@class=&apos;cx-quick-order-table-wrapper m-10 col-9&apos;]/div[3]/div[@class=&apos;cx-quick-order-table-row my-quotes-table&apos;]/app-my-quotes-item[1]/div[@class=&apos;cx-quick-order-table-item d-none d-sm-none d-md-block my-quotes-table-item&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-md-12 cx-quick-order-info-container&apos;]/div[@class=&apos;row my-quote-line-items&apos;]/div[@class=&apos;my-quote-line-item col-md-2 col-lg-2 col-xl-2&apos;]/div[@class=&apos;cx-value&apos;]/a[@class=&apos;web-quote-number-item&apos;]/span[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='heading3(&quot;Cart Summary&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-cart-total/div/h3&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Cart Summary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-cart-total/div/h3&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;CartPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;CenterRightContentSlot has-components&apos;]/app-avtr-cart-total[1]/div[@class=&apos;cart-totals-container&apos;]/h3[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

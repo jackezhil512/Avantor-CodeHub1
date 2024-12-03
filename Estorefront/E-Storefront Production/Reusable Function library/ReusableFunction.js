@@ -1029,3 +1029,35 @@ function VerifyCancelbuttonInOrderdetaispage(){
 
 }
 
+
+function VerifyRetunbuttonInOrderdetaispage(){
+
+
+  click(fallback(`label("d-flex justify-content-between search-facet")`));
+  setValue(fallback(`byXPath('//*[@id="search"]')`), "8612823727");
+  click(fallback(`submit({'type':'submit'})`));
+  assertExists(fallback(`link("8612823727")`));
+
+  var OrderNumber = getText(fallback(`link("8612823727")`));
+  log(OrderNumber);
+  if (8612823727 == OrderNumber){
+ log("Verify OrderNumber is displayed");   
+  
+  }else{
+    log("Order Number should not displayed")
+  }
+  assertExists(fallback(`div("Processing")`));
+
+  var OrderStatus = _isVisible(fallback(`div("Processing")`));
+  log(OrderStatus);
+  if (true == OrderStatus){
+  log("Verify OrderStatus is Processing is displayed");   
+  
+  }else{
+    log("Verify OrderStatus is Processing is not displayed");
+  }  
+ 
+ click(fallback(`link("8612849014")`));
+ assertExists(fallback(`div("order-details")`)); 
+
+}

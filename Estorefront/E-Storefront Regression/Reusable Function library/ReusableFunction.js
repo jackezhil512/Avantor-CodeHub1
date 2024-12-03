@@ -693,7 +693,7 @@ function NavigatetoProductpagetoSearch(input){
   //setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
    setShadowDOM(true); 
   setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
-  wait (5000);
+  wait (50000);
   click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
   wait(5000);
    assertExists(fallback(`byXPath('/html/body/app-root/cx-storefront/cx-page-slot/app-breadcrumb')`));

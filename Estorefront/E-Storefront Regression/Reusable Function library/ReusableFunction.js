@@ -33,6 +33,41 @@ function Login(url, username, password) {
     
 }
 
+
+
+function LoginUS(url, username, password) {
+    // setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
+  //setVariablesIfNeeded('{ds}/../../Test Data/TopSellingProducts.csv','HashDPL',0,'en_US');
+    setShadowDOM(true);
+    navigateTo(url);
+    wait(5000);
+    click(fallback(`submit("Accept all cookies")`));
+    click(fallback(`link("/us/en/login")`)),
+    wait(5000);
+    setValue(fallback(`byXPath('//*[@id="email"]')`), username);
+    setValue(fallback(`byXPath('//*[@id="password"]')`), password);
+    click(fallback(`byXPath('//*[@id="btn-login"]')`));
+      wait(3000);
+  
+   var Acceptallcookies = _isVisible(fallback(`submit("Accept all cookies")`));
+  log(Acceptallcookies);
+  if (true == Acceptallcookies){
+ log("Verify accept all cookies message is displayed");   
+  click(fallback(`submit("Accept all cookies")`));
+  }else{
+    log("Verify accept all cookies message is disabled after login failed")
+  }  
+ 
+   assertExists(fallback(`image(0, _in(header("cx-header"))).xy(0.64, 0.58 )`)),
+   log("Application login sucessfully and navigated to home page")
+    wait(3000);
+    
+}
+
+
+
+
+
 function AdvanceSearch(Index,input) {
    setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
     setShadowDOM(true);

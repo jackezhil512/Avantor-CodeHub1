@@ -928,7 +928,7 @@ function VerifyOrderNumberAndPONumberInOrderHistorypage(){
   click(fallback(`submit({'type':'submit'})`));
   assertExists(fallback(`link("8612832103")`));
 
-  var OrderNumber = _isVisible(fallback(`link("8612832103")`));
+  var OrderNumber = getText(fallback(`link("8612832103")`));
   log(OrderNumber);
   if (8612832103 == OrderNumber){
  log("Verify OrderNumber is displayed");   
@@ -944,7 +944,7 @@ function VerifyOrderNumberAndPONumberInOrderHistorypage(){
   assertExists(fallback(`div("4500564265[1]")`));
 
 
-  var PoNumber = _isVisible(fallback(`div("4500564265[1]")`));
+  var PoNumber = getText(fallback(`div("4500564265[1]")`));
   log(PoNumber);
   if (4500564265 == PoNumber){
  log("Verify PoNumber is displayed");   

@@ -42,9 +42,9 @@
    <accessor type='Parent' value='svg(0, _in(button({&apos;aria-label&apos;:&apos;Submit search query&apos;})))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Parent' value='span(0, _in(span(&quot;CC_77776-026CS_C&quot;)))' fallback='true' selected='true'/>
+   <accessor type='unknown' value='button(&quot;input-number-increment btn btn-default btn-number&quot;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='span(0, _in(span({&apos;id&apos;:&apos;CC_77776-026CS_C&apos;})))' fallback='true' selected='false'/>
    <accessor type='Text' value='span(&quot;77776-026[1]&quot;)' fallback='true' selected='false'/>
    <accessor type='XPath' value='byXPath(&quot;//span[@id=&apos;CC_77776-026CS_C&apos;]/span&quot;)' fallback='true' selected='false'/>
@@ -52,6 +52,7 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;CC_77776-026CS_C&apos;)/span[1]&quot;)' fallback='true' selected='false'/>
    <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[3]//span//span[text()=&quot;77776-026&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='Attribute' value='span({&apos;itemprop&apos;:&apos;sku&apos;})' fallback='true' selected='false'/>
+   <accessor type='Parent' value='span(0, _in(span(&quot;CC_77776-026CS_C&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

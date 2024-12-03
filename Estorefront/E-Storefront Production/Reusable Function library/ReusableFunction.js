@@ -1062,7 +1062,7 @@ function VerifyRetunbuttonInOrderdetaispage(){
 
 }
 
-function placeorder_Prod(){
+function placeorderProd(){
 
   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
 	setShadowDOM(true);

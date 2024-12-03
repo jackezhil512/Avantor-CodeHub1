@@ -1179,7 +1179,7 @@ function OrderEntryEmptyPartNumberValidation(input){
 
 
 
-  }
+
 
 
   

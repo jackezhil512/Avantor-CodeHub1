@@ -957,7 +957,7 @@ function VerifyOrderNumberAndPONumberInOrderHistorypage(){
 }
 
 
-function Verifyclickingonthecatalognumber(){
+function VerifyclickingonthecatalognumberInOrderDetailsPage(){
 
 
   click(fallback(`label("d-flex justify-content-between search-facet")`));

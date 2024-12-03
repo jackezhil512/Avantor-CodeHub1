@@ -38,6 +38,15 @@
    <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/orders&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Completely Shipped&quot;]&apos;).xy(0.38, 0.59 )' fallback='true' selected='true'/>
+   <accessor type='Text' value='div(&quot;Completely Shipped&quot;).xy(0.38, 0.59 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div[2]/div/div/div/a[6]/div&apos;).xy(0.38, 0.59 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div[2]/div/div/div/a[6]/div&apos;).xy(0.38, 0.59 )' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='div(&quot;order-history-facetvalue-label[10]&quot;).xy(0.38, 0.59 )' fallback='true' selected='false'/>
+</dialect>
+</step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='div(&quot;8612807522[1]&quot;)' fallback='true' selected='true'/>

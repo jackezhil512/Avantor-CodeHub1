@@ -979,7 +979,8 @@ function VerifyclickingonthecatalognumberInOrderDetailsPage(){
   log(OrderStatus);
   if (true == OrderStatus){
  log("Verify OrderStatus is completly shipped is displayed");   
-  click(fallback(`submit("Accept all cookies")`));
+  click(fallback(`link("8612823727")`));
+  assertExists(fallback(`div("order-details")`));
   }else{
     log("Verify OrderStatus is completly shipped is not displayed");
   }  

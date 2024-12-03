@@ -16,7 +16,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='"77776-026"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"89108-162"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;keyword&quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='AttrClass' value='textbox(&quot;form-control ui-autocomplete-input&quot;)' fallback='true' selected='false'/>
@@ -44,7 +44,7 @@
 </step>
 <step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='button(&quot;input-number-increment btn btn-default btn-number&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='span(&quot;89108-162&quot;,_below(tableHeader(&quot;VWR Catalog Number&quot;)))' fallback='true' selected='true'/>
    <accessor type='Parent' value='span(0, _in(span({&apos;id&apos;:&apos;CC_77776-026CS_C&apos;})))' fallback='true' selected='false'/>
    <accessor type='Text' value='span(&quot;77776-026[1]&quot;)' fallback='true' selected='false'/>
    <accessor type='XPath' value='byXPath(&quot;//span[@id=&apos;CC_77776-026CS_C&apos;]/span&quot;)' fallback='true' selected='false'/>
@@ -53,6 +53,7 @@
    <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[3]//span//span[text()=&quot;77776-026&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='Attribute' value='span({&apos;itemprop&apos;:&apos;sku&apos;})' fallback='true' selected='false'/>
    <accessor type='Parent' value='span(0, _in(span(&quot;CC_77776-026CS_C&quot;)))' fallback='true' selected='false'/>
+   <accessor type='unknown' value='button(&quot;input-number-increment btn btn-default btn-number&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

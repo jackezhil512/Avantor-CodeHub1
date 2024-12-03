@@ -38,21 +38,13 @@
    <accessor type='JQuery' value='byJQuery(&apos;input[name=&quot;keyword&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='"89108-162"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='clickXY' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;keyword&quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='AttrClass' value='textbox(&quot;form-control ui-autocomplete-input ui-autocomplete-loading&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathName' value='byXPath(&apos;//*[@name=&quot;keyword&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='Id' value='textbox(&quot;keyword&quot;)' fallback='true' selected='false'/>
-   <accessor type='AttrName' value='textbox(&quot;keyword&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;keyword&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;form-control ui-autocomplete-input ui-autocomplete-loading&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/header/div/div[2]/div[2]/form/div[3]/input&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;keyword&apos;)&quot;)' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;input-group input-group-sm open&quot;] &gt; input[class=&quot;form-control ui-autocomplete-input ui-autocomplete-loading&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;#keyword&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;input[name=&quot;keyword&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='svg(0, _in(button({&apos;aria-label&apos;:&apos;Submit search query&apos;})))' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='svg(&quot;icon icon-lg&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;icon icon-lg&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;input-group input-group-sm&quot;] &gt; span[class=&quot;input-group-btn&quot;] &gt; button[class=&quot;btn-search btn btn-primary&quot;] &gt; svg[class=&quot;icon icon-lg&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#searchuidiv &gt; .input-group-btn &gt; .btn-search.btn.btn-primary &gt; .icon.icon-lg&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='wait' value='30000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

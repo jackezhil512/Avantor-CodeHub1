@@ -1061,15 +1061,3 @@ function VerifyRetunbuttonInOrderdetaispage(){
  assertExists(fallback(`div("order-details")`)); 
 
 }
-
-function placeorderProd(){
-
- 	wait(3000);
-  click(fallback(`submit("Proceed to Checkout")`));
-  assertExists(fallback(`heading3("Order Summary")`));
-  click(fallback(`submit("Continue to Payment")`));
-  assertExists(fallback(`byXPath('//*[text()=" Payment Types "]')`));
-  click(fallback(`submit("Review Order")`));
-  assertExists(fallback(`byXPath('//*[@class="email-header mt-3 mb-3"]')`));
-  assertExists(fallback(`byXPath('//*[text()=" Place Order "]')`));
-}  

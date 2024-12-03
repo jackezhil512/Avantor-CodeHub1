@@ -68,4 +68,46 @@
    <accessor type='JQuery' value='byJQuery(&apos;#searchuidiv &gt; .input-group-btn &gt; .btn-search.btn.btn-primary&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Parent' value='span(0, _in(span(&quot;CC_77776-026CS_C&quot;)))' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(0, _in(span({&apos;id&apos;:&apos;CC_77776-026CS_C&apos;})))' fallback='true' selected='false'/>
+   <accessor type='Text' value='span(&quot;77776-026[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//span[@id=&apos;CC_77776-026CS_C&apos;]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/div[6]/div/div[2]/div/div[2]/div/div/div[2]/form/table/tbody/tr/td[3]/span/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;CC_77776-026CS_C&apos;)/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[3]//span//span[text()=&quot;77776-026&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='span({&apos;itemprop&apos;:&apos;sku&apos;})' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='button(&quot;btn btn-default btn-number input-number-increment&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='button(&quot;+&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;discontinued_TR_77776-026CS&apos;]/span[2]/button&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;input-number-increment btn btn-default btn-number&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;+&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/div[6]/div/div[2]/div/div[2]/div/div/div[2]/form/table/tbody/tr/td[8]/div/span[2]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;discontinued_TR_77776-026CS&apos;)/span[@class=&apos;input-group-btn&apos;]/button[@class=&apos;input-number-increment btn btn-default btn-number&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='button({&apos;onclick&apos;:&quot;javascript:qtyplus(this, event);stiboShowWarning(&apos;77776-026CS&apos;,0,&apos;762165&apos;);&quot;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;tr[class=&quot;product-row-main&quot;] &gt; td[class=&quot;qty-col&quot;] &gt; div[class=&quot;input-group input-group-sm input-number-group&quot;] &gt; span[class=&quot;input-group-btn&quot;] &gt; button[class=&quot;input-number-increment btn btn-default btn-number&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#discontinued_TR_77776-026CS &gt; .input-group-btn &gt; .input-number-increment.btn.btn-default.btn-number&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;addItemToCart&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='button(&quot;btn btn-primary&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='button(&quot;addItemToCart&quot;)' fallback='true' selected='false'/>
+   <accessor type='AttrValue' value='button(&quot;Add to Cart&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;addItemToCart&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/div[6]/div/div[2]/div/div[2]/div/div/div/div/div/span[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;addItemToCart&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='button({&apos;onclick&apos;:&apos;javascript:addToCartAjax();&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;input[class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#addItemToCart&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;input[value=&quot;Add to Cart&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

@@ -82,4 +82,13 @@
    <accessor type='AttrClass' value='link(&quot;quote-number-item&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='label(&quot;inactive-label[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='label(&quot;Requested&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[14]/div/div[3]/label&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Requested&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[14]/div/div[3]/label&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

@@ -120,4 +120,16 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;content&apos;)/div[@class=&apos;container&apos;]/div[@class=&apos;row pb-2&apos;]/div[@class=&apos;col-xs-12&apos;]/div[@class=&apos;page-title&apos;]/h1[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='link(&quot;89499-420&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='link(0, _in(span({&apos;id&apos;:&apos;ILB_89499-420CS_B&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrHref' value='link(&quot;/store/catalog/product.jsp?catalog_number=89499-420&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//span[@id=&apos;ILB_89499-420CS_B&apos;]/a&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/div[6]/div/div[2]/div/form/table/tbody/tr/td[2]/span/a&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;ILB_89499-420CS_B&apos;)/a[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/store/catalog/product.jsp?catalog_number=89499-420&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='link(0, _in(span(&quot;ILB_89499-420CS_B&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

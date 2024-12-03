@@ -1015,9 +1015,9 @@ function VerifyCancelbuttonInOrderdetaispage(){
   }
   assertExists(fallback(`div("Processing")`));
 
-  var OrderStatus = getText(fallback(`div("Processing")`));
+  var OrderStatus = _isVisible(fallback(`div("Processing")`));
   log(OrderStatus);
-  if (Processing == OrderStatus){
+  if (true == OrderStatus){
   log("Verify OrderStatus is Processing is displayed");   
   
   }else{

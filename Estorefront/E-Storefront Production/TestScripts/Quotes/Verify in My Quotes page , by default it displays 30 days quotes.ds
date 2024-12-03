@@ -43,10 +43,9 @@
    <accessor type='AttrClass' value='span(&quot;filters-applied-btn[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='rightClick' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='AttrClass' value='span(&quot;filters-applied-btn&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='span(&quot;Available&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='span(&quot;Available&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[3]/div[1]/span[1]&apos;)' fallback='true' selected='false'/>
    <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;filters-applied-btn&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Available&quot;]&apos;)' fallback='true' selected='false'/>
@@ -54,6 +53,7 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-my-quotes[1]/div[@class=&apos;container my-quotes-container&apos;]/div[@class=&apos;fliter-wrapper col-3&apos;]/div[@class=&apos;d-flex&apos;]/div[@class=&apos;filters-applied&apos;]/span[@class=&apos;filters-applied-btn&apos;]&quot;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;container my-quotes-container&quot;] &gt; div[class=&quot;fliter-wrapper col-3&quot;] &gt; div[class=&quot;d-flex&quot;] &gt; div[class=&quot;filters-applied&quot;] &gt; span[class=&quot;filters-applied-btn&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;.container.my-quotes-container &gt; .fliter-wrapper.col-3 &gt; .d-flex &gt; .filters-applied &gt; .filters-applied-btn&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='span(&quot;filters-applied-btn&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

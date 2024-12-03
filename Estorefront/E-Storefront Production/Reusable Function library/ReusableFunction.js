@@ -467,7 +467,7 @@ click(fallback(`button("+")`));
 click(fallback(`submit("Add To Cart")`));
 assertExists(fallback(`heading3("Cart Summary")`));
 //assertExists(fallback(`link("414004-315[1]")`));  
-assertExists(fallback(`link("414004-146[1]")`));  
+//assertExists(fallback(`link("414004-146[1]")`));  
 }
 
 

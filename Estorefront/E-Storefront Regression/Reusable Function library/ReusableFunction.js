@@ -1155,25 +1155,28 @@ function OrderEntryEmptyPartNumberValidation(input){
 
 
   function InvoiceBillingAddresschange(){
+   assertExists(fallback(`submit("Pay by Credit Card")`));
+   wait(2000);
+   setSelected(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/select')`),"Open");
+   assertExists(fallback(`div("Open")`));
+   log("Click on invoice check box")
+   click(fallback(`checkbox("ml-1 mt-0 ng-pristine ng-untouched ng-valid")`));
+   log("click on pay by credit card option")
+   click(fallback(`submit("btn btn-primary")`));
+   log("verify pay by invoice option is displaying or not")
+   assertExists(fallback(`span("Pay Invoices")`));
+   assertExists(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/app-invoice-search-results-item/div/div/div/div/a')`));
+   log("get the invoice number")
+   var InvoiceNumber=getText(byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/app-invoice-search-results-item/div/div/div/div/a'));
+   log(InvoiceNumber);
+   wait(5000);
+   log("add the credit card details")
+   click(fallback(`submit("+Add a new card")`));
+   assertExists(fallback(`heading3("Add a New Credit Card")`));
 
-  assertExists(fallback(`submit("Pay by Credit Card")`));
-  wait(2000);
-  setSelected(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/select')`),"Open");
-  assertExists(fallback(`div("Open")`));
-  log("Click on invoice check box")
-  click(fallback(`checkbox("ml-1 mt-0 ng-pristine ng-untouched ng-valid")`));
-  log("click on pay by credit card option")
-  click(fallback(`submit("btn btn-primary")`));
-  log("verify pay by invoice option is displaying or not")
-  assertExists(fallback(`span("Pay Invoices")`));
-  assertExists(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/app-invoice-search-results-item/div/div/div/div/a')`));
-  log("get the invoice number")
-  var InvoiceNumber=getText(byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/app-invoice-payment/app-invoice-search-results-item/div/div/div/div/a'));
-  log(InvoiceNumber);
-  wait(5000);
-  log("add the credit card details")
-  click(fallback(`submit("+Add a new card")`));
-  assertExists(fallback(`heading3("Add a New Credit Card")`));
+
+  }
+
 
 
   }

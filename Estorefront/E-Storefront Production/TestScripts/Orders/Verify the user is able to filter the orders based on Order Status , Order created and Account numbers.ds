@@ -99,11 +99,20 @@
 </step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Text' value='div(&quot;Cancelled[15]&quot;).xy(0.12, 0.54 )' fallback='true' selected='true'/>
+   <accessor type='unknown' value='div(&quot;Cancelled[15]&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div[2]/div/div/div/a[7]/div&apos;).xy(0.12, 0.54 )' fallback='true' selected='false'/>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Cancelled&quot;]&apos;).xy(0.12, 0.54 )' fallback='true' selected='false'/>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div[2]/div/div/div/a[7]/div&apos;).xy(0.12, 0.54 )' fallback='true' selected='false'/>
    <accessor type='AttrClass' value='div(&quot;order-history-facetvalue-label[11]&quot;).xy(0.12, 0.54 )' fallback='true' selected='false'/>
+   <accessor type='Text' value='div(&quot;Cancelled[15]&quot;).xy(0.12, 0.54 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='span(&quot;Cancelled&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[3]/span[1]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Cancelled&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[3]/span&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

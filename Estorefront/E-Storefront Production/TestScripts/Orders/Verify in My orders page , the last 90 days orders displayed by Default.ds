@@ -43,6 +43,17 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='link(&quot;Last 90 days&quot;)' fallback='true' selected='true'/>
+   <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/orders?query=:date-desc&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='link({&apos;routerlink&apos;:&apos;./&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/orders?query=:date-desc&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='link(&quot;active-facet[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 <step action='assertExists' value='""' type='web' desc='order number in order page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='link(&quot;8612765068&quot;)' fallback='true' selected='true'/>

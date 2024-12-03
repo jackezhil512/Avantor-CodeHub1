@@ -1013,15 +1013,15 @@ function VerifyCancelbuttonInOrderdetaispage(){
   }else{
     log("Order Number should not displayed")
   }
-  assertExists(fallback(`div("Completely Shipped[1]")`,));
+  assertExists(fallback(`div("Processing")`,));
 
-  var OrderStatus = _isVisible(fallback(`div("Completely Shipped[1]")`));
+  var OrderStatus = getText(fallback(`div("Processing")`));
   log(OrderStatus);
-  if (true == OrderStatus){
-  log("Verify OrderStatus is completly shipped is displayed");   
+  if (Processing == OrderStatus){
+  log("Verify OrderStatus is Processing is displayed");   
   
   }else{
-    log("Verify OrderStatus is completly shipped is not displayed");
+    log("Verify OrderStatus is Processing is not displayed");
   }  
  
 

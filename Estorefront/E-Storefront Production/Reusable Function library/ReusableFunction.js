@@ -955,3 +955,22 @@ function VerifyOrderNumberAndPONumberInOrderHistorypage(){
  
 
 }
+
+
+function Verifyclickingonthecatalognumber(){
+
+
+  click(fallback(`label("d-flex justify-content-between search-facet")`));
+  setValue(fallback(`byXPath('//*[@id="search"]')`), "8612832103");
+  click(fallback(`submit({'type':'submit'})`));
+  assertExists(fallback(`link("8612832103")`));
+
+  var OrderNumber = getText(fallback(`link("8612832103")`));
+  log(OrderNumber);
+  if (8612832103 == OrderNumber){
+ log("Verify OrderNumber is displayed");   
+  
+  }else{
+    log("Order Number should not displayed")
+  }  
+}

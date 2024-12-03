@@ -35,11 +35,23 @@
 </step>
 <step action='clickXY' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='Parent' value='svg(0, _in(button({&apos;aria-label&apos;:&apos;Submit search query&apos;})))' fallback='true' selected='true'/>
-   <accessor type='AttrClass' value='svg(&quot;icon icon-lg&quot;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='svg(&quot;icon icon-lg&quot;)' fallback='true' selected='true'/>
    <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;icon icon-lg&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;input-group input-group-sm open&quot;] &gt; span[class=&quot;input-group-btn&quot;] &gt; button[class=&quot;btn-search btn btn-primary&quot;] &gt; svg[class=&quot;icon icon-lg&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;#searchuidiv &gt; .input-group-btn &gt; .btn-search.btn.btn-primary &gt; .icon.icon-lg&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='svg(0, _in(button({&apos;aria-label&apos;:&apos;Submit search query&apos;})))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Parent' value='span(0, _in(span(&quot;CC_77776-026CS_C&quot;)))' fallback='true' selected='true'/>
+   <accessor type='Parent' value='span(0, _in(span({&apos;id&apos;:&apos;CC_77776-026CS_C&apos;})))' fallback='true' selected='false'/>
+   <accessor type='Text' value='span(&quot;77776-026[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//span[@id=&apos;CC_77776-026CS_C&apos;]/span&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/div[6]/div/div[2]/div/div[2]/div/div/div[2]/form/table/tbody/tr/td[3]/span/span&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;CC_77776-026CS_C&apos;)/span[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[3]//span//span[text()=&quot;77776-026&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='span({&apos;itemprop&apos;:&apos;sku&apos;})' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

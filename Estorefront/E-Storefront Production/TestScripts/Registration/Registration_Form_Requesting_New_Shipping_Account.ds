@@ -30,7 +30,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='custom(&quot;app-avtr-registration-confirmation&quot;, [&quot;Your account is under review and wi&quot;])' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-registration-confirmation&apos;)' fallback='true' selected='false'/>
@@ -41,7 +41,7 @@
    <accessor type='AttrClass' value='custom(&quot;app-avtr-registration-confirmation&quot;, &quot;ng-star-inserted&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='heading1(&quot;Your Profile Has Been Created&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-registration-confirmation/div/h1&apos;)' fallback='true' selected='false'/>

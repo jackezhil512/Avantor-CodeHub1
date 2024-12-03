@@ -59,32 +59,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='submit(&quot;clear-filter&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='submit(&quot;Reset Filters&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;clear-filter&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Reset Filters &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;SideContent has-components&apos;]/app-order-history-facet-list[1]/div[1]/div[@class=&apos;order-history-filter-desktop-view&apos;]/div[@class=&apos;border-facet&apos;]/section[@class=&apos;mb-4&apos;]/app-order-history-active-facets[1]/div[@class=&apos;active&apos;]/button[@class=&apos;clear-filter&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;active&quot;] &gt; button[class=&quot;clear-filter&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.active &gt; .clear-filter&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='link(&quot;cx-link[3]&quot;)' fallback='true' selected='true'/>
-   <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/sapOrderDetails?orderDetailsToken=7482959003924e4fe0df3ca80b198928&quot;)' fallback='true' selected='false'/>
-   <accessor type='Text' value='link(&quot;8612849038&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-order-history/div/div/div[4]/app-order-history-list[3]/div/div[1]/div[2]/div/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; 8612849038&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[4]/app-order-history-list[3]/div/div/div[2]/div/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-history[1]/div[@class=&apos;order-history&apos;]/div[@class=&apos;order-history-right&apos;]/div[4]/app-order-history-list[3]/div[1]/div[@class=&apos;row order-history-row-desktop&apos;]/div[@class=&apos;col-md-1 col-lg-1 col-xl-1 text-break pl-0&apos;]/div[1]/a[@class=&apos;cx-link&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/sapOrderDetails?orderDetailsToken=7482959003924e4fe0df3ca80b198928&quot;]&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='rightClick' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;Cancel Lines&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[2]/div/div[7]/button[1]&apos;)' fallback='true' selected='false'/>
@@ -95,19 +70,6 @@
    <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;row&quot;] &gt; div[class=&quot;order-summary-container col-md-3 col-sm-12 pl-3&quot;] &gt; div[class=&quot;border-box font-description&quot;] &gt; div[class=&quot;d-flex flex-column btn-container&quot;] &gt; button[class=&quot;btn btn-white w-100&quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;.row &gt; .order-summary-container.col-md-3.col-sm-12.pl-3 &gt; .border-box.font-description &gt; .d-flex.flex-column.btn-container &gt; .btn.btn-white.w-100&apos;)' fallback='true' selected='false'/>
    <accessor type='AttrClass' value='submit(&quot;btn btn-white w-100&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='submit(&quot;btn btn-white w-100&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='submit(&quot;Cancel Lines&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[2]/div/div[7]/button[1]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-white w-100&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Cancel Lines &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[2]/div/div[7]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-approval-order-details[1]/div[@class=&apos;container p-0&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;order-summary-container col-md-3 col-sm-12 pl-3&apos;]/div[@class=&apos;border-box font-description&apos;]/div[@class=&apos;d-flex flex-column btn-container&apos;]/button[@class=&apos;btn btn-white w-100&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;row&quot;] &gt; div[class=&quot;order-summary-container col-md-3 col-sm-12 pl-3&quot;] &gt; div[class=&quot;border-box font-description&quot;] &gt; div[class=&quot;d-flex flex-column btn-container&quot;] &gt; button[class=&quot;btn btn-white w-100&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.row &gt; .order-summary-container.col-md-3.col-sm-12.pl-3 &gt; .border-box.font-description &gt; .d-flex.flex-column.btn-container &gt; .btn.btn-white.w-100&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

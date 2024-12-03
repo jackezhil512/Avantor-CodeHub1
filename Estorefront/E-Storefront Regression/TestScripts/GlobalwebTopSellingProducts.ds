@@ -98,4 +98,15 @@
   <dialect type='sahi'>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='button(&quot;btn btn-default btn-number input-number-increment[2]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='button(&quot;+[2]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;discontinued_TR_89499-420CS&apos;]/span[2]/button&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/div[6]/div/div[2]/div/div[2]/div/div/div[2]/form/table/tbody[3]/tr/td[8]/div/span[2]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;discontinued_TR_89499-420CS&apos;)/span[@class=&apos;input-group-btn&apos;]/button[@class=&apos;input-number-increment btn btn-default btn-number&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='button({&apos;onclick&apos;:&quot;javascript:qtyplus(this, event);stiboShowWarning(&apos;89499-420CS&apos;,0,&apos;89499-420&apos;);&quot;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#discontinued_TR_89499-420CS &gt; .input-group-btn &gt; .input-number-increment.btn.btn-default.btn-number&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

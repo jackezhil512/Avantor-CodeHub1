@@ -1,9 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'DPIM 8477 TC_002 Verify the modify template page of Email Xml.ds' description= '' author= 'null' version= ''>
+<testcase   name= 'DPIM 8477 TC_005 Verify the subject in email received by setting up in the template for replenish.ds' description= '' author= 'null' version= ''>
 <dpl filename='' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
-<step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

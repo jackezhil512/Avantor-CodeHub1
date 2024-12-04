@@ -100,6 +100,7 @@
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//mat-select[@formcontrolname=&apos;language&apos;]&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
@@ -119,7 +120,8 @@
 </step>
 <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;You have successfully updated the xml email configuration settings!&apos;)]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
@@ -146,6 +148,7 @@
 <step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>

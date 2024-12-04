@@ -997,3 +997,33 @@ function VerifyclickingonthecatalognumberInOrderDetailsPage(){
 
 
 
+function VerifyCancelbuttonInOrderdetaispage(){
+
+
+  click(fallback(`label("d-flex justify-content-between search-facet")`));
+  setValue(fallback(`byXPath('//*[@id="search"]')`), "8612823727");
+  click(fallback(`submit({'type':'submit'})`));
+  assertExists(fallback(`link("8612823727")`));
+
+  var OrderNumber = getText(fallback(`link("8612823727")`));
+  log(OrderNumber);
+  if (8612823727 == OrderNumber){
+ log("Verify OrderNumber is displayed");   
+  
+  }else{
+    log("Order Number should not displayed")
+  }
+  assertExists(fallback(`div("Completely Shipped[1]")`,));
+
+  var OrderStatus = _isVisible(fallback(`div("Completely Shipped[1]")`));
+  log(OrderStatus);
+  if (true == OrderStatus){
+  log("Verify OrderStatus is completly shipped is displayed");   
+  
+  }else{
+    log("Verify OrderStatus is completly shipped is not displayed");
+  }  
+ 
+
+}
+

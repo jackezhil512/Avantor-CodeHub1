@@ -1394,7 +1394,7 @@ wait(2000);
 setValue(fallback(`byXPath("//h4[contains(text(),'Add New Integration')]")`),"{{TAB}}");
 wait(2000);
 click(fallback(`byXPath("(//div[contains(text(),'Output Type')]/span/following::mat-select)[1]")`));
-click(fallback(`byXPath("//span[contains(text(),'PDF OUTPUT')]/parent::span")`));
+click(fallback(`byXPath("//span[contains(text(),'EMAIL XML')]/parent::span")`));
 click(fallback(`byXPath("//span[contains(text(),'Next')]/parent::span")`,
    `byXPath("//span[contains(text(),'Next')]/parent::span")`));
 wait(2000);

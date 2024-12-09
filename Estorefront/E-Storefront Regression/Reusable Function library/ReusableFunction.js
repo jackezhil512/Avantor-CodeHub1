@@ -105,7 +105,7 @@ function LaunchBrowser(url){
     setShadowDOM(true);
     navigateTo(url);
     click(fallback(`submit("Accept all cookies")`));
-    takePicture(fallback(`submit("Accept all cookies")`));        
+    //takePicture(fallback(`submit("Accept all cookies")`));        
     assertExists(fallback(`image(0, _in(header("cx-header"))).xy(0.64, 0.58 )`));
   
 }

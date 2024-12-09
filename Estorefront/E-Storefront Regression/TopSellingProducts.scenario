@@ -112,7 +112,12 @@
       <opt name="attachAUTlogs" value="true"/>
       <opt name="takeSnapshotMDS" value="true"/>
       <opt name="takeScriptSnapshotMDS" value="true"/>
-      <opt name="takeVideoMDS" value="true"/>
+      <opt name="optionsTimings" value="actionDuration"/>
+    </options>
+    <options type="dds">
+      <opt name="attachAUTlogs" value="true"/>
+      <opt name="takeSnapshotMDS" value="true"/>
+      <opt name="takeScriptSnapshotMDS" value="true"/>
       <opt name="optionsTimings" value="actionDuration"/>
     </options>
     <options type="har">
@@ -127,6 +132,9 @@
     </options>
     <options type="jira">
       <opt name="useJira" value="false"/>
+      <opt name="jiraIssueTypes" value="[object Object]"/>
+      <opt name="jiraFailure" value="[object Object]"/>
+      <opt name="jiraSuccess" value="[object Object]"/>
     </options>
     <options type="lr">
       <opt name="saveCompleteLrOutputLog" value="false"/>

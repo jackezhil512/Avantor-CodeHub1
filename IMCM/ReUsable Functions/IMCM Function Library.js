@@ -318,7 +318,8 @@ if (true == value){
     click(fallback(`strong("Add Product")`));
     click(fallback(`span("Add Stockroom Product")`));
      wait(1000);
-      //SearchFieldWithoutClose("Add Stockroom Product",CatLog)
+      //SearchFieldWithoutClose("Add Stockroom Product",CatLog)    
+  click(fallback(`byXPath("(//button[@aria-label='Table View Preference Card'])[2]")`));
   setValue(fallback(`byXPath('//h2[@id="mat-dialog-title-0"]/following::input[2]')`),  CatLog  );
      //setValue(fallback(`byXPath('//*[@id="mat-input-47"]')`),    CatLog );
       //setValue(fallback(`byXPath('//h2[text()=" Assign Stockroom "]/following::input[@type="checkbox"][2]')`), CatLog);

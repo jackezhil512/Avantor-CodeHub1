@@ -117,7 +117,7 @@ click(fallback(`byXPath("//span[contains(text(),'${Email}')]/parent::mat-option"
 
 
 function SearchFieldWithoutClose(SearchEditField,SearchValue){
-click(fallback(`byXPath("//button[@aria-label='Table View Preference Card']")`));
+clickIfFound(fallback(`byXPath("//button[@aria-label='Table View Preference Card']")`));
 setValue(fallback(`textbox(/mat-input.*/,_below(span("${SearchEditField}")))`),SearchValue);
 wait(100);
 //assertExists(fallback(`cell("${SearchValue}")`));

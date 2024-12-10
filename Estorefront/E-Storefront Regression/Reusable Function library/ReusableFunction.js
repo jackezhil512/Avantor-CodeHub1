@@ -1228,14 +1228,10 @@ function GlobalwebclearCart(){
 
 
   click(fallback(`byXPath('//*[@id="cart-dropdown"]')`));
- // click(fallback(`link("View Cart")`));
-  //click(fallback(`link("Clear Cart[1]")`));
-  //assertExists(fallback(`listItem("Successfully cleared your cart")`));
-//click(fallback(`div("miniCartContent")`));
-wait(50000)
- let value = _isVisible(fallback(`link("View Cart")`));
+  wait(50000)
+  let value = _isVisible(fallback(`link("View Cart")`));
     log(value);
-if (true == value){
+  if (true == value){
   wait(5000)
  // if (isEnabled(submit("View My Cart"))){
     //click(fallback(`link(0, _in(div("miniCartContent")))`));

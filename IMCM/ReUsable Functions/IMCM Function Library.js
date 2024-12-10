@@ -1127,7 +1127,8 @@ assertExists(fallback(`byXPath('//*[text()=" You have successfully deleted integ
 function AddALLintegration(){
 NavigateToIntegrationMaintenance();
 click(fallback(`byXPath("//span[contains(text(),'ADD NEW INTEGRATION')]/ancestor::button")`));
-click(fallback(`byXPath("(//div[contains(text(),'Vendor')]/span/following::mat-select)[1]")`));
+click(fallback(`byXPath("//mat-select[@formcontrolname='vendor']/div[contains(@class, 'mat-select-trigger')]")`));
+wait(2000);
 click(fallback(`byXPath("//span[contains(text(),'ALL') and @class='vendor-option']")`));
 wait(2000);
 setValue(fallback(`byXPath("//h4[contains(text(),'Add New Integration')]")`),"{{TAB}}");
@@ -1388,7 +1389,7 @@ function createALLIntegrationIfNotExist(){
 let value = _isVisible(fallback(`byXPath("//img[@src='/assets/icons/ellipsis-icon.svg']/parent::span")`));
 log(value);
 if(false == value){
- AddALLintegrationWithText()
+ AddALLintegration()
 }
 }
 

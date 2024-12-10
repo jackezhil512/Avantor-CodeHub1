@@ -30,7 +30,12 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='VerifymasterflexProduct()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='custom(&quot;cx-storefront&quot;, &quot;ProductDetailsPageTemplate stop-navigating&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront&apos;)' fallback='true' selected='false'/>
@@ -41,14 +46,14 @@
    <accessor type='JQuery' value='byJQuery(&apos;body[class=&quot;&quot;] &gt; app-root[class=&quot;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner cxFeat_a11yFocusableCarouselControls&quot;] &gt; cx-storefront[class=&quot;ProductDetailsPageTemplate stop-navigating&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='button(&quot;Accessories&quot;,rightOf(div(&quot;MFLX96410-73&quot;,_below(div(&quot;attribute catalog-attribute&quot;)))))' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='button(&quot;Accessories&quot;,rightOf(div(&quot;MFLX96410-26&quot;,_below(div(&quot;attribute catalog-attribute&quot;)))))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='""' type='web' desc='Acceseries window' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='Acceseries window' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window&apos;)' fallback='true' selected='true'/>
    <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;accessories-dialog d-block modal fade show&quot;]&apos;)' fallback='true' selected='false'/>
@@ -60,7 +65,7 @@
    <accessor type='AttrClass' value='custom(&quot;ngb-modal-window&quot;, &quot;accessories-dialog d-block fade modal show&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrTitle' value='button(&quot;Add one more[6]&quot;)' fallback='true' selected='true'/>
    <accessor type='Text' value='button(&quot;+[6]&quot;)' fallback='true' selected='false'/>
@@ -69,7 +74,7 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;modal-open&apos;]/ngb-modal-window[@class=&apos;accessories-dialog d-block modal fade show&apos;]/div[@class=&apos;modal-dialog modal-dialog-centered modal-xl&apos;]/div[@class=&apos;modal-content&apos;]/app-product-accessories[1]/div[@class=&apos;pb-4&apos;]/app-avtr-product-variant-table[@class=&apos;show-header&apos;]/section[2]/ul[@class=&apos;collection collection-container header&apos;]/li[@class=&apos;item item-container spec-border&apos;]/div[4]/div[@class=&apos;attribute-container multi-value&apos;]/div[@class=&apos;attribute display-price-sm-grid1&apos;]/app-shared-add-to-cart[1]/form[@class=&apos;ng-untouched ng-pristine ng-valid&apos;]/div[@class=&apos;quantity mb-2&apos;]/cx-item-counter[@class=&apos;avtr-item-counter&apos;]/button[2]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;Add to cart[6]&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//ngb-modal-window/div/div/app-product-accessories/div/app-avtr-product-variant-table[1]/section[2]/ul/li[2]/div[4]/div[9]/div/app-shared-add-to-cart/form/div[2]/button&apos;)' fallback='true' selected='false'/>
@@ -80,19 +85,19 @@
    <accessor type='AttrClass' value='submit(&quot;btn btn-block btn-primary font-bold[6]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='button(&quot;aria-label==Add one more&quot;,rightOf(div(&quot;MFLX96410-73&quot;,_below(div(&quot;attribute catalog-attribute&quot;)))))' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='button(&quot;aria-label==Add one more&quot;,rightOf(div(&quot;MFLX96410-26&quot;,_below(div(&quot;attribute catalog-attribute&quot;)))))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='button(&quot;Add to cart&quot;,rightOf(div(&quot;MFLX96410-73&quot;,_below(div(&quot;attribute catalog-attribute&quot;)))))' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>

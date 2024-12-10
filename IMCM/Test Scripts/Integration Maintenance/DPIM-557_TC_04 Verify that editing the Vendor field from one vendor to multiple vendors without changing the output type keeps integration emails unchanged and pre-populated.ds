@@ -255,6 +255,89 @@
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8a8d1db0-13ec-438d-9254-cbec4e66403e' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
+    <step action='js' value='NavigateToVendorMaintenancePage()' type='web' desc='Vendor Maintenance' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='28dcf519-3547-4a0b-9296-5068cc4382fc' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setValue' value='VendorName' type='web' desc='Search with vendor' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='005cbc38-f88a-40ce-a778-c462198dc560' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath(&apos;//*[text() = " Vendor Name "]/following::input[1]&apos;)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fde06509-6b59-4a4e-a59b-0d962d4acf45' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='Click on vendor name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='79022782-b484-4238-879c-3de293178753' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[text()=&apos;${VendorName}&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath(&apos;//span[text()="${VendorName}"]&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='77562306-7f91-47ad-b2eb-1ddc43035847' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9a0af232-1fec-413b-9505-4e732a3452d1' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()="Integrations"]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value=' custom("mat-panel-title", "Integrations")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//mat-expansion-panel-header[@id=&apos;mat-expansion-panel-header-1&apos;]/span/mat-panel-title")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-expansion-panel-header-title ng-tns-c282-326"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-vendor-maintenance-layout/div/app-vendor-view/div[3]/div/mat-accordion/mat-expansion-panel[2]/mat-expansion-panel-header/span/mat-panel-title&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-expansion-panel-header-1&apos;)/span[@class=&apos;mat-content ng-tns-c282-326&apos;]/mat-panel-title[@class=&apos;mat-expansion-panel-header-title ng-tns-c282-326&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;mat-accordion[class="mat-accordion vendor-information mat-accordion-multi"] &gt; mat-expansion-panel[class="mat-expansion-panel ng-tns-c280-325 ng-star-inserted"] &gt; mat-expansion-panel-header[class="mat-expansion-panel-header mat-focus-indicator ng-tns-c282-326 ng-tns-c280-325 mat-expansion-toggle-indicator-after ng-star-inserted cdk-focused cdk-mouse-focused"] &gt; span[class="mat-content ng-tns-c282-326"] &gt; mat-panel-title[class="mat-expansion-panel-header-title ng-tns-c282-326"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-expansion-panel-header-1 &gt; .mat-content.ng-tns-c282-326 &gt; .mat-expansion-panel-header-title.ng-tns-c282-326&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' custom("mat-panel-title", "mat-expansion-panel-header-title ng-tns-c282-326")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e1114756-fcb2-4891-a583-607d8ce17fed' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b77eab02-7fe3-41ea-9e25-585170608f31' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value=' span("PDF OUTPUT")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[1]/td[3]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()="PDF OUTPUT"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-vendor-maintenance-layout/div/app-vendor-view/div[3]/div/mat-accordion/mat-expansion-panel[2]/div/div/section/div[2]/avantor-table/div[2]/table/tbody/tr/td[3]/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-accordion-child-1&apos;)/div[@class=&apos;mat-expansion-panel-body ng-tns-c280-325&apos;]/section[@class=&apos;pt-4 ng-tns-c280-325&apos;]/div[@class=&apos;row&apos;]/avantor-table[@class=&apos;w-100 ng-tns-c328-327 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c328-327&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c328-327 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c328-327 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-outputType mat-column-outputType ng-tns-c328-327 ng-star-inserted&apos;]/span[@class=&apos;ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value=' byXPath(&apos;//tbody//tr[1]//td[3]//span[@class="ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value=' byXPath(&apos;//tbody//tr[1]//td[3]//span[text()="PDF OUTPUT"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;tr[class="mat-row cdk-row ng-tns-c328-327 striped-rows ng-star-inserted"] &gt; td[class="mat-cell cdk-cell cdk-column-outputType mat-column-outputType ng-tns-c328-327 ng-star-inserted"] &gt; span[class="ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c328-327.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-outputType.mat-column-outputType.ng-tns-c328-327.ng-star-inserted &gt; .ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' span("ng-star-inserted[2]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4630c635-6a58-4823-9be7-1ab202558dad' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value=' span("EMAIL XML")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[9]/td[3]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()="EMAIL XML"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-vendor-maintenance-layout/div/app-vendor-view/div[3]/div/mat-accordion/mat-expansion-panel[2]/div/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[9]/td[3]/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value=' byXPath(&apos;//tbody//tr[9]//td[3]//span[@class="ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value=' byXPath(&apos;//tbody//tr[9]//td[3]//span[text()="EMAIL XML"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' span("ng-star-inserted[6]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='74a6a813-77bb-478a-8f9a-a4550df691fa' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value=' span("CSV")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[5]/td[3]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()="CSV"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-vendor-maintenance-layout/div/app-vendor-view/div[3]/div/mat-accordion/mat-expansion-panel[2]/div/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[5]/td[3]/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value=' byXPath(&apos;//tbody//tr[5]//td[3]//span[@class="ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value=' byXPath(&apos;//tbody//tr[5]//td[3]//span[text()="CSV"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' span("ng-star-inserted[4]")' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value=' span("CSV")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='24f14aa7-8434-4468-9248-391fa7dffe52' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' span("TEXT FILE CONFIGURATOR")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[5]/td[3]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()="CSV"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-vendor-maintenance-layout/div/app-vendor-view/div[3]/div/mat-accordion/mat-expansion-panel[2]/div/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[5]/td[3]/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value=' byXPath(&apos;//tbody//tr[5]//td[3]//span[@class="ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value=' byXPath(&apos;//tbody//tr[5]//td[3]//span[text()="CSV"]&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bee13a35-b02e-4875-81dd-c28ea9be5eb5' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>

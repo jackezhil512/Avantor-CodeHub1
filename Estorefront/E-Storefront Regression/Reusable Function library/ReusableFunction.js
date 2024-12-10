@@ -612,7 +612,7 @@ function OrderEntryEmptyPartNumberValidation(input){
     wait (1000)
     click(fallback(`submit("Search")`));
     wait (15000)
-    click(fallback(`link("Test11")`));
+    assertExists(fallback(`link("Test11")`));
     wait (2000)
     //assertExists(fallback(`link("10536-518[1]")`));
     assertExists(fallback(`link("Add To Cart")`));

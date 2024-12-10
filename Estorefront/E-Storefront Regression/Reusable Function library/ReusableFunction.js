@@ -749,6 +749,15 @@ function OrderEntryEmptyPartNumberValidation(input){
             click(fallback(`button("Accessories",rightOf(div("${input}",_below(div("attribute catalog-attribute")))))`));
             setDescription("Acceseries window");
             assertExists(fallback(`byXPath('//ngb-modal-window')`));
+            click(fallback(`button("Add one more[6]")`));
+            click(fallback(`submit("Add to cart[6]")`));
+            wait(10000);
+   click(fallback(`button("aria-label==Add one more",rightOf(div("${input}",_below(div("attribute catalog-attribute")))))`));
+   click(fallback(`button("Add to cart",rightOf(div("${input}",_below(div("attribute catalog-attribute")))))`));
+
+   
+
+
 
 
 

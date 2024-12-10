@@ -1183,7 +1183,7 @@ function OrderEntryEmptyPartNumberValidation(input){
 
 
   
-  function globalWebAddingSearchcatlogNumberTocartpageInPdp(catlog){
+  function GlobalWebAddingSearchcatlogNumberTocartpageInPdp(catlog){
 
 
 
@@ -1210,7 +1210,7 @@ function OrderEntryEmptyPartNumberValidation(input){
   }
 
 
-  function globalweblogin(url, username, password){
+  function Globalweblogin(url, username, password){
        navigateTo(url);
        click(fallback(`submit("Log In")`));
        setValue(fallback(`byXPath('//*[@id="email"]')`), username);

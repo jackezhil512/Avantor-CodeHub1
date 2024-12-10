@@ -1382,6 +1382,15 @@ assertExists(fallback(`byXPath('//*[text()=" You have successfully deleted integ
 }
 }
 
+function createALLIntegrationIfNotExist(){
+let value = _isVisible(fallback(`byXPath("//img[@src='/assets/icons/ellipsis-icon.svg']/parent::span")`));
+log(value);
+if(true == value){
+ AddALLintegrationWithText()
+}
+}
+
+
 function AddALLintegrationVWRVendor(){
 NavigateToIntegrationMaintenance();
 click(fallback(`byXPath("//span[contains(text(),'ADD NEW INTEGRATION')]/ancestor::button")`));

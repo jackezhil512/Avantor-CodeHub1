@@ -610,6 +610,7 @@ function OrderEntryEmptyPartNumberValidation(input){
     click(fallback(`heading1("Shopping Lists")`));
     setValue(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-shopping-lists/div/div[2]/form/input')`), "Test11");
     click(fallback(`submit("Search")`));
+    wait (5000)
     click(fallback(`link("cx-link[1]")`));
     assertExists(fallback(`link("10536-518[1]")`));
     assertExists(fallback(`heading3("Cart Summary")`));

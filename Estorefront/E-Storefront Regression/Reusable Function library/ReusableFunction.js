@@ -1222,3 +1222,12 @@ function OrderEntryEmptyPartNumberValidation(input){
        click(fallback(`byXPath('//*[@id="btn-login"]')`));
        assertExists(fallback(`heading1("Welcome  				Uva US-GQ1")`));
   }
+
+
+function GlobalwebclearCart(){
+
+  click(fallback(`byXPath('//*[@id="cart-dropdown"]')`));
+  click(fallback(`link("View Cart")`));
+  click(fallback(`link("Clear Cart[1]")`));
+  assertExists(fallback(`listItem("Successfully cleared your cart")`));
+}

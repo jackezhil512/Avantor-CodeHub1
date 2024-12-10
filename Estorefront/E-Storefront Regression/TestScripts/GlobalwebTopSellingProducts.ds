@@ -25,4 +25,50 @@
    <accessor type='AttrClass' value='heading1(&quot;page-title&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;searchuidiv&quot;]&apos;).xy(0.39, 0.58 )' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='div(&quot;input-group input-group-sm&quot;).xy(0.39, 0.58 )' fallback='true' selected='false'/>
+   <accessor type='Id' value='div(&quot;searchuidiv&quot;).xy(0.39, 0.58 )' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;searchuidiv&apos;]&quot;).xy(0.39, 0.58 )' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;input-group input-group-sm&quot;]&apos;).xy(0.39, 0.58 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/header/div/div[2]/div[2]/form/div[3]&apos;).xy(0.39, 0.58 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;searchuidiv&apos;)&quot;).xy(0.39, 0.58 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;input-group input-group-sm&quot;]&apos;).xy(0.39, 0.58 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#searchuidiv&apos;).xy(0.39, 0.58 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='navigateTo' value='"https://us-gq1.vwr.com/store/product?keyword=10746-446"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+</dialect>
+</step>
+<step action='setValue' value='"10746-446"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;keyword&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='textbox(&quot;form-control ui-autocomplete-input ui-autocomplete-loading&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathName' value='byXPath(&apos;//*[@name=&quot;keyword&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;keyword&quot;)' fallback='true' selected='false'/>
+   <accessor type='AttrName' value='textbox(&quot;keyword&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;keyword&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;form-control ui-autocomplete-input ui-autocomplete-loading&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/header/div/div[2]/div[2]/form/div[3]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;keyword&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;input-group input-group-sm open&quot;] &gt; input[class=&quot;form-control ui-autocomplete-input ui-autocomplete-loading&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#keyword&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;input[name=&quot;keyword&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='button(&quot;btn btn-primary btn-search&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;searchuidiv&apos;]/span/button&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn-search btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/header/div/div[2]/div[2]/form/div[3]/span/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;searchuidiv&apos;)/span[@class=&apos;input-group-btn&apos;]/button[@class=&apos;btn-search btn btn-primary&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='button({&apos;onclick&apos;:&apos;return submitSearch();&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;input-group input-group-sm open&quot;] &gt; span[class=&quot;input-group-btn&quot;] &gt; button[class=&quot;btn-search btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#searchuidiv &gt; .input-group-btn &gt; .btn-search.btn.btn-primary&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 </testcase>

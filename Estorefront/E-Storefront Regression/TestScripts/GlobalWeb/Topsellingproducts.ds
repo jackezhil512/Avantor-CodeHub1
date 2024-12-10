@@ -5,13 +5,41 @@
 <shadowDOM useShadowDOM='true'/>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='AttrClass' value='link(&quot;btn btn-default mr-2[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='link(&quot;Clear Cart[1]&quot;)' fallback='true' selected='true'/>
    <accessor type='AttrHref' value='link(&quot;/store/cart/cart.jsp?_DARGS=/store/cart/gadgets/cartContents.jsp.1_A&amp;_DAV=&amp;_dynSessConf=-3645592962136749444&quot;)' fallback='true' selected='false'/>
-   <accessor type='Text' value='link(&quot;Clear Cart[1]&quot;)' fallback='true' selected='false'/>
    <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;content&apos;]/div/div[2]/div/form/div[14]/div/a&quot;)' fallback='true' selected='false'/>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/div[6]/div/div[2]/div/form/div[14]/div/a&apos;)' fallback='true' selected='false'/>
    <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;content&apos;)/div[@class=&apos;container&apos;]/div[@class=&apos;row pb-2&apos;]/div[@class=&apos;col-xs-12&apos;]/form[1]/div[@class=&apos;text-right my-2&apos;]/div[@class=&apos;actionbutton actionbtnright button-group&apos;]/a[@class=&apos;btn btn-default mr-2&apos;]&quot;)' fallback='true' selected='false'/>
    <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/store/cart/cart.jsp?_DARGS=/store/cart/gadgets/cartContents.jsp.1_A&amp;_DAV=&amp;_dynSessConf=-3645592962136749444&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='link(&quot;btn btn-default mr-2[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='listItem(&quot;Successfully cleared your cart&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;content&apos;]/div/div[2]/div/div[3]/ul/li&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Successfully cleared your cart&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/div[6]/div/div[2]/div/div[3]/ul/li&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;content&apos;)/div[@class=&apos;container&apos;]/div[@class=&apos;row pb-2&apos;]/div[@class=&apos;col-xs-12&apos;]/div[@class=&apos;alert alert-success&apos;]/ul[1]/li[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='div(&quot;col-xs-12[2]&quot;).xy(0.21, 0.61 )' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;content&apos;]/div/div[2]/div&quot;).xy(0.21, 0.61 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/div[6]/div/div[2]/div&apos;).xy(0.21, 0.61 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;content&apos;)/div[@class=&apos;container&apos;]/div[@class=&apos;row pb-2&apos;]/div[@class=&apos;col-xs-12&apos;]&quot;).xy(0.21, 0.61 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;main-content&quot;] &gt; div[class=&quot;container&quot;] &gt; div[class=&quot;row pb-2&quot;] &gt; div[class=&quot;col-xs-12&quot;]&apos;).xy(0.21, 0.61 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#content &gt; .container &gt; .row.pb-2 &gt; .col-xs-12&apos;).xy(0.21, 0.61 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='listItem(&quot;Successfully cleared your cart&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;content&apos;]/div/div[2]/div/div[3]/ul/li&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Successfully cleared your cart&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/div[6]/div/div[2]/div/div[3]/ul/li&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;content&apos;)/div[@class=&apos;container&apos;]/div[@class=&apos;row pb-2&apos;]/div[@class=&apos;col-xs-12&apos;]/div[@class=&apos;alert alert-success&apos;]/ul[1]/li[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

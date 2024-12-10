@@ -1206,7 +1206,7 @@ function OrderEntryEmptyPartNumberValidation(input){
     click(fallback(`link("View Cart")`));
     wait(5000)
     assertExists(fallback(`heading1("Shopping Cart")`));
-    assertExists(fallback(`link("${CatlogNumber}")`));
+    assertExists(fallback(`link("${catlog}")`));
   }
 
 

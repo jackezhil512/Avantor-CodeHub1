@@ -1211,6 +1211,9 @@ function OrderEntryEmptyPartNumberValidation(input){
 
 
   function Globalweblogin(Url, Username, Password){
+  setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
+  setVariablesIfNeeded('{ds}/../../Test Data/TopSellingProducts.csv','HashDPL',0,'en_US');
+   
        setShadowDOM(true);
        navigateTo(Url);
        click(fallback(`submit("Log In")`));

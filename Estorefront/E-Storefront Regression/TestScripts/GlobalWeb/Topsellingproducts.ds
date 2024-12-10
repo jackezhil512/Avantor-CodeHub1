@@ -24,7 +24,7 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Parent' value='span(0, _in(link(&quot;cart-dropdown&quot;)))' fallback='true' selected='true'/>
    <accessor type='Parent' value='span(0, _in(link({&apos;id&apos;:&apos;cart-dropdown&apos;})))' fallback='true' selected='false'/>
@@ -38,12 +38,12 @@
    <accessor type='JQuery' value='byJQuery(&apos;#cart-dropdown &gt; .cart-label&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='50000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='50000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='link(&quot;0  items in your cart&quot;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='link(0, _in(div({&apos;id&apos;:&apos;miniCartContent&apos;})))' fallback='true' selected='false'/>

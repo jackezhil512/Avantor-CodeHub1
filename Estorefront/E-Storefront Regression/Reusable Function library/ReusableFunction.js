@@ -1186,5 +1186,6 @@ click(fallback(`submit("Log In")`));
 setValue(fallback(`byXPath('//*[@id="email"]')`), username);
 setValue(fallback(`byXPath('//*[@id="password"]')`), pasword);
 click(fallback(`byXPath('//*[@id="btn-login"]')`));
+assertExists(fallback(`heading1("Welcome  				Uva US-GQ1")`));
 
 }

@@ -38,6 +38,11 @@
    <accessor type='JQuery' value='byJQuery(&apos;#cart-dropdown &gt; .cart-label&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='wait' value='50000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
 <step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Parent' value='link(0, _in(div(&quot;miniCartContent&quot;)))' fallback='true' selected='true'/>

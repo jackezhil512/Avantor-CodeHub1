@@ -1209,11 +1209,11 @@ function OrderEntryEmptyPartNumberValidation(input){
   }
 
 
-  function globalweblogin(url,username,pasword){
-       navigateTo(url);
+  function globalweblogin(GUrl, User, Pwd){
+       navigateTo(GUrl);
        click(fallback(`submit("Log In")`));
-       setValue(fallback(`byXPath('//*[@id="email"]')`), username);
-       setValue(fallback(`byXPath('//*[@id="password"]')`), pasword);
+       setValue(fallback(`byXPath('//*[@id="email"]')`), User);
+       setValue(fallback(`byXPath('//*[@id="password"]')`), Pwd);
        click(fallback(`byXPath('//*[@id="btn-login"]')`));
        assertExists(fallback(`heading1("Welcome  				Uva US-GQ1")`));
   }

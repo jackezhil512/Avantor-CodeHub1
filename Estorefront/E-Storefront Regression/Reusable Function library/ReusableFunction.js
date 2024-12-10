@@ -775,12 +775,6 @@ function OrderEntryEmptyPartNumberValidation(input){
       log("catlognumber is not displayed or page is not loaded")
     }
         
-  }  
-
-
-
-
-
   }
 
   function NavigatetolengthyProductpagetoSearch(input){

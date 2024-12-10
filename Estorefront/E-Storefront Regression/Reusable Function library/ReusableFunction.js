@@ -1177,3 +1177,14 @@ assertExists(fallback(`heading3("Add a New Credit Card")`));
 
 
 }
+
+
+function globalLoginFunction(url,username,pasword){
+
+navigateTo(url);
+click(fallback(`submit("Log In")`));
+setValue(fallback(`byXPath('//*[@id="email"]')`), username);
+setValue(fallback(`byXPath('//*[@id="password"]')`), pasword);
+click(fallback(`byXPath('//*[@id="btn-login"]')`));
+
+}

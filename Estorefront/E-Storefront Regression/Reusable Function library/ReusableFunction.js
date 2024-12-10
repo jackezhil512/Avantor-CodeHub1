@@ -1211,6 +1211,7 @@ function OrderEntryEmptyPartNumberValidation(input){
 
 
   function Globalweblogin(url, username, password){
+       setShadowDOM(true);
        navigateTo(url);
        click(fallback(`submit("Log In")`));
        setValue(fallback(`byXPath('//*[@id="email"]')`), username);

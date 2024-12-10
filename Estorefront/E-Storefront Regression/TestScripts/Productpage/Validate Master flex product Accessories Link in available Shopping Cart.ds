@@ -30,6 +30,17 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='custom(&quot;cx-storefront&quot;, &quot;ProductDetailsPageTemplate stop-navigating&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;ProductDetailsPageTemplate stop-navigating&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner cxFeat_a11yFocusableCarouselControls&apos;]/cx-storefront[@class=&apos;ProductDetailsPageTemplate stop-navigating&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='custom(&quot;cx-storefront&quot;, {&apos;tabindex&apos;:&apos;0&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;body[class=&quot;&quot;] &gt; app-root[class=&quot;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner cxFeat_a11yFocusableCarouselControls&quot;] &gt; cx-storefront[class=&quot;ProductDetailsPageTemplate stop-navigating&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 <step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>

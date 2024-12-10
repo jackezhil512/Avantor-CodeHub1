@@ -609,6 +609,7 @@ function OrderEntryEmptyPartNumberValidation(input){
     click(fallback(`link("Shopping Lists")`));
     click(fallback(`heading1("Shopping Lists")`));
     setValue(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-shopping-lists/div/div[2]/form/input')`), "Test11");
+    wait (1000)
     click(fallback(`submit("Search")`));
     wait (15000)
     click(fallback(`link("cx-link[1]")`));

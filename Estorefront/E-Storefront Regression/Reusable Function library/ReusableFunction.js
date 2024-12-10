@@ -1239,6 +1239,7 @@ if (true == value){
   wait(5000)
  // if (isEnabled(submit("View My Cart"))){
     click(fallback(`link(0, _in(div("miniCartContent")))`));
+    wait(5000)
   assertExists(fallback(`strong("Your Cart is Empty")`));
    
    

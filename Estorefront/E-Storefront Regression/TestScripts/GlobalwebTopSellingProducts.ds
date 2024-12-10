@@ -10,14 +10,16 @@
    <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='globalLoginFunction($URL,$UserId,$Password)' type='web' desc='Login to application and validate login page successfully loaded or not' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='globalLoginFunction($URL,$UserId,$password)' type='web' desc='Login to application and validate login page successfully loaded or not' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
 <step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
+   <accessor type='unknown' value='$url' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='$password' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='ClearCart()' type='web' desc='Clear the existing cart' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>

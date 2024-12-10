@@ -148,6 +148,11 @@
         <accessor type='Parent' value=' div(3, _in(custom("ng-select", "inputControl"))).xy(0.66, 0.44 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='665d70bf-53e7-40ef-b7fc-1c4adf62d245' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5e8ca154-a9f9-4adf-b810-a82a261aa38e' uiType='base'>
       <dialect type='sahi'>
         <accessor type='XPathText' value=' byXPath(&apos;//*[text()="ship to"]&apos;)' selected='true' fallback='true'></accessor>
@@ -242,7 +247,26 @@
         <accessor type='Parent' value=' div(3, _in(custom("ng-select", "inputControl"))).xy(0.88, 0.71 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='db4b99ae-e581-4d69-a904-88119fbae24a' uiType='base'>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='88d0d89a-3bd9-40d8-a44b-0d3bd6f61646' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6fcb011a-8a5d-49d7-893c-4462298d07c5' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' div("P0 1")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value=' div("P0 1").xy(0.36, 0.36 )' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value=' div(3, _in(custom("ng-dropdown-panel", "ad9ad648800e"))).xy(0.36, 0.36 )' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value=' div(3, _in(custom("ng-dropdown-panel", {&apos;aria-label&apos;:&apos;Options list&apos;}))).xy(0.36, 0.36 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' div("ng-option ng-option-marked ng-star-inserted").xy(0.36, 0.36 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//div[@id=&apos;ad9ad648800e-0&apos;]").xy(0.36, 0.36 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="ng-option ng-option-marked ng-star-inserted"]&apos;).xy(0.36, 0.36 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-payment-method/div/div[2]/div/div/div/app-feature-bundle-selector-ui/div/div/ng-select/ng-dropdown-panel/div/div[2]/div&apos;).xy(0.36, 0.36 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;ad9ad648800e-0&apos;)").xy(0.36, 0.36 )' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='div({&apos;role&apos;:&apos;option&apos;}).xy(0.36, 0.36 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;div[class="ng-option ng-option-marked ng-star-inserted"]&apos;).xy(0.36, 0.36 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#ad9ad648800e-0&apos;).xy(0.36, 0.36 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='db4b99ae-e581-4d69-a904-88119fbae24a' uiType='base'>
       <dialect type='sahi'>
         <accessor type='XPathText' value=' byXPath(&apos;//*[text()="P0 1P0 2"]&apos;)' selected='true' fallback='true'></accessor>
         <accessor type='Text' value=' custom("ng-dropdown-panel", "P0 1P0 2")' selected='false' fallback='true'></accessor>
@@ -289,9 +313,13 @@
         <accessor type='AttrClass' value=' div("ng-input[2]").xy(0.59, 0.56 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8bf55e24-4d3c-4a6c-95ff-4e9b483f3101' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cc4a34d8-d02c-45a0-af4e-0c943947cb41' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='Text' value=' div("Charge code 1").xy(0.59, 0.62 )' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' div("Charge code 1")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value=' div("Charge code 1").xy(0.59, 0.62 )' selected='false' fallback='true'></accessor>
         <accessor type='Parent' value=' div(3, _in(custom("ng-dropdown-panel", {&apos;aria-label&apos;:&apos;Options list&apos;}))).xy(0.59, 0.62 )' selected='false' fallback='true'></accessor>
         <accessor type='AttrClass' value=' div("ng-option ng-option-marked ng-star-inserted").xy(0.59, 0.62 )' selected='false' fallback='true'></accessor>
         <accessor type='XPath' value=' byXPath("//div[@id=&apos;a90b20996ec8-0&apos;]").xy(0.59, 0.62 )' selected='false' fallback='true'></accessor>
@@ -347,7 +375,8 @@
     </step>
     <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6a761118-da9f-4204-b03a-861f95e2fa68' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='Text' value=' div("Your web tracking number is").xy(-0.00, 0.47 )' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' div("Your web tracking number is")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value=' div("Your web tracking number is").xy(-0.00, 0.47 )' selected='false' fallback='true'></accessor>
         <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-order-confirmation-thank-you-message/div[1]/div/div[1]/div[2]/div[1]&apos;).xy(-0.00, 0.47 )' selected='false' fallback='true'></accessor>
         <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="order-info-header"]&apos;).xy(-0.00, 0.47 )' selected='false' fallback='true'></accessor>
         <accessor type='XPathText' value=' byXPath(&apos;//*[text()="Your web tracking number is"]&apos;).xy(-0.00, 0.47 )' selected='false' fallback='true'></accessor>

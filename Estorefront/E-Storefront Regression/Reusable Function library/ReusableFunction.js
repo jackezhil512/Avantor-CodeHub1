@@ -776,7 +776,6 @@ function OrderEntryEmptyPartNumberValidation(input){
     }
         
   }
-}
   function NavigatetolengthyProductpagetoSearch(input){
   
     //setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');

@@ -6,6 +6,10 @@ setVariablesIfNeeded('{ds}/../../Test Data/IMCM_INPUTFILE.csv','HashDPL',0,'en_U
 setShadowDOM(true);
 include("{ds}/../../ReUsable Functions/IMCM Function Library.js");
 Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom);
+
+
+function CreateVendorAndAddIntegration(){
+   
 wait(5000);
 var RandomVal=eval(" Math.floor(Math.random()*1000)");
 var Date=datefunc();
@@ -27,19 +31,6 @@ setDescription("Click next");
 click(fallback(`custom("mat-icon", "arrow_forward")`));
 setDescription("Enter vendor name");
 assertExists(fallback(`byXPath('//*[text()="${VendorName }"]')`));
-//click(fallback(`byXPath('//*[text()="Automation "]')`,
-//   `cell(0, _in(custom("mat-tab-body", {'id':'mat-tab-content-1-1'})))`,
-//   `cell("fixed-width-column")`,
-//   `cell("Automation")`,
-//   `byXPath("//mat-tab-body[@id='mat-tab-content-1-1']/div/app-integrations-tab/form/table[2]/tbody/tr[1]/td[1]")`,
-//   `byXPath('/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/section/form/mat-tab-group/div/mat-tab-body[2]/div/app-integrations-tab/form/table[2]/tbody/tr/td')`,
-//   `byXPath("id('mat-tab-content-1-1')/div[@class='mat-tab-body-content ng-tns-c102-92 ng-trigger ng-trigger-translateTab']/app-integrations-tab[@class='ng-star-inserted']/form[@class='ng-touched ng-dirty ng-valid']/table[@class='integration-table']/tbody[1]/tr[@class='ng-star-inserted']/td[@class='fixed-width-column']")`,
-//   `byXPath('//tbody//tr[1]//td[1][@class="fixed-width-column"]')`,
-//   `byXPath('//tbody//tr[1]//td[1][text()="Automation "]')`,
-//   `cell({'style':'text-align: center;'})`,
-//   `byJQuery('tr[class="ng-star-inserted"] > td[class="fixed-width-column"]')`,
-//   `byJQuery('.ng-star-inserted > .fixed-width-column')`,
-//   `cell(0, _in(custom("mat-tab-body", "mat-tab-content-1-1")))`));
 setDescription("Validate PDF OUTPUT");
 assertExists(fallback(`byXPath('//*[text()="PDF OUTPUT"]')`));
 setDescription("Click next");
@@ -105,3 +96,6 @@ assertEqual(fallback(`VendorNameInFirstRow`,
 setDescription("verify updfated and searched stockroom results are same or not?");
 assertEqual(fallback(`StockroomNameFirstRow`,
    `StockroomName`),StockRoomName);
+
+}
+

@@ -1227,9 +1227,9 @@ function OrderEntryEmptyPartNumberValidation(input){
 function GlobalwebclearCart(){
 
   click(fallback(`byXPath('//*[@id="cart-dropdown"]')`));
-  click(fallback(`link("View Cart")`));
-  click(fallback(`link("Clear Cart[1]")`));
-  assertExists(fallback(`listItem("Successfully cleared your cart")`));
+ // click(fallback(`link("View Cart")`));
+  //click(fallback(`link("Clear Cart[1]")`));
+  //assertExists(fallback(`listItem("Successfully cleared your cart")`));
 click(fallback(`div("miniCartContent")`));
  let value = _isVisible(fallback(`div("miniCartContent")`));
     log(value);
@@ -1237,15 +1237,14 @@ if (true == value){
  // if (isEnabled(submit("View My Cart"))){
     click(fallback(`div("miniCartContent")`));
   assertExists(fallback(`strong("Your Cart is Empty")`));
-   assertExists(fallback(`heading2("Your shopping cart is empty")`));
-  click(fallback(`image(0, _in(header("cx-header"))).xy(0.64, 0.58 )`));
-  
+   
    
    //log(cart is cleared);
 }
 else {
-  assertExists(fallback(`heading2("Your shopping cart is empty")`));
-  click(fallback(`image(0, _in(header("cx-header"))).xy(0.64, 0.58 )`));
+   click(fallback(`link("View Cart")`));
+  click(fallback(`link("Clear Cart[1]")`));
+  assertExists(fallback(`listItem("Successfully cleared your cart")`));
 }
  
 }

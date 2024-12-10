@@ -612,6 +612,7 @@ function OrderEntryEmptyPartNumberValidation(input){
     click(fallback(`submit("Search")`));
     wait (5000)
     click(fallback(`link("cx-link[1]")`));
+    wait (2000)
     assertExists(fallback(`link("10536-518[1]")`));
     assertExists(fallback(`heading3("Cart Summary")`));
     

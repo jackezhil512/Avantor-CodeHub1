@@ -1226,12 +1226,13 @@ function OrderEntryEmptyPartNumberValidation(input){
 
 function GlobalwebclearCart(){
 
-wait(10000)
+
   click(fallback(`byXPath('//*[@id="cart-dropdown"]')`));
  // click(fallback(`link("View Cart")`));
   //click(fallback(`link("Clear Cart[1]")`));
   //assertExists(fallback(`listItem("Successfully cleared your cart")`));
 //click(fallback(`div("miniCartContent")`));
+wait(20000)
  let value = _isVisible(fallback(`div("miniCartContent")`));
     log(value);
 if (true == value){

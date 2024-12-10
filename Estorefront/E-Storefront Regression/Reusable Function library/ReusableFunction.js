@@ -1232,7 +1232,7 @@ function GlobalwebclearCart(){
   //click(fallback(`link("Clear Cart[1]")`));
   //assertExists(fallback(`listItem("Successfully cleared your cart")`));
 //click(fallback(`div("miniCartContent")`));
-wait(20000)
+wait(50000)
  let value = _isVisible(fallback(`link(0, _in(div("miniCartContent")))`));
     log(value);
 if (true == value){

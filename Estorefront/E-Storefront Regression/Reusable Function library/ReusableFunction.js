@@ -1236,8 +1236,9 @@ wait(20000)
  let value = _isVisible(fallback(`div("miniCartContent")`));
     log(value);
 if (true == value){
+  wait(5000)
  // if (isEnabled(submit("View My Cart"))){
-    click(fallback(`div("miniCartContent")`));
+    click2(fallback(`div("miniCartContent")`));
   assertExists(fallback(`strong("Your Cart is Empty")`));
    
    

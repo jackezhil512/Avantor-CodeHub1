@@ -1190,8 +1190,12 @@ assertExists(fallback(`heading1("Welcome  				Uva US-GQ1")`));
 
 }
 
-function globalWebAddingSearchcatlogNumberTocartpageInPdp($CATALOGID_1){
-  
+function globalWebAddingSearchcatlogNumberTocartpageInPdp(catlog){
+
+
+
+  setValue(fallback(`byXPath('//*[@id="keyword"]')`),catlog);
+  click(fallback(`byXPath('//*[@class="icon icon-lg"]')`));
 
 
 }

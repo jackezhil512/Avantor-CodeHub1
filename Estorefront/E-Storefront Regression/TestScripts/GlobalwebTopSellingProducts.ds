@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'null' description= 'null' author= 'null' version= 'null'>
+<dpl filename='' exectype='runstepbystep' errorhandling='' type='HashDPL' locale=''/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='navigateTo' value='"https://us-gq1.vwr.com/store/"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;fb_submit&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='submit(&quot;btn btn-sm&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='submit(&quot;fb_submit&quot;)' fallback='true' selected='false'/>
+   <accessor type='AttrValue' value='submit(&quot;Log In&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;fb_submit&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-sm&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/header/div/div[2]/div[3]/form/div[3]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;fb_submit&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='submit({&apos;type&apos;:&apos;submit&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;row pt-2&quot;] &gt; div[class=&quot;header-account col-xs-12 col-md-5 mt-lg-2&quot;] &gt; form[class=&quot;row row-no-gutters hidden-xs hidden-sm&quot;] &gt; div[class=&quot;col-xs-12 col-sm-2 pull-right text-right&quot;] &gt; input[class=&quot;btn btn-sm&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#fb_submit&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;input[value=&quot;Log In&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"Uva1-US-GQ1"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;email&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='textbox(&quot;form-control&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;email&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;email&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;form-control&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div/div/form/div/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;email&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;form-group&quot;] &gt; input[class=&quot;form-control&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#email&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='setValue' value='"production"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;password&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='password(&quot;form-control&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='password(&quot;password&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;password&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div/div/form/div[2]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;password&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='password({&apos;type&apos;:&apos;password&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#password&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;btn-login&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='submit(&quot;btn btn-block btn-primary&quot;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='submit(&quot;btn-login&quot;)' fallback='true' selected='false'/>
+   <accessor type='Text' value='submit(&quot;Log In&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//button[@id=&apos;btn-login&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary btn-block&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div/div/form/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;btn-login&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='submit({&apos;type&apos;:&apos;submit&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;button[class=&quot;btn btn-primary btn-block&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#btn-login&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='navigateTo' value='"https://us-gq1.vwr.com/store/account/welcomePage.jsp?_requestid=151519"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+</dialect>
+</step>
+<step action='setValue' value='"10746-446"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathId' value='byXPath(&apos;//*[@id=&quot;keyword&quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='textbox(&quot;form-control ui-autocomplete-input&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathName' value='byXPath(&apos;//*[@name=&quot;keyword&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Id' value='textbox(&quot;keyword&quot;)' fallback='true' selected='false'/>
+   <accessor type='AttrName' value='textbox(&quot;keyword&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//input[@id=&apos;keyword&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;form-control ui-autocomplete-input&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/header/div/div[2]/div[2]/form/div[3]/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;keyword&apos;)&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;input-group input-group-sm open&quot;] &gt; input[class=&quot;form-control ui-autocomplete-input&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#keyword&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;input[name=&quot;keyword&quot;]&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='clickXY' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Parent' value='svg(0, _in(button({&apos;aria-label&apos;:&apos;Submit search query&apos;})))' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='svg(&quot;icon icon-lg&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;icon icon-lg&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;input-group input-group-sm open&quot;] &gt; span[class=&quot;input-group-btn&quot;] &gt; button[class=&quot;btn-search btn btn-primary&quot;] &gt; svg[class=&quot;icon icon-lg&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#searchuidiv &gt; .input-group-btn &gt; .btn-search.btn.btn-primary &gt; .icon.icon-lg&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='navigateTo' value='"https://us-gq1.vwr.com/store/product?keyword=10746-446"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+</dialect>
+</step>
+</testcase>

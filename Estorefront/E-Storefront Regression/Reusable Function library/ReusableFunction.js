@@ -1210,12 +1210,12 @@ function OrderEntryEmptyPartNumberValidation(input){
   }
 
 
-  function Globalweblogin(url, username, password){
+  function Globalweblogin(Url, Username, Password){
        setShadowDOM(true);
-       navigateTo(url);
+       navigateTo(Url);
        click(fallback(`submit("Log In")`));
-       setValue(fallback(`byXPath('//*[@id="email"]')`), username);
-       setValue(fallback(`byXPath('//*[@id="password"]')`), password);
+       setValue(fallback(`byXPath('//*[@id="email"]')`), Username);
+       setValue(fallback(`byXPath('//*[@id="password"]')`), Password);
        click(fallback(`byXPath('//*[@id="btn-login"]')`));
        assertExists(fallback(`heading1("Welcome  				Uva US-GQ1")`));
   }

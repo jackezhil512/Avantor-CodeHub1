@@ -1191,7 +1191,7 @@ function OrderEntryEmptyPartNumberValidation(input){
     //click(fallback(`byXPath('//*[@class="icon icon-lg"]')`));
     click2(fallback(`svg("icon icon-lg")`));
     wait(30000);
-    assertExists(fallback(`span("${Catlog}",_below(tableHeader("VWR Catalog Number")))`));
+    assertExists(fallback(`span("${catlog}",_below(tableHeader("VWR Catalog Number")))`));
     //(fallback(`span("${Catlog}",_below(tableHeader("VWR Catalog Number")))`));
   
     //var CatlogNumber=getText(div(Catlog,_below(div("attribute catalog-attribute"))));

@@ -755,14 +755,6 @@ function OrderEntryEmptyPartNumberValidation(input){
    click(fallback(`button("aria-label==Add one more",rightOf(div("${input}",_below(div("attribute catalog-attribute")))))`));
    click(fallback(`button("Add to cart",rightOf(div("${input}",_below(div("attribute catalog-attribute")))))`));
 
-   
-
-
-
-
-
-
-
   }
 
   function NavigatetolengthyProductpagetoSearch(input){

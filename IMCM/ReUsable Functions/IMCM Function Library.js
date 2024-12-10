@@ -1530,6 +1530,7 @@ assertExists(fallback(`byXPath('//*[text()="${VendorName }"]')`));
 setDescription("Validate out Put type");
 assertExists(fallback(`cell("PDF OUTPUT")`));
 setDescription("Click on Save and Add Vendor");
+wait(2000);
 click(fallback(`span("Save & Add Vendor[1]")`));
 setDescription("Validate Success Message");
 assertExists(fallback(`div("VENDOR CREATED SUCCESSFULLY[9]").xy(0.41, 0.32 )`));

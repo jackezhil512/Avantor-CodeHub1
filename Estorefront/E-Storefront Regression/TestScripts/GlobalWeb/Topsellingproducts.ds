@@ -24,37 +24,4 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Parent' value='span(0, _in(link(&quot;cart-dropdown&quot;)))' fallback='true' selected='true'/>
-   <accessor type='Parent' value='span(0, _in(link({&apos;id&apos;:&apos;cart-dropdown&apos;})))' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='span(&quot;cart-label&quot;)' fallback='true' selected='false'/>
-   <accessor type='Text' value='span(&quot;0  ITEMS $0.00&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//a[@id=&apos;cart-dropdown&apos;]/span&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cart-label&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/header/div[2]/nav/div/div/div/ul/li[11]/a/span&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cart-dropdown&apos;)/span[@class=&apos;cart-label&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;collapse navbar-collape&quot;] &gt; ul[class=&quot;mmn-navbar-inner nav navbar-nav&quot;] &gt; li[class=&quot;nav-item-right dropdown hidden-xs hidden-sm&quot;] &gt; a[class=&quot;dropdown-toggle border-right-0&quot;] &gt; span[class=&quot;cart-label&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;#cart-dropdown &gt; .cart-label&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='50000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='link(&quot;0  items in your cart&quot;)' fallback='true' selected='true'/>
-   <accessor type='Parent' value='link(0, _in(div({&apos;id&apos;:&apos;miniCartContent&apos;})))' fallback='true' selected='false'/>
-   <accessor type='AttrHref' value='link(&quot;/store/cart/cart.jsp&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;miniCartContent&apos;]/p/a&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;0  items in your cart&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[4]/header/div[2]/nav/div/div/div/ul/li[11]/div/div/div/p/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;miniCartContent&apos;)/p[1]/a[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='link({&apos;onclick&apos;:&quot;$.blockUI({ message: $(&apos;#domMessage&apos;) });&quot;})' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/store/cart/cart.jsp&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='Parent' value='link(0, _in(div(&quot;miniCartContent&quot;)))' fallback='true' selected='false'/>
-</dialect>
-</step>
 </testcase>

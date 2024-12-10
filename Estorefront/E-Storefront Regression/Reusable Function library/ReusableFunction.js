@@ -1230,7 +1230,7 @@ function GlobalwebclearCart(){
  // click(fallback(`link("View Cart")`));
   //click(fallback(`link("Clear Cart[1]")`));
   //assertExists(fallback(`listItem("Successfully cleared your cart")`));
-click(fallback(`div("miniCartContent")`));
+//click(fallback(`div("miniCartContent")`));
  let value = _isVisible(fallback(`div("miniCartContent")`));
     log(value);
 if (true == value){

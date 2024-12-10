@@ -1196,6 +1196,7 @@ function globalWebAddingSearchcatlogNumberTocartpageInPdp(catlog){
 
   setValue(fallback(`byXPath('//*[@id="keyword"]')`),catlog);
   click(fallback(`byXPath('//*[@class="icon icon-lg"]')`));
-
+  wait(30000);
+  assertExists(fallback(`span("${Catlog}",_below(tableHeader("VWR Catalog Number")))`));
 
 }

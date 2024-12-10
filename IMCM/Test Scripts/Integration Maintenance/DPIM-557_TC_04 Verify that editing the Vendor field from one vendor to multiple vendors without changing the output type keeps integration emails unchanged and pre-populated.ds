@@ -99,6 +99,63 @@
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6b96996d-473e-4a1f-9c1b-4de9ae687d35' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a3452ff0-699c-4291-996b-de9cc7916786' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='327de83f-c7db-4a2e-82e7-c6d64f074c44' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='aa02e98e-b004-4416-923b-c634cad5a6cd' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Request Integration&apos;)]/ancestor::label")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='03a59667-75b3-45c0-b050-d6bb893a3747' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64f29410-771a-4886-9fa0-5eeb89a124ab' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("(//label[contains(text(),&apos;Primary Email&apos;)]/following::div[contains(text(),&apos;Add email&apos;)])[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f696e46e-6333-498c-987a-e3631646dbce' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value=' eval("&apos;Auto&apos;+ Math.floor(Math.random()*10000) + &apos;@gmail.com&apos;")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5eb832b8-bd4b-43f7-81f8-192af90c6b30' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TempEmail' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='TempEmail' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4731fd2d-99ef-4ebd-b1c6-e7746e2bdd7f' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setValue' value='TempEmail' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bf5b86b0-4346-4f19-a084-020f47fbdcde' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("(//label[contains(text(),&apos;Primary Email&apos;)]/following::input)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bc5678ed-2c05-4f47-a957-9883b3c24803' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//mat-icon[text()=&apos;save&apos;]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b0f0167c-9550-4bed-8ab9-21cd6ef9fa76' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a9bd14ee-ab32-401d-b3f1-cd0925267037' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Save&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8a8d1db0-13ec-438d-9254-cbec4e66403e' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
     <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bee13a35-b02e-4875-81dd-c28ea9be5eb5' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>

@@ -758,6 +758,9 @@ function OrderEntryEmptyPartNumberValidation(input){
    click(fallback(`button("aria-label==Add one more",rightOf(div("${input}",_below(div("attribute catalog-attribute")))))`));
    click(fallback(`button("Add to cart",rightOf(div("${input}",_below(div("attribute catalog-attribute")))))`));
    wait(10000);
+   click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));
+    wait(2000);
+    click(fallback(`submit("View My Cart")`));
 
    assertExists(fallback(`heading3("Cart Summary")`));
     

@@ -1317,7 +1317,7 @@ function AddALLintegrationWithText(){
 NavigateToIntegrationMaintenance();
 click(fallback(`byXPath("//span[contains(text(),'ADD NEW INTEGRATION')]/ancestor::button")`));
 wait(2000);
-click(fallback(`byXPath("(//mat-select[@formcontrolname='vendor']/div[contains(@class, 'mat-select-trigger')]")`));
+click(fallback(`byXPath("//mat-select[@formcontrolname='vendor']/div[contains(@class, 'mat-select-trigger')]")`));
 wait(2000);
 click(fallback(`byXPath("//span[contains(text(),'ALL') and @class='vendor-option']")`));
 wait(2000);

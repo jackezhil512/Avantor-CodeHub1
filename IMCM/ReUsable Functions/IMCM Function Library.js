@@ -1500,10 +1500,7 @@ assertExists(fallback(`byXPath('//*[text()=" Integration created successfully "]
 
 function CreateVendorAndAddIntegration(){ 
 wait(5000);
-var RandomVal=eval(" Math.floor(Math.random()*1000)");
-var Date=datefunc();
-log(Date);
-var VendorName="Automation" +RandomVal;
+
 log(VendorName);
 var StockRoomName=$ConsumptionStockroom;
 log(StockRoomName);

@@ -1,46 +1,32 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testcase   name= 'Verify the pay by creditCard option In Inoivce.ds' description= '' author= 'appvance' version= ''>
-<dpl filename='REPOSITORY/Estorefront/E-Storefront Regression/Test Data/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
+<dpl filename='' exectype='runstepbystep' errorhandling='' type='HashDPL' locale=''/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
-<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='navigateTo' value='"https://p2.avantorsciences.com/ca/en/"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"Beakers"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[2]/app-avtr-search-box/label/input&apos;)' fallback='true' selected='true'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SearchBox has-components&apos;]/app-avtr-search-box[1]/label[@class=&apos;searchbox&apos;]/input[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;autocomplete&apos;:&apos;off&apos;})' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[2]/app-avtr-search-box/label/input&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$InvoiceUser,$InvoicePwd)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='VerifyinvoiceresultswithBilltoNumberasAll()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='submit(&quot;Pay by Credit Card&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-invoice-search-results/div[1]/div[2]/button[2]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Pay by Credit Card &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-invoice-search-results/div/div[2]/button[2]&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-invoice-search-results[1]/div[@class=&apos;d-flex mt-4 justify-content-between invoice-results-btn-check&apos;]/div[@class=&apos;invoice-results-pay-download-btn d-flex&apos;]/button[@class=&apos;btn btn-primary&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;d-flex mt-4 justify-content-between invoice-results-btn-check&quot;] &gt; div[class=&quot;invoice-results-pay-download-btn d-flex&quot;] &gt; button[class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.d-flex.mt-4.justify-content-between.invoice-results-btn-check &gt; .invoice-results-pay-download-btn.d-flex &gt; .btn.btn-primary&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='submit(&quot;btn btn-primary&quot;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='custom(&quot;cx-page-layout&quot;, 0, _in(header(&quot;cx-header&quot;)))' fallback='true' selected='true'/>
+   <accessor type='Parent' value='custom(&quot;cx-page-layout&quot;, 0, _in(header({&apos;id&apos;:&apos;cx-header&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='custom(&quot;cx-page-layout&quot;, &quot;header&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;header&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='custom(&quot;cx-page-layout&quot;, {&apos;section&apos;:&apos;header&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;body[class=&quot;&quot;] &gt; app-root[class=&quot;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner&quot;] &gt; cx-storefront[class=&quot;stop-navigating ContentNoBreadcrumbTemplate&quot;] &gt; header[class=&quot;mouse-focus&quot;] &gt; cx-page-layout[class=&quot;header&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#cx-header &gt; .header&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
 </testcase>

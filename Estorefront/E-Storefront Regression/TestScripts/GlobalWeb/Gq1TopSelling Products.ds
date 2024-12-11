@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'Topsellingproducts.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Regression/TestData/GQ1TopSellingProducts.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/Estorefront/Estorefront/E-Storefront Regression/Reusable Function library/ReusableFunction.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Globalweblogin(&quot;https://us-gq1.vwr.com/store/&quot;,&quot;Uva1-US-GQ1&quot;,&quot;production&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='GlobalwebclearCart()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='GlobalWebAddingSearchcatlogNumberTocartpageInPdp($CATALOGID_1)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+</testcase>

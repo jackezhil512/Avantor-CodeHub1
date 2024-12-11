@@ -69,20 +69,6 @@
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6aef0bea-444b-4aae-a8d4-b4662709f2f7' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='store' value=' eval("&apos;Auto&apos;+ Math.floor(Math.random()*10000) + &apos;@gmail.com&apos;")' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3f362d73-5f40-4d8c-be2d-84dd999f9eb2' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='TempEmail' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='log' value='TempEmail' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b9f18d6e-d8f6-4afe-ae10-714907cd9b1f' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='CreateSecondVendorAndAddIntegrationWithEMAILXML()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c45744f1-351f-4bbc-9111-d881efe5ed94' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='CreateVendorAndAddIntegration()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='af9240c0-02a1-42f5-8cc2-c03dc140177c' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
     <step action='selectWindow' value=' "Avantor Inventory Manager"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bf8d5f5e-4f66-4408-817d-2a053df5221d' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
@@ -114,24 +100,6 @@
         <accessor type='Attribute' value='submit({&apos;role&apos;:&apos;menuitem&apos;})' selected='false' fallback='true'></accessor>
         <accessor type='JQuery' value=' byJQuery(&apos;div[class="cdk-overlay-connected-position-bounding-box"] &gt; div[class="cdk-overlay-pane"] &gt; div[class="mat-menu-panel ng-trigger ng-trigger-transformMenu ng-tns-c220-210 mat-menu-before mat-menu-below mat-shadow vendor-maintenance ng-star-inserted mat-elevation-z4"] &gt; div[class="mat-menu-content ng-tns-c220-210"] &gt; button[class="mat-focus-indicator mat-menu-item ng-tns-c220-210 cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
         <accessor type='JQuery' value='byJQuery(&apos;#mat-menu-panel-60 &gt; .mat-menu-content.ng-tns-c220-210 &gt; .mat-focus-indicator.mat-menu-item.ng-tns-c220-210.cdk-focused.cdk-mouse-focused&apos;)' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1a280063-b36d-4687-8dce-8061fcc4a4f0' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='store' value=' "auto1215"' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e0a3cdb7-0977-42c7-af2b-4fc26e267ae1' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='VendorName1' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64d46175-b1fd-4229-98ff-3f6ad9e1a3fb' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//mat-select[@formcontrolname=&apos;Stockroom &apos;]/div[contains(@class, &apos;mat-select-trigger&apos;)]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='setValue' value='StockRoomName' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a27f3ea5-aacc-4cc5-bf0c-0d59d7c09179' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath(&apos;//input[@placeholder="Search Stockroom "]&apos;)' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='45cff65e-137d-4966-b760-8887d07424f1' uiType='base'>

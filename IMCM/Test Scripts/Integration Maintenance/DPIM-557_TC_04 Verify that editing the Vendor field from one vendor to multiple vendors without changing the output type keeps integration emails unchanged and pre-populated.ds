@@ -75,6 +75,19 @@
     <step action='js' value='AddALLintegration()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b2794ede-166e-4a4a-bdc1-029f4822484e' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1de16865-bf43-4719-9323-98566f580095' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value=' eval(" Math.floor(Math.random()*1000000000)")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7922e42f-bc3e-4c7a-a528-ebb4e5d8bc4a' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='RandomVal' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value='datefunc()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='16ccca55-6037-47c3-b20d-58be5fe8e534' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='Date' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
     <step action='store' value=' "Automation" +Date+RandomVal' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='71a040c3-4aeb-4a47-a937-1d6faa554ade' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='VendorName' selected='true' fallback='true'></accessor>

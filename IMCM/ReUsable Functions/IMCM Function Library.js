@@ -1432,7 +1432,7 @@ setValue(fallback(`byXPath("//h4[contains(text(),'Add New Integration')]")`),"{{
 wait(2000);
 click(fallback(`byXPath("//span[contains(text(),'Exclude Non VWR Vendor Integrations')]")`));
 click(fallback(`byXPath("(//div[contains(text(),'Stockroom')]/span/following::mat-select)[1]")`));
-click(fallback(`byXPath("//span[contains(text(),'All Stockrooms')]/parent::span/preceding-sibling::mat-pseudo-checkbox")`));
+click(fallback(`byXPath("//span[contains(text(),'Automation Regular Stockroom')]/parent::span/preceding-sibling::mat-pseudo-checkbox")`));
 wait(2000);
 setValue(fallback(`byXPath("//h4[contains(text(),'Add New Integration')]")`),"{{TAB}}");
 wait(2000);

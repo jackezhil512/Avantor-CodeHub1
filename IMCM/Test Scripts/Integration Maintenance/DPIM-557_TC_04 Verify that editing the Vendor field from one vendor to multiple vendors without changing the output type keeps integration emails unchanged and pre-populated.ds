@@ -303,7 +303,7 @@
         <accessor type='unknown' value=' byXPath(&apos;//span[text()="${VendorName}"]&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='77562306-7f91-47ad-b2eb-1ddc43035847' uiType='base'>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2a2f4d32-85e8-488e-80d0-b376e7b9c483' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9a0af232-1fec-413b-9505-4e732a3452d1' uiType='base'>
@@ -319,10 +319,23 @@
         <accessor type='AttrClass' value=' custom("mat-panel-title", "mat-expansion-panel-header-title ng-tns-c282-326")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e1114756-fcb2-4891-a583-607d8ce17fed' uiType='base'>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e1114756-fcb2-4891-a583-607d8ce17fed' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b77eab02-7fe3-41ea-9e25-585170608f31' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='Click on vendor name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0452d788-8725-41fe-a73b-393e609881c6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[text()=&apos;${VendorName}&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath(&apos;//span[text()="${VendorName}"]&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='Click on vendor name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bdfad4b2-1023-4d2b-b601-68b88ee73929' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' byXPath("//span[text()=&apos;${VendorName1}&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[text()=&apos;${VendorName}&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath(&apos;//span[text()="${VendorName}"]&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b77eab02-7fe3-41ea-9e25-585170608f31' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Text' value=' span("PDF OUTPUT")' selected='true' fallback='true'></accessor>
         <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[1]/td[3]/span")' selected='false' fallback='true'></accessor>
@@ -336,7 +349,7 @@
         <accessor type='AttrClass' value=' span("ng-star-inserted[2]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4630c635-6a58-4823-9be7-1ab202558dad' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4630c635-6a58-4823-9be7-1ab202558dad' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Text' value=' span("EMAIL XML")' selected='true' fallback='true'></accessor>
         <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[9]/td[3]/span")' selected='false' fallback='true'></accessor>
@@ -347,7 +360,7 @@
         <accessor type='AttrClass' value=' span("ng-star-inserted[6]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='74a6a813-77bb-478a-8f9a-a4550df691fa' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='74a6a813-77bb-478a-8f9a-a4550df691fa' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Text' value=' span("CSV")' selected='true' fallback='true'></accessor>
         <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[5]/td[3]/span")' selected='false' fallback='true'></accessor>
@@ -359,7 +372,7 @@
         <accessor type='Text' value=' span("CSV")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='24f14aa7-8434-4468-9248-391fa7dffe52' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='24f14aa7-8434-4468-9248-391fa7dffe52' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' span("TEXT FILE CONFIGURATOR")' selected='true' fallback='true'></accessor>
         <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[5]/td[3]/span")' selected='false' fallback='true'></accessor>

@@ -60,90 +60,6 @@
     <step action='js' value='AddAutomationVendorintegrationWithText()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='184ef92e-ddcb-4f11-80c1-d4e7a92fb873' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4ee36cca-36e0-4d30-a081-a89235db3655' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3757ed87-41a3-4132-9d38-40f6442ef1b2' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='83e811fc-5551-449f-a2e3-951a287805b8' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='Text' value=' button("Save &amp; Add Vendor")' selected='true' fallback='true'></accessor>
-        <accessor type='AttrClass' value=' button("add-vendor cdk-focused cdk-mouse-focused mat-button-base mat-flat-button mat-focus-indicator mat-primary ng-star-inserted py-1")' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value=' byXPath("//mat-dialog-container[@id=&apos;mat-dialog-0&apos;]/app-create-update-wizard/mat-dialog-actions/button[3]")' selected='false' fallback='true'></accessor>
-        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-focus-indicator py-1 add-vendor mat-flat-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-actions/button[3]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-dialog-0&apos;)/app-create-update-wizard[@class=&apos;ng-star-inserted&apos;]/mat-dialog-actions[@class=&apos;mat-dialog-actions px-3 vendor-btns&apos;]/button[@class=&apos;mat-focus-indicator py-1 add-vendor mat-flat-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused&apos;]")' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value=' byJQuery(&apos;div[class="cdk-overlay-pane avantor-dialog"] &gt; mat-dialog-container[class="mat-dialog-container ng-tns-c31-153 ng-trigger ng-trigger-dialogContainer ng-star-inserted"] &gt; app-create-update-wizard[class="ng-star-inserted"] &gt; mat-dialog-actions[class="mat-dialog-actions px-3 vendor-btns"] &gt; button[class="mat-focus-indicator py-1 add-vendor mat-flat-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;#mat-dialog-0 &gt; .ng-star-inserted &gt; .mat-dialog-actions.px-3.vendor-btns &gt; .mat-focus-indicator.py-1.add-vendor.mat-flat-button.mat-button-base.mat-primary.ng-star-inserted.cdk-focused.cdk-mouse-focused&apos;)' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2cef9fe8-5d19-48a0-b7de-ef67df7c4d88' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3a019171-c616-417f-873a-2f164587cdd4' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='88b62ef1-9011-4bc7-8c26-a4e1c3eb6513' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='TotalRow' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='337ddc8f-c96e-4ff8-ac63-669643e4ab3d' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='while' value='TotalRow&gt;=1' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7448859d-ba73-4176-be53-d3a0974a56ed' uiType='conditional'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='TotalRow&gt;=1' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value='TotalRow&gt;1' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='js' value='deleteAll()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='98e78934-b1cc-4c38-af83-a8ba563825be' uid='9f414f96-b706-4517-b35c-6dca6337363d' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='98e78934-b1cc-4c38-af83-a8ba563825be' uid='7f96967c-e19d-4b94-bd07-72da5b81fc74' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='98e78934-b1cc-4c38-af83-a8ba563825be' uid='86dee50c-1d03-4c2f-ad0c-e0acb416e0b4' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='TotalRow' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9844aa16-d96a-4604-9bbf-1e57491cb8c1' uiType='end' sibling='98e78934-b1cc-4c38-af83-a8ba563825be'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6fb8d12e-f85b-40ee-a7dc-61fb56369e32' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='createALLIntegrationIfNotExist()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='905d26aa-db32-4962-bd08-b9ffeeece220' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='AddALLintegration()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e4fbb387-4136-4ca5-b0a5-a116fac9b0fe' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='store' value=' eval(" Math.floor(Math.random()*1000000000)")' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7922e42f-bc3e-4c7a-a528-ebb4e5d8bc4a' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='RandomVal' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='store' value='datefunc()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='16ccca55-6037-47c3-b20d-58be5fe8e534' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='Date' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='store' value=' "AutomationSecond"+Date+RandomVal' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bcb5545c-0cc5-42e2-90a6-4048599d1ebb' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='SecondVendorName' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='store' value=' "Automation" +Date+RandomVal' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='71a040c3-4aeb-4a47-a937-1d6faa554ade' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='VendorName' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='51067d02-2425-4523-847d-9c980663c7df' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
     <step action='store' value=' "Automation-Pou Stockroom"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='83f16307-1129-4180-97a9-b37f7ec8400b' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='StockRoomName' selected='true' fallback='true'></accessor>
@@ -295,65 +211,6 @@
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='327de83f-c7db-4a2e-82e7-c6d64f074c44' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='Verify Email value is pre populated' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d0063175-ee69-4071-86c5-658fa4b07286' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//mat-icon[text()=&apos;delete&apos;]")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value='' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='assertExists' value='' type='web' desc='verify Email exists on review tab' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ae381f1f-eb70-4bb0-9ebc-83cd7298af69' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' paragraph("${TempEmail }")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='aa02e98e-b004-4416-923b-c634cad5a6cd' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Request Integration&apos;)]/ancestor::label")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='03a59667-75b3-45c0-b050-d6bb893a3747' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64f29410-771a-4886-9fa0-5eeb89a124ab' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("(//label[contains(text(),&apos;Primary Email&apos;)]/following::div[contains(text(),&apos;Add email&apos;)])[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f696e46e-6333-498c-987a-e3631646dbce' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='store' value=' eval("&apos;Auto&apos;+ Math.floor(Math.random()*10000) + &apos;@gmail.com&apos;")' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5eb832b8-bd4b-43f7-81f8-192af90c6b30' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='TempEmail' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='log' value='TempEmail' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4731fd2d-99ef-4ebd-b1c6-e7746e2bdd7f' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='setValue' value='TempEmail' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bf5b86b0-4346-4f19-a084-020f47fbdcde' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("(//label[contains(text(),&apos;Primary Email&apos;)]/following::input)[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bc5678ed-2c05-4f47-a957-9883b3c24803' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//mat-icon[text()=&apos;save&apos;]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d08a7fe5-9d68-47b4-909f-371f4080ed7d' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='AttrClass' value=' div("mt-3 ng-pristine ng-untouched ng-valid").xy(0.86, 0.55 )' selected='true' fallback='true'></accessor>
-        <accessor type='Text' value=' div("CC Email(s) add  Add email").xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-2-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[2]").xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
-        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mt-3 ng-untouched ng-pristine ng-valid"]&apos;).xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div[2]&apos;).xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-2-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-dirty ng-touched ng-valid&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/div[@class=&apos;row mb-5 ml-2 ng-untouched ng-dirty ng-valid&apos;]/div[@class=&apos;col-md-12&apos;]/div[@class=&apos;mt-3 ng-untouched ng-pristine ng-valid&apos;]").xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
-        <accessor type='Attribute' value='div({&apos;formarrayname&apos;:&apos;requestCCEmails&apos;}).xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value=' byJQuery(&apos;form[class="mt-2 ng-dirty ng-touched ng-valid"] &gt; section[class="px-1 py-2 pr-3 email_integration-div"] &gt; div[class="row mb-5 ml-2 ng-untouched ng-dirty ng-valid"] &gt; div[class="col-md-12"] &gt; div[class="mt-3 ng-untouched ng-pristine ng-valid"]&apos;).xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;.mt-2.ng-dirty.ng-touched.ng-valid &gt; .px-1.py-2.pr-3.email_integration-div &gt; .row.mb-5.ml-2.ng-untouched.ng-dirty.ng-valid &gt; .col-md-12 &gt; .mt-3.ng-untouched.ng-pristine.ng-valid&apos;).xy(0.86, 0.55 )' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6f06bd71-feb2-4cfd-bc2a-6434e1dba1ac' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
@@ -365,38 +222,6 @@
         <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-2-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-2 vendor-btns integration-actions mt-2&apos;]/button[@class=&apos;mat-focus-indicator py-1 next ml-sm-2 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='68ffba43-0c53-4ffd-b493-be4779284d36' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='Text' value=' span("Previous[1]")' selected='true' fallback='true'></accessor>
-        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-2-2&apos;]/app-review-section/div/button[2]/span[1]/span")' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[3]/app-review-section/div/button[2]/span/span&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-2-2&apos;)/app-review-section[@class=&apos;review-integration ng-star-inserted&apos;]/div[@class=&apos;px-2 vendor-btns integration-actions mt-2&apos;]/button[@class=&apos;mat-focus-indicator py-1 previous mat-stroked-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]")' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='Click on empty Space' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fb809a3d-6894-480c-adff-f2a02dc4992f' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='AttrClass' value=' div("cdk-overlay-backdrop cdk-overlay-backdrop-showing cdk-overlay-transparent-backdrop").xy(0.51, 0.28 )' selected='true' fallback='true'></accessor>
-        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[3]&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("/html[@class=&apos;cdk-global-scrollblock&apos;]/body[1]/div[@class=&apos;cdk-overlay-container&apos;]/div[@class=&apos;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&apos;]").xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value=' byJQuery(&apos;div[class="cdk-overlay-container"] &gt; div[class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='babe8d14-6629-4e91-9f84-7a14a3642147' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ffd4abf4-4b6b-4641-ae8f-66ce92294d8d' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='assertExists' value='' type='web' desc='verify Email exists on review tab' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4bb2ddea-290b-43fc-b52d-230f643826fd' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' paragraph("${TempEmail }")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c4aa7a6d-d555-40c9-a7fe-71fe8e97c8dd' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
@@ -405,18 +230,22 @@
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Save&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8a8d1db0-13ec-438d-9254-cbec4e66403e' uiType='base'>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9ef24bd5-e724-4d03-9034-d43cfbcd717b' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='js' value='NavigateToVendorMaintenancePage()' type='web' desc='Vendor Maintenance' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='28dcf519-3547-4a0b-9296-5068cc4382fc' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='log' value='strData' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b61c708e-310d-4481-8067-1cbd7eef7b73' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='assertEqual' value=' "10/1 alternates delete"' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a3b7dde9-7d58-4a7a-84d4-264bfaa3fc68' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='verify stockroom hyper link exist' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3caa132a-241a-41f5-8ce0-7fc121217603' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value='strData' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value=' link("cursor-pointer")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value=' link("2")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[5]/div/div[2]/div/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="cursor-pointer"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()=" 2 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr/td[5]/div/div[2]/div/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col customTable&apos;]/avantor-table[@class=&apos;table-container fullWidth ng-tns-c330-49 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c330-49&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c330-49 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c330-49 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-stockroomData mat-column-stockroomData ng-tns-c330-49 ng-star-inserted&apos;]/div[@class=&apos;row ng-star-inserted&apos;]/div[@class=&apos;col-10&apos;]/div[@class=&apos;w-100 stockroom-name ng-star-inserted&apos;]/a[@class=&apos;cursor-pointer&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value=' byXPath(&apos;//tbody//tr[1]//td[5]//div//div//div//a[@class="cursor-pointer"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value=' byXPath(&apos;//tbody//tr[1]//td[5]//div//div//div//a[text()=" 2 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;td[class="mat-cell cdk-cell cdk-column-stockroomData mat-column-stockroomData ng-tns-c330-49 ng-star-inserted"] &gt; div[class="row ng-star-inserted"] &gt; div[class="col-10"] &gt; div[class="w-100 stockroom-name ng-star-inserted"] &gt; a[class="cursor-pointer"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-cell.cdk-cell.cdk-column-stockroomData.mat-column-stockroomData.ng-tns-c330-49.ng-star-inserted &gt; .row.ng-star-inserted &gt; .col-10 &gt; .w-100.stockroom-name.ng-star-inserted &gt; .cursor-pointer&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
   </testcase>

@@ -178,36 +178,6 @@
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dd30c6b9-af9e-4843-ae52-7dd4ca1c4e94' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6716293b-630d-4121-a9ea-87ba067de017' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Request Integration&apos;)]/ancestor::label")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9b3b9a1d-aa0a-4ee5-9642-6d654b0ea2c6' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='27436d2c-0e24-4535-8c27-d51d562e033d' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("(//label[contains(text(),&apos;Primary Email&apos;)]/following::div[contains(text(),&apos;Add email&apos;)])[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='46a9cb44-6e3d-4cb0-8064-97dd078272b3' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='store' value=' eval("&apos;Auto&apos;+ Math.floor(Math.random()*10000) + &apos;@gmail.com&apos;")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b865025f-165d-489a-afd4-de78de1e1234' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='TempEmail4' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value='TempEmail' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='log' value='TempEmail4' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cc78bbe7-8aaa-466f-8283-6d2b5f5e429b' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='setValue' value='TempEmail' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8e2baf62-7dd1-4e39-ae0a-6fc2ea0bb971' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("(//label[contains(text(),&apos;Primary Email&apos;)]/following::input)[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='175675ff-f95a-4155-8e1a-39c9759ed3d8' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//mat-icon[text()=&apos;save&apos;]")' selected='true' fallback='true'></accessor>

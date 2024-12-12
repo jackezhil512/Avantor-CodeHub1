@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
   <testcase name='' description='script generated from Web Designer' author='Harish@avantorsciences.com' version='webDesigner'>
-    <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep01' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'></dpl>
     <fallback useFallback='true'></fallback>
     <shadowDOM useShadowDOM='true'></shadowDOM>
     <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='714dcd6a-d205-4477-b9b8-2f6ac8043e69' uiType='base'>
@@ -135,7 +135,8 @@
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dd1a5ec8-d7c4-4f0d-9630-9df581fb9fd6' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;SAP XML REQUISITION&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;EMAIL XML&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;SAP XML REQUISITION&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;PDF OUTPUT&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
@@ -158,60 +159,13 @@
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='assertNotExists' value='' type='web' desc='Verify Email value is not pre populated' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c8363d0a-a9f4-4dcb-a5f7-758b5a1e64f0' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='Verify Email value is pre populated' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c8363d0a-a9f4-4dcb-a5f7-758b5a1e64f0' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//mat-icon[@color=&apos;remove-email&apos;]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='verify Order Integration auto checked and disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c6510dac-0e69-42ca-946b-8b9708f1ad1d' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='JQuery' value=' byJQuery(&apos;mat-checkbox[class="mat-checkbox large mat-accent mat-checkbox-checked mat-checkbox-disabled ng-untouched ng-pristine ng-valid"] &gt; label[class="mat-checkbox-layout"] &gt; span[class="mat-checkbox-inner-container"]&apos;)' selected='true' fallback='true'></accessor>
-        <accessor type='Parent' value=' span(0, _in(custom("mat-checkbox", "mat-checkbox-109")))' selected='false' fallback='true'></accessor>
-        <accessor type='Parent' value=' span(0, _in(custom("mat-checkbox", {&apos;id&apos;:&apos;mat-checkbox-109&apos;})))' selected='false' fallback='true'></accessor>
-        <accessor type='AttrClass' value=' span("mat-checkbox-inner-container[3]")' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value=' byXPath("//mat-checkbox[@id=&apos;mat-checkbox-109&apos;]/label/span[1]")' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[3]/mat-checkbox/label/span&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-checkbox-109&apos;)/label[@class=&apos;mat-checkbox-layout&apos;]/span[@class=&apos;mat-checkbox-inner-container&apos;]")' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;#mat-checkbox-109 &gt; .mat-checkbox-layout &gt; .mat-checkbox-inner-container&apos;)' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dd30c6b9-af9e-4843-ae52-7dd4ca1c4e94' uiType='base'>
       <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6716293b-630d-4121-a9ea-87ba067de017' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Request Integration&apos;)]/ancestor::label")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9b3b9a1d-aa0a-4ee5-9642-6d654b0ea2c6' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='27436d2c-0e24-4535-8c27-d51d562e033d' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("(//label[contains(text(),&apos;Primary Email&apos;)]/following::div[contains(text(),&apos;Add email&apos;)])[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='46a9cb44-6e3d-4cb0-8064-97dd078272b3' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='store' value=' eval("&apos;Auto&apos;+ Math.floor(Math.random()*10000) + &apos;@gmail.com&apos;")' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b865025f-165d-489a-afd4-de78de1e1234' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='TempEmail4' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value='TempEmail' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='log' value='TempEmail4' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cc78bbe7-8aaa-466f-8283-6d2b5f5e429b' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='setValue' value='TempEmail' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8e2baf62-7dd1-4e39-ae0a-6fc2ea0bb971' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("(//label[contains(text(),&apos;Primary Email&apos;)]/following::input)[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='175675ff-f95a-4155-8e1a-39c9759ed3d8' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//mat-icon[text()=&apos;save&apos;]")' selected='true' fallback='true'></accessor>
-      </dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='52742fe1-c43b-4c2b-9586-a6e5b42b4cbd' uiType='base'>
       <dialect type='sahi'>
@@ -221,16 +175,18 @@
         <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-1-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-2 vendor-btns integration-actions mt-2&apos;]/button[@class=&apos;mat-focus-indicator py-1 next ml-sm-2 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='255beede-f6e2-4eae-9b9d-9f9fab661cbc' uiType='base'>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4f12f94e-31d9-47b1-95f7-391784aa60ad' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='click' value='' type='web' desc='verify no email showing' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f430a1db-eb79-40c7-b843-b89cc9c38c6b' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4a063367-43f8-484e-960c-c31afd4de830' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='Text' value=' paragraph("-")' selected='true' fallback='true'></accessor>
-        <accessor type='XPath' value=' byXPath("//div[@id=&apos;cdk-step-content-1-2&apos;]/app-review-section/section/section/div[2]/div/div[3]/div/p")' selected='false' fallback='true'></accessor>
-        <accessor type='XPathText' value=' byXPath(&apos;//*[text()="-"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[3]/app-review-section/section/section/div[2]/div/div[3]/div/p&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cdk-step-content-1-2&apos;)/app-review-section[@class=&apos;review-integration ng-star-inserted&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/section[1]/div[@class=&apos;row my-2 ml-2&apos;]/div[@class=&apos;col-md&apos;]/div[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;ml-1&apos;]/p[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='verify Email exists on review tab' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='25dbb1be-3ef4-468d-a662-9d20cca77f4f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' paragraph("${TempEmail }")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c4aa7a6d-d555-40c9-a7fe-71fe8e97c8dd' uiType='base'>
@@ -244,7 +200,7 @@
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9ef24bd5-e724-4d03-9034-d43cfbcd717b' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='85164249-b444-44f5-aadd-63d832428a39' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='85164249-b444-44f5-aadd-63d832428a39' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Parent' value=' div(1, _in(custom("mat-select", {&apos;id&apos;:&apos;mat-select-20&apos;}))).xy(0.54, 0.97 )' selected='true' fallback='true'></accessor>
         <accessor type='Text' value=' div("All Emails[4]").xy(0.54, 0.97 )' selected='false' fallback='true'></accessor>
@@ -260,34 +216,34 @@
         <accessor type='JQuery' value='byJQuery(&apos;#mat-select-value-21&apos;).xy(0.54, 0.97 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='assertNotExists' value='' type='web' desc='verify existing email not exist in dropdown filter for SAP output type' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b83d416b-62ad-4e1d-9ae3-ab4ce6a209ee' uiType='base'>
+    <step action='assertNotExists' value='' type='web' desc='verify existing email not exist in dropdown filter for SAP output type' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b83d416b-62ad-4e1d-9ae3-ab4ce6a209ee' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='span(${TempEmail})' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value='span(TempEmail)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;ALL&apos;,&apos;All Stockrooms&apos;,TempEmail4)' type='web' desc='Verify updated email exist in email dropdown' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='365c275c-edb2-413e-bcd3-f213c9d63090' uiType='base'>
+    <step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;ALL&apos;,&apos;All Stockrooms&apos;,TempEmail)' type='web' desc='Verify the email is retained' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='365c275c-edb2-413e-bcd3-f213c9d63090' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email)' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='click on update results' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='30160813-18cf-409f-953c-9aa4c063d3ee' uiType='base'>
+    <step action='click' value='' type='web' desc='click on update results' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='30160813-18cf-409f-953c-9aa4c063d3ee' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Update Results&apos;)]")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a447d887-27dc-4237-8534-01f6be15431c' uiType='base'>
+    <step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a447d887-27dc-4237-8534-01f6be15431c' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8f9d14b7-5904-4215-bb3b-d82abac58dce' uiType='base'>
+    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8f9d14b7-5904-4215-bb3b-d82abac58dce' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='strRows2' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='log' value='strRows2' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d9a0479e-75ca-4a41-9e71-f3d6edbbfb72' uiType='base'>
+    <step action='log' value='strRows2' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d9a0479e-75ca-4a41-9e71-f3d6edbbfb72' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='assertEqual' value='1' type='web' desc='verify no records found for email' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7b6032ae-41bb-4b42-96a3-d00ecddc21ff' uiType='base'>
+    <step action='assertEqual' value='1' type='web' desc='verify no records found for email' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7b6032ae-41bb-4b42-96a3-d00ecddc21ff' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='strRows2' selected='true' fallback='true'></accessor>
       </dialect>

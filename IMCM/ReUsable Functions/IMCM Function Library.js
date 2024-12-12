@@ -1475,7 +1475,7 @@ assertExists(fallback(`byXPath('//*[text()=" Integration created successfully "]
 }
 
 
-function AddIntegrationWithVendorAndOutPutTpe(Vendor,OutPutType){
+function AddIntegrationWithVendorAndOutPutTpe(Vendor,Stockrom,OutPutType){
 NavigateToIntegrationMaintenance();
 click(fallback(`byXPath("//span[contains(text(),'ADD NEW INTEGRATION')]/ancestor::button")`));
 wait(2000);
@@ -1487,7 +1487,7 @@ setValue(fallback(`byXPath("//h4[contains(text(),'Add New Integration')]")`),"{{
 wait(2000);
 click(fallback(`byXPath("//span[contains(text(),'Exclude Non VWR Vendor Integrations')]")`));
 click(fallback(`byXPath("(//div[contains(text(),'Stockroom')]/span/following::mat-select)[1]")`));
-click(fallback(`byXPath("//span[contains(text(),'Automation Regular Stockroom')]/parent::span/preceding-sibling::mat-pseudo-checkbox")`));
+click(fallback(`byXPath("//span[contains(text(),'${Stockrom}')]/parent::span/preceding-sibling::mat-pseudo-checkbox")`));
 wait(2000);
 setValue(fallback(`byXPath("//h4[contains(text(),'Add New Integration')]")`),"{{TAB}}");
 wait(2000);

@@ -745,6 +745,9 @@ function OrderEntryEmptyPartNumberValidation(input){
 
 
   function VerifymasterflexProduct(input){
+            
+            var CatlogNumber=getText(div(input,_below(div("attribute catalog-attribute"))));
+    log(CatlogNumber);
 
             click(fallback(`button("Accessories",rightOf(div("${input}",_below(div("attribute catalog-attribute")))))`));
             setDescription("Acceseries window");
@@ -755,6 +758,25 @@ function OrderEntryEmptyPartNumberValidation(input){
    click(fallback(`button("aria-label==Add one more",rightOf(div("${input}",_below(div("attribute catalog-attribute")))))`));
    click(fallback(`button("Add to cart",rightOf(div("${input}",_below(div("attribute catalog-attribute")))))`));
    wait(10000);
+
+   assertExists(fallback(`heading3("Cart Summary")`));
+    
+    assertExists(fallback(`link("${input}")`));
+    var CartPageCatlogNumber=getText(fallback(`link("${input}")`));
+    log(CartPageCatlogNumber);
+
+  if (CartPageCatlogNumber == CatlogNumber){
+  log("catlog number is displayed in cartpage");   
+  
+    }else{
+      log("catlognumber is not displayed or page is not loaded")
+    }
+        
+  }  
+
+
+
+
 
   }
 

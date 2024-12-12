@@ -1,113 +1,105 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'Verify Add Product To Cart From Personal Shopping List.ds' description= '' author= 'appvance' version= ''>
-<dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Regression/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ClearCart()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/shipping-options&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='link(&quot;Shipping Options&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[10]/div/div[1]/nav[2]/app-generic-link/a&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Shipping Options &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[10]/div/div/nav[2]/app-generic-link/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SiteLogin has-components&apos;]/app-login[1]/div[@class=&apos;loggedIN&apos;]/cx-page-slot[@class=&apos;HeaderLinks has-components&apos;]/app-avtr-navigation[1]/app-avtr-navigation-ui[@class=&apos;accNavComponent flyout&apos;]/nav[1]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[10]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[2]/app-generic-link[1]/a[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/shipping-options&quot;]&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/shopping-lists&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='link(&quot;Shopping Lists&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[4]/app-generic-link/a&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Shopping Lists &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[4]/app-generic-link/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SiteLogin has-components&apos;]/app-login[1]/div[@class=&apos;loggedIN&apos;]/cx-page-slot[@class=&apos;HeaderLinks has-components&apos;]/app-avtr-navigation[1]/app-avtr-navigation-ui[@class=&apos;accNavComponent flyout&apos;]/nav[1]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[4]/app-generic-link[1]/a[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/shopping-lists&quot;]&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='div(&quot;search-bar&quot;).xy(0.39, 0.59 )' fallback='true' selected='true'/>
-   <accessor type='Text' value='div(&quot;Search[1]&quot;).xy(0.39, 0.59 )' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-shopping-lists/div[1]/div[2]&apos;).xy(0.39, 0.59 )' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;search-bar&quot;]&apos;).xy(0.39, 0.59 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-shopping-lists/div/div[2]&apos;).xy(0.39, 0.59 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-shopping-lists[1]/div[@class=&apos;search-shopping-lists mb-5&apos;]/div[@class=&apos;search-bar&apos;]&quot;).xy(0.39, 0.59 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;search-shopping-lists mb-5&quot;] &gt; div[class=&quot;search-bar&quot;]&apos;).xy(0.39, 0.59 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.search-shopping-lists.mb-5 &gt; .search-bar&apos;).xy(0.39, 0.59 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='setValue' value='"Test11"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='textbox(&quot;ng-dirty ng-untouched ng-valid&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-shopping-lists/div[1]/div[2]/form/input&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;ng-untouched ng-valid ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-shopping-lists/div/div[2]/form/input&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-shopping-lists[1]/div[@class=&apos;search-shopping-lists mb-5&apos;]/div[@class=&apos;search-bar&apos;]/form[@class=&apos;nickname-input-save ng-untouched ng-valid ng-dirty&apos;]/input[@class=&apos;ng-untouched ng-valid ng-dirty&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='textbox({&apos;formcontrolname&apos;:&apos;searchValue&apos;})' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;search-shopping-lists mb-5&quot;] &gt; div[class=&quot;search-bar&quot;] &gt; form[class=&quot;nickname-input-save ng-untouched ng-valid ng-dirty&quot;] &gt; input[class=&quot;ng-untouched ng-valid ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.search-shopping-lists.mb-5 &gt; .search-bar &gt; .nickname-input-save.ng-untouched.ng-valid.ng-dirty &gt; .ng-untouched.ng-valid.ng-dirty&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='submit(&quot;btn btn-primary search-bar-button&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='submit(&quot;Search&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-shopping-lists/div[1]/div[2]/form/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary search-bar-button&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Search &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-shopping-lists/div/div[2]/form/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-shopping-lists[1]/div[@class=&apos;search-shopping-lists mb-5&apos;]/div[@class=&apos;search-bar&apos;]/form[@class=&apos;nickname-input-save ng-valid ng-dirty ng-touched&apos;]/button[@class=&apos;btn btn-primary search-bar-button&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;search-shopping-lists mb-5&quot;] &gt; div[class=&quot;search-bar&quot;] &gt; form[class=&quot;nickname-input-save ng-valid ng-dirty ng-touched&quot;] &gt; button[class=&quot;btn btn-primary search-bar-button&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.search-shopping-lists.mb-5 &gt; .search-bar &gt; .nickname-input-save.ng-valid.ng-dirty.ng-touched &gt; .btn.btn-primary.search-bar-button&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='link(&quot;cx-action-link cx-link&quot;)' fallback='true' selected='true'/>
-   <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/shopping-list-details?shoppingListId=1020a47a-3031-4c21-b9c7-c576724d2092&quot;)' fallback='true' selected='false'/>
-   <accessor type='Text' value='link(&quot;Test11&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-shopping-lists/div[2]/div[2]/app-shopping-lists-items-ui/div/div/div/div[1]/div/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cx-link cx-action-link&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Test11 &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-shopping-lists/div[2]/div[2]/app-shopping-lists-items-ui/div/div/div/div/div/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-shopping-lists[1]/div[@class=&apos;mb-5 container&apos;]/div[2]/app-shopping-lists-items-ui[1]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-md-12 shopping-lists-row&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;shopping-lists-items col-md-4 col-lg-4 col-xl-4&apos;]/div[@class=&apos;cx-value custom-catalog-name&apos;]/a[@class=&apos;cx-link cx-action-link&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;col-12 col-md-12 shopping-lists-row&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;shopping-lists-items col-md-4 col-lg-4 col-xl-4&quot;] &gt; div[class=&quot;cx-value custom-catalog-name&quot;] &gt; a[class=&quot;cx-link cx-action-link&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.col-12.col-md-12.shopping-lists-row &gt; .row &gt; .shopping-lists-items.col-md-4.col-lg-4.col-xl-4 &gt; .cx-value.custom-catalog-name &gt; .cx-link.cx-action-link&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/shopping-list-details?shoppingListId=1020a47a-3031-4c21-b9c7-c576724d2092&quot;]&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='VerifyAddProductToCartFromPersonalShoppingList()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='VerifyAddProductToCartFromPersonalShoppingList()' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='Muralikrishna.g@avantorsciences.com' version='webDesigner'>
+    <dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Regression/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2880deb6-46da-43ed-b802-daef4a52e47b' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bdd5276b-d5f3-4c02-bfc7-ae46a5584de0' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8e82b1c7-ab9c-4a52-b448-da8d3cd04702' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value=' "{ds}/../../Reusable Function library/ReusableFunction.js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value=' "REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value=' "{ds}/../../ReusableFunction.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a8052297-4dec-4177-94ac-5d29b88ca70a' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ClearCart()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='da6c231b-3f72-466f-ba67-90b5a4d45ed5' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0d62fb56-550e-4011-8db9-cb85373dcf06' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrHref' value=' link("/ca/en/my-account/shipping-options")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value=' link("Shipping Options")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[10]/div/div[1]/nav[2]/app-generic-link/a")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()=" Shipping Options "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[10]/div/div/nav[2]/app-generic-link/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SiteLogin has-components&apos;]/app-login[1]/div[@class=&apos;loggedIN&apos;]/cx-page-slot[@class=&apos;HeaderLinks has-components&apos;]/app-avtr-navigation[1]/app-avtr-navigation-ui[@class=&apos;accNavComponent flyout&apos;]/nav[1]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[10]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[2]/app-generic-link[1]/a[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;a[href="/ca/en/my-account/shipping-options"]&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fd60adc2-79f1-4cfd-8c8a-94a8f5e35607' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrHref' value=' link("/ca/en/my-account/shopping-lists")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value=' link("Shopping Lists")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value=' byXPath("//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[4]/app-generic-link/a")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()=" Shopping Lists "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[4]/app-generic-link/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SiteLogin has-components&apos;]/app-login[1]/div[@class=&apos;loggedIN&apos;]/cx-page-slot[@class=&apos;HeaderLinks has-components&apos;]/app-avtr-navigation[1]/app-avtr-navigation-ui[@class=&apos;accNavComponent flyout&apos;]/nav[1]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[4]/app-generic-link[1]/a[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;a[href="/ca/en/my-account/shopping-lists"]&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e9f7daff-e37f-487e-8414-2f053304304d' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value=' div("search-bar").xy(0.39, 0.59 )' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value=' div("Search[1]").xy(0.39, 0.59 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-shopping-lists/div[1]/div[2]&apos;).xy(0.39, 0.59 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="search-bar"]&apos;).xy(0.39, 0.59 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-shopping-lists/div/div[2]&apos;).xy(0.39, 0.59 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-shopping-lists[1]/div[@class=&apos;search-shopping-lists mb-5&apos;]/div[@class=&apos;search-bar&apos;]").xy(0.39, 0.59 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;div[class="search-shopping-lists mb-5"] &gt; div[class="search-bar"]&apos;).xy(0.39, 0.59 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.search-shopping-lists.mb-5 &gt; .search-bar&apos;).xy(0.39, 0.59 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value=' "Test11"' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5a9f2de4-2b26-4fa3-86b8-adb13567cc7b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value=' textbox("ng-dirty ng-untouched ng-valid")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-shopping-lists/div[1]/div[2]/form/input&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="ng-untouched ng-valid ng-dirty"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-shopping-lists/div/div[2]/form/input&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-shopping-lists[1]/div[@class=&apos;search-shopping-lists mb-5&apos;]/div[@class=&apos;search-bar&apos;]/form[@class=&apos;nickname-input-save ng-untouched ng-valid ng-dirty&apos;]/input[@class=&apos;ng-untouched ng-valid ng-dirty&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='textbox({&apos;formcontrolname&apos;:&apos;searchValue&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;div[class="search-shopping-lists mb-5"] &gt; div[class="search-bar"] &gt; form[class="nickname-input-save ng-untouched ng-valid ng-dirty"] &gt; input[class="ng-untouched ng-valid ng-dirty"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.search-shopping-lists.mb-5 &gt; .search-bar &gt; .nickname-input-save.ng-untouched.ng-valid.ng-dirty &gt; .ng-untouched.ng-valid.ng-dirty&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='036ff662-1621-46b3-868a-a73e1aad1904' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value=' submit("btn btn-primary search-bar-button")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value=' submit("Search")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-shopping-lists/div[1]/div[2]/form/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="btn btn-primary search-bar-button"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()=" Search "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-shopping-lists/div/div[2]/form/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-shopping-lists[1]/div[@class=&apos;search-shopping-lists mb-5&apos;]/div[@class=&apos;search-bar&apos;]/form[@class=&apos;nickname-input-save ng-valid ng-dirty ng-touched&apos;]/button[@class=&apos;btn btn-primary search-bar-button&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;div[class="search-shopping-lists mb-5"] &gt; div[class="search-bar"] &gt; form[class="nickname-input-save ng-valid ng-dirty ng-touched"] &gt; button[class="btn btn-primary search-bar-button"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.search-shopping-lists.mb-5 &gt; .search-bar &gt; .nickname-input-save.ng-valid.ng-dirty.ng-touched &gt; .btn.btn-primary.search-bar-button&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='af2971e1-b346-4a7b-8899-433ad74cae51' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value=' link("cx-action-link cx-link")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrHref' value=' link("/ca/en/my-account/shopping-list-details?shoppingListId=1020a47a-3031-4c21-b9c7-c576724d2092")' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value=' link("Test11")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-shopping-lists/div[2]/div[2]/app-shopping-lists-items-ui/div/div/div/div[1]/div/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="cx-link cx-action-link"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value=' byXPath(&apos;//*[text()=" Test11 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-shopping-lists/div[2]/div[2]/app-shopping-lists-items-ui/div/div/div/div/div/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value=' byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-shopping-lists[1]/div[@class=&apos;mb-5 container&apos;]/div[2]/app-shopping-lists-items-ui[1]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-md-12 shopping-lists-row&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;shopping-lists-items col-md-4 col-lg-4 col-xl-4&apos;]/div[@class=&apos;cx-value custom-catalog-name&apos;]/a[@class=&apos;cx-link cx-action-link&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;div[class="col-12 col-md-12 shopping-lists-row"] &gt; div[class="row"] &gt; div[class="shopping-lists-items col-md-4 col-lg-4 col-xl-4"] &gt; div[class="cx-value custom-catalog-name"] &gt; a[class="cx-link cx-action-link"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.col-12.col-md-12.shopping-lists-row &gt; .row &gt; .shopping-lists-items.col-md-4.col-lg-4.col-xl-4 &gt; .cx-value.custom-catalog-name &gt; .cx-link.cx-action-link&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value=' byJQuery(&apos;a[href="/ca/en/my-account/shopping-list-details?shoppingListId=1020a47a-3031-4c21-b9c7-c576724d2092"]&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='VerifyAddProductToCartFromPersonalShoppingList()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a590892d-437e-4752-a8d3-5a7e27ee6856' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='VerifyAddProductToCartFromPersonalShoppingList()' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='' selected='false' fallback='false'></accessor>
+      </dialect>
+    </step>
+  </testcase>

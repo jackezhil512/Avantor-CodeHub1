@@ -743,6 +743,19 @@ function OrderEntryEmptyPartNumberValidation(input){
 
   }
 
+
+  function VerifymasterflexProduct(input){
+
+            click(fallback(`button("Accessories",rightOf(div("${input}",_below(div("attribute catalog-attribute")))))`));
+            setDescription("Acceseries window");
+            assertExists(fallback(`byXPath('//ngb-modal-window')`));
+
+
+
+
+
+  }
+
   function NavigatetolengthyProductpagetoSearch(input){
   
     //setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');

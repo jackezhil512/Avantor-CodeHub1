@@ -775,14 +775,7 @@ function OrderEntryEmptyPartNumberValidation(input){
       log("catlognumber is not displayed or page is not loaded")
     }
         
-  }  
-
-
-
-
-
   }
-
   function NavigatetolengthyProductpagetoSearch(input){
   
     //setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');

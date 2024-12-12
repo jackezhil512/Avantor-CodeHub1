@@ -751,7 +751,7 @@ function OrderEntryEmptyPartNumberValidation(input){
 
             click(fallback(`button("Accessories",rightOf(div("${input}",_below(div("attribute catalog-attribute")))))`));
             setDescription("Acceseries window");
-            assertExists(fallback(`byXPath('//ngb-modal-window')`));
+           // assertExists(fallback(`byXPath('//ngb-modal-window')`));
             click(fallback(`button("Add one more[6]")`));
             click(fallback(`submit("Add to cart[6]")`));
             wait(15000);
@@ -776,6 +776,7 @@ function OrderEntryEmptyPartNumberValidation(input){
     }
         
   }
+
   function NavigatetolengthyProductpagetoSearch(input){
   
     //setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');

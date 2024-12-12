@@ -1524,6 +1524,13 @@ wait(2000);
 setValue(fallback(`byXPath("(//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']/following::input)[1]")`),TempEmail2);
 click(fallback(`byXPath("//mat-icon[text()='save']")`));
 wait(4000);
+click(fallback(`byXPath("//span[contains(text(),'Next')]/parent::span")`,
+   `byXPath("//span[contains(text(),'Next')]/parent::span")`));
+wait(2000);
+
+click(fallback(`byXPath("(//span[contains(text(),'Next')]/ancestor::button)[2]")`));
+wait(4000);
+click(fallback(`byXPath("//span[contains(text(),'Save')]/ancestor::button")`));
 
 }
 

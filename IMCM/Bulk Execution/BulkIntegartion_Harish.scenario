@@ -153,9 +153,9 @@
     <controller name="Iteration1">
       <round iterations="1" totalusers="1"/>
     </controller>
-    <testcase name="IntegrationBulk" importance="normal">
+    <testcase name="Bulk Integration1" importance="normal">
       <test>
-        <run name="Untitled1" langtype="bulkds3" resource="IMCM/Test Scripts/integrationBulk/" method="ds" testclass="Chrome" regex="*.ds">
+        <run name="Untitled1" langtype="bulkds3" resource="IMCM/Test Scripts/Integration Maintenance/" method="ds" testclass="Chrome" regex="*.ds">
           <argument name="Untitled1" method="getDataByIndex" dpl="Untitled1">
             <argument name="index" value="1"/>
           </argument>
@@ -168,7 +168,7 @@
   <monitoring enablednodes="true" enabledtarget="false"/>
   <execution type="functionaltest" subtype="bulk">
     <iteration name="Iteration1" controller="Iteration1">
-      <testcase name="IntegrationBulk" users="1" totalexecutions="1"/>
+      <testcase name="Bulk Integration1" users="1" totalexecutions="1"/>
     </iteration>
   </execution>
   <logs/>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
   <testcase name='' description='script generated from Web Designer' author='Harish@avantorsciences.com' version='webDesigner'>
-    <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep01' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'></dpl>
     <fallback useFallback='true'></fallback>
     <shadowDOM useShadowDOM='true'></shadowDOM>
     <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='49fdc190-163f-4b7e-aadd-4f6eade49f23' uiType='base'>
@@ -52,6 +52,49 @@
       </dialect>
     </step>
     <step action='js' value='NavigateToVendorMaintenancePage()' type='web' desc='Vendor Maintenance' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='595b870d-f9d4-4678-94fc-6915493244c8' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1033a99a-b46d-4d08-b330-4d13a2444af6' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='70fde808-e12c-41e6-8ae8-fa7502a26a43' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='38f5de76-d88e-4059-bf74-f9a721969fc3' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TotalRow' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='850da88d-52bb-4bd3-9ba4-f413211b538f' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='while' value='TotalRow&gt;=1' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='18d0da64-8502-4047-9ccc-a4b3fc75a4f9' uiType='conditional'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TotalRow&gt;=1' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='TotalRow&gt;1' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='deleteAll()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='80bb0867-3cca-4aaf-9f62-f2840086ae72' uid='3b07baee-d089-4fd8-9db8-ea7c399df9b8' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='80bb0867-3cca-4aaf-9f62-f2840086ae72' uid='ef25b591-59ec-4e6d-8038-4ffa985983d4' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='80bb0867-3cca-4aaf-9f62-f2840086ae72' uid='9719f6e0-b9a9-4d49-b051-c733124f00b6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TotalRow' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cbfe1c80-b935-49b9-85f5-0edd32a3eb2e' uiType='end' sibling='80bb0867-3cca-4aaf-9f62-f2840086ae72'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0740b1cb-d3a7-4d4f-bc98-5795ea347f0d' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='createALLIntegrationIfNotExist()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='074767c4-1413-4fcd-969a-f30dfcbb06ce' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='AddALLintegration()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a986ce85-c564-4caa-b119-794f7985496d' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
     <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dc2ee612-8d5f-4d50-a9a0-72acc8903e48' uiType='base'>

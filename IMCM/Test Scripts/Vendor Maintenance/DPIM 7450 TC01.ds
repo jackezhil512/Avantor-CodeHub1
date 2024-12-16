@@ -50,6 +50,7 @@
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
@@ -71,6 +72,7 @@
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;(//button[contains(@class,&apos;replenish-checkout-btn&apos;)])[1]&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
@@ -85,6 +87,7 @@
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
@@ -95,9 +98,18 @@
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;Receive Stock&apos;)]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 <step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
@@ -134,12 +146,6 @@
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>

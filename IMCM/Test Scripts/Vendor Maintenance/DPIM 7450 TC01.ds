@@ -18,40 +18,40 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='ReplenishStock()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='ReplenishStock(&quot;Automation338&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//button[contains(text(),&apos;Activities&apos;)]/span&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;Replenish Stock&apos;)]&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//button[@aria-label=&apos;Table View Preference Card&apos;]&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='"Automation338"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"Automation338"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//th[contains(@class,&apos;search-catalogNo&apos;)]//input&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
@@ -60,7 +60,7 @@
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='"2"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"2"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;mat-column-qty&apos;)]//input&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
@@ -69,7 +69,7 @@
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;(//span[contains(text(),&apos;Place Your Order&apos;)])[1]&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
@@ -77,7 +77,7 @@
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;(//button[contains(@class,&apos;replenish-checkout-btn&apos;)])[1]&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
@@ -86,14 +86,14 @@
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;Stock Replenished Successfully! Your products were successfully replenished.&apos;)]&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>

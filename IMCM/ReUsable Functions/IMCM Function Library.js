@@ -1920,3 +1920,49 @@ click(fallback(`byXPath("(//th[contains(@class,'mat-column-_select')]/mat-checkb
 click(fallback(`byXPath("(//span[contains(text(),'Receive Stock')]/ancestor::button)[1]")`,
    `byXPath("")`));
 }
+
+function PrintViaStandardModule(){
+assertExists(fallback(`byXPath("//h5[contains(text(),'Print Barcodes')]")`,
+   `byXPath("")`));
+click(fallback(`byXPath("//div[contains(text(),'Zebra Formats')]")`,
+   `byXPath("")`));
+click(fallback(`byXPath("//span[text()='Standard Template']")`,
+   `byXPath("")`));
+click(fallback(`byXPath("//span[text()='Select Standard Zebra Templates']")`,
+   `byXPath("")`,
+   `byXPath("//span[text()='Select Standard Zebra Templates']")`));
+click(fallback(`byXPath("(//mat-option[@role='option']/span)[2]")`,
+   `byXPath("")`));
+assertExists(fallback(`byXPath("//mat-select[@formcontrolname='zebraTemplateId' and @aria-disabled='true']//span[text()='Select Custom Zebra Templates']")`,
+   `byXPath("")`,
+   `byXPath("//mat-select[@formcontrolname='zebraTemplateId' and @aria-disabled='true']//span[text()='Select Custom Zebra Templates']")`));
+click(fallback(`byXPath("//span[contains(text(),'Print')]/ancestor::button")`,
+   `byXPath("")`));
+wait(2000);
+var list=getDownloadedFiles();
+var fileName=list.getJSONObject(0).getString("name");
+log(fileName);
+assertEqual(fallback(`fileName`),"Barcode-labels.txt");
+}
+
+function PrintViaCustomModule(){
+assertExists(fallback(`byXPath("//h5[contains(text(),'Print Barcodes')]")`,
+   `byXPath("")`));
+click(fallback(`byXPath("//div[contains(text(),'Zebra Formats')]")`,
+   `byXPath("")`));
+click(fallback(`byXPath("//span[text()='Custom Template']")`,
+   `byXPath("")`));
+click(fallback(`byXPath("//span[text()='Select Custom Zebra Templates']")`,
+   `byXPath("")`));
+click(fallback(`byXPath("(//mat-option[@role='option']/span)[2]")`,
+   `byXPath("")`));
+assertExists(fallback(`byXPath("//mat-select[@formcontrolname='zebraTemplateId' and @aria-disabled='true']//span[text()='Select Standard Zebra Templates']")`,
+   `byXPath("")`));
+click(fallback(`byXPath("//span[contains(text(),'Print')]/ancestor::button")`,
+   `byXPath("")`));
+wait(2000);
+var list=getDownloadedFiles();
+var fileName=list.getJSONObject(0).getString("name");
+log(fileName);
+assertEqual(fallback(`fileName`),"Barcode-labels.txt");
+}

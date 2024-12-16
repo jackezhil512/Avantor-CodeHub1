@@ -1885,7 +1885,7 @@ click(fallback(`byXPath("//span[contains(text(),'Save')]/parent::span")`));
 wait(3000);
 }
 
-function ReplenishStock(StockName){
+function ReplenishStockWithName(StockName){
 click(fallback(`byXPath("//button[contains(text(),'Activities')]/span")`,
    `byXPath("")`));
 click(fallback(`byXPath("//div[contains(text(),'Replenish Stock')]")`,
@@ -1904,4 +1904,19 @@ click(fallback(`byXPath("(//button[contains(@class,'replenish-checkout-btn')])[1
 assertExists(fallback(`byXPath("//div[contains(text(),'Stock Replenished Successfully! Your products were successfully replenished.')]")`,
    `byXPath("")`));
 wait(2000);
+}
+
+function ReceiveFirstStock(){
+click(fallback(`byXPath("//button[contains(text(),'Activities')]/span")`,
+   `byXPath("")`));
+click(fallback(`byXPath("//div[contains(text(),'Receive Stock')]")`,
+   `byXPath("")`));
+click(fallback(`byXPath("(//td[contains(@class,'newOrderNo')]//a)[1]")`,
+   `byXPath("")`));
+click(fallback(`byXPath("(//p[contains(text(),'Not Yet Received')])[1]")`,
+   `byXPath("")`));
+click(fallback(`byXPath("(//th[contains(@class,'mat-column-_select')]/mat-checkbox)[1]")`,
+   `byXPath("")`));
+click(fallback(`byXPath("(//span[contains(text(),'Receive Stock')]/ancestor::button)[1]")`,
+   `byXPath("")`));
 }

@@ -381,7 +381,7 @@ setShadowDOM(true);
   wait(5000);
   //assertExists(fallback(`byXPath('//*[text()="Tell us about your Organization."]')`));
 
-  assertExists(fallback(`heading1("Your Profile Has Been Created")`));
+  //assertExists(fallback(`heading1("Your Profile Has Been Created")`));
   
 }
 

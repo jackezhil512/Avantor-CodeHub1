@@ -1,88 +1,112 @@
 <?xml version='1.0' encoding='UTF-8'?>
-  <testcase name='' description='script generated from Web Designer' author='Harish@avantorsciences.com' version='webDesigner'>
-    <dpl filename='REPOSITORY/IMCM-AvantorCodeHub-Repo/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'></dpl>
-    <fallback useFallback='true'></fallback>
-    <shadowDOM useShadowDOM='true'></shadowDOM>
-    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1989c3a9-c142-4fcd-82bd-5b9966908efc' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' "{ds}/../../ReUsable Functions/IMCM Function Library.js"' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' "REPOSITORY/EV1/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' "{ds}/../../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' "{ds}/../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c7617a73-58f0-4ba6-8861-e6874b69dd32' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='Navigate to Integration Maintennace Page' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8b0b35c6-814b-4ed3-96c0-16daa50ea8ea' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='826ba31a-b459-4d66-b795-a2727d7c49e2' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='976aecd2-79c4-45b7-b33b-4a60460319a9' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ce360249-11b3-4b4d-a3f0-872488bfce47' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='TotalRow' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ad88712f-14f1-482c-9f71-d3004b123b51' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='while' value='TotalRow&gt;=1' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d9bdab7f-2cf5-4f34-b246-a3de2ec4e640' uiType='conditional'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='TotalRow&gt;=1' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value='TotalRow&gt;1' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='js' value='deleteAll()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='98e78934-b1cc-4c38-af83-a8ba563825be' uid='29298ff1-2d8f-4da5-b0fe-639638feb953' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='98e78934-b1cc-4c38-af83-a8ba563825be' uid='09a7416a-1fad-4b64-ae33-9d2d438b72a9' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='98e78934-b1cc-4c38-af83-a8ba563825be' uid='cb57a70c-0e5f-415d-bfa1-018d0783e884' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='TotalRow' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='eaea4ba6-8683-4c05-8616-499c1b523963' uiType='end' sibling='98e78934-b1cc-4c38-af83-a8ba563825be'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fc2bc2a9-2174-413b-9d52-5e5b933bc7bf' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='createALLIntegrationIfNotExist()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='acd49a23-38c3-4c32-9576-48a59c1cacdd' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='AddALLintegration()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8d730cbe-ed80-47cc-8923-33dd3e7e5eba' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;ALL&apos;,&apos;All Stockrooms&apos;,&apos;All Emails&apos;)' type='web' desc='Select Vendor ALL from the select vendor drop down' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7fc54822-3d93-4673-9880-5db56b3ddd6a' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email)' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='click on update results' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='45bc0455-3b2c-45d5-9a4a-81a771119911' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Update Results&apos;)]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a79463cb-6d6e-4d0a-abdb-72832eedf910' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e8d9c369-ba8c-44c0-943c-df2999698a70' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//td[contains(@class,&apos;mat-column-excludeVWR&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//td[contains(@class,&apos;mat-column-excludeNonVWRVendor&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='assertExists' value='' type='web' desc='verify exclude Non-VWR is disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ae4ce3b6-4bae-4a29-8857-6250c4426171' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//td[contains(@class,&apos;mat-column-excludeNonVWRVendor&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//td[contains(@class,&apos;mat-column-excludeNonVWRVendor&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]")' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-  </testcase>
+<testcase   name= 'DPIM-7548_TC_40 Verify ALL integration with Exclude VWR and Non VWR option unchecked is displaying for applicable stockroom and Email filter combinations since its applicable for All Vendors.ds' description= '' author= 'Harish@avantorsciences.com' version= ''>
+<dpl filename='REPOSITORY/IMCM-AvantorCodeHub-Repo/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value=' &quot;REPOSITORY/EV1/IMCM Function Library.js&quot;' fallback='true' selected='false'/>
+   <accessor type='unknown' value=' &quot;{ds}/../../IMCM Function Library.js&quot;' fallback='true' selected='false'/>
+   <accessor type='unknown' value=' &quot;{ds}/../IMCM Function Library.js&quot;' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='Navigate to Integration Maintennace Page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='TotalRow' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='while' value='TotalRow&gt;=1' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='TotalRow&gt;=1' fallback='true' selected='true'/>
+   <accessor type='unknown' value='TotalRow&gt;1' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='deleteAll()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='TotalRow' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='createALLIntegrationIfNotExist()' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='AddALLintegration()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;ALL&apos;,&apos;All Stockrooms&apos;,&apos;All Emails&apos;)' type='web' desc='Select Vendor ALL from the select vendor drop down' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='click on update results' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Update Results&apos;)]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='verify exclude VWR is disabled' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;mat-column-excludeVWR&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value=' byXPath(&quot;//td[contains(@class,&apos;mat-column-excludeNonVWRVendor&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='verify exclude Non-VWR is disabled' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;mat-column-excludeNonVWRVendor&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value=' byXPath(&quot;//td[contains(@class,&apos;mat-column-excludeNonVWRVendor&apos;)]//mat-checkbox[contains(@class,&apos;mat-checkbox-disabled&apos;)]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

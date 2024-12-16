@@ -1883,6 +1883,25 @@ click(fallback(`byXPath("//span[contains(text(),'Next')]/parent::span")`,
    `byXPath("//span[contains(text(),'Next')]/parent::span")`));
 click(fallback(`byXPath("//span[contains(text(),'Save')]/parent::span")`));
 wait(3000);
-
 }
 
+function ReplenishStock(StockName){
+click(fallback(`byXPath("//button[contains(text(),'Activities')]/span")`,
+   `byXPath("")`));
+click(fallback(`byXPath("//div[contains(text(),'Replenish Stock')]")`,
+   `byXPath("")`));
+click(fallback(`byXPath("//button[@aria-label='Table View Preference Card']")`,
+   `byXPath("")`));
+setValue(fallback(`byXPath("//th[contains(@class,'search-catalogNo')]//input")`,
+   `byXPath("")`),StockName);
+wait(2000);
+setValue(fallback(`byXPath("//td[contains(@class,'mat-column-qty')]//input")`,
+   `byXPath("")`),"2");
+click(fallback(`byXPath("(//span[contains(text(),'Place Your Order')])[1]")`,
+   `byXPath("")`));
+click(fallback(`byXPath("(//button[contains(@class,'replenish-checkout-btn')])[1]")`,
+   `byXPath("")`));
+assertExists(fallback(`byXPath("//div[contains(text(),'Stock Replenished Successfully! Your products were successfully replenished.')]")`,
+   `byXPath("")`));
+wait(2000);
+}

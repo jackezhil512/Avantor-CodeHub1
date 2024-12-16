@@ -1942,7 +1942,7 @@ wait(2000);
 var list=getDownloadedFiles();
 var fileName=list.getJSONObject(0).getString("name");
 log(fileName);
-assertEqual(fallback(`fileName`),"Barcode-labels.txt");
+assertEqual(fileName,"Barcode-labels.txt");
 }
 
 function PrintViaCustomModule(){
@@ -1964,5 +1964,5 @@ wait(2000);
 var list=getDownloadedFiles();
 var fileName=list.getJSONObject(0).getString("name");
 log(fileName);
-assertEqual(fallback(`fileName`),"Barcode-labels.txt");
+assertEqual(fileName,"Barcode-labels.txt");
 }

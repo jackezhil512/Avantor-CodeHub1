@@ -1584,6 +1584,7 @@ assertExists(fallback(`byXPath('//*[text()=" Integration created successfully "]
 }
 
 function updateResultWithALL() {
+wait(4000);
 click(fallback(`byXPath("(//div[text()=' Vendor ']/following::mat-select)[1]")`));
 click(fallback(`byXPath("//span[text()=' ALL ']/parent::mat-option")`));
 click(fallback(`byXPath("//span[text()='Update Results']/ancestor::button")`));

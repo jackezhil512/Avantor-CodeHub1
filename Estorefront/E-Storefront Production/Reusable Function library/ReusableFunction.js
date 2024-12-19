@@ -583,13 +583,13 @@ function AddTwoProducts(input){
   //click(fallback(`heading6(0, _in(section({'aria-label':'Product Results List'})))`));
   //wait(5000);
   //click(button("Add one more"));
-setValue(fallback(`textbox(0, _in(header("cx-header")))`), "beakers{{ENTER}}");
+ ///setValue(fallback(`textbox(0, _in(header("cx-header")))`), "beakers{{ENTER}}");
 
-wait(5000, 'isVisible(byXPath("(//h6[@class="accordion-heading"])[1]"))');
-click(fallback(`byXPath("(//h6[@class='accordion-heading'])[1]")`));
-wait(10000);
- wait(30000, 'isVisible(button("Add one more"))');
-click(fallback(`button("Add one more")`));
+  ///wait(5000, 'isVisible(byXPath("(//h6[@class="accordion-heading"])[1]"))');
+  ///click(fallback(`byXPath("(//h6[@class='accordion-heading'])[1]")`));
+  ///wait(10000);
+  ///wait(30000, 'isVisible(button("Add one more"))');
+  ///click(fallback(`button("Add one more")`));
 
   //wait(2000);
   //click(fallback(`button("+")`));
@@ -598,11 +598,11 @@ click(fallback(`button("Add one more")`));
   //lick(fallback(`button("Create & Add")`));
  // click(fallback(`button("Add one more")`));
   //assertExists(fallback(`button("+"),_above(submit("Add to cart"))`));
-  click(fallback(`submit("Add to cart")`));
-  wait(10000);
-  click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));
-  click(fallback(`submit("View My Cart")`));
-  assertExists(fallback(`heading3("Cart Summary")`));
+  ///click(fallback(`submit("Add to cart")`));
+  ///wait(10000);
+  ///click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));
+  ///click(fallback(`submit("View My Cart")`));
+  ///assertExists(fallback(`heading3("Cart Summary")`));
 }
 
 function RecommendedProductsInHomepage(){

@@ -564,18 +564,26 @@ function placeorder(){
 function AddTwoProducts(input){
   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
    setShadowDOM(true); 
-  setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
-  click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
-  wait(5000);
+  //setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
+  //click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
+  //wait(5000);
   //click2(fallback(`heading6(/Expand.*/)`));
   // click on Expand item in search page.
- click(fallback(`byXPath("(//h6[@class='accordion-heading'])[1]")`));
+ //click(fallback(`byXPath("(//h6[@class='accordion-heading'])[1]")`));
  //(//h6[@class='accordion-heading'])[1]
 
   //click2(fallback(`heading6("[Expand]")`));
   //click(fallback(`heading6(0, _in(section({'aria-label':'Product Results List'})))`));
-  wait(5000);
-  click(button("Add one more"));
+  //wait(5000);
+  //click(button("Add one more"));
+setValue(fallback(`textbox(0, _in(header("cx-header")))`), "beakers{{ENTER}}");
+
+wait(5000, 'isVisible(byXPath("(//h6[@class="accordion-heading"])[1]"))');
+click(fallback(`byXPath("(//h6[@class='accordion-heading'])[1]")`));
+wait(10000);
+ wait(30000, 'isVisible(button("Add one more"))');
+click(fallback(`button("Add one more")`));
+
   //wait(2000);
   click(fallback(`button("+")`));
  // click(fallback(`button[@aria-label="Add one more"])`));

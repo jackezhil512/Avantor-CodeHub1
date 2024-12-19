@@ -1,118 +1,100 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'Update Quantity in Shopping Cart.ds' description= '' author= 'Muralikrishna.g@avantorsciences.com' version= ''>
-<dpl filename='{ds}/../../TestData/InputSheet_Production_US.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ClearCart()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='search($Product)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='getText(div(&quot;cx-summary-amount&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='PriceBeforeQty' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='PriceBeforeQty.substring(PriceBeforeQty.lastIndexOf(&quot;$&quot;)+1)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='PriceBeqty' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='PriceBeqty' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='PriceBeforeQty' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='button(&quot;+&quot;)' fallback='true' selected='true'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/div[3]/app-avtr-cart-item-list/div[3]/div/app-avtr-cart-item/div/div/div/div[4]/div/cx-item-counter/button[2]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-cart-details/div[3]/app-avtr-cart-item-list/div[3]/div/app-avtr-cart-item/div[1]/div/div[1]/div[4]/div/cx-item-counter/button[2]&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;TopContent has-components&apos;]/app-avtr-cart-details[1]/div[@class=&apos;cart-details-wrapper ng-star-inserted&apos;]/app-avtr-cart-item-list[1]/div[@class=&apos;cx-item-list-row ng-star-inserted&apos;]/div[@class=&apos;cx-item-list-items ng-star-inserted&apos;]/app-avtr-cart-item[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;cx-info&apos;]/div[@class=&apos;align-items-center cx-info-container row&apos;]/div[@class=&apos;cx-quantity col-md-3 col-lg-3 col-xl-3 col-3 ng-star-inserted&apos;]/div[@class=&apos;cx-value&apos;]/cx-item-counter[1]/button[2]&quot;)' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='button({&apos;aria-label&apos;:&apos;Add one more&apos;})' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='submit(&quot;btn btn-block btn-white cx-btn mb-3&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='submit(&quot;Update Quantities&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cx-btn btn btn-block btn-white mb-3&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Update Quantities &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-cart-total/div/div[2]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-cart-total/div/div[2]/button[1]&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;CenterRightContentSlot has-components&apos;]/app-avtr-cart-total[1]/div[@class=&apos;cart-totals-container&apos;]/div[@class=&apos;btn-container&apos;]/button[@class=&apos;cx-btn btn btn-block btn-white mb-3&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.cart-totals-container &gt; .btn-container &gt; .cx-btn.btn.btn-block.btn-white.mb-3&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;cart-totals-container&quot;] &gt; div[class=&quot;btn-container&quot;] &gt; button[class=&quot;cx-btn btn btn-block btn-white mb-3&quot;]&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='getText(div(&quot;cx-summary-amount&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='PriceAfterUpdateQty' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='PriceAfterUpdateQty.substring(PriceAfterUpdateQty.lastIndexOf(&quot;$&quot;)+1)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='PriceAfQty' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='PriceAfterUpdateQty' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='verifyGreaterThan' value='PriceBeforeQty' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='PriceAfterUpdateQty' fallback='true' selected='true'/>
-   <accessor type='unknown' value='PriceAfterUpdateQty' fallback='true' selected='false'/>
-   <accessor type='unknown' value='PriceBeforeQty' fallback='true' selected='false'/>
-   <accessor type='unknown' value='int(PriceBeforeQty)' fallback='true' selected='false'/>
-   <accessor type='unknown' value='PriceAfterUpdateQty' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='verifyGreaterThan' value='PriceBeqty' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='PriceAfQty' fallback='true' selected='true'/>
-   <accessor type='unknown' value='PriceAfterUpdateQty' fallback='true' selected='false'/>
-   <accessor type='unknown' value='PriceBeforeQty' fallback='true' selected='false'/>
-   <accessor type='unknown' value='int(PriceBeforeQty)' fallback='true' selected='false'/>
-   <accessor type='unknown' value='PriceAfterUpdateQty' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='Muralikrishna.g@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../../TestData/InputSheet_Production_US.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3f2e604b-096a-44fb-8f00-1584d8e983f9' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cb97a18a-8307-4cda-ab0b-e3c3cf8de241' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ClearCart()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9713534a-ac7c-4bc5-b7f7-68ad70e6189d' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='search($Product)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f27d3f42-bbdb-4871-bdfc-fe9cf01a2eae' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e873550d-78ab-42d9-903e-7cfc2c1238f7' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='getText(div("cx-summary-amount"))' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2ee18627-fcf3-4079-a6c6-29428a76d7cd' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='PriceBeforeQty' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value='PriceBeforeQty.substring(PriceBeforeQty.lastIndexOf("$")+1)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ccc5a114-5543-4c73-a25e-c513af0e41f7' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='PriceBeqty' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='PriceBeqty' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fcf1552e-8056-4075-9f9d-c791a3e56941' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='log' value='PriceBeforeQty' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b949492a-0f05-477d-b361-0f575faab5c9' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='df402c9f-2a5b-4c5b-8f1b-cf95cfae42ef' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='button("+")' selected='true' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/div[3]/app-avtr-cart-item-list/div[3]/div/app-avtr-cart-item/div/div/div/div[4]/div/cx-item-counter/button[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-cart-details/div[3]/app-avtr-cart-item-list/div[3]/div/app-avtr-cart-item/div[1]/div/div[1]/div[4]/div/cx-item-counter/button[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;TopContent has-components&apos;]/app-avtr-cart-details[1]/div[@class=&apos;cart-details-wrapper ng-star-inserted&apos;]/app-avtr-cart-item-list[1]/div[@class=&apos;cx-item-list-row ng-star-inserted&apos;]/div[@class=&apos;cx-item-list-items ng-star-inserted&apos;]/app-avtr-cart-item[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;cx-info&apos;]/div[@class=&apos;align-items-center cx-info-container row&apos;]/div[@class=&apos;cx-quantity col-md-3 col-lg-3 col-xl-3 col-3 ng-star-inserted&apos;]/div[@class=&apos;cx-value&apos;]/cx-item-counter[1]/button[2]")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='button({&apos;aria-label&apos;:&apos;Add one more&apos;})' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='62d6049d-c030-4063-abef-12be0b9d2feb' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='submit("btn btn-block btn-white cx-btn mb-3")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='submit("Update Quantities")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="cx-btn btn btn-block btn-white mb-3"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Update Quantities "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-cart-total/div/div[2]/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-cart-total/div/div[2]/button[1]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;CenterRightContentSlot has-components&apos;]/app-avtr-cart-total[1]/div[@class=&apos;cart-totals-container&apos;]/div[@class=&apos;btn-container&apos;]/button[@class=&apos;cx-btn btn btn-block btn-white mb-3&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.cart-totals-container &gt; .btn-container &gt; .cx-btn.btn.btn-block.btn-white.mb-3&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cart-totals-container"] &gt; div[class="btn-container"] &gt; button[class="cx-btn btn btn-block btn-white mb-3"]&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='98911af6-4fb9-4cba-b3c9-b9c67c713187' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='getText(div("cx-summary-amount"))' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8179dfc6-6d82-4240-8c48-e8b70519d1b7' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='PriceAfterUpdateQty' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value='PriceAfterUpdateQty.substring(PriceAfterUpdateQty.lastIndexOf("$")+1)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f7315456-cbc4-4017-8684-86512df11c3a' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='PriceAfQty' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='PriceAfterUpdateQty' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b8cc9ddf-af98-4808-8957-2b9e11ef8ab1' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='verifyGreaterThan' value='PriceBeforeQty' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8aafc321-8f96-4975-98f7-bbbd58c6adf5' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='PriceAfterUpdateQty' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='PriceAfterUpdateQty' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='PriceBeforeQty' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='int(PriceBeforeQty)' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='PriceAfterUpdateQty' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='verifyGreaterThan' value='PriceBeqty' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='54a80ea1-c96a-4571-87d9-0287463676dd' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='PriceAfQty' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='PriceAfterUpdateQty' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='PriceBeforeQty' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='int(PriceBeforeQty)' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='PriceAfterUpdateQty' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='28bc4918-723a-4b7a-beec-9f78de772714' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+  </testcase>

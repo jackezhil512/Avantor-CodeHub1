@@ -605,22 +605,11 @@ function AddTwoProducts(input){
   ///assertExists(fallback(`heading3("Cart Summary")`));
 
 setValue(fallback(`textbox(0, _in(header("cx-header")))`), input+"{{ENTER}}");
-  //setValue(fallback(`textbox(0, _in(header("cx-header")))`), "{{ENTER}}");
-  //click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
   wait(10000);
-  //click2(fallback(`heading6(/Expand.*/)`));
+
   click2(fallback(`heading6(["Expand"])`));
   
-  //click(fallback(`byXPath("(//h6[@class='accordion-heading'])[1]")`));
-    //click2(fallback(`heading6({'tabindex':'0'})`,));
-   //wait(5000, 'isVisible(byXPath("(//h6[@class="accordion-heading"])[1]"))');
-  //click(fallback(`heading6(0, _in(section({'aria-label':'Product Results List'})))`));
   wait(10000);
-  //click(fallback(`button("+")`));
-  //click(button("Add one more", _near(button("Add to cart"))))
-
-  //wait(30000, 'isVisible(button("Add one more"))');
-  //click(button("Add one more", _in(div("accordion-item active"))))
  wait(20000,'isVisible(button("Add one more"))');
   focus(fallback(`button("Add one more")`));
   click2(fallback(`button("Add one more")`));

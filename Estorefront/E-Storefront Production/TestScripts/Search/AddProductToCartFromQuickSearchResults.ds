@@ -13,7 +13,7 @@
     <step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2b132aef-175c-4965-acdd-4c1b3a173853' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='setValue' value='"beakers"' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4d6f8fc1-c2c3-487e-b5b5-af7ba5963286' uiType='base'>
+    <step action='setValue' value='"beakers"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4d6f8fc1-c2c3-487e-b5b5-af7ba5963286' uiType='base'>
       <dialect type='sahi'>
         <accessor type='XPath' value='byXPath("//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[2]/app-avtr-search-box/label/input")' selected='true' fallback='true'></accessor>
         <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[2]/app-avtr-search-box/label/input&apos;)' selected='false' fallback='true'></accessor>
@@ -21,7 +21,7 @@
         <accessor type='Attribute' value='textbox({&apos;autocomplete&apos;:&apos;off&apos;})' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='85005bd6-f3ce-43b0-b929-ed9d829e5805' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='85005bd6-f3ce-43b0-b929-ed9d829e5805' uiType='base'>
       <dialect type='sahi'>
         <accessor type='AttrClass' value='custom("cx-icon", "cx-icon fa-search fas")' selected='true' fallback='true'></accessor>
         <accessor type='XPath' value='byXPath("//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[2]/app-avtr-search-box/label/div/cx-icon")' selected='false' fallback='true'></accessor>
@@ -39,15 +39,24 @@
         <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-product-lists/div/section/div/div/div[2]/div[3]/app-avtr-product-list-item[2]/div/div[2]/div/div&apos;).xy(0.30, 0.19 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6d0bcefe-1c8b-437d-8d83-f0096518c84e' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9e288f72-cef2-4740-973c-2c72f17c08f2' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//h6[@class=&apos;accordion-heading&apos;])[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5c0ddf26-0f2e-4a6c-aee8-af8a623f5f97' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6d0bcefe-1c8b-437d-8d83-f0096518c84e' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='button("Add one more", _in(div("accordion-item active")))' selected='true' fallback='true'></accessor>
-        <accessor type='AttrTitle' value='button("Add one more")' selected='false' fallback='true'></accessor>
-        <accessor type='Text' value='button("+")' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-product-lists/div/section/div/div/div[2]/div[3]/app-avtr-product-list-item[1]/div/div[3]/div/avtr-accordion-item/div/div/app-avtr-product-variant-table/section[2]/ul/li[2]/div[4]/div[10]/div[1]/div[2]/app-shared-add-to-cart/form/div[1]/cx-item-counter/button[2]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-product-lists/div/section/div/div/div[2]/div[3]/app-avtr-product-list-item/div/div[3]/div/avtr-accordion-item/div/div/app-avtr-product-variant-table/section[2]/ul/li[2]/div[4]/div[10]/div/div[2]/app-shared-add-to-cart/form/div/cx-item-counter/button[2]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner cxFeat_a11ySortingOptionsTruncation cxFeat_a11yExpandedFocusIndicator cxFeat_a11yFocusableCarouselControls&apos;]/cx-storefront[@class=&apos;ProductListPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;ProductListPageTemplate&apos;]/cx-page-slot[@class=&apos;ProductListSlot has-components&apos;]/app-avtr-product-lists[1]/div[@class=&apos;cx-page&apos;]/section[@class=&apos;cx-page-section&apos;]/div[@class=&apos;container&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-lg-12&apos;]/div[@class=&apos;cx-product-container&apos;]/app-avtr-product-list-item[@class=&apos;cx-product-search-list&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;w-100&apos;]/div[@class=&apos;search-sm-accordion accordion avtr-product-accordion&apos;]/avtr-accordion-item[1]/div[@class=&apos;accordion-item active&apos;]/div[@class=&apos;accordion-item-wrapper active&apos;]/app-avtr-product-variant-table[1]/section[2]/ul[@class=&apos;collection collection-container header&apos;]/li[@class=&apos;item item-container spec-border&apos;]/div[4]/div[@class=&apos;attribute-container multi-value&apos;]/div[@class=&apos;attribute display-price-sm-grid1 border-attribute&apos;]/div[2]/app-shared-add-to-cart[1]/form[@class=&apos;ng-untouched ng-pristine ng-valid&apos;]/div[@class=&apos;quantity mb-2&apos;]/cx-item-counter[@class=&apos;avtr-item-counter&apos;]/button[2]")' selected='false' fallback='true'></accessor>
-        <accessor type='Attribute' value='button({&apos;type&apos;:&apos;button&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='AttrTitle' value='button("Add one more")' selected='false' fallback='false'></accessor>
+        <accessor type='Text' value='button("+")' selected='false' fallback='false'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-product-lists/div/section/div/div/div[2]/div[3]/app-avtr-product-list-item[1]/div/div[3]/div/avtr-accordion-item/div/div/app-avtr-product-variant-table/section[2]/ul/li[2]/div[4]/div[10]/div[1]/div[2]/app-shared-add-to-cart/form/div[1]/cx-item-counter/button[2]&apos;)' selected='false' fallback='false'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-product-lists/div/section/div/div/div[2]/div[3]/app-avtr-product-list-item/div/div[3]/div/avtr-accordion-item/div/div/app-avtr-product-variant-table/section[2]/ul/li[2]/div[4]/div[10]/div/div[2]/app-shared-add-to-cart/form/div/cx-item-counter/button[2]&apos;)' selected='false' fallback='false'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner cxFeat_a11ySortingOptionsTruncation cxFeat_a11yExpandedFocusIndicator cxFeat_a11yFocusableCarouselControls&apos;]/cx-storefront[@class=&apos;ProductListPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;ProductListPageTemplate&apos;]/cx-page-slot[@class=&apos;ProductListSlot has-components&apos;]/app-avtr-product-lists[1]/div[@class=&apos;cx-page&apos;]/section[@class=&apos;cx-page-section&apos;]/div[@class=&apos;container&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-lg-12&apos;]/div[@class=&apos;cx-product-container&apos;]/app-avtr-product-list-item[@class=&apos;cx-product-search-list&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;w-100&apos;]/div[@class=&apos;search-sm-accordion accordion avtr-product-accordion&apos;]/avtr-accordion-item[1]/div[@class=&apos;accordion-item active&apos;]/div[@class=&apos;accordion-item-wrapper active&apos;]/app-avtr-product-variant-table[1]/section[2]/ul[@class=&apos;collection collection-container header&apos;]/li[@class=&apos;item item-container spec-border&apos;]/div[4]/div[@class=&apos;attribute-container multi-value&apos;]/div[@class=&apos;attribute display-price-sm-grid1 border-attribute&apos;]/div[2]/app-shared-add-to-cart[1]/form[@class=&apos;ng-untouched ng-pristine ng-valid&apos;]/div[@class=&apos;quantity mb-2&apos;]/cx-item-counter[@class=&apos;avtr-item-counter&apos;]/button[2]")' selected='false' fallback='false'></accessor>
+        <accessor type='Attribute' value='button({&apos;type&apos;:&apos;button&apos;})' selected='false' fallback='false'></accessor>
       </dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='91429276-984b-4aac-9b3d-aadea907e75d' uiType='base'>
@@ -75,7 +84,7 @@
         <accessor type='JQuery' value='byJQuery(&apos;.accordion-item.active &gt; .accordion-heading.active&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='js' value='search($Product)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='24ca7741-4272-4c7d-a823-8de3f575a9fe' uiType='base'>
+    <step action='js' value='search($Product)' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='24ca7741-4272-4c7d-a823-8de3f575a9fe' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
   </testcase>

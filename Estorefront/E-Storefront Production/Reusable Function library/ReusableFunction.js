@@ -748,8 +748,19 @@ function ValidateAccessoriescatlogNumber(){
   wait(10000)
   assertExists(fallback(`heading3("Cart Summary")`));
 
+ var CartPageCatlogNumber=getText(fallback(`link("${CatlogNumber}")`));
+  log(CartPageCatlogNumber);
+
+ if (CartPageCatlogNumber == Accessoriescatlognumber){
+ log("Accessories catlog number is displayed in cartpage");   
  
+  }else{
+    log("Accessories catlognumber is not displayed or page is not loaded")
+  }
+   assertExists(fallback(`link("Accessories for 10791-616")`));
+   
 }
+  
 
 
 function NavigatetolengthyProductpagetoSearch(input){

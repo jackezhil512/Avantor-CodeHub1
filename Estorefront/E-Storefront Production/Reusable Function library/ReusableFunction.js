@@ -166,8 +166,8 @@ function SupplierNameLeftNavigationFilterSearch(input){
 function ClearCart(){
 	// setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
    setShadowDOM(true);
-   click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));
- 
+   //click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));
+   click(fallback(`byXPath('//*[@class="total"]')`));
   //assertExists(fallback(`heading3("Cart Summary")`));
   //click(fallback(`span("Clear Cart")`));
   //assertExists(fallback(`heading2("Your shopping cart is empty")`));

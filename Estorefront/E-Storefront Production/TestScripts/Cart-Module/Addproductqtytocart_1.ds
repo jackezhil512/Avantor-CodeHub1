@@ -1,85 +1,91 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'Addproductqtytocart_1.ds' description= '' author= 'appvance' version= ''>
-<dpl filename='' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='navigateTo' value='"https://p2.avantorsciences.com/"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='submit(&quot;Accept all cookies&quot;)' fallback='true' selected='true'/>
-   <accessor type='AttrClass' value=' submit(&quot;btn btn-block btn-primary font-bold&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/footer/cx-page-layout/cx-page-slot/app-consent-banner/div/div[2]/div/div[1]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value=' byXPath(&apos;//*[@class=&quot;btn btn-primary btn-block font-bold&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value=' byXPath(&apos;//*[text()=&quot; Accept all cookies &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/footer/cx-page-layout/cx-page-slot/app-consent-banner/div/div[2]/div/div/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value=' byXPath(&quot;/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner&apos;]/cx-storefront[@class=&apos;stop-navigating ContentNoBreadcrumbTemplate&apos;]/footer[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;footer&apos;]/cx-page-slot[@class=&apos;Footer has-components&apos;]/app-consent-banner[1]/div[@class=&apos;consent-banner&apos;]/div[@class=&apos;cookie-content&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-md-5 col-lg-4 col-xs-12 consent-margin mt-3&apos;]/button[@class=&apos;btn btn-primary btn-block font-bold&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='submit({&apos;type&apos;:&apos;submit&apos;})' fallback='true' selected='false'/>
-   <accessor type='JQuery' value=' byJQuery(&apos;div[class=&quot;consent-banner&quot;] &gt; div[class=&quot;cookie-content&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col-md-5 col-lg-4 col-xs-12 consent-margin mt-3&quot;] &gt; button[class=&quot;btn btn-primary btn-block font-bold&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.consent-banner &gt; .cookie-content &gt; .row &gt; .col-md-5.col-lg-4.col-xs-12.consent-margin.mt-3 &gt; .btn.btn-primary.btn-block.font-bold&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='image(&quot;hybris Accelerator&quot;)' fallback='true' selected='true'/>
-   <accessor type='Src' value=' image(&quot;https://p2.occapi.avantorsciences.com/medias/logo-hybris-b2b-responsive.svg?context=bWFzdGVyfGltYWdlc3w1MjUzM3xpbWFnZS9zdmcreG1sfGFEUmxMMmd5T1M4NU5EazNNRFk0TURFeE5UVXdMMnh2WjI5ZmFIbGljbWx6WDJJeVlsOXlaWE53YjI1emFYWmxMbk4yWnd8YTU2NjJmZmQ2ZTJmYzRjYmJhZTk0NGM2Nzg3Y2M1Y2Q4YTJmZDkzY2FiOGQwNGZhOWFiMjA5YTkzMjE3OWE4OQ&quot;).xy(0.69, 0.49 )' fallback='true' selected='false'/>
-   <accessor type='XPath' value=' byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[1]/app-banner/cx-generic-link/a/app-media/img&quot;).xy(0.69, 0.49 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot/app-banner/cx-generic-link/a/app-media/img&apos;).xy(0.69, 0.49 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value=' byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SiteLogo has-components&apos;]/app-banner[1]/cx-generic-link[1]/a[1]/app-media[@class=&apos;is-initialized&apos;]/img[1]&quot;).xy(0.69, 0.49 )' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='image({&apos;src&apos;:&apos;https://p2.occapi.avantorsciences.com/medias/logo-hybris-b2b-responsive.svg?context=bWFzdGVyfGltYWdlc3w1MjUzM3xpbWFnZS9zdmcreG1sfGFEUmxMMmd5T1M4NU5EazNNRFk0TURFeE5UVXdMMnh2WjI5ZmFIbGljbWx6WDJJeVlsOXlaWE53YjI1emFYWmxMbk4yWnd8YTU2NjJmZmQ2ZTJmYzRjYmJhZTk0NGM2Nzg3Y2M1Y2Q4YTJmZDkzY2FiOGQwNGZhOWFiMjA5YTkzMjE3OWE4OQ&apos;}).xy(0.69, 0.49 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value=' byJQuery(&apos;img[alt=&quot;hybris Accelerator&quot;]&apos;).xy(0.69, 0.49 )' fallback='true' selected='false'/>
-   <accessor type='AttrAlt' value=' image(&quot;hybris Accelerator&quot;).xy(0.69, 0.49 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='setValue' value='$Data&quot;{{ENTER}}&quot;' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='textbox(0, _below(label(&quot;searchbox&quot;)))' fallback='true' selected='true'/>
-   <accessor type='RelativeXPath' value=' byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SearchBox has-components&apos;]/app-avtr-search-box[1]/label[@class=&apos;searchbox&apos;]/input[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value=' byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[2]/app-avtr-search-box/label/input&quot;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[2]/app-avtr-search-box/label/input&apos;)' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='textbox({&apos;autocomplete&apos;:&apos;off&apos;})' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Parent' value='path(0, _in(submit(&quot;hj-survey-toggle-1&quot;))).xy(0.42, 0.05 )' fallback='true' selected='true'/>
-   <accessor type='Parent' value='path(0, _in(submit({&apos;aria-label&apos;:&apos;Hide survey&apos;}))).xy(0.42, 0.05 )' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='path({&apos;fill&apos;:&apos;#3e4a44&apos;}).xy(0.42, 0.05 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='heading6([&quot;Expand&quot;])' fallback='true' selected='true'/>
-   <accessor type='Text' value=' heading6(&quot;Expand 8 Items&quot;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value=' heading6(&quot;accordion-heading&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-product-lists/div/section/div/div/div[2]/div[3]/app-avtr-product-list-item[1]/div/div[3]/div/avtr-accordion-item/div/h6&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value=' byXPath(&apos;//*[@class=&quot;accordion-heading&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value=' byXPath(&apos;//*[text()=&quot; Expand 8 Items &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-product-lists/div/section/div/div/div[2]/div[3]/app-avtr-product-list-item/div/div[3]/div/avtr-accordion-item/div/h6&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value=' byXPath(&quot;/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner cxFeat_a11ySortingOptionsTruncation cxFeat_a11yExpandedFocusIndicator cxFeat_a11yFocusableCarouselControls&apos;]/cx-storefront[@class=&apos;ProductListPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;ProductListPageTemplate&apos;]/cx-page-slot[@class=&apos;ProductListSlot has-components&apos;]/app-avtr-product-lists[1]/div[@class=&apos;cx-page&apos;]/section[@class=&apos;cx-page-section&apos;]/div[@class=&apos;container&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-lg-12&apos;]/div[@class=&apos;cx-product-container&apos;]/app-avtr-product-list-item[@class=&apos;cx-product-search-list&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;w-100&apos;]/div[@class=&apos;search-sm-accordion accordion avtr-product-accordion&apos;]/avtr-accordion-item[1]/div[@class=&apos;accordion-item&apos;]/h6[@class=&apos;accordion-heading&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='heading6({&apos;tabindex&apos;:&apos;0&apos;})' fallback='true' selected='false'/>
-   <accessor type='JQuery' value=' byJQuery(&apos;div[class=&quot;accordion-item&quot;] &gt; h6[class=&quot;accordion-heading&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.accordion-item &gt; .accordion-heading&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click2' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='button(&quot;Add one more&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='click2' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='submit(&quot;Add to cart&quot;)' fallback='true' selected='true'/>
-   <accessor type='AttrClass' value=' submit(&quot;btn btn-block btn-primary font-bold text-center&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-product-lists/div/section/div/div/div[2]/div[3]/app-avtr-product-list-item[1]/div/div[3]/div/avtr-accordion-item/div/div/app-avtr-product-variant-table/section[2]/ul/li[2]/div[3]/div[8]/div[1]/div[2]/app-shared-add-to-cart/form/div[2]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-product-lists/div/section/div/div/div[2]/div[3]/app-avtr-product-list-item/div/div[3]/div/avtr-accordion-item/div/div/app-avtr-product-variant-table/section[2]/ul/li[2]/div[3]/div[8]/div/div[2]/app-shared-add-to-cart/form/div[2]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value=' byXPath(&quot;/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner cxFeat_a11ySortingOptionsTruncation cxFeat_a11yExpandedFocusIndicator cxFeat_a11yFocusableCarouselControls&apos;]/cx-storefront[@class=&apos;ProductListPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;ProductListPageTemplate&apos;]/cx-page-slot[@class=&apos;ProductListSlot has-components&apos;]/app-avtr-product-lists[1]/div[@class=&apos;cx-page&apos;]/section[@class=&apos;cx-page-section&apos;]/div[@class=&apos;container&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-lg-12&apos;]/div[@class=&apos;cx-product-container&apos;]/app-avtr-product-list-item[@class=&apos;cx-product-search-list&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;w-100&apos;]/div[@class=&apos;search-sm-accordion accordion avtr-product-accordion&apos;]/avtr-accordion-item[1]/div[@class=&apos;accordion-item active&apos;]/div[@class=&apos;accordion-item-wrapper active&apos;]/app-avtr-product-variant-table[1]/section[2]/ul[@class=&apos;collection collection-container header&apos;]/li[@class=&apos;item item-container spec-border&apos;]/div[3]/div[@class=&apos;attribute-container multi-value&apos;]/div[@class=&apos;attribute display-price-sm-grid1 border-attribute&apos;]/div[2]/app-shared-add-to-cart[1]/form[@class=&apos;ng-untouched ng-valid ng-dirty&apos;]/div[@class=&apos;addtocart-btn-wrapper&apos;]/button[@class=&apos;btn btn-primary btn-block font-bold text-center&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='submit({&apos;type&apos;:&apos;submit&apos;})' fallback='true' selected='false'/>
-   <accessor type='JQuery' value=' byJQuery(&apos;form[class=&quot;ng-untouched ng-valid ng-dirty&quot;] &gt; div[class=&quot;addtocart-btn-wrapper&quot;] &gt; button[class=&quot;btn btn-primary btn-block font-bold text-center&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.ng-untouched.ng-valid.ng-dirty &gt; .addtocart-btn-wrapper &gt; .btn.btn-primary.btn-block.font-bold.text-center&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='Muralikrishna.g@avantorsciences.com' version='webDesigner'>
+    <dpl filename='' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='navigateTo' value='"https://avantorsciences.com/us/ea/"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e4014e0a-d6c6-4a4f-8ef6-8024a62d8237' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ea88fc6f-e060-4e5f-ab7c-e0ca93aeb6d9' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='submit("Accept all cookies")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='submit("btn btn-block btn-primary font-bold")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/footer/cx-page-layout/cx-page-slot/app-consent-banner/div/div[2]/div/div[1]/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="btn btn-primary btn-block font-bold"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Accept all cookies "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/footer/cx-page-layout/cx-page-slot/app-consent-banner/div/div[2]/div/div/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner&apos;]/cx-storefront[@class=&apos;stop-navigating ContentNoBreadcrumbTemplate&apos;]/footer[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;footer&apos;]/cx-page-slot[@class=&apos;Footer has-components&apos;]/app-consent-banner[1]/div[@class=&apos;consent-banner&apos;]/div[@class=&apos;cookie-content&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-md-5 col-lg-4 col-xs-12 consent-margin mt-3&apos;]/button[@class=&apos;btn btn-primary btn-block font-bold&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='submit({&apos;type&apos;:&apos;submit&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="consent-banner"] &gt; div[class="cookie-content"] &gt; div[class="row"] &gt; div[class="col-md-5 col-lg-4 col-xs-12 consent-margin mt-3"] &gt; button[class="btn btn-primary btn-block font-bold"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.consent-banner &gt; .cookie-content &gt; .row &gt; .col-md-5.col-lg-4.col-xs-12.consent-margin.mt-3 &gt; .btn.btn-primary.btn-block.font-bold&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c3cd5da2-e91c-438b-b93c-0e8130e0cce8' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='image("hybris Accelerator")' selected='true' fallback='true'></accessor>
+        <accessor type='Src' value='image("https://p2.occapi.avantorsciences.com/medias/logo-hybris-b2b-responsive.svg?context=bWFzdGVyfGltYWdlc3w1MjUzM3xpbWFnZS9zdmcreG1sfGFEUmxMMmd5T1M4NU5EazNNRFk0TURFeE5UVXdMMnh2WjI5ZmFIbGljbWx6WDJJeVlsOXlaWE53YjI1emFYWmxMbk4yWnd8YTU2NjJmZmQ2ZTJmYzRjYmJhZTk0NGM2Nzg3Y2M1Y2Q4YTJmZDkzY2FiOGQwNGZhOWFiMjA5YTkzMjE3OWE4OQ").xy(0.69, 0.49 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[1]/app-banner/cx-generic-link/a/app-media/img").xy(0.69, 0.49 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot/app-banner/cx-generic-link/a/app-media/img&apos;).xy(0.69, 0.49 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SiteLogo has-components&apos;]/app-banner[1]/cx-generic-link[1]/a[1]/app-media[@class=&apos;is-initialized&apos;]/img[1]").xy(0.69, 0.49 )' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='image({&apos;src&apos;:&apos;https://p2.occapi.avantorsciences.com/medias/logo-hybris-b2b-responsive.svg?context=bWFzdGVyfGltYWdlc3w1MjUzM3xpbWFnZS9zdmcreG1sfGFEUmxMMmd5T1M4NU5EazNNRFk0TURFeE5UVXdMMnh2WjI5ZmFIbGljbWx6WDJJeVlsOXlaWE53YjI1emFYWmxMbk4yWnd8YTU2NjJmZmQ2ZTJmYzRjYmJhZTk0NGM2Nzg3Y2M1Y2Q4YTJmZDkzY2FiOGQwNGZhOWFiMjA5YTkzMjE3OWE4OQ&apos;}).xy(0.69, 0.49 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;img[alt="hybris Accelerator"]&apos;).xy(0.69, 0.49 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrAlt' value='image("hybris Accelerator").xy(0.69, 0.49 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value='"beakers{{ENTER}}"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='73a7ff9a-3855-41d3-8450-12c791bb32b1' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='textbox(0, _below(label("searchbox")))' selected='true' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SearchBox has-components&apos;]/app-avtr-search-box[1]/label[@class=&apos;searchbox&apos;]/input[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[2]/app-avtr-search-box/label/input")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[2]/app-avtr-search-box/label/input&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='textbox({&apos;autocomplete&apos;:&apos;off&apos;})' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a0d04933-e90a-4d91-9ef3-71b824e47849' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Parent' value='path(0, _in(submit("hj-survey-toggle-1"))).xy(0.42, 0.05 )' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='path(0, _in(submit({&apos;aria-label&apos;:&apos;Hide survey&apos;}))).xy(0.42, 0.05 )' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='path({&apos;fill&apos;:&apos;#3e4a44&apos;}).xy(0.42, 0.05 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6b46147f-e206-474b-bff6-082d0ade7476' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='heading6(["Expand"])' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='heading6("Expand 8 Items")' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='heading6("accordion-heading")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-product-lists/div/section/div/div/div[2]/div[3]/app-avtr-product-list-item[1]/div/div[3]/div/avtr-accordion-item/div/h6&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="accordion-heading"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Expand 8 Items "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-product-lists/div/section/div/div/div[2]/div[3]/app-avtr-product-list-item/div/div[3]/div/avtr-accordion-item/div/h6&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner cxFeat_a11ySortingOptionsTruncation cxFeat_a11yExpandedFocusIndicator cxFeat_a11yFocusableCarouselControls&apos;]/cx-storefront[@class=&apos;ProductListPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;ProductListPageTemplate&apos;]/cx-page-slot[@class=&apos;ProductListSlot has-components&apos;]/app-avtr-product-lists[1]/div[@class=&apos;cx-page&apos;]/section[@class=&apos;cx-page-section&apos;]/div[@class=&apos;container&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-lg-12&apos;]/div[@class=&apos;cx-product-container&apos;]/app-avtr-product-list-item[@class=&apos;cx-product-search-list&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;w-100&apos;]/div[@class=&apos;search-sm-accordion accordion avtr-product-accordion&apos;]/avtr-accordion-item[1]/div[@class=&apos;accordion-item&apos;]/h6[@class=&apos;accordion-heading&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='heading6({&apos;tabindex&apos;:&apos;0&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="accordion-item"] &gt; h6[class="accordion-heading"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.accordion-item &gt; .accordion-heading&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1e3120cf-856e-4bd7-aa4f-9bf1ab9fb341' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//h6[@class=&apos;accordion-heading&apos;])[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click2' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6ab9513a-544e-4b06-80ea-953db5b77684' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='button("Add one more")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='50000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8856eb94-7dfb-45cd-ba85-0f4435093fd5' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click2' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='61bb7375-5ece-4a4c-a1f6-fe7c71ea7c49' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='submit("Add to cart")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='submit("btn btn-block btn-primary font-bold text-center")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-product-lists/div/section/div/div/div[2]/div[3]/app-avtr-product-list-item[1]/div/div[3]/div/avtr-accordion-item/div/div/app-avtr-product-variant-table/section[2]/ul/li[2]/div[3]/div[8]/div[1]/div[2]/app-shared-add-to-cart/form/div[2]/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-product-lists/div/section/div/div/div[2]/div[3]/app-avtr-product-list-item/div/div[3]/div/avtr-accordion-item/div/div/app-avtr-product-variant-table/section[2]/ul/li[2]/div[3]/div[8]/div/div[2]/app-shared-add-to-cart/form/div[2]/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner cxFeat_a11ySortingOptionsTruncation cxFeat_a11yExpandedFocusIndicator cxFeat_a11yFocusableCarouselControls&apos;]/cx-storefront[@class=&apos;ProductListPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;ProductListPageTemplate&apos;]/cx-page-slot[@class=&apos;ProductListSlot has-components&apos;]/app-avtr-product-lists[1]/div[@class=&apos;cx-page&apos;]/section[@class=&apos;cx-page-section&apos;]/div[@class=&apos;container&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-lg-12&apos;]/div[@class=&apos;cx-product-container&apos;]/app-avtr-product-list-item[@class=&apos;cx-product-search-list&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;w-100&apos;]/div[@class=&apos;search-sm-accordion accordion avtr-product-accordion&apos;]/avtr-accordion-item[1]/div[@class=&apos;accordion-item active&apos;]/div[@class=&apos;accordion-item-wrapper active&apos;]/app-avtr-product-variant-table[1]/section[2]/ul[@class=&apos;collection collection-container header&apos;]/li[@class=&apos;item item-container spec-border&apos;]/div[3]/div[@class=&apos;attribute-container multi-value&apos;]/div[@class=&apos;attribute display-price-sm-grid1 border-attribute&apos;]/div[2]/app-shared-add-to-cart[1]/form[@class=&apos;ng-untouched ng-valid ng-dirty&apos;]/div[@class=&apos;addtocart-btn-wrapper&apos;]/button[@class=&apos;btn btn-primary btn-block font-bold text-center&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='submit({&apos;type&apos;:&apos;submit&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;form[class="ng-untouched ng-valid ng-dirty"] &gt; div[class="addtocart-btn-wrapper"] &gt; button[class="btn btn-primary btn-block font-bold text-center"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.ng-untouched.ng-valid.ng-dirty &gt; .addtocart-btn-wrapper &gt; .btn.btn-primary.btn-block.font-bold.text-center&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+  </testcase>

@@ -103,7 +103,10 @@
     <step action='js' value='AddIntegrationWithVendorAndOutPutTypeAndCCEmail("auto1215","Ev_Automation_Regular_Stockroom","TEXT FILE CONFIGURATOR")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a1556a59-11ef-46e7-be25-6a2b880887ef' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='true' indentLevel='0' isVisible='true' parentId='' uid='ab53f0e8-1009-4d11-b13b-553a325eef24' uiType='base'>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ae07cabb-7ed7-4e56-a9a5-835a53109449' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ab53f0e8-1009-4d11-b13b-553a325eef24' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Text' value='link("2")' selected='true' fallback='true'></accessor>
         <accessor type='XPathText' value='byXPath(&apos;//*[text()=" 2 "]&apos;)' selected='false' fallback='true'></accessor>
@@ -145,6 +148,9 @@
         <accessor type='JQuery' value='byJQuery(&apos;mat-dialog-container[class="mat-dialog-container ng-tns-c31-172 ng-trigger ng-trigger-dialogContainer ng-star-inserted"] &gt; app-view-details-model[class="ng-star-inserted"] &gt; mat-dialog-actions[class="mat-dialog-actions px-1 vendor-btns"] &gt; button[class="mat-focus-indicator py-1 cancel mat-button mat-button-base cdk-focused cdk-mouse-focused"] &gt; span[class="mat-button-wrapper"]&apos;)' selected='false' fallback='true'></accessor>
         <accessor type='JQuery' value='byJQuery(&apos;#mat-dialog-6 &gt; .ng-star-inserted &gt; .mat-dialog-actions.px-1.vendor-btns &gt; .mat-focus-indicator.py-1.cancel.mat-button.mat-button-base.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
+    </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='54d3bab6-b7b3-4fc2-b788-2a33d006f823' uiType='base'>
+      <dialect type='sahi'></dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c29a3370-3a55-4f05-b387-7307ff8d2ff3' uiType='base'>
       <dialect type='sahi'>
@@ -197,6 +203,9 @@
         <accessor type='JQuery' value='byJQuery(&apos;#mat-dialog-6 &gt; .ng-star-inserted &gt; .mat-dialog-actions.px-1.vendor-btns &gt; .mat-focus-indicator.py-1.cancel.mat-button.mat-button-base.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a592a0ac-87c0-4604-b3d9-4d8279a76b2a' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0a1a002d-d4b1-45d5-9b06-a398d70dc34a' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Text' value='link("2[2]")' selected='true' fallback='true'></accessor>
@@ -248,7 +257,7 @@
         <accessor type='JQuery' value='byJQuery(&apos;#mat-dialog-8 &gt; .ng-star-inserted &gt; .mat-dialog-actions.px-1.vendor-btns &gt; .mat-focus-indicator.py-1.cancel.mat-button.mat-button-base.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='Verifying Request Integration check box greyed out' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='566fe1a8-994a-4047-b8f8-85e2a4ea10f2' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='Verifying Request Integration check box greyed out' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='566fe1a8-994a-4047-b8f8-85e2a4ea10f2' uiType='base'>
       <dialect type='sahi'>
         <accessor type='AttrClass' value='div("ng-star-inserted text-center w-100[2]").xy(0.51, 0.35 )' selected='true' fallback='true'></accessor>
         <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[6]/div&apos;).xy(0.51, 0.35 )' selected='false' fallback='true'></accessor>
@@ -259,7 +268,7 @@
         <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c329-93.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-isRequest.mat-column-isRequest.ng-tns-c329-93.ng-star-inserted &gt; .w-100.text-center.ng-star-inserted&apos;).xy(0.51, 0.35 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='Verifying Order Integration check box greyed out' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2366cb3e-9ee7-429f-a357-e8e371f3ad96' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='Verifying Order Integration check box greyed out' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2366cb3e-9ee7-429f-a357-e8e371f3ad96' uiType='base'>
       <dialect type='sahi'>
         <accessor type='AttrClass' value='div("ng-star-inserted text-center w-100[4]").xy(0.53, 0.44 )' selected='true' fallback='true'></accessor>
         <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[9]/div&apos;).xy(0.53, 0.44 )' selected='false' fallback='true'></accessor>
@@ -270,7 +279,7 @@
         <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c329-93.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-isOrderIntegration.mat-column-isOrderIntegration.ng-tns-c329-93.ng-star-inserted &gt; .w-100.text-center.ng-star-inserted&apos;).xy(0.53, 0.44 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='Verifying Request Integration check box greyed out' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cbf0337f-45d3-40c6-9e63-839e0602604a' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='Verifying Request Integration check box greyed out' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cbf0337f-45d3-40c6-9e63-839e0602604a' uiType='base'>
       <dialect type='sahi'>
         <accessor type='AttrClass' value='div("ng-star-inserted text-center w-100[6]").xy(0.49, 0.48 )' selected='true' fallback='true'></accessor>
         <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[12]/div&apos;).xy(0.49, 0.48 )' selected='false' fallback='true'></accessor>

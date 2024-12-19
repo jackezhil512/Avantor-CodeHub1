@@ -1,163 +1,161 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'Verify the user is able to filter the orders based on Order Status , Order created and Account numbers.ds' description= '' author= 'null' version= ''>
-<dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Production/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='link(&quot;Your Orders&quot;)' fallback='true' selected='true'/>
-   <accessor type='Parent' value='link(15, _in(header(&quot;cx-header&quot;)))' fallback='true' selected='false'/>
-   <accessor type='Parent' value='link(15, _in(header({&apos;id&apos;:&apos;cx-header&apos;})))' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Your Orders &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[2]/div/div/nav/app-generic-link/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[2]/div/div/nav[1]/app-generic-link/a&quot;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SiteLogin has-components&apos;]/app-login[1]/div[@class=&apos;loggedIN&apos;]/cx-page-slot[@class=&apos;HeaderLinks has-components&apos;]/app-avtr-navigation[1]/app-avtr-navigation-ui[@class=&apos;accNavComponent flyout&apos;]/nav[1]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[2]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[1]/app-generic-link[1]/a[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/orders&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/orders&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='link(&quot;Last 90 days&quot;)' fallback='true' selected='true'/>
-   <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/orders?query=:date-desc&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[2]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[2]&apos;)' fallback='true' selected='false'/>
-   <accessor type='Attribute' value='link({&apos;routerlink&apos;:&apos;./&apos;})' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/orders?query=:date-desc&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='link(&quot;active-facet[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='div(&quot;Last 30 Days&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div[1]/div/div/div/a[3]/div&apos;).xy(0.22, 0.70 )' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Last 30 Days &quot;]&apos;).xy(0.22, 0.70 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div/div/div/div/a[3]/div&apos;).xy(0.22, 0.70 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;order-history-facetvalue-label[2]&quot;).xy(0.22, 0.70 )' fallback='true' selected='false'/>
-   <accessor type='Text' value='div(&quot;Last 30 Days&quot;).xy(0.22, 0.70 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='span(&quot;Last 30 days&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[2]/span[1]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Last 30 days&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[2]/span&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='link(&quot;Cancelled&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div[2]/div/div/div/a[7]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div[2]/div/div/div/a[7]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='link(&quot;order-history-facetvalue-link text-decoration-none[11]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='div(&quot;Cancelled&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-order-history/div/div/div[4]/app-order-history-list[1]/div/div[1]/div[9]&apos;).xy(0.14, 0.49 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[4]/app-order-history-list/div/div/div[9]&apos;).xy(0.14, 0.49 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;col-lg-1 col-md-1 col-xl-1 text-break[4]&quot;).xy(0.14, 0.49 )' fallback='true' selected='false'/>
-   <accessor type='Text' value='div(&quot;Cancelled&quot;).xy(0.14, 0.49 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='span(&quot;Cancelled&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[2]/span[1]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Cancelled&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[2]/span&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='link(&quot;86019709 7&quot;)' fallback='true' selected='true'/>
-   <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/orders?query=:date-desc:creationDate:2024-09-05%2F2024-12-04:shippingAccount:86019709&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/div[2]/app-order-history-facet[2]/div/div/div/div/div/div[2]/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/div[2]/app-order-history-facet[2]/div/div/div/div/div/div[2]/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;SideContent has-components&apos;]/app-order-history-facet-list[1]/div[1]/div[@class=&apos;order-history-filter-desktop-view&apos;]/div[@class=&apos;pt-2 border-facet-top&apos;]/div[@class=&apos;mb-2&apos;]/app-order-history-facet[@class=&apos;multi-select&apos;]/div[1]/div[@class=&apos;border-facet pb-2&apos;]/div[@class=&apos;pl-2&apos;]/div[1]/div[@class=&apos;order-history-facet-scrollbar&apos;]/div[2]/a[@class=&apos;value order-history-facetvalue-link text-break text-decoration-none&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/orders?query=:date-desc:creationDate:2024-09-05%2F2024-12-04:shippingAccount:86019709&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='link(&quot;order-history-facetvalue-link text-break text-decoration-none value[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='link(&quot;86019709x&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='link(&quot;qatestcathiyagu@yopmail.com 30&quot;)' fallback='true' selected='true'/>
-   <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/orders?query=:date-desc:creationDate:2024-09-05%2F2024-12-04:placedBy:qatestcathiyagu@yopmail.com&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/div[2]/app-order-history-facet[3]/div/div/div/div/div/div[1]/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/div[2]/app-order-history-facet[3]/div/div/div/div/div/div/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/orders?query=:date-desc:creationDate:2024-09-05%2F2024-12-04:placedBy:qatestcathiyagu@yopmail.com&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='link(&quot;order-history-facetvalue-link text-break text-decoration-none value[4]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='link(&quot;qatestcathiyagu@yopmail.comx&quot;)' fallback='true' selected='true'/>
-   <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/orders?query=:date-desc:creationDate:2024-09-05%2F2024-12-04&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[3]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[3]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/orders?query=:date-desc:creationDate:2024-09-05%2F2024-12-04&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='link(&quot;active-facet[2]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='After filter all the required, validated the ordering table details in a page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='div(&quot;86019709&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-order-history/div/div/div[4]/app-order-history-list/div/div[1]/div[6]&apos;).xy(0.08, 0.49 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[4]/app-order-history-list/div/div/div[6]&apos;).xy(0.08, 0.49 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;col-lg-2 col-md-2 col-xl-2 text-break[2]&quot;).xy(0.08, 0.49 )' fallback='true' selected='false'/>
-   <accessor type='Text' value='div(&quot;86019709&quot;).xy(0.08, 0.49 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='After filter all the required, validated the ordering table details in a page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='div(&quot;Cancelled&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-order-history/div/div/div[4]/app-order-history-list/div/div[1]/div[9]&apos;).xy(0.10, 0.70 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[4]/app-order-history-list/div/div/div[9]&apos;).xy(0.10, 0.70 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;col-lg-1 col-md-1 col-xl-1 text-break[4]&quot;).xy(0.10, 0.70 )' fallback='true' selected='false'/>
-   <accessor type='Text' value='div(&quot;Cancelled&quot;).xy(0.10, 0.70 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='After filter all the required, validated the ordering table details in a page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='div(&quot;CCW01365006[1]&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-order-history/div/div/div[4]/app-order-history-list/div/div[1]/div[5]&apos;).xy(0.08, 0.56 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[4]/app-order-history-list/div/div/div[5]&apos;).xy(0.08, 0.56 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;col-lg-2 col-md-2 col-xl-2 text-break[1]&quot;).xy(0.08, 0.56 )' fallback='true' selected='false'/>
-   <accessor type='Text' value='div(&quot;CCW01365006[1]&quot;).xy(0.08, 0.56 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='Muralikrishna.g@avantorsciences.com' version='webDesigner'>
+    <dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Production/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3cac826b-05ba-427e-af28-4ad97f024e50' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dfe82c81-6775-41e0-a55a-6a2732ef14e9' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d2f5ca7e-02f0-46ed-b228-05d6b429290f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c8734514-593e-4b8d-a503-491f5cc6366a' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6d1cca7f-c41a-4d2d-ad80-27c796259afc' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='link("Your Orders")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='link(15, _in(header("cx-header")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='link(15, _in(header({&apos;id&apos;:&apos;cx-header&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Your Orders "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[2]/div/div/nav/app-generic-link/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[2]/div/div/nav[1]/app-generic-link/a")' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SiteLogin has-components&apos;]/app-login[1]/div[@class=&apos;loggedIN&apos;]/cx-page-slot[@class=&apos;HeaderLinks has-components&apos;]/app-avtr-navigation[1]/app-avtr-navigation-ui[@class=&apos;accNavComponent flyout&apos;]/nav[1]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[2]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[1]/app-generic-link[1]/a[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;a[href="/ca/en/my-account/orders"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrHref' value='link("/ca/en/my-account/orders")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8d56a5b4-e300-419d-aac9-423228cadeb6' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='43db148a-0917-4c66-963e-7799b676b280' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='link("Last 90 days")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrHref' value='link("/ca/en/my-account/orders?query=:date-desc")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='link({&apos;routerlink&apos;:&apos;./&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;a[href="/ca/en/my-account/orders?query=:date-desc"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='link("active-facet[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cd971358-1d0c-4d9a-a5c8-3086250d8689' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='div("Last 30 Days")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div[1]/div/div/div/a[3]/div&apos;).xy(0.22, 0.70 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Last 30 Days "]&apos;).xy(0.22, 0.70 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div/div/div/div/a[3]/div&apos;).xy(0.22, 0.70 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("order-history-facetvalue-label[2]").xy(0.22, 0.70 )' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='div("Last 30 Days").xy(0.22, 0.70 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2c122ca7-a429-4eab-be55-07d8a60b5a21' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Last 30 days")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[2]/span[1]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Last 30 days"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[2]/span&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='203da9db-f1f1-48ec-a971-90322c153654' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='link("Cancelled")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div[2]/div/div/div/a[7]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div[2]/div/div/div/a[7]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='link("order-history-facetvalue-link text-decoration-none[11]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8a78fc19-df43-452e-a582-102b525e5baa' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='div("Cancelled")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-order-history/div/div/div[4]/app-order-history-list[1]/div/div[1]/div[9]&apos;).xy(0.14, 0.49 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[4]/app-order-history-list/div/div/div[9]&apos;).xy(0.14, 0.49 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("col-lg-1 col-md-1 col-xl-1 text-break[4]").xy(0.14, 0.49 )' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='div("Cancelled").xy(0.14, 0.49 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1b545fc5-f129-4781-9670-58e2044c8b95' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Cancelled")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[2]/span[1]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Cancelled"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[2]/span&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9cb31ef9-abc5-4d5e-9b13-ac457d8baf2b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='div(" Filter by Shipping Account",_below(div("order-history-facetvalue-label")))' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='div(" Filter by Shipping Account",_below(span(" Filter by Shipping Account")))' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4b4246be-5231-49d4-b845-d481badee268' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='link("86019709 7")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrHref' value='link("/ca/en/my-account/orders?query=:date-desc:creationDate:2024-09-05%2F2024-12-04:shippingAccount:86019709")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/div[2]/app-order-history-facet[2]/div/div/div/div/div/div[2]/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/div[2]/app-order-history-facet[2]/div/div/div/div/div/div[2]/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;SideContent has-components&apos;]/app-order-history-facet-list[1]/div[1]/div[@class=&apos;order-history-filter-desktop-view&apos;]/div[@class=&apos;pt-2 border-facet-top&apos;]/div[@class=&apos;mb-2&apos;]/app-order-history-facet[@class=&apos;multi-select&apos;]/div[1]/div[@class=&apos;border-facet pb-2&apos;]/div[@class=&apos;pl-2&apos;]/div[1]/div[@class=&apos;order-history-facet-scrollbar&apos;]/div[2]/a[@class=&apos;value order-history-facetvalue-link text-break text-decoration-none&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;a[href="/ca/en/my-account/orders?query=:date-desc:creationDate:2024-09-05%2F2024-12-04:shippingAccount:86019709"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='link("order-history-facetvalue-link text-break text-decoration-none value[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4a894b21-b03d-422f-a127-ed47e197a8e7' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='link("86019709x")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='37843638-e213-4064-b465-c0424e0f60d7' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='link("qatestcathiyagu@yopmail.com 30")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrHref' value='link("/ca/en/my-account/orders?query=:date-desc:creationDate:2024-09-05%2F2024-12-04:placedBy:qatestcathiyagu@yopmail.com")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/div[2]/app-order-history-facet[3]/div/div/div/div/div/div[1]/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/div[2]/app-order-history-facet[3]/div/div/div/div/div/div/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;a[href="/ca/en/my-account/orders?query=:date-desc:creationDate:2024-09-05%2F2024-12-04:placedBy:qatestcathiyagu@yopmail.com"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='link("order-history-facetvalue-link text-break text-decoration-none value[4]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6e532297-e4c7-4dba-b9f3-c0ef2ba42823' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='link("qatestcathiyagu@yopmail.comx")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrHref' value='link("/ca/en/my-account/orders?query=:date-desc:creationDate:2024-09-05%2F2024-12-04")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[3]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[3]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;a[href="/ca/en/my-account/orders?query=:date-desc:creationDate:2024-09-05%2F2024-12-04"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='link("active-facet[2]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='After filter all the required, validated the ordering table details in a page' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6166d61a-bc41-47f0-b566-d3b050d5e868' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='div("86019709")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-order-history/div/div/div[4]/app-order-history-list/div/div[1]/div[6]&apos;).xy(0.08, 0.49 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[4]/app-order-history-list/div/div/div[6]&apos;).xy(0.08, 0.49 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("col-lg-2 col-md-2 col-xl-2 text-break[2]").xy(0.08, 0.49 )' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='div("86019709").xy(0.08, 0.49 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='After filter all the required, validated the ordering table details in a page' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b67f5d5c-2d07-4d7f-9bca-5c92450d5dc8' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='div("Cancelled")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-order-history/div/div/div[4]/app-order-history-list/div/div[1]/div[9]&apos;).xy(0.10, 0.70 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[4]/app-order-history-list/div/div/div[9]&apos;).xy(0.10, 0.70 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("col-lg-1 col-md-1 col-xl-1 text-break[4]").xy(0.10, 0.70 )' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='div("Cancelled").xy(0.10, 0.70 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='After filter all the required, validated the ordering table details in a page' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5ebb2f81-fc01-41b3-b02a-876a5adff8fa' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='div("CCW01365006[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-order-history/div/div/div[4]/app-order-history-list/div/div[1]/div[5]&apos;).xy(0.08, 0.56 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-history/div/div/div[4]/app-order-history-list/div/div/div[5]&apos;).xy(0.08, 0.56 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("col-lg-2 col-md-2 col-xl-2 text-break[1]").xy(0.08, 0.56 )' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='div("CCW01365006[1]").xy(0.08, 0.56 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+  </testcase>

@@ -104,7 +104,7 @@ function ManufacturerSearch(Index0,input0,Index1,input1,Index2,input2){
 function search(input){
   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
    setShadowDOM(true); 
-  setValue(fallback(`textbox(0, _in(header("cx-header")))`), ,"beakers{{ENTER}}");
+  setValue(fallback(`textbox(0, _in(header("cx-header")))`), "beakers{{ENTER}}");
   //click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
   wait(10000);
   //click2(fallback(`heading6(/Expand.*/)`));

@@ -516,6 +516,7 @@ function VerifyAddProductToCartFromPersonalShoppingList(){
   setValue(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-shopping-lists/div/div[2]/form/input')`), "Test11");
   click(fallback(`submit("Search")`));
   click(fallback(`link("cx-link[1]")`));
+  wait (10000);
   assertExists(fallback(`link("10536-518[1]")`));
   assertExists(fallback(`heading3("Cart Summary")`));
   

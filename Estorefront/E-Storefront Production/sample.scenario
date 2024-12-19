@@ -40,6 +40,7 @@
     <bundle name="mysql" version="5.1.39"/>
     <bundle name="oracle" version="10.2.0.5"/>
     <bundle name="ds" version="3.0"/>
+    <bundle name="xuggler" version="5.4"/>
   </bundles>
   <datasources>
     <dpl name="Untitled1" type="HashDPL" langtype="java" method="setup">
@@ -171,6 +172,11 @@
     </iteration>
   </execution>
   <logs/>
-  <integrations xmlns="www.pushtotest.com/tm5"/>
+  <integrations xmlns="www.pushtotest.com/tm5">
+    <integration type="Video">
+      <opt name="Quality" value="0.5"/>
+      <opt name="FramesPerSecond" value="5"/>
+    </integration>
+  </integrations>
   <notifications/>
 </testscenario>

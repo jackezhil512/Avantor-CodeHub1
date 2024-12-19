@@ -114,7 +114,8 @@
     </step>
     <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='31f39780-7d4e-4a47-aa51-8cc607005360' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value='span(AccountNumner)' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='span($AccountNumner)' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='span(AccountNumner)' selected='false' fallback='true'></accessor>
         <accessor type='Text' value='span("86033630")' selected='false' fallback='true'></accessor>
         <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[3]/span[1]&apos;)' selected='false' fallback='true'></accessor>
         <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[3]/span&apos;)' selected='false' fallback='true'></accessor>
@@ -205,5 +206,15 @@
     </step>
     <step action='log' value='whoplacedorder' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7ffbb09c-299e-42c9-8d2d-718c888eb03d' uiType='base'>
       <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='930a2725-5a84-41d5-bb84-5c107b297436' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='span($whoplacedorder)' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='span(whoplacedorder)' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='span("qatestcathiyagu@yopmail.com")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[4]/span[1]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="qatestcathiyagu@yopmail.com"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[4]/span&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
     </step>
   </testcase>

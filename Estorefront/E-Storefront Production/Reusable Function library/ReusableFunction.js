@@ -551,7 +551,7 @@ log (CatlogNumberInCartpage);
  log("customcatlog number which added in Shopping details page the same added in to in cartpage");   
  
   }else{
-    log("shopping cart page Catlognumber is not same in cart page")
+    log("shopping list page Catlognumber is not same in cart page")
   }
  
 

@@ -567,7 +567,7 @@ function AddTwoProducts(input){
   //click2(fallback(`heading6("[Expand]")`));
   //click(fallback(`heading6(0, _in(section({'aria-label':'Product Results List'})))`));
   wait(5000);
-  click(fallback(`button("+")`));
+ // click(fallback(`button("+")`));
   //wait(2000);
   //click(fallback(`button("+")`));
   click(fallback(`button[@aria-label="Add one more"])`));

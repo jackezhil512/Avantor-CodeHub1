@@ -1618,7 +1618,7 @@ click(fallback(`byXPath("//mat-icon[text()='save']")`));
    wait(2000);
 click(fallback(`byXPath("//div[@formarrayname='requestCCEmails']//span[text()='add']")`));
 wait(2000);
-setValue(fallback(`byXPath("(//span[contains(text(),'Request Integration') and @class='mat-checkbox-label']/following::input)[1]")`),TempEmail1);
+setValue(fallback(`byXPath("(//span[contains(text(),'Request Integration') and @class='mat-checkbox-label']/following::input)[2]")`),TempEmail1);
 click(fallback(`byXPath("//mat-icon[text()='save']")`));
 
 
@@ -1631,7 +1631,7 @@ click(fallback(`byXPath("//mat-icon[text()='save']")`));
    wait(2000);
 click(fallback(`byXPath("//div[@formarrayname='orderCCEmails']//span[text()='add']")`));
 wait(2000);
-setValue(fallback(`byXPath("(//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']/following::input)[1]")`),TempEmail);
+setValue(fallback(`byXPath("(//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']/following::input)[2]")`),TempEmail);
    wait(2000);
 click(fallback(`byXPath("//mat-icon[text()='save']")`));
 wait(2000);
@@ -1644,7 +1644,7 @@ click(fallback(`byXPath("//mat-icon[text()='save']")`));
    wait(2000);
 click(fallback(`byXPath("//div[@formarrayname='receivingCCEmails']//span[text()='add']")`));
 wait(2000)
-setValue(fallback(`byXPath("(//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']/following::input)[1]")`),TempEmail1);
+setValue(fallback(`byXPath("(//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']/following::input)[2]")`),TempEmail1);
    wait(2000);
 click(fallback(`byXPath("//mat-icon[text()='save']")`));
 wait(4000);

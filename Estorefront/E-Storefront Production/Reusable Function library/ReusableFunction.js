@@ -202,8 +202,9 @@ else {
 function ProductPageNavigation(input){
 setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
    setShadowDOM(true); 
-  setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
-  click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
+ // setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
+  //click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
+   setValue(fallback(`textbox(0, _in(header("cx-header")))`), input+"{{ENTER}}");
   wait(5000);
  click(fallback(`heading2(1, _in(section({'aria-label':'Product Results List'})))`));
   //click(fallback(`byXPath('/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-product-lists/div/section/div/div/div[2]/div[2]/app-avtr-product-list-item/div/div[2]/a/h2')`));

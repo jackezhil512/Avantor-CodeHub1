@@ -3,12 +3,12 @@
 <dpl filename='REPOSITORY/E-Storefront Project/E-Storefront Regression/Test Data/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='LaunchBrowser($URL)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='LaunchBrowser($URL)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='textbox(&quot;form-control ng-dirty ng-untouched ng-valid&quot;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='textbox(3, _in(div({&apos;id&apos;:&apos;ProductDetail&apos;})))' fallback='true' selected='false'/>
@@ -22,7 +22,7 @@
    <accessor type='Parent' value='textbox(3, _in(div(&quot;ProductDetail&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='AdvanceSearch(&quot;3&quot;,$MDLNumber)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='AdvanceSearch(&quot;3&quot;,$MDLNumber)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;Search&quot;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='submit(4, _in(div({&apos;id&apos;:&apos;ProductDetail&apos;})))' fallback='true' selected='false'/>

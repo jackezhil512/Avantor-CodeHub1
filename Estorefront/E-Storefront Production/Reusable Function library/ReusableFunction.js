@@ -490,6 +490,17 @@ assertExists(fallback(`heading3("Cart Summary")`));
 
 var CatlogNumberInCartpage = getText((`link("cart-catalog-link-color cx-link")`));
 log (CatlogNumberInCartpage);
+
+ if(Customcatlognumber == CatlogNumberInCartpage){
+    wait(3000);
+ log("Verifyed catlognumber in cartpage");   
+ 
+  }else{
+    log("Catlognumber is not same in cart page")
+  }
+ 
+
+
 //assertExists(fallback(`link("414004-315[1]")`));  
 //assertExists(fallback(`link("414004-146[1]")`));  
 }

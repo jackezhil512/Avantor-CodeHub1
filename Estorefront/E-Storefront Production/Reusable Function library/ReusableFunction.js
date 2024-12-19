@@ -122,7 +122,7 @@ function search(input){
 
   //wait(30000, 'isVisible(button("Add one more"))');
   //click(button("Add one more", _in(div("accordion-item active"))))
-wait(20000,'isVisible(button("Add one more"))');
+ wait(20000,'isVisible(button("Add one more"))');
   focus(fallback(`button("Add one more")`));
   click2(fallback(`button("Add one more")`));
    wait (10000);
@@ -158,6 +158,7 @@ function QuickSearchNavigateToHomePage(input){
    assertExists(fallback(`heading2(0, _in(section({'aria-label':'Product Results List'})))`)); 
    click(fallback(`image(0, _in(header("cx-header"))).xy(0.64, 0.58 )`)),
    assertExists(fallback(`link("Learn more")`));
+
 }
 
 function SupplierNameLeftNavigationFilterSearch(input){

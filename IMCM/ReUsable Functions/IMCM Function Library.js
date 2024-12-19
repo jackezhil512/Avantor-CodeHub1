@@ -1618,16 +1618,7 @@ click(fallback(`byXPath("//mat-icon[text()='save']")`));
    wait(2000);
 click(fallback(`byXPath("//div[@formarrayname='requestCCEmails']//span[text()='add']")`));
 wait(2000);
-   setValue(fallback(`byXPath('//*[@id="mat-input-38"]')`,
-   `textbox("cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-invalid ng-tns-c49-134 ng-untouched")`,
-   `textbox("mat-input-38")`,
-   `byXPath("//input[@id='mat-input-38']")`,
-   `byXPath('//*[@class="mat-input-element mat-form-field-autofill-control ng-tns-c49-134 ng-untouched cdk-text-field-autofill-monitored ng-dirty ng-invalid"]')`,
-   `byXPath('/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div[2]/div[2]/div/mat-form-field/div/div/div[3]/input')`,
-   `byXPath("id('mat-input-38')")`,
-   `textbox({'type':'text'})`,
-   `byJQuery('mat-form-field[class="mat-form-field w-50 ng-tns-c49-134 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-star-inserted mat-focused ng-dirty ng-invalid"] > div[class="mat-form-field-wrapper ng-tns-c49-134"] > div[class="mat-form-field-flex ng-tns-c49-134"] > div[class="mat-form-field-infix ng-tns-c49-134"] > input[class="mat-input-element mat-form-field-autofill-control ng-tns-c49-134 ng-untouched cdk-text-field-autofill-monitored ng-dirty ng-invalid"]')`,
-   `byJQuery('#mat-input-38')`),"test1@gmail.com");
+setValue(fallback(`byXPath("(//span[contains(text(),'Request Integration') and @class='mat-checkbox-label']/following::input)[1]")`),TempEmail1);
 click(fallback(`byXPath("//mat-icon[text()='save']")`));
 
 

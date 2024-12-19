@@ -567,13 +567,13 @@ function AddTwoProducts(input){
   //click2(fallback(`heading6("[Expand]")`));
   //click(fallback(`heading6(0, _in(section({'aria-label':'Product Results List'})))`));
   wait(5000);
- // click(fallback(`button("+")`));
+  click(fallback(`button("+")`));
   //wait(2000);
-  //click(fallback(`button("+")`));
+  click(fallback(`button("+")`));
  // click(fallback(`button[@aria-label="Add one more"])`));
   //button[@aria-label="Add one more"])
   //lick(fallback(`button("Create & Add")`));
-  click(fallback(`button("Add one more")`));
+ // click(fallback(`button("Add one more")`));
   //assertExists(fallback(`button("+"),_above(submit("Add to cart"))`));
   click(fallback(`submit("Add to cart")`));
   wait(10000);

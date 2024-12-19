@@ -1,11 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testcase   name= 'SDS_KeywordSearch.ds' description= '' author= 'null' version= ''>
-<dpl filename='REPOSITORY/Estorefront/E-Storefront Regression/Test Data/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
+<dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Production/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='"https://p2.avantorsciences.com/ca/en/advanced-search"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='LaunchBrowser($URL)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>

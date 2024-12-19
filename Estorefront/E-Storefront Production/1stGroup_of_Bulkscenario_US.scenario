@@ -182,9 +182,6 @@
   </templates>
   <monitoring enablednodes="true" enabledtarget="false"/>
   <execution type="functionaltest" subtype="bulk">
-    <setup name="Global Setup1" langtype="ds3" resource="E-Storefront Production/TestScripts/Cart-Module/Update Quantity in Shopping Cart.ds" method="ds" testclass="Chrome">
-      <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
-    </setup>
     <iteration name="Iteration1" controller="Iteration1">
       <testcase name="Advance Search" users="1" totalexecutions="1"/>
       <testcase name="Cart-Module" users="1" totalexecutions="1"/>

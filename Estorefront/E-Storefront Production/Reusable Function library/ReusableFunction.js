@@ -217,7 +217,8 @@ function ProductPageValidationAdditemToBasket(){
   click(fallback(`button("+")`));
   click(fallback(`submit("Add to cart")`));
   wait(10000);
-  click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));
+  //click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));
+  click(fallback(`byXPath('//*[@class="cx-icon icon icon-shopping-cart-icon"]')`));
   click(fallback(`submit("View My Cart")`));
   assertExists(fallback(`heading3("Cart Summary")`));
 }

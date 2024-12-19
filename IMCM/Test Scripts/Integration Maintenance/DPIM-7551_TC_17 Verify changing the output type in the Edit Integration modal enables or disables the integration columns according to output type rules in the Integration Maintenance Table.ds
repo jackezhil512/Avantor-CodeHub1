@@ -107,7 +107,7 @@
     <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7480fff7-2cda-40fa-8f90-96033db8ee47' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='true' indentLevel='0' isVisible='true' parentId='' uid='bf75bb9b-5928-4c6e-be18-0e65a27310a1' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bf75bb9b-5928-4c6e-be18-0e65a27310a1' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Text' value='submit("Edit")' selected='true' fallback='true'></accessor>
         <accessor type='Parent' value='submit(0, _in(div("mat-menu-panel-60")))' selected='false' fallback='true'></accessor>
@@ -194,8 +194,79 @@
         <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;Save&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='true' indentLevel='0' isVisible='true' parentId='' uid='57875ea4-810d-4454-a1a2-eac7c3736dd4' uiType='base'>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='57875ea4-810d-4454-a1a2-eac7c3736dd4' uiType='base'>
       <dialect type='sahi'></dialect>
+    </step>
+    <step action='selectWindow' value='"Avantor Inventory Manager"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='642a53dd-e65e-4760-af81-a3522e199d4e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='' value='' selected='true' fallback='false'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='verify request email showing as hyphen symbol' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='944c8b36-8f0c-4bb4-9f6d-6fc56b8588b1' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='div("-[3]").xy(0.02, 0.47 )' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[7]/div&apos;).xy(0.02, 0.47 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("ng-star-inserted w-100[1]").xy(0.02, 0.47 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr/td[7]/div&apos;).xy(0.02, 0.47 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col customTable&apos;]/avantor-table[@class=&apos;table-container fullWidth ng-tns-c329-93 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c329-93&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c329-93 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c329-93 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-requisitionEmailId mat-column-requisitionEmailId ng-tns-c329-93 ng-star-inserted&apos;]/div[@class=&apos;w-100 ng-star-inserted&apos;]").xy(0.02, 0.47 )' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[7]//div[@class="w-100 ng-star-inserted"]&apos;).xy(0.02, 0.47 )' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[7]//div[text()=" - "]&apos;).xy(0.02, 0.47 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;tr[class="mat-row cdk-row ng-tns-c329-93 striped-rows ng-star-inserted"] &gt; td[class="mat-cell cdk-cell cdk-column-requisitionEmailId mat-column-requisitionEmailId ng-tns-c329-93 ng-star-inserted"] &gt; div[class="w-100 ng-star-inserted"]&apos;).xy(0.02, 0.47 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c329-93.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-requisitionEmailId.mat-column-requisitionEmailId.ng-tns-c329-93.ng-star-inserted &gt; .w-100.ng-star-inserted&apos;).xy(0.02, 0.47 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='verify receive email showing as hyphen symbol' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bcfcb2cc-fac1-453d-980f-77d4008ac1d4' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='div("-[5]").xy(0.03, 0.42 )' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[10]/div&apos;).xy(0.03, 0.42 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("ng-star-inserted w-100[2]").xy(0.03, 0.42 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr/td[10]/div&apos;).xy(0.03, 0.42 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col customTable&apos;]/avantor-table[@class=&apos;table-container fullWidth ng-tns-c329-93 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c329-93&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c329-93 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c329-93 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-orderEmailId mat-column-orderEmailId ng-tns-c329-93 ng-star-inserted&apos;]/div[@class=&apos;w-100 ng-star-inserted&apos;]").xy(0.03, 0.42 )' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[10]//div[@class="w-100 ng-star-inserted"]&apos;).xy(0.03, 0.42 )' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[10]//div[text()=" - "]&apos;).xy(0.03, 0.42 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;tr[class="mat-row cdk-row ng-tns-c329-93 striped-rows ng-star-inserted"] &gt; td[class="mat-cell cdk-cell cdk-column-orderEmailId mat-column-orderEmailId ng-tns-c329-93 ng-star-inserted"] &gt; div[class="w-100 ng-star-inserted"]&apos;).xy(0.03, 0.42 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c329-93.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-orderEmailId.mat-column-orderEmailId.ng-tns-c329-93.ng-star-inserted &gt; .w-100.ng-star-inserted&apos;).xy(0.03, 0.42 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='verify order email showing as hyphen symbol' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a868d190-7519-4cd3-8831-b90736559226' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='div("-[7]").xy(0.04, 0.61 )' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("ng-star-inserted w-100[3]").xy(0.04, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[13]/div&apos;).xy(0.04, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr/td[13]/div&apos;).xy(0.04, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col customTable&apos;]/avantor-table[@class=&apos;table-container fullWidth ng-tns-c329-93 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c329-93&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c329-93 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c329-93 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-receivingEmailId mat-column-receivingEmailId ng-tns-c329-93 ng-star-inserted&apos;]/div[@class=&apos;w-100 ng-star-inserted&apos;]").xy(0.04, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[13]//div[@class="w-100 ng-star-inserted"]&apos;).xy(0.04, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[13]//div[text()=" - "]&apos;).xy(0.04, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;tr[class="mat-row cdk-row ng-tns-c329-93 striped-rows ng-star-inserted"] &gt; td[class="mat-cell cdk-cell cdk-column-receivingEmailId mat-column-receivingEmailId ng-tns-c329-93 ng-star-inserted"] &gt; div[class="w-100 ng-star-inserted"]&apos;).xy(0.04, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c329-93.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-receivingEmailId.mat-column-receivingEmailId.ng-tns-c329-93.ng-star-inserted &gt; .w-100.ng-star-inserted&apos;).xy(0.04, 0.61 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='Verify Hyphen symbol in set up request template for SAP Output' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ebda4a31-6b90-4e55-a0e8-f11a5401008f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='div("-[4]").xy(0.48, 0.47 )' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("ng-star-inserted text-center w-100[4]").xy(0.48, 0.47 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[8]/div[2]&apos;).xy(0.48, 0.47 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr/td[8]/div[2]&apos;).xy(0.48, 0.47 )' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[8]//div[text()=" - "]&apos;).xy(0.48, 0.47 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='Verify Hypen exist in setup receive template' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a55d6979-1607-4057-97b8-efeabcbbde69' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='div("-[8]").xy(0.50, 0.71 )' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("ng-star-inserted text-center w-100[9]").xy(0.50, 0.71 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[14]/div[2]&apos;).xy(0.50, 0.71 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr/td[14]/div[2]&apos;).xy(0.50, 0.71 )' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[14]//div[text()=" - "]&apos;).xy(0.50, 0.71 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='Verify Hyphen exist in setup order template' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a5594d65-dd07-4af5-9814-ccc8c633f3da' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='div("-[6]").xy(0.47, 0.42 )' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("ng-star-inserted text-center w-100[7]").xy(0.47, 0.42 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[11]/div[2]&apos;).xy(0.47, 0.42 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr/td[11]/div[2]&apos;).xy(0.47, 0.42 )' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[11]//div[text()=" - "]&apos;).xy(0.47, 0.42 )' selected='false' fallback='true'></accessor>
+      </dialect>
     </step>
     <step action='click' value='' type='web' desc='click on ecilips menu' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='527a9a7b-5ded-4bfe-91ee-42b5facba266' uiType='base'>
       <dialect type='sahi'>

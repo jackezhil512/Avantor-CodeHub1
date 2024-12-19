@@ -123,8 +123,8 @@ function search(input){
   //click(button("Add one more", _in(div("accordion-item active"))))
 
   focus(fallback(`button("Add one more")`));
-  wait (10000);
   click2(fallback(`button("Add one more")`));
+   wait (10000);
   click(fallback(`submit("Add to cart")`));
   wait(10000);
   click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));

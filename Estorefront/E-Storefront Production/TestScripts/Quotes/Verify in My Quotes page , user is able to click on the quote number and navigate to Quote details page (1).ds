@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+  <testcase name='' description='script generated from Web Designer' author='Muralikrishna.g@avantorsciences.com' version='webDesigner'>
+    <dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Production/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='53fd9feb-7b5d-4644-98b7-c55fb393a4e1' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0e16ec67-0b37-4390-b056-ba897dfe9e4c' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7407a779-224b-4f35-a66f-2c417b7e6c02' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2de8ed1c-5f50-4bce-b8d8-39db416af700' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d5b7e66c-f157-4d5d-9877-cd3ba07d8595' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='link("Your Orders")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='link(15, _in(header("cx-header")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='link(15, _in(header({&apos;id&apos;:&apos;cx-header&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Your Orders "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[2]/div/div/nav/app-generic-link/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[2]/div/div/nav[1]/app-generic-link/a")' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SiteLogin has-components&apos;]/app-login[1]/div[@class=&apos;loggedIN&apos;]/cx-page-slot[@class=&apos;HeaderLinks has-components&apos;]/app-avtr-navigation[1]/app-avtr-navigation-ui[@class=&apos;accNavComponent flyout&apos;]/nav[1]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[2]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[1]/app-generic-link[1]/a[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;a[href="/ca/en/my-account/orders"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrHref' value='link("/ca/en/my-account/orders")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ac18efc8-3768-40b9-bd6c-7d842872d05f' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='627cda9e-7ccc-4fd6-b452-9d43443c56af' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='link("Last 90 days")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrHref' value='link("/ca/en/my-account/orders?query=:date-desc")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='link({&apos;routerlink&apos;:&apos;./&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;a[href="/ca/en/my-account/orders?query=:date-desc"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='link("active-facet[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='VerifyclickingonthecatalognumberInOrderDetailsPage()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c4802de3-d2b2-4bc1-b8d0-5863959f4836' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='selectWindow' value='"Avantor is setting science in motion for a better world | Avantor"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bf1d9e1d-0ff3-4fff-8686-1ea885ccdd00' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7d06418a-cb51-408c-b351-10f5cb8ed095' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='div("col-3 link-underline").xy(2.59, 0.58 )' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='div("8655189270").xy(2.59, 0.58 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[3]/div[2]/div/div[6]/div/div[1]/span/div&apos;).xy(2.59, 0.58 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="col-3 link-underline"]&apos;).xy(2.59, 0.58 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="8655189270"]&apos;).xy(2.59, 0.58 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div[3]/div[2]/div/div[6]/div/div/span/div&apos;).xy(2.59, 0.58 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-approval-order-details[1]/div[@class=&apos;container p-0&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;order-details-container font-description col-lg-9 col-sm-12 p-0&apos;]/div[@class=&apos;shipping-payment-container container-fluid p-2 pl-3 d-flex pt-4&apos;]/div[@class=&apos;payment-container col-sm-6 p-0 pl-4&apos;]/div[1]/div[@class=&apos;py-2&apos;]/div[@class=&apos;container&apos;]/div[@class=&apos;d-flex justify-content-between py-2&apos;]/span[1]/div[@class=&apos;col-3 link-underline&apos;]").xy(2.59, 0.58 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="col-3 link-underline"]&apos;).xy(2.59, 0.58 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.col-3.link-underline&apos;).xy(2.59, 0.58 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='30690d93-cd14-4aad-a5f1-6d96b40fd336' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrHref' value='link("https://digitalassets.avantorsciences.com/adaptivemedia/rendition?id=14d3adc235dcb2530fc53b6c65c9de591ff522d3&amp;vid=14d3adc235dcb2530fc53b6c65c9de591ff522d3&amp;prid=original&amp;clid=SAPDAM")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='link("24E2862009")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[4]/div[2]/div[4]/div/div[2]/div[3]/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="24E2862009 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div[4]/div[2]/div[4]/div/div[2]/div[3]/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-approval-order-details[1]/div[@class=&apos;container p-0&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;order-details-container font-description col-lg-9 col-sm-12 p-0&apos;]/div[@class=&apos;order-lines-container container-fluid p-0&apos;]/div[@class=&apos;order-lines-header w-100 p-2 pl-3&apos;]/div[@class=&apos;shipped-multiple-container container p-0 d-flex&apos;]/div[@class=&apos;flex-column w-100 pl-4&apos;]/div[@class=&apos;container-fluid py-3 p-0 d-flex justify-content-evenly shipped-items-info&apos;]/div[3]/a[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;a[href="https://digitalassets.avantorsciences.com/adaptivemedia/rendition?id=14d3adc235dcb2530fc53b6c65c9de591ff522d3&amp;vid=14d3adc235dcb2530fc53b6c65c9de591ff522d3&amp;prid=original&amp;clid=SAPDAM"]&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='69409a4e-88b1-42d3-89db-c4f62c74a5c0' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrHref' value='link("https://digitalassets.avantorsciences.com/adaptivemedia/rendition?id=14d3adc235dcb2530fc53b6c65c9de591ff522d3&amp;vid=14d3adc235dcb2530fc53b6c65c9de591ff522d3&amp;prid=original&amp;clid=SAPDAM")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='link("24E2862009")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[4]/div[2]/div[4]/div/div[2]/div[3]/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="24E2862009 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div[4]/div[2]/div[4]/div/div[2]/div[3]/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-approval-order-details[1]/div[@class=&apos;container p-0&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;order-details-container font-description col-lg-9 col-sm-12 p-0&apos;]/div[@class=&apos;order-lines-container container-fluid p-0&apos;]/div[@class=&apos;order-lines-header w-100 p-2 pl-3&apos;]/div[@class=&apos;shipped-multiple-container container p-0 d-flex&apos;]/div[@class=&apos;flex-column w-100 pl-4&apos;]/div[@class=&apos;container-fluid py-3 p-0 d-flex justify-content-evenly shipped-items-info&apos;]/div[3]/a[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;a[href="https://digitalassets.avantorsciences.com/adaptivemedia/rendition?id=14d3adc235dcb2530fc53b6c65c9de591ff522d3&amp;vid=14d3adc235dcb2530fc53b6c65c9de591ff522d3&amp;prid=original&amp;clid=SAPDAM"]&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4fb65461-557a-4f59-9e93-02d1f51ef445' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='span("link-underline[2]")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='span("8630637573[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[4]/div[2]/div[4]/div/div[2]/div[3]/div/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="8630637573"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div[4]/div[2]/div[4]/div/div[2]/div[3]/div/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-approval-order-details[1]/div[@class=&apos;container p-0&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;order-details-container font-description col-lg-9 col-sm-12 p-0&apos;]/div[@class=&apos;order-lines-container container-fluid p-0&apos;]/div[@class=&apos;order-lines-header w-100 p-2 pl-3&apos;]/div[@class=&apos;shipped-multiple-container container p-0 d-flex&apos;]/div[@class=&apos;flex-column w-100 pl-4&apos;]/div[@class=&apos;container-fluid py-3 p-0 d-flex justify-content-evenly shipped-items-info&apos;]/div[3]/div[1]/span[1]/span[@class=&apos;link-underline&apos;]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+  </testcase>

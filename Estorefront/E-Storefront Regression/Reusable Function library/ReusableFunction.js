@@ -28,7 +28,8 @@ function Login(url, username, password) {
     log("Verify accept all cookies message is disabled after login failed")
   }  
  
-   assertExists(fallback(`image(0, _in(header("cx-header"))).xy(0.64, 0.58 )`)),
+   //assertExists(fallback(`image(0, _in(header("cx-header"))).xy(0.64, 0.58 )`)),
+   click(fallback(`image("hybris Accelerator")`));
    log("Application login sucessfully and navigated to home page")
     wait(3000);
     

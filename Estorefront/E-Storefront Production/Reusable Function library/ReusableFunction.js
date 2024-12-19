@@ -1034,17 +1034,20 @@ function VerifyCancelbuttonInOrderdetaispage(){
 }
 
 
-function VerifyRetunbuttonInOrderdetaispage(){
+function VerifyRetunbuttonInOrderdetaispage(input){
 
 
   click(fallback(`label("d-flex justify-content-between search-facet")`));
-  setValue(fallback(`byXPath('//*[@id="search"]')`), "8612823727");
+  setValue(fallback(`byXPath('//*[@id="search"]')`), input);
   click(fallback(`submit({'type':'submit'})`));
-  assertExists(fallback(`link("8612823727")`));
+  //assertExists(fallback(`link("8612823727")`));
+assertExists(fallback(`link("${input}")`));
 
-  var OrderNumber = getText(fallback(`link("8612823727")`));
+  //var OrderNumber = getText(fallback(`link("8612823727")`));
+  var OrderNumber = getText(fallback(`link("${input}")`));
   log(OrderNumber);
-  if (8612823727 == OrderNumber){
+  //if (8612823727 == OrderNumber){
+    if (input == OrderNumber){
  log("Verify OrderNumber is displayed");   
   
   }else{
@@ -1061,7 +1064,7 @@ function VerifyRetunbuttonInOrderdetaispage(){
     log("Verify OrderStatus is Processing is not displayed");
   }  
  
- click(fallback(`link("8612823727")`));
+ click(fallback(`link("${input}")`));
  assertExists(fallback(`div("order-details")`)); 
 
 }

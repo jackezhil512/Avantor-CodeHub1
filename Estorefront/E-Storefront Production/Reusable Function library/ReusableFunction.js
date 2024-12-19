@@ -476,7 +476,8 @@ setShadowDOM(true);
  click(fallback(`link("Custom Catalogs")`));
   wait(10000);
 //click(fallback(`link("QA Automation CC")`));
-click(fallback(`link("Beaker CC CC")`));
+//click(fallback(`link("Beaker CC CC")`));
+click(fallback(`link("cx-link")`));
 //Beaker CC CC
 click(fallback(`heading1("Custom Catalog Details")`));
 click(fallback(`button("+")`));

@@ -1654,6 +1654,49 @@ click(fallback(`byXPath("//span[contains(text(),'Save')]/ancestor::button")`));
 assertExists(fallback(`byXPath('//*[text()=" Integration created successfully "]')`));
 }
 
+function AddIntegrationWithVendorAndOutPutTypeForRequestOrder(Vendor,Stockrom,OutPutType){
+NavigateToIntegrationMaintenance();
+click(fallback(`byXPath("//span[contains(text(),'ADD NEW INTEGRATION')]/ancestor::button")`));
+wait(2000);
+click(fallback(`byXPath("//mat-select[@formcontrolname='vendor']/div[contains(@class, 'mat-select-trigger')]")`));
+wait(2000);
+click(fallback(`byXPath("//span[contains(text(),'${Vendor}') and @class='vendor-option']")`));
+wait(2000);
+setValue(fallback(`byXPath("//h4[contains(text(),'Add New Integration')]")`),"{{TAB}}");
+wait(2000);
+click(fallback(`byXPath("//span[contains(text(),'Exclude Non VWR Vendor Integrations')]")`));
+click(fallback(`byXPath("(//div[contains(text(),'Stockroom')]/span/following::mat-select)[1]")`));
+click(fallback(`byXPath("//span[contains(text(),'${Stockrom}')]/parent::span/preceding-sibling::mat-pseudo-checkbox")`));
+wait(2000);
+setValue(fallback(`byXPath("//h4[contains(text(),'Add New Integration')]")`),"{{TAB}}");
+wait(2000);
+click(fallback(`byXPath("(//div[contains(text(),'Output Type')]/span/following::mat-select)[1]")`));
+click(fallback(`byXPath("//span[contains(text(),'${OutPutType}')]/parent::span")`));
+
+click(fallback(`byXPath("//span[contains(text(),'Next')]/parent::span")`,
+   `byXPath("//span[contains(text(),'Next')]/parent::span")`));
+wait(2000);
+click(fallback(`byXPath("//span[contains(text(),'Request Integration')]/ancestor::label")`));
+wait(2000);
+click(fallback(`byXPath("(//span[contains(text(),'Request Integration') and @class='mat-checkbox-label']/following::div[contains(text(),'Add email')])[1]")`));
+wait(2000);
+setValue(fallback(`byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`,
+   `byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`,
+   `byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`),TempEmail);
+click(fallback(`byXPath("//mat-icon[text()='save']")`));
+   wait(2000);
+click(fallback(`byXPath("//div[@formarrayname='requestCCEmails']//span[text()='add']")`));
+wait(2000);
+setValue(fallback(`byXPath("(//span[contains(text(),'Request Integration') and @class='mat-checkbox-label']/following::input)[2]")`),CCEmail1);
+click(fallback(`byXPath("//mat-icon[text()='save']")`));
+
+wait(4000);
+click(fallback(`byXPath("(//span[contains(text(),'Next')]/ancestor::button)[2]")`));
+wait(4000);
+click(fallback(`byXPath("//span[contains(text(),'Save')]/ancestor::button")`));
+assertExists(fallback(`byXPath('//*[text()=" Integration created successfully "]')`));
+}
+
 function updateResultWithALL() {
 wait(4000);
 click(fallback(`byXPath("(//div[text()=' Vendor ']/following::mat-select)[1]")`));

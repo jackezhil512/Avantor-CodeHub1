@@ -1613,17 +1613,26 @@ wait(2000);
 setValue(fallback(`byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`,
    `byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`,
    `byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`),TempEmail);
+wait(2000);
+click(fallback(`//div[@formarrayname='requestCCEmails']//span[text()='add']`));
+setValue(fallback(`byXPath("(//span[contains(text(),'Request Integration') and @class='mat-checkbox-label']/following::input)[2]")`),TempEmail);
 click(fallback(`byXPath("//mat-icon[text()='save']")`));
 click(fallback(`byXPath("//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']")`));
 click(fallback(`byXPath("(//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']/following::div[contains(text(),'Add email')])[1]")`));
 wait(2000);
 setValue(fallback(`byXPath("(//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']/following::input)[1]")`),TempEmail1);
+wait(2000);
+click(fallback(`//div[@formarrayname='requestCCEmails']//span[text()='add']`));
+setValue(fallback(`byXPath("(//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']/following::input)[2]")`),TempEmail);
 click(fallback(`byXPath("//mat-icon[text()='save']")`));
 wait(2000);
 click(fallback(`byXPath("//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']")`));
 click(fallback(`byXPath("(//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']/following::div[contains(text(),'Add email')])[1]")`));
 wait(2000);
 setValue(fallback(`byXPath("(//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']/following::input)[1]")`),TempEmail2);
+wait(2000);
+click(fallback(`//div[@formarrayname='requestCCEmails']//span[text()='add']`));
+setValue(fallback(`byXPath("(//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']/following::input)[2]")`),TempEmail);
 click(fallback(`byXPath("//mat-icon[text()='save']")`));
 wait(4000);
 click(fallback(`byXPath("(//span[contains(text(),'Next')]/ancestor::button)[2]")`));

@@ -112,7 +112,7 @@ function search(input){
     //click2(fallback(`heading6({'tabindex':'0'})`,));
 
   //click(fallback(`heading6(0, _in(section({'aria-label':'Product Results List'})))`));
-  wait(20000);
+  wait(10000);
   //click(fallback(`button("+")`));
   //click(button("Add one more", _near(button("Add to cart"))))
   click(button("Add one more", _in(div("accordion-item active"))))

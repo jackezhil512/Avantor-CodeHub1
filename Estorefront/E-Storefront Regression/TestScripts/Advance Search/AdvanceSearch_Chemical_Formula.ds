@@ -3,38 +3,38 @@
 <dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Regression/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
-<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='include' value='AdvanceSearch(&quot;8&quot;,$ChemicalNameorSynonym)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='include' value='AdvanceSearch(&quot;8&quot;,$ChemicalNameorSynonym)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='LaunchBrowser($URL)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='LaunchBrowser($URL)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='AdvanceSearch(&quot;1&quot;,$ChemicalNameorSynonym)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='AdvanceSearch(&quot;1&quot;,$ChemicalNameorSynonym)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='OpenReqBillInformation()' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='js' value='OpenReqBillInformation()' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='div(&quot;quick-order-form-input&quot;).xy(0.64, 0.48 )' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-open-req-form/div/open-req-product-search/div/form/div&apos;).xy(0.64, 0.48 )' fallback='true' selected='false'/>
@@ -45,7 +45,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;.product-search-wrap &gt; .quick-order-form-container.ng-valid.ng-submitted.ng-pristine.ng-touched &gt; .quick-order-form-input&apos;).xy(0.64, 0.48 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='"414004-146"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='setValue' value='"414004-146"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='textbox(&quot;form-control ng-dirty ng-touched ng-valid&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-open-req-form/div/open-req-product-search/div/form/div/input&apos;)' fallback='true' selected='false'/>
@@ -57,7 +57,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;.product-search-wrap &gt; .quick-order-form-container.ng-valid.ng-submitted.ng-touched.ng-dirty &gt; .quick-order-form-input &gt; .form-control.ng-valid.ng-touched.ng-dirty&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='div([&quot;VWR®, Graduated Beakers, Polypropyl&quot;]).xy(0.41, 0.53 )' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-open-req-form/div/open-req-product-search/div/form/div[2]/ul/li[1]/button/div&apos;).xy(0.41, 0.53 )' fallback='true' selected='false'/>
@@ -70,7 +70,7 @@
    <accessor type='AttrClass' value='div(&quot;name text-bold&quot;).xy(0.41, 0.53 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='div(&quot;1      414004-146&quot;).xy(0.51, 0.58 )' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-open-req-form/div/open-req-product-table/div/div[2]/app-avtr-open-req-product-item/div/div[1]/div/div[2]&apos;).xy(0.51, 0.58 )' fallback='true' selected='false'/>
@@ -82,7 +82,7 @@
    <accessor type='AttrClass' value='div(&quot;col-6 col-md-12&quot;).xy(0.51, 0.58 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='submit(&quot;btn btn-primary open-req-submit&quot;)' fallback='true' selected='true'/>
    <accessor type='Text' value='submit(&quot;Submit&quot;)' fallback='true' selected='false'/>
@@ -95,7 +95,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;.container &gt; .d-flex.justify-content-md-end.mr-md-5.my-2 &gt; .btn.btn-primary.open-req-submit&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='heading3(&quot;Cart Summary&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-cart-total/div/h3&apos;)' fallback='true' selected='false'/>
@@ -104,7 +104,7 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;CartPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;CenterRightContentSlot has-components&apos;]/app-avtr-cart-total[1]/div[@class=&apos;cart-totals-container&apos;]/h3[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='div(&quot;standard-header&quot;).xy(0.21, 0.50 )' fallback='true' selected='true'/>
    <accessor type='Text' value='div(&quot;Standard Products&quot;).xy(0.21, 0.50 )' fallback='true' selected='false'/>
@@ -117,7 +117,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;.standard-header&apos;).xy(0.21, 0.50 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;Proceed to Checkout&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-cart-total/div/div[2]/button[2]&apos;)' fallback='true' selected='false'/>
@@ -130,7 +130,7 @@
    <accessor type='AttrClass' value='submit(&quot;btn btn-block btn-primary&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='heading3(&quot;Order Summary&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-checkout-order-summary/div/h3&apos;)' fallback='true' selected='false'/>
@@ -139,7 +139,7 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;MultiStepCheckoutSummaryPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;MultiStepCheckoutSummaryPageTemplate&apos;]/cx-page-slot[@class=&apos;SideContent has-components&apos;]/app-avtr-checkout-order-summary[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;avtr-order-summary-container mx-md-4 ng-star-inserted&apos;]/h3[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-checkout-delivery-address/div/div/div/div/div/app-feature-bundle-selector-ui/div/div/ng-select/div/div/div[2]&apos;).xy(0.66, 0.44 )' fallback='true' selected='true'/>
    <accessor type='Parent' value='div(3, _in(custom(&quot;ng-select&quot;, {&apos;id&apos;:&apos;inputControl&apos;}))).xy(0.66, 0.44 )' fallback='true' selected='false'/>
@@ -152,7 +152,7 @@
    <accessor type='Parent' value='div(3, _in(custom(&quot;ng-select&quot;, &quot;inputControl&quot;))).xy(0.66, 0.44 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;ship to&quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='Text' value='custom(&quot;ng-dropdown-panel&quot;, &quot;ship to&quot;)' fallback='true' selected='false'/>
@@ -190,7 +190,7 @@
    <accessor type='AttrClass' value='custom(&quot;ng-dropdown-panel&quot;, &quot;ng-dropdown-panel ng-select-bottom ng-star-inserted&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='custom(&quot;cx-page-layout&quot;, &quot;MultiStepCheckoutSummaryPageTemplate&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout&apos;)' fallback='true' selected='false'/>
@@ -201,7 +201,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;.MultiStepCheckoutSummaryPageTemplate.stop-navigating &gt; .mouse-focus &gt; .MultiStepCheckoutSummaryPageTemplate&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;Continue to Payment&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-checkout-order-summary/div/button&apos;)' fallback='true' selected='false'/>
@@ -215,7 +215,7 @@
    <accessor type='AttrClass' value='submit(&quot;btn btn-block btn-primary mt-4&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='span(&quot;Purchase Order&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-payment-method/app-avtr-payment-methods/div/div[1]/div[2]/div/label/span&apos;)' fallback='true' selected='false'/>
@@ -224,7 +224,7 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating MultiStepCheckoutSummaryPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;MultiStepCheckoutSummaryPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-payment-method[@class=&apos;ng-star-inserted&apos;]/app-avtr-payment-methods[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;container payment-container row&apos;]/div[@class=&apos;col-12 col-sm-6 payment-container pl-0 ng-star-inserted&apos;]/div[@class=&apos;payment-options-radio ng-star-inserted&apos;]/div[@class=&apos;checkboxes py-1 ng-star-inserted&apos;]/label[@class=&apos;text-color&apos;]/span[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='span(&quot;Purchase Order&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-payment-method/app-avtr-payment-methods/div/div[1]/div[2]/div/label/span&apos;)' fallback='true' selected='false'/>
@@ -233,7 +233,7 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating MultiStepCheckoutSummaryPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;MultiStepCheckoutSummaryPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-payment-method[@class=&apos;ng-star-inserted&apos;]/app-avtr-payment-methods[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;container payment-container row&apos;]/div[@class=&apos;col-12 col-sm-6 payment-container pl-0 ng-star-inserted&apos;]/div[@class=&apos;payment-options-radio ng-star-inserted&apos;]/div[@class=&apos;checkboxes py-1 ng-star-inserted&apos;]/label[@class=&apos;text-color&apos;]/span[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-payment-method/div/div[2]/div/div/div/app-feature-bundle-selector-ui/div/div/ng-select/div/div/div[2]&apos;).xy(0.88, 0.71 )' fallback='true' selected='true'/>
    <accessor type='Parent' value='div(3, _in(custom(&quot;ng-select&quot;, {&apos;id&apos;:&apos;inputControl&apos;}))).xy(0.88, 0.71 )' fallback='true' selected='false'/>
@@ -246,7 +246,7 @@
    <accessor type='Parent' value='div(3, _in(custom(&quot;ng-select&quot;, &quot;inputControl&quot;))).xy(0.88, 0.71 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;P0 1P0 2&quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='Text' value='custom(&quot;ng-dropdown-panel&quot;, &quot;P0 1P0 2&quot;)' fallback='true' selected='false'/>
@@ -284,7 +284,7 @@
    <accessor type='AttrClass' value='custom(&quot;ng-dropdown-panel&quot;, &quot;ng-dropdown-panel ng-select-bottom ng-star-inserted&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-payment-method/div/div[2]/div/div/div[2]/app-feature-bundle-selector-ui/div/div/ng-select/div/div/div[2]&apos;).xy(0.59, 0.56 )' fallback='true' selected='true'/>
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating MultiStepCheckoutSummaryPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;MultiStepCheckoutSummaryPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-payment-method[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;pt-2 ng-star-inserted&apos;]/div[@class=&apos;container payment-container d-flex pl-0 pt-2&apos;]/div[@class=&apos;col-sm-6 col-xs-12&apos;]/div[@class=&apos;dropdowns-container mt-2 mb-2 ng-star-inserted&apos;]/div[@class=&apos;no-padding mb-3 ng-star-inserted&apos;]/app-feature-bundle-selector-ui[1]/div[@class=&apos;col-12 col-sm-6 no-padding requiredField ng-star-inserted&apos;]/div[@class=&apos;feature-bundle-input ng-untouched ng-pristine ng-invalid ng-star-inserted&apos;]/ng-select[@id=&apos;inputControl&apos;]/div[@class=&apos;ng-select-container&apos;]/div[@class=&apos;ng-value-container&apos;]/div[@class=&apos;ng-input&apos;]&quot;).xy(0.59, 0.56 )' fallback='true' selected='false'/>
@@ -293,7 +293,7 @@
    <accessor type='AttrClass' value='div(&quot;ng-input[2]&quot;).xy(0.59, 0.56 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='div(&quot;Charge code 1&quot;).xy(0.59, 0.62 )' fallback='true' selected='true'/>
    <accessor type='Parent' value='div(3, _in(custom(&quot;ng-dropdown-panel&quot;, {&apos;aria-label&apos;:&apos;Options list&apos;}))).xy(0.59, 0.62 )' fallback='true' selected='false'/>
@@ -308,7 +308,7 @@
    <accessor type='Parent' value='div(3, _in(custom(&quot;ng-dropdown-panel&quot;, &quot;a90b20996ec8&quot;))).xy(0.59, 0.62 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='submit(&quot;btn btn-block btn-primary mt-4 ng-star-inserted&quot;)' fallback='true' selected='true'/>
    <accessor type='Text' value='submit(&quot;Review Order&quot;)' fallback='true' selected='false'/>
@@ -322,7 +322,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;.MultiStepCheckoutSummaryPageTemplate &gt; .SideContent.has-components &gt; .ng-star-inserted &gt; .avtr-order-summary-container.mx-md-4.ng-star-inserted &gt; .btn.btn-primary.btn-block.mt-4.ng-star-inserted&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='heading1(&quot;email-header mb-3 mt-3&quot;)' fallback='true' selected='true'/>
    <accessor type='Text' value='heading1(&quot;Email Notifications&quot;)' fallback='true' selected='false'/>
@@ -335,7 +335,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;.MultiStepCheckoutSummaryPageTemplate &gt; .BodyContent.has-components &gt; .ng-star-inserted &gt; .review-order.border-bottom.mb-3.ng-star-inserted &gt; .email-header.mt-3.mb-3&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;Place Order&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-checkout-order-summary/div/button&apos;)' fallback='true' selected='false'/>
@@ -349,7 +349,7 @@
    <accessor type='AttrClass' value='submit(&quot;btn btn-block btn-primary mt-4 ng-star-inserted&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='div(&quot;Your web tracking number is&quot;).xy(-0.00, 0.47 )' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-order-confirmation-thank-you-message/div[1]/div/div[1]/div[2]/div[1]&apos;).xy(-0.00, 0.47 )' fallback='true' selected='false'/>

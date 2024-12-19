@@ -32,7 +32,7 @@
     <resource name="E-Storefront Production" type="folder" path="{scenario}/"/>
   </resources>
   <testnodes>
-    <node name="localhost" location="https://vwr.appvance.net:/TMServer/ws/TestNode"/>
+    <node name="localhost" location="http://3.143.160.233:8080/TMServer/ws/TestNode"/>
   </testnodes>
   <bundles>
     <bundle name="hibernate" version="3.0"/>
@@ -153,30 +153,23 @@
     <controller name="Iteration1">
       <round iterations="1" totalusers="1"/>
     </controller>
-    <testcase name="Advance Search" importance="normal">
+    <testcase name="OrderEntry" importance="normal">
       <test>
-        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/Advance Search/" method="ds" testclass="Chrome" regex="*.ds">
+        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/OrderEntry/" method="ds" testclass="Chrome" regex="*.ds">
           <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
         </run>
       </test>
     </testcase>
-    <testcase name="Cart-Module" importance="normal">
+    <testcase name="Orders" importance="normal">
       <test>
-        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/Cart-Module/" method="ds" testclass="Chrome" regex="*.ds">
+        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/Orders/" method="ds" testclass="Chrome" regex="*.ds">
           <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
         </run>
       </test>
     </testcase>
-    <testcase name="CheckOut" importance="normal">
+    <testcase name="Productpage" importance="normal">
       <test>
-        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/CheckOut/" method="ds" testclass="Chrome" regex="*.ds">
-          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
-        </run>
-      </test>
-    </testcase>
-    <testcase name="Login" importance="normal">
-      <test>
-        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/Login/" method="ds" testclass="Chrome" regex="*.ds">
+        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/Productpage/" method="ds" testclass="Chrome" regex="*.ds">
           <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
         </run>
       </test>
@@ -187,10 +180,9 @@
   <monitoring enablednodes="true" enabledtarget="false"/>
   <execution type="functionaltest" subtype="bulk">
     <iteration name="Iteration1" controller="Iteration1">
-      <testcase name="Advance Search" users="1" totalexecutions="1"/>
-      <testcase name="Cart-Module" users="1" totalexecutions="1"/>
-      <testcase name="CheckOut" users="1" totalexecutions="1"/>
-      <testcase name="Login" users="1" totalexecutions="1"/>
+      <testcase name="OrderEntry" users="1" totalexecutions="1"/>
+      <testcase name="Orders" users="1" totalexecutions="1"/>
+      <testcase name="Productpage" users="1" totalexecutions="1"/>
     </iteration>
   </execution>
   <logs/>

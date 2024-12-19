@@ -548,10 +548,10 @@ log (CatlogNumberInCartpage);
 
  if(CatlogNumberShoppinglistdetailspage == CatlogNumberInCartpage){
     wait(3000);
- log("customcatlog number which added in customcatlog details page the same added in to in cartpage");   
+ log("customcatlog number which added in Shopping details page the same added in to in cartpage");   
  
   }else{
-    log("Catlognumber is not same in cart page")
+    log("shopping cart page Catlognumber is not same in cart page")
   }
  
 

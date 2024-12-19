@@ -1,93 +1,38 @@
 <?xml version='1.0' encoding='UTF-8'?>
-  <testcase name='' description='script generated from Web Designer' author='Muralikrishna.g@avantorsciences.com' version='webDesigner'>
-    <dpl filename='{ds}/../../TestData/InputSheet_Production_US.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'></dpl>
-    <fallback useFallback='true'></fallback>
-    <shadowDOM useShadowDOM='true'></shadowDOM>
-    <step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2a0302e2-5863-4111-bb45-12446783942b' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7c3ec861-c6a3-46e7-9047-fa903261a2fe' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8467cc4c-b1e4-4546-851a-0bffa15b9cd2' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='71866858-d407-4432-ac50-a29823c3552d' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='ClearCart()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bf7f30e6-56bd-4e04-9bf8-cdaf522d84fe' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0c81c73a-79d7-451e-b013-11675714cbd5' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='AttrHref' value='link("/us/en/my-account/shopping-lists")' selected='true' fallback='true'></accessor>
-        <accessor type='Text' value='link("Shopping Lists")' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value='byXPath("//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[4]/app-generic-link/a")' selected='false' fallback='true'></accessor>
-        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Shopping Lists "]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[4]/app-generic-link/a&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value='byXPath("id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SiteLogin has-components&apos;]/app-login[1]/div[@class=&apos;loggedIN&apos;]/cx-page-slot[@class=&apos;HeaderLinks has-components&apos;]/app-avtr-navigation[1]/app-avtr-navigation-ui[@class=&apos;accNavComponent flyout&apos;]/nav[1]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[4]/app-generic-link[1]/a[1]")' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;a[href="/us/en/my-account/shopping-lists"]&apos;)' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='250c77bf-52cf-4b04-8b7c-aa034c2205a4' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='Parent' value='path(0, _in(submit("hj-survey-toggle-1"))).xy(0.42, 0.05 )' selected='true' fallback='true'></accessor>
-        <accessor type='Parent' value='path(0, _in(submit({&apos;aria-label&apos;:&apos;Hide survey&apos;}))).xy(0.42, 0.05 )' selected='false' fallback='true'></accessor>
-        <accessor type='Attribute' value='path({&apos;fill&apos;:&apos;#3e4a44&apos;}).xy(0.42, 0.05 )' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0b39bc95-0d94-4e85-a700-52bd9503735f' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='AttrClass' value='link("cx-action-link cx-link")' selected='true' fallback='true'></accessor>
-        <accessor type='AttrHref' value='link("/us/en/my-account/shopping-list-details?shoppingListId=412a7b21-f077-4708-bcfd-876d34195875")' selected='false' fallback='true'></accessor>
-        <accessor type='Text' value='link("TestAutomation29")' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-shopping-lists/div[2]/div[2]/app-shopping-lists-items-ui/div/div/div/div[1]/div/a&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="cx-link cx-action-link"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" TestAutomation29 "]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-shopping-lists/div[2]/div[2]/app-shopping-lists-items-ui/div/div/div/div/div/a&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner&apos;]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-shopping-lists[1]/div[@class=&apos;mb-5 container&apos;]/div[2]/app-shopping-lists-items-ui[1]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-md-12 shopping-lists-row&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;shopping-lists-items col-md-4 col-lg-4 col-xl-4&apos;]/div[@class=&apos;cx-value custom-catalog-name&apos;]/a[@class=&apos;cx-link cx-action-link&apos;]")' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;div[class="col-12 col-md-12 shopping-lists-row"] &gt; div[class="row"] &gt; div[class="shopping-lists-items col-md-4 col-lg-4 col-xl-4"] &gt; div[class="cx-value custom-catalog-name"] &gt; a[class="cx-link cx-action-link"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;.col-12.col-md-12.shopping-lists-row &gt; .row &gt; .shopping-lists-items.col-md-4.col-lg-4.col-xl-4 &gt; .cx-value.custom-catalog-name &gt; .cx-link.cx-action-link&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;a[href="/us/en/my-account/shopping-list-details?shoppingListId=412a7b21-f077-4708-bcfd-876d34195875"]&apos;)' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9b7e0f73-36a0-48de-8d36-269ac90a3718' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='AttrClass' value='checkbox("ng-pristine ng-untouched ng-valid")' selected='true' fallback='true'></accessor>
-        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-shopping-list-details/div[5]/div/app-shopping-list-cart-items-ui/div/div/div/div[1]/div[1]/div/form/input&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-shopping-list-details/div[5]/div/app-shopping-list-cart-items-ui/div/div/div/div/div/div/form/input&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner&apos;]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-shopping-list-details[1]/div[@class=&apos;pl-2 pr-2&apos;]/div[1]/app-shopping-list-cart-items-ui[1]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-md-12 shopping-list-details-row&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;shopping-list-details-items col-md-6 col-lg-6 col-xl-6&apos;]/div[@class=&apos;shopping-list-details-desktop-view ml-5&apos;]/div[@class=&apos;d-flex&apos;]/form[@class=&apos;ng-untouched ng-pristine ng-valid&apos;]/input[@class=&apos;ng-untouched ng-pristine ng-valid&apos;]")' selected='false' fallback='true'></accessor>
-        <accessor type='Attribute' value='checkbox({&apos;type&apos;:&apos;checkbox&apos;})' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;div[class="shopping-list-details-items col-md-6 col-lg-6 col-xl-6"] &gt; div[class="shopping-list-details-desktop-view ml-5"] &gt; div[class="d-flex"] &gt; form[class="ng-untouched ng-pristine ng-valid"] &gt; input[class="ng-untouched ng-pristine ng-valid"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;.shopping-list-details-items.col-md-6.col-lg-6.col-xl-6 &gt; .shopping-list-details-desktop-view.ml-5 &gt; .d-flex &gt; .ng-untouched.ng-pristine.ng-valid &gt; .ng-untouched.ng-pristine.ng-valid&apos;)' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e0cb0cc2-f630-4f05-90dc-4d7f223084d0' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='Text' value='heading1("Personal Shopping List Details")' selected='true' fallback='true'></accessor>
-        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-shopping-list-details/h1&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Personal Shopping List Details"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-shopping-list-details/h1&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner&apos;]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-shopping-list-details[1]/h1[1]")' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e68de1d7-60c3-4999-9686-b68a8910fb3d' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='AttrClass' value='submit("add-to-cart btn btn-primary mt-2")' selected='true' fallback='true'></accessor>
-        <accessor type='Text' value='submit("Add To Cart")' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-shopping-list-details/button&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="btn btn-primary mt-2 add-to-cart"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-shopping-list-details/button&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner&apos;]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-shopping-list-details[1]/button[@class=&apos;btn btn-primary mt-2 add-to-cart&apos;]")' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;button[class="btn btn-primary mt-2 add-to-cart"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;.btn.btn-primary.mt-2.add-to-cart&apos;)' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='js' value='Verifyaddtocartfromshoppinglistdetailspage()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='35517ba7-2780-4e43-bbc6-abda46b90e1f' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-  </testcase>
+<testcase   name= 'Verify if user is able to add to cart from shopping list details page.ds' description= '' author= 'appvance' version= ''>
+<dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Production/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='ClearCart()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='Verifyaddtocartfromshoppinglistdetailspage()' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+</testcase>

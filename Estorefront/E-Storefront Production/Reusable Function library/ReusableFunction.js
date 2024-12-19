@@ -119,9 +119,9 @@ function search(input){
   //click(fallback(`button("+")`));
   //click(button("Add one more", _near(button("Add to cart"))))
 
-  wait(30000, 'isVisible(button("Add one more"))');
+  //wait(30000, 'isVisible(button("Add one more"))');
   //click(button("Add one more", _in(div("accordion-item active"))))
-  click(fallback(`button("Add one more")`));
+  click2(fallback(`button("Add one more")`));
   click(fallback(`submit("Add to cart")`));
   wait(10000);
   click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));

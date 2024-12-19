@@ -3,12 +3,12 @@
 <dpl filename='REPOSITORY/Estorefront/E-Storefront Regression/Test Data/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
-<step action='include' value='"https://p2.avantorsciences.com/ca/en/advanced-search"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='include' value='"https://p2.avantorsciences.com/ca/en/advanced-search"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='LaunchBrowser($URL)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='LaunchBrowser($URL)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='submit(&quot;btn btn-block btn-primary font-bold&quot;)' fallback='true' selected='true'/>
    <accessor type='Text' value='submit(&quot;Accept all cookies&quot;)' fallback='true' selected='false'/>
@@ -22,7 +22,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;.consent-banner &gt; .cookie-content &gt; .row &gt; .col-md-5.col-lg-4.col-xs-12.consent-margin.mt-3 &gt; .btn.btn-primary.btn-block.font-bold&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='SDSSearch(&quot;0&quot;,$SDS_Keyword)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='SDSSearch(&quot;0&quot;,$SDS_Keyword)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='submit(&quot;SDS Search&quot;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='submit(1, _in(div({&apos;id&apos;:&apos;ProductDetail&apos;})))' fallback='true' selected='false'/>
@@ -36,7 +36,7 @@
    <accessor type='Parent' value='submit(1, _in(div(&quot;ProductDetail&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='link(&quot;hide-mobile&quot;)' fallback='true' selected='true'/>
    <accessor type='AttrHref' value='link(&quot;https://qa.digitalassets.avantorsciences.com/adaptivemedia/rendition?id=541b9bf74cf1f9e2492d983f7d3ba84521daa454&amp;vid=541b9bf74cf1f9e2492d983f7d3ba84521daa454&amp;prid=original&amp;clid=SAPDAM&quot;)' fallback='true' selected='false'/>

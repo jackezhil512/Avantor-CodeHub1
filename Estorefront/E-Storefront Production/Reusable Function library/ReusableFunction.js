@@ -111,7 +111,7 @@ function search(input){
   //click2(fallback(`heading6(/Expand.*/)`));
   click2(fallback(`heading6(["Expand"])`));
   
-  click(fallback(`byXPath("(//h6[@class='accordion-heading'])[1]")`));
+  //click(fallback(`byXPath("(//h6[@class='accordion-heading'])[1]")`));
     //click2(fallback(`heading6({'tabindex':'0'})`,));
    wait(5000, 'isVisible(byXPath("(//h6[@class="accordion-heading"])[1]"))');
   //click(fallback(`heading6(0, _in(section({'aria-label':'Product Results List'})))`));

@@ -517,7 +517,8 @@ function VerifyAddProductToCartFromPersonalShoppingList(){
   click(fallback(`submit("Search")`));
   wait (10000);
   //click(fallback(`link("cx-link[1]")`));
-  click(fallback(`byXPath('//*[@class="Add To Cart"]')`));
+  //click(fallback(`byXPath('//*[@class="Add To Cart"]')`));
+   click(fallback(`link("Add To Cart")`));
 
   //assertExists(fallback(`link("10536-518[1]")`));
   assertExists(fallback(`heading3("Cart Summary")`));

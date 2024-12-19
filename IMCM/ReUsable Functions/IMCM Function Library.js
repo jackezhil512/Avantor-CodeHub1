@@ -1636,10 +1636,10 @@ click(fallback(`byXPath("(//span[contains(text(),'Order Integration') and @class
 wait(2000);
 setValue(fallback(`byXPath("(//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']/following::input)[1]")`),TempEmail1);
 click(fallback(`byXPath("//mat-icon[text()='save']")`));
-wait(2000);
+
    wait(2000);
 click(fallback(`byXPath("//div[@formarrayname='orderCCEmails']//span[text()='add']")`));
-
+wait(2000);
 setValue(fallback(`byXPath('//*[@id="mat-input-39"]')`,
    `textbox("cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-invalid ng-tns-c49-135 ng-untouched")`,
    `textbox("mat-input-39")`,
@@ -1649,8 +1649,9 @@ setValue(fallback(`byXPath('//*[@id="mat-input-39"]')`,
    `byXPath("id('mat-input-39')")`,
    `byJQuery('mat-form-field[class="mat-form-field w-50 ng-tns-c49-135 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-star-inserted mat-focused ng-dirty ng-invalid"] > div[class="mat-form-field-wrapper ng-tns-c49-135"] > div[class="mat-form-field-flex ng-tns-c49-135"] > div[class="mat-form-field-infix ng-tns-c49-135"] > input[class="mat-input-element mat-form-field-autofill-control ng-tns-c49-135 ng-untouched cdk-text-field-autofill-monitored ng-dirty ng-invalid"]')`,
    `byJQuery('#mat-input-39')`),"test2@gmail.com");
+   wait(2000);
 click(fallback(`byXPath("//mat-icon[text()='save']")`));
-
+wait(2000);
 
 click(fallback(`byXPath("//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']")`));
 click(fallback(`byXPath("(//span[contains(text(),'Receiving Integration') and @class='mat-checkbox-label']/following::div[contains(text(),'Add email')])[1]")`));
@@ -1670,6 +1671,7 @@ setValue(fallback(`byXPath('//*[@id="mat-input-40"]')`,
    `textbox({'type':'text'})`,
    `byJQuery('mat-form-field[class="mat-form-field w-50 ng-tns-c49-136 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-star-inserted mat-focused ng-dirty ng-invalid"] > div[class="mat-form-field-wrapper ng-tns-c49-136"] > div[class="mat-form-field-flex ng-tns-c49-136"] > div[class="mat-form-field-infix ng-tns-c49-136"] > input[class="mat-input-element mat-form-field-autofill-control ng-tns-c49-136 ng-untouched cdk-text-field-autofill-monitored ng-dirty ng-invalid"]')`,
    `byJQuery('#mat-input-40')`),"test3@gmail.com");
+   wait(2000);
 click(fallback(`byXPath("//mat-icon[text()='save']")`));
 wait(4000);
 click(fallback(`byXPath("(//span[contains(text(),'Next')]/ancestor::button)[2]")`));

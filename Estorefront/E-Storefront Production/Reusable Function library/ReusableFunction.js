@@ -729,21 +729,19 @@ function NavigatetoProductpagetoSearch(input){
 
 
 function ValidateAccessoriescatlogNumber(){
-
-click(fallback(`submit("Accessories")`));
-wait(5000);
-var Accessoriescatlognumber=getText(div("font-bold catalog-font"));
-log (Accessoriescatlognumber);
-wait(5000);
-click(fallback(`button("+[24]")`));
-wait(2000);
-click(fallback(`submit("Add to cart[1]")`));
-wait (2000)
-click(fallback(`button("+[1]")`));
-click(fallback(`submit("btn btn-block btn-primary font-bold[1]")`));
-
-
-  
+  setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
+ setShadowDOM(true); 
+ click(fallback(`submit("Accessories")`));
+ wait(5000);
+ var Accessoriescatlognumber=getText(div("font-bold catalog-font"));
+ log (Accessoriescatlognumber);
+ wait(5000);
+ click(fallback(`button("+[24]")`));
+ wait(2000);
+ click(fallback(`submit("Add to cart[1]")`));
+ wait (2000)
+ click(fallback(`button("+[1]")`));
+ click(fallback(`submit("btn btn-block btn-primary font-bold[1]")`)); 
 }
 
 

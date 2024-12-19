@@ -493,7 +493,7 @@ log (CatlogNumberInCartpage);
 
  if(Customcatlognumber == CatlogNumberInCartpage){
     wait(3000);
- log("Verifyed catlognumber in cartpage");   
+ log("customcatlog number which added in customcatlog details page the same added in cartpage");   
  
   }else{
     log("Catlognumber is not same in cart page")

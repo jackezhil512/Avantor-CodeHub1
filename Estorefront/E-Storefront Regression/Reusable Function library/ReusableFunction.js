@@ -589,7 +589,9 @@ function OrderEntryEmptyPartNumberValidation(input){
   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
   setShadowDOM(true);
   wait(5000);
-  click(fallback(`link("Custom Catalogs")`));
+  //click(fallback(`link("Custom Catalogs")`));
+  click(fallback(`link("cx-link")`));
+  
     wait(10000);
   click(fallback(`link("QA Automation CC")`));
   click(fallback(`heading1("Custom Catalog Details")`));

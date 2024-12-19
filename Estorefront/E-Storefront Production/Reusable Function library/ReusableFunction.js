@@ -105,7 +105,7 @@ function search(input){
   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
    setShadowDOM(true); 
   setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
-  setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
+  setValue(fallback(`textbox(0, _in(header("cx-header")))`), "{{ENTER}}");
   //click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
   wait(10000);
   //click2(fallback(`heading6(/Expand.*/)`));

@@ -731,7 +731,7 @@ function NavigatetoProductpagetoSearch(input){
 function ValidateAccessoriescatlogNumber(){
 
 click(fallback(`submit("Accessories")`));
-wait(5000)
+wait(5000);
 var Accessoriescatlognumber=getText(div("font-bold catalog-font"));
 log (Accessoriescatlognumber);
 wait(5000);

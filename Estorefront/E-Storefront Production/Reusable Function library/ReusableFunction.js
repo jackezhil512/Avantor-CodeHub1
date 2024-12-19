@@ -43,7 +43,7 @@ function AdvanceSearch(Index,input) {
   	click(fallback(`submit("Search")`));
  // assertExists(fallback(`heading1("//*You searched for: ${input}")`));
   //assertExists(fallback(`heading2(0, _in(section({'aria-label':'Product Results List'})))`));
-  assertExists(fallback(`byXPath('//*[@class="cx-product-name"[1]]')`));
+  assertExists(fallback(`byXPath('//*[@class="cx-product-name"]')[1]`));
                    
  }
 

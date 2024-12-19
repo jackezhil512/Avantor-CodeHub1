@@ -104,18 +104,23 @@ function ManufacturerSearch(Index0,input0,Index1,input1,Index2,input2){
 function search(input){
   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
    setShadowDOM(true); 
-  setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
-  click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
+  setValue(fallback(`textbox(0, _in(header("cx-header")))`), ,"beakers{{ENTER}}");
+  //click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
   wait(10000);
   //click2(fallback(`heading6(/Expand.*/)`));
+  
+  
   click(fallback(`byXPath("(//h6[@class='accordion-heading'])[1]")`));
     //click2(fallback(`heading6({'tabindex':'0'})`,));
-
+   wait(5000, 'isVisible(byXPath("(//h6[@class="accordion-heading"])[1]"))');
   //click(fallback(`heading6(0, _in(section({'aria-label':'Product Results List'})))`));
   wait(10000);
   //click(fallback(`button("+")`));
   //click(button("Add one more", _near(button("Add to cart"))))
-  click(button("Add one more", _in(div("accordion-item active"))))
+
+  wait(30000, 'isVisible(button("Add one more"))');
+  //click(button("Add one more", _in(div("accordion-item active"))))
+  click(fallback(`button("Add one more")`));
   click(fallback(`submit("Add to cart")`));
   wait(10000);
   click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));

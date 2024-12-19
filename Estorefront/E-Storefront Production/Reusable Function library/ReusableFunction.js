@@ -573,6 +573,7 @@ function AddTwoProducts(input){
  // click(fallback(`button[@aria-label="Add one more"])`));
   //button[@aria-label="Add one more"])
   //lick(fallback(`button("Create & Add")`));
+  click(fallback(`button("Add one more")`));
   assertExists(fallback(`button("+"),_above(submit("Add to cart"))`));
   click(fallback(`submit("Add to cart")`));
   wait(10000);

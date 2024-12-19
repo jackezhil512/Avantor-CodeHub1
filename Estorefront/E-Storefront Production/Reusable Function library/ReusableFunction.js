@@ -110,7 +110,7 @@ function search(input){
   wait(10000);
   //click2(fallback(`heading6(/Expand.*/)`));
   click2(fallback(`heading6(["Expand"])`));
-  wait (5000);
+  //wait (5000);
   //browser.refresh();
   //click(fallback(`byXPath("(//h6[@class='accordion-heading'])[1]")`));
     //click2(fallback(`heading6({'tabindex':'0'})`,));

@@ -119,8 +119,9 @@ function search(input){
   //click(fallback(`button("+")`));
   //click(button("Add one more", _near(button("Add to cart"))))
 
-  wait(30000, 'isVisible(button("Add one more"))');
+ // wait(30000, 'isVisible(button("Add one more"))');
   //click(button("Add one more", _in(div("accordion-item active"))))
+  //click2(`button("Add one more")`);
   click2(fallback(`button("Add one more")`));
   click2(fallback(`submit("Add to cart")`));
   wait(10000);

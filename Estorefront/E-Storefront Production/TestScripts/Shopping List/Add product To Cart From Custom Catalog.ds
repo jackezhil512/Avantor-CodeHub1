@@ -1,47 +1,44 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'Add product To Cart From Custom Catalog.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../../TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='false' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='CustomCatlogAddProductToCart()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='Cartpage CatlogNumber Link' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='link(&quot;cart-catalog-link-color cx-link&quot;)' fallback='true' selected='true'/>
-   <accessor type='AttrHref' value='link(&quot;/ca/en/product/6064875/vwr-ziptop-bubble-6x8-cs50[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='Text' value='link(&quot;89072-316[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-cart-details/div[3]/app-avtr-cart-item-list/div[4]/div/app-avtr-cart-item/div[1]/div/div[1]/div[1]/div[2]/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cx-link cart-catalog-link-color&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; 89072-316&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/div[3]/app-avtr-cart-item-list/div[4]/div/app-avtr-cart-item/div/div/div/div/div[2]/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;CartPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;TopContent has-components&apos;]/app-avtr-cart-details[1]/div[@class=&apos;cart-details-wrapper&apos;]/app-avtr-cart-item-list[1]/div[@class=&apos;cx-item-list-row&apos;]/div[@class=&apos;cx-item-list-items&apos;]/app-avtr-cart-item[1]/div[1]/div[@class=&apos;cx-info&apos;]/div[@class=&apos;align-items-center cx-info-container row&apos;]/div[@class=&apos;product-info col-md-3 col-lg-3 col-xl-3&apos;]/div[@class=&apos;cx-code d-none d-xl-block d-md-block d-lg-block&apos;]/a[@class=&apos;cx-link cart-catalog-link-color&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;cx-info&quot;] &gt; div[class=&quot;align-items-center cx-info-container row&quot;] &gt; div[class=&quot;product-info col-md-3 col-lg-3 col-xl-3&quot;] &gt; div[class=&quot;cx-code d-none d-xl-block d-md-block d-lg-block&quot;] &gt; a[class=&quot;cx-link cart-catalog-link-color&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.cx-info &gt; .align-items-center.cx-info-container.row &gt; .product-info.col-md-3.col-lg-3.col-xl-3 &gt; .cx-code.d-none.d-xl-block.d-md-block.d-lg-block &gt; .cx-link.cart-catalog-link-color&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='Muralikrishna.g@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../../TestData/InputSheet_Production_US.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1d902353-10e5-4705-aa88-516c84d15df0' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='false' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f5664b7e-e869-4767-b678-96ae2b54dd0c' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c8d53b9e-032e-4a14-9b1e-1aa06f99f9ea' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b61a6b3a-e678-4da7-85a3-fd4a6fac4e73' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ClearCart()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f7b805ae-f507-4f26-a891-1ba2f5530b76' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='CustomCatlogAddProductToCart()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e6fa2cfa-5f01-4ce9-baf4-1eccea6feb66' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='Cartpage CatlogNumber Link' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cd0efbae-0653-4865-858f-8ccf17178bc5' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='link("cart-catalog-link-color cx-link")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrHref' value='link("/ca/en/product/6064875/vwr-ziptop-bubble-6x8-cs50[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='link("89072-316[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-cart-details/div[3]/app-avtr-cart-item-list/div[4]/div/app-avtr-cart-item/div[1]/div/div[1]/div[1]/div[2]/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="cx-link cart-catalog-link-color"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" 89072-316"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/div[3]/app-avtr-cart-item-list/div[4]/div/app-avtr-cart-item/div/div/div/div/div[2]/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;CartPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;TopContent has-components&apos;]/app-avtr-cart-details[1]/div[@class=&apos;cart-details-wrapper&apos;]/app-avtr-cart-item-list[1]/div[@class=&apos;cx-item-list-row&apos;]/div[@class=&apos;cx-item-list-items&apos;]/app-avtr-cart-item[1]/div[1]/div[@class=&apos;cx-info&apos;]/div[@class=&apos;align-items-center cx-info-container row&apos;]/div[@class=&apos;product-info col-md-3 col-lg-3 col-xl-3&apos;]/div[@class=&apos;cx-code d-none d-xl-block d-md-block d-lg-block&apos;]/a[@class=&apos;cx-link cart-catalog-link-color&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cx-info"] &gt; div[class="align-items-center cx-info-container row"] &gt; div[class="product-info col-md-3 col-lg-3 col-xl-3"] &gt; div[class="cx-code d-none d-xl-block d-md-block d-lg-block"] &gt; a[class="cx-link cart-catalog-link-color"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.cx-info &gt; .align-items-center.cx-info-container.row &gt; .product-info.col-md-3.col-lg-3.col-xl-3 &gt; .cx-code.d-none.d-xl-block.d-md-block.d-lg-block &gt; .cx-link.cart-catalog-link-color&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+  </testcase>

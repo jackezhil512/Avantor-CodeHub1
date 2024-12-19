@@ -113,7 +113,7 @@ function search(input){
   //click(fallback(`heading6(0, _in(section({'aria-label':'Product Results List'})))`));
   wait(7000);
   //click(fallback(`button("+")`));
-  click(button("Add one more"));
+  click(button("Add one more", _near(button("Add to cart"))))
   click(fallback(`submit("Add to cart")`));
   wait(10000);
   click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));

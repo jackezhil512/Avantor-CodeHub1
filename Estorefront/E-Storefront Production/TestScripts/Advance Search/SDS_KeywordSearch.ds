@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'SDS_KeywordSearch.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/Estorefront/E-Storefront Regression/Test Data/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='"https://p2.avantorsciences.com/ca/en/advanced-search"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='LaunchBrowser($URL)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='submit(&quot;btn btn-block btn-primary font-bold&quot;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='submit(&quot;Accept all cookies&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/footer/cx-page-layout/cx-page-slot/app-consent-banner/div/div[2]/div/div[1]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary btn-block font-bold&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Accept all cookies &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/footer/cx-page-layout/cx-page-slot/app-consent-banner/div/div[2]/div/div/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;ProductDetailsPageTemplate stop-navigating&apos;]/footer[1]/cx-page-layout[@class=&apos;footer&apos;]/cx-page-slot[@class=&apos;Footer cx-pending has-components&apos;]/app-consent-banner[1]/div[@class=&apos;consent-banner&apos;]/div[@class=&apos;cookie-content&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-md-5 col-lg-4 col-xs-12 consent-margin mt-3&apos;]/button[@class=&apos;btn btn-primary btn-block font-bold&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='submit({&apos;type&apos;:&apos;submit&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;consent-banner&quot;] &gt; div[class=&quot;cookie-content&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col-md-5 col-lg-4 col-xs-12 consent-margin mt-3&quot;] &gt; button[class=&quot;btn btn-primary btn-block font-bold&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.consent-banner &gt; .cookie-content &gt; .row &gt; .col-md-5.col-lg-4.col-xs-12.consent-margin.mt-3 &gt; .btn.btn-primary.btn-block.font-bold&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='SDSSearch(&quot;0&quot;,$SDS_Keyword)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='submit(&quot;SDS Search&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='submit(1, _in(div({&apos;id&apos;:&apos;ProductDetail&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='submit(&quot;generic-tab-button&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;ProductDetail&apos;]/div[1]/button[2]&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;generic-tab-button&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; SDS Search &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[4]/app-avtr-tab-container/div/div/button[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;ProductDetail&apos;)/div[@class=&apos;desktop-tab-container mobile-tab-container&apos;]/button[@class=&apos;generic-tab-button&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;desktop-tab-container mobile-tab-container&quot;] &gt; button[class=&quot;generic-tab-button&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='submit(1, _in(div(&quot;ProductDetail&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

@@ -121,6 +121,9 @@ function search(input){
 
   //wait(30000, 'isVisible(button("Add one more"))');
   //click(button("Add one more", _in(div("accordion-item active"))))
+
+  focus(fallback(`button("Add one more")`));
+  wait (10000);
   click2(fallback(`button("Add one more")`));
   click(fallback(`submit("Add to cart")`));
   wait(10000);

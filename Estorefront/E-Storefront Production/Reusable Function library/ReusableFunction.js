@@ -488,7 +488,7 @@ log(Customcatlognumber);
 click(fallback(`submit("Add To Cart")`));
 assertExists(fallback(`heading3("Cart Summary")`));
 
-var CatlogNumberInCartpage = getText(fallback(`link("cart-catalog-link-color cx-link")`));
+//var CatlogNumberInCartpage = getText(fallback(`link("cart-catalog-link-color cx-link")`));
 log CatlogNumberInCartpage
 //assertExists(fallback(`link("414004-315[1]")`));  
 //assertExists(fallback(`link("414004-146[1]")`));  

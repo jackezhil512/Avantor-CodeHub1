@@ -254,6 +254,13 @@
         </run>
       </test>
     </testcase>
+    <testcase name="Invoice_p2" importance="normal">
+      <test>
+        <run name="Untitled1" langtype="bulkds3" resource="Estorefront/E-Storefront Regression/TestScripts/Invoice/" method="ds" testclass="Chrome" regex="*.ds">
+          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
+        </run>
+      </test>
+    </testcase>
     <assertsuite xmlns="www.pushtotest.com/tm5" name="Optional"/>
     <storesuite xmlns="www.pushtotest.com/tm5" name="Optional"/>
   </templates>
@@ -273,6 +280,7 @@
       <testcase name="Search" users="1" totalexecutions="1"/>
       <testcase name="Shopping List" users="1" totalexecutions="1"/>
       <testcase name="Productpage" users="1" totalexecutions="1"/>
+      <testcase name="Invoice_p2" users="1" totalexecutions="1"/>
     </iteration>
   </execution>
   <logs/>

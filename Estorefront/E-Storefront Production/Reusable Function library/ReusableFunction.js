@@ -741,7 +741,7 @@ function ValidateAccessoriescatlogNumber(){
  click(fallback(`submit("Add to cart[1]")`));
  wait (2000)
  click(fallback(`button("+[1]")`));
- click(fallback(`submit("btn btn-block btn-primary font-bold[1]")`)); 
+ click(fallback(`submit("Add to cart[1]")`));
 }
 
 

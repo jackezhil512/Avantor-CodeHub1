@@ -1617,10 +1617,8 @@ setValue(fallback(`byXPath("(//label[contains(text(),'Primary Email')]/following
 click(fallback(`byXPath("//mat-icon[text()='save']")`));
    wait(2000);
 click(fallback(`byXPath("//div[@formarrayname='requestCCEmails']//span[text()='add']")`));
-
-setValue(fallback(`byXPath("(//label[contains(text(),'CC Email')]/following::input)[1]")`,
-   `byXPath("(//label[contains(text(),'CC Emaill')]/following::input)[1]")`,
-   `byXPath("(//label[contains(text(),'CC Email')]/following::input)[1]")`),TempEmail1);
+wait(2000);
+   setValue(fallback(`byXPath("(//span[contains(text(),'Order Integration') and @class='mat-checkbox-label']/following::input)[1]")`),TempEmail1);
 click(fallback(`byXPath("//mat-icon[text()='save']")`));
 
 

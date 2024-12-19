@@ -1584,7 +1584,7 @@ assertExists(fallback(`byXPath('//*[text()=" Integration created successfully "]
 }
 
 
-function AddIntegrationWithVendorAndOutPutTpeAndCCEmail(Vendor,Stockrom,OutPutType){
+function AddIntegrationWithVendorAndOutPutTypeAndCCEmail(Vendor,Stockrom,OutPutType){
 NavigateToIntegrationMaintenance();
 click(fallback(`byXPath("//span[contains(text(),'ADD NEW INTEGRATION')]/ancestor::button")`));
 wait(2000);

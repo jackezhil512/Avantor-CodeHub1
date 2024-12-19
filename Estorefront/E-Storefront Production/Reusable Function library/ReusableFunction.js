@@ -483,7 +483,8 @@ click(fallback(`heading1("Custom Catalog Details")`));
 click(fallback(`button("+")`));
 var CatlogNumbercutomcatlogdetailspage = getText(div("catalog-catalog-details-number-desktop"));
   log(CatlogNumbercutomcatlogdetailspage);
-
+Customcatlognumber=CatlogNumbercutomcatlogdetailspage.substring(CatlogNumbercutomcatlogdetailspage.lastIndexOf("Catalog #:")+1);
+log(Customcatlognumber);
 click(fallback(`submit("Add To Cart")`));
 assertExists(fallback(`heading3("Cart Summary")`));
 //assertExists(fallback(`link("414004-315[1]")`));  

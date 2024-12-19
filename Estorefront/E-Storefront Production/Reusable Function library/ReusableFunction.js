@@ -560,6 +560,9 @@ function AddTwoProducts(input){
   click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
   wait(5000);
   click2(fallback(`heading6(/Expand.*/)`));
+ click(fallback(`byXPath('(//h6[@class='accordion-heading'])[1]')`));
+ //(//h6[@class='accordion-heading'])[1]
+
   //click2(fallback(`heading6("[Expand]")`));
   //click(fallback(`heading6(0, _in(section({'aria-label':'Product Results List'})))`));
   wait(7000);

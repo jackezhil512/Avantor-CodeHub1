@@ -225,17 +225,44 @@ function ProductPageValidationAdditemToBasket(){
 function NavigateProductpageFromProductlinkShoppingcartDrawdown(input){
   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
    setShadowDOM(true); 
-  setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
-  click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
-  wait(5000);
-  click2(fallback(`heading6(/Expand.*/)`));
+  ///setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
+  ///click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
+  ///wait(5000);
+  ///click2(fallback(`heading6(/Expand.*/)`));
   //click(fallback(`byXPath('//*[text()=/Expand.*/]')`),"0");
   //click2(fallback(`heading6(0, _in(section({'aria-label':'Product Results List'})))`));
-  wait(7000);
-  click(fallback(`button("+")`));
+  ///wait(7000);
+  ///click(fallback(`button("+")`));
+  ///click(fallback(`submit("Add to cart")`));
+  ///wait(10000);
+  ///click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));
+    setValue(fallback(`textbox(0, _in(header("cx-header")))`), input+"{{ENTER}}");
+  //setValue(fallback(`textbox(0, _in(header("cx-header")))`), "{{ENTER}}");
+  //click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
+  wait(10000);
+  //click2(fallback(`heading6(/Expand.*/)`));
+  click2(fallback(`heading6(["Expand"])`));
+  //wait (5000);
+  //browser.refresh();
+  //click(fallback(`byXPath("(//h6[@class='accordion-heading'])[1]")`));
+    //click2(fallback(`heading6({'tabindex':'0'})`,));
+   //wait(5000, 'isVisible(byXPath("(//h6[@class="accordion-heading"])[1]"))');
+  //click(fallback(`heading6(0, _in(section({'aria-label':'Product Results List'})))`));
+  wait(10000);
+  //click(fallback(`button("+")`));
+  //click(button("Add one more", _near(button("Add to cart"))))
+
+  //wait(30000, 'isVisible(button("Add one more"))');
+  //click(button("Add one more", _in(div("accordion-item active"))))
+wait(20000,'isVisible(button("Add one more"))');
+  focus(fallback(`button("Add one more")`));
+  click2(fallback(`button("Add one more")`));
+   wait (10000);
   click(fallback(`submit("Add to cart")`));
   wait(10000);
-  click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));
+  //click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));
+  click(fallback(`byXPath('//*[@class="cx-icon icon icon-shopping-cart-icon"]')`));
+  wait(2000)  
   click(fallback(`link(0, _in(div("cart-items")))`));
   wait(3000);
   assertExists(fallback(`byXPath('//*[text()="About this item "]')`));

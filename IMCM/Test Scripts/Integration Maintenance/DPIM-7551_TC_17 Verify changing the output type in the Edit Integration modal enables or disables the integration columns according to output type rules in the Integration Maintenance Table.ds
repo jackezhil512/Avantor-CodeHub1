@@ -176,40 +176,6 @@
     <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='aba64f68-f1d7-4f45-98e3-fffa4244a74c' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9dffd041-a90b-4ce3-8425-9b21ff1d1cc6' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;Request Integration&apos;)]/ancestor::label")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ce88702d-b070-401e-b4d1-6be90e7cf359' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64fecf77-e229-45ab-b963-5b995135ff71' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='byXPath("(//label[contains(text(),&apos;Primary Email&apos;)]/following::div[contains(text(),&apos;Add email&apos;)])[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cef7f45e-fbf2-436d-ad13-11b2aa98aa4e' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='store' value='eval("&apos;Auto&apos;+ Math.floor(Math.random()*10000) + &apos;@gmail.com&apos;")' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a9fec7f1-835f-4cd6-bc91-da6f0e93e51f' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='TempEmail4' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='log' value='TempEmail4' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='42d6199a-d691-4915-bbb8-9beae86e11cc' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='setValue' value='TempEmail' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='86441896-4965-4461-a3aa-b7a1fb20ae4d' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='byXPath("(//label[contains(text(),&apos;Primary Email&apos;)]/following::input)[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5d2300eb-7cd6-4f65-bf16-62e2c5569464' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='byXPath("//mat-icon[text()=&apos;save&apos;]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bd45e571-b810-4e12-a47d-256485d995dc' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Text' value='span("Next[1]")' selected='true' fallback='true'></accessor>
@@ -315,31 +281,5 @@
     </step>
     <step action='js' value='EMailValidationINIntegrationAndEmails()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ecba50fd-cd84-4eeb-add3-3464f82b1766' uiType='base'>
       <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;ALL&apos;,&apos;All Stockrooms&apos;,TempEmail4)' type='web' desc='Verify updated email exist in email dropdown' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e3406f78-5a68-4db6-8415-f92bf2052c7f' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email)' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='click on update results' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6292f794-50b1-4d66-beec-3c48916ca8ba' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;Update Results&apos;)]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2c24073c-44bc-47b2-8a9a-66d5cf6465fb' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='store' value='_eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0bc8f586-5516-4b59-9cc3-6b4a23b08da9' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='strRows2' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='log' value='strRows2' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8cf6f26a-2ce4-4394-b1d1-e84164288387' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='assertEqual' value='1' type='web' desc='verify no records found for email' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cb957571-8234-4536-8fdc-b4d287785670' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='strRows2' selected='true' fallback='true'></accessor>
-      </dialect>
     </step>
   </testcase>

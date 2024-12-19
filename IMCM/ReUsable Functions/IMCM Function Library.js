@@ -1614,6 +1614,11 @@ wait(2000);
 setValue(fallback(`byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`,
    `byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`,
    `byXPath("(//label[contains(text(),'Primary Email')]/following::input)[1]")`),TempEmail);
+
+   wait(2000);
+setValue(fallback(`byXPath("(//label[contains(text(),'CC Email')]/following::input)[1]")`,
+   `byXPath("(//label[contains(text(),'CC Emaill')]/following::input)[1]")`,
+   `byXPath("(//label[contains(text(),'CC Email')]/following::input)[1]")`),TempEmail1);
 click(fallback(`byXPath("//mat-icon[text()='save']")`));
 
 

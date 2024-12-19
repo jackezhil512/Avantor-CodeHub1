@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'AdvanceSearch_SupplierName.ds' description= '' author= 'null' version= ''>
+<dpl filename='{ds}/../../../../../E-Storefront Project/E-Storefront Regression/Test Data/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='LaunchBrowser($URL)' type='web' desc='Click on advance search button' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='link(&quot;Advanced&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='link(1, _in(header({&apos;id&apos;:&apos;cx-header&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrHref' value='link(&quot;/ca/en/advanced-search&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[2]/app-avtr-search-box/div[1]/a&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Advanced&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[2]/app-avtr-search-box/div/a&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SearchBox has-components&apos;]/app-avtr-search-box[1]/div[@class=&apos;advanced-link&apos;]/a[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/advanced-search&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='link(1, _in(header(&quot;cx-header&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='AdvanceSearch(&quot;2&quot;,$SupplierName)' type='web' desc='verify search results are displayed' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-product-lists/div/section/div/div/div[2]/h1&apos;)' fallback='true' selected='true'/>
+   <accessor type='AttrClass' value='heading1(&quot;text-break total-results&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;total-results text-break&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[3]/app-avtr-product-lists/div/section/div/div/div[2]/h1&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[@class=&apos;has-searchbox-results&apos;]/app-root[1]/cx-storefront[@class=&apos;SearchResultsListPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;SearchResultsListPageTemplate&apos;]/cx-page-slot[@class=&apos;SearchResultsListSlot has-components&apos;]/app-avtr-product-lists[1]/div[@class=&apos;cx-page&apos;]/section[@class=&apos;cx-page-section&apos;]/div[@class=&apos;container&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-lg-12&apos;]/h1[@class=&apos;total-results text-break&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;section[class=&quot;cx-page-section&quot;] &gt; div[class=&quot;container&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col-12 col-lg-12&quot;] &gt; h1[class=&quot;total-results text-break&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.cx-page-section &gt; .container &gt; .row &gt; .col-12.col-lg-12 &gt; .total-results.text-break&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='heading1(0, _in(section({&apos;aria-label&apos;:&apos;Product Results List&apos;})))' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

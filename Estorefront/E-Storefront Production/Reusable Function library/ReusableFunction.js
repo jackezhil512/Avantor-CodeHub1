@@ -104,9 +104,8 @@ function ManufacturerSearch(Index0,input0,Index1,input1,Index2,input2){
 function search(input){
   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
    setShadowDOM(true); 
-  setValue(fallback(`textbox(0, _below(label("searchbox")))`), input);
-  //setValue(fallback(textbox(0, below(label("searchbox")))), input);
-  setValue(fallback(`textbox(0, _below(label("searchbox")))`), "{{ENTER}}");
+  setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
+  setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
   //click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
   wait(10000);
   //click2(fallback(`heading6(/Expand.*/)`));
@@ -120,11 +119,10 @@ function search(input){
   //click(fallback(`button("+")`));
   //click(button("Add one more", _near(button("Add to cart"))))
 
- // wait(30000, 'isVisible(button("Add one more"))');
+  wait(30000, 'isVisible(button("Add one more"))');
   //click(button("Add one more", _in(div("accordion-item active"))))
-  //click2(`button("Add one more")`);
-  click2(fallback(`button("Add one more")`));
-  click2(fallback(`submit("Add to cart")`));
+  click(fallback(`button("Add one more")`));
+  click(fallback(`submit("Add to cart")`));
   wait(10000);
   click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));
   click(fallback(`submit("View My Cart")`));

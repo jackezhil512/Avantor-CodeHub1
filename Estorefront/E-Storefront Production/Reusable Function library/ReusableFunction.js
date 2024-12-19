@@ -561,7 +561,7 @@ function AddTwoProducts(input){
   wait(5000);
   //click2(fallback(`heading6(/Expand.*/)`));
   // click on Expand item in search page.
- click(fallback(`byXPath('(//h6[@class='accordion-heading'])[1]')`));
+ click(fallback(`byXPath("(//h6[@class='accordion-heading'])[1]")`));
  //(//h6[@class='accordion-heading'])[1]
 
   //click2(fallback(`heading6("[Expand]")`));

@@ -150,6 +150,15 @@ function SearchWithinSearch(input,input1){
   
 }
 
+function QuickSearchNavigateToHomePage(input){
+   setVariablesIfNeeded('{ds}/../../Test Data/InputSheet_Regreesion.csv','HashDPL',0,'en_US');
+   setShadowDOM(true);
+   setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
+   click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
+   assertExists(fallback(`heading2(0, _in(section({'aria-label':'Product Results List'})))`)); 
+   click(fallback(`image(0, _in(header("cx-header"))).xy(0.64, 0.58 )`)),
+   assertExists(fallback(`link("Learn more")`));
+}
 
 
 function SupplierNameLeftNavigationFilterSearch(input){

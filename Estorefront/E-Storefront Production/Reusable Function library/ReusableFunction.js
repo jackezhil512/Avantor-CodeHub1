@@ -740,8 +740,10 @@ function ValidateAccessoriescatlogNumber(){
  wait(2000);
  click(fallback(`submit("Add to cart[1]")`));
  wait (2000)
+ focus(fallback(`button("+[1]")`));
  click(fallback(`button("+[1]")`));
  click(fallback(`submit("Add to cart[1]")`));
+ wait (2000);
   click(fallback(`byXPath('//*[@class="cx-icon icon icon-shopping-cart-icon"]')`));
   wait(2000)
   click(fallback(`submit("View My Cart")`));

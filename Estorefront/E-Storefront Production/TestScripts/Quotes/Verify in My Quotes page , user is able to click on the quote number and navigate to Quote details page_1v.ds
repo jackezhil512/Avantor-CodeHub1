@@ -1,148 +1,155 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'Verify in My Quotes page , user is able to click on the quote number and navigate to Quote details page_1v.ds' description= '' author= 'appvance' version= ''>
-<dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Production/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='12000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='link(&quot;View Quotes&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='link(&quot;Request a Quote&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='span(&quot;Last 30 Days&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[3]/div[2]/span[1]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Last 30 Days&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[3]/div[2]/span&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='span(&quot;filters-applied-btn[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='span(&quot;Available&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[3]/div[1]/span[1]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;filters-applied-btn&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Available&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[3]/div/span&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-my-quotes[1]/div[@class=&apos;container my-quotes-container&apos;]/div[@class=&apos;fliter-wrapper col-3&apos;]/div[@class=&apos;d-flex&apos;]/div[@class=&apos;filters-applied&apos;]/span[@class=&apos;filters-applied-btn&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;container my-quotes-container&quot;] &gt; div[class=&quot;fliter-wrapper col-3&quot;] &gt; div[class=&quot;d-flex&quot;] &gt; div[class=&quot;filters-applied&quot;] &gt; span[class=&quot;filters-applied-btn&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.container.my-quotes-container &gt; .fliter-wrapper.col-3 &gt; .d-flex &gt; .filters-applied &gt; .filters-applied-btn&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='span(&quot;filters-applied-btn&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='div(&quot;My Quotes[1]&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[1]&apos;).xy(0.02, 0.51 )' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;my-quotes-title d-none d-md-block&quot;]&apos;).xy(0.02, 0.51 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div&apos;).xy(0.02, 0.51 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate start-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-my-quotes[1]/div[@class=&apos;container my-quotes-container&apos;]/div[@class=&apos;cx-quick-order-table-wrapper m-10 col-9&apos;]/div[@class=&apos;my-quotes-title d-none d-md-block&apos;]&quot;).xy(0.02, 0.51 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;container my-quotes-container&quot;] &gt; div[class=&quot;cx-quick-order-table-wrapper m-10 col-9&quot;] &gt; div[class=&quot;my-quotes-title d-none d-md-block&quot;]&apos;).xy(0.02, 0.51 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.container.my-quotes-container &gt; .cx-quick-order-table-wrapper.m-10.col-9 &gt; .my-quotes-title.d-none.d-md-block&apos;).xy(0.02, 0.51 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;d-md-block d-none my-quotes-title&quot;).xy(0.02, 0.51 )' fallback='true' selected='false'/>
-   <accessor type='Text' value='div(&quot;My Quotes[1]&quot;).xy(0.02, 0.51 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='Quote Number Link in Quote page' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;quote-number-item&quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='link(&quot;8602874153&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[3]/div[2]/app-my-quotes-item/div[1]/div/div/div/div[1]/div/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; 8602874153&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[3]/div[2]/app-my-quotes-item/div/div/div/div/div/div/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-my-quotes[1]/div[@class=&apos;container my-quotes-container&apos;]/div[@class=&apos;cx-quick-order-table-wrapper m-10 col-9&apos;]/div[3]/div[@class=&apos;cx-quick-order-table-row my-quotes-table&apos;]/app-my-quotes-item[1]/div[@class=&apos;cx-quick-order-table-item d-none d-sm-none d-md-block my-quotes-table-item&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-md-12 cx-quick-order-info-container&apos;]/div[@class=&apos;row my-quote-line-items&apos;]/div[@class=&apos;my-quote-line-item col-md-1 col-lg-1 col-xl-1&apos;]/div[@class=&apos;cx-value font-bold&apos;]/a[@class=&apos;quote-number-item&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;col-12 col-md-12 cx-quick-order-info-container&quot;] &gt; div[class=&quot;row my-quote-line-items&quot;] &gt; div[class=&quot;my-quote-line-item col-md-1 col-lg-1 col-xl-1&quot;] &gt; div[class=&quot;cx-value font-bold&quot;] &gt; a[class=&quot;quote-number-item&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.col-12.col-md-12.cx-quick-order-info-container &gt; .row.my-quote-line-items &gt; .my-quote-line-item.col-md-1.col-lg-1.col-xl-1 &gt; .cx-value.font-bold &gt; .quote-number-item&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='link(&quot;quote-number-item&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='label(&quot;Requested&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Requested&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[14]/div/div[3]/label&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='label(&quot;inactive-label[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[14]/div/div[3]/label&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='span(&quot;Requested&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[3]/div[2]/span[1]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Requested&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[3]/div[2]/span&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='span(&quot;filters-applied-btn[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='label(&quot;Last 90 Days&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[16]/div/div[3]/label&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Last 90 Days&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[16]/div/div[3]/label&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='label(&quot;inactive-label[4]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='div(&quot;RQ-00886001&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[3]/div[2]/app-my-quotes-item/div[1]/div/div/div/div[4]/div&apos;).xy(0.20, 0.60 )' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; RQ-00886001 &quot;]&apos;).xy(0.20, 0.60 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[3]/div[2]/app-my-quotes-item/div/div/div/div/div[4]/div&apos;).xy(0.20, 0.60 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-my-quotes[1]/div[@class=&apos;container my-quotes-container&apos;]/div[@class=&apos;cx-quick-order-table-wrapper m-10 col-9&apos;]/div[3]/div[@class=&apos;cx-quick-order-table-row my-quotes-table&apos;]/app-my-quotes-item[1]/div[@class=&apos;cx-quick-order-table-item d-none d-sm-none d-md-block my-quotes-table-item&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-md-12 cx-quick-order-info-container&apos;]/div[@class=&apos;row my-quote-line-items&apos;]/div[@class=&apos;my-quote-line-item col-md-2 col-lg-2 col-xl-2&apos;]/div[@class=&apos;cx-value&apos;]&quot;).xy(0.20, 0.60 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;row&quot;] &gt; div[class=&quot;col-12 col-md-12 cx-quick-order-info-container&quot;] &gt; div[class=&quot;row my-quote-line-items&quot;] &gt; div[class=&quot;my-quote-line-item col-md-2 col-lg-2 col-xl-2&quot;] &gt; div[class=&quot;cx-value&quot;]&apos;).xy(0.20, 0.60 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.row &gt; .col-12.col-md-12.cx-quick-order-info-container &gt; .row.my-quote-line-items &gt; .my-quote-line-item.col-md-2.col-lg-2.col-xl-2 &gt; .cx-value&apos;).xy(0.20, 0.60 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;cx-value[2]&quot;).xy(0.20, 0.60 )' fallback='true' selected='false'/>
-   <accessor type='Text' value='div(&quot;RQ-00886001&quot;).xy(0.20, 0.60 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='div(&quot;WEB&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[3]/div[2]/app-my-quotes-item/div[1]/div/div/div/div[5]/div&apos;).xy(0.34, 0.50 )' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; WEB &quot;]&apos;).xy(0.34, 0.50 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[3]/div[2]/app-my-quotes-item/div/div/div/div/div[5]/div&apos;).xy(0.34, 0.50 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;cx-value[3]&quot;).xy(0.34, 0.50 )' fallback='true' selected='false'/>
-   <accessor type='Text' value='div(&quot;WEB&quot;).xy(0.34, 0.50 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='submit(&quot;Reset Filters&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[4]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-outline-primary reset-filters&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Reset Filters&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[4]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-my-quotes[1]/div[@class=&apos;container my-quotes-container&apos;]/div[@class=&apos;fliter-wrapper col-3&apos;]/div[4]/button[@class=&apos;btn btn-outline-primary reset-filters&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;button[class=&quot;btn btn-outline-primary reset-filters&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.btn.btn-outline-primary.reset-filters&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='submit(&quot;btn btn-outline-primary reset-filters&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='Muralikrishna.g@avantorsciences.com' version='webDesigner'>
+    <dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Production/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c3335dfb-d4d8-4d1b-b190-7c87ac86dd82' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5bd666e5-7904-43e3-9f37-d9a66368a7b0' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3cbefe2e-49c1-46ee-823d-9614995f34ce' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0abb2a47-bfa4-4bd3-81fb-378f303f7505' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='12000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6272352a-70a0-4870-859d-14a9688e9b95' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9940c51c-5636-444e-99d4-4e3c3f034fe1' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='link("View Quotes")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='link("Request a Quote")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='98fd55ac-04eb-46c0-aa7e-5ee43b334e34' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Last 30 Days")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[3]/div[2]/span[1]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Last 30 Days"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[3]/div[2]/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("filters-applied-btn[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ade9b221-46a2-40c2-a720-f841e690b159' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Available")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[3]/div[1]/span[1]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="filters-applied-btn"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Available"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[3]/div[3]/div/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-my-quotes[1]/div[@class=&apos;container my-quotes-container&apos;]/div[@class=&apos;fliter-wrapper col-3&apos;]/div[@class=&apos;d-flex&apos;]/div[@class=&apos;filters-applied&apos;]/span[@class=&apos;filters-applied-btn&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="container my-quotes-container"] &gt; div[class="fliter-wrapper col-3"] &gt; div[class="d-flex"] &gt; div[class="filters-applied"] &gt; span[class="filters-applied-btn"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.container.my-quotes-container &gt; .fliter-wrapper.col-3 &gt; .d-flex &gt; .filters-applied &gt; .filters-applied-btn&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("filters-applied-btn")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='50d63667-9738-432f-b11e-4f94dab694cd' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='div("My Quotes[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[1]&apos;).xy(0.02, 0.51 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="my-quotes-title d-none d-md-block"]&apos;).xy(0.02, 0.51 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div&apos;).xy(0.02, 0.51 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate start-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-my-quotes[1]/div[@class=&apos;container my-quotes-container&apos;]/div[@class=&apos;cx-quick-order-table-wrapper m-10 col-9&apos;]/div[@class=&apos;my-quotes-title d-none d-md-block&apos;]").xy(0.02, 0.51 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="container my-quotes-container"] &gt; div[class="cx-quick-order-table-wrapper m-10 col-9"] &gt; div[class="my-quotes-title d-none d-md-block"]&apos;).xy(0.02, 0.51 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.container.my-quotes-container &gt; .cx-quick-order-table-wrapper.m-10.col-9 &gt; .my-quotes-title.d-none.d-md-block&apos;).xy(0.02, 0.51 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("d-md-block d-none my-quotes-title").xy(0.02, 0.51 )' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='div("My Quotes[1]").xy(0.02, 0.51 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='Quote Number Link in Quote page' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5b7dc50e-53ba-4aba-85ed-6d7bb05c58c0' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="quote-number-item"]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='link("8602874153")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[3]/div[2]/app-my-quotes-item/div[1]/div/div/div/div[1]/div/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" 8602874153"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[3]/div[2]/app-my-quotes-item/div/div/div/div/div/div/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-my-quotes[1]/div[@class=&apos;container my-quotes-container&apos;]/div[@class=&apos;cx-quick-order-table-wrapper m-10 col-9&apos;]/div[3]/div[@class=&apos;cx-quick-order-table-row my-quotes-table&apos;]/app-my-quotes-item[1]/div[@class=&apos;cx-quick-order-table-item d-none d-sm-none d-md-block my-quotes-table-item&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-md-12 cx-quick-order-info-container&apos;]/div[@class=&apos;row my-quote-line-items&apos;]/div[@class=&apos;my-quote-line-item col-md-1 col-lg-1 col-xl-1&apos;]/div[@class=&apos;cx-value font-bold&apos;]/a[@class=&apos;quote-number-item&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="col-12 col-md-12 cx-quick-order-info-container"] &gt; div[class="row my-quote-line-items"] &gt; div[class="my-quote-line-item col-md-1 col-lg-1 col-xl-1"] &gt; div[class="cx-value font-bold"] &gt; a[class="quote-number-item"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.col-12.col-md-12.cx-quick-order-info-container &gt; .row.my-quote-line-items &gt; .my-quote-line-item.col-md-1.col-lg-1.col-xl-1 &gt; .cx-value.font-bold &gt; .quote-number-item&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='link("quote-number-item")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fd2f92c5-fefe-48ad-93e9-31c390c960f4' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='link("quote-number-item")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='link("8602875961")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[3]/div[2]/app-my-quotes-item/div[1]/div/div/div/div[1]/div/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="quote-number-item"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" 8602875961"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-my-quotes/div/div[4]/div[3]/div[2]/app-my-quotes-item/div/div/div/div/div/div/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner&apos;]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-my-quotes[1]/div[@class=&apos;container my-quotes-container&apos;]/div[@class=&apos;cx-quick-order-table-wrapper m-10 col-9&apos;]/div[3]/div[@class=&apos;cx-quick-order-table-row my-quotes-table&apos;]/app-my-quotes-item[1]/div[@class=&apos;cx-quick-order-table-item d-none d-sm-none d-md-block my-quotes-table-item&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-md-12 cx-quick-order-info-container&apos;]/div[@class=&apos;row my-quote-line-items&apos;]/div[@class=&apos;my-quote-line-item col-md-1 col-lg-1 col-xl-1&apos;]/div[@class=&apos;cx-value font-bold&apos;]/a[@class=&apos;quote-number-item&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="col-12 col-md-12 cx-quick-order-info-container"] &gt; div[class="row my-quote-line-items"] &gt; div[class="my-quote-line-item col-md-1 col-lg-1 col-xl-1"] &gt; div[class="cx-value font-bold"] &gt; a[class="quote-number-item"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.col-12.col-md-12.cx-quick-order-info-container &gt; .row.my-quote-line-items &gt; .my-quote-line-item.col-md-1.col-lg-1.col-xl-1 &gt; .cx-value.font-bold &gt; .quote-number-item&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='729e08cc-e619-4fab-8179-7ed77c516dfa' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='div("Quote Details")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("quote-details-page-title")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-quote-details-active/app-avtr-quote-details/div/div[1]/div[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="quote-details-page-title"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-quote-details-active/app-avtr-quote-details/div/div/div[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner&apos;]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-quote-details-active[1]/app-avtr-quote-details[1]/div[@class=&apos;container request-quote-container&apos;]/div[@class=&apos;quote-details-container&apos;]/div[@class=&apos;quote-details-page-title&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="container request-quote-container"] &gt; div[class="quote-details-container"] &gt; div[class="quote-details-page-title"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.container.request-quote-container &gt; .quote-details-container &gt; .quote-details-page-title&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8d404f53-396d-4e01-8440-45f9222606fd' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='paragraph("Expiration Date")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='paragraph("quick-details-headers")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-quote-details-active/app-avtr-quote-details/div/div[1]/div[3]/div[1]/p&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="quick-details-headers"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Expiration Date"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-quote-details-active/app-avtr-quote-details/div/div/div[3]/div/p&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner&apos;]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-quote-details-active[1]/app-avtr-quote-details[1]/div[@class=&apos;container request-quote-container&apos;]/div[@class=&apos;quote-details-container&apos;]/div[@class=&apos;quick-details&apos;]/div[1]/p[@class=&apos;quick-details-headers&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;p[class="quick-details-headers"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.quick-details-headers&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6b6d500e-9765-4cae-b686-9d6bb2aadd05' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='paragraph("SAP Quote Number")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='paragraph("quick-details-headers[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-quote-details-active/app-avtr-quote-details/div/div[1]/div[3]/div[2]/p&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="SAP Quote Number"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-quote-details-active/app-avtr-quote-details/div/div/div[3]/div[2]/p&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner&apos;]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-quote-details-active[1]/app-avtr-quote-details[1]/div[@class=&apos;container request-quote-container&apos;]/div[@class=&apos;quote-details-container&apos;]/div[@class=&apos;quick-details&apos;]/div[2]/p[@class=&apos;quick-details-headers&apos;]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4c8791b5-08f3-43a9-9a6b-d447669d86d4' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='paragraph("Web Quote Number")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='paragraph("quick-details-headers[2]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-quote-details-active/app-avtr-quote-details/div/div[1]/div[3]/div[3]/p&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Web Quote Number"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-quote-details-active/app-avtr-quote-details/div/div/div[3]/div[3]/p&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner&apos;]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-quote-details-active[1]/app-avtr-quote-details[1]/div[@class=&apos;container request-quote-container&apos;]/div[@class=&apos;quote-details-container&apos;]/div[@class=&apos;quick-details&apos;]/div[3]/p[@class=&apos;quick-details-headers&apos;]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='72adfb55-b8fd-4759-815b-387a9d4e8509' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='paragraph("Account Number")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='paragraph("quick-details-headers[3]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-quote-details-active/app-avtr-quote-details/div/div[1]/div[3]/div[4]/p&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Account Number"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-quote-details-active/app-avtr-quote-details/div/div/div[3]/div[4]/p&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner&apos;]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-quote-details-active[1]/app-avtr-quote-details[1]/div[@class=&apos;container request-quote-container&apos;]/div[@class=&apos;quote-details-container&apos;]/div[@class=&apos;quick-details&apos;]/div[4]/p[@class=&apos;quick-details-headers&apos;]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cfa0256f-7ec2-4006-a04d-c8518acf369b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='paragraph("Name")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='paragraph("quick-details-headers[4]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-quote-details-active/app-avtr-quote-details/div/div[1]/div[3]/div[5]/p&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Name"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-quote-details-active/app-avtr-quote-details/div/div/div[3]/div[5]/p&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner&apos;]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-avtr-quote-details-active[1]/app-avtr-quote-details[1]/div[@class=&apos;container request-quote-container&apos;]/div[@class=&apos;quote-details-container&apos;]/div[@class=&apos;quick-details&apos;]/div[5]/p[@class=&apos;quick-details-headers&apos;]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+  </testcase>

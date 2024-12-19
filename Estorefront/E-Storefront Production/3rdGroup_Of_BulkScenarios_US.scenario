@@ -155,7 +155,7 @@
     </controller>
     <testcase name="Registration" importance="normal">
       <test>
-        <run name="Untitled1" langtype="bulkds3" resource="E-Storefront Production/TestScripts/Registration/" method="ds" testclass="Chrome" regex="*.ds">
+        <run name="Untitled1" langtype="bulkds3" method="ds" testclass="Chrome" regex="*.ds">
           <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
         </run>
       </test>
@@ -180,7 +180,6 @@
   <monitoring enablednodes="true" enabledtarget="false"/>
   <execution type="functionaltest" subtype="bulk">
     <iteration name="Iteration1" controller="Iteration1">
-      <testcase name="Registration" users="1" totalexecutions="1"/>
       <testcase name="Search" users="1" totalexecutions="1"/>
       <testcase name="Shopping List" users="1" totalexecutions="1"/>
     </iteration>

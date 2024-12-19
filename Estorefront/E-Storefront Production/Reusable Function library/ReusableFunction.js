@@ -488,12 +488,12 @@ log(Customcatlognumber);
 click(fallback(`submit("Add To Cart")`));
 assertExists(fallback(`heading3("Cart Summary")`));
 
-var CatlogNumberInCartpage = getText((`link("cart-catalog-link-color cx-link")`));
+var CatlogNumberInCartpage = getText(fallback(`link("cart-catalog-link-color cx-link")`));
 log (CatlogNumberInCartpage);
 
  if(Customcatlognumber == CatlogNumberInCartpage){
     wait(3000);
- log("customcatlog number which added in customcatlog details page the same added in cartpage");   
+ log("customcatlog number which added in customcatlog details page the same added in to in cartpage");   
  
   }else{
     log("Catlognumber is not same in cart page")

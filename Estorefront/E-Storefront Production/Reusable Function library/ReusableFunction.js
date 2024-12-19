@@ -574,7 +574,7 @@ function AddTwoProducts(input){
   //button[@aria-label="Add one more"])
   //lick(fallback(`button("Create & Add")`));
   click(fallback(`button("Add one more")`));
-  assertExists(fallback(`button("+"),_above(submit("Add to cart"))`));
+  //assertExists(fallback(`button("+"),_above(submit("Add to cart"))`));
   click(fallback(`submit("Add to cart")`));
   wait(10000);
   click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));

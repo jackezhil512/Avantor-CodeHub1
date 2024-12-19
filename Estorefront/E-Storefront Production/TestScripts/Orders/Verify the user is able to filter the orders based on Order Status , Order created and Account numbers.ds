@@ -100,10 +100,72 @@
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='34a9cfb5-c1c2-4515-aa3c-95709ce44e1a' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value='(//span[text()=&apos; Filter by Shipping Account&apos;]/following::div[@class=&apos;order-history-facetvalue-label&apos;])[1]' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("(//span[text()=&apos; Filter by Shipping Account&apos;]/following::div[@class=&apos;order-history-facetvalue-label&apos;])[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='(//span[text()=&apos; Filter by Shipping Account&apos;]/following::div[@class=&apos;order-history-facetvalue-label&apos;])[1]' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4b4246be-5231-49d4-b845-d481badee268' uiType='base'>
+    <step action='store' value='getText(byXPath("(//span[text()=&apos; Filter by Shipping Account&apos;]/following::div[@class=&apos;order-history-facetvalue-label&apos;])[1]"))' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0233885b-9529-4a33-a142-e4058c457a3a' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='AccountNumner' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='AccountNumner' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6e2d2230-c946-4a9e-8389-301fdfac1daf' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='31f39780-7d4e-4a47-aa51-8cc607005360' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='span(AccountNumner)' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='span("86033630")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[3]/span[1]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[3]/span&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3703ca00-95b2-402c-adb3-646468ae18cd' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathId' value='byXPath(&apos;//*[@id=""]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("order-history-filter-desktop-view")' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='div(["Applied Filter(s) Last 30 DaysxCanc"])' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//div&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="order-history-filter-desktop-view"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Applied Filter(s) Last 30 DaysxCancelledx86033630x Reset Filters Search by Number What Numbers? Numbers include Order Number, Purchase Number, Catalog number, Web Tracking Number, Invoice Number, Delivery Number, Return Number, Return Request Number, Credit Number Search  Filter ResultsOrder Created Today  Last 7 Days  Last 30 Days  Last 90 Days Custom Date RangeFilter by Order StatusAll Order StatusSubmittingSubmittedProcessingPartially ShippedCompletely ShippedCancelledReturns Filter by Shipping Account 86033630 9 86019709 1 Filter by Who Placed the Order qatestcathiyagu@yopmail.com 4 ca-spendlimitwfreq1@yopmail.com 1 louise_flannery@comcast.net 1 qatestorglimitorgreq@yopmail.com 1 suresh.chauhan@avantorsciences.com 1 user1-tamil@mailinator.com 1"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/div&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/div[@class=&apos;order-history-filter-desktop-view&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[0]//td[0]//div[@class="order-history-filter-desktop-view"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[0]//td[0]//div[text()=" Applied Filter(s) Last 30 DaysxCancelledx86033630x Reset Filters Search by Number What Numbers? Numbers include Order Number, Purchase Number, Catalog number, Web Tracking Number, Invoice Number, Delivery Number, Return Number, Return Request Number, Credit Number Search  Filter ResultsOrder Created Today  Last 7 Days  Last 30 Days  Last 90 Days Custom Date RangeFilter by Order StatusAll Order StatusSubmittingSubmittedProcessingPartially ShippedCompletely ShippedCancelledReturns Filter by Shipping Account 86033630 9 86019709 1 Filter by Who Placed the Order qatestcathiyagu@yopmail.com 4 ca-spendlimitwfreq1@yopmail.com 1 louise_flannery@comcast.net 1 qatestorglimitorgreq@yopmail.com 1 suresh.chauhan@avantorsciences.com 1 user1-tamil@mailinator.com 1"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="order-history-filter-desktop-view"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.order-history-filter-desktop-view&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1af7d5fa-de69-47ba-8614-7bc6e9d21bed' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("86033630 9")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/div[2]/app-order-history-facet[2]/div/div/div/div/div/div[1]/a/label/div/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/div[2]/app-order-history-facet[2]/div/div/div/div/div/div/a/label/div/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[@class=&apos;cxFeat_a11yMobileVisibleFocus cxFeat_a11yOrganizationsBanner&apos;]/cx-storefront[@class=&apos;stop-navigating AccountPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;SideContent has-components&apos;]/app-order-history-facet-list[1]/div[1]/div[@class=&apos;order-history-filter-desktop-view&apos;]/div[@class=&apos;pt-2 border-facet-top&apos;]/div[@class=&apos;mb-2&apos;]/app-order-history-facet[@class=&apos;multi-select&apos;]/div[1]/div[@class=&apos;border-facet pb-2&apos;]/div[@class=&apos;pl-2&apos;]/div[1]/div[1]/div[1]/a[@class=&apos;value order-history-facetvalue-link text-break text-decoration-none&apos;]/label[1]/div[@class=&apos;order-history-facetvalue-label&apos;]/span[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4b4246be-5231-49d4-b845-d481badee268' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Text' value='link("86019709 7")' selected='true' fallback='true'></accessor>
         <accessor type='AttrHref' value='link("/ca/en/my-account/orders?query=:date-desc:creationDate:2024-09-05%2F2024-12-04:shippingAccount:86019709")' selected='false' fallback='true'></accessor>
@@ -114,7 +176,7 @@
         <accessor type='AttrClass' value='link("order-history-facetvalue-link text-break text-decoration-none value[1]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4a894b21-b03d-422f-a127-ed47e197a8e7' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4a894b21-b03d-422f-a127-ed47e197a8e7' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='link("86019709x")' selected='true' fallback='true'></accessor>
       </dialect>

@@ -66,55 +66,12 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//th[contains(@class,&apos;search-outputType&apos;)]//mat-select&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//mat-option/span[contains(text(),&apos;TEXT FILE CONFIGURATOR&apos;)]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='TotalRow' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
+<step action='js' value='AddALLintegrationWithTextWithName(VendorName )' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='while' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='TotalRow&gt;=1' fallback='true' selected='true'/>
-   <accessor type='unknown' value='TotalRow&gt;1' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='deleteAll()' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='TotalRow' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='AddALLintegrationWithTextWithName(VendorName )' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='AddALLintegrationWithTextWithName(VendorName1 )' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
+<step action='js' value='AddALLintegrationWithTextWithName(VendorName1 )' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

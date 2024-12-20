@@ -2027,7 +2027,7 @@ click(fallback(`byXPath("(//div[contains(text(),'Output Type')]/span/following::
 setValue(fallback(`byXPath("//input[@placeholder='Search Output Type ']")`,
    `byXPath("")`),"TEXT");
 wait(2000);
-click(fallback(`byXPath("//span[contains(text(),'TEXT FILE CONFIGURATOR')]/parent::span")`));
+click(fallback(`byXPath("(//span[contains(text(),'TEXT FILE CONFIGURATOR')]/parent::span)[2]")`));
 
 click(fallback(`byXPath("//span[contains(text(),'Next')]/parent::span")`,
    `byXPath("//span[contains(text(),'Next')]/parent::span")`));

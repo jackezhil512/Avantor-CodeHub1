@@ -199,6 +199,52 @@
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
+<step action='store' value='getText(byXPath(&quot;//input[@formcontrolname=&apos;subjectFreeText&apos;]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='strSubject' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='getText(byXPath(&quot;//input[@formcontrolname=&apos;fileNameFreeText&apos;]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='strFileName' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='strSubject' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='strFileName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//span[contains(text(),&apos;Cancel&apos;)]/parent::button)[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//button[contains(@class,&apos;mat-flat-button&apos;)]//span[contains(text(),&apos;Yes&apos;)]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertNotEqual' value='"Auto Subject"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='strSubject ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
+</dialect>
+</step>
+<step action='assertNotEqual' value='"Auto File Name"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='strFileName ' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
+</dialect>
+</step>
 <step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>

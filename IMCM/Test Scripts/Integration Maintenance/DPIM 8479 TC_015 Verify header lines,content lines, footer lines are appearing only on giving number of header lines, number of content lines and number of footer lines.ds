@@ -1,13 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'DPIM 8479 TC_015 Verify header lines,content lines, footer lines are appearing only on giving number of header lines, number of content lines and number of footer lines.ds' description= '' author= 'qatest1@avantorsciences.com' version= ''>
-<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
+<testcase   name= 'DPIM-8477 TC_005 Verify the subject in email received by setting up in the template for replenish.ds' description= '' author= 'qatest1@avantorsciences.com' version= ''>
+<dpl filename='{ds}/../IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
 <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../Integration Stories/DPIM-8473 B/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value=' &quot;{ds}/../IMCM Function Library.js&quot;' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../Integration Stories/DPIM-8473 B/IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
 <step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>

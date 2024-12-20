@@ -2076,4 +2076,16 @@ while (TotalRow>=1){
    }
 }
 
+function UpdateResultWithVendorName(VendorName){
+wait(1000);
+click(fallback(`byXPath("(//div[text()=' Vendor ']/following::mat-select)[1]")`));
+setValue(fallback(`byXPath("//input[@placeholder='Search Vendor ']")`,
+   `byXPath("")`),VendorName);
+wait(1000);
+click(fallback(`byXPath("(//mat-option[@role='option'])[1]")`,
+   `byXPath("")`));
+click(fallback(`byXPath("//span[text()='Update Results']/ancestor::button")`));
+wait(1000);
+}
+
 

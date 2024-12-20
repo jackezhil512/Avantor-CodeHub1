@@ -1974,3 +1974,32 @@ log(fileName);
 var Value=fileName.substr(-4);
 assertEqual(Value,".txt");
 }
+
+function NavigateToVendorMaintenance1(){
+click(fallback(`byXPath("//button[contains(text(),'Administration')]/span")`,
+   `byXPath("")`));
+click(fallback(`byXPath("//div[contains(text(),'Vendor Maintenance')]")`,
+   `byXPath("")`));
+assertExists(fallback(`byXPath("//span[contains(text(),'Vendor Maintenance') and @class='title']")`,
+   `byXPath("")`));
+}
+
+function CreateVendorWithGivenName(VendorName){
+click(fallback(`byXPath("(//span[contains(text(),'Add New Vendor')])[1]")`,
+   `byXPath("")`));
+assertExists(fallback(`byXPath("//input[@formcontrolname='vendorName']")`,
+   `byXPath("")`));
+setValue(fallback(`byXPath("//input[@formcontrolname='vendorName']")`,
+   `byXPath("")`),VendorName);
+var AccNum="AutoAcc"+eval("'Num'+ Math.floor(Math.random()*10000)");
+log(AccNum);
+setValue(fallback(`byXPath("//input[@formcontrolname='accountNo']")`,
+   `byXPath("//input[@formcontrolname='vendorName']")`),AccNum);
+click(fallback(`byXPath("//button[contains(@class,'next mat-flat-button')]/span[1]")`,
+   `byXPath("")`));
+click(fallback(`byXPath("//button[contains(@class,'next mat-flat-button')]/span[1]")`,
+   `byXPath("")`));
+click(fallback(`byXPath("//span[contains(text(),'Save & Add Vendor')]")`,
+   `byXPath("")`)); 
+}
+

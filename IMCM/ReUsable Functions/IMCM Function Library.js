@@ -2027,7 +2027,9 @@ click(fallback(`byXPath("(//div[contains(text(),'Output Type')]/span/following::
 setValue(fallback(`byXPath("//input[@placeholder='Search Output Type ']")`,
    `byXPath("")`),"TEXT");
 wait(2000);
-click(fallback(`byXPath("(//span[contains(text(),'TEXT FILE CONFIGURATOR')]/parent::span)[2]")`));
+click(fallback(`byXPath("(//mat-option[@role='option'])[1]")`,
+   `byXPath("")`));
+//click(fallback(`byXPath("(//span[contains(text(),'TEXT FILE CONFIGURATOR')]/parent::span)[1]")`));
 
 click(fallback(`byXPath("//span[contains(text(),'Next')]/parent::span")`,
    `byXPath("//span[contains(text(),'Next')]/parent::span")`));
@@ -2063,6 +2065,7 @@ wait(4000);
 click(fallback(`byXPath("//span[contains(text(),'Save')]/ancestor::button")`));
 assertExists(fallback(`byXPath('//*[text()=" Integration created successfully "]')`));
 }
+
 function DeleteAllTextFileIntegration(){
 click(fallback(`byXPath("//th[contains(@class,'search-outputType')]//mat-select")`,
    `byXPath("")`));

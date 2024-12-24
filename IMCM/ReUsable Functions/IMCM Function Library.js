@@ -116,6 +116,30 @@ click(fallback(`byXPath("//span[contains(text(),'All Emails')]")`));
 click(fallback(`byXPath("//span[contains(text(),'${Email}')]/parent::mat-option")`));
 }
 
+function SelectVendorStockroomAndEmailInInteractions1(Vendor, Stockroom, Email) {
+    if (!Vendor || !Stockroom || !Email) {
+        console.error("Vendor, Stockroom, and Email must be provided.");
+        return;
+    }
+
+    setShadowDOM(true);
+
+    function selectOption(labelXPath, valueXPath) {
+        try {
+            click(fallback(labelXPath));
+            waitUntilVisible(fallback(valueXPath), 5000); // Wait until the option is visible
+            click(fallback(valueXPath));
+        } catch (error) {
+            console.error(`Error selecting option: ${error.message}`);
+        }
+    }
+
+    selectOption("//span[contains(text(),'All Vendors')]", `//span[contains(text(),'${Vendor}')]/parent::mat-option`);
+    selectOption("//span[contains(text(),'All Stockrooms')]", `//span[contains(text(),'${Stockroom}')]/parent::mat-option`);
+    selectOption("//span[contains(text(),'All Emails')]", `//span[contains(text(),'${Email}')]/parent::mat-option`);
+}
+
+
 
 function SearchFieldWithoutClose(SearchEditField,SearchValue){
 clickIfFound(fallback(`byXPath("//button[@aria-label='Table View Preference Card']")`));
@@ -2147,7 +2171,6 @@ click(fallback(`byXPath("(//mat-option[@role='option'])[1]")`,
 click(fallback(`byXPath("//span[text()='Update Results']/ancestor::button")`));
 wait(1000);
 }
-
 
 
 

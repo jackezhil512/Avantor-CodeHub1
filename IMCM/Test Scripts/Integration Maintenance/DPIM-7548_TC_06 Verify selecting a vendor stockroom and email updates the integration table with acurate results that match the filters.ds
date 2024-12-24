@@ -1,74 +1,66 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'DPIM-7548_TC_06 Verify selecting a vendor stockroom and email updates the integration table with acurate results that match the filters.ds' description= '' author= 'null' version= ''>
-<dpl filename='REPOSITORY/IMCM-AvantorCodeHub-Repo/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;TestAutomation&apos;,&apos;ActivateDeactivateStockRoomTesting&apos;,&apos;Automation@gmail.com&apos;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Update Results&apos;)]&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-vendorData&apos;)])[1]&quot;))' type='web' desc='Get Vendor Name' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='VendorName' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-stockroomData&apos;)])[1]&quot;))' type='web' desc='Get Stockroom Name' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='StockroomName' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-requisitionEmailId&apos;)])[1]&quot;))' type='web' desc='get email id' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='EmailID' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertEqual' value='&apos;TestAutomation&apos;' type='web' desc='verify updfated and searched vendor results are same or not?' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='VendorName' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='assertEqual' value='&apos;ActivateDeactivateStockRoomTesting&apos;' type='web' desc='verify updfated and searched stockroom results are same or not?' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='StockroomName' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='assertEqual' value='&apos;Automation@gmail.com&apos;' type='web' desc='verify updfated and searched results Email are same or not?' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='EmailID' fallback='true' selected='true'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='qatest1@avantorsciences.com' version='webDesigner'>
+    <dpl filename='REPOSITORY/IMCM-AvantorCodeHub-Repo/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='29316a41-75dd-45ee-82bc-e2da535d672a' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='20230844-e936-44e7-b1e1-6227aa9c4fdb' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2b5dc69c-9aa7-467e-b220-edee1fff40bc' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='SelectVendorStockroomAndEmailInInterations1(&apos;TestAutomation&apos;,&apos;ActivateDeactivateStockRoomTesting&apos;,&apos;Automation@gmail.com&apos;)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fe594461-e957-414b-8545-0d66e5d8dadc' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c160565d-6e1b-446b-aa1e-ef3dd34a6e96' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;Update Results&apos;)]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='efa5acdd-83e9-4c15-9985-9108149a631a' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='getText(byXPath("(//td[contains(@class,&apos;mat-column-vendorData&apos;)])[1]"))' type='web' desc='Get Vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='725ae468-c524-47af-9233-4694d9117a31' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='VendorName' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value='getText(byXPath("(//td[contains(@class,&apos;mat-column-stockroomData&apos;)])[1]"))' type='web' desc='Get Stockroom Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='da20f440-fa4e-4a3e-9a9f-8b08ffc9801b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='StockroomName' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value='getText(byXPath("(//td[contains(@class,&apos;mat-column-requisitionEmailId&apos;)])[1]"))' type='web' desc='get email id' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2653bc44-5070-4c01-a5d0-9784912a3015' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='EmailID' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6ea4045f-d421-4a0d-9775-989a71797236' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertEqual' value='&apos;TestAutomation&apos;' type='web' desc='verify updfated and searched vendor results are same or not?' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='db1709a3-ae5b-4f34-95c1-2ba6500637a3' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='VendorName' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertEqual' value='&apos;ActivateDeactivateStockRoomTesting&apos;' type='web' desc='verify updfated and searched stockroom results are same or not?' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8d6ae100-de7c-41e8-bf2c-0ede246f3acf' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='StockroomName' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertEqual' value='&apos;Automation@gmail.com&apos;' type='web' desc='verify updfated and searched results Email are same or not?' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d2a170be-99b9-4e66-bec7-f55140d2c0db' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='EmailID' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+  </testcase>

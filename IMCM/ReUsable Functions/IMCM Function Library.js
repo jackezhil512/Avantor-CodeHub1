@@ -2149,8 +2149,8 @@ wait(1000);
 }
 
 function Updateresultwithvse(VenName,EmailInput){
-   wait(1000);
-   await driver.wait(until.elementLocated(By.xpath('//span[contains(text(), "All Vendors")]')), 10000).click();
+wait(1000);
+  await driver.wait(until.elementLocated(By.xpath('//span[contains(text(), "All Vendors")]')), 10000).click();
    await driver.wait(until.elementLocated(By.xpath(`//span[contains(text(), "${VenName}")]`)), 10000).click();
    await driver.wait(until.elementLocated(By.xpath('//span[contains(text(), "All Stockrooms")]')), 10000).click();
    await driver.wait(until.elementLocated(By.xpath('//span[contains(text(), "Ev_Automation_Regular_Stockroom")]')), 10000).click();

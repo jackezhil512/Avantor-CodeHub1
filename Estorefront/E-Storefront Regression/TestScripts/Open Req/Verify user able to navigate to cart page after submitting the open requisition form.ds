@@ -1,90 +1,78 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'Verify user able to navigate to cart page after submitting the open requisition form.ds' description= '' author= 'null' version= ''>
-<dpl filename='REPOSITORY/Estorefront/E-Storefront Regression/Test Data/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$OpenReq_Userid,$OpenReq_Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='OpenReqBillInformation()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='OpenReqTellUsMore();' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='OpenReqGiveUsFewMoredetails()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='label(&quot;Comments (150 characters or less)&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-open-req-form/div/open-req-comments-attachments/div/form/div[1]/span/label&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;input-label&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Comments (150 characters or less)&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-open-req-form/div/open-req-comments-attachments/div/form/div/span/label&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-open-req-form[1]/div[@class=&apos;container&apos;]/open-req-comments-attachments[1]/div[@class=&apos;comments-attachment-block text-break&apos;]/form[@class=&apos;open-req-forms ng-untouched ng-pristine ng-valid&apos;]/div[@class=&apos;section&apos;]/span[1]/label[@class=&apos;input-label&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;label[class=&quot;input-label&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.input-label&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='label(&quot;input-label&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='submit(&quot;btn btn-primary open-req-submit&quot;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='submit(&quot;Submit&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-open-req-form/div/div/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary open-req-submit&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Submit &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-open-req-form/div/div/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-open-req-form[1]/div[@class=&apos;container&apos;]/div[@class=&apos;d-flex justify-content-md-end mr-md-5 my-2&apos;]/button[@class=&apos;btn btn-primary open-req-submit&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;container&quot;] &gt; div[class=&quot;d-flex justify-content-md-end mr-md-5 my-2&quot;] &gt; button[class=&quot;btn btn-primary open-req-submit&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.container &gt; .d-flex.justify-content-md-end.mr-md-5.my-2 &gt; .btn.btn-primary.open-req-submit&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='div(&quot;Open Requisition Items&quot;).xy(0.10, 0.38 )' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-cart-details/app-avtr-open-req-items/div[1]&apos;).xy(0.10, 0.38 )' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;pb-2 mt-5 openreq-header&quot;]&apos;).xy(0.10, 0.38 )' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Open Requisition Items&quot;]&apos;).xy(0.10, 0.38 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/app-avtr-open-req-items/div&apos;).xy(0.10, 0.38 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;CartPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;TopContent has-components&apos;]/app-avtr-cart-details[1]/app-avtr-open-req-items[1]/div[@class=&apos;pb-2 mt-5 openreq-header&apos;]&quot;).xy(0.10, 0.38 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;pb-2 mt-5 openreq-header&quot;]&apos;).xy(0.10, 0.38 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.pb-2.mt-5.openreq-header&apos;).xy(0.10, 0.38 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;mt-5 openreq-header pb-2&quot;).xy(0.10, 0.38 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='heading3(&quot;Cart Summary&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-cart-total/div/h3&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Cart Summary&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-cart-total/div/h3&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;CartPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;CenterRightContentSlot has-components&apos;]/app-avtr-cart-total[1]/div[@class=&apos;cart-totals-container&apos;]/h3[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='Muralikrishna.g@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../../TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6683bece-d979-4e22-892e-365048f0472c' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9ad1f326-9733-44e6-9c3b-40fa24c2e485' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ebe10b92-660e-4f5c-8be8-426909d223c8' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$OpenReq_Userid,$OpenReq_Password)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ac1828d5-1ddd-4503-8d68-8cb92d8d234a' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='OpenReqBillInformation()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='aef28322-7f14-4f7b-8b66-8071948e90d8' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='OpenReqTellUsMore();' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3d38e875-c889-4b28-accb-e2d90138b9c7' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='OpenReqGiveUsFewMoredetails()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='688077cf-d153-4a04-85a3-8255aae869f5' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0619ec18-3e86-4cac-87ee-df9d09be365b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='label("Comments (150 characters or less)")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-open-req-form/div/open-req-comments-attachments/div/form/div[1]/span/label&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="input-label"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Comments (150 characters or less)"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-open-req-form/div/open-req-comments-attachments/div/form/div/span/label&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-open-req-form[1]/div[@class=&apos;container&apos;]/open-req-comments-attachments[1]/div[@class=&apos;comments-attachment-block text-break&apos;]/form[@class=&apos;open-req-forms ng-untouched ng-pristine ng-valid&apos;]/div[@class=&apos;section&apos;]/span[1]/label[@class=&apos;input-label&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;label[class="input-label"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.input-label&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='label("input-label")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ff7018f1-5f11-4048-a480-a804d1116dbe' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='submit("btn btn-primary open-req-submit")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='submit("Submit")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-open-req-form/div/div/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="btn btn-primary open-req-submit"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Submit "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-open-req-form/div/div/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-open-req-form[1]/div[@class=&apos;container&apos;]/div[@class=&apos;d-flex justify-content-md-end mr-md-5 my-2&apos;]/button[@class=&apos;btn btn-primary open-req-submit&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="container"] &gt; div[class="d-flex justify-content-md-end mr-md-5 my-2"] &gt; button[class="btn btn-primary open-req-submit"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.container &gt; .d-flex.justify-content-md-end.mr-md-5.my-2 &gt; .btn.btn-primary.open-req-submit&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f07d1bba-8ab3-4f11-914a-bac45e5862b9' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='div("Open Requisition Items").xy(0.10, 0.38 )' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[1]/app-avtr-cart-details/app-avtr-open-req-items/div[1]&apos;).xy(0.10, 0.38 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="pb-2 mt-5 openreq-header"]&apos;).xy(0.10, 0.38 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Open Requisition Items"]&apos;).xy(0.10, 0.38 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/app-avtr-open-req-items/div&apos;).xy(0.10, 0.38 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;CartPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;TopContent has-components&apos;]/app-avtr-cart-details[1]/app-avtr-open-req-items[1]/div[@class=&apos;pb-2 mt-5 openreq-header&apos;]").xy(0.10, 0.38 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="pb-2 mt-5 openreq-header"]&apos;).xy(0.10, 0.38 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.pb-2.mt-5.openreq-header&apos;).xy(0.10, 0.38 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("mt-5 openreq-header pb-2").xy(0.10, 0.38 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='85658335-94fa-4283-a254-7e6e7e1f6f49' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='heading3("Cart Summary")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-cart-total/div/h3&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Cart Summary"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-cart-total/div/h3&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;CartPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate&apos;]/cx-page-slot[@class=&apos;CenterRightContentSlot has-components&apos;]/app-avtr-cart-total[1]/div[@class=&apos;cart-totals-container&apos;]/h3[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+  </testcase>

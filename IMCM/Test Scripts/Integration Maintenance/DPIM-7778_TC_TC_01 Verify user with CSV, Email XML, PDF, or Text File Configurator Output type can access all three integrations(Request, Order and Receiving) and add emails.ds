@@ -1,220 +1,244 @@
 <?xml version='1.0' encoding='UTF-8'?>
-  <testcase name='' description='script generated from Web Designer' author='Harish@avantorsciences.com' version='webDesigner'>
-    <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'></dpl>
-    <fallback useFallback='true'></fallback>
-    <shadowDOM useShadowDOM='true'></shadowDOM>
-    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9ab37f6b-ef87-4616-8f6a-41ed490cb85c' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' "{ds}/../../ReUsable Functions/IMCM Function Library.js"' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' "REPOSITORY/EV1/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' "{ds}/../../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' "{ds}/../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='047dd808-045d-470e-b2f8-b4faf582dfe7' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7d711381-56c4-4b4d-bceb-4d125c3c9945' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='51331f11-c8ff-4610-9497-f8432ccf2c06' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("(//div[text()=&apos; Vendor &apos;]/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ecc78558-c7ee-4d42-8dae-a0b66561b556' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[text()=&apos; Automation &apos;]/parent::mat-option")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[text()=&apos; all &apos;]/parent::mat-option")' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[text()=&apos; ALL &apos;]/parent::mat-option")' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d8d8d08b-c6e4-4ad7-ac4c-4c28585964ee' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[text()=&apos;Update Results&apos;]/ancestor::button")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f2c95a47-e2af-40c9-9e55-f171dfba0e67' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='store' value=' _eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b9a3341b-c728-40b7-b769-24e722da5a01' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='strRows2' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='log' value='strRows2' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8aba4331-0918-46b6-b7dd-8b1fb771eb14' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='if' value='strRows2&gt;0' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e523bca3-20d0-4b4c-add2-5f6f61a36120' uiType='conditional'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='strRows2&gt;0' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='e76ec53b-cd3e-43b5-afb8-413660fc41cd' uid='3e2750f0-b901-49fe-a139-7ca7d018d70b' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("(//img[contains(@src,&apos;ellipsis-icon.svg&apos;)]/ancestor::button)[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='e76ec53b-cd3e-43b5-afb8-413660fc41cd' uid='b1060eaf-fb0e-4607-83d5-72c53dd9d89f' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//button[text()=&apos; Delete &apos;]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='e76ec53b-cd3e-43b5-afb8-413660fc41cd' uid='5d58efc3-ad41-4cab-b473-43fa48ef1e16' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[text()=&apos; Yes &apos;]/parent::button")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b5a610fc-f019-4954-9703-ff043743754c' uiType='end' sibling='e76ec53b-cd3e-43b5-afb8-413660fc41cd'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dc6785f1-7a6e-4e3e-a4d6-0930194fe593' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='18e5d235-ddb2-4726-a52f-ff265b04c174' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='85a8c5c1-3e59-4037-a646-705a8247c644' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;ADD NEW INTEGRATION&apos;)]/ancestor::button")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='assertExists' value='' type='web' desc='Verify Vendor Tab exist' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ec27538d-2707-4fcf-8838-3fbfa16caad0' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//strong[text()=&apos;Vendor, Stockroom &amp; Output Type&apos;]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='assertExists' value='' type='web' desc='Verify integration and emails   Tab exist' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='60e6c175-bece-4e69-9ff3-91ec4f1fd9ef' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//strong[text()=&apos;Integrations &amp; Emails&apos;]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='assertExists' value='' type='web' desc='verify review tab exist' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='af4cfe29-d49a-48e6-8820-621ca74ca23c' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//strong[text()=&apos;Review&apos;]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='store' value=' "Automation"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4deedc4f-4170-40bf-8884-e19a411366b2' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='VendorName1' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value='VendorName' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value='V' selected='false' fallback='true'></accessor>
-        <accessor type='unknown' value='' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5077b979-7aa6-4111-b252-a9152d5a418d' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//mat-select[@formcontrolname=&apos;vendor&apos;]/div[contains(@class, &apos;mat-select-trigger&apos;)]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='setValue' value='VendorName1' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='71140832-d0f0-41bd-a519-f92e33fae231' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath(&apos;//input[@placeholder="Search Vendor "]&apos;)' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='Select First check box' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4d3f4b29-9b95-4177-9b80-a665fdaeab2b' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='Parent' value=' custom("mat-pseudo-checkbox", 0, _in(custom("mat-option", "mat-option-424")))' selected='true' fallback='true'></accessor>
-        <accessor type='Parent' value=' custom("mat-pseudo-checkbox", 0, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-424&apos;})))' selected='false' fallback='true'></accessor>
-        <accessor type='AttrClass' value=' custom("mat-pseudo-checkbox", "mat-option-pseudo-checkbox mat-pseudo-checkbox ng-star-inserted")' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value=' byXPath("//mat-option[@id=&apos;mat-option-424&apos;]/mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
-        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option/mat-pseudo-checkbox&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-option-424&apos;)/mat-pseudo-checkbox[@class=&apos;mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value=' byJQuery(&apos;div[class="mat-select-panel-wrap ng-tns-c89-231 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted"] &gt; div[class="ng-tns-c89-231 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; div[class="ng-tns-c89-231"] &gt; mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted"] &gt; mat-pseudo-checkbox[class="mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-424 &gt; .mat-pseudo-checkbox.mat-option-pseudo-checkbox.ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='Click on empty Space' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a53a37b4-af77-4a7a-8b39-f2b819125ded' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='AttrClass' value=' div("cdk-overlay-backdrop cdk-overlay-backdrop-showing cdk-overlay-transparent-backdrop").xy(0.51, 0.28 )' selected='true' fallback='true'></accessor>
-        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[3]&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("/html[@class=&apos;cdk-global-scrollblock&apos;]/body[1]/div[@class=&apos;cdk-overlay-container&apos;]/div[@class=&apos;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&apos;]").xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value=' byJQuery(&apos;div[class="cdk-overlay-container"] &gt; div[class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b994e070-4fd0-46b1-a0b1-9a32a78b43d7' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='Click on Select Stockroom' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f5b3ba75-1459-4e0c-a14a-68149441c25f' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' span("Select Stockroom")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c0066e21-704a-4187-a7a6-0e3bd713b71c' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='Parent' value=' custom("mat-pseudo-checkbox", 0, _in(custom("mat-option", "mat-option-376")))' selected='true' fallback='true'></accessor>
-        <accessor type='Parent' value=' custom("mat-pseudo-checkbox", 0, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-376&apos;})))' selected='false' fallback='true'></accessor>
-        <accessor type='AttrClass' value=' custom("mat-pseudo-checkbox", "mat-option-pseudo-checkbox mat-pseudo-checkbox ng-star-inserted")' selected='false' fallback='true'></accessor>
-        <accessor type='XPath' value=' byXPath("//mat-option[@id=&apos;mat-option-376&apos;]/mat-pseudo-checkbox")' selected='false' fallback='true'></accessor>
-        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option/mat-pseudo-checkbox&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("id(&apos;mat-option-376&apos;)/mat-pseudo-checkbox[@class=&apos;mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value=' byJQuery(&apos;div[class="mat-select-panel-wrap ng-tns-c89-234 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted"] &gt; div[class="ng-tns-c89-234 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; div[class="ng-tns-c89-234"] &gt; mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted mat-active"] &gt; mat-pseudo-checkbox[class="mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-376 &gt; .mat-pseudo-checkbox.mat-option-pseudo-checkbox.ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='Click on empty Space' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4e5d543d-b46f-423e-b347-70e864a0dd7f' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='AttrClass' value=' div("cdk-overlay-backdrop cdk-overlay-backdrop-showing cdk-overlay-transparent-backdrop").xy(0.51, 0.28 )' selected='true' fallback='true'></accessor>
-        <accessor type='XPathClass' value=' byXPath(&apos;//*[@class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
-        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[3]&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
-        <accessor type='RelativeXPath' value=' byXPath("/html[@class=&apos;cdk-global-scrollblock&apos;]/body[1]/div[@class=&apos;cdk-overlay-container&apos;]/div[@class=&apos;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&apos;]").xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value=' byJQuery(&apos;div[class="cdk-overlay-container"] &gt; div[class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
-        <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a76657b0-6949-4adc-a1f7-cdde14691d97' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2a4330e4-c7fc-4ee2-8e65-74691b2f4dfd' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("(//div[contains(text(),&apos;Output Type&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f106b6ff-7043-4515-96c9-3e6c000730c6' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;PDF OUTPUT&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='setValue' value=' "{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5abcf4da-573b-462c-889f-c07677dacd9f' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//h4[contains(text(),&apos;Add New Integration&apos;)]")' selected='true' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='79dc8af8-f93f-44d0-9b21-f5248440ef6a' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b43b48fc-d47b-4530-a124-6e3f89c61459' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='379d55b9-bef3-4176-ad54-a4f8bfc93617' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value=' byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2ffdd4c2-4dd3-4742-88d0-8ca24f52885a' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='js' value='IntegrationAndReviewTabs()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='91fd5f92-0f99-43fd-affb-abcc516c6a41' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9856bd3e-cee2-4edf-9e36-15c680f80eef' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='store' value=' getText(byXPath("(//td[contains(@class,&apos;mat-column-vendorData&apos;)])[1]"))' type='web' desc='Get Vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='00daf1bf-569f-4d6e-90bc-c08bf201780b' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='VendorNameInFirstRow' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value='VendorName' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-    <step action='assertEqual' value='VendorName1' type='web' desc='verify updfated and searched vendor results are same or not?' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2bdba787-26eb-49f5-aa06-9645ead441ac' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='unknown' value='VendorNameInFirstRow' selected='true' fallback='true'></accessor>
-        <accessor type='unknown' value='VendorName' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
-  </testcase>
+<testcase   name= 'DPIM-7778_TC_TC_01 Verify user with CSV, Email XML, PDF, or Text File Configurator Output type can access all three integrations(Request, Order and Receiving) and add emails.ds' description= '' author= 'Harish@avantorsciences.com' version= ''>
+<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value=' &quot;REPOSITORY/EV1/IMCM Function Library.js&quot;' fallback='true' selected='false'/>
+   <accessor type='unknown' value=' &quot;{ds}/../../IMCM Function Library.js&quot;' fallback='true' selected='false'/>
+   <accessor type='unknown' value=' &quot;{ds}/../IMCM Function Library.js&quot;' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//div[text()=&apos; Vendor &apos;]/following::mat-select)[1]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos; Automation &apos;]/parent::mat-option&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value=' byXPath(&quot;//span[text()=&apos; all &apos;]/parent::mat-option&quot;)' fallback='true' selected='false'/>
+   <accessor type='unknown' value=' byXPath(&quot;//span[text()=&apos; ALL &apos;]/parent::mat-option&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos;Update Results&apos;]/ancestor::button&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='strRows2' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='log' value='strRows2' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='if' value='strRows2&gt;0' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='strRows2&gt;0' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//img[contains(@src,&apos;ellipsis-icon.svg&apos;)]/ancestor::button)[1]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//button[text()=&apos; Delete &apos;]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos; Yes &apos;]/parent::button&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;ADD NEW INTEGRATION&apos;)]/ancestor::button&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='Verify Vendor Tab exist' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//strong[text()=&apos;Vendor, Stockroom &amp; Output Type&apos;]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='Verify integration and emails   Tab exist' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//strong[text()=&apos;Integrations &amp; Emails&apos;]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='verify review tab exist' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//strong[text()=&apos;Review&apos;]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='"Automation"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='VendorName1' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//mat-select[@formcontrolname=&apos;vendor&apos;]/div[contains(@class, &apos;mat-select-trigger&apos;)]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='VendorName1' type='web' desc='Search with vendor Name' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&apos;//input[@placeholder=&quot;Search Vendor &quot;]&apos;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Select First check box' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Parent' value='custom(&quot;mat-pseudo-checkbox&quot;, 0, _in(custom(&quot;mat-option&quot;, &quot;mat-option-424&quot;)))' fallback='true' selected='true'/>
+   <accessor type='Parent' value=' custom(&quot;mat-pseudo-checkbox&quot;, 0, _in(custom(&quot;mat-option&quot;, {&apos;id&apos;:&apos;mat-option-424&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value=' custom(&quot;mat-pseudo-checkbox&quot;, &quot;mat-option-pseudo-checkbox mat-pseudo-checkbox ng-star-inserted&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value=' byXPath(&quot;//mat-option[@id=&apos;mat-option-424&apos;]/mat-pseudo-checkbox&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value=' byXPath(&apos;//*[@class=&quot;mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option/mat-pseudo-checkbox&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value=' byXPath(&quot;id(&apos;mat-option-424&apos;)/mat-pseudo-checkbox[@class=&apos;mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value=' byJQuery(&apos;div[class=&quot;mat-select-panel-wrap ng-tns-c89-231 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted&quot;] &gt; div[class=&quot;ng-tns-c89-231 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary&quot;] &gt; div[class=&quot;ng-tns-c89-231&quot;] &gt; mat-option[class=&quot;mat-option mat-focus-indicator mat-option-multiple ng-star-inserted&quot;] &gt; mat-pseudo-checkbox[class=&quot;mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-option-424 &gt; .mat-pseudo-checkbox.mat-option-pseudo-checkbox.ng-star-inserted&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on empty Space' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='div(&quot;cdk-overlay-backdrop cdk-overlay-backdrop-showing cdk-overlay-transparent-backdrop&quot;).xy(0.51, 0.28 )' fallback='true' selected='true'/>
+   <accessor type='XPathClass' value=' byXPath(&apos;//*[@class=&quot;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&quot;]&apos;).xy(0.51, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[3]&apos;).xy(0.51, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value=' byXPath(&quot;/html[@class=&apos;cdk-global-scrollblock&apos;]/body[1]/div[@class=&apos;cdk-overlay-container&apos;]/div[@class=&apos;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&apos;]&quot;).xy(0.51, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value=' byJQuery(&apos;div[class=&quot;cdk-overlay-container&quot;] &gt; div[class=&quot;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&quot;]&apos;).xy(0.51, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.51, 0.28 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on Select Stockroom' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='span(&quot;Select Stockroom&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Parent' value='custom(&quot;mat-pseudo-checkbox&quot;, 0, _in(custom(&quot;mat-option&quot;, &quot;mat-option-376&quot;)))' fallback='true' selected='true'/>
+   <accessor type='Parent' value=' custom(&quot;mat-pseudo-checkbox&quot;, 0, _in(custom(&quot;mat-option&quot;, {&apos;id&apos;:&apos;mat-option-376&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value=' custom(&quot;mat-pseudo-checkbox&quot;, &quot;mat-option-pseudo-checkbox mat-pseudo-checkbox ng-star-inserted&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value=' byXPath(&quot;//mat-option[@id=&apos;mat-option-376&apos;]/mat-pseudo-checkbox&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value=' byXPath(&apos;//*[@class=&quot;mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option/mat-pseudo-checkbox&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value=' byXPath(&quot;id(&apos;mat-option-376&apos;)/mat-pseudo-checkbox[@class=&apos;mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value=' byJQuery(&apos;div[class=&quot;mat-select-panel-wrap ng-tns-c89-234 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted&quot;] &gt; div[class=&quot;ng-tns-c89-234 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary&quot;] &gt; div[class=&quot;ng-tns-c89-234&quot;] &gt; mat-option[class=&quot;mat-option mat-focus-indicator mat-option-multiple ng-star-inserted mat-active&quot;] &gt; mat-pseudo-checkbox[class=&quot;mat-pseudo-checkbox mat-option-pseudo-checkbox ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;#mat-option-376 &gt; .mat-pseudo-checkbox.mat-option-pseudo-checkbox.ng-star-inserted&apos;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='Click on empty Space' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='div(&quot;cdk-overlay-backdrop cdk-overlay-backdrop-showing cdk-overlay-transparent-backdrop&quot;).xy(0.51, 0.28 )' fallback='true' selected='true'/>
+   <accessor type='XPathClass' value=' byXPath(&apos;//*[@class=&quot;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&quot;]&apos;).xy(0.51, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[3]&apos;).xy(0.51, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value=' byXPath(&quot;/html[@class=&apos;cdk-global-scrollblock&apos;]/body[1]/div[@class=&apos;cdk-overlay-container&apos;]/div[@class=&apos;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&apos;]&quot;).xy(0.51, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value=' byJQuery(&apos;div[class=&quot;cdk-overlay-container&quot;] &gt; div[class=&quot;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&quot;]&apos;).xy(0.51, 0.28 )' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.51, 0.28 )' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//div[contains(text(),&apos;Output Type&apos;)]/span/following::mat-select)[1]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;PDF OUTPUT&apos;)]/parent::span&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='setValue' value='"{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//h4[contains(text(),&apos;Add New Integration&apos;)]&quot;)' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Next&apos;)]/parent::span&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value=' byXPath(&quot;//span[contains(text(),&apos;Next&apos;)]/parent::span&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='js' value='IntegrationAndReviewTabs()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-vendorData&apos;)])[1]&quot;))' type='web' desc='Get Vendor Name' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='VendorNameInFirstRow' fallback='true' selected='true'/>
+</dialect>
+</step>
+<step action='assertEqual' value='VendorName1' type='web' desc='verify updfated and searched vendor results are same or not?' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='VendorNameInFirstRow' fallback='true' selected='true'/>
+   <accessor type='unknown' value='VendorName' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

@@ -3,7 +3,7 @@
 <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM Function Library.js"' fallback='true' selected='false'/>
@@ -12,146 +12,146 @@
    <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='NavigateToIntegrationMaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='NavigateToIntegrationMaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='TotalRow' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='while' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='while' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='TotalRow&gt;=1' fallback='true' selected='true'/>
    <accessor type='unknown' value='TotalRow&gt;1' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='deleteAll()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='deleteAll()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='TotalRow' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='eval(&quot; Math.floor(Math.random()*1000000000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='eval(&quot; Math.floor(Math.random()*1000000000)&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='RandomVal' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='datefunc()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='datefunc()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='Date' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='&quot;Automation&quot; +Date+RandomVal' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='&quot;Automation&quot; +Date+RandomVal' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='VendorName' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='&quot;Auto&quot;+RandomVal+&quot;@avantorsciences.com&quot;' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='&quot;Auto&quot;+RandomVal+&quot;@avantorsciences.com&quot;' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='Email' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='AddALLintegration()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='AddALLintegration()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='NavigateToVendorMaintenancePage()' type='web' desc='Vendor Maintenance' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='NavigateToVendorMaintenancePage()' type='web' desc='Vendor Maintenance' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='Click Add new vendor' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='Click Add new vendor' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Add New Vendor &quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='VendorName' type='web' desc='Set vender Naame' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='VendorName' type='web' desc='Set vender Naame' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot; Create New Vendor &quot;]/following::input[1]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='RandomVal' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='RandomVal' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot; Create New Vendor &quot;]/following::input[4]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='Click next' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='Click next' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='custom(&quot;mat-icon&quot;, &quot;arrow_forward&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='Enter vendor name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Enter vendor name' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;${VendorName }&quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;Automation &quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='Validate PDF OUTPUT' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Validate PDF OUTPUT' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;PDF OUTPUT&quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;(//th[text()=&apos;Order Email&apos;]/following::span[contains(text(),&apos;Add Email&apos;)])[3]&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='byXPath(&quot;(//th[text()=&apos;Order Email&apos;]/following::span[contains(text(),&apos;Add Email&apos;)])[1]&quot;)' fallback='true' selected='false'/>
    <accessor type='unknown' value='byXPath(&quot;(//th[text()=&apos;Order Email&apos;]/following::span[contains(text(),&apos;Add Email&apos;)])[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='Email' type='web' desc='Enter Email ID' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='Email' type='web' desc='Enter Email ID' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//input[@title=&apos;&apos;]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='Click on Save' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='Click on Save' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;save&quot;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='custom(&quot;mat-icon&quot;, 0, _in(custom(&quot;mat-tab-body&quot;, {&apos;id&apos;:&apos;mat-tab-content-1-1&apos;})))' fallback='true' selected='false'/>
@@ -165,7 +165,7 @@
    <accessor type='Parent' value='custom(&quot;mat-icon&quot;, 0, _in(custom(&quot;mat-tab-body&quot;, &quot;mat-tab-content-1-1&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='Click on Forward arrow' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='Click on Forward arrow' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;arrow_forward&quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='Text' value='custom(&quot;mat-icon&quot;, &quot;arrow_forward&quot;)' fallback='true' selected='false'/>
@@ -177,140 +177,140 @@
    <accessor type='AttrClass' value='custom(&quot;mat-icon&quot;, &quot;mat-icon mat-icon-no-color material-icons notranslate[12]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='Validate Vendor Name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Validate Vendor Name' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;${VendorName }&quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='Validate out Put type' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Validate out Put type' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='cell(&quot;PDF OUTPUT&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='Validate email' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Validate email' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot; ${Email} &quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot; ${Email} &quot;]&apos;)' fallback='true' selected='false'/>
    <accessor type='unknown' value='byXPath(&apos;//*[text() =&quot;${Email}&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='Click on Save and ADD vendor' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='Click on Save and ADD vendor' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='span(&quot;Save &amp; Add Vendor[1]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='Validate Success Message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Validate Success Message' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='div(&quot;VENDOR CREATED SUCCESSFULLY[9]&quot;).xy(0.41, 0.32 )' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='VendorName' type='web' desc='Search with vendor' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='VendorName' type='web' desc='Search with vendor' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot; Vendor Name &quot;]/following::input[1]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;(//img[@src=&apos;/assets/icons/ellipsis-icon.svg&apos;])[1]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='Click on Edit' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='Click on Edit' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Edit &quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='Click on Forword Arrow' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='Click on Forword Arrow' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='custom(&quot;mat-icon&quot;, &quot;arrow_forward&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='Validate vendor name exist' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Validate vendor name exist' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot;${VendorName }&quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='Validate out put type' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Validate out put type' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='cell(&quot;PDF OUTPUT&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='Validate Email' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='Validate Email' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//input[@title =&apos;${Email}&apos;]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='click on Close' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='click on Close' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Cancel &quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='Click on Yes' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='Click on Yes' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Yes &quot;]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='AddALLintegrationWithCSV()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='AddALLintegrationWithCSV()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='AddALLintegrationWithXML()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='AddALLintegrationWithXML()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='AddALLintegrationWithText()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='AddALLintegrationWithText()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='NavigateToVendorMaintenancePage()' type='web' desc='Vendor Maintenance' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='NavigateToVendorMaintenancePage()' type='web' desc='Vendor Maintenance' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='VendorName' type='web' desc='Search with vendor' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='VendorName' type='web' desc='Search with vendor' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//*[text() = &quot; Vendor Name &quot;]/following::input[1]&apos;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='Click on vendor name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='Click on vendor name' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos;${VendorName}&apos;]&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='byXPath(&apos;//span[text()=&quot;${VendorName}&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Integrations&quot;]&apos;)' fallback='true' selected='true'/>
    <accessor type='Text' value='custom(&quot;mat-panel-title&quot;, &quot;Integrations&quot;)' fallback='true' selected='false'/>
@@ -323,12 +323,12 @@
    <accessor type='AttrClass' value='custom(&quot;mat-panel-title&quot;, &quot;mat-expansion-panel-header-title ng-tns-c282-326&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='span(&quot;PDF OUTPUT&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[1]/td[3]/span&quot;)' fallback='true' selected='false'/>
@@ -342,7 +342,7 @@
    <accessor type='AttrClass' value='span(&quot;ng-star-inserted[2]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='span(&quot;EMAIL XML&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[9]/td[3]/span&quot;)' fallback='true' selected='false'/>
@@ -353,7 +353,7 @@
    <accessor type='AttrClass' value='span(&quot;ng-star-inserted[6]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='span(&quot;CSV&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[5]/td[3]/span&quot;)' fallback='true' selected='false'/>
@@ -365,7 +365,7 @@
    <accessor type='Text' value='span(&quot;CSV&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='span(&quot;TEXT FILE CONFIGURATOR&quot;)' fallback='true' selected='true'/>
    <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-accordion-child-1&apos;]/div/section/div[2]/avantor-table/div[2]/table/tbody/tr[5]/td[3]/span&quot;)' fallback='true' selected='false'/>
@@ -375,43 +375,43 @@
    <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[5]//td[3]//span[text()=&quot;CSV&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='NavigateToIntegrationMaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='NavigateToIntegrationMaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='TotalRow' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='while' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='while' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='TotalRow&gt;=1' fallback='true' selected='true'/>
    <accessor type='unknown' value='TotalRow&gt;1' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='deleteAll()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='deleteAll()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='TotalRow' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

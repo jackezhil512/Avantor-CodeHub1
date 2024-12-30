@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'TC_06 Verify selecting a vendor stockroom and email updates the integration table with acurate results that match the filters.ds' description= '' author= 'null' version= ''>
+<testcase   name= 'DPIM-7548_TC_06 Verify selecting a vendor stockroom and email updates the integration table with acurate results that match the filters.ds' description= '' author= 'null' version= ''>
 <dpl filename='REPOSITORY/IMCM-AvantorCodeHub-Repo/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' fallback='true' selected='false'/>
@@ -11,62 +11,62 @@
    <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;TestAutomation&apos;,&apos;ActivateDeactivateStockRoomTesting&apos;,&apos;Automation@gmail.com&apos;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;TestAutomation&apos;,&apos;ActivateDeactivateStockRoomTesting&apos;,&apos;Automation@gmail.com&apos;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;Update Results&apos;)]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-vendorData&apos;)])[1]&quot;))' type='web' desc='Get Vendor Name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-vendorData&apos;)])[1]&quot;))' type='web' desc='Get Vendor Name' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='VendorName' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-stockroomData&apos;)])[1]&quot;))' type='web' desc='Get Stockroom Name' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-stockroomData&apos;)])[1]&quot;))' type='web' desc='Get Stockroom Name' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='StockroomName' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-requisitionEmailId&apos;)])[1]&quot;))' type='web' desc='get email id' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getText(byXPath(&quot;(//td[contains(@class,&apos;mat-column-requisitionEmailId&apos;)])[1]&quot;))' type='web' desc='get email id' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='EmailID' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='assertEqual' value='&apos;TestAutomation&apos;' type='web' desc='verify updfated and searched vendor results are same or not?' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertEqual' value='&apos;TestAutomation&apos;' type='web' desc='verify updfated and searched vendor results are same or not?' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='VendorName' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertEqual' value='&apos;ActivateDeactivateStockRoomTesting&apos;' type='web' desc='verify updfated and searched stockroom results are same or not?' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertEqual' value='&apos;ActivateDeactivateStockRoomTesting&apos;' type='web' desc='verify updfated and searched stockroom results are same or not?' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='StockroomName' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertEqual' value='&apos;Automation@gmail.com&apos;' type='web' desc='verify updfated and searched results Email are same or not?' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertEqual' value='&apos;Automation@gmail.com&apos;' type='web' desc='verify updfated and searched results Email are same or not?' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='EmailID' fallback='true' selected='true'/>
 </dialect>

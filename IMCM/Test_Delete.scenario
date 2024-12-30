@@ -30,7 +30,7 @@
   </basics>
   <resources>
     <resource name="DPIM_4335 TC_005 verify the user is able to edit the ORDER email fields when while creating new vendor when ALL is not prsent.ds" type="ds" path="{scenario}/Test Scripts/Vendor Maintenance/DPIM_4335 TC_005 verify the user is able to edit the ORDER email fields when while creating new vendor when ALL is not prsent.ds"/>
-    <resource name="IMCM_INPUTFILE.csv" type="csv" path="REPOSITORY/Central_Repo/IMCM/Test Data/IMCM_INPUTFILE.csv"/>
+    <resource name="IMCM_INPUTFILE.csv" type="csv" path="{scenario}/Test Data/IMCM_INPUTFILE.csv"/>
     <resource name="IMCM Function Library.js" type="js" path="{scenario}/ReUsable Functions/IMCM Function Library.js"/>
     <resource name="ReUsable Functions" type="folder" path="{scenario}/ReUsable Functions/"/>
     <resource name="Test Data" type="folder" path="{scenario}/Test Data/"/>
@@ -160,7 +160,9 @@
     <testcase name="Testcase1" importance="normal">
       <test>
         <run name="Untitled1" langtype="ds3" resource="DPIM_4335 TC_005 verify the user is able to edit the ORDER email fields when while creating new vendor when ALL is not prsent.ds" method="ds" testclass="Chrome">
-          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
+          <argument name="Untitled1" method="getDataByIndex" dpl="Untitled1">
+            <argument name="index" value="1"/>
+          </argument>
         </run>
       </test>
     </testcase>

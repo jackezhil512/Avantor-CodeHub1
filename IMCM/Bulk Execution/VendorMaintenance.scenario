@@ -133,6 +133,9 @@
     </options>
     <options type="jira">
       <opt name="useJira" value="false"/>
+      <opt name="jiraIssueTypes" value="[object Object]"/>
+      <opt name="jiraFailure" value="[object Object]"/>
+      <opt name="jiraSuccess" value="[object Object]"/>
     </options>
     <options type="lr">
       <opt name="saveCompleteLrOutputLog" value="false"/>
@@ -158,7 +161,7 @@
       <test>
         <run name="VendorMaintenance" langtype="bulkds3" instance="1" resource="IMCM/Test Scripts/Vendor Maintenance/" method="ds" testclass="ChromeHeadless" regex="*.ds">
           <argument name="Untitled1" method="getDataByIndex" dpl="TestData">
-            <argument name="index" value="1"/>
+            <argument name="index" value="0"/>
           </argument>
         </run>
       </test>

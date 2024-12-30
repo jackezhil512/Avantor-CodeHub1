@@ -75,6 +75,13 @@
    <accessor type='unknown' value='byXPath(&quot;//input[@formcontrolname=&apos;subjectFreeText&apos;]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//span[contains(text(),&apos;Save changes&apos;)]/parent::button[@disabled=&apos;true&apos;])[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
+   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//mat-select[@formcontrolname=&apos;language&apos;]&quot;)' fallback='true' selected='true'/>
@@ -84,6 +91,13 @@
 <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&quot;//span[contains(text(),&apos;English(North America)&apos;) and @class=&apos;mat-option-text&apos;]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='byXPath(&quot;(//span[contains(text(),&apos;Save changes&apos;)]/parent::button[@disabled=&apos;true&apos;])[1]&quot;)' fallback='true' selected='true'/>
+   <accessor type='unknown' value='' fallback='false' selected='false'/>
    <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>

@@ -3,25 +3,25 @@
 <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM Function Library.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='"{ds}/../../ReUsable Functions/Re Useable Function Library/NavigateToUserMaintenance.ds"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM/Re Useable Function Library/NavigateToUserMaintenance.ds"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"REPOSITORY/IMCM-Repo/IMCM/ReUsable Functions/Re Useable Function Library/NavigateToUserMaintenance.ds"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='div(&quot;Inactive Users[1]&quot;).xy(0.31, 0.62 )' fallback='true' selected='true'/>
    <accessor type='Parent' value='div(0, _in(div({&apos;id&apos;:&apos;mat-tab-label-2-2&apos;}))).xy(0.31, 0.62 )' fallback='true' selected='false'/>
@@ -34,18 +34,18 @@
    <accessor type='Parent' value='div(0, _in(div(&quot;mat-tab-label-2-2&quot;))).xy(0.31, 0.62 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='"User Test"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"User Test"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='textbox(/mat-input.*/,_below(span(&quot;Name&quot;)))' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='cell(&quot;User Test&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='byXPath(&quot;//mat-tab-body[@id=&apos;mat-tab-content-4-2&apos;]/div/app-list-inactive-users/avantor-table/div[2]/table/tbody/tr[1]/td[2]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='div(&quot;Active Users[1]&quot;).xy(0.49, 0.62 )' fallback='true' selected='true'/>
    <accessor type='Parent' value='div(0, _in(div({&apos;id&apos;:&apos;mat-tab-label-2-0&apos;}))).xy(0.49, 0.62 )' fallback='true' selected='false'/>
@@ -58,28 +58,28 @@
    <accessor type='Parent' value='div(0, _in(div(&quot;mat-tab-label-2-0&quot;))).xy(0.49, 0.62 )' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='setValue' value='"Ev Automation"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"Ev Automation"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='textbox(/mat-input.*/,_below(span(&quot;Name&quot;)))' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='cell(&quot;Ev Automation&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='div(&quot;Internal Users[1]&quot;).xy(0.38, 0.70 )' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='setValue' value='"AutomationDeletion Test"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setValue' value='"AutomationDeletion Test"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='textbox(/mat-input.*/,_below(span(&quot;First &amp; Last Name&quot;)))' fallback='true' selected='true'/>
    <accessor type='unknown' value='textbox(/mat-input.*/,_below(span(&quot;Name&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='cell(&quot;User60 Appvance389&quot;)' fallback='true' selected='true'/>
    <accessor type='Parent' value='cell(1, _in(custom(&quot;mat-tab-body&quot;, {&apos;id&apos;:&apos;mat-tab-content-2-3&apos;})))' fallback='true' selected='false'/>
@@ -94,7 +94,7 @@
    <accessor type='Parent' value='cell(1, _in(custom(&quot;mat-tab-body&quot;, &quot;mat-tab-content-2-3&quot;)))' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='cell(&quot;AutomationDeletion Test&quot;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='cell(&quot;User60 Appvance389&quot;)' fallback='true' selected='false'/>

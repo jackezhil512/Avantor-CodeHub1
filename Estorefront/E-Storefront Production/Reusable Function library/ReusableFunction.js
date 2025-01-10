@@ -559,13 +559,22 @@ function AddTwoProducts(input){
   setValue(fallback(`textbox(0, _in(header("cx-header")))`), input);
   click(fallback(`custom("cx-icon", "cx-icon fa-search fas")`));
   wait(5000);
-  click2(fallback(`heading6(/Expand.*/)`));
+  //click2(fallback(`heading6(/Expand.*/)`));
+  // click on Expand item in search page.
+ click(fallback(`byXPath("(//h6[@class='accordion-heading'])[1]")`));
+ //(//h6[@class='accordion-heading'])[1]
+
   //click2(fallback(`heading6("[Expand]")`));
   //click(fallback(`heading6(0, _in(section({'aria-label':'Product Results List'})))`));
-  wait(7000);
+  wait(5000);
   click(fallback(`button("+")`));
-  wait(2000);
+  //wait(2000);
   click(fallback(`button("+")`));
+ // click(fallback(`button[@aria-label="Add one more"])`));
+  //button[@aria-label="Add one more"])
+  //lick(fallback(`button("Create & Add")`));
+ // click(fallback(`button("Add one more")`));
+  //assertExists(fallback(`button("+"),_above(submit("Add to cart"))`));
   click(fallback(`submit("Add to cart")`));
   wait(10000);
   click(fallback(`byXPath("//header[@id='cx-header']/cx-page-layout[1]/cx-page-slot[6]/app-avtr-mini-cart/div/a/cx-icon")`));

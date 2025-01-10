@@ -3,34 +3,34 @@
 <dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Production/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
-<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='ClearCart()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='ClearCart()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='Verifyaddtocartfromshoppinglistdetailspage()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='Verifyaddtocartfromshoppinglistdetailspage()' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>

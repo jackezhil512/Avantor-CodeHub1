@@ -1,29 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'Verify Navigation To Product Page From Search Results Product Link.ds' description= '' author= 'null' version= ''>
-<dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Production/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"REPOSITORY/Estorefront/Estorefront/E-Storefront Production/Reusable Function library/ReusableFunction.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ClearCart()' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ProductPageNavigation($Product)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='Muralikrishna.g@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../../TestData/InputSheet_Production_US.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='11ab799e-b494-41a9-bb1f-f7fc266782ca' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/Estorefront/Estorefront/E-Storefront Production/Reusable Function library/ReusableFunction.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='33d18461-ffe0-40c2-84c4-7030e0338ac7' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ClearCart()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cb6e9280-b58f-4358-9dfe-d5b0a3166556' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ProductPageNavigation($Product)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3f8c15ef-c121-4af6-bb5c-217dfe620cdc' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+  </testcase>

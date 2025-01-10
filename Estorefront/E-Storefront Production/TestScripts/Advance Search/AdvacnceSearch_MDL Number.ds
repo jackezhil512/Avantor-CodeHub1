@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'AdvacnceSearch_MDL Number.ds' description= '' author= 'null' version= ''>
+<dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Production/TestData/InputSheet_Production_US.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../../../E-Storefront Production/Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='LaunchBrowser($URL)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='AttrClass' value='textbox(&quot;form-control ng-dirty ng-untouched ng-valid&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='textbox(3, _in(div({&apos;id&apos;:&apos;ProductDetail&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;ProductDetail&apos;]/div[2]/app-advanced-search/form/div[1]/div[4]/label/input&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;form-control ng-untouched ng-valid ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[4]/app-avtr-tab-container/div/div[2]/app-advanced-search/form/div/div[4]/label/input&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;ProductDetail&apos;)/div[@class=&apos;generic-tab active&apos;]/app-advanced-search[1]/form[@class=&apos;ng-untouched ng-valid ng-dirty&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;form-group col-12 col-sm-6&apos;]/label[1]/input[@class=&apos;form-control ng-untouched ng-valid ng-dirty&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='textbox({&apos;formcontrolname&apos;:&apos;mdl_number&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;input[class=&quot;form-control ng-untouched ng-valid ng-dirty&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.form-control.ng-untouched.ng-valid.ng-dirty&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='textbox(3, _in(div(&quot;ProductDetail&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='AdvanceSearch(&quot;3&quot;,$MDLNumber)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='submit(&quot;Search&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='submit(4, _in(div({&apos;id&apos;:&apos;ProductDetail&apos;})))' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='submit(&quot;btn btn-primary&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;ProductDetail&apos;]/div[2]/app-advanced-search/form/div[2]/button&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Search &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[4]/app-avtr-tab-container/div/div[2]/app-advanced-search/form/div[2]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;ProductDetail&apos;)/div[@class=&apos;generic-tab active&apos;]/app-advanced-search[1]/form[@class=&apos;ng-untouched ng-valid ng-dirty&apos;]/div[@class=&apos;button-section&apos;]/button[@class=&apos;btn btn-primary&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;form[class=&quot;ng-untouched ng-valid ng-dirty&quot;] &gt; div[class=&quot;button-section&quot;] &gt; button[class=&quot;btn btn-primary&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.ng-untouched.ng-valid.ng-dirty &gt; .button-section &gt; .btn.btn-primary&apos;)' fallback='true' selected='false'/>
+   <accessor type='Parent' value='submit(4, _in(div(&quot;ProductDetail&quot;)))' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

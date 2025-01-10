@@ -1,37 +1,24 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'AdvanceSearch_ChemicalFormula_.ds' description= '' author= 'null' version= ''>
-<dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Production/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='include' value='AdvanceSearch(&quot;8&quot;,$ChemicalNameorSynonym)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='LaunchBrowser($URL)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='AdvanceSearch(&quot;1&quot;,$ChemicalNameFormula)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='takeElementPicture' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='heading2(0, _in(section({&apos;aria-label&apos;:&apos;Product Results List&apos;})))' fallback='true' selected='true'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='Muralikrishna.g@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../../TestData/InputSheet_Production_US.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='20c8975f-139a-4d5f-858f-3814ad7d3087' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='15698f97-ef8b-4d79-8feb-a07d1984c313' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='include' value='AdvanceSearch("8",$ChemicalNameorSynonym)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='06f221fb-1409-444a-b10f-d8878204497c' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='LaunchBrowser($URL)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d08fccca-c8c2-4e0d-8219-a1aad203ff5d' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='AdvanceSearch("1",$ChemicalFormula)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4c6f2d3e-d28f-4690-9036-6c9ca67b4286' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+  </testcase>

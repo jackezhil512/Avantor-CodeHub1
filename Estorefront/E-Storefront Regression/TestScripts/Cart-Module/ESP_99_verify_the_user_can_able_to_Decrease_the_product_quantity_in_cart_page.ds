@@ -3,49 +3,49 @@
 <dpl filename='REPOSITORY/Estorefront/E-Storefront Regression/Test Data/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
 <fallback useFallback='true'/>
 <shadowDOM useShadowDOM='true'/>
-<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
    <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
    <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='ClearCart()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='ClearCart()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='js' value='AddTwoProducts($Product)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='js' value='AddTwoProducts($Product)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='store' value='getText(div(&quot;cx-summary-amount&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getText(div(&quot;cx-summary-amount&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='BeforeQtyPrice' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='log' value='BeforeQtyPrice' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='log' value='BeforeQtyPrice' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='' fallback='false' selected='true'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='button(&quot;-&quot;)' fallback='true' selected='true'/>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-avtr-cart-details/div[3]/app-avtr-cart-item-list/div[3]/div/app-avtr-cart-item/div/div/div/div[4]/div/cx-item-counter/button&apos;)' fallback='true' selected='false'/>
@@ -54,7 +54,7 @@
    <accessor type='Attribute' value='button({&apos;tabindex&apos;:&apos;0&apos;})' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='AttrClass' value='submit(&quot;btn btn-block btn-white cx-btn mb-3&quot;)' fallback='true' selected='true'/>
    <accessor type='Text' value='submit(&quot;Update Quantities&quot;)' fallback='true' selected='false'/>
@@ -67,7 +67,7 @@
    <accessor type='JQuery' value='byJQuery(&apos;cx-page-slot[class=&quot;CenterRightContentSlot has-components ng-star-inserted&quot;] &gt; app-avtr-cart-total[class=&quot;ng-star-inserted&quot;] &gt; div[class=&quot;cart-totals-container ng-star-inserted&quot;] &gt; div[class=&quot;btn-container ng-star-inserted&quot;] &gt; button[class=&quot;cx-btn btn btn-block btn-white mb-3&quot;]&apos;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='Text' value='strong(&quot;$523.88&quot;)' fallback='true' selected='true'/>
    <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-avtr-cart-total/div/div/div/div[2]/strong&apos;)' fallback='true' selected='false'/>
@@ -75,12 +75,12 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;stop-navigating CartPageTemplate&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;CartPageTemplate ng-star-inserted&apos;]/cx-page-slot[@class=&apos;CenterRightContentSlot has-components ng-star-inserted&apos;]/app-avtr-cart-total[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;cart-totals-container ng-star-inserted&apos;]/div[@class=&apos;cx-order-summary&apos;]/div[@class=&apos;py-1 d-flex justify-content-between&apos;]/div[@class=&apos;cx-summary-amount&apos;]/strong[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='store' value='getText(div(&quot;cx-summary-amount&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='store' value='getText(div(&quot;cx-summary-amount&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='AfterUpdateQtyPrice' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertGreaterThan' value='BeforeQtyPrice' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
+<step action='assertGreaterThan' value='BeforeQtyPrice' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='AfterUpdateQtyPrice' fallback='true' selected='true'/>
 </dialect>

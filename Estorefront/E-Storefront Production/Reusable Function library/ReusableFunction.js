@@ -750,7 +750,7 @@ function ValidateAccessoriescatlogNumber(){
   wait(10000)
   assertExists(fallback(`heading3("Cart Summary")`));
 
- var CartPageCatlogNumber=getText(fallback(`link("${CatlogNumber}")`));
+ var CartPageCatlogNumber=getText(fallback(`link("cart-catalog-link-color cx-link")`));
   log(CartPageCatlogNumber);
 
  if (CartPageCatlogNumber == Accessoriescatlognumber){

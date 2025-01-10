@@ -1,156 +1,136 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'Verify if Order Details are displayed upon clicking order number link in Orders Page.ds' description= '' author= 'null' version= ''>
-<dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Production/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='null'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='link(&quot;Your Orders&quot;)' fallback='true' selected='true'/>
-   <accessor type='Parent' value='link(15, _in(header(&quot;cx-header&quot;)))' fallback='true' selected='false'/>
-   <accessor type='Parent' value='link(15, _in(header({&apos;id&apos;:&apos;cx-header&apos;})))' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Your Orders &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[2]/div/div/nav/app-generic-link/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[2]/div/div/nav[1]/app-generic-link/a&quot;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SiteLogin has-components&apos;]/app-login[1]/div[@class=&apos;loggedIN&apos;]/cx-page-slot[@class=&apos;HeaderLinks has-components&apos;]/app-avtr-navigation[1]/app-avtr-navigation-ui[@class=&apos;accNavComponent flyout&apos;]/nav[1]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[2]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[1]/app-generic-link[1]/a[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/orders&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/orders&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Completely Shipped&quot;]&apos;).xy(0.38, 0.59 )' fallback='true' selected='true'/>
-   <accessor type='Text' value='div(&quot;Completely Shipped&quot;).xy(0.38, 0.59 )' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div[2]/div/div/div/a[6]/div&apos;).xy(0.38, 0.59 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div[2]/div/div/div/a[6]/div&apos;).xy(0.38, 0.59 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;order-history-facetvalue-label[10]&quot;).xy(0.38, 0.59 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='20000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='getText(link(&quot;cx-link&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='OrderNumber' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='link(&quot;cx-link&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='OrderNumber' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='getText(byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div/div/div[2]/div&apos;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='OrderNumberInOrderDetailspage' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='if' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='OrderNumber == OrderNumberInOrderDetailspage' fallback='true' selected='true'/>
-   <accessor type='unknown' value='OrderNumber' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='log' value='"OrderNumber is matched in orderdetails page"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='else' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='"OrderNumber is not matched in orderdetailspage"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='strong(&quot;Order Number&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[1]/div/div[2]/strong&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Order Number&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div/div/div[2]/strong&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='heading4(&quot;Shipping&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[3]/div[1]/h4&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Shipping&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div[3]/div/h4&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-approval-order-details[1]/div[@class=&apos;container p-0&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;order-details-container font-description col-lg-9 col-sm-12 p-0&apos;]/div[@class=&apos;shipping-payment-container container-fluid p-2 pl-3 d-flex pt-4&apos;]/div[@class=&apos;col-sm-6 p-0&apos;]/h4[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='heading4(&quot;Payment&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[3]/div[2]/h4&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Payment&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div[3]/div[2]/h4&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-approval-order-details[1]/div[@class=&apos;container p-0&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;order-details-container font-description col-lg-9 col-sm-12 p-0&apos;]/div[@class=&apos;shipping-payment-container container-fluid p-2 pl-3 d-flex pt-4&apos;]/div[@class=&apos;payment-container col-sm-6 p-0 pl-4&apos;]/h4[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='strong(&quot;Web Tracking Number&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[1]/div/div[3]/strong&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Web Tracking Number&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div/div/div[3]/strong&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='strong(&quot;Order Method&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[1]/div/div[4]/strong&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Order Method&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div/div/div[4]/strong&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='strong(&quot;Order Total&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[1]/div/div[5]/strong&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Order Total&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div/div/div[5]/strong&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='sureshkumar.gopalakrishnan@avantorsciences.com' version='webDesigner'>
+    <dpl filename='REPOSITORY/Estorefront/Estorefront/E-Storefront Production/TestData/InputSheet_Regreesion.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='752af4e6-57c3-460d-b614-be2cd1034273' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1785e7c8-ac3f-468a-bc24-042fd226b838' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8f1cf557-b1af-45c0-9579-ea657b8f0218' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='17e6de83-0c56-4d5d-93f4-c027ab36df0a' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7ca0d87b-4924-47e4-bbc4-68694c54522b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='link("Your Orders")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='link(15, _in(header("cx-header")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='link(15, _in(header({&apos;id&apos;:&apos;cx-header&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Your Orders "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[2]/div/div/nav/app-generic-link/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[2]/div/div/nav[1]/app-generic-link/a")' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SiteLogin has-components&apos;]/app-login[1]/div[@class=&apos;loggedIN&apos;]/cx-page-slot[@class=&apos;HeaderLinks has-components&apos;]/app-avtr-navigation[1]/app-avtr-navigation-ui[@class=&apos;accNavComponent flyout&apos;]/nav[1]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[2]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[1]/app-generic-link[1]/a[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;a[href="/ca/en/my-account/orders"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrHref' value='link("/ca/en/my-account/orders")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='adcf5434-50d5-47fd-9000-cfd527cbdb57' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Completely Shipped"]&apos;).xy(0.38, 0.59 )' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='div("Completely Shipped").xy(0.38, 0.59 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div[2]/div/div/div/a[6]/div&apos;).xy(0.38, 0.59 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[2]/app-order-history-static-facets/div[2]/div/div/div/a[6]/div&apos;).xy(0.38, 0.59 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("order-history-facetvalue-label[10]").xy(0.38, 0.59 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='20000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8cdc9d27-e14c-482f-b095-293f56a6a350' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='getText(link("cx-link"))' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='abd4af02-b87e-4fd3-94e7-268cd05319ec' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='OrderNumber' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bc755ae1-6b4e-497a-b074-ecfba57a623c' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='link("cx-link")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='OrderNumber' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='58f77744-9b1e-4bf9-a342-3b89d0bc585f' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9e77f579-a536-4e37-9c6d-cb45d2535064' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='getText(byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div/div/div[2]/div&apos;))' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3cd5990b-6ea7-4b67-b2e2-19ee65b59b91' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='OrderNumberInOrderDetailspage' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='if' value='OrderNumber == OrderNumberInOrderDetailspage' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d0866c82-6c59-4824-ac26-fa1a26be76c3' uiType='conditional'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='OrderNumber == OrderNumberInOrderDetailspage' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='OrderNumber' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='"OrderNumber is matched in orderdetails page"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='d0866c82-6c59-4824-ac26-fa1a26be76c3' uid='e5f0e336-81e9-491b-b502-fead0e173a63' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='else' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='d0866c82-6c59-4824-ac26-fa1a26be76c3' uid='1b8bb73b-f4fa-4f30-9824-1b85c8bf75b9' uiType='conditional'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='log' value='"OrderNumber is not matched in orderdetailspage"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='1b8bb73b-f4fa-4f30-9824-1b85c8bf75b9' uid='56d236f9-f9db-493c-bb05-2b3dd79f7c41' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='d0866c82-6c59-4824-ac26-fa1a26be76c3' uid='b978c5d9-4d47-4f02-92ed-1973a84a990d' uiType='end' sibling='1b8bb73b-f4fa-4f30-9824-1b85c8bf75b9'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='d0866c82-6c59-4824-ac26-fa1a26be76c3' uid='db43d4ce-e156-41bd-8081-4dc9e4c7f0a4' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='strong("Order Number")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[1]/div/div[2]/strong&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Order Number"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div/div/div[2]/strong&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='d0866c82-6c59-4824-ac26-fa1a26be76c3' uid='e31aa09a-f938-43d5-9562-bf7d9ce3fdff' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='heading4("Shipping")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[3]/div[1]/h4&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Shipping"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div[3]/div/h4&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-approval-order-details[1]/div[@class=&apos;container p-0&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;order-details-container font-description col-lg-9 col-sm-12 p-0&apos;]/div[@class=&apos;shipping-payment-container container-fluid p-2 pl-3 d-flex pt-4&apos;]/div[@class=&apos;col-sm-6 p-0&apos;]/h4[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='d0866c82-6c59-4824-ac26-fa1a26be76c3' uid='8ab40a56-024b-4963-9fad-98704d9fc34a' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='heading4("Payment")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[3]/div[2]/h4&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Payment"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div[3]/div[2]/h4&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-approval-order-details[1]/div[@class=&apos;container p-0&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;order-details-container font-description col-lg-9 col-sm-12 p-0&apos;]/div[@class=&apos;shipping-payment-container container-fluid p-2 pl-3 d-flex pt-4&apos;]/div[@class=&apos;payment-container col-sm-6 p-0 pl-4&apos;]/h4[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='d0866c82-6c59-4824-ac26-fa1a26be76c3' uid='3e4c126f-e15f-42f2-b1ba-051e9da07ff9' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='strong("Web Tracking Number")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[1]/div/div[3]/strong&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Web Tracking Number"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div/div/div[3]/strong&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='d0866c82-6c59-4824-ac26-fa1a26be76c3' uid='7b7e80d0-a31d-4cdd-8ded-73cd5ee4867f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='strong("Order Method")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[1]/div/div[4]/strong&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Order Method"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div/div/div[4]/strong&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='d0866c82-6c59-4824-ac26-fa1a26be76c3' uid='4ee35bf9-c194-423a-b7fc-6c668d40b089' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='strong("Order Total")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[1]/div[1]/div/div[5]/strong&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Order Total"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div/div/div[5]/strong&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+  </testcase>

@@ -1121,7 +1121,7 @@ if(true == value){
 click(fallback(`byXPath("//img[@src='/assets/icons/ellipsis-icon.svg']/parent::span")`));
 click(fallback(`byXPath("//img[@src='/assets/icons/delete.svg']/parent::button")`));
 click(fallback(`byXPath("//span[text()=' Yes ']/parent::button")`));
-//assertExists(fallback(`byXPath('//*[text()=" You have successfully deleted integration "]')`));  
+assertExists(fallback(`byXPath('//*[text()=" You have successfully deleted integration "]')`));  
 }
 }
 

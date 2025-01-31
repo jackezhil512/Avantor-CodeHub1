@@ -20,7 +20,7 @@
 -->
 <testscenario xmlns="www.pushtotest.com/tm5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="www.pushtotest.com/XSD/testscenario.xsd" version="2.0">
   <basics>
-    <name>Stage1Sanity Testcases.scenario</name>
+    <name>Integration Maintenance_Regression_Barani.scenario</name>
     <defaultdirectory/>
     <basicName/>
     <creator/>
@@ -29,7 +29,7 @@
     <userinfo/>
   </basics>
   <resources>
-    <resource name="IMCM" type="folder" path="{scenario}/../"/>
+    <resource name="IMCM" type="folder" path="{scenario}/"/>
   </resources>
   <testnodes>
     <node name="localhost" location="http://3.143.160.233:8080/TMServer/ws/TestNode"/>
@@ -41,7 +41,7 @@
     <bundle name="ds" version="3.0"/>
   </bundles>
   <datasources>
-    <dpl name="TestData" type="HashDPL" langtype="java" method="setup">
+    <dpl name="Untitled1" type="HashDPL" langtype="java" method="setup">
       <argument name="resource" dpl="Resources" method="getResourceByName">
         <argument name="file" value="IMCM/Test Data/IMCM_INPUTFILE.csv"/>
       </argument>
@@ -104,7 +104,7 @@
       <opt name="attachDSFile" value="true"/>
       <opt name="attachInstantReplay" value="true"/>
       <opt name="saveRequestAndResponseDS3" value="true"/>
-      <opt name="incognitoMode" value="false"/>
+      <opt name="incognitoMode" value="true"/>
       <opt name="optionsTimings" value="domComplete"/>
       <opt name="overrideBrowser" value="NONE"/>
     </options>
@@ -132,9 +132,6 @@
     </options>
     <options type="jira">
       <opt name="useJira" value="false"/>
-      <opt name="jiraIssueTypes" value="[object Object]"/>
-      <opt name="jiraFailure" value="[object Object]"/>
-      <opt name="jiraSuccess" value="[object Object]"/>
     </options>
     <options type="lr">
       <opt name="saveCompleteLrOutputLog" value="false"/>
@@ -156,12 +153,10 @@
     <controller name="Iteration1">
       <round iterations="1" totalusers="1"/>
     </controller>
-    <testcase name="Stage1Sanity Testcases" importance="normal">
+    <testcase name="Integration Maintenance" importance="normal">
       <test>
-        <run name="Stage1SanityTestcases" langtype="bulkds3" resource="IMCM/Test Scripts/Sanity Testcases_Stage1/" method="ds" testclass="Chrome" regex="*.ds">
-          <argument name="Untitled1" method="getDataByIndex" dpl="TestData">
-            <argument name="index" value="0"/>
-          </argument>
+        <run name="Untitled1" langtype="bulkds3" resource="IMCM/Test Scripts/Integration Maintenance/" method="ds" testclass="Chrome" regex="*.ds">
+          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
         </run>
       </test>
     </testcase>
@@ -171,7 +166,7 @@
   <monitoring enablednodes="true" enabledtarget="false"/>
   <execution type="functionaltest" subtype="bulk">
     <iteration name="Iteration1" controller="Iteration1">
-      <testcase name="Stage1Sanity Testcases" users="1" totalexecutions="1"/>
+      <testcase name="Integration Maintenance" users="1" totalexecutions="1"/>
     </iteration>
   </execution>
   <logs/>

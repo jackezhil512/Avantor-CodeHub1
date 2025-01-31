@@ -1,445 +1,375 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'Product Maintenance - To create a Vwr manual product and then check article activity log.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='null'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$SuperUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Log in to EV application' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='NavigateToProductMaintenancePage()' type='web' desc='Navigate to product maintenance page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setValue' value='$CreateVWRProductCatalog' type='web' desc='search for prodcut in product maintenance page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='textbox(/mat-input-.*/,_below(span(&quot;Catalog #&quot;)))' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='if' value='""' type='web' desc='Verifying if catalog exist or not?' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='isVisible(link($CreateVWRProductCatalog))' fallback='true' selected='true'/>
-   <accessor type='AttrHref' value='link(&quot;javascript:void(0)&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-list-product/div[2]/div[3]/avantor-table/div[2]/table/tbody/tr[1]/td[2]/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; 83008-822 &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-list-product/div[2]/div[3]/avantor-table/div[2]/table/tbody/tr/td[2]/a&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-product-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/main[@class=&apos;container-fluid px-5&apos;]/app-list-product[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;list_table ng-star-inserted&apos;]/div[@class=&apos;ng-star-inserted&apos;]/avantor-table[@class=&apos;list-product-table ng-tns-c324-77 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c324-77&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c324-77 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c324-77 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-catalogNo mat-column-catalogNo ng-tns-c324-77 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-left&apos;]/a[@class=&apos;ng-star-inserted&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[2]//a[@class=&quot;ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[2]//a[text()=&quot; 83008-822 &quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;tr[class=&quot;mat-row cdk-row ng-tns-c324-77 striped-rows ng-star-inserted&quot;] &gt; td[class=&quot;mat-cell cdk-cell cdk-column-catalogNo mat-column-catalogNo ng-tns-c324-77 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-left&quot;] &gt; a[class=&quot;ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c324-77.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-catalogNo.mat-column-catalogNo.ng-tns-c324-77.ng-star-inserted.mat-table-sticky.mat-table-sticky-border-elem-left &gt; .ng-star-inserted&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;javascript:void(0)&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='link(&quot;ng-star-inserted&quot;)' fallback='true' selected='false'/>
-   <accessor type='Text' value='link(&quot;83008-822&quot;)' fallback='true' selected='false'/>
-   <accessor type='unknown' value=' isVisible(link(&quot;83008-822&quot;) )' fallback='true' selected='false'/>
-   <accessor type='unknown' value='  isVisible(link($CreateVWRProductCatalog) ) ' fallback='true' selected='false'/>
-   <accessor type='unknown' value='   isVisible(link($CreateVWRProductCatalog))  ' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='click on check box if exist' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link($CreateVWRProductCatalog)))' fallback='true' selected='true'/>
-   <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link(&quot;$CreateVWRProductCatalog&quot;)))' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='click on delete product' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='submit(&quot;Delete&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='click  on confirm delete' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='submit(&quot;CONFIRM DELETE&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='div(&quot;PRODUCT DELETED[9]&quot;).xy(0.88, 0.59 )' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='NavigateToProductMaintenancePage()' type='web' desc='Navigate to product maintenance page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='click on Add product' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='submit(&quot;add  Add Product&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setValue' value='$CreateVWRProductCatalog' type='web' desc='enter catalog number' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='textbox(/mat-input-.*/,_below(div(&quot;Enter Catalog Number[1]&quot;)))' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='click on search' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='strong(&quot;SEARCH&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='click on search' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='strong(&quot;SEARCH&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='click on add product' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='span(&quot;Add Product&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='if' value='""' type='web' desc='verify product  need to reactive message exist' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='isVisible(byXPath(&apos;//*[text()=&quot; No &quot;]&apos;))' fallback='true' selected='true'/>
-   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-0&apos;})))' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='span(&quot;mat-button-wrapper[12]&quot;)' fallback='true' selected='false'/>
-   <accessor type='Text' value='span(&quot;No&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//mat-dialog-container[@id=&apos;mat-dialog-0&apos;]/app-confirm-dialog/mat-dialog-content/section/div/div[1]/button/span[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-confirm-dialog/mat-dialog-content/section/div/div/button/span&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-dialog-0&apos;)/app-confirm-dialog[@class=&apos;ng-star-inserted&apos;]/mat-dialog-content[@class=&apos;mat-dialog-content no-scroll av-confirm-dialog&apos;]/section[@class=&apos;px-5 py-5 text-center&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-sm-12 col-md-12 col-lg-6 mb-2 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator w-100 py-2 cancel-text mat-button mat-button-base mat-primary ng-star-inserted&apos;]/span[@class=&apos;mat-button-wrapper&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;section[class=&quot;px-5 py-5 text-center&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col-12 col-sm-12 col-md-12 col-lg-6 mb-2 ng-star-inserted&quot;] &gt; button[class=&quot;mat-focus-indicator w-100 py-2 cancel-text mat-button mat-button-base mat-primary ng-star-inserted&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.px-5.py-5.text-center &gt; .row &gt; .col-12.col-sm-12.col-md-12.col-lg-6.mb-2.ng-star-inserted &gt; .mat-focus-indicator.w-100.py-2.cancel-text.mat-button.mat-button-base.mat-primary.ng-star-inserted &gt; .mat-button-wrapper&apos;)' fallback='true' selected='false'/>
-   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-dialog-container&quot;, &quot;mat-dialog-0&quot;)))' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; No &quot;]&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='product  need to reactive select no' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; No &quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-0&apos;})))' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='span(&quot;mat-button-wrapper[12]&quot;)' fallback='true' selected='false'/>
-   <accessor type='Text' value='span(&quot;No&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//mat-dialog-container[@id=&apos;mat-dialog-0&apos;]/app-confirm-dialog/mat-dialog-content/section/div/div[1]/button/span[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-confirm-dialog/mat-dialog-content/section/div/div/button/span&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-dialog-0&apos;)/app-confirm-dialog[@class=&apos;ng-star-inserted&apos;]/mat-dialog-content[@class=&apos;mat-dialog-content no-scroll av-confirm-dialog&apos;]/section[@class=&apos;px-5 py-5 text-center&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-sm-12 col-md-12 col-lg-6 mb-2 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator w-100 py-2 cancel-text mat-button mat-button-base mat-primary ng-star-inserted&apos;]/span[@class=&apos;mat-button-wrapper&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;section[class=&quot;px-5 py-5 text-center&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col-12 col-sm-12 col-md-12 col-lg-6 mb-2 ng-star-inserted&quot;] &gt; button[class=&quot;mat-focus-indicator w-100 py-2 cancel-text mat-button mat-button-base mat-primary ng-star-inserted&quot;] &gt; span[class=&quot;mat-button-wrapper&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.px-5.py-5.text-center &gt; .row &gt; .col-12.col-sm-12.col-md-12.col-lg-6.mb-2.ng-star-inserted &gt; .mat-focus-indicator.w-100.py-2.cancel-text.mat-button.mat-button-base.mat-primary.ng-star-inserted &gt; .mat-button-wrapper&apos;)' fallback='true' selected='false'/>
-   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-dialog-container&quot;, &quot;mat-dialog-0&quot;)))' fallback='true' selected='false'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; No &quot;]&apos;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='Submit ok' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='submit(&quot;Ok&quot;)' fallback='true' selected='true'/>
-   <accessor type='Parent' value='submit(0, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-1&apos;})))' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='submit(&quot;confirm mat-button-base mat-flat-button mat-focus-indicator mat-primary py-2 w-100&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//mat-dialog-container[@id=&apos;mat-dialog-1&apos;]/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary confirm&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-dialog-1&apos;)/app-confirm-dialog[@class=&apos;ng-star-inserted&apos;]/mat-dialog-content[@class=&apos;mat-dialog-content no-scroll av-confirm-dialog&apos;]/section[@class=&apos;px-5 py-5 text-center&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary confirm&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;mat-dialog-content[class=&quot;mat-dialog-content no-scroll av-confirm-dialog&quot;] &gt; section[class=&quot;px-5 py-5 text-center&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted&quot;] &gt; button[class=&quot;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary confirm&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.mat-dialog-content.no-scroll.av-confirm-dialog &gt; .px-5.py-5.text-center &gt; .row &gt; .col-12.col-sm-12.col-md-12.col-lg-6.ng-star-inserted &gt; .mat-focus-indicator.w-100.py-2.mat-flat-button.mat-button-base.mat-primary.confirm&apos;)' fallback='true' selected='false'/>
-   <accessor type='Parent' value='submit(0, _in(custom(&quot;mat-dialog-container&quot;, &quot;mat-dialog-1&quot;)))' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='click on general details' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; General Details &quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='if' value='' type='web' desc='Verify Select UOM  exist or not?' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='isVisible(div(&quot;Select Unit of Measure[1]&quot;).xy(0.39, 0.72 ))' fallback='true' selected='true'/>
-   <accessor type='Parent' value='div(113, _in(div({&apos;id&apos;:&apos;cdk-accordion-child-0&apos;}))).xy(0.39, 0.72 )' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='div(&quot;mat-form-field-infix ng-tns-c49-187&quot;).xy(0.39, 0.72 )' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;cdk-accordion-child-0&apos;]/div/section/div[3]/div[1]/mat-form-field/div/div[1]/div[3]&quot;).xy(0.39, 0.72 )' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-form-field-infix ng-tns-c49-187&quot;]&apos;).xy(0.39, 0.72 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-add-product/div[4]/div/mat-accordion/mat-expansion-panel/div/div/section/div[3]/div/mat-form-field/div/div/div[3]&apos;).xy(0.39, 0.72 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cdk-accordion-child-0&apos;)/div[@class=&apos;mat-expansion-panel-body ng-tns-c280-131&apos;]/section[@class=&apos;pt-4 ng-tns-c280-131&apos;]/div[@class=&apos;row align-items-end&apos;]/div[@class=&apos;col-xl-3&apos;]/mat-form-field[@class=&apos;mat-form-field w-100 ng-tns-c49-187 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-pristine ng-invalid ng-star-inserted&apos;]/div[@class=&apos;mat-form-field-wrapper ng-tns-c49-187&apos;]/div[@class=&apos;mat-form-field-flex ng-tns-c49-187&apos;]/div[@class=&apos;mat-form-field-infix ng-tns-c49-187&apos;]&quot;).xy(0.39, 0.72 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;col-xl-3&quot;] &gt; mat-form-field[class=&quot;mat-form-field w-100 ng-tns-c49-187 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-pristine ng-invalid ng-star-inserted&quot;] &gt; div[class=&quot;mat-form-field-wrapper ng-tns-c49-187&quot;] &gt; div[class=&quot;mat-form-field-flex ng-tns-c49-187&quot;] &gt; div[class=&quot;mat-form-field-infix ng-tns-c49-187&quot;]&apos;).xy(0.39, 0.72 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.col-xl-3 &gt; .mat-form-field.w-100.ng-tns-c49-187.mat-primary.mat-form-field-type-mat-select.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted &gt; .mat-form-field-wrapper.ng-tns-c49-187 &gt; .mat-form-field-flex.ng-tns-c49-187 &gt; .mat-form-field-infix.ng-tns-c49-187&apos;).xy(0.39, 0.72 )' fallback='true' selected='false'/>
-   <accessor type='Parent' value='div(113, _in(div(&quot;cdk-accordion-child-0&quot;))).xy(0.39, 0.72 )' fallback='true' selected='false'/>
-   <accessor type='Text' value='div(&quot;Select Unit of Measure[2]&quot;).xy(0.39, 0.72 )' fallback='true' selected='false'/>
-   <accessor type='unknown' value=' div(&quot;Select Unit of Measure[2]&quot;).xy(0.39, 0.72 ) ' fallback='true' selected='false'/>
-   <accessor type='unknown' value='  div(&quot;Select Unit of Measure[1]&quot;).xy(0.39, 0.72 )  ' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='Click on select UOM' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='div(&quot;Select Unit of Measure[1]&quot;).xy(0.39, 0.72 )' fallback='true' selected='true'/>
-   <accessor type='Text' value='div(&quot;Select Unit of Measure[2]&quot;).xy(0.39, 0.72 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='Select Each from UOM list' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Each ( EA ) &quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&apos;//*[text()=&quot; Each ( EA ) &quot; or text()=&quot; Case of 1000 ( CS ) &quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='Click on stocfkroom details' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Stockroom Details &quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setValue' value='"900"' type='web' desc='Enter reoder point' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='numberbox(/mat-input-.*/,_below(div(&quot;Reorder Point *[1]&quot;)))' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='setValue' value='"990"' type='web' desc='enter maxium stock Quantity' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='numberbox(/mat-input-.*/,_below(div(&quot;Maximum Stock Quantity *[1]&quot;)))' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='clcik on location details' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Location Details &quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='click on select location' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Select Location&quot;]&apos;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='""' type='web' desc='this is from expanded list' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='span(&quot;Select Location[2]&quot;)' fallback='true' selected='true'/>
-   <accessor type='AttrClass' value='span(&quot;mat-option-text&quot;)' fallback='true' selected='false'/>
-   <accessor type='Parent' value='span(0, _in(custom(&quot;mat-option&quot;, &quot;mat-option-1271&quot;)))' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='setValue' value='"Automation"' type='web' desc='enter location name' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Attribute' value='textbox({&apos;placeholder&apos;:&apos;Search location&apos;})' fallback='true' selected='true'/>
-   <accessor type='Id' value='textbox(&quot;mat-input-56&quot;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-input-56&apos;)&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='selectblocation from dropdown' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='div(&quot;Automation&quot;).xy(0.06, 0.13 )' fallback='true' selected='true'/>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Automation &quot;]&apos;).xy(0.06, 0.13 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='click on Save' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='strong(&quot;Save[1]&quot;)' fallback='true' selected='true'/>
-   <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-add-product/div[5]/div/div[2]/button[2]/span[1]/strong&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-add-product/div[5]/div/div[2]/button[2]/span/strong&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-product-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/main[@class=&apos;container-fluid px-5&apos;]/app-add-product[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row my-3 pb-5&apos;]/div[@class=&apos;col d-flex justify-content-between add-product-btns&apos;]/div[2]/button[@class=&apos;mat-focus-indicator py-1 px-3 mx-2 save-product mat-stroked-button mat-button-base mat-primary&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/strong[1]&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='if' value='""' type='web' desc='clik on reactive yes' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='isVisible(submit(&quot;Yes&quot;))' fallback='true' selected='true'/>
-   <accessor type='Parent' value='submit(1, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-2&apos;})))' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='submit(&quot;mat-button-base mat-flat-button mat-focus-indicator mat-primary py-2 w-100&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//mat-dialog-container[@id=&apos;mat-dialog-2&apos;]/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-dialog-2&apos;)/app-confirm-dialog[@class=&apos;ng-star-inserted&apos;]/mat-dialog-content[@class=&apos;mat-dialog-content no-scroll av-confirm-dialog&apos;]/section[@class=&apos;px-5 py-5 text-center&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;mat-dialog-content[class=&quot;mat-dialog-content no-scroll av-confirm-dialog&quot;] &gt; section[class=&quot;px-5 py-5 text-center&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted&quot;] &gt; button[class=&quot;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.mat-dialog-content.no-scroll.av-confirm-dialog &gt; .px-5.py-5.text-center &gt; .row &gt; .col-12.col-sm-12.col-md-12.col-lg-6.ng-star-inserted &gt; .mat-focus-indicator.w-100.py-2.mat-flat-button.mat-button-base.mat-primary&apos;)' fallback='true' selected='false'/>
-   <accessor type='Parent' value='submit(1, _in(custom(&quot;mat-dialog-container&quot;, &quot;mat-dialog-2&quot;)))' fallback='true' selected='false'/>
-   <accessor type='Text' value='submit(&quot;Yes&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='submit(&quot;Yes&quot;)' fallback='true' selected='true'/>
-   <accessor type='Parent' value='submit(1, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-2&apos;})))' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='submit(&quot;mat-button-base mat-flat-button mat-focus-indicator mat-primary py-2 w-100&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//mat-dialog-container[@id=&apos;mat-dialog-2&apos;]/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-dialog-2&apos;)/app-confirm-dialog[@class=&apos;ng-star-inserted&apos;]/mat-dialog-content[@class=&apos;mat-dialog-content no-scroll av-confirm-dialog&apos;]/section[@class=&apos;px-5 py-5 text-center&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;mat-dialog-content[class=&quot;mat-dialog-content no-scroll av-confirm-dialog&quot;] &gt; section[class=&quot;px-5 py-5 text-center&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted&quot;] &gt; button[class=&quot;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.mat-dialog-content.no-scroll.av-confirm-dialog &gt; .px-5.py-5.text-center &gt; .row &gt; .col-12.col-sm-12.col-md-12.col-lg-6.ng-star-inserted &gt; .mat-focus-indicator.w-100.py-2.mat-flat-button.mat-button-base.mat-primary&apos;)' fallback='true' selected='false'/>
-   <accessor type='Parent' value='submit(1, _in(custom(&quot;mat-dialog-container&quot;, &quot;mat-dialog-2&quot;)))' fallback='true' selected='false'/>
-   <accessor type='Text' value='submit(&quot;Yes&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='reactivate prouct click on Yes' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='Text' value='submit(&quot;Yes&quot;)' fallback='true' selected='true'/>
-   <accessor type='Parent' value='submit(1, _in(custom(&quot;mat-dialog-container&quot;, {&apos;id&apos;:&apos;mat-dialog-2&apos;})))' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='submit(&quot;mat-button-base mat-flat-button mat-focus-indicator mat-primary py-2 w-100&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//mat-dialog-container[@id=&apos;mat-dialog-2&apos;]/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-dialog-2&apos;)/app-confirm-dialog[@class=&apos;ng-star-inserted&apos;]/mat-dialog-content[@class=&apos;mat-dialog-content no-scroll av-confirm-dialog&apos;]/section[@class=&apos;px-5 py-5 text-center&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;mat-dialog-content[class=&quot;mat-dialog-content no-scroll av-confirm-dialog&quot;] &gt; section[class=&quot;px-5 py-5 text-center&quot;] &gt; div[class=&quot;row&quot;] &gt; div[class=&quot;col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted&quot;] &gt; button[class=&quot;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.mat-dialog-content.no-scroll.av-confirm-dialog &gt; .px-5.py-5.text-center &gt; .row &gt; .col-12.col-sm-12.col-md-12.col-lg-6.ng-star-inserted &gt; .mat-focus-indicator.w-100.py-2.mat-flat-button.mat-button-base.mat-primary&apos;)' fallback='true' selected='false'/>
-   <accessor type='Parent' value='submit(1, _in(custom(&quot;mat-dialog-container&quot;, &quot;mat-dialog-2&quot;)))' fallback='true' selected='false'/>
-   <accessor type='Text' value='submit(&quot;Yes&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertExists' value='"60,14"' type='web' desc='Verify Product added success message' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; PRODUCT ADDED &quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='Text' value='div(&quot;PRODUCT ADDED&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ValidateArtileActivityLogMovementType($CreateVWRProductCatalog,&quot;Product Created&quot;)' type='web' desc='Validate Product Created in Article Activity log -As discuss to suresh we hold this step ' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ValidateStockroomActivityPage($CreateVWRProductCatalog,&quot;Product Updated&quot;)' type='web' desc='Validate Product Updated in StockRoom Activity log ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='Harish@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='27416cc4-8a9f-4f54-96f9-c3e59ccdcd55' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$SuperUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Log in to EV application' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='af8908b5-cb02-431c-99b5-93ec044bcc6a' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='Login($URL,$Super_User,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3439b308-ff56-49a4-bbe9-a8d63d62d5ac' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='NavigateToProductMaintenancePage()' type='web' desc='Navigate to product maintenance page' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fbba5826-ae24-4cc6-a49b-0cd9354af119' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='75c0f9ab-4f82-4e5a-92c2-0fffab9360a5' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setValue' value='$CreateVWRProductCatalog' type='web' desc='search for prodcut in product maintenance page' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dfbf064d-00e2-441e-85f3-7edd53cc016e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='textbox(/mat-input-.*/,_below(span("Catalog #")))' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='10738b70-91d7-469e-9c81-4fec3aae05a9' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='if' value='isVisible(link($CreateVWRProductCatalog))' type='web' desc='Verifying if catalog exist or not?' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d2e2209f-455f-4c93-a63c-1b6cd0b22202' uiType='conditional'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='isVisible(link($CreateVWRProductCatalog))' selected='true' fallback='true'></accessor>
+        <accessor type='AttrHref' value='link("javascript:void(0)")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-list-product/div[2]/div[3]/avantor-table/div[2]/table/tbody/tr[1]/td[2]/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" 83008-822 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-list-product/div[2]/div[3]/avantor-table/div[2]/table/tbody/tr/td[2]/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-product-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/main[@class=&apos;container-fluid px-5&apos;]/app-list-product[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;list_table ng-star-inserted&apos;]/div[@class=&apos;ng-star-inserted&apos;]/avantor-table[@class=&apos;list-product-table ng-tns-c324-77 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c324-77&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c324-77 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c324-77 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-catalogNo mat-column-catalogNo ng-tns-c324-77 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-left&apos;]/a[@class=&apos;ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[2]//a[@class="ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[2]//a[text()=" 83008-822 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;tr[class="mat-row cdk-row ng-tns-c324-77 striped-rows ng-star-inserted"] &gt; td[class="mat-cell cdk-cell cdk-column-catalogNo mat-column-catalogNo ng-tns-c324-77 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-left"] &gt; a[class="ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c324-77.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-catalogNo.mat-column-catalogNo.ng-tns-c324-77.ng-star-inserted.mat-table-sticky.mat-table-sticky-border-elem-left &gt; .ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;a[href="javascript:void(0)"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='link("ng-star-inserted")' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='link("83008-822")' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='isVisible(link("83008-822") )' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='isVisible(link($CreateVWRProductCatalog) )' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='isVisible(link($CreateVWRProductCatalog))' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='d2e2209f-455f-4c93-a63c-1b6cd0b22202' uid='46cafa57-136b-40bb-92a3-0311d950185c' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='click on check box if exist' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='d2e2209f-455f-4c93-a63c-1b6cd0b22202' uid='d66e3470-aaea-4fa1-ac60-635a7a9f7649' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link($CreateVWRProductCatalog)))' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='checkbox(/mat-checkbox-.*/,_leftOf(link("$CreateVWRProductCatalog")))' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='d2e2209f-455f-4c93-a63c-1b6cd0b22202' uid='f5539643-937a-4ac8-bcaf-fa4b7243b20b' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='click on delete product' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='d2e2209f-455f-4c93-a63c-1b6cd0b22202' uid='93bc3e97-43ba-4b75-893a-8ad480e0bdc6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='submit("Delete")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='d2e2209f-455f-4c93-a63c-1b6cd0b22202' uid='d5df3bfc-f336-4dbd-83fc-8dd561a14586' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='click  on confirm delete' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='d2e2209f-455f-4c93-a63c-1b6cd0b22202' uid='90161777-e86f-41e8-ba27-6ad15d078835' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='submit("CONFIRM DELETE")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='d2e2209f-455f-4c93-a63c-1b6cd0b22202' uid='ba38727b-9757-421f-8a9e-46023b6777b0' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='div("PRODUCT DELETED[9]").xy(0.88, 0.59 )' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2c7e8267-6d15-42ac-aa74-7aa8c4ed4c97' uiType='end' sibling='d2e2209f-455f-4c93-a63c-1b6cd0b22202'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='20a79a58-b735-48f3-82e2-d5974114b5ff' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='NavigateToProductMaintenancePage()' type='web' desc='Navigate to product maintenance page' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c1e8ea73-5722-4a0e-872f-a31b32e4032f' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='click on Add product' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e47f7f6f-87a3-4387-a829-9c42e7ad442f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='submit("add  Add Product")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9c2bc70f-a6a8-4883-8953-0374e3785cec' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setValue' value='$CreateVWRProductCatalog' type='web' desc='enter catalog number' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='952e4097-bd37-42af-ab52-626a35b93d7f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='textbox(/mat-input-.*/,_below(div("Enter Catalog Number[1]")))' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='click on search' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='19329963-56f1-48ed-b302-73760bf65ac3' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='strong("SEARCH")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fccb8a0e-1825-4f64-95de-ffbb67aa7a2b' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='click on search' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='75805d4c-466a-4bf0-a0d6-eeb0c79cfbcf' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='strong("SEARCH")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='23958cc5-fba6-4445-8ca8-80a34c2ba53d' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='click on add product' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='253188cf-9b6a-48f6-b073-f23b53938ed1' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='span("Add Product")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e1f1c92e-207d-44e1-9676-3f2baf84dad0' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='if' value='isVisible(byXPath(&apos;//*[text()=" No "]&apos;))' type='web' desc='verify product  need to reactive message exist' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9bcbd68b-82ea-4bc9-9822-4227671b15cf' uiType='conditional'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='isVisible(byXPath(&apos;//*[text()=" No "]&apos;))' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(custom("mat-dialog-container", {&apos;id&apos;:&apos;mat-dialog-0&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("mat-button-wrapper[12]")' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='span("No")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-dialog-container[@id=&apos;mat-dialog-0&apos;]/app-confirm-dialog/mat-dialog-content/section/div/div[1]/button/span[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-confirm-dialog/mat-dialog-content/section/div/div/button/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-dialog-0&apos;)/app-confirm-dialog[@class=&apos;ng-star-inserted&apos;]/mat-dialog-content[@class=&apos;mat-dialog-content no-scroll av-confirm-dialog&apos;]/section[@class=&apos;px-5 py-5 text-center&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-sm-12 col-md-12 col-lg-6 mb-2 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator w-100 py-2 cancel-text mat-button mat-button-base mat-primary ng-star-inserted&apos;]/span[@class=&apos;mat-button-wrapper&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;section[class="px-5 py-5 text-center"] &gt; div[class="row"] &gt; div[class="col-12 col-sm-12 col-md-12 col-lg-6 mb-2 ng-star-inserted"] &gt; button[class="mat-focus-indicator w-100 py-2 cancel-text mat-button mat-button-base mat-primary ng-star-inserted"] &gt; span[class="mat-button-wrapper"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.px-5.py-5.text-center &gt; .row &gt; .col-12.col-sm-12.col-md-12.col-lg-6.mb-2.ng-star-inserted &gt; .mat-focus-indicator.w-100.py-2.cancel-text.mat-button.mat-button-base.mat-primary.ng-star-inserted &gt; .mat-button-wrapper&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(custom("mat-dialog-container", "mat-dialog-0")))' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" No "]&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='product  need to reactive select no' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='9bcbd68b-82ea-4bc9-9822-4227671b15cf' uid='5f3b3a77-c60f-4663-9729-65586268683b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" No "]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(custom("mat-dialog-container", {&apos;id&apos;:&apos;mat-dialog-0&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("mat-button-wrapper[12]")' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='span("No")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-dialog-container[@id=&apos;mat-dialog-0&apos;]/app-confirm-dialog/mat-dialog-content/section/div/div[1]/button/span[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-confirm-dialog/mat-dialog-content/section/div/div/button/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-dialog-0&apos;)/app-confirm-dialog[@class=&apos;ng-star-inserted&apos;]/mat-dialog-content[@class=&apos;mat-dialog-content no-scroll av-confirm-dialog&apos;]/section[@class=&apos;px-5 py-5 text-center&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-sm-12 col-md-12 col-lg-6 mb-2 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator w-100 py-2 cancel-text mat-button mat-button-base mat-primary ng-star-inserted&apos;]/span[@class=&apos;mat-button-wrapper&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;section[class="px-5 py-5 text-center"] &gt; div[class="row"] &gt; div[class="col-12 col-sm-12 col-md-12 col-lg-6 mb-2 ng-star-inserted"] &gt; button[class="mat-focus-indicator w-100 py-2 cancel-text mat-button mat-button-base mat-primary ng-star-inserted"] &gt; span[class="mat-button-wrapper"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.px-5.py-5.text-center &gt; .row &gt; .col-12.col-sm-12.col-md-12.col-lg-6.mb-2.ng-star-inserted &gt; .mat-focus-indicator.w-100.py-2.cancel-text.mat-button.mat-button-base.mat-primary.ng-star-inserted &gt; .mat-button-wrapper&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(custom("mat-dialog-container", "mat-dialog-0")))' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" No "]&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='9bcbd68b-82ea-4bc9-9822-4227671b15cf' uid='c1723ebe-1187-4378-9658-235a7fa36615' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='Submit ok' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='9bcbd68b-82ea-4bc9-9822-4227671b15cf' uid='d121caf4-48ba-4962-8beb-7b96267596b2' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='submit("Ok")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(0, _in(custom("mat-dialog-container", {&apos;id&apos;:&apos;mat-dialog-1&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='submit("confirm mat-button-base mat-flat-button mat-focus-indicator mat-primary py-2 w-100")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-dialog-container[@id=&apos;mat-dialog-1&apos;]/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary confirm"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-dialog-1&apos;)/app-confirm-dialog[@class=&apos;ng-star-inserted&apos;]/mat-dialog-content[@class=&apos;mat-dialog-content no-scroll av-confirm-dialog&apos;]/section[@class=&apos;px-5 py-5 text-center&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary confirm&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-dialog-content[class="mat-dialog-content no-scroll av-confirm-dialog"] &gt; section[class="px-5 py-5 text-center"] &gt; div[class="row"] &gt; div[class="col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted"] &gt; button[class="mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary confirm"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-dialog-content.no-scroll.av-confirm-dialog &gt; .px-5.py-5.text-center &gt; .row &gt; .col-12.col-sm-12.col-md-12.col-lg-6.ng-star-inserted &gt; .mat-focus-indicator.w-100.py-2.mat-flat-button.mat-button-base.mat-primary.confirm&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(0, _in(custom("mat-dialog-container", "mat-dialog-1")))' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9c292f30-7c74-41d6-91fd-70260ff9cd83' uiType='end' sibling='9bcbd68b-82ea-4bc9-9822-4227671b15cf'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5cde0684-e949-4d75-bf74-c9c5e97aca4d' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='click on general details' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='47ec39b7-40e8-4173-ad1d-bda7f1fdfbdc' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" General Details "]&apos;)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='if' value='isVisible(div("Select Unit of Measure[1]").xy(0.39, 0.72 ))' type='web' desc='Verify Select UOM  exist or not?' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6a41e8f1-c1c9-4798-99d9-e5c8da9d276a' uiType='conditional'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='isVisible(div("Select Unit of Measure[1]").xy(0.39, 0.72 ))' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='div(113, _in(div({&apos;id&apos;:&apos;cdk-accordion-child-0&apos;}))).xy(0.39, 0.72 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("mat-form-field-infix ng-tns-c49-187").xy(0.39, 0.72 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-accordion-child-0&apos;]/div/section/div[3]/div[1]/mat-form-field/div/div[1]/div[3]").xy(0.39, 0.72 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-form-field-infix ng-tns-c49-187"]&apos;).xy(0.39, 0.72 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-add-product/div[4]/div/mat-accordion/mat-expansion-panel/div/div/section/div[3]/div/mat-form-field/div/div/div[3]&apos;).xy(0.39, 0.72 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-accordion-child-0&apos;)/div[@class=&apos;mat-expansion-panel-body ng-tns-c280-131&apos;]/section[@class=&apos;pt-4 ng-tns-c280-131&apos;]/div[@class=&apos;row align-items-end&apos;]/div[@class=&apos;col-xl-3&apos;]/mat-form-field[@class=&apos;mat-form-field w-100 ng-tns-c49-187 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-pristine ng-invalid ng-star-inserted&apos;]/div[@class=&apos;mat-form-field-wrapper ng-tns-c49-187&apos;]/div[@class=&apos;mat-form-field-flex ng-tns-c49-187&apos;]/div[@class=&apos;mat-form-field-infix ng-tns-c49-187&apos;]").xy(0.39, 0.72 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="col-xl-3"] &gt; mat-form-field[class="mat-form-field w-100 ng-tns-c49-187 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-pristine ng-invalid ng-star-inserted"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-187"] &gt; div[class="mat-form-field-flex ng-tns-c49-187"] &gt; div[class="mat-form-field-infix ng-tns-c49-187"]&apos;).xy(0.39, 0.72 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.col-xl-3 &gt; .mat-form-field.w-100.ng-tns-c49-187.mat-primary.mat-form-field-type-mat-select.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted &gt; .mat-form-field-wrapper.ng-tns-c49-187 &gt; .mat-form-field-flex.ng-tns-c49-187 &gt; .mat-form-field-infix.ng-tns-c49-187&apos;).xy(0.39, 0.72 )' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='div(113, _in(div("cdk-accordion-child-0"))).xy(0.39, 0.72 )' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='div("Select Unit of Measure[2]").xy(0.39, 0.72 )' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='div("Select Unit of Measure[2]").xy(0.39, 0.72 )' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='div("Select Unit of Measure[1]").xy(0.39, 0.72 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='Click on select UOM' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='6a41e8f1-c1c9-4798-99d9-e5c8da9d276a' uid='64b1049e-31cf-45de-a399-d60e21d08c43' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='div("Select Unit of Measure[1]").xy(0.39, 0.72 )' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='div("Select Unit of Measure[2]").xy(0.39, 0.72 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='Select Each from UOM list' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='6a41e8f1-c1c9-4798-99d9-e5c8da9d276a' uid='28c5ed85-35a2-4b70-91da-f3943278eaff' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Each ( EA ) "]&apos;)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='6a41e8f1-c1c9-4798-99d9-e5c8da9d276a' uid='114da09e-d5c9-40ca-ba0c-5ce13cc44012' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath(&apos;//*[text()=" Each ( EA ) " or text()=" Case of 1000 ( CS ) "]&apos;)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b1194029-5d15-4b78-9e8d-9540f28bc589' uiType='end' sibling='6a41e8f1-c1c9-4798-99d9-e5c8da9d276a'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3b679bee-5efd-43fd-9efa-d09cc11508ed' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='Click on stocfkroom details' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c3f97954-afb9-45cb-bf4a-2431b1e672c2' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Stockroom Details "]&apos;)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='feafe319-3696-4a5d-995e-3eab9af03f6c' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setValue' value='"900"' type='web' desc='Enter reoder point' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bd667347-ea83-4a6a-a8dd-5240af358b5e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='numberbox(/mat-input-.*/,_below(div("Reorder Point *[1]")))' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4eb38760-a04e-490b-8db1-69d04c131823' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setValue' value='"990"' type='web' desc='enter maxium stock Quantity' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='84b79457-0f7c-4495-a16d-4e7792c6ad0e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='numberbox(/mat-input-.*/,_below(div("Maximum Stock Quantity *[1]")))' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4aa23e6c-438c-4fee-8368-e646f9f69a28' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='clcik on location details' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3993b675-d070-44ab-90d6-2477a41b4578' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Location Details "]&apos;)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='56c52e8a-97f1-4dcf-b776-e7a047b741ed' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='click on select location' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7e0ca330-23f6-4041-a806-60dacf8bf832' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Select Location"]&apos;)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d8d6cab8-2547-4a83-a1eb-a438af4d29f7' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='this is from expanded list' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='807aac4c-d80e-49e7-956a-428f2f7ad695' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Select Location[2]")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("mat-option-text")' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(custom("mat-option", "mat-option-1271")))' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value='"Automation"' type='web' desc='enter location name' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a6707f5c-7652-48f2-964d-4831c0a4a37e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Attribute' value='textbox({&apos;placeholder&apos;:&apos;Search location&apos;})' selected='true' fallback='true'></accessor>
+        <accessor type='Id' value='textbox("mat-input-56")' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-input-56&apos;)")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0755e802-cce2-4732-8970-006638ee7253' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='selectblocation from dropdown' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d54deca4-6cf2-46c9-a575-b097f7365377' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='div("Automation").xy(0.06, 0.13 )' selected='true' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Automation "]&apos;).xy(0.06, 0.13 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='df861f20-2b0d-4d7c-9960-f738f7017566' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ba2bca1a-8b96-44fa-91a1-5bb6583d04cf' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='click on Save' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6d6bb582-7fc4-4e5b-b06d-af1be3b4c311' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='strong("Save[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-add-product/div[5]/div/div[2]/button[2]/span[1]/strong&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-add-product/div[5]/div/div[2]/button[2]/span/strong&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-product-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/main[@class=&apos;container-fluid px-5&apos;]/app-add-product[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row my-3 pb-5&apos;]/div[@class=&apos;col d-flex justify-content-between add-product-btns&apos;]/div[2]/button[@class=&apos;mat-focus-indicator py-1 px-3 mx-2 save-product mat-stroked-button mat-button-base mat-primary&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/strong[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='"60,14"' type='web' desc='Verify Product added success message' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c856facd-7cc6-44b9-bc54-c41e996cebd7' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" PRODUCT ADDED "]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='div("PRODUCT ADDED")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dc6829ec-45f5-4e11-ae0b-7c221f452442' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='if' value='isVisible(submit("Yes"))' type='web' desc='clik on reactive yes' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='71a6e949-859e-46a3-aaec-edba6bfbab23' uiType='conditional'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='isVisible(submit("Yes"))' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(1, _in(custom("mat-dialog-container", {&apos;id&apos;:&apos;mat-dialog-2&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='submit("mat-button-base mat-flat-button mat-focus-indicator mat-primary py-2 w-100")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-dialog-container[@id=&apos;mat-dialog-2&apos;]/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-dialog-2&apos;)/app-confirm-dialog[@class=&apos;ng-star-inserted&apos;]/mat-dialog-content[@class=&apos;mat-dialog-content no-scroll av-confirm-dialog&apos;]/section[@class=&apos;px-5 py-5 text-center&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-dialog-content[class="mat-dialog-content no-scroll av-confirm-dialog"] &gt; section[class="px-5 py-5 text-center"] &gt; div[class="row"] &gt; div[class="col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted"] &gt; button[class="mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-dialog-content.no-scroll.av-confirm-dialog &gt; .px-5.py-5.text-center &gt; .row &gt; .col-12.col-sm-12.col-md-12.col-lg-6.ng-star-inserted &gt; .mat-focus-indicator.w-100.py-2.mat-flat-button.mat-button-base.mat-primary&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(1, _in(custom("mat-dialog-container", "mat-dialog-2")))' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='submit("Yes")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='71a6e949-859e-46a3-aaec-edba6bfbab23' uid='7021d19e-7776-4e0a-b7a9-8d8e78e9a5e9' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='submit("Yes")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(1, _in(custom("mat-dialog-container", {&apos;id&apos;:&apos;mat-dialog-2&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='submit("mat-button-base mat-flat-button mat-focus-indicator mat-primary py-2 w-100")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-dialog-container[@id=&apos;mat-dialog-2&apos;]/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-dialog-2&apos;)/app-confirm-dialog[@class=&apos;ng-star-inserted&apos;]/mat-dialog-content[@class=&apos;mat-dialog-content no-scroll av-confirm-dialog&apos;]/section[@class=&apos;px-5 py-5 text-center&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-dialog-content[class="mat-dialog-content no-scroll av-confirm-dialog"] &gt; section[class="px-5 py-5 text-center"] &gt; div[class="row"] &gt; div[class="col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted"] &gt; button[class="mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-dialog-content.no-scroll.av-confirm-dialog &gt; .px-5.py-5.text-center &gt; .row &gt; .col-12.col-sm-12.col-md-12.col-lg-6.ng-star-inserted &gt; .mat-focus-indicator.w-100.py-2.mat-flat-button.mat-button-base.mat-primary&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(1, _in(custom("mat-dialog-container", "mat-dialog-2")))' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='submit("Yes")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='71a6e949-859e-46a3-aaec-edba6bfbab23' uid='52212ca3-125b-4304-bb49-07823d6198e6' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='reactivate prouct click on Yes' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='71a6e949-859e-46a3-aaec-edba6bfbab23' uid='71498d97-9a9b-4c50-ac6e-ceeadb4d391f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='submit("Yes")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(1, _in(custom("mat-dialog-container", {&apos;id&apos;:&apos;mat-dialog-2&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='submit("mat-button-base mat-flat-button mat-focus-indicator mat-primary py-2 w-100")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-dialog-container[@id=&apos;mat-dialog-2&apos;]/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-confirm-dialog/mat-dialog-content/section/div/div[2]/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-dialog-2&apos;)/app-confirm-dialog[@class=&apos;ng-star-inserted&apos;]/mat-dialog-content[@class=&apos;mat-dialog-content no-scroll av-confirm-dialog&apos;]/section[@class=&apos;px-5 py-5 text-center&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-dialog-content[class="mat-dialog-content no-scroll av-confirm-dialog"] &gt; section[class="px-5 py-5 text-center"] &gt; div[class="row"] &gt; div[class="col-12 col-sm-12 col-md-12 col-lg-6 ng-star-inserted"] &gt; button[class="mat-focus-indicator w-100 py-2 mat-flat-button mat-button-base mat-primary"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-dialog-content.no-scroll.av-confirm-dialog &gt; .px-5.py-5.text-center &gt; .row &gt; .col-12.col-sm-12.col-md-12.col-lg-6.ng-star-inserted &gt; .mat-focus-indicator.w-100.py-2.mat-flat-button.mat-button-base.mat-primary&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(1, _in(custom("mat-dialog-container", "mat-dialog-2")))' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='submit("Yes")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='218bfd1d-8837-4bb8-9faa-1e62340c6e8c' uiType='end' sibling='71a6e949-859e-46a3-aaec-edba6bfbab23'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b8ac8880-355d-46f0-80be-9b540fc749b2' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ValidateArtileActivityLogMovementType($CreateVWRProductCatalog,"Product Created")' type='web' desc='Validate Product Created in Article Activity log -As discuss to suresh we hold this step' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0c9ba73e-3890-4176-b1a7-09fc87dbca28' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='28a73b68-125b-4782-ab02-e7d0cd0f784f' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ValidateStockroomActivityPage($CreateVWRProductCatalog,"Product Updated")' type='web' desc='Validate Product Updated in StockRoom Activity log' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bbab5401-bebc-4008-af1d-08d3b872b2b4' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+  </testcase>

@@ -102,10 +102,10 @@
 		<path id="RestClientLibPath">
 			<pathelement location="${lib}/RestClient.jar"/>
 		</path>
-		<available property="file.exists" file="${lib}/RestClient.jar"/>
+		
 	</target>
 	
-	<target name="deps" depends="init" unless="${file.exists}">
+	<target name="deps" depends="init" >
 		<mkdir dir="${lib}"/>
 		<get src="http://18.221.176.207:8080/UI/container/AppvanceCIClientWithDeps.jar" dest="${lib}/RestClient.jar"/>
 	</target>

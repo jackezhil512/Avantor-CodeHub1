@@ -1,0 +1,900 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Smoke Test Results</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/css-material.css">
+        <script src="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/js/jquery-1.11.3.min.js"></script>
+        <script src="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/js/sorttable.js"></script>
+        <link rel="stylesheet" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/material-dashboard.css">
+        <link rel="stylesheet" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/dashboard.css">        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+        <link rel="stylesheet" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+
+        <script src="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/js/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+        <style>
+            .exceptionCell {
+                word-break: break-all;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
+                padding-top: 5%;
+            }
+            .h2Style {
+                cursor: pointer; 
+                padding: 0px 16px 0px 0px;
+            }
+            .integration {
+                margin-top: 25px;
+                border: 1px solid rgb(221, 221, 221);
+                padding: unset;
+                width: 97%;
+                height: 488px;
+                overflow: overlay;
+                font-family: monospace;
+            }
+            .cell {
+                word-break: break-all; 
+                white-space: nowrap; 
+                overflow: hidden; 
+                text-overflow: ellipsis; 
+                display: block; 
+                width: 95%;
+            }
+            body {  
+                overflow-y: auto;
+            }
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            #reportHeader {
+                background-color: #eee;
+                color: #FFF;
+                padding: 15px;
+                border: 1px solid #ddd;
+                margin: 5px 5px;
+                background: #005677;
+                box-shadow: none;
+                border-radius: 4px;
+            }
+            .report-title {
+                padding: 0;
+                margin: 0;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .report-status {
+                float: right;
+                font-size: 15px;
+                margin-top: 3px;
+                font-weight: bold;
+            }
+            .datetime {
+                margin-right: 30px;
+            }
+            #reportHeader .divider {
+                position: absolute;
+                width: 1px;
+                height: 56px;
+                background: #ddd;
+                top: 0px;
+            }
+            .date-divider {
+                right: 450px;
+            }
+            .date-divider-end {
+                right: 640px;
+            }
+            .success-divider {
+                right: 335px;
+            }
+            .failure-divider {
+                right: 220px;
+            }
+            .report-status .success, .datetime, .report-status .failure{
+                box-shadow: unset;
+                text-shadow: unset;
+                font-weight: 100;
+            }
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            
+            .boxHover :hover{
+                background-color: #d7dde2;
+                border-color: #7a7a7a;
+                width: 100%;
+                display: inline-table;
+            }
+            .box {
+                margin-bottom: 5px;
+                position: relative;
+                background: #F8F9FB;
+                border: 1px solid #EAEBEF;
+                padding: 10px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+            .failure tr.importance.high {
+                color: red !important;
+                /*color: #fff;*/
+            } 
+            .failure tr.importance.normal {
+                color: #1e61a5 !important;
+            } 
+            #success span.importance {
+                display : none;
+            }
+            .report-details-contaner {
+                margin: 20px 5px 0;
+            }
+            .testcaseExecutionTable {
+                width: 100%;
+                border: 1px solid #ddd;
+                margin: 0;
+                font-size: 17px;
+                margin-bottom: 50px;
+            }
+            .testcaseExecutionTable thead th{
+                padding: 7px 0;
+                color: #333;
+                border-right: 1px solid #ddd;
+                padding-left: 12px;
+            }            
+            .testcaseExecutionTable tbody td {
+                border-right: 1px solid #ddd !important;
+                padding: 5px 10px;
+            }
+            .testcaseExecutionTable tr:nth-child(odd) {
+                background: #FFF;
+            }
+            .testcaseExecutionTable tr:nth-child(even) {
+                background: #FAFAFA;
+            }
+            .testcaseExecutionTable tbody td:first-child{
+                width: 20%;
+            }
+            .testcaseExecutionTable tbody td:nth-child(2)  {
+                width: 10%;
+            }
+            .testcaseExecutionTable tbody td:nth-child(4)  {
+                width: 50%;
+            }
+            #tsuccess thead th:nth-child(4)  {
+                width: 100% !important;
+            }
+            .testcaseExecutionTable .testcase-row.selcted {
+                border: 2px solid #ddd;
+                border-bottom: none;
+            }
+            .testcaseExecutionTable .testcase-details-row { 
+                font-size: 13px;
+                background: #fff !important;
+                line-height: 24px;
+                border: 2px solid #ddd;
+                border-top: none;
+                word-break: break-word;
+            }
+            .testcaseExecutionTable .testcase-details-row td {
+                border-top: none;
+            }
+            .testcase-details-row span {
+                border: 2px solid #ddd;
+                display: inline-block;
+                width: 96%;
+                padding: 0 0 0 40px;
+                border-radius: 4px;
+                padding-top: 20px;
+                border: unset;
+            }
+            .testcase-details-row pre {
+                white-space: pre-wrap;
+                word-break: break-word;
+            }
+            .report-header {
+                padding: 5px 10px 8px;
+                border: 1px solid #ddd;
+                background: #eee;
+                border-bottom: 0px;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+            .report-header .title {
+                font-weight: bold;
+                font-size: 15px;
+                color: #005677;
+                padding-top: 6px;
+                display: inline-block;
+            }
+            .notes {
+                float: right;
+                font-style: italic;
+                font-size: 14px;
+                margin-top: 12px;
+            }
+            td {
+                position: relative
+            }
+            .testcase-detail-link {
+                position: absolute;
+                right: 4px;
+                display: unset;
+                background: #005677;
+                color: #fff;
+                padding: 2px 11px;
+                top: 3px;
+                border-radius: 3px;
+                cursor: pointer;
+                display: none;
+
+                color: #005677;
+                top: 8px;
+                font-size: 12px;
+                font-style: italic;
+                text-decoration: underline;
+                background: none;
+            }
+            .testcase-row:hover .testcase-detail-link {
+                display : none;
+            }
+            /*            .testcase-details-row br {
+                            display: none;
+                        }*/
+            .testcase-details-row h2 {
+                padding: 0;
+                margin: 0;
+                font-size: 17px;
+                float: left;
+                color: #005677;
+            }
+            .testcase-details-row a.ui-link {
+                margin-left: 52px !important;
+                float: left;
+                margin-bottom: 20px;
+            }
+            .testcase-details-row iframe {
+                border: none;
+                /*height: 100% !important;*/
+            }
+            .testcase-details-row iframe tbody {
+                margin-left : 0;
+                margin-right : 0;
+            }
+            .testcase-row a {
+                text-decoration: none;
+            }
+            .statuse {
+                margin-right: 20px;
+            }
+            .testcaseExecutionTable .testcase-details-row img {
+                max-width: 98%;
+            }
+            .exception {
+
+            }
+        </style>
+        <style>
+            .modal-open {
+                padding-right: 0px !important;
+            }
+            body { 
+                padding-right: 0 !important;
+                background-color: #eee;
+                color: #3C4858;
+                font-weight: 300;
+            }
+
+            .breadcrumb { 
+                list-style: none; 
+                overflow: hidden; 
+                font: 18px Sans-Serif;
+                background-color: unset;
+                padding: unset;
+                margin-bottom: 0px;
+                border-radius: unset;
+            }
+            .breadcrumb li { 
+                float: left; 
+            }
+            .breadcrumb li a {
+                color: white !important;
+                text-decoration: none; 
+                padding: 10px 11px 10px 65px;
+                background: hsl(194, 85%, 35%); 
+                position: relative; 
+                display: block;
+                float: left;
+            }
+            .breadcrumb li a::after { 
+                content: " "; 
+                display: block; 
+                width: 0; 
+                height: 0;
+                border-top: 50px solid transparent; /* Go big on the size, and let overflow hide */
+                border-bottom: 50px solid transparent;
+                border-left: 30px solid hsl(194, 85%, 35%);
+                position: absolute;
+                top: 50%;
+                margin-top: -50px; 
+                left: 100%;
+                z-index: 2; 
+            }
+            .breadcrumb li a::before { 
+                content: " "; 
+                display: block; 
+                width: 0; 
+                height: 0;
+                border-top: 50px solid transparent;       
+                border-bottom: 50px solid transparent;
+                border-left: 30px solid white;
+                position: absolute;
+                top: 50%;
+                margin-top: -50px; 
+                margin-left: 1px;
+                left: 100%;
+                z-index: 1; 
+            }
+            .breadcrumb li:first-child a {
+                padding-left: 10px;
+            }
+            .breadcrumb li:nth-child(2) a       { background:        hsla(34,85%,45%,1); }
+            .breadcrumb li:nth-child(2) a:after { border-left-color: hsla(34,85%,45%,1); }
+            .breadcrumb li:nth-child(3) a       { background:        hsla(34,85%,55%,1); }
+            .breadcrumb li:nth-child(3) a:after { border-left-color: hsla(34,85%,55%,1); }
+            .breadcrumb li:nth-child(4) a       { background:        hsla(34,85%,65%,1); }
+            .breadcrumb li:nth-child(4) a:after { border-left-color: hsla(34,85%,65%,1); }
+            .breadcrumb li:nth-child(5) a       { background:        hsla(34,85%,75%,1); }
+            .breadcrumb li:nth-child(5) a:after { border-left-color: hsla(34,85%,75%,1); }
+            .breadcrumb li:last-child a {
+                background: hsl(194, 35%, 64%);
+                color: black;
+                pointer-events: none;
+                cursor: default;
+            }
+            .breadcrumb li:last-child a::after { 
+                border: 0; 
+            }
+            .breadcrumb li a:hover { 
+                background: hsl(203, 59%, 58%); 
+            }
+            .breadcrumb li a:hover:after { 
+                border-left-color: hsla(203, 59%, 58%, 1) !important; 
+            }
+            .testcaseExecutionTable tbody tr.testcase-row {
+                border-bottom: 1px solid #dddddd;
+            }
+
+            table.dataTable {
+                border-collapse: collapse !important;
+            }
+            table{
+                margin: 0 auto;
+                width: 100%;
+                clear: both;
+                border-collapse: collapse;
+                table-layout: fixed; 
+                word-wrap:break-word;
+            }
+            /* Style the button that is used to open and close the collapsible content */
+            .collapsible {
+                cursor: pointer;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+            }
+            .collaps {
+                cursor: pointer;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+            }
+
+            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            .active, .collapsible:hover {
+              background-color: #ccc;
+            }
+
+            /* Style the collapsible content. Note: hidden by default */
+            .container {
+              padding: 0 18px;
+              display: none;
+              overflow: hidden;
+              background-color: #f1f1f1;
+            }
+            .arrowExpandCell, .arrowExpand {
+                margin: 12px;
+            }
+
+            .arrowExpand::before {
+                position: absolute;
+                content: '';
+                width: 0;
+                height: 0;
+                border: .5em solid transparent;
+                border-left-color: white;
+                transform-origin: 0 50%;
+                transition: transform .25s;
+                transform: rotate(90deg);
+            }
+
+            .arrowExpandCell.down::before, .arrowExpand.down::before {
+                transform: rotate(0deg);
+                transition: transform .25s;
+            }
+            .arrowExpandCell::before {
+                position: absolute;
+                content: '';
+                width: 0;
+                height: 0;
+                border: .5em solid transparent;
+                border-left-color: #007bff;;
+                transform-origin: 0 50%;
+                transition: transform .25s;
+                transform: rotate(90deg);
+            }
+            td.center {
+                padding: 0px 0px !important;
+                vertical-align: baseline;
+            }
+            th, td {
+                border: 0px white !important;
+                background: white;
+            }
+            a.paginate_button.current{
+                color: #333 !important;
+                border: 1px solid #979797;
+                background: linear-gradient(to bottom, #fff 0%, #dcdcdc 100%);
+                padding: 5px;
+            }
+            a.paginate_button {
+                padding: 5px;
+                cursor:pointer;
+            }
+        </style>
+        <script>
+            function hashCode(str) {
+                return str.split('').reduce((prevHash, currVal) =>
+                  (((prevHash << 5) - prevHash) + currVal.charCodeAt(0))|0, 0);
+            }
+            function format(d, testcase) {
+                var ref = d[1] + d[3] + testcase;
+                var hash = hashCode(ref.toLowerCase());
+                return '<table target="'+hash+'"><tr class="testcase-details-row"> <td colspan="6"> <span> ' + d[5] + '</span> </td> </tr></table>';
+            }
+
+            $(document).ready(function () {
+                // Add event listener for opening and closing details
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                  coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    $('.arrowExpand').toggleClass('down');
+                    var content = this.nextElementSibling;
+                    if (content != null) {
+                        var span = content.querySelector("span");
+                        if (span.style.display === "block") {
+                          span.style.display = "none";
+                        } else {
+                          span.style.display = "block";
+                        }
+                    }
+                    
+                  });
+                }
+                
+                 $('table.testcaseExecutionTable div.arrowExpandCell').parent().click(function() {
+                    $(this).find('.arrowExpandCell').toggleClass("active");
+                    $(this).find('.arrowExpandCell').toggleClass('down');
+                    $(this).css('background-color','unset');
+                  });
+             
+                var tableSuccess = $('#tsuccess').DataTable(
+                        {
+                            "columnDefs": [
+                                {"width": "30%", "targets": 0},
+                                {"width": "13%", "targets": 1},
+                                {"width": "20%", "targets": 2},
+                                {"width": "10%", "targets": 3},
+                                {"width": "27%", "targets": 4}
+                            ],
+                            "searching": false,
+                            "paging": false,
+                            "info": false,
+                            "lengthChange": false
+                        });
+                var tableFailures = $('#tfailures').DataTable(
+                        {
+                            "columnDefs": [
+                                {"width": "30%", "targets": 0},
+                                {"width": "13%", "targets": 1},
+                                {"width": "20%", "targets": 2},
+                                {"width": "10%", "targets": 3},
+                                {"width": "27%", "targets": 4}
+                            ],                            
+                            "searching": false,
+                            "paging": false,
+                            "info": false,
+                            "lengthChange": false
+                        });
+                        /*
+                $('#tfailures').width('unset');
+                $('#tsuccess').width('unset');*/
+
+                $('#tsuccess tbody tr.details-control button.info-blue,#tsuccess tbody tr.details-control div.collaps').click( function () {
+                    var tr = $(this).parent().parent().closest('tr');
+                    var row = tableSuccess.row(tr);
+                    //
+                    $(this).parent().parent().toggleClass('selected');
+                    $('.testcase-details-row').removeClass('selected-row');
+                    $(this).parent().parent().next('.testcase-details-row').toggle(1000).addClass('selected-row');
+                    if ($(this).parent().parent().find('.testcase-detail-link').text() !== "Hide Details") {
+                        $(this).parent().parent().find('.testcase-detail-link').text("Hide Details");
+                    } else {
+                        $(this).parent().parent().find('.testcase-detail-link').text("Show Details");
+                    }
+
+                    var iframeList = $('.testcase-details-row.selected-row iframe');
+                    for (var i = 0; i < iframeList.length; i++) {
+                        var iframe = iframeList[i];
+                        iframe.style.height = '500px';
+                    }
+                    //
+
+                    if (row.child.isShown()) {
+                        // This row is already open - close it
+                        row.child.hide(100);
+                        tr.removeClass('shown');
+                    } else {
+                        // Open this row
+                        var testcase = $(this).find('div[testcase]').attr('testcase');
+                        row.child(format(row.data(),testcase)).show(500);
+                        tr.addClass('shown');
+                    }
+                    $('tbody tr td span h2').click(function () {
+                        $(this).toggleClass('selected');
+                        $(this).next().removeClass('selected-row');
+                        $(this).next().toggle().addClass('selected-row');
+                        $(this).find('i.arrow.material-icons').html() === 'keyboard_arrow_down' ? $(this).find('i.arrow.material-icons').html('keyboard_arrow_up') : $(this).find('i.arrow.material-icons').html('keyboard_arrow_down');
+                    });
+                    try {
+                        var ref = $(this).find('div[scenario]').attr('scenario');
+                        $('table[target='+ref+'] div[imgref]').each(function(id, div){
+                            $(this).find('img').attr('src', $(this).attr('imgref'));
+                        });
+                        $('table[target='+ref+'] div[container]').each(function(id, div) {
+                            $(this).remove('iframe');
+                            $(this).append('<iframe id="'+id+'" src="'+escape($(this).attr('src'))+'" style="width: 100%;height: 100%;font-family: monospace;overflow: unset;">');
+                        });
+                    } catch (e) { }
+                });
+                $('.tgFailure, .tgSuccess').unbind('click').click(function(){
+                    $(this).parent().find('div.box').toggle(1000); 
+                 });
+                $('#tfailures tbody tr.details-control button.info-blue, #tfailures tbody tr.details-control div.collaps').click( function () {
+                    var tr = $(this).parent().parent().closest('tr');
+                    var row = tableFailures.row(tr);
+
+                    //
+                    $(this).parent().toggleClass('selected');
+                    $('.testcase-details-row').removeClass('selected-row');
+                    $(this).parent().parent().next('.testcase-details-row').toggle(1000).addClass('selected-row');
+                    if ($(this).parent().parent().find('.testcase-detail-link').text() != "Hide Details") {
+                        $(this).parent().parent().find('.testcase-detail-link').text("Hide Details");
+                    } else {
+                        $(this).parent().parent().find('.testcase-detail-link').text("Show Details");
+                    }
+
+                    var iframeList = $('.testcase-details-row.selected-row iframe');
+                    for (var i = 0; i < iframeList.length; i++) {
+                        var iframe = iframeList[i];
+                        iframe.style.height = '500px';//iframe.contentWindow.document.body.scrollHeight+'px';
+                    }
+                    //
+
+                    if (row.child.isShown()) {
+                        // This row is already open - close it
+                        row.child.hide(500);
+                        tr.removeClass('shown');
+                    } else {
+                        // Open this row
+                        var testcase = $(this).find('div[testcase]').attr('testcase');
+                        row.child(format(row.data(),testcase)).show(500);
+                        tr.addClass('shown');
+                    }
+                    $('tbody tr td span h2').click(function () {
+                        $(this).toggleClass('selected');
+                        $(this).next().removeClass('selected-row');
+                        $(this).next().toggle().addClass('selected-row');
+                        $(this).find('i.arrow.material-icons').html() === 'keyboard_arrow_down' ? $(this).find('i.arrow.material-icons').html('keyboard_arrow_up') : $(this).find('i.arrow.material-icons').html('keyboard_arrow_down');
+                    });
+                    try {
+                        var ref = $(this).find('div[scenario]').attr('scenario');
+                        $('table[target='+ref+'] div[imgref]').each(function(id, div){
+                            $(this).find('img').attr('src', $(this).attr('imgref'));
+                        });
+                        $('table[target='+ref+'] div[container]').each(function(id, div) {
+                            $(this).remove('iframe');
+                            $(this).append('<iframe id="'+id+'" src="'+escape($(this).attr('src'))+'" style="width: 100%;height: -webkit-fill-available;font-family: monospace;">');
+                        });
+                    } catch (e) { }
+                });
+            });
+
+            var pId = null;
+            var url = window.location.href;
+
+            function gup(name) {
+                var sPageURL = window.location.href.substring(window.location.href.lastIndexOf('?') + 1);
+                var sURLVariables = sPageURL.split('&');
+                var sParameterName;
+                var i;
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+                    if (sParameterName[0] === name) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1];
+                    }
+                }
+            }
+            path = decodeURIComponent(gup('path'));
+            dspath = gup("dspath");
+            // });
+            setTimeout(function () {
+                $('h1.ui-collapsible-heading').each(function (index, element) {
+                    var anchor = $(element).find('a');
+                    var attrStr = $(element).attr('href');
+                    $(element).removeAttr('href');
+                    $(anchor).attr('href', attrStr);
+                });
+                $('a.ui-btn').css('width', '97%');
+                $('div.ui-body-inherit').css('width', '97.7%');
+                if (gup('sel')) {
+                    $('#' + gup('sel')).click();
+                    $('html, body').animate({
+                        scrollTop: ($('#' + gup('sel')).offset().top)
+                    }, 500);
+                }
+            }, 100);
+            $(document).ready(function () {
+                $('.testcase-row a.ui-link').click(function (event) {
+                    event.preventDefault();
+                });
+                $('.testcase-row > button.info-blue').click(function () {
+                    $(this).parent().toggleClass('selected');
+                    $('.testcase-details-row').removeClass('selected-row');
+                    $(this).parent().next('.testcase-details-row').toggle().addClass('selected-row');
+                    if ($(this).parent().find('.testcase-detail-link').text() !== "Hide Details") {
+                        $(this).parent().find('.testcase-detail-link').text("Hide Details");
+                    } else {
+                        $(this).parent().find('.testcase-detail-link').text("Show Details");
+                    }
+
+                    var iframeList = $('.testcase-details-row.selected-row iframe');
+                    for (var i = 0; i < iframeList.length; i++) {
+                        var iframe = iframeList[i];
+                        // console.log(iframe);
+
+                        //iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+
+                        iframe.style.height = '500px';//iframe.contentWindow.document.body.scrollHeight+'px';
+
+                    }
+
+                });
+
+                setTimeout(function () {
+                    var iframeList = document.getElementsByTagName('iframe');
+
+                    for (var i = 0; i < iframeList.length; i++) {
+                        var iframe = iframeList[i];
+
+                        // console.log(iframe);
+                        //iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+
+                        // console.log(iframe);
+                        iframe.style.height = '500px';//iframe.contentWindow.document.body.scrollHeight+'px';
+
+                    }
+                }, 2000);
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="wrapper " id="main-content">
+            <div class="main-panel">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top p-0">
+                    <div class="container-fluid">
+
+                        <div class="navbar-wrapper float-right">                
+                            <div class="topnav">
+                                <ul class="breadcrumb">
+                                    <li><a href="../../../../../main.html">E-Storefront</a></li>
+                                    <li><a href="../../../history.html?tab=scenarios">Web</a></li> 
+                                    <li><a href="#"> Scenario Execution </a></li> 
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="navbar-wrapper float-left">                            
+                            <a class="navbar-brand" href="#">
+                                <label> 2025/01/31 13:34 UTC</label>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+
+                <div class="content"  style="margin-top: 35px !important;">
+                    <div class="container-fluid"> 
+                        <div class="row equal">
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="card card-stats" style="width: 100%;">
+                                    <div class="card-header card-header-icon">
+                                        <div class="card-icon"  style="background-color: #258eff;">
+                                            <i class="material-icons" style="font-size: 25px;height: 0px; width: 30px;line-height: 20px;">info</i>
+                                        </div>
+                                        <div style=" display: flow-root; margin-right: 10px;  margin-left: 70px; margin-top: 10px;margin-bottom: 10px !important; height: 80%;  ">
+                                            <div class="row" style="font-weight: bolder;">
+                                                <p class="card-category" style="text-align: left;height: 25px;width: auto;margin-left: 10px;">Job Id: </p>
+                                                <p class="card-title" style=" margin-top: 0px !important; width: auto;padding-left: 5px;">2025-01-31-1333</p>
+                                            </div>
+                                        </div>                                     
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="card card-stats" style="width: 100%;">
+                                    <div class="card-header card-header-success card-header-icon">
+                                        <div class="card-icon">
+                                            <i class="material-icons" style="font-size: 25px;height: 0px; width: 30px;line-height: 20px;">check</i>
+                                        </div>
+                                        <div style=" display: flow-root; margin-right: 10px;  margin-left: 70px; margin-top: 10px;margin-bottom: 10px !important; height: 80%;  ">
+                                            <div class="row" style="font-weight: bolder;">
+                                                <p class="card-category" style="text-align: left;height: 25px;width: auto;margin-left: 10px;">Successes: </p>
+                                                <p class="card-title" style=" margin-top: 0px !important; width: auto;padding-left: 5px;">0</p>
+                                            </div>
+                                        </div>                                     
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- comment -->
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="card card-stats" style="width: 100%;">
+                                    <div class="card-header  card-header-danger card-header-icon">
+                                        <div class="card-icon">
+                                            <i class="material-icons" style="font-size: 25px;height: 0px; width: 30px;line-height: 20px;">cancel</i>
+                                        </div>
+                                        <div style=" display: flow-root; margin-right: 10px;  margin-left: 70px; margin-top: 10px;margin-bottom: 10px !important; height: 80%;  ">                                            
+                                            <div class="row" style="font-weight: bolder;">
+                                                <p class="card-category" style="text-align: left;height: 25px;width: auto;margin-left: 10px;">Failures: </p>
+                                                <p class="card-title" style=" margin-top: 0px !important; width: auto;padding-left: 5px;">0</p>
+                                            </div>
+                                        </div>                                     
+                                    </div>
+                                </div>
+                            </div>
+                                                        
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="card card-stats" style="width: 100%;">
+                                    <div class="card-header card-header-warning card-header-icon">
+                                        <div class="card-icon">
+                                            <i class="material-icons" style="font-size: 25px;height: 0px; width: 30px;line-height: 20px;">percent</i>
+                                        </div>
+                                        <div style=" display: flow-root; margin-right: 10px;  margin-left: 70px; margin-top: 10px;margin-bottom: 10px !important; height: 80%;">
+                                           <div class="row" style="font-weight: bolder;">
+                                                <p class="card-category" style="text-align: left;height: 25px;width: auto;margin-left: 10px;">Success Rate:  </p>
+                                                <p class="card-title" style=" margin-top: 0px !important; width: auto;padding-left: 5px;">0%</p>
+                                            </div>  
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>                                
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card">
+                                    <div class="card-header card-header-warning blue-header">
+                                        <h4 class="card-title" style="float:left;">Overview</h4>
+                                        <p class="card-category" style="float:right;"><i class="material-icons">alarm_on</i>Metrics</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="tOverview_wrapper">
+                                            <table id="tOverview">
+                                                <thead> 
+                                                    <tr>
+                                                        <th style="width: 15%;">Scenario</th>
+                                                        <th style="width: 9%;">Execution Id</th>
+                                                        <th style="width: 7%;">Type</th>
+                                                        <th style="width: 10%;">Duration</th>
+                                                        <th style="width: 7%;">Successes</th>
+                                                        <th style="width: 7%;">Failures</th>
+                                                        <th style="width: 10%;">Success Rate</th>
+                                                        <th>Reports</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>  
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card">
+                                    <div class="card-header card-header-warning blue-header">
+                                        <h4 class="card-title" style="float:left;">Failed Test Case Details</h4>
+                                        <p class="card-category" style="float:right;"><i class="material-icons">alarm_on</i>Metrics</p>
+                                    </div>
+                                    <div class="card-body table-responsive failure-container">
+                                        <table id="tfailures" class="testcaseExecutionTable failure" style="display: inline-table;">
+                                            <thead> <tr>                                                                                                                      
+                                                    <th> Test Case </th>                                                  
+                                                    <th> Scenario </th>
+                                                    <th> Failure Reason </th>
+                                                    <th> Importance </th>
+                                                    <th> Previous Exec. Failure(s) </th>
+                                                    <th style="display: none"> </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>   </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card">
+                                    <div class="card-header card-header-warning blue-header">
+                                        <h4 class="card-title" style="float:left;width: 40%;"> Succeeded Test Case(s) Details </h4>
+                                        <p class="card-category" style="float:right;"><i class="material-icons">alarm_on</i>Metrics</p>
+                                    </div>
+                                    <div class="card-body table-responsive success-container">
+                                        <table id="tsuccess" class="testcaseExecutionTable success"  style="display: inline-table;">
+                                            <thead> 
+                                                <tr>                                                    
+                                                    <th> Test Case </th>                                                    
+                                                    <th> Scenario </th>
+                                                    <th> Duration (secs)</th>
+                                                    <th> Importance </th>
+                                                    <th> Previous Exec. Failure(s) </th>
+                                                    <th style="display: none"> </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>   </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                                       
+                    </div>
+                </div>
+                <footer class="footer">         
+                </footer>
+            </div>
+        </div>
+
+
+    </body>
+</html>

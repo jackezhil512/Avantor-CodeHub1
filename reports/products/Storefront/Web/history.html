@@ -1,0 +1,751 @@
+<!--
+   To change this license header, choose License Headers in Project Properties.
+   To change this template file, choose Tools | Templates
+   and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>production</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/css-material.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/dashboard.css" />
+        <style>
+            .modal-open {
+                padding-right: 0px !important;
+            }
+            body {
+                padding-right: 0 !important;
+            }
+            .breadcrumb {
+                list-style: none;
+                overflow: hidden;
+                font: 18px Sans-Serif;
+                background-color: unset;
+                padding: unset;
+                margin-bottom: 0px;
+                border-radius: unset;
+            }
+            .breadcrumb li {
+                float: left;
+            }
+            .breadcrumb li a {
+                color: white !important;
+                text-decoration: none;
+                padding: 10px 11px 10px 65px;
+                background: hsl(194, 85%, 35%);
+                position: relative;
+                display: block;
+                float: left;
+            }
+            .breadcrumb li a::after {
+                content: " ";
+                display: block;
+                width: 0;
+                height: 0;
+                border-top: 50px solid transparent; /* Go big on the size, and let overflow hide */
+                border-bottom: 50px solid transparent;
+                border-left: 30px solid hsl(194, 85%, 35%);
+                position: absolute;
+                top: 50%;
+                margin-top: -50px;
+                left: 100%;
+                z-index: 2;
+            }
+            .breadcrumb li a::before {
+                content: " ";
+                display: block;
+                width: 0;
+                height: 0;
+                border-top: 50px solid transparent;
+                border-bottom: 50px solid transparent;
+                border-left: 30px solid white;
+                position: absolute;
+                top: 50%;
+                margin-top: -50px;
+                margin-left: 1px;
+                left: 100%;
+                z-index: 1;
+            }
+            .breadcrumb li:first-child a {
+                padding-left: 10px;
+            }
+            .breadcrumb li:nth-child(2) a {
+                background: hsla(34, 85%, 45%, 1);
+            }
+            .breadcrumb li:nth-child(2) a:after {
+                border-left-color: hsla(34, 85%, 45%, 1);
+            }
+            .breadcrumb li:nth-child(3) a {
+                background: hsla(34, 85%, 55%, 1);
+            }
+            .breadcrumb li:nth-child(3) a:after {
+                border-left-color: hsla(34, 85%, 55%, 1);
+            }
+            .breadcrumb li:nth-child(4) a {
+                background: hsla(34, 85%, 65%, 1);
+            }
+            .breadcrumb li:nth-child(4) a:after {
+                border-left-color: hsla(34, 85%, 65%, 1);
+            }
+            .breadcrumb li:nth-child(5) a {
+                background: hsla(34, 85%, 75%, 1);
+            }
+            .breadcrumb li:nth-child(5) a:after {
+                border-left-color: hsla(34, 85%, 75%, 1);
+            }
+            .breadcrumb li:last-child a {
+                background: hsl(194, 35%, 64%);
+                color: black;
+                pointer-events: none;
+                cursor: default;
+            }
+            .breadcrumb li:last-child a::after {
+                border: 0;
+            }
+            .breadcrumb li a:hover {
+                background: hsl(203, 59%, 58%);
+            }
+            .breadcrumb li a:hover:after {
+                border-left-color: hsla(203, 59%, 58%, 1) !important;
+            }
+            #chartdiv, #chartScenariodiv {
+                width: 100%;
+                height: 250px;
+            }
+        </style>
+        <style>
+            /* Style the button that is used to open and close the collapsible content */
+            .collapsible {
+                color: #444;
+                cursor: pointer;
+                border: none;
+                display: flex;
+                padding: 0px;
+                padding-top: 6px;
+                padding-bottom: 3px;
+            }
+
+            /* Style the collapsible content. Note: hidden by default */
+            .containerMultiple {
+                padding: 0 18px;
+                display: none;
+                overflow: hidden;
+                background-color: #f1f1f1;
+            }
+
+            /* Style the collapsible content. Note: hidden by default */
+            .containerSelect {
+                padding: 0 18px;
+                display: none;
+                overflow: hidden;
+                background: unset;
+            }
+            .arrowExpand {
+                margin: 12px;
+            }
+
+            .arrowExpand::before {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 0;
+                border: 0.5em solid transparent;
+                border-left-color: black;
+                transform-origin: 0 50%;
+                transition: transform 0.25s;
+                transform: rotate(90deg);
+            }
+
+            .arrowExpand.down::before {
+                transform: rotate(0deg);
+                transition: transform 0.25s;
+            }
+            .card-category {
+                padding: 0px;
+                font-weight: bold;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            table tr td:first-child {
+                padding:0px !important;
+            }
+            table tr td:first-child div.card-category {
+                text-align: left;
+            }
+            .btn.view {
+                background: unset;
+                padding-bottom: 5px;
+                padding-top: 5px;
+            }
+            .gridCell-border {
+                padding: 8px;
+                position: unset;
+                height: 30px;
+                background: rgba(255, 234, 234, 0);
+                font-weight: unset !important;
+            }
+            td.center {
+                padding-top: 6px !important;
+                padding-bottom: 8px !important;
+            }
+            .cellAlignment {
+                white-space: nowrap;
+                width: 80px;
+                overflow: hidden;
+                display: inline-flex;
+                margin: 10px 0px 0px 20px;
+                float: left;
+            }
+            td.center {
+                padding: 0px 0px !important;
+                vertical-align: baseline;
+            }
+        </style>
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>     
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="main-panel">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top p-0">
+                    <div class="container-fluid">
+                        <div class="navbar-wrapper float-right">
+                            <div class="topnav">
+                                <ul class="breadcrumb">
+                                    <li><a href='../../main.html'>production</a></li><li><a href='#'>Web</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="navbar-wrapper float-left">
+                            <a class="navbar-brand" href="#">
+                                <label>2025/01/31 13:29<br /></label>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+                <div class="content-main">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card">
+                                    <div class="card-body table-responsive">
+                                        <link rel="stylesheet" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/font-awesome.min.css" />
+                                        <link rel="stylesheet" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/dashboard.css" />
+                                        <script src="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/js/jquery-3.4.1.min.js"></script>
+                                        <script src="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/js/bootstrap.min.js"></script>
+                                        <script src="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/js/sorttable.js"></script>
+                                        <script>
+                                            $(document).ready(function () {
+                                                function gup(name) {
+                                                    var sPageURL = window.location.href.substring(window.location.href.lastIndexOf("?") + 1);
+                                                    var sURLVariables = sPageURL.split("&");
+                                                    var sParameterName;
+                                                    var i;
+                                                    for (i = 0; i < sURLVariables.length; i++) {
+                                                        sParameterName = sURLVariables[i].split("=");
+                                                        if (sParameterName[0] === name) {
+                                                            return sParameterName[1] === undefined ? true : sParameterName[1];
+                                                        }
+                                                    }
+                                                }
+
+                                                $("#select_").on("change", function () {
+                                                    var value = $(this).val();
+                                                    if (value === "all") {
+                                                        $("#myscenarios tr").filter(function () {
+                                                            $(this).toggle($(this).find("td.project").text().toLowerCase().indexOf("") > -1);
+                                                        });
+                                                    } else {
+                                                        $("#myscenarios tr").filter(function () {
+                                                            $(this).toggle($(this).find("td.project").text().toLowerCase().indexOf(value) > -1);
+                                                        });
+                                                    }
+                                                });
+
+                                                $("#seachText").on("keyup", function () {
+                                                    var value = $(this).val();
+                                                    $("table tbody tr").filter(function () {
+                                                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                                                    });
+                                                });
+
+                                                $("input[value=buildId]").on("change", function () {
+                                                    $(".canHideBuildId").toggle();
+                                                });
+                                                //$('tr th.filter').click();
+                                                //$('tr th.filter').click();
+                                                $("#scenariosTab")
+                                                    .unbind("click")
+                                                    .click(function () {
+                                                        $("#select_").css("cursor", "default");
+                                                        $("#select_").css("pointer-events", "unset");
+                                                        $("#select_").css("color", "#495057");
+                                                        $("p.selectName").css("color", "#495057");
+                                                    });
+                                                $("#blueprintsTab")
+                                                    .unbind("click")
+                                                    .click(function () {
+                                                        $("#select_").css("cursor", "not-allowed");
+                                                        $("#select_").css("pointer-events", "none");
+                                                        $("#select_").css("color", "#d4cbcb");
+                                                        $("p.selectName").css("color", "#d4cbcb");
+                                                    });
+                                                setTimeout(function () {
+                                                    var gupValue = gup("tab");
+                                                    if (gup("tab")) {
+                                                        $("#" + gup("tab") + "Tab").click();
+                                                    } else {
+                                                        $("body").css("display", "block");
+                                                    }
+                                                    if (gupValue === "scenarios") {
+                                                        if (gup("sce")) {
+                                                            var selectedValue = unescape(gup("sce"));
+                                                            $("#select_").val(selectedValue.toLowerCase());
+                                                            $("#select_").trigger("change");
+                                                        }
+                                                    }
+                                                }, 1); // some wired things happen, so that added tiny timeout
+                                                $("#blueprints table th.filter").click();
+                                                $("#blueprints table th.filter").click();
+                                                $("#scenarios table th.filter").click();
+                                                $("#scenarios table th.filter").click();
+                                            });
+
+                                            am4core.ready(function () {
+                                                if ($("#chartdiv").length > 0) {
+                                                    // Themes begin
+                                                    am4core.useTheme(am4themes_animated);
+
+                                                    var chart = am4core.create("chartdiv", am4charts.XYChart);
+
+
+                                                    // Create category axis
+                                                    var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+                                                    categoryAxis.dataFields.category = "buildVersion";
+                                                    //categoryAxis.renderer.opposite = false;
+                                                    categoryAxis.renderer.grid.template.location = 50;
+                                                    categoryAxis.renderer.labels.template.rotation = 330;
+                                                    categoryAxis.renderer.labels.template.horizontalCenter = "right";
+                                                    categoryAxis.renderer.labels.template.verticalCenter = "middle";
+                                                    categoryAxis.renderer.minGridDistance = 50;
+                                                    categoryAxis.renderer.grid.template.disabled = false;
+                                                    categoryAxis.renderer.fullWidthTooltip = true;
+                                                    categoryAxis.title.text = "Job Id";
+
+                                                    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+                                                    valueAxis.dataFields.category = "buildVersion";
+                                                    valueAxis.renderer.opposite = false;
+                                                    valueAxis.renderer.grid.template.location = 0;
+                                                    valueAxis.renderer.minGridDistance = 10;
+                                                    valueAxis.renderer.grid.template.disabled = false;
+                                                    valueAxis.renderer.inversed = false;
+                                                    //valueAxis.title.text = "Rate";
+
+                                                    var series1 = chart.series.push(new am4charts.LineSeries());
+                                                    series1.dataFields.valueY = "successRate";
+                                                    series1.dataFields.categoryX = "buildVersion";
+                                                    series1.name = "Success Validations";
+                                                    series1.strokeWidth = 3;
+                                                    series1.stroke = am4core.color("#507d50");
+                                                    series1.fill = am4core.color("#507d50");
+                                                    series1.bullets.push(new am4charts.CircleBullet());
+                                                    series1.tooltipText = "Success Validations {valueY}{additional}";
+                                                    series1.legendSettings.valueText = "{valueY}";
+
+                                                    var series2 = chart.series.push(new am4charts.LineSeries());
+                                                    series2.dataFields.valueY = "failureRate";
+                                                    series2.dataFields.categoryX = "buildVersion";
+                                                    series2.name = "Failed Validations";
+                                                    series2.strokeWidth = 3;
+                                                    series2.stroke = am4core.color("#ee4100");
+                                                    series2.fill = am4core.color("#ee4100");
+                                                    series2.bullets.push(new am4charts.CircleBullet());
+                                                    series2.tooltipText = "Failed Validations {valueY}{additional}";
+                                                    series2.legendSettings.valueText = "{valueY}";
+
+                                                    var series3 = chart.series.push(new am4charts.LineSeries());
+                                                    series3.dataFields.valueY = "failedRequests";
+                                                    series3.dataFields.categoryX = "buildVersion";
+                                                    series3.name = "Failed Requests";
+                                                    series3.strokeWidth = 3;
+                                                    series3.stroke = am4core.color("#0f82f5");
+                                                    series3.fill = am4core.color("#0f82f5");
+                                                    series3.bullets.push(new am4charts.CircleBullet());
+                                                    series3.tooltipText = "Failed Requests {valueY}{additional}";
+                                                    series3.legendSettings.valueText = "{valueY}";
+
+                                                    var series4 = chart.series.push(new am4charts.LineSeries());
+                                                    series4.dataFields.valueY = "slowRequests";
+                                                    series4.dataFields.categoryX = "buildVersion";
+                                                    series4.name = "Slow Requests";
+                                                    series4.strokeWidth = 3;
+                                                    series4.stroke = am4core.color("#a6a607");
+                                                    series4.fill = am4core.color("#a6a607");
+                                                    series4.bullets.push(new am4charts.CircleBullet());
+                                                    series4.tooltipText = "Slow Requests {valueY}{additional}";
+                                                    series4.legendSettings.valueText = "{valueY}";
+
+                                                    chart.cursor = new am4charts.XYCursor();
+                                                    chart.cursor.behavior = "zoomY";
+                                                    chart.legend = new am4charts.Legend();
+                                                    chart.cursor.fullWidthLineX = true;
+                                                    chart.cursor.xAxis = categoryAxis;
+                                                    chart.cursor.lineX.strokeOpacity = 0;
+                                                    chart.cursor.lineX.fill = am4core.color("#ec0800");
+                                                    chart.cursor.lineX.fillOpacity = 0.1;
+                                                    chart.data = [];
+                                                    chart.cursor.xAxis = categoryAxis;
+                                                    chart.scrollbarX = new am4core.Scrollbar();
+                                                }
+
+                                                if ($("#chartScenariodiv").length > 0) {
+                                                    // Themes begin
+                                                    am4core.useTheme(am4themes_animated);
+
+                                                    var chart = am4core.create("chartScenariodiv", am4charts.XYChart);
+
+                                                    var data = [{"initialTime":"2025/01/31 13:29 UTC","buildVersion":"2025-01-31-1328","success":0,"validators":0}];
+
+                                                    var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+                                                    categoryAxis.dataFields.category = "buildVersion";
+
+                                                    categoryAxis.renderer.minGridDistance = 100;
+                                                    categoryAxis.renderer.labels.template.rotation = 330;
+                                                    categoryAxis.renderer.labels.template.horizontalCenter = "right";
+                                                    categoryAxis.renderer.labels.template.verticalCenter = "middle";
+                                                    chart.cursor = new am4charts.XYCursor();
+                                                    chart.cursor.xAxis = categoryAxis;
+                                                    chart.scrollbarX = new am4core.Scrollbar();
+
+                                                    /* Create value axis */
+                                                    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+                                                    valueAxis.min = 0;
+                                                    valueAxis.max = 100;
+
+                                                    /* Create series */
+                                                    var columnSeries = chart.series.push(new am4charts.ColumnSeries());
+                                                    columnSeries.name = "Successes";
+                                                    columnSeries.dataFields.valueY = "success";
+                                                    columnSeries.dataFields.categoryX = "buildVersion";
+
+                                                    columnSeries.columns.template.tooltipText = "[#fff font-size: 15px]{name}: [/][#fff font-size: 15px]{valueY}[/] [#fff]{additional}[/][b]";
+                                                    columnSeries.columns.template.propertyFields.fillOpacity = "fillOpacity";
+                                                    columnSeries.columns.template.propertyFields.stroke = "stroke";
+                                                    columnSeries.columns.template.propertyFields.strokeWidth = "strokeWidth";
+                                                    columnSeries.columns.template.propertyFields.strokeDasharray = "columnDash";
+                                                    columnSeries.tooltip.label.textAlign = "middle";
+                                                    columnSeries.tooltip.valign = "middle";
+                                                    columnSeries.tooltip.pointerOrientation = "left";
+                                                    columnSeries.tooltip.label.textAlign = "middle";
+
+                                                    chart.legend = new am4charts.Legend();
+                                                    chart.cursor = new am4charts.XYCursor();
+                                                    chart.data = data;
+                                                    
+                                                }
+
+                                                $('g[aria-labelledby]:contains("Chart created using amCharts library")').remove();
+                                                $("div.row, g, cicle")
+                                                    .unbind("hover")
+                                                    .hover(
+                                                        function () {
+                                                            $('g[aria-labelledby]:contains("Chart created using amCharts library")').remove();
+                                                        },
+                                                        function () {
+                                                            $('g[aria-labelledby]:contains("Chart created using amCharts library")').remove();
+                                                        }
+                                                    );
+                                            });
+                                        </script>
+
+                                        <div class="container">
+                                            <div class="row">
+                                                <p style="font-weight: bold;">Type something to filter table:</p>
+                                                <input class="form-control" id="seachText" type="text" placeholder="Search..." style="margin-right: 50px;" />
+                                                
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="container">
+                                            <nav>
+                                                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                                    <a class="nav-item nav-link active" id="scenariosTab" data-toggle="tab" href="#scenarios" role="tab" aria-controls="scenarios" aria-selected="true">Scenarios</a>
+                                                </div>
+                                            </nav>
+                                            <div class="tab-content">
+                                                   
+<div id="scenarios" class="tab-pane fade in active show" style="overflow: hidden;">
+    <div class="row" style="width: 100%;">
+        <div id="chartScenariodiv"></div>
+    </div>
+    <div class="historygrid" style="height: 40% !important;">
+        <table class="table table-bordered table-striped table-hover sortable" style="width: 99%;">
+            <thead>
+                <tr>
+                    <th class="center blue-white">Job Id</th>
+                    <th class="center blue-white canHideScenario">Scenario Name</th>
+                    <th class="center blue-white canHideExecutionId">Execution Id</th>
+                    <th class="center blue-white">Name</th>
+                    <th class="center blue-white">Type</th>  
+                    <th class="center blue-white filter">Initial Time</th>
+                    <th class="center blue-white">Duration (hr:min:sec)</th>
+                    <th class="center blue-white">Success/Failures/Skip</th>
+                    <th class="center blue-white">Success Rate</th>
+                </tr>
+            </thead>
+            <tbody id="myscenarios">
+                <tr style='cursor: default;' count='1'  target='2025-01-31-1328' class='lastExecutionRow '  ><td nowrap class='center canHideBuildId link'><div class="gridCell-border" ref="Functional scenario" style="width: 100%;display: flex;background: #ffeaea00;"><a title='Click to navigate to Execution Report' class='btn info-blue view ' style='float: left;padding: 0px;font-weight: 700;color: #007bff !important;' href='Storefront/Web/scenarios/-/2025-01-31-1328/report.html'><span class='entries'  ref='scenarios' target='2025-01-31-1328' name='-' title='-'style='padding: 7px;position: unset; height: initial;display: initial; top: 240.594px;'>2025-01-31-1328</span> (latest) </a></div></td><td nowrap class='center canHideScenario'><div class='card-category' style='padding: 9px;width: 100%;'>E-Storefront</div></td><td nowrap class='center canHideExecutionId link'><div class='card-category' style='padding: 9px;width: 100%;'><div class='entries'  ref='scenarios' target='2025-01-31-1328' name='-' title='-' style='padding: 7px;position: unset; height: initial;display: initial;'>-</div></div></td><td nowrap class='center product link'><div class='card-category' style='padding: 9px;width: 100%;'><div class='entries'  ref='scenarios' target='2025-01-31-1328' name='-' title='-' style='padding: 7px;position: unset; height: initial;display: initial;'>-</div></div></td><td nowrap class='center execType'><div class='card-category'  types='scenarios'  style='padding: 9px;width: 100%;'>Functional scenario</div></td><td nowrap class='center'><div class='card-category' style='padding: 9px;width: 100%;'><div class='entries'  ref='scenarios' target='2025-01-31-1328' name='-' title='-' style='padding: 7px;position: unset; height: initial;display: initial;'>2025/01/31 13:29 UTC</div></div></td><td nowrap class='center'><div class='card-category' style='padding: 9px;width: 100%;'>-</div></td><td nowrap class='center'><div class='card-category' style='padding: 9px;width: 100%;'><button title='Quick View' class='btn' disabled='' style='cursor: not-allowed;height: unset;background: unset;padding:unset;'><i class='fa fa-check-square-o'></i><span> 0</span> </button><button title='Quick View' class='btn' disabled='' style='cursor: not-allowed;height: unset;background: unset;padding:unset;'><i class='fa fa-minus-square'></i><span> 0</span> </button><button title='Quick View' class='btn' disabled='' style='cursor: not-allowed;height: unset;background: unset;padding:unset;'><i class='fa fa-check-square-o'></i><span> 0</span> </button></div></td><td nowrap class='center info-red'><div class='card-category' style='padding: 9px;width: 100%;'>0%</div></td></tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>        
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <button type="button" style="display: none;" class="btn btn-primary" id="showModal" data-toggle="modal" data-target="#reportsTableModal"></button>
+                <div class="modal" id="reportsTableModal" tabindex="-1" role="dialog" aria-labelledby="reportsTableModal" aria-hidden="true">
+                    <div class="modal-dialog" role="document" style="max-width: 95%;">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitle"></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <table id="reportTable"></table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer"></footer>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+                
+                $("div.collapsible[source]")
+                    .unbind("click")
+                    .click(function () {
+                        $(this).toggleClass("active");
+                        var isVisible = $(this).hasClass("activeCollapsible");
+
+                        var target = $(this).attr("source");
+                        //var heightSource = $(this).height();
+                        //$('div[target='+target+'].container').css('height',heightSource);
+                        $(this).find("div.arrowExpand").toggleClass("down");
+                        var target = $(this).attr("source");
+                        $('div.containerSelect.trigger[target="' + target + '"]').toggle();
+                        $('tr[target="' + target + '"] td.center > div.entries').toggle();
+
+                        var expandibleBtn = $('tr[target="' + target + '"] div.collapsible[source="' + target + '"]')
+                            .parent()
+                            .find('button[target="' + target + '"][name]');
+                        var height = $('tr[target="' + target + '"] div.collapsible[source="' + target + '"]').height();
+                        if (expandibleBtn.length > 0) {
+                            var firstBtnTop = $(expandibleBtn[0]).offset().top - 40;
+                            $('tr[target="' + target + '"] td.center > div.entries').css("top", firstBtnTop);
+                            expandibleBtn.each(function (id, element) {
+                                var targetBtn = $(element).attr("target");
+                                var nametBtn = $(element).attr("name");
+                                var top = $(element).offset().top - 40 - height;
+                                $('td > div > div[target="' + targetBtn + '"][name="' + nametBtn + '"]').css("top", top);
+                                $('td > div > div[target="' + targetBtn + '"][name="' + nametBtn + '"]')
+                                    .parent()
+                                    .css("top", height * 2);
+                            });
+                        }
+
+                        if (isVisible) {
+                            $('tr[target="' + target + '"] > td.center > div.entries > div[target="' + target + '"]').show();
+                        } else {
+                            $('tr[target="' + target + '"] > td.center > div.entries > div[target="' + target + '"]').hide();
+                        }
+                    });
+                $(".input-filter")
+                    .off("keyup")
+                    .on("keyup", function () {
+                        var value = $(this).val().toLowerCase();
+                        $("#" + $(this).attr("targettableID") + " tbody > tr:not(.mainRow)").hide();
+                        $("#" + $(this).attr("targettableID") + " tbody > tr.mainRow").filter(function () {
+                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                        });
+                        var count = $("#" + $(this).attr("targettableID") + " tr:visible").length;
+                        count = count - 1;
+                        if ($(".input-filter[targettableID=" + $(this).attr("targettableID") + "]").val() === "") {
+                            count = 0;
+                            $("#" + $(this).attr("targettableID") + "Count")
+                                .parent()
+                                .hide();
+                            $(this).css("margin-right", "13%").addClass("pull-right");
+                        } else {
+                            $("#" + $(this).attr("targettableID") + "Count").text(count);
+                            $("#" + $(this).attr("targettableID") + "Count")
+                                .parent()
+                                .show();
+                            $(this).css("margin-right", "0px").removeClass("pull-right");
+                        }
+                    });
+            });
+
+            function showHideDiv(event, e, div) {
+                event.preventDefault();
+                var helper = " > p > input",
+                    displayType = "inline-block";
+                if (typeof div === "object") {
+                    div = div.id;
+                    helper = "-pages";
+                    displayType = "table-row";
+                }
+                if ($("#" + div + helper).is(":visible")) {
+                    displayType = "none";
+                }
+                $("#" + div + helper).css("display", displayType);
+                $("#" + div).toggle();
+                $(e).find(".material-icons").html() == "keyboard_arrow_down" ? $(e).find(".material-icons").html("keyboard_arrow_up") : $(e).find(".material-icons").html("keyboard_arrow_down");
+            }
+            function showTable(url, tableID, title) {
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    crossorigin: true,
+                    success: function (data) {
+                        $("#reportTable").html(
+                            $(data)
+                                .find("#" + tableID)
+                                .html()
+                        );
+                        $("#modalTitle").html(title);
+                        $("#showModal").click();
+                        $("div.modal-body").css("height", "40vh").css("overflow-y", "scroll");
+                    },
+                });
+            }
+            function showTableClass(url, tableClass, title) {
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    crossorigin: true,
+                    success: function (data) {
+                        var table = $(data).find("." + tableClass);
+                        if (typeof table === "undefined") {
+                            table = $(data).find("." + tableClass + "-container");
+                        }
+                        $("#reportTable").html($(table).html());
+                        $("#modalTitle").html(title);
+                        $("#showModal").click();
+                        $("span.testcase-detail-link").remove();
+                        $("#reportTable tr.testcase-row > td > a").attr("href", "#");
+                        $("#reportTable tr.testcase-row > td > a").css("cursor", "default");
+                        $('td > div > div > button.tgFailure').unbind('click').click(function(){
+                           $(this).next().toggle();
+                        });
+                        $('div.boxHover > a').attr('href','#');
+                        $("td.td-link tr td table tr td").hover(
+                            function () {
+                                $(this).find("i").css("display", "block");
+                            },
+                            function () {
+                                $(this).find("i").css("display", "none");
+                            }
+                        );
+                    },
+                });
+            }
+
+            function showHideAnchor(event, groupDiv, id) {
+                var stepsDiv = document.getElementById(id);
+                //stepsDiv.style.display = (stepsDiv.style.display == 'block') ? 'none' : 'block';
+                if (stepsDiv.style.display === "") {
+                    $(groupDiv).next().hide();
+                } else {
+                    $(groupDiv).next().show();
+                }
+                /*
+                $("td.td-link tr td table tr td").hover(function () {
+                    $(this).find('i').css("display", "block");
+                }, function () {
+                    $(this).find('i').css("display", "none");
+                });
+                */
+            }
+            $("td.td-link tr td table tr td").hover(
+                function () {
+                    $(this).find("i").css("display", "block");
+                },
+                function () {
+                    $(this).find("i").css("display", "none");
+                }
+            );
+            function copyToClipBoard(element) {
+                var copyText = element.parentElement;
+                var textArea = document.createElement("textarea");
+                textArea.value = unescape(
+                    $(copyText)
+                        .text()
+                        .trim()
+                        .replace(/(\r\n|\n|\r|\t)/g, "")
+                        .replace(/(;)/g, ";\n")
+                );
+                textArea.style.position = "fixed"; //avoid scrolling to bottom
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textArea);
+            }
+        </script>   
+        <!-- Modal -->
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">IMPORTANT!</h5>
+            </div>
+            <div class="modal-body">
+                <p>This dashboard was created with a CICD client downloaded from an Appvance S3 service.</p>
+                <p>
+                    Please follow the steps in this
+                    <a target="_blank"
+                        href="https://appvance.atlassian.net/l/cp/dZwAk8Pe" style="color: #007bff !important; text-decoration: underline; background-color: transparent; -webkit-text-decoration-skip: objects;">document</a>
+                    to point your CICD build.xml to your AIQ controller CICD client.
+                    <br><br>
+                    Questions: contact support@appvance.ai
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // JavaScript to open the modal when the page loads
+    $(document).ready(function () {
+        $('#exampleModal').modal('show');
+    });
+</script>
+    </body>
+</html>

@@ -1,0 +1,393 @@
+<!--AIQ-2008 code-->
+<!--
+   To change this license header, choose License Headers in Project Properties.
+   To change this template file, choose Tools | Templates
+   and open the template in the editor.
+   -->
+<html>
+   <head>
+    <title> Dashboard | production</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/css-material.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/dashboard.css">    
+    <style>
+        /* Style the collapsible content. Note: hidden by default */
+            .containerSelect {
+              padding: 0 18px;
+              display: none;
+              overflow: hidden;
+              background: unset;
+            }
+            .arrowExpand {
+                margin: 12px;
+            }
+            .card-category {
+                padding: 0px;
+                font-weight: bold;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            table tr td:first-child {
+                padding:0px !important;
+            }
+            table tr td:first-child div.card-category {
+                text-align: left;
+            }
+            .arrowExpand::before {
+                position: absolute;
+                content: '';
+                width: 0;
+                height: 0;
+                border: .5em solid transparent;
+                border-left-color: black;
+                transform-origin: 0 50%;
+                transition: transform .25s;
+                transform: rotate(90deg);
+            }
+
+            .arrowExpand.down::before {
+                transform: rotate(0deg);
+                transition: transform .25s;
+            }
+            .btn.view {
+                background: unset;
+                display: block;
+                width: 96%;
+                padding-bottom: 5px;
+                padding-top: 5px;
+                height: fit-content;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: left;
+                font-weight: 700;
+            }
+            .gridCell-border {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding: 8px;
+                position: unset;
+                height: initial;
+                white-space: nowrap;
+            }
+            .cellAlignment {
+                white-space: nowrap;
+                width: 80px;
+                overflow: hidden;
+                display: inline-flex;
+                margin: 10px 0px 0px 20px;
+                float: left;
+            }
+            td.center {
+                margin: 0px;
+                padding: 0px !important;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper ">
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top p-0">
+                <div class="container-fluid">
+
+                    <div class="navbar-wrapper float-right">
+                        <a class="navbar-brand" href="#">
+                             Dashboard | production
+               </a>
+                    </div>
+                    <div class="navbar-wrapper float-left">
+                        <a class="navbar-brand" href="#">
+                   <label>2025/01/31 13:29<br></label>
+               </a>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="content-main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card">                               
+                                <div class="card-body table-responsive">
+                                    <link rel="stylesheet" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/dashboard.css">
+                                    <script src="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/js/jquery-3.4.1.min.js"></script>
+                                    <script src="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/js/bootstrap.min.js"></script>
+                                    <script src="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/js/sorttable.js"></script>
+                                    <script>
+                                        $(document).ready(function() {
+                                            $('.canHideExecutionId').toggle();
+                                            $('.canHideTestName').toggle();
+                                            $('.canHidePipeline').toggle();
+                                            $('.canHideScenario').toggle();
+                                            $('#myScenarios tr >  td.link ').prop('title','Click to Navigate to Execution Report');
+                                            $('#myScenarios tr >  td.link').unbind('click').click(function() {
+                                                window.location = $(this).parent().find('td a.info-blue').attr('href');
+                                           });
+                                            $('#myScenarios tr >  td.link').css('cursor','pointer');
+                                            $('#myScenarios tr >  td.link ').unbind('hover').hover(function(){
+                                                $(this).parent().find('td.link').css("background-color", "#d1e8ff");
+                                            }, function(){
+                                                $(this).parent().find('td.link').css("background-color", "unset");
+                                            });
+                                            // Add event listener for opening and closing details
+                                            var changeSelects = function () {
+                                                if ($("#SummarizedView").is(":checked")) {
+                                                    $('tr.SummarizedViewElement').show();
+                                                    $('tr.DetailedViewElement').hide();
+                                                }
+                                                if ($("#DetailedView").is(":checked")) {
+                                                    $('tr.SummarizedViewElement').hide();
+                                                    $('tr.DetailedViewElement').show();
+                                                }
+                                                var select_Products_Val = $("#select_Products").val().toLowerCase();
+                                                var select_Environments_Val = $("#select_Environments").val().toLowerCase();
+                                                var select_Types_Val = $("#select_Types").val().toLowerCase();
+
+                                                $("#myScenarios > tr.SummarizedViewElement, #myScenarios > tr.generic").hide();
+                                                $("#myScenarios > tr.DetailedViewElement, #myScenarios > tr.generic").hide();
+
+                                                if ($("#DetailedView").is(":checked")) {     
+                                                    $("#myScenarios > tr.DetailedViewElement, #myScenarios > tr.generic").filter(function() {
+                                                        $(this).toggle(
+                                                            ($(this).find("td.product > div:first-child").text().toLowerCase() === select_Products_Val || select_Products_Val === "all") &&
+                                                            ($(this).find("td.branch > div:first-child").text().toLowerCase() ===  select_Environments_Val || select_Environments_Val === "all") &&
+                                                            ($(this).find("td.execType > div:first-child").text().toLowerCase() === select_Types_Val || select_Types_Val === "all")
+                                                        );
+                                                    });
+                                                }
+                                                if ($("#SummarizedView").is(":checked")) {    
+                                                    $("#myScenarios > tr.SummarizedViewElement, #myScenarios > tr.generic").filter(function() {
+                                                        $(this).toggle(
+                                                            ($(this).find("td.product > div:first-child").text().toLowerCase() === select_Products_Val || select_Products_Val === "all") &&
+                                                            ($(this).find("td.branch > div:first-child").text().toLowerCase() ===  select_Environments_Val || select_Environments_Val === "all") &&
+                                                            ($(this).find("td.execType > div:first-child").text().toLowerCase() === select_Types_Val || select_Types_Val === "all")
+                                                        );
+                                                    });
+                                                }
+                                                $('th.filter').click();
+                                                $('th.filter').click();
+                                            };
+                                            $("input[value=product]").on("change", function() {
+                                                if ($(this).is(':checked')){
+                                                    $('.canHideProduct').show();
+                                                } else {
+                                                    $('.canHideProduct').hide();
+                                                }
+                                            });
+                                            $("input[value=environment]").on("change", function() {
+                                                if ($(this).is(':checked')){
+                                                    $('.canHideEnvironment').show();
+                                                } else {
+                                                    $('.canHideEnvironment').hide();
+                                                }
+                                            });
+                                            $("input[value=duration]").on("change", function() {
+                                                if ($(this).is(':checked')){
+                                                    $('.canHideDuration').show();
+                                                } else {
+                                                    $('.canHideDuration').hide();
+                                                }
+                                            });
+                                            $("input[value=scenario]").on("change", function() {
+                                                if ($(this).is(':checked')){
+                                                    $('.canHideScenario').show();
+                                                } else {
+                                                    $('.canHideScenario').hide();
+                                                }
+                                            });
+                                            $("input[value=pipeline]").on("change", function() {
+                                                if ($(this).is(':checked')){
+                                                    $('.canHidePipeline').show();
+                                                } else {
+                                                    $('.canHidePipeline').hide();
+                                                }
+                                            });
+                                            $("input[value=testName]").on("change", function() {
+                                                if ($(this).is(':checked')){
+                                                    $('.canHideTestName').show();
+                                                } else {
+                                                    $('.canHideTestName').hide();
+                                                }
+                                            });
+                                            $("input[value=buildId]").on("change", function() {
+                                                if ($(this).is(':checked')){
+                                                    $('.canHideBuildId').show();
+                                                } else {
+                                                    $('.canHideBuildId').hide();
+                                                }
+                                            });
+                                            $("input[value=executionId]").on("change", function() {
+                                                if ($(this).is(':checked')){
+                                                    $('.canHideExecutionId').show();
+                                                } else {
+                                                    $('.canHideExecutionId').hide();
+                                                }
+                                            });
+                                            
+                                            $("#select_Products").on("change", function() {
+                                                select_Products_Val = $(this).val().toLowerCase();
+                                                changeSelects();
+                                            });
+                                            $("#select_Environments").on("change", function() {
+                                                select_Environments_Val = $(this).val().toLowerCase();
+                                                changeSelects();
+                                            });
+                                            $("#select_Types").on("change", function() {
+                                                select_Types_Val = $(this).val().toLowerCase();
+                                                changeSelects();
+                                            });
+                                            $("#select_Names").on("change", function() {
+                                                changeSelects();
+                                                viewChange(); 
+                                            });    
+                                            $('tr th.filter').click();
+                                            $('tr th.filter').click();
+
+                                            $("#SummarizedView, #DetailedView").unbind('click').click(function(){
+                                               changeSelects(); 
+                                            });
+                                        });
+                                    </script>
+                                    <div class="container">
+                                        <div class="row">                                            
+                                            <p style="font-weight: bold">Product</p><select class="form-control input-round pull-left" id="select_Products" style="height: 34px;width: 200px;"><option value="all">All</option><option value="storefront">Storefront</option></select><span style="margin-right: 50px;"> </span><p style="font-weight: bold">Environment</p><select class="form-control input-round pull-left" id="select_Environments" style="height: 34px;width: 200px;"><option value="all">All</option><option value="web">Web</option></select><span style="margin-right: 50px;"> </span><p style="font-weight: bold">Type</p><select class="form-control input-round pull-left" id="select_Types" style="height: 34px;width: 200px;"><option value="all">All</option><option value="- blueprint">- blueprint</option></select><span style="margin-right: 50px;"> </span>
+                                            <div class="dropdown">
+                                                <button class="form-control input-round pull-left dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Toggle Columns</button>
+                                                <form class="dropdown-menu" aria-labelledby="dropdownMenuButton" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                                        <label class="dropdown-item"><input type="checkbox" checked="" value="buildId" style="margin-right: 10px;">Job Id</label>
+                                                        <label class="dropdown-item"><input type="checkbox" value="executionId" style="margin-right: 10px;">Execution Id</label>
+                                                        <label class="dropdown-item"><input type="checkbox" checked="" value="product" style="margin-right: 10px;">Product</label>
+                                                        <label class="dropdown-item"><input type="checkbox" checked="" value="environment" style="margin-right: 10px;">Environment</label>
+                                                        <label class="dropdown-item"><input type="checkbox" value="scenario" style="margin-right: 10px;">Scenario Name</label>
+                                                        <label class="dropdown-item"><input type="checkbox" checked="" value="duration" style="margin-right: 10px;">Test Duration</label>
+                                                        <label class="dropdown-item"><input type="checkbox" value="pipeline" style="margin-right: 10px;">Job Duration</label>
+                                                        <label class="dropdown-item"><input type="checkbox" value="testName" style="margin-right: 10px;">Test Name</label>
+                                                </form>
+                                            </div>
+                                            <div class="Views" style="margin-top: 1%; display: none;">
+                                                <label>
+                                                    <input type="radio" name="option" id="SummarizedView" checked="checked"></input> Summarized View
+                                                </label>
+                                                <label style="margin-left: 15px;">
+                                                    <input type="radio" name="option" id="DetailedView"></input>  Detailed View
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <hr>
+
+
+                                        <div class="tab-content">
+                                            <div id="scenariosTab" class="tab-pane fade in active show" >  
+                                                <table class="table table-bordered table-striped table-hover sortable"  style="table-layout: fixed;">
+                                                    <thead>
+                                                        <tr>  
+                                                            <th class="center blue-white canHideBuildId" style="width: 10%;">Job Id</th>                                         
+                                                            <th class="center blue-white canHideExecutionId" style="width: 8%;">Execution Id</th>
+                                                            <th class="center blue-white canHideProduct" style="width: 7%;">Product</th>
+                                                            <th class="center blue-white canHideEnvironment" style="width: 9%;">Environment</th>
+                                                            <th class="center blue-white" style="width: 6%;">Test Type</th>
+                                                            <th class="center blue-white canHideTestName" style="width: 6%;">Project Name</th>
+                                                            <th class="center blue-white filter" style="width: 8%;">Date</th>                                                            
+                                                            <th class="center blue-white canHideScenario" style="width: 8%;">Scenario Name</th>
+                                                            <th class="center blue-white canHideDuration" style="width: 8%;">Test Duration (hr:min:sec)</th>
+                                                            <th class="center blue-white canHidePipeline" style="width: 8%;">Job Duration (hr:min:sec)</th>
+                                                            <th class="center blue-white" style="width: 6%;">Failures</th>
+                                                            <th class="center blue-white" style="width: 7%;">Success Rate</th>
+                                                            <th class="center blue-white" style="width:7%;pointer-events: none;">Historical Results</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="myScenarios">
+                                                        
+	<tr style='cursor: default;' count='0' class='generic'  target='2025-01-31-1328' ><td nowrap class='center canHideBuildId link'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'><div ref='Functional' ><a target='2025-01-31-1328' style='color: #007bff !important;' name='-' title='Click to navigate to Execution Report on Job Id 2025-01-31-1328' style='color: #007bff !important;' class='btn view info-blue' href='Storefront/Web/scenarios/E-Storefront/2025-01-31-1328/report.html'><span style='padding-left: 5px;'>2025-01-31-1328</span></a></div></td><td nowrap class='center canHideExecutionId link'><div class='card-category' style='padding: 9px;width: 100%;'><div class='entries'  ref='scenarios' target='2025-01-31-1328' name='E-Storefront' title='E-Storefront' style='padding: 7px;position: unset; height: initial;display: initial;'>-</div></div></td><td nowrap class='center product canHideProduct link'><div class='card-category' style='padding: 9px;width: 100%;'><div class='entries'  ref='scenarios' target='2025-01-31-1328' name='E-Storefront' title='E-Storefront' style='padding: 7px;position: unset; height: initial;display: initial;'>Storefront</div></div></td><td nowrap class='center branch canHideEnvironment link'><div class='card-category' style='padding: 9px;width: 100%;'><div class='entries'  ref='scenarios' target='2025-01-31-1328' name='E-Storefront' title='E-Storefront' style='padding: 7px;position: unset; height: initial;display: initial;'>Web</div></div></td><td nowrap class='center execType link'><div class='card-category' types='- blueprint' style='padding: 9px;width: 100%;'>- blueprint</div></td><td nowrap class='center link canHideTestName'><div class='card-category' style='padding: 9px;width: 100%;'><div class='entries'  ref='scenarios' target='2025-01-31-1328' name='E-Storefront' title='E-Storefront' style='padding: 7px;position: unset; height: initial;display: initial;'>E-Storefront</div></div></td><td nowrap class='center link'><div class='card-category' style='padding: 9px;width: 100%;'><div class='entries'  ref='scenarios' target='2025-01-31-1328' name='E-Storefront' title='E-Storefront' style='padding: 7px;position: unset; height: initial;display: initial;'>2025/01/31 13:29 UTC</div></div></td><td nowrap class='center canHideScenario link'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>E-Storefront</div></td><td nowrap class='center canHideDuration link'><div class='card-category' style='padding: 9px;width: 100%;'>-</div></td><td nowrap class='center canHidePipeline link'><div class='card-category' title='13:29:23' style='padding: 9px;width: 100%;'>13:29:23</div></td><td nowrap class='center link'><div class='card-category' style='padding: 9px;width: 100%;'>0</div></td><td nowrap class='center link info-red'><div class='card-category' style='padding: 9px;width: 100%;'>0%</div></td><td nowrap class='center'><button title='Go to History' class='btn info-green view ' onclick='document.location="Storefront/Web/history.html?tab=scenarios"'  style=' display: block; background: unset;text-align: center;'><i class='fa fa-clock-o'></i><span> </span> </button></td></tr>
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <footer class="footer">
+                
+            </footer>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $(".input-filter").off("keyup").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#" + $(this).attr('targettableID') + " tbody > tr:not(.mainRow)").hide();
+                $("#" + $(this).attr('targettableID') + " tbody > tr.mainRow").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+                var count = $("#" + $(this).attr('targettableID') + " tr:visible").length;
+                count = count - 1;
+                if ($(".input-filter[targettableID=" + $(this).attr('targettableID') + "]").val() === "") {
+                    count = 0;
+                    $("#" + $(this).attr('targettableID') + "Count").parent().hide();
+                    $(this).css('margin-right', '13%').addClass('pull-right');
+                } else {
+                    $("#" + $(this).attr('targettableID') + "Count").text(count);
+                    $("#" + $(this).attr('targettableID') + "Count").parent().show();
+                    $(this).css('margin-right', '0px').removeClass('pull-right');
+
+                }
+            });
+        });
+
+        function showHideDiv(event, e, div) {
+            event.preventDefault();
+            $('#' + div).toggle('slow');
+            $('#' + div + " > p > input").css("display", "inline-block");
+            //$(e).next('.input-filter').toggle('slow');
+            $(e).find('.material-icons').html() == 'keyboard_arrow_down' ? $(e).find('.material-icons').html('keyboard_arrow_up') : $(e).find('.material-icons').html('keyboard_arrow_down')
+        }
+    </script>
+    <!-- Modal -->
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">IMPORTANT!</h5>
+            </div>
+            <div class="modal-body">
+                <p>This dashboard was created with a CICD client downloaded from an Appvance S3 service.</p>
+                <p>
+                    Please follow the steps in this
+                    <a target="_blank"
+                        href="https://appvance.atlassian.net/l/cp/dZwAk8Pe" style="color: #007bff !important; text-decoration: underline; background-color: transparent; -webkit-text-decoration-skip: objects;">document</a>
+                    to point your CICD build.xml to your AIQ controller CICD client.
+                    <br><br>
+                    Questions: contact support@appvance.ai
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // JavaScript to open the modal when the page loads
+    $(document).ready(function () {
+        $('#exampleModal').modal('show');
+    });
+</script>
+</body>
+</html>

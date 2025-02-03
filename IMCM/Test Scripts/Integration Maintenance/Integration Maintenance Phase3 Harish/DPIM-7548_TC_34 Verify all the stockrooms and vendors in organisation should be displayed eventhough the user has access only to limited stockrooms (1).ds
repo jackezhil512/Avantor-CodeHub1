@@ -1,107 +1,94 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'TC_34 Verify all the stockrooms and vendors in organisation should be displayed eventhough the user has access only to limited stockrooms (1).ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$IntegrationUSer,$Password,$IntegrationOrg,$IntegrationStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;(//div[text()=&apos; Vendor &apos;]/following::mat-select)[1]&quot;)' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='_eval(&quot;ds$(&apos;mat-option&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='VendorCount' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='VendorCount' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertGreaterThan' value='3' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='VendorCount' fallback='true' selected='true'/>
-   <accessor type='unknown' value='' fallback='false' selected='false'/>
-   <accessor type='unknown' value='VendorCount' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='AttrClass' value='div(&quot;cdk-overlay-backdrop cdk-overlay-backdrop-showing cdk-overlay-transparent-backdrop&quot;).xy(0.36, 0.40 )' fallback='true' selected='true'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&quot;]&apos;).xy(0.36, 0.40 )' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div&apos;).xy(0.36, 0.40 )' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/div[@class=&apos;cdk-overlay-container&apos;]/div[@class=&apos;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&apos;]&quot;).xy(0.36, 0.40 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;cdk-overlay-container&quot;] &gt; div[class=&quot;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&quot;]&apos;).xy(0.36, 0.40 )' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.36, 0.40 )' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='""' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;All Stockrooms&quot;]&apos;)' fallback='true' selected='true'/>
-   <accessor type='Parent' value='span(1, _in(div({&apos;id&apos;:&apos;mat-select-value-19&apos;})))' fallback='true' selected='false'/>
-   <accessor type='AttrClass' value='span(&quot;mat-select-min-line ng-star-inserted ng-tns-c89-54&quot;)' fallback='true' selected='false'/>
-   <accessor type='Text' value='span(&quot;All Stockrooms[1]&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPath' value='byXPath(&quot;//div[@id=&apos;mat-select-value-19&apos;]/span/span&quot;)' fallback='true' selected='false'/>
-   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;mat-select-min-line ng-tns-c89-54 ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[3]/div/div/div[2]/mat-form-field/div/div/div[4]/mat-select/div/div/span/span&apos;)' fallback='true' selected='false'/>
-   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;mat-select-value-19&apos;)/span[@class=&apos;mat-select-value-text ng-tns-c89-54 ng-star-inserted&apos;]/span[@class=&apos;mat-select-min-line ng-tns-c89-54 ng-star-inserted&apos;]&quot;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;mat-select[class=&quot;mat-select drp-ucd ng-tns-c89-54 ng-tns-c49-53 ng-pristine ng-valid ng-star-inserted ng-touched&quot;] &gt; div[class=&quot;mat-select-trigger ng-tns-c89-54&quot;] &gt; div[class=&quot;mat-select-value ng-tns-c89-54&quot;] &gt; span[class=&quot;mat-select-value-text ng-tns-c89-54 ng-star-inserted&quot;] &gt; span[class=&quot;mat-select-min-line ng-tns-c89-54 ng-star-inserted&quot;]&apos;)' fallback='true' selected='false'/>
-   <accessor type='JQuery' value='byJQuery(&apos;#mat-select-value-19 &gt; .mat-select-value-text.ng-tns-c89-54.ng-star-inserted &gt; .mat-select-min-line.ng-tns-c89-54.ng-star-inserted&apos;)' fallback='true' selected='false'/>
-   <accessor type='Parent' value='span(1, _in(div(&quot;mat-select-value-19&quot;)))' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='store' value='_eval(&quot;ds$(&apos;mat-option&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='StockroomsCount' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='StockroomsCount' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertGreaterThan' value='3' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='StockroomsCount' fallback='true' selected='true'/>
-   <accessor type='unknown' value='VendorCount' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='log' value='strData' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='assertEqual' value='"10/1 alternates delete"' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='strData' fallback='true' selected='true'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='sanjay.shanmugam@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../../../Test Data/IMCM_INPUTFILE (1).csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d162002e-1bc2-4bab-8a7a-8d7198833dac' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='filePath' value='"{ds}/../../../Test Data/IMCM Function Library (1).js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$IntegrationUSer,$Password,$IntegrationOrg,$IntegrationStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='365a60e1-1a47-4fcb-a67e-de4ab81a0965' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fd37c4c4-3a51-4c26-bcb1-b822980ffe5a' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5c1610ee-caa3-4b97-9494-79b8f5101d6e' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4f41ad6f-80d9-49b5-9a6f-b4422600149b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//div[text()=&apos; Vendor &apos;]/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5bc4b238-2b88-4345-aaf4-44ef436dcf98' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='_eval("ds$(&apos;mat-option&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7e764506-13c6-47b9-abb9-f304e8782fa6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='VendorCount' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='VendorCount' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='78a2e9fb-5399-43dd-9d94-852ce81cf74e' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertGreaterThan' value='3' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='59fbe882-1917-4a08-9e96-6a60eb4d52f7' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='VendorCount' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='' selected='false' fallback='false'></accessor>
+        <accessor type='unknown' value='VendorCount' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bdde1698-2fc6-443d-8ef1-6b914271dbf3' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='div("cdk-overlay-backdrop cdk-overlay-backdrop-showing cdk-overlay-transparent-backdrop").xy(0.36, 0.40 )' selected='true' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.36, 0.40 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div&apos;).xy(0.36, 0.40 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/div[@class=&apos;cdk-overlay-container&apos;]/div[@class=&apos;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&apos;]").xy(0.36, 0.40 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-container"] &gt; div[class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.36, 0.40 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.36, 0.40 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7bb88cba-ed1b-45d4-9350-df5ca0bbe76f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="All Stockrooms"]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(div({&apos;id&apos;:&apos;mat-select-value-19&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("mat-select-min-line ng-star-inserted ng-tns-c89-54")' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='span("All Stockrooms[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-select-value-19&apos;]/span/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-select-min-line ng-tns-c89-54 ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[3]/div/div/div[2]/mat-form-field/div/div/div[4]/mat-select/div/div/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-select-value-19&apos;)/span[@class=&apos;mat-select-value-text ng-tns-c89-54 ng-star-inserted&apos;]/span[@class=&apos;mat-select-min-line ng-tns-c89-54 ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-select[class="mat-select drp-ucd ng-tns-c89-54 ng-tns-c49-53 ng-pristine ng-valid ng-star-inserted ng-touched"] &gt; div[class="mat-select-trigger ng-tns-c89-54"] &gt; div[class="mat-select-value ng-tns-c89-54"] &gt; span[class="mat-select-value-text ng-tns-c89-54 ng-star-inserted"] &gt; span[class="mat-select-min-line ng-tns-c89-54 ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-select-value-19 &gt; .mat-select-value-text.ng-tns-c89-54.ng-star-inserted &gt; .mat-select-min-line.ng-tns-c89-54.ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(div("mat-select-value-19")))' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value='_eval("ds$(&apos;mat-option&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c6244913-effb-475a-bca3-48da5a6cca17' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='StockroomsCount' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='StockroomsCount' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2b392236-a57d-4b93-87b2-212bf1dc2b58' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertGreaterThan' value='3' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='82a32ca8-7cd0-46c5-a005-d3976eeeed0d' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='StockroomsCount' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='VendorCount' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='strData' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9dc585b0-7dfe-40ef-936e-096e428ccde5' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertEqual' value='"10/1 alternates delete"' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e77136ea-e2ed-418d-a2e6-b28b4707ea03' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='strData' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+  </testcase>

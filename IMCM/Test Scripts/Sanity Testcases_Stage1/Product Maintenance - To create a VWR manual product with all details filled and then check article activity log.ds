@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
   <testcase name='' description='script generated from Web Designer' author='Harish@avantorsciences.com' version='webDesigner'>
-    <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep00' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'></dpl>
     <fallback useFallback='true'></fallback>
     <shadowDOM useShadowDOM='true'></shadowDOM>
     <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a5556501-250d-4083-b86f-4c9d0e387ad6' uiType='base'>
@@ -28,7 +28,22 @@
         <accessor type='Text' value='submit("add  Add Product")' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='da38fb2c-a2f0-4f5b-862c-054ebea8305f' uiType='base'>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='eb39044e-4b63-41d1-9cb4-1a04a8d71c48' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='43a8a787-229e-4487-8a3d-5dcc571f9366' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='submit("Add VWR Product Manually")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='submit("add-product-manually cdk-focused cdk-mouse-focused mat-button-base mat-focus-indicator mat-primary mat-stroked-button mb-2 mb-sm-0 ng-star-inserted px-3 py-1")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-list-stockroom/div[6]/div[3]/button[1]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-focus-indicator add-product-manually py-1 px-3 mb-sm-0 mb-2 mat-stroked-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-product-maintenance-layout/main/app-list-stockroom/div[6]/div[3]/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-product-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/main[@class=&apos;container-fluid px-5&apos;]/app-list-stockroom[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row d-flex align-items-center&apos;]/div[@class=&apos;col-12 list-stockroom cust-list d-md-flex justify-content-md-end col-xl-6&apos;]/button[@class=&apos;mat-focus-indicator add-product-manually py-1 px-3 mb-sm-0 mb-2 mat-stroked-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;main[class="container-fluid px-5"] &gt; app-list-stockroom[class="ng-star-inserted"] &gt; div[class="row d-flex align-items-center"] &gt; div[class="col-12 list-stockroom cust-list d-md-flex justify-content-md-end col-xl-6"] &gt; button[class="mat-focus-indicator add-product-manually py-1 px-3 mb-sm-0 mb-2 mat-stroked-button mat-button-base mat-primary ng-star-inserted cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.container-fluid.px-5 &gt; .ng-star-inserted &gt; .row.d-flex.align-items-center &gt; .col-12.list-stockroom.cust-list.d-md-flex.justify-content-md-end.col-xl-6 &gt; .mat-focus-indicator.add-product-manually.py-1.px-3.mb-sm-0.mb-2.mat-stroked-button.mat-button-base.mat-primary.ng-star-inserted.cdk-focused.cdk-mouse-focused&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='da38fb2c-a2f0-4f5b-862c-054ebea8305f' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Text' value='div("VWR[4]").xy(0.84, 0.67 )' selected='true' fallback='true'></accessor>
         <accessor type='Parent' value='div(1, _in(custom("mat-select", {&apos;id&apos;:&apos;mat-select-22&apos;}))).xy(0.84, 0.67 )' selected='false' fallback='true'></accessor>
@@ -44,10 +59,10 @@
         <accessor type='Parent' value='div(1, _in(custom("mat-select", "mat-select-22"))).xy(0.84, 0.67 )' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='selectWindow' value='"Avantor Inventory Manager"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4305fb27-727f-4519-b12e-c0598cc68b3f' uiType='base'>
+    <step action='selectWindow' value='"Avantor Inventory Manager"' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4305fb27-727f-4519-b12e-c0598cc68b3f' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='173cf0e3-d485-47c3-b623-a4437128979e' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='173cf0e3-d485-47c3-b623-a4437128979e' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Text' value='span("Automation")' selected='true' fallback='true'></accessor>
         <accessor type='Parent' value='span(0, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-1296&apos;})))' selected='false' fallback='true'></accessor>

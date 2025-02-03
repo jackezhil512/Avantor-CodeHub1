@@ -35,6 +35,18 @@ function ValidateStockroomActivity(catalogNumbers) {
     });
 }
 
+function NavigateToUsermaintenance(){
+ setDescription("Click Dashboard");
+click(fallback(`link("Dashboard")`));
+setDescription("Click on Administration Button");
+click(fallback(`submit("Administration expand_more")`));
+setDescription("Click on User Maintenance Link");
+click(fallback(`div("User Maintenance[1]").xy(0.27, 0.52 )`));
+setDescription("Verify User maintenance Title");
+assertExists(fallback(`span("User Maintenance")`));
+
+}
+
 
 
 

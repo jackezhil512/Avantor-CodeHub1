@@ -1,339 +1,286 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'DPIM 8477 TC_002 Verify the modify template page of Email Xml.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='NavigateToIntegrationMaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='TotalRow' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='while' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='TotalRow&gt;=1' fallback='true' selected='true'/>
-   <accessor type='unknown' value='TotalRow&gt;1' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='deleteAll()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='_eval(&quot;ds$(&apos;tr.striped-rows&apos;).length&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='TotalRow' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='AddALLintegrationWithXML()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;setupRequestTemplate&apos;)]//button&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='setValue' value='"Subject Request"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//input[@formcontrolname=&apos;subject&apos;]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//mat-select[@formcontrolname=&apos;language&apos;]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos;English(North America)&apos;]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;(//span[contains(text(),&apos;Save Changes&apos;)]/parent::button)[1]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;You have successfully updated the xml email configuration settings!&apos;)]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;setupOrderTemplate &apos;)]//button&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='setValue' value='"Subject Order"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//input[@formcontrolname=&apos;subject&apos;]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//mat-select[@formcontrolname=&apos;language&apos;]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos;English(North America)&apos;]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;(//span[contains(text(),&apos;Save Changes&apos;)]/parent::button)[1]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;You have successfully updated the xml email configuration settings!&apos;)]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;setupReceivingTemplate &apos;)]//button&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='setValue' value='"Subject Receive"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//input[@formcontrolname=&apos;subject&apos;]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//mat-select[@formcontrolname=&apos;language&apos;]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//span[text()=&apos;English(North America)&apos;]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;(//span[contains(text(),&apos;Save Changes&apos;)]/parent::button)[1]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//div[contains(text(),&apos;You have successfully updated the xml email configuration settings!&apos;)]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;setupRequestTemplate&apos;)]//button&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='store' value='getText(byXPath(&quot;//input[@formcontrolname=&apos;subject&apos;]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='strReqSubject' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='strReqSubject' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;(//span[contains(text(),&apos;Save Changes&apos;)]/parent::button)[1]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;setupOrderTemplate &apos;)]//button&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='store' value='getText(byXPath(&quot;//input[@formcontrolname=&apos;subject&apos;]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='strOrderSubject' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='strOrderSubject' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;(//span[contains(text(),&apos;Save Changes&apos;)]/parent::button)[1]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;//td[contains(@class,&apos;setupReceivingTemplate &apos;)]//button&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='store' value='getText(byXPath(&quot;//input[@formcontrolname=&apos;subject&apos;]&quot;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='strReceiveSubject' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='log' value='strReceiveSubject' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='byXPath(&quot;(//span[contains(text(),&apos;Save Changes&apos;)]/parent::button)[1]&quot;)' fallback='true' selected='true'/>
-   <accessor type='unknown' value='byXPath(&quot;&quot;)' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='assertEqual' value='"Subject Request"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='strReqSubject' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='assertEqual' value='"Subject Order"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='strOrderSubject' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='assertEqual' value='"Subject Receive"' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='strReceiveSubject' fallback='true' selected='true'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='sanjay.shanmugam@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../../../Test Data/IMCM_INPUTFILE (1).csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1cefe4eb-ac4e-4b8a-9ea0-4154eb92bf01' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='filePath' value='"{ds}/../../../Test Data/IMCM Function Library (1).js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='54d02d00-8839-4e31-994d-e685915d6470' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='55994c90-0ca0-4173-8807-99633dde8163' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='NavigateToIntegrationMaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='91675cd4-2c50-4036-96f3-a53ce593b89e' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='014f6df9-2d2e-4b01-a263-513c8cb11bfe' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='_eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='29ab1932-b7a1-40f5-b2c5-3f3ed61c944b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TotalRow' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='750f74cd-7483-4588-b940-8fa012db4b31' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='while' value='TotalRow&gt;=1' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a6de12af-590c-49fb-90cd-98bf9182ed00' uiType='conditional'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TotalRow&gt;=1' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='TotalRow&gt;1' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='deleteAll()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='a6de12af-590c-49fb-90cd-98bf9182ed00' uid='6e3d3627-dacb-49e3-b8ff-cdd03bd16462' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='_eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='a6de12af-590c-49fb-90cd-98bf9182ed00' uid='a17efc4d-01ef-44df-b4be-e2c133cc88b6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TotalRow' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='47a76e48-aa23-440b-8c7d-b624773befe2' uiType='end' sibling='a6de12af-590c-49fb-90cd-98bf9182ed00'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='da4b4fa3-c2bf-4410-a08a-045d85a25766' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='AddALLintegrationWithXML()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='704a026d-7c0b-4990-a926-c53a1e74d205' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7f2fd3cf-b25d-4a6a-964e-2c0db51d5932' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8ec88835-5f2e-4065-9433-e13c4e46a6c9' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f1f2f2ee-0106-4751-9d1a-4cc0e65256ba' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//td[contains(@class,&apos;setupRequestTemplate&apos;)]//button")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value='"Subject Request"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f75f2218-f3b0-486e-84af-2d2b80707248' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//input[@formcontrolname=&apos;subject&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a1c6d2cd-0e42-4dd1-8a46-5f8c61c7d9f3' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//mat-select[@formcontrolname=&apos;language&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='096fa476-2f09-4f41-b785-99575ef26761' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[text()=&apos;English(North America)&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e20dcc98-c29d-474a-90b8-7981bd8409ca' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//span[contains(text(),&apos;Save Changes&apos;)]/parent::button)[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fcd70a6e-8999-4f20-9d42-209d6dbb8692' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//div[contains(text(),&apos;You have successfully updated the xml email configuration settings!&apos;)]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7de74885-912d-4c66-82dd-52c374d23b0f' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b95f9278-d3c1-4b08-a4f7-38f93b67c24f' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b0b8f2d4-ae31-4368-bcc7-0ee067f26e1b' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2db4a7de-a66f-4bb3-8e14-ade06e2ae23a' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//td[contains(@class,&apos;setupOrderTemplate &apos;)]//button")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value='"Subject Order"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='866129a4-82f2-4647-a577-d5045da16de5' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//input[@formcontrolname=&apos;subject&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='34fe8a2d-f505-42ff-9280-91604faca42f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//mat-select[@formcontrolname=&apos;language&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='75773536-ce35-4619-be27-8881afdbc037' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[text()=&apos;English(North America)&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='14caad60-eb46-4522-a7f0-15147321a9db' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//span[contains(text(),&apos;Save Changes&apos;)]/parent::button)[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6b06f22a-f593-49da-a56c-4fd7f83dbc99' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//div[contains(text(),&apos;You have successfully updated the xml email configuration settings!&apos;)]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4aa199dc-32f6-4598-a90e-3f6e84952f7a' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='80e517f6-8f8e-4351-9501-b2ebdb360f70' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='eaccbc3b-25ae-4c6d-8eb6-f93bd7b8c61e' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9839ca59-e5af-49cd-ad49-7c316736c7f5' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//td[contains(@class,&apos;setupReceivingTemplate &apos;)]//button")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value='"Subject Receive"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b3e885f5-641f-4454-8060-0c5e67aea608' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//input[@formcontrolname=&apos;subject&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8ec8ad53-6c32-4548-9da1-4be1186a159f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//mat-select[@formcontrolname=&apos;language&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a4f7eaf5-2bd1-4c74-bf5e-a200cbf00035' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[text()=&apos;English(North America)&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='62543ae8-74a9-43ca-9f49-d274e61f05c8' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//span[contains(text(),&apos;Save Changes&apos;)]/parent::button)[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5caa4949-c826-43f8-83cb-b8f0adb01a81' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//div[contains(text(),&apos;You have successfully updated the xml email configuration settings!&apos;)]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='30d77ce2-61c1-4387-9b45-1142208b9c73' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f707d141-0b60-45c4-8823-63429d502c90' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='42c028fc-d91b-4a97-9330-0074a1c0476a' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3d6b4fba-248d-4465-a140-57d919a9f1d0' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//td[contains(@class,&apos;setupRequestTemplate&apos;)]//button")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value='getText(byXPath("//input[@formcontrolname=&apos;subject&apos;]"))' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3c8f48b5-a78f-489d-8ea1-437e4e44b8a8' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='strReqSubject' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='strReqSubject' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5e89aa37-3cea-4ec4-bb8f-ed9374eba654' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='417566c9-e525-4d57-8f0f-020ea0e2fcf5' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//span[contains(text(),&apos;Save Changes&apos;)]/parent::button)[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4ca42212-f2e0-4c30-a07c-077a70b2d26e' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bc52b234-7fc5-4fc5-8fa9-22363f8f613c' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0bb65d2c-8323-4681-bce2-7c1d3c0f381c' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//td[contains(@class,&apos;setupOrderTemplate &apos;)]//button")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value='getText(byXPath("//input[@formcontrolname=&apos;subject&apos;]"))' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1dff8016-efbb-4a9c-9667-a39c71e7321d' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='strOrderSubject' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='strOrderSubject' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1f2ad77b-e3af-4f7d-bc2b-f0280d460410' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2a73c6ea-bea7-4748-b85e-ea6f8b5a4b2f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//span[contains(text(),&apos;Save Changes&apos;)]/parent::button)[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='336d2b2c-ded1-4ef2-bffe-9187e7d775e3' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1d335ed3-2770-4429-a8f4-dd189a9fe938' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2a961737-73e7-45d7-bc9e-dbcbc59d7ee8' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//td[contains(@class,&apos;setupReceivingTemplate &apos;)]//button")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value='getText(byXPath("//input[@formcontrolname=&apos;subject&apos;]"))' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f429aa14-eca8-46ac-8873-faf2a0c4b9fb' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='strReceiveSubject' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='strReceiveSubject' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dc50fe42-8d9b-400f-9285-88d83c20ec59' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='48ab1153-21ba-4797-b82e-a12a05f1663e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//span[contains(text(),&apos;Save Changes&apos;)]/parent::button)[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertEqual' value='"Subject Request"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='15ab5b52-5519-4503-b0f5-cfb768d2772d' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='strReqSubject' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertEqual' value='"Subject Order"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2cfdea61-85b7-4488-93a3-9f8119f2df70' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='strOrderSubject' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertEqual' value='"Subject Receive"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8a739d7f-61ac-4b2b-93ac-29a6a9abc868' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='strReceiveSubject' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+  </testcase>

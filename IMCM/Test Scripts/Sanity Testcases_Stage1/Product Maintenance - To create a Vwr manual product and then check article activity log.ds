@@ -300,12 +300,6 @@
         <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-product-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/main[@class=&apos;container-fluid px-5&apos;]/app-add-product[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row my-3 pb-5&apos;]/div[@class=&apos;col d-flex justify-content-between add-product-btns&apos;]/div[2]/button[@class=&apos;mat-focus-indicator py-1 px-3 mx-2 save-product mat-stroked-button mat-button-base mat-primary&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/strong[1]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='assertExists' value='"60,14"' type='web' desc='Verify Product added success message' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c856facd-7cc6-44b9-bc54-c41e996cebd7' uiType='base'>
-      <dialect type='sahi'>
-        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" PRODUCT ADDED "]&apos;)' selected='true' fallback='true'></accessor>
-        <accessor type='Text' value='div("PRODUCT ADDED")' selected='false' fallback='true'></accessor>
-      </dialect>
-    </step>
     <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dc6829ec-45f5-4e11-ae0b-7c221f452442' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
@@ -360,10 +354,16 @@
     <step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='218bfd1d-8837-4bb8-9faa-1e62340c6e8c' uiType='end' sibling='71a6e949-859e-46a3-aaec-edba6bfbab23'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b8ac8880-355d-46f0-80be-9b540fc749b2' uiType='base'>
+    <step action='assertExists' value='"60,14"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d49ab5bf-82ae-4256-8a51-58fccbce4e8c' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" PRODUCT ADDED "]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='div("PRODUCT ADDED")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b8ac8880-355d-46f0-80be-9b540fc749b2' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='js' value='ValidateArtileActivityLogMovementType($CreateVWRProductCatalog,"Product Created")' type='web' desc='Validate Product Created in Article Activity log -As discuss to suresh we hold this step' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0c9ba73e-3890-4176-b1a7-09fc87dbca28' uiType='base'>
+    <step action='js' value='ValidateArtileActivityLogMovementType($CreateVWRProductCatalog,"Product Created")' type='web' desc='Validate Product Created in Article Activity log -As discuss to suresh we hold this step' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0c9ba73e-3890-4176-b1a7-09fc87dbca28' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
     <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='28a73b68-125b-4782-ab02-e7d0cd0f784f' uiType='base'>

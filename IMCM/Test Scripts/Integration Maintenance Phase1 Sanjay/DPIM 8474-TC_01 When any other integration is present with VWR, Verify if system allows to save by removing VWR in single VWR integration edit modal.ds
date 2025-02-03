@@ -1,0 +1,862 @@
+<?xml version='1.0' encoding='UTF-8'?>
+  <testcase name='' description='script generated from Web Designer' author='sanjay.shanmugam@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../DPIM - 8473/DPIM-8473 B/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e18af7be-1ae4-4ddd-9295-18174c0621a8' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='filePath' value='"{ds}/../DPIM - 8473/DPIM-8473 B/IMCM Function Library.js"' selected='true' fallback='true'></accessor>
+        <accessor type='filePath' value='"{ds}/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='filePath' value='"{ds}/../../../IMCM_Mohan/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$NormalUser, $Password, $ConsumptionOrg, $ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b9dd49b0-9025-4611-a46f-ee045a02ca52' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ab4558a9-f9a8-43b5-b1e7-71cb62fd307f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='submit("I will do this later")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='100' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9fa3c52c-46e6-487a-bb12-ae0b3f9f58f6' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b507df27-4350-4292-bbe1-6791fb02cd7c' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='100' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6c375c1b-6d8b-40de-af81-d953534e73c9' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9c4ca9ff-d281-4805-88f6-c1d8017a86c0' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("ADD NEW INTEGRATION")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("px-1")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[2]/div/div/button/span[1]/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="px-1"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" ADD NEW INTEGRATION "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[2]/div/div/button/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col&apos;]/div[@class=&apos;d-flex justify-content-end w-100&apos;]/button[@class=&apos;mat-focus-indicator px-3 py-2 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[@class=&apos;px-1&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="col"] &gt; div[class="d-flex justify-content-end w-100"] &gt; button[class="mat-focus-indicator px-3 py-2 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused"] &gt; span[class="mat-button-wrapper"] &gt; span[class="px-1"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.col &gt; .d-flex.justify-content-end.w-100 &gt; .mat-focus-indicator.px-3.py-2.mat-flat-button.mat-button-base.mat-primary.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper &gt; .px-1&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='67b9fed5-6b8f-415d-9e37-e8269f9596b5' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Select Vendor")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(div("mat-select-value-29")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(div({&apos;id&apos;:&apos;mat-select-value-29&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("mat-select-min-line mat-select-placeholder ng-star-inserted ng-tns-c89-116")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-select-value-29&apos;]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-select-placeholder mat-select-min-line ng-tns-c89-116 ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Select Vendor"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/mat-form-field/div/div/div[4]/mat-select/div/div/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-select-value-29&apos;)/span[@class=&apos;mat-select-placeholder mat-select-min-line ng-tns-c89-116 ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="mat-form-field-infix ng-tns-c49-115"] &gt; mat-select[class="mat-select ng-tns-c89-116 ng-tns-c49-115 mat-select-required mat-select-empty mat-select-multiple ng-untouched ng-pristine ng-invalid ng-star-inserted"] &gt; div[class="mat-select-trigger ng-tns-c89-116"] &gt; div[class="mat-select-value ng-tns-c89-116"] &gt; span[class="mat-select-placeholder mat-select-min-line ng-tns-c89-116 ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-select-value-29 &gt; .mat-select-placeholder.mat-select-min-line.ng-tns-c89-116.ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='69c798dd-e311-4283-b434-bf6548d100fb' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='div("mat-form-field-infix ng-tns-c49-117").xy(0.06, 0.33 )' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-select-28-panel&apos;]/div[1]/mat-form-field/div/div[1]/div[4]").xy(0.06, 0.33 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-form-field-infix ng-tns-c49-117"]&apos;).xy(0.06, 0.33 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div/mat-form-field/div/div/div[4]&apos;).xy(0.06, 0.33 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-select-28-panel&apos;)/div[@class=&apos;ng-tns-c89-116&apos;]/mat-form-field[@class=&apos;mat-form-field w-100 ng-tns-c49-117 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-star-inserted mat-focused&apos;]/div[@class=&apos;mat-form-field-wrapper ng-tns-c49-117&apos;]/div[@class=&apos;mat-form-field-flex ng-tns-c49-117&apos;]/div[@class=&apos;mat-form-field-infix ng-tns-c49-117&apos;]").xy(0.06, 0.33 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="ng-tns-c89-116"] &gt; mat-form-field[class="mat-form-field w-100 ng-tns-c49-117 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-star-inserted mat-focused"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-117"] &gt; div[class="mat-form-field-flex ng-tns-c49-117"] &gt; div[class="mat-form-field-infix ng-tns-c49-117"]&apos;).xy(0.06, 0.33 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.ng-tns-c89-116 &gt; .mat-form-field.w-100.ng-tns-c49-117.mat-primary.mat-form-field-type-mat-input.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float.ng-star-inserted.mat-focused &gt; .mat-form-field-wrapper.ng-tns-c49-117 &gt; .mat-form-field-flex.ng-tns-c49-117 &gt; .mat-form-field-infix.ng-tns-c49-117&apos;).xy(0.06, 0.33 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value='"autn"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='01bbfcdd-c7c9-4af0-9bc2-fd21f4079e6e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Id' value='textbox("mat-input-35")' selected='true' fallback='true'></accessor>
+        <accessor type='XPathId' value='byXPath(&apos;//*[@id="mat-input-35"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='textbox("cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-tns-c49-117")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//input[@id=&apos;mat-input-35&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-input-element mat-form-field-autofill-control ng-tns-c49-117 cdk-text-field-autofill-monitored"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div/mat-form-field/div/div/div[4]/input&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-input-35&apos;)")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class="mat-form-field w-100 ng-tns-c49-117 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-star-inserted mat-focused"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-117"] &gt; div[class="mat-form-field-flex ng-tns-c49-117"] &gt; div[class="mat-form-field-infix ng-tns-c49-117"] &gt; input[class="mat-input-element mat-form-field-autofill-control ng-tns-c49-117 cdk-text-field-autofill-monitored"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-input-35&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ee522a8a-cbf8-48be-8397-660332762209' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("autniki1711[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(custom("mat-option", "mat-option-371")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-371&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("vendor-option")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-option[@id=&apos;mat-option-371&apos;]/span/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" autniki1711 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-option-371&apos;)/span[@class=&apos;mat-option-text&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="ng-tns-c89-116 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; div[class="ng-tns-c89-116"] &gt; mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted"] &gt; span[class="mat-option-text"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-371 &gt; .mat-option-text &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1d0c69ee-3531-4491-b75d-70c164fa5f4d' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='div("cdk-overlay-backdrop cdk-overlay-backdrop-showing cdk-overlay-transparent-backdrop").xy(0.53, 0.46 )' selected='true' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.53, 0.46 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[3]&apos;).xy(0.53, 0.46 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[@class=&apos;cdk-global-scrollblock&apos;]/body[1]/div[@class=&apos;cdk-overlay-container&apos;]/div[@class=&apos;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&apos;]").xy(0.53, 0.46 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-container"] &gt; div[class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.53, 0.46 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.53, 0.46 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='empy clk' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7e4f8807-bcb1-4f4c-84d7-dd6c4dd6e916' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Parent' value='div(2, _in(custom("mat-select", "mat-select-28"))).xy(0.06, 0.66 )' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='div(2, _in(custom("mat-select", {&apos;id&apos;:&apos;mat-select-28&apos;}))).xy(0.06, 0.66 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("mat-select-arrow-wrapper ng-tns-c89-116").xy(0.06, 0.66 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-select[@id=&apos;mat-select-28&apos;]/div/div[2]").xy(0.06, 0.66 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-select-arrow-wrapper ng-tns-c89-116"]&apos;).xy(0.06, 0.66 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/mat-form-field/div/div/div[4]/mat-select/div/div[2]&apos;).xy(0.06, 0.66 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-select-28&apos;)/div[@class=&apos;mat-select-trigger ng-tns-c89-116&apos;]/div[@class=&apos;mat-select-arrow-wrapper ng-tns-c89-116&apos;]").xy(0.06, 0.66 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="mat-form-field-flex ng-tns-c49-115"] &gt; div[class="mat-form-field-infix ng-tns-c49-115"] &gt; mat-select[class="mat-select ng-tns-c89-116 ng-tns-c49-115 mat-select-required mat-select-multiple ng-star-inserted ng-dirty ng-valid ng-touched"] &gt; div[class="mat-select-trigger ng-tns-c89-116"] &gt; div[class="mat-select-arrow-wrapper ng-tns-c89-116"]&apos;).xy(0.06, 0.66 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-select-28 &gt; .mat-select-trigger.ng-tns-c89-116 &gt; .mat-select-arrow-wrapper.ng-tns-c89-116&apos;).xy(0.06, 0.66 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='tab vendor' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ab234473-afd1-4199-bd0e-56c71e387399' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='div("mat-form-field-infix ng-tns-c49-117").xy(0.34, 0.56 )' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-select-28-panel&apos;]/div[1]/mat-form-field/div/div[1]/div[4]").xy(0.34, 0.56 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-form-field-infix ng-tns-c49-117"]&apos;).xy(0.34, 0.56 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div/mat-form-field/div/div/div[4]&apos;).xy(0.34, 0.56 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-select-28-panel&apos;)/div[@class=&apos;ng-tns-c89-116&apos;]/mat-form-field[@class=&apos;mat-form-field w-100 ng-tns-c49-117 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-star-inserted mat-focused&apos;]/div[@class=&apos;mat-form-field-wrapper ng-tns-c49-117&apos;]/div[@class=&apos;mat-form-field-flex ng-tns-c49-117&apos;]/div[@class=&apos;mat-form-field-infix ng-tns-c49-117&apos;]").xy(0.34, 0.56 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="ng-tns-c89-116"] &gt; mat-form-field[class="mat-form-field w-100 ng-tns-c49-117 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-star-inserted mat-focused"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-117"] &gt; div[class="mat-form-field-flex ng-tns-c49-117"] &gt; div[class="mat-form-field-infix ng-tns-c49-117"]&apos;).xy(0.34, 0.56 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.ng-tns-c89-116 &gt; .mat-form-field.w-100.ng-tns-c49-117.mat-primary.mat-form-field-type-mat-input.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float.ng-star-inserted.mat-focused &gt; .mat-form-field-wrapper.ng-tns-c49-117 &gt; .mat-form-field-flex.ng-tns-c49-117 &gt; .mat-form-field-infix.ng-tns-c49-117&apos;).xy(0.34, 0.56 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value='"autn"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='204dae00-8461-426e-8ccf-d440799195d1' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Id' value='textbox("mat-input-35")' selected='true' fallback='true'></accessor>
+        <accessor type='XPathId' value='byXPath(&apos;//*[@id="mat-input-35"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='textbox("cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-tns-c49-117")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//input[@id=&apos;mat-input-35&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-input-element mat-form-field-autofill-control ng-tns-c49-117 cdk-text-field-autofill-monitored"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div/mat-form-field/div/div/div[4]/input&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-input-35&apos;)")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class="mat-form-field w-100 ng-tns-c49-117 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-star-inserted mat-focused"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-117"] &gt; div[class="mat-form-field-flex ng-tns-c49-117"] &gt; div[class="mat-form-field-infix ng-tns-c49-117"] &gt; input[class="mat-input-element mat-form-field-autofill-control ng-tns-c49-117 cdk-text-field-autofill-monitored"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-input-35&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='479a45a6-1bfb-4bfd-be17-9f2014c84381' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("autniki1712[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(custom("mat-option", "mat-option-372")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-372&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("vendor-option")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-option[@id=&apos;mat-option-372&apos;]/span/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" autniki1712 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option[2]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-option-372&apos;)/span[@class=&apos;mat-option-text&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="ng-tns-c89-116 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; div[class="ng-tns-c89-116"] &gt; mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted"] &gt; span[class="mat-option-text"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-372 &gt; .mat-option-text &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='empty clk' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bc714919-4ad9-4c0b-9c38-ee9d3cfd4918' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='div("cdk-overlay-backdrop cdk-overlay-backdrop-showing cdk-overlay-transparent-backdrop").xy(0.55, 0.50 )' selected='true' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.55, 0.50 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[3]&apos;).xy(0.55, 0.50 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[@class=&apos;cdk-global-scrollblock&apos;]/body[1]/div[@class=&apos;cdk-overlay-container&apos;]/div[@class=&apos;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&apos;]").xy(0.55, 0.50 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-container"] &gt; div[class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.55, 0.50 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.55, 0.50 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='46a94c26-ee11-434c-adce-1d384dfbce6e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Id' value='div("mat-select-value-29").xy(0.88, 0.24 )' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='div(1, _in(custom("mat-select", "mat-select-28"))).xy(0.88, 0.24 )' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='div(1, _in(custom("mat-select", {&apos;id&apos;:&apos;mat-select-28&apos;}))).xy(0.88, 0.24 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathId' value='byXPath(&apos;//*[@id="mat-select-value-29"]&apos;).xy(0.88, 0.24 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("mat-select-value ng-tns-c89-116").xy(0.88, 0.24 )' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='div("2 Selected[4]").xy(0.88, 0.24 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-select-value-29&apos;]").xy(0.88, 0.24 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-select-value ng-tns-c89-116"]&apos;).xy(0.88, 0.24 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/mat-form-field/div/div/div[4]/mat-select/div/div&apos;).xy(0.88, 0.24 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-select-value-29&apos;)").xy(0.88, 0.24 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="mat-form-field-flex ng-tns-c49-115"] &gt; div[class="mat-form-field-infix ng-tns-c49-115"] &gt; mat-select[class="mat-select ng-tns-c89-116 ng-tns-c49-115 mat-select-required mat-select-multiple ng-star-inserted ng-dirty ng-valid ng-touched"] &gt; div[class="mat-select-trigger ng-tns-c89-116"] &gt; div[class="mat-select-value ng-tns-c89-116"]&apos;).xy(0.88, 0.24 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-select-value-29&apos;).xy(0.88, 0.24 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value='"vwr"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='369b161a-365f-4620-9526-679416722d02' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Id' value='textbox("mat-input-35")' selected='true' fallback='true'></accessor>
+        <accessor type='XPathId' value='byXPath(&apos;//*[@id="mat-input-35"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='textbox("cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-tns-c49-117")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//input[@id=&apos;mat-input-35&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-input-element mat-form-field-autofill-control ng-tns-c49-117 cdk-text-field-autofill-monitored"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div/mat-form-field/div/div/div[4]/input&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-input-35&apos;)")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class="mat-form-field w-100 ng-tns-c49-117 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-star-inserted mat-focused"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-117"] &gt; div[class="mat-form-field-flex ng-tns-c49-117"] &gt; div[class="mat-form-field-infix ng-tns-c49-117"] &gt; input[class="mat-input-element mat-form-field-autofill-control ng-tns-c49-117 cdk-text-field-autofill-monitored"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-input-35&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ee53f082-8162-482c-beb7-753fb29f2e3d' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("VWR[3]")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(custom("mat-option", "mat-option-695")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-695&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("vendor-option")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-option[@id=&apos;mat-option-695&apos;]/span/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" VWR "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-option-695&apos;)/span[@class=&apos;mat-option-text&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="ng-tns-c89-116 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; div[class="ng-tns-c89-116"] &gt; mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted"] &gt; span[class="mat-option-text"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-695 &gt; .mat-option-text &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='empty clk' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='66b5d72f-747d-4234-8ac3-c07dafefe0f5' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='div("cdk-overlay-backdrop cdk-overlay-transparent-backdrop")' selected='true' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[3]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[@class=&apos;cdk-global-scrollblock&apos;]/body[1]/div[@class=&apos;cdk-overlay-container&apos;]/div[@class=&apos;cdk-overlay-backdrop cdk-overlay-transparent-backdrop&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='div({&apos;style&apos;:&apos;pointer-events: none;&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-container"] &gt; div[class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='37269b63-88b6-4231-a0d1-02c451a8c409' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Select Stockroom")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(div("mat-select-value-31")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(div({&apos;id&apos;:&apos;mat-select-value-31&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("mat-select-min-line mat-select-placeholder ng-star-inserted ng-tns-c89-119")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-select-value-31&apos;]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-select-placeholder mat-select-min-line ng-tns-c89-119 ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Select Stockroom "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/mat-form-field[2]/div/div/div[4]/mat-select/div/div/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-select-value-31&apos;)/span[@class=&apos;mat-select-placeholder mat-select-min-line ng-tns-c89-119 ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="mat-form-field-infix ng-tns-c49-118"] &gt; mat-select[class="mat-select ng-tns-c89-119 ng-tns-c49-118 mat-select-required mat-select-empty mat-select-multiple ng-untouched ng-pristine ng-invalid ng-star-inserted"] &gt; div[class="mat-select-trigger ng-tns-c89-119"] &gt; div[class="mat-select-value ng-tns-c89-119"] &gt; span[class="mat-select-placeholder mat-select-min-line ng-tns-c89-119 ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-select-value-31 &gt; .mat-select-placeholder.mat-select-min-line.ng-tns-c89-119.ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='570250b7-6d58-4839-a709-a16854f0977c' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Ev_Automation_Regular_Stockroom[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(custom("mat-option", "mat-option-336")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-336&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("vendor-option[17]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-option[@id=&apos;mat-option-336&apos;]/span/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Ev_Automation_Regular_Stockroom"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option[18]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-option-336&apos;)/span[@class=&apos;mat-option-text&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-336 &gt; .mat-option-text &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='empty clk' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f3a66de0-b05e-4d85-8fed-065196fdff44' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Parent' value='div(0, _in(div("cdk-step-content-0-0"))).xy(0.70, 0.60 )' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='div(0, _in(div({&apos;id&apos;:&apos;cdk-step-content-0-0&apos;}))).xy(0.70, 0.60 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("row[4]").xy(0.70, 0.60 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-0&apos;]/app-vendor-stockroom-outputtype-section/form/section/div").xy(0.70, 0.60 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div&apos;).xy(0.70, 0.60 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-0&apos;)/app-vendor-stockroom-outputtype-section[@class=&apos;vendor-integration ng-star-inserted&apos;]/form[@class=&apos;ng-dirty ng-touched ng-valid&apos;]/section[@class=&apos;px-1 py-3 pr-3 email_integration-div&apos;]/div[@class=&apos;row&apos;]").xy(0.70, 0.60 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="mat-horizontal-stepper-content ng-trigger ng-trigger-horizontalStepTransition ng-tns-c272-114 ng-star-inserted"] &gt; app-vendor-stockroom-outputtype-section[class="vendor-integration ng-star-inserted"] &gt; form[class="ng-dirty ng-touched ng-valid"] &gt; section[class="px-1 py-3 pr-3 email_integration-div"] &gt; div[class="row"]&apos;).xy(0.70, 0.60 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#cdk-step-content-0-0 &gt; .vendor-integration.ng-star-inserted &gt; .ng-dirty.ng-touched.ng-valid &gt; .px-1.py-3.pr-3.email_integration-div &gt; .row&apos;).xy(0.70, 0.60 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='empty clk' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='35e0bad6-4266-4ae8-98f8-7fe757bad5d9' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Parent' value='div(1, _in(custom("mat-select", "mat-select-32"))).xy(0.78, 0.74 )' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='div(1, _in(custom("mat-select", {&apos;id&apos;:&apos;mat-select-32&apos;}))).xy(0.78, 0.74 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathId' value='byXPath(&apos;//*[@id="mat-select-value-33"]&apos;).xy(0.78, 0.74 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("mat-select-value ng-tns-c89-122").xy(0.78, 0.74 )' selected='false' fallback='true'></accessor>
+        <accessor type='Id' value='div("mat-select-value-33").xy(0.78, 0.74 )' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='div("Select Output Type[4]").xy(0.78, 0.74 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-select-value-33&apos;]").xy(0.78, 0.74 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-select-value ng-tns-c89-122"]&apos;).xy(0.78, 0.74 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/mat-form-field[3]/div/div/div[4]/mat-select/div/div&apos;).xy(0.78, 0.74 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-select-value-33&apos;)").xy(0.78, 0.74 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="mat-form-field-flex ng-tns-c49-121"] &gt; div[class="mat-form-field-infix ng-tns-c49-121"] &gt; mat-select[class="mat-select ng-tns-c89-122 ng-tns-c49-121 mat-select-required mat-select-empty ng-untouched ng-pristine ng-invalid ng-star-inserted"] &gt; div[class="mat-select-trigger ng-tns-c89-122"] &gt; div[class="mat-select-value ng-tns-c89-122"]&apos;).xy(0.78, 0.74 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-select-value-33&apos;).xy(0.78, 0.74 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4029ba40-65ba-48ab-a363-997e9c582a0c' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("EMAIL XML[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(custom("mat-option", "mat-option-313")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-313&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("vendor-option[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-option[@id=&apos;mat-option-313&apos;]/span/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" EMAIL XML "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/mat-option[2]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-option-313&apos;)/span[@class=&apos;mat-option-text&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="mat-select-panel-wrap ng-tns-c89-122 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted"] &gt; div[class="ng-tns-c89-122 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; mat-option[class="mat-option mat-focus-indicator ng-tns-c89-122 ng-star-inserted"] &gt; span[class="mat-option-text"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-313 &gt; .mat-option-text &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='empty clk' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e72fd408-105a-4d82-8ab0-1247c69306a8' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Parent' value='div(0, _in(div("cdk-step-content-0-0"))).xy(0.70, 0.60 )' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='div(0, _in(div({&apos;id&apos;:&apos;cdk-step-content-0-0&apos;}))).xy(0.70, 0.60 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("row[4]").xy(0.70, 0.60 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-0&apos;]/app-vendor-stockroom-outputtype-section/form/section/div").xy(0.70, 0.60 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div&apos;).xy(0.70, 0.60 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-0&apos;)/app-vendor-stockroom-outputtype-section[@class=&apos;vendor-integration ng-star-inserted&apos;]/form[@class=&apos;ng-dirty ng-touched ng-valid&apos;]/section[@class=&apos;px-1 py-3 pr-3 email_integration-div&apos;]/div[@class=&apos;row&apos;]").xy(0.70, 0.60 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="mat-horizontal-stepper-content ng-trigger ng-trigger-horizontalStepTransition ng-tns-c272-114 ng-star-inserted"] &gt; app-vendor-stockroom-outputtype-section[class="vendor-integration ng-star-inserted"] &gt; form[class="ng-dirty ng-touched ng-valid"] &gt; section[class="px-1 py-3 pr-3 email_integration-div"] &gt; div[class="row"]&apos;).xy(0.70, 0.60 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#cdk-step-content-0-0 &gt; .vendor-integration.ng-star-inserted &gt; .ng-dirty.ng-touched.ng-valid &gt; .px-1.py-3.pr-3.email_integration-div &gt; .row&apos;).xy(0.70, 0.60 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='95c79b61-6ebd-42a8-a62a-0f86f800f4f4' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Next")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-0&apos;]/app-vendor-stockroom-outputtype-section/div/button[2]/span[1]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Next"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/div/button[2]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-0&apos;)/app-vendor-stockroom-outputtype-section[@class=&apos;vendor-integration ng-star-inserted&apos;]/div[@class=&apos;integration-actions mt-2&apos;]/button[@class=&apos;mat-focus-indicator py-1 next mat-flat-button mat-raised-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3fbbc6e6-95c9-4c79-9cab-3993bf328d05' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Request Integration[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("mat-checkbox-label[34]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-checkbox[@id=&apos;mat-checkbox-43&apos;]/label/span[2]")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div/mat-checkbox/label/span[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-checkbox-43&apos;)/label[@class=&apos;mat-checkbox-layout&apos;]/span[@class=&apos;mat-checkbox-label&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-checkbox[class="mat-checkbox large mat-accent ng-untouched ng-pristine ng-valid"] &gt; label[class="mat-checkbox-layout"] &gt; span[class="mat-checkbox-label"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-checkbox-43 &gt; .mat-checkbox-layout &gt; .mat-checkbox-label&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='616dcebd-b2f1-4d1e-82d9-972b78441886' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("add")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("add-button material-icons")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[1]/button/span[1]/div/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="material-icons add-button"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div/button/span/div/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-invalid ng-dirty ng-touched&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/div[@class=&apos;row mb-5 ml-2 ng-untouched ng-pristine ng-invalid&apos;]/div[@class=&apos;col-md-12&apos;]/div[@class=&apos;ng-untouched ng-pristine ng-invalid&apos;]/button[@class=&apos;mat-focus-indicator p-0 d-flex align-items-center mat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/div[@class=&apos;d-flex align-items-center model-add-email&apos;]/span[@class=&apos;material-icons add-button&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="ng-untouched ng-pristine ng-invalid"] &gt; button[class="mat-focus-indicator p-0 d-flex align-items-center mat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused"] &gt; span[class="mat-button-wrapper"] &gt; div[class="d-flex align-items-center model-add-email"] &gt; span[class="material-icons add-button"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.ng-untouched.ng-pristine.ng-invalid &gt; .mat-focus-indicator.p-0.d-flex.align-items-center.mat-button.mat-button-base.mat-primary.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper &gt; .d-flex.align-items-center.model-add-email &gt; .material-icons.add-button&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='email tab' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ca711497-8836-4f32-bbdf-6a0aa4ab9b2c' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='div("mat-form-field-infix ng-tns-c49-124").xy(0.03, 0.47 )' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[1]/div[2]/div/mat-form-field/div/div[1]/div[3]").xy(0.03, 0.47 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-form-field-infix ng-tns-c49-124"]&apos;).xy(0.03, 0.47 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div/div[2]/div/mat-form-field/div/div/div[3]&apos;).xy(0.03, 0.47 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-invalid ng-dirty ng-touched&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/div[@class=&apos;row mb-5 ml-2 ng-untouched ng-pristine ng-invalid&apos;]/div[@class=&apos;col-md-12&apos;]/div[@class=&apos;ng-untouched ng-pristine ng-invalid&apos;]/div[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex ng-star-inserted&apos;]/mat-form-field[@class=&apos;mat-form-field w-50 ng-tns-c49-124 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-pristine ng-invalid ng-star-inserted mat-focused&apos;]/div[@class=&apos;mat-form-field-wrapper ng-tns-c49-124&apos;]/div[@class=&apos;mat-form-field-flex ng-tns-c49-124&apos;]/div[@class=&apos;mat-form-field-infix ng-tns-c49-124&apos;]").xy(0.03, 0.47 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="d-flex ng-star-inserted"] &gt; mat-form-field[class="mat-form-field w-50 ng-tns-c49-124 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-pristine ng-invalid ng-star-inserted mat-focused"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-124"] &gt; div[class="mat-form-field-flex ng-tns-c49-124"] &gt; div[class="mat-form-field-infix ng-tns-c49-124"]&apos;).xy(0.03, 0.47 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.d-flex.ng-star-inserted &gt; .mat-form-field.w-50.ng-tns-c49-124.mat-primary.mat-form-field-type-mat-input.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted.mat-focused &gt; .mat-form-field-wrapper.ng-tns-c49-124 &gt; .mat-form-field-flex.ng-tns-c49-124 &gt; .mat-form-field-infix.ng-tns-c49-124&apos;).xy(0.03, 0.47 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value='"nikiautoqa@gmail.com"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2a0a3b8a-553a-418a-9c0e-2d81da064ba7' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Id' value='textbox("mat-input-38")' selected='true' fallback='true'></accessor>
+        <accessor type='XPathId' value='byXPath(&apos;//*[@id="mat-input-38"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='textbox("cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-dirty ng-invalid ng-tns-c49-124 ng-untouched")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//input[@id=&apos;mat-input-38&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-input-element mat-form-field-autofill-control ng-tns-c49-124 ng-untouched ng-invalid cdk-text-field-autofill-monitored ng-dirty"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div/div[2]/div/mat-form-field/div/div/div[3]/input&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-input-38&apos;)")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class="mat-form-field w-50 ng-tns-c49-124 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-invalid ng-star-inserted mat-focused ng-dirty"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-124"] &gt; div[class="mat-form-field-flex ng-tns-c49-124"] &gt; div[class="mat-form-field-infix ng-tns-c49-124"] &gt; input[class="mat-input-element mat-form-field-autofill-control ng-tns-c49-124 ng-untouched ng-invalid cdk-text-field-autofill-monitored ng-dirty"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-input-38&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='62e3b9fe-d259-4075-aa8e-2628398243bf' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='custom("mat-icon", "save")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='custom("mat-icon", "mat-icon mat-primary material-icons mx-2 ng-star-inserted notranslate")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section/div[2]/div/div[1]/div[2]/div/span/span/span/mat-icon")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-icon notranslate mx-2 mat-primary material-icons ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="save"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[2]/div/div/div[2]/div/span/span/span/mat-icon&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-invalid ng-dirty ng-touched&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/div[@class=&apos;row mb-5 ml-2 ng-invalid ng-dirty ng-touched&apos;]/div[@class=&apos;col-md-12&apos;]/div[@class=&apos;ng-dirty ng-valid ng-touched&apos;]/div[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;d-flex ng-star-inserted&apos;]/span[@class=&apos;mx-3 mt-1 d-flex align-items-center&apos;]/span[1]/span[@class=&apos;ng-star-inserted&apos;]/mat-icon[@class=&apos;mat-icon notranslate mx-2 mat-primary material-icons ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='custom("mat-icon", {&apos;color&apos;:&apos;primary&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;span[class="ng-star-inserted"] &gt; mat-icon[class="mat-icon notranslate mx-2 mat-primary material-icons ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .mat-icon.notranslate.mx-2.mat-primary.material-icons.ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='empty clk' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8e3e46bb-082e-4e86-b627-0fce03a6ce3f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Parent' value='section(0, _in(div("cdk-step-content-0-1")))' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='section(0, _in(div({&apos;id&apos;:&apos;cdk-step-content-0-1&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='section("email_integration-div pr-3 px-1 py-2")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="px-1 py-2 pr-3 email_integration-div"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-invalid ng-dirty ng-touched&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="mat-horizontal-content-container ng-tns-c272-114 ng-star-inserted"] &gt; div[class="mat-horizontal-stepper-content ng-trigger ng-trigger-horizontalStepTransition ng-tns-c272-114 ng-star-inserted"] &gt; app-integrations-emails-section[class="ng-star-inserted"] &gt; form[class="mt-2 ng-invalid ng-dirty ng-touched"] &gt; section[class="px-1 py-2 pr-3 email_integration-div"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#cdk-step-content-0-1 &gt; .ng-star-inserted &gt; .mt-2.ng-invalid.ng-dirty.ng-touched &gt; .px-1.py-2.pr-3.email_integration-div&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3aff7903-cf86-4da4-bb02-259ccf3f7098' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Next[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/div/button[3]/span[1]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/div/button[3]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-2 vendor-btns integration-actions mt-2&apos;]/button[@class=&apos;mat-focus-indicator py-1 next ml-sm-2 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='empty cl' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='938af0b4-ff92-44d0-acd6-4938a2d2d13f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Parent' value='div(0, _in(div("cdk-step-content-0-2"))).xy(0.75, 0.43 )' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='div(0, _in(div({&apos;id&apos;:&apos;cdk-step-content-0-2&apos;}))).xy(0.75, 0.43 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("row[5]").xy(0.75, 0.43 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-2&apos;]/app-review-section/section/form/section/div").xy(0.75, 0.43 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[3]/app-review-section/section/form/section/div&apos;).xy(0.75, 0.43 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-2&apos;)/app-review-section[@class=&apos;review-integration ng-star-inserted&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/form[@class=&apos;integration-vendors ng-untouched ng-pristine ng-valid&apos;]/section[@class=&apos;px-2 py-3&apos;]/div[@class=&apos;row&apos;]").xy(0.75, 0.43 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;app-review-section[class="review-integration ng-star-inserted"] &gt; section[class="px-1 py-2 pr-3 email_integration-div"] &gt; form[class="integration-vendors ng-untouched ng-pristine ng-valid"] &gt; section[class="px-2 py-3"] &gt; div[class="row"]&apos;).xy(0.75, 0.43 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.review-integration.ng-star-inserted &gt; .px-1.py-2.pr-3.email_integration-div &gt; .integration-vendors.ng-untouched.ng-pristine.ng-valid &gt; .px-2.py-3 &gt; .row&apos;).xy(0.75, 0.43 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='443cf720-6d3d-4a2f-90b1-ed36b6f31547' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Save[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-2&apos;]/app-review-section/div/button[3]/span[1]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Save"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[3]/app-review-section/div/button[3]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-2&apos;)/app-review-section[@class=&apos;review-integration ng-star-inserted&apos;]/div[@class=&apos;px-2 vendor-btns integration-actions mt-2&apos;]/button[@class=&apos;mat-focus-indicator py-1 next ml-sm-2 px-md-4 px-3 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='takeElementPicture' value='' type='web' desc='3 vendor link' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9bd0fb47-acd5-4ed0-bf33-f25a5048dd79' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='div("3").xy(0.21, 0.38 )' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("ng-star-inserted px-3 w-100[1]").xy(0.21, 0.38 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[5]/td[1]/div&apos;).xy(0.21, 0.38 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[5]/td/div&apos;).xy(0.21, 0.38 )' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[5]//td[1]//div[@class="w-100 px-3 ng-star-inserted"]&apos;).xy(0.21, 0.38 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e19cbbdd-35d2-443a-b907-17080cc26b4c' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='div("3").xy(0.21, 0.38 )' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ab5877b3-637d-4781-b5c7-ddd99ebe5e0e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='link("3")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='link("cursor-pointer")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[5]/td[1]/div/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="cursor-pointer"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" 3 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[5]/td/div/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col customTable&apos;]/avantor-table[@class=&apos;table-container fullWidth ng-tns-c330-93 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c330-93&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c330-93 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c330-93 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-vendorData mat-column-vendorData ng-tns-c330-93 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-left&apos;]/div[@class=&apos;w-100 px-3 ng-star-inserted&apos;]/a[@class=&apos;cursor-pointer&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[5]//td[1]//div//a[@class="cursor-pointer"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[5]//td[1]//div//a[text()=" 3 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;tr[class="mat-row cdk-row ng-tns-c330-93 striped-rows ng-star-inserted"] &gt; td[class="mat-cell cdk-cell cdk-column-vendorData mat-column-vendorData ng-tns-c330-93 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-left"] &gt; div[class="w-100 px-3 ng-star-inserted"] &gt; a[class="cursor-pointer"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c330-93.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-vendorData.mat-column-vendorData.ng-tns-c330-93.ng-star-inserted.mat-table-sticky.mat-table-sticky-border-elem-left &gt; .w-100.px-3.ng-star-inserted &gt; .cursor-pointer&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='200' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ff85c6d0-42be-4175-b79f-aad4afc52e42' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='57e1593f-a039-43fd-9e35-988a0c2e85b8' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Parent' value='custom("app-view-details-model", 0, _in(custom("mat-dialog-container", "mat-dialog-1")))' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='custom("app-view-details-model", 0, _in(custom("mat-dialog-container", {&apos;id&apos;:&apos;mat-dialog-1&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='custom("app-view-details-model", "ng-star-inserted")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-dialog-container[@id=&apos;mat-dialog-1&apos;]/app-view-details-model")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-view-details-model&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-dialog-1&apos;)/app-view-details-model[@class=&apos;ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-container"] &gt; div[class="cdk-global-overlay-wrapper"] &gt; div[class="cdk-overlay-pane integrationView-dialog-container"] &gt; mat-dialog-container[class="mat-dialog-container ng-tns-c31-115 ng-trigger ng-trigger-dialogContainer ng-star-inserted"] &gt; app-view-details-model[class="ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-dialog-1 &gt; .ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='takeElementPicture' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0f9aa141-873a-483a-94b4-15065c88c220' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Parent' value='custom("app-view-details-model", 0, _in(custom("mat-dialog-container", "mat-dialog-1")))' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='custom("app-view-details-model", 0, _in(custom("mat-dialog-container", {&apos;id&apos;:&apos;mat-dialog-1&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='custom("app-view-details-model", "ng-star-inserted")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-dialog-container[@id=&apos;mat-dialog-1&apos;]/app-view-details-model")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-view-details-model&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-dialog-1&apos;)/app-view-details-model[@class=&apos;ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-container"] &gt; div[class="cdk-global-overlay-wrapper"] &gt; div[class="cdk-overlay-pane integrationView-dialog-container"] &gt; mat-dialog-container[class="mat-dialog-container ng-tns-c31-115 ng-trigger ng-trigger-dialogContainer ng-star-inserted"] &gt; app-view-details-model[class="ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-dialog-1 &gt; .ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7f3dcff0-29b2-462a-a89d-7215c1870edf' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Close")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("mat-button-wrapper[38]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-dialog-container[@id=&apos;mat-dialog-1&apos;]/app-view-details-model/mat-dialog-actions/button/span[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Close "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-view-details-model/mat-dialog-actions/button/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-dialog-1&apos;)/app-view-details-model[@class=&apos;ng-star-inserted&apos;]/mat-dialog-actions[@class=&apos;mat-dialog-actions px-1 vendor-btns&apos;]/button[@class=&apos;mat-focus-indicator py-1 cancel mat-button mat-button-base cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-dialog-container[class="mat-dialog-container ng-tns-c31-114 ng-trigger ng-trigger-dialogContainer ng-star-inserted"] &gt; app-view-details-model[class="ng-star-inserted"] &gt; mat-dialog-actions[class="mat-dialog-actions px-1 vendor-btns"] &gt; button[class="mat-focus-indicator py-1 cancel mat-button mat-button-base cdk-focused cdk-mouse-focused"] &gt; span[class="mat-button-wrapper"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-dialog-1 &gt; .ng-star-inserted &gt; .mat-dialog-actions.px-1.vendor-btns &gt; .mat-focus-indicator.py-1.cancel.mat-button.mat-button-base.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='200' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='356f6eae-8882-4c4b-b355-94aaa57499b1' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ad173691-4ff9-4b8a-b9ea-724f40ecd92c' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("All Vendors[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(div("mat-select-value-17")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(div({&apos;id&apos;:&apos;mat-select-value-17&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("mat-select-min-line ng-star-inserted ng-tns-c89-85")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-select-value-17&apos;]/span/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-select-min-line ng-tns-c89-85 ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="All Vendors"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[3]/div/div/div/mat-form-field/div/div/div[4]/mat-select/div/div/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-select-value-17&apos;)/span[@class=&apos;mat-select-value-text ng-tns-c89-85 ng-star-inserted&apos;]/span[@class=&apos;mat-select-min-line ng-tns-c89-85 ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-select[class="mat-select drp-ucd ng-tns-c89-85 ng-tns-c49-84 ng-pristine ng-valid ng-star-inserted ng-touched"] &gt; div[class="mat-select-trigger ng-tns-c89-85"] &gt; div[class="mat-select-value ng-tns-c89-85"] &gt; span[class="mat-select-value-text ng-tns-c89-85 ng-star-inserted"] &gt; span[class="mat-select-min-line ng-tns-c89-85 ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-select-value-17 &gt; .mat-select-value-text.ng-tns-c89-85.ng-star-inserted &gt; .mat-select-min-line.ng-tns-c89-85.ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='81887aa8-fb7c-4763-8359-15ba3488fd0f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='div("mat-form-field-infix ng-tns-c49-86").xy(0.06, 0.53 )' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-select-16-panel&apos;]/div/mat-form-field/div/div[1]/div[4]").xy(0.06, 0.53 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-form-field-infix ng-tns-c49-86"]&apos;).xy(0.06, 0.53 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/div/mat-form-field/div/div/div[4]&apos;).xy(0.06, 0.53 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-select-16-panel&apos;)/div[@class=&apos;ng-tns-c89-85&apos;]/mat-form-field[@class=&apos;mat-form-field w-100 ng-tns-c49-86 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-star-inserted mat-focused&apos;]/div[@class=&apos;mat-form-field-wrapper ng-tns-c49-86&apos;]/div[@class=&apos;mat-form-field-flex ng-tns-c49-86&apos;]/div[@class=&apos;mat-form-field-infix ng-tns-c49-86&apos;]").xy(0.06, 0.53 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="ng-tns-c89-85"] &gt; mat-form-field[class="mat-form-field w-100 ng-tns-c49-86 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-star-inserted mat-focused"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-86"] &gt; div[class="mat-form-field-flex ng-tns-c49-86"] &gt; div[class="mat-form-field-infix ng-tns-c49-86"]&apos;).xy(0.06, 0.53 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.ng-tns-c89-85 &gt; .mat-form-field.w-100.ng-tns-c49-86.mat-primary.mat-form-field-type-mat-input.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float.ng-star-inserted.mat-focused &gt; .mat-form-field-wrapper.ng-tns-c49-86 &gt; .mat-form-field-flex.ng-tns-c49-86 &gt; .mat-form-field-infix.ng-tns-c49-86&apos;).xy(0.06, 0.53 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value='"autniki1711"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0ecbda05-541e-43fa-9fcc-0f9043bb986a' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Id' value='textbox("mat-input-30")' selected='true' fallback='true'></accessor>
+        <accessor type='XPathId' value='byXPath(&apos;//*[@id="mat-input-30"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='textbox("cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-tns-c49-86")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//input[@id=&apos;mat-input-30&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-input-element mat-form-field-autofill-control ng-tns-c49-86 cdk-text-field-autofill-monitored"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/div/mat-form-field/div/div/div[4]/input&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-input-30&apos;)")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class="mat-form-field w-100 ng-tns-c49-86 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-star-inserted mat-focused"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-86"] &gt; div[class="mat-form-field-flex ng-tns-c49-86"] &gt; div[class="mat-form-field-infix ng-tns-c49-86"] &gt; input[class="mat-input-element mat-form-field-autofill-control ng-tns-c49-86 cdk-text-field-autofill-monitored"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-input-30&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9446331c-3975-416a-9c9c-9f3417127e3e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("autniki1711")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(custom("mat-option", "mat-option-206")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-206&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("mat-option-text")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-option[@id=&apos;mat-option-206&apos;]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-option-text"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" autniki1711 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/mat-option/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-option-206&apos;)/span[@class=&apos;mat-option-text&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-pane"] &gt; div[class="mat-select-panel-wrap ng-tns-c89-85 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted"] &gt; div[class="ng-tns-c89-85 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; mat-option[class="mat-option mat-focus-indicator ng-tns-c89-85 ng-star-inserted"] &gt; span[class="mat-option-text"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-206 &gt; .mat-option-text&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='acf34340-3c7b-49b9-85b1-7add735b7e64' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Update Results[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[3]/div/div/div[4]/div/button[2]/span[1]/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Update Results"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[3]/div/div/div[4]/div/button[2]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col&apos;]/div[@class=&apos;d-flex return-stock&apos;]/div[@class=&apos;col-lg-3 col-md-6 col-sm-12 pr-3 px-0 text-left mt-3 mt-md-0 d-flex&apos;]/div[@class=&apos;d-flex align-items-center justify-content-start&apos;]/button[@class=&apos;mat-focus-indicator md-button ml-2 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='200' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a2c5e099-feb6-4cea-80e9-de834972c77d' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='3dot' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1be93b6b-b5a8-418e-82ec-84572aed8f51' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='span("mat-button-wrapper[10]")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[15]/button/span[1]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr/td[15]/button/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col customTable&apos;]/avantor-table[@class=&apos;table-container fullWidth ng-tns-c330-93 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c330-93&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c330-93 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c330-93 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-Widget mat-column-Widget ng-tns-c330-93 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-right&apos;]/button[@class=&apos;mat-focus-indicator mat-menu-trigger mat-icon-button mat-button-base ng-star-inserted cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[15]//button//span[@class="mat-button-wrapper"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;tr[class="mat-row cdk-row ng-tns-c330-93 striped-rows ng-star-inserted"] &gt; td[class="mat-cell cdk-cell cdk-column-Widget mat-column-Widget ng-tns-c330-93 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-right"] &gt; button[class="mat-focus-indicator mat-menu-trigger mat-icon-button mat-button-base ng-star-inserted cdk-focused cdk-mouse-focused"] &gt; span[class="mat-button-wrapper"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c330-93.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-Widget.mat-column-Widget.ng-tns-c330-93.ng-star-inserted.mat-table-sticky.mat-table-sticky-border-elem-right &gt; .mat-focus-indicator.mat-menu-trigger.mat-icon-button.mat-button-base.ng-star-inserted.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ed072392-dc6b-4940-ad1e-3c81b90ef5c5' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='submit("Edit")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(0, _in(div("mat-menu-panel-42")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(0, _in(div({&apos;id&apos;:&apos;mat-menu-panel-42&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='submit("cdk-focused cdk-mouse-focused mat-focus-indicator mat-menu-item ng-tns-c220-117")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-menu-panel-42&apos;]/div/button[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-focus-indicator mat-menu-item ng-tns-c220-117 cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Edit "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-menu-panel-42&apos;)/div[@class=&apos;mat-menu-content ng-tns-c220-117&apos;]/button[@class=&apos;mat-focus-indicator mat-menu-item ng-tns-c220-117 cdk-focused cdk-mouse-focused&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='submit({&apos;role&apos;:&apos;menuitem&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-connected-position-bounding-box"] &gt; div[class="cdk-overlay-pane"] &gt; div[class="mat-menu-panel ng-trigger ng-trigger-transformMenu ng-tns-c220-117 mat-menu-before mat-menu-below mat-shadow vendor-maintenance ng-star-inserted mat-elevation-z4"] &gt; div[class="mat-menu-content ng-tns-c220-117"] &gt; button[class="mat-focus-indicator mat-menu-item ng-tns-c220-117 cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-menu-panel-42 &gt; .mat-menu-content.ng-tns-c220-117 &gt; .mat-focus-indicator.mat-menu-item.ng-tns-c220-117.cdk-focused.cdk-mouse-focused&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='df34dd2d-35cc-4cb1-84e9-770aa14a4aae' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='div("3 Selected[2]").xy(0.64, 0.77 )' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("mat-form-field-infix ng-tns-c49-117").xy(0.64, 0.77 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-0&apos;]/app-vendor-stockroom-outputtype-section/form/section/div/div/mat-form-field[1]/div/div[1]/div[4]").xy(0.64, 0.77 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-form-field-infix ng-tns-c49-117"]&apos;).xy(0.64, 0.77 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/form/section/div/div/mat-form-field/div/div/div[4]&apos;).xy(0.64, 0.77 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-0&apos;)/app-vendor-stockroom-outputtype-section[@class=&apos;vendor-integration ng-star-inserted&apos;]/form[@class=&apos;ng-untouched ng-pristine ng-valid&apos;]/section[@class=&apos;px-1 py-3 pr-3 email_integration-div&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col-md-6 col-lg-6 col-sm-12 col-xs-12&apos;]/mat-form-field[@class=&apos;mat-form-field w-100 ng-tns-c49-117 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-pristine ng-star-inserted ng-valid&apos;]/div[@class=&apos;mat-form-field-wrapper ng-tns-c49-117&apos;]/div[@class=&apos;mat-form-field-flex ng-tns-c49-117&apos;]/div[@class=&apos;mat-form-field-infix ng-tns-c49-117&apos;]").xy(0.64, 0.77 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="col-md-6 col-lg-6 col-sm-12 col-xs-12"] &gt; mat-form-field[class="mat-form-field w-100 ng-tns-c49-117 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-untouched ng-pristine ng-star-inserted ng-valid"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-117"] &gt; div[class="mat-form-field-flex ng-tns-c49-117"] &gt; div[class="mat-form-field-infix ng-tns-c49-117"]&apos;).xy(0.64, 0.77 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.col-md-6.col-lg-6.col-sm-12.col-xs-12 &gt; .mat-form-field.w-100.ng-tns-c49-117.mat-primary.mat-form-field-type-mat-select.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float.ng-untouched.ng-pristine.ng-star-inserted.ng-valid &gt; .mat-form-field-wrapper.ng-tns-c49-117 &gt; .mat-form-field-flex.ng-tns-c49-117 &gt; .mat-form-field-infix.ng-tns-c49-117&apos;).xy(0.64, 0.77 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6de8c892-a361-4151-8730-c9a22c65a4b7' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("VWR[2]")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(custom("mat-option", "mat-option-307")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-307&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("vendor-option vendor-option-selected[2]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-option[@id=&apos;mat-option-307&apos;]/span/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" VWR "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option[3]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-option-307&apos;)/span[@class=&apos;mat-option-text&apos;]/span[@class=&apos;vendor-option vendor-option-selected&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-307 &gt; .mat-option-text &gt; .vendor-option.vendor-option-selected&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='empty click' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='88d81be0-b7ce-4983-a780-86e0ac206700' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='div("cdk-overlay-backdrop cdk-overlay-backdrop-showing cdk-overlay-transparent-backdrop").xy(0.53, 0.54 )' selected='true' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.53, 0.54 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[3]&apos;).xy(0.53, 0.54 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[@class=&apos;cdk-global-scrollblock&apos;]/body[1]/div[@class=&apos;cdk-overlay-container&apos;]/div[@class=&apos;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&apos;]").xy(0.53, 0.54 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-container"] &gt; div[class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.53, 0.54 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.53, 0.54 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='81cb881c-9376-4d6e-b01e-3ebf1e208b9e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='button("Nextarrow_forward")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='button(1, _in(div("cdk-step-content-0-0")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='button(1, _in(div({&apos;id&apos;:&apos;cdk-step-content-0-0&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='button("cdk-focused cdk-mouse-focused mat-button-base mat-flat-button mat-focus-indicator mat-primary mat-raised-button next py-1")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-0&apos;]/app-vendor-stockroom-outputtype-section/div/button[2]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-focus-indicator py-1 next mat-flat-button mat-raised-button mat-button-base mat-primary cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div/app-vendor-stockroom-outputtype-section/div/button[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-0&apos;)/app-vendor-stockroom-outputtype-section[@class=&apos;vendor-integration ng-star-inserted&apos;]/div[@class=&apos;integration-actions mt-2&apos;]/button[@class=&apos;mat-focus-indicator py-1 next mat-flat-button mat-raised-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='button({&apos;type&apos;:&apos;button&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="mat-horizontal-content-container ng-tns-c273-116 ng-star-inserted"] &gt; div[class="mat-horizontal-stepper-content ng-trigger ng-trigger-horizontalStepTransition ng-tns-c273-116 ng-star-inserted"] &gt; app-vendor-stockroom-outputtype-section[class="vendor-integration ng-star-inserted"] &gt; div[class="integration-actions mt-2"] &gt; button[class="mat-focus-indicator py-1 next mat-flat-button mat-raised-button mat-button-base mat-primary cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#cdk-step-content-0-0 &gt; .vendor-integration.ng-star-inserted &gt; .integration-actions.mt-2 &gt; .mat-focus-indicator.py-1.next.mat-flat-button.mat-raised-button.mat-button-base.mat-primary.cdk-focused.cdk-mouse-focused&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='empty click' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d1f569d1-d06b-452d-b309-7914176f4bd2' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Parent' value='section(0, _in(div("cdk-step-content-0-1")))' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='section(0, _in(div({&apos;id&apos;:&apos;cdk-step-content-0-1&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='section("email_integration-div pr-3 px-1 py-2")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/form/section")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="px-1 py-2 pr-3 email_integration-div"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;mt-2 ng-untouched ng-pristine ng-valid&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="mat-horizontal-content-container ng-tns-c273-116 ng-star-inserted"] &gt; div[class="mat-horizontal-stepper-content ng-trigger ng-trigger-horizontalStepTransition ng-tns-c273-116 ng-star-inserted"] &gt; app-integrations-emails-section[class="ng-star-inserted"] &gt; form[class="mt-2 ng-untouched ng-pristine ng-valid"] &gt; section[class="px-1 py-2 pr-3 email_integration-div"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#cdk-step-content-0-1 &gt; .ng-star-inserted &gt; .mt-2.ng-untouched.ng-pristine.ng-valid &gt; .px-1.py-2.pr-3.email_integration-div&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d939e324-e2d3-4b27-965d-00a6f44d3def' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='custom("mat-icon", "arrow_forward[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='custom("mat-icon", "mat-icon mat-icon-no-color material-icons notranslate[10]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-1&apos;]/app-integrations-emails-section/div/button[3]/span[1]/mat-icon")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/div/button[3]/span/mat-icon&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-2 vendor-btns integration-actions mt-2&apos;]/button[@class=&apos;mat-focus-indicator py-1 next ml-sm-2 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/mat-icon[@class=&apos;mat-icon notranslate material-icons mat-icon-no-color&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;app-integrations-emails-section[class="ng-star-inserted"] &gt; div[class="px-2 vendor-btns integration-actions mt-2"] &gt; button[class="mat-focus-indicator py-1 next ml-sm-2 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused"] &gt; span[class="mat-button-wrapper"] &gt; mat-icon[class="mat-icon notranslate material-icons mat-icon-no-color"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .px-2.vendor-btns.integration-actions.mt-2 &gt; .mat-focus-indicator.py-1.next.ml-sm-2.mat-flat-button.mat-button-base.mat-primary.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper &gt; .mat-icon.notranslate.material-icons.mat-icon-no-color&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='empty click' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6ae63dee-ec20-4fe8-a1b6-d0329a467b19' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Parent' value='div(0, _in(div("cdk-step-content-0-2"))).xy(0.88, 0.53 )' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='div(0, _in(div({&apos;id&apos;:&apos;cdk-step-content-0-2&apos;}))).xy(0.88, 0.53 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("row[5]").xy(0.88, 0.53 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-2&apos;]/app-review-section/section/form/section/div").xy(0.88, 0.53 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[3]/app-review-section/section/form/section/div&apos;).xy(0.88, 0.53 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-2&apos;)/app-review-section[@class=&apos;review-integration ng-star-inserted&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/form[@class=&apos;integration-vendors ng-untouched ng-pristine ng-valid&apos;]/section[@class=&apos;px-2 py-3&apos;]/div[@class=&apos;row&apos;]").xy(0.88, 0.53 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;app-review-section[class="review-integration ng-star-inserted"] &gt; section[class="px-1 py-2 pr-3 email_integration-div"] &gt; form[class="integration-vendors ng-untouched ng-pristine ng-valid"] &gt; section[class="px-2 py-3"] &gt; div[class="row"]&apos;).xy(0.88, 0.53 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.review-integration.ng-star-inserted &gt; .px-1.py-2.pr-3.email_integration-div &gt; .integration-vendors.ng-untouched.ng-pristine.ng-valid &gt; .px-2.py-3 &gt; .row&apos;).xy(0.88, 0.53 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='eb35b8e4-a2a7-48da-b481-2864edc7b03b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Save[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-0-2&apos;]/app-review-section/div/button[3]/span[1]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Save"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[3]/app-review-section/div/button[3]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-0-2&apos;)/app-review-section[@class=&apos;review-integration ng-star-inserted&apos;]/div[@class=&apos;px-2 vendor-btns integration-actions mt-2&apos;]/button[@class=&apos;mat-focus-indicator py-1 next ml-sm-2 px-md-4 px-3 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='200' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0b919a82-b8a2-41cb-b958-c60d01663447' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='takeElementPicture' value='' type='web' desc='click 2' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6d9c84e0-cf62-4c93-9230-4ec8b9cdef1c' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='div("2").xy(0.20, 0.61 )' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("ng-star-inserted px-3 w-100[1]").xy(0.20, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[5]/td[1]/div&apos;).xy(0.20, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[5]/td/div&apos;).xy(0.20, 0.61 )' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[5]//td[1]//div[@class="w-100 px-3 ng-star-inserted"]&apos;).xy(0.20, 0.61 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9fc62789-49ce-4e90-bd1c-8712911313d3' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='div("2").xy(0.20, 0.61 )' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3e6a72d3-88ee-4bff-b01e-0bbddc10f7e0' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='link("2")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='link("cursor-pointer")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[5]/td[1]/div/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="cursor-pointer"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" 2 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[5]/td/div/a&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col customTable&apos;]/avantor-table[@class=&apos;table-container fullWidth ng-tns-c330-94 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c330-94&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c330-94 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c330-94 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-vendorData mat-column-vendorData ng-tns-c330-94 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-left&apos;]/div[@class=&apos;w-100 px-3 ng-star-inserted&apos;]/a[@class=&apos;cursor-pointer&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[5]//td[1]//div//a[@class="cursor-pointer"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[5]//td[1]//div//a[text()=" 2 "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;tr[class="mat-row cdk-row ng-tns-c330-94 striped-rows ng-star-inserted"] &gt; td[class="mat-cell cdk-cell cdk-column-vendorData mat-column-vendorData ng-tns-c330-94 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-left"] &gt; div[class="w-100 px-3 ng-star-inserted"] &gt; a[class="cursor-pointer"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c330-94.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-vendorData.mat-column-vendorData.ng-tns-c330-94.ng-star-inserted.mat-table-sticky.mat-table-sticky-border-elem-left &gt; .w-100.px-3.ng-star-inserted &gt; .cursor-pointer&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='empty click' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b3514b43-6018-4eb3-9d9f-710b57924c97' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Parent' value='custom("mat-dialog-container", 0, _in(div("cdk-overlay-10")))' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='custom("mat-dialog-container", 0, _in(div({&apos;id&apos;:&apos;cdk-overlay-10&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='XPathId' value='byXPath(&apos;//*[@id="mat-dialog-3"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='custom("mat-dialog-container", "mat-dialog-container ng-star-inserted ng-tns-c31-154 ng-trigger ng-trigger-dialogContainer")' selected='false' fallback='true'></accessor>
+        <accessor type='Id' value='custom("mat-dialog-container", "mat-dialog-3")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-dialog-container[@id=&apos;mat-dialog-3&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-dialog-container ng-tns-c31-154 ng-trigger ng-trigger-dialogContainer ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-dialog-3&apos;)")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='custom("mat-dialog-container", {&apos;style&apos;:&apos;transform: none;&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-container"] &gt; div[class="cdk-global-overlay-wrapper"] &gt; div[class="cdk-overlay-pane integrationView-dialog-container"] &gt; mat-dialog-container[class="mat-dialog-container ng-tns-c31-154 ng-trigger ng-trigger-dialogContainer ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-dialog-3&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='takeElementPicture' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='59a98eaa-24e7-4565-907d-8d1e5d9d26ac' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Parent' value='custom("mat-dialog-container", 0, _in(div("cdk-overlay-10")))' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='custom("mat-dialog-container", 0, _in(div({&apos;id&apos;:&apos;cdk-overlay-10&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='XPathId' value='byXPath(&apos;//*[@id="mat-dialog-3"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='custom("mat-dialog-container", "mat-dialog-container ng-star-inserted ng-tns-c31-154 ng-trigger ng-trigger-dialogContainer")' selected='false' fallback='true'></accessor>
+        <accessor type='Id' value='custom("mat-dialog-container", "mat-dialog-3")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-dialog-container[@id=&apos;mat-dialog-3&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-dialog-container ng-tns-c31-154 ng-trigger ng-trigger-dialogContainer ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-dialog-3&apos;)")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='custom("mat-dialog-container", {&apos;style&apos;:&apos;transform: none;&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-container"] &gt; div[class="cdk-global-overlay-wrapper"] &gt; div[class="cdk-overlay-pane integrationView-dialog-container"] &gt; mat-dialog-container[class="mat-dialog-container ng-tns-c31-154 ng-trigger ng-trigger-dialogContainer ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-dialog-3&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='77f7dec6-ebb8-420b-bb37-91630b264f9e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Close")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("mat-button-wrapper[38]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-dialog-container[@id=&apos;mat-dialog-3&apos;]/app-view-details-model/mat-dialog-actions/button/span[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Close "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-view-details-model/mat-dialog-actions/button/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-dialog-3&apos;)/app-view-details-model[@class=&apos;ng-star-inserted&apos;]/mat-dialog-actions[@class=&apos;mat-dialog-actions px-1 vendor-btns&apos;]/button[@class=&apos;mat-focus-indicator py-1 cancel mat-button mat-button-base cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-dialog-container[class="mat-dialog-container ng-tns-c31-143 ng-trigger ng-trigger-dialogContainer ng-star-inserted"] &gt; app-view-details-model[class="ng-star-inserted"] &gt; mat-dialog-actions[class="mat-dialog-actions px-1 vendor-btns"] &gt; button[class="mat-focus-indicator py-1 cancel mat-button mat-button-base cdk-focused cdk-mouse-focused"] &gt; span[class="mat-button-wrapper"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-dialog-3 &gt; .ng-star-inserted &gt; .mat-dialog-actions.px-1.vendor-btns &gt; .mat-focus-indicator.py-1.cancel.mat-button.mat-button-base.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f1fc0f95-d3cc-4b43-b9d4-01216d7adc33' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("All Emails[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(div("mat-select-value-21")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(div({&apos;id&apos;:&apos;mat-select-value-21&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("mat-select-min-line ng-star-inserted ng-tns-c89-91")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-select-value-21&apos;]/span/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-select-min-line ng-tns-c89-91 ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="All Emails"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[3]/div/div/div[3]/mat-form-field/div/div/div[4]/mat-select/div/div/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-select-value-21&apos;)/span[@class=&apos;mat-select-value-text ng-tns-c89-91 ng-star-inserted&apos;]/span[@class=&apos;mat-select-min-line ng-tns-c89-91 ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-select[class="mat-select ng-tns-c89-91 ng-tns-c49-90 ng-untouched ng-pristine ng-valid ng-star-inserted"] &gt; div[class="mat-select-trigger ng-tns-c89-91"] &gt; div[class="mat-select-value ng-tns-c89-91"] &gt; span[class="mat-select-value-text ng-tns-c89-91 ng-star-inserted"] &gt; span[class="mat-select-min-line ng-tns-c89-91 ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-select-value-21 &gt; .mat-select-value-text.ng-tns-c89-91.ng-star-inserted &gt; .mat-select-min-line.ng-tns-c89-91.ng-star-inserted&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a537464a-c45f-4bbe-ae8d-afd22b5200f6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='div("mat-form-field-infix ng-tns-c49-92")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-select-20-panel&apos;]/div/mat-form-field/div/div[1]/div[4]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-form-field-infix ng-tns-c49-92"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/div/mat-form-field/div/div/div[4]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-select-20-panel&apos;)/div[@class=&apos;ng-tns-c89-91&apos;]/mat-form-field[@class=&apos;mat-form-field w-100 ng-tns-c49-92 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-star-inserted mat-focused&apos;]/div[@class=&apos;mat-form-field-wrapper ng-tns-c49-92&apos;]/div[@class=&apos;mat-form-field-flex ng-tns-c49-92&apos;]/div[@class=&apos;mat-form-field-infix ng-tns-c49-92&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="ng-tns-c89-91"] &gt; mat-form-field[class="mat-form-field w-100 ng-tns-c49-92 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-star-inserted mat-focused"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-92"] &gt; div[class="mat-form-field-flex ng-tns-c49-92"] &gt; div[class="mat-form-field-infix ng-tns-c49-92"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.ng-tns-c89-91 &gt; .mat-form-field.w-100.ng-tns-c49-92.mat-primary.mat-form-field-type-mat-input.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float.ng-star-inserted.mat-focused &gt; .mat-form-field-wrapper.ng-tns-c49-92 &gt; .mat-form-field-flex.ng-tns-c49-92 &gt; .mat-form-field-infix.ng-tns-c49-92&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value='"niki"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0813bf5f-8c5e-466a-8800-20672866edf7' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Id' value='textbox("mat-input-32")' selected='true' fallback='true'></accessor>
+        <accessor type='XPathId' value='byXPath(&apos;//*[@id="mat-input-32"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='textbox("cdk-text-field-autofill-monitored mat-form-field-autofill-control mat-input-element ng-tns-c49-92")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//input[@id=&apos;mat-input-32&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-input-element mat-form-field-autofill-control ng-tns-c49-92 cdk-text-field-autofill-monitored"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/div/mat-form-field/div/div/div[4]/input&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-input-32&apos;)")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='textbox({&apos;type&apos;:&apos;text&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-form-field[class="mat-form-field w-100 ng-tns-c49-92 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-should-float ng-star-inserted mat-focused"] &gt; div[class="mat-form-field-wrapper ng-tns-c49-92"] &gt; div[class="mat-form-field-flex ng-tns-c49-92"] &gt; div[class="mat-form-field-infix ng-tns-c49-92"] &gt; input[class="mat-input-element mat-form-field-autofill-control ng-tns-c49-92 cdk-text-field-autofill-monitored"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-input-32&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9a6b875c-9dce-4363-94e2-5ca741983305' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("nikiautoqa@gmail.com")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(custom("mat-option", "mat-option-310")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-310&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("mat-option-text")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-option[@id=&apos;mat-option-310&apos;]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-option-text"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/mat-option/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-option-310&apos;)/span[@class=&apos;mat-option-text&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-pane"] &gt; div[class="mat-select-panel-wrap ng-tns-c89-91 ng-trigger ng-trigger-transformPanelWrap ng-star-inserted"] &gt; div[class="ng-tns-c89-91 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; mat-option[class="mat-option mat-focus-indicator ng-tns-c89-91 ng-star-inserted"] &gt; span[class="mat-option-text"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-310 &gt; .mat-option-text&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e790def0-f6b4-4f7a-a79c-a984e37fe40a' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Update Results[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[3]/div/div/div[4]/div/button[2]/span[1]/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Update Results"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[3]/div/div/div[4]/div/button[2]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col&apos;]/div[@class=&apos;d-flex return-stock&apos;]/div[@class=&apos;col-lg-3 col-md-6 col-sm-12 pr-3 px-0 text-left mt-3 mt-md-0 d-flex&apos;]/div[@class=&apos;d-flex align-items-center justify-content-start&apos;]/button[@class=&apos;mat-focus-indicator md-button ml-2 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='02a3c9c9-af82-4901-9430-df5c7d94e45c' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrAlt' value='image("..").xy(0.50, -0.03 )' selected='true' fallback='true'></accessor>
+        <accessor type='Src' value='image("https://im-stage3.avantorsciences.com/assets/icons/ellipsis-icon.svg").xy(0.50, -0.03 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[15]/button/span[1]/img&apos;).xy(0.50, -0.03 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr/td[15]/button/span/img&apos;).xy(0.50, -0.03 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col customTable&apos;]/avantor-table[@class=&apos;table-container fullWidth ng-tns-c329-93 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c329-93&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c329-93 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c329-93 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-Widget mat-column-Widget ng-tns-c329-93 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-right&apos;]/button[@class=&apos;mat-focus-indicator mat-menu-trigger mat-icon-button mat-button-base ng-star-inserted cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/img[1]").xy(0.50, -0.03 )' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='image({&apos;src&apos;:&apos;/assets/icons/ellipsis-icon.svg&apos;}).xy(0.50, -0.03 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;img[alt=".."]&apos;).xy(0.50, -0.03 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0cdcea54-a2db-4998-82d9-0accfe29a298' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='submit("Delete")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(1, _in(div("mat-menu-panel-105")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(1, _in(div({&apos;id&apos;:&apos;mat-menu-panel-105&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='submit("cdk-focused cdk-mouse-focused mat-focus-indicator mat-menu-item ng-tns-c220-230")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-menu-panel-105&apos;]/div/button[2]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-focus-indicator mat-menu-item ng-tns-c220-230 cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Delete "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/button[2]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-menu-panel-105&apos;)/div[@class=&apos;mat-menu-content ng-tns-c220-230&apos;]/button[@class=&apos;mat-focus-indicator mat-menu-item ng-tns-c220-230 cdk-focused cdk-mouse-focused&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-connected-position-bounding-box"] &gt; div[class="cdk-overlay-pane"] &gt; div[class="mat-menu-panel ng-trigger ng-trigger-transformMenu ng-tns-c220-230 mat-menu-before mat-menu-below mat-shadow vendor-maintenance ng-star-inserted mat-elevation-z4"] &gt; div[class="mat-menu-content ng-tns-c220-230"] &gt; button[class="mat-focus-indicator mat-menu-item ng-tns-c220-230 cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-menu-panel-105 &gt; .mat-menu-content.ng-tns-c220-230 &gt; .mat-focus-indicator.mat-menu-item.ng-tns-c220-230.cdk-focused.cdk-mouse-focused&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a99c66a2-bcd9-43e5-94ce-a39c2dfeaf57' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Yes")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(7, _in(custom("mat-dialog-container", "mat-dialog-6")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(7, _in(custom("mat-dialog-container", {&apos;id&apos;:&apos;mat-dialog-6&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("mat-button-wrapper[18]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-dialog-container[@id=&apos;mat-dialog-6&apos;]/app-delete-integration-model/div[2]/mat-dialog-actions/button[2]/span[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Yes "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-delete-integration-model/div[2]/mat-dialog-actions/button[2]/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-dialog-6&apos;)/app-delete-integration-model[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;actions-container&apos;]/mat-dialog-actions[@class=&apos;mat-dialog-actions px-3 justify-content-between&apos;]/button[@class=&apos;mat-focus-indicator py-2 w-50 delete-font-size mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;app-delete-integration-model[class="ng-star-inserted"] &gt; div[class="actions-container"] &gt; mat-dialog-actions[class="mat-dialog-actions px-3 justify-content-between"] &gt; button[class="mat-focus-indicator py-2 w-50 delete-font-size mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused"] &gt; span[class="mat-button-wrapper"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .actions-container &gt; .mat-dialog-actions.px-3.justify-content-between &gt; .mat-focus-indicator.py-2.w-50.delete-font-size.mat-flat-button.mat-button-base.mat-primary.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+  </testcase>

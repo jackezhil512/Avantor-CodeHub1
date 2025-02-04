@@ -626,7 +626,7 @@ click(fallback(`byXPath('//*[text() = " Expand All "]')`));
   wait(1000);
 setDescription("Click on first check box");
 //click2(fallback(`byXPath("(//span[@class='mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin'])[1]")`));
- click2(fallback(`byXPath("(//span[@class='mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin'])[2]")`));
+ click2(fallback(`byXPath("(//span[@class='mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin'])[1]")`));
 setDescription("Click on Approve");
 click(fallback(`byXPath('//*[text()=" Approve "]')`));
 assertExists(fallback(`div("REQUEST APPROVED").xy(0.31, 0.42 )`));

@@ -404,7 +404,7 @@ wait(10000);
     setValue(fallback(`byXPath('(//span[text()=" Movement Type "])/following::input[2]')`),MovementType);
   }
  
-wait(1000);
+wait(3000);
 assertExists(fallback(`link("${MovementType}")`));
 //assertExists(fallback(`link(MovementType)`));
   

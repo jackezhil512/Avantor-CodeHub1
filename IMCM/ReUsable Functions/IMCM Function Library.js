@@ -495,8 +495,8 @@ function SearchProductinReplenishPage(CatlogNo,QTY){
 
 function ReplenishProduct(CatlogNo,QTY){
   NavigateReplenishStock();
-  wait(2000);
-  SearchProductinReplenishPage(CatlogNo,QTY);
+  wait(1000);
+ SearchProductinReplenishPage(CatlogNo,QTY);
   wait(5000);
   setDescription("Click place your order");
   click(fallback(`span("Order")`));

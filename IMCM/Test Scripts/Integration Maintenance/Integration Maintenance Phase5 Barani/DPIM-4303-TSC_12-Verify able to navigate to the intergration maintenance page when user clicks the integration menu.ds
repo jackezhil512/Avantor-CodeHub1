@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+  <testcase name='' description='script generated from Web Designer' author='qatest1@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../../../../central repo/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='def8aad1-0ada-4987-a1d6-72a90b6b25de' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='filePath' value='"{ds}/../../../../central repo/IMCM/ReUsable Functions/IMCM Function Library.js"' selected='true' fallback='true'></accessor>
+        <accessor type='filePath' value='"{ds}/../../../../central repo/IMCM/Test Data/IMCM_INPUTFILE.csv"' selected='false' fallback='true'></accessor>
+        <accessor type='filePath' value='"{ds}/../../../../central repo/IMCM/Test Data/IMCM Function Library (1).js"' selected='false' fallback='true'></accessor>
+        <accessor type='filePath' value='"{ds}/../../../../Central-Repo/IMCM/ReUsable Functions/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='filePath' value='"{ds}/../Functions and Input data/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='filePath' value='"{ds}/../Functions and Input data/IMCM_INPUTFILE.csv"' selected='false' fallback='true'></accessor>
+        <accessor type='filePath' value='"{ds}/../../test_3/IMCM/ReUsable Functions/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='filePath' value='"{ds}/../../IMCM_test-1/IMCM/ReUsable Functions/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='65aedf4f-559b-412f-a3ba-c218f3766f7e' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='500' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b66792b7-977a-4367-a4d6-e3737d88e65f' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b517f8dd-6b55-4168-addb-4817379b50e6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='submit("Administration expand_more")' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='submit("align-items-center d-flex nav-label ng-tns-c231-7[2]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/avantor-header/header/section[2]/nav/div/div[4]/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/avantor-header/header/section[2]/nav/div/div[4]/button&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='takeElementPicture' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fa92c782-5f92-483b-a5ae-ba3fd434ea99' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='div("Integration Maintenance").xy(0.28, 0.81 )' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='71370a1e-06af-4f3a-a5d9-c163d5c6643f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='div("Integration Maintenance").xy(0.28, 0.81 )' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='37f3e9dd-1501-4001-bbd8-122441c2b289' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='div("Integration Maintenance").xy(0.28, 0.81 )' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("link-2 mega-menu-link ng-star-inserted ng-tns-c231-7[1]").xy(0.28, 0.81 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-tab-body[@id=&apos;mat-tab-content-0-3&apos;]/div/section/div/div[1]/div/div[3]").xy(0.28, 0.81 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Integration Maintenance "]&apos;).xy(0.28, 0.81 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/avantor-header/header/section[3]/mat-tab-group/div/mat-tab-body[4]/div/section/div/div/div/div[3]&apos;).xy(0.28, 0.81 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='takeWindowScreenshot' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='708f8e14-bbbe-4351-800a-4c25c0dece78' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='NavigateToIntegrationMaintenance()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9e8716dd-f57f-48bd-8afe-65a075ae0b09' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+  </testcase>

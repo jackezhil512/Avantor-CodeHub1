@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+  <testcase name='' description='script generated from Web Designer' author='qatest1@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../../../../central repo/IMCM/Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b91ecb4f-1425-4388-8248-5269b9a721b6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='filePath' value='"{ds}/../../../../central repo/IMCM/ReUsable Functions/IMCM Function Library.js"' selected='true' fallback='true'></accessor>
+        <accessor type='filePath' value='"{ds}/../../../../Central-Repo/IMCM/ReUsable Functions/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='filePath' value='"{ds}/../../../../../IMCM_Gopal/IMCM_Function/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='filePath' value='"{ds}/../Functions and Input data/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='filePath' value='"{ds}/../Functions and Input data/IMCM_INPUTFILE.csv"' selected='false' fallback='true'></accessor>
+        <accessor type='filePath' value='"{ds}/../../test_3/IMCM/ReUsable Functions/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='filePath' value='"{ds}/../../IMCM_test-1/IMCM/ReUsable Functions/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$CountryUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2f8faa5f-f328-4a2e-ba1d-ef123ff77f4c' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='NavigateToUsermaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5880e26a-0269-489b-b159-a82e2c239a68' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a10ca490-db1c-4e94-8fea-fe12d9e3853f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Roles")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(div("mat-tab-label-3-0")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(div({&apos;id&apos;:&apos;mat-tab-label-3-0&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("ng-star-inserted[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-tab-label-3-0&apos;]/div/span")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Roles"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-user-maintenance-layout/main/app-avantor-tabs/div/mat-tab-group/mat-tab-header/div[2]/div/div/div/div/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-tab-label-3-0&apos;)/div[@class=&apos;mat-tab-label-content&apos;]/span[@class=&apos;ng-star-inserted&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="mat-tab-list"] &gt; div[class="mat-tab-labels"] &gt; div[class="mat-ripple mat-tab-label mat-focus-indicator ng-star-inserted cdk-focused cdk-mouse-focused"] &gt; div[class="mat-tab-label-content"] &gt; span[class="ng-star-inserted"]&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='clickIfFound' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fd2222f5-e2a5-4fc6-a113-72bb733a5d90' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='custom("mat-icon", "mat-icon mat-icon-no-color material-icons notranslate[2]")' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='custom("mat-icon", "more_horiz")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-user-maintenance-layout/main/app-list-roles/avantor-table/div[2]/table/tbody/tr[1]/td[4]/button/span[1]/mat-icon&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" more_horiz "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-user-maintenance-layout/main/app-list-roles/avantor-table/div[2]/table/tbody/tr/td[4]/button/span/mat-icon&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-user-maintenance-layout[@class=&apos;ng-star-inserted&apos;]/main[@class=&apos;container-fluid px-4&apos;]/app-list-roles[@class=&apos;ng-star-inserted&apos;]/avantor-table[@class=&apos;ng-tns-c329-184 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c329-184&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c329-184 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c329-184 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-systemRole mat-column-systemRole ng-tns-c329-184 ng-star-inserted&apos;]/button[@class=&apos;mat-focus-indicator mat-menu-trigger text-primary mat-button mat-button-base ng-star-inserted cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/mat-icon[@class=&apos;mat-icon notranslate material-icons mat-icon-no-color&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;tr[class="mat-row cdk-row ng-tns-c329-184 striped-rows ng-star-inserted"] &gt; td[class="mat-cell cdk-cell cdk-column-systemRole mat-column-systemRole ng-tns-c329-184 ng-star-inserted"] &gt; button[class="mat-focus-indicator mat-menu-trigger text-primary mat-button mat-button-base ng-star-inserted cdk-focused cdk-mouse-focused"] &gt; span[class="mat-button-wrapper"] &gt; mat-icon[class="mat-icon notranslate material-icons mat-icon-no-color"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.mat-row.cdk-row.ng-tns-c329-184.striped-rows.ng-star-inserted &gt; .mat-cell.cdk-cell.cdk-column-systemRole.mat-column-systemRole.ng-tns-c329-184.ng-star-inserted &gt; .mat-focus-indicator.mat-menu-trigger.text-primary.mat-button.mat-button-base.ng-star-inserted.cdk-focused.cdk-mouse-focused &gt; .mat-button-wrapper &gt; .mat-icon.notranslate.material-icons.mat-icon-no-color&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='clickIfFound' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c0e556b8-35fc-4c18-a08b-cfc16e1f0d05' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='submit("Edit")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(0, _in(div("mat-menu-panel-51")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(0, _in(div({&apos;id&apos;:&apos;mat-menu-panel-51&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='submit("btn_mat cdk-focused cdk-mouse-focused mat-focus-indicator mat-menu-item ng-tns-c220-194")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-menu-panel-51&apos;]/div/button")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-focus-indicator btn_mat mat-menu-item ng-tns-c220-194 cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-menu-panel-51&apos;)/div[@class=&apos;mat-menu-content ng-tns-c220-194&apos;]/button[@class=&apos;mat-focus-indicator btn_mat mat-menu-item ng-tns-c220-194 cdk-focused cdk-mouse-focused&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='submit({&apos;role&apos;:&apos;menuitem&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-connected-position-bounding-box"] &gt; div[class="cdk-overlay-pane"] &gt; div[class="mat-menu-panel ng-trigger ng-trigger-transformMenu ng-tns-c220-194 mat-menu-before mat-menu-below mat-shadow product-maintenance ng-star-inserted mat-elevation-z4"] &gt; div[class="mat-menu-content ng-tns-c220-194"] &gt; button[class="mat-focus-indicator btn_mat mat-menu-item ng-tns-c220-194 cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-menu-panel-51 &gt; .mat-menu-content.ng-tns-c220-194 &gt; .mat-focus-indicator.btn_mat.mat-menu-item.ng-tns-c220-194.cdk-focused.cdk-mouse-focused&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+  </testcase>

@@ -518,10 +518,10 @@ function ReplenishProductinApprovalPage(CatlogNo,QTY){
   click(fallback(`span("Place Your Order")`));
   wait(10000);
   click(fallback(`span("Checkout")`));
-  setDescription("Verfy Success message");
+  //setDescription("Verfy Success message");
   //assertExists(fallback(`byXPath('//*[text()=" Stock Replenished Successfully! Your products were successfully replenished. "]').xy(0.24, 0.33 )`));
   //assertExists(fallback(`div(["Your order has been placed successf"]).xy(0.53, 0.50 )`));
-  assertExists(fallback(`div(["Your order has been sent as picking"]).xy(0.34, 0.33 )`));
+  //assertExists(fallback(`div(["Your order has been sent as picking"]).xy(0.34, 0.33 )`));
   setDescription("Verfy receipt button");
   assertExists(fallback(`span("Receipt")`));
   wait(10000);

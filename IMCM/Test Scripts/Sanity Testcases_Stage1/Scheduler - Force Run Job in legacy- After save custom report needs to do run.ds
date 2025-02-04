@@ -17,7 +17,7 @@
     <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3abc6d24-eb38-474a-999b-48ad8a06a618' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='store' value='eval("&apos;AutomationReport&apos;+ Math.floor(Math.random()*1000)")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ac19c443-ba40-4d0b-b563-ac6add786915' uiType='base'>
+    <step action='store' value='eval("&apos;AutomationReport&apos;+ Math.floor(Math.random()*1000)")' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ac19c443-ba40-4d0b-b563-ac6add786915' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='ReportName' selected='true' fallback='true'></accessor>
       </dialect>
@@ -145,7 +145,7 @@
     <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9fddd47c-07f5-4d13-bbf6-c98194b1743b' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='setValue' value='Set ReportName' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='75c4d508-9656-4633-b361-2764a8288f32' uiType='base'>
+    <step action='setValue' value='ReportName' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='75c4d508-9656-4633-b361-2764a8288f32' uiType='base'>
       <dialect type='sahi'>
         <accessor type='XPath' value='byXPath("//input[@id=&apos;mat-input-54&apos;]")' selected='true' fallback='true'></accessor>
         <accessor type='XPathId' value='byXPath(&apos;//*[@id="mat-input-54"]&apos;)' selected='false' fallback='true'></accessor>

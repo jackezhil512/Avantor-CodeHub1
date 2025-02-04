@@ -218,25 +218,26 @@
     <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b60752c6-c858-400b-b017-b4b27787f85d' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='store' value='getDownloadedFiles()' type='web' desc='getDownloadedFiles()' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='true' indentLevel='0' isVisible='true' parentId='' uid='6b57b0d9-7e28-44ce-9b9b-96407af02728' uiType='base'>
+    <step action='store' value='getDownloadedFiles()' type='web' desc='getDownloadedFiles()' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6b57b0d9-7e28-44ce-9b9b-96407af02728' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='list' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='log' value='list' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c168986b-1e50-4177-a123-27a67bba50aa' uiType='base'>
+    <step action='log' value='list' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c168986b-1e50-4177-a123-27a67bba50aa' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='store' value='list.getJSONObject(0).getString("name")' type='web' desc='list.getJSONObject(0).getString("name")' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9c08b529-3739-4c96-9ffb-80e4a0ae39cb' uiType='base'>
+    <step action='store' value='list.getJSONObject(0).getString("name")' type='web' desc='list.getJSONObject(0).getString("name")' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9c08b529-3739-4c96-9ffb-80e4a0ae39cb' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='fileName' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='log' value='fileName' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1ef06794-deba-45e4-bdbd-117528dd2608' uiType='base'>
+    <step action='log' value='fileName' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1ef06794-deba-45e4-bdbd-117528dd2608' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='assertEqual' value='textPop' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f466f98e-8753-4e6a-b440-89818f465608' uiType='base'>
+    <step action='assertContains' value='VWR' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f466f98e-8753-4e6a-b440-89818f465608' uiType='base'>
       <dialect type='sahi'>
-        <accessor type='unknown' value='fileName' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='textPop' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='fileName' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
   </testcase>

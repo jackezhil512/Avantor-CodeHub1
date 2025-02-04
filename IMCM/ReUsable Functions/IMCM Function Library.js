@@ -515,7 +515,7 @@ function ReplenishProductinApprovalPage(CatlogNo,QTY){
   SearchProductinReplenishPage(CatlogNo,QTY);
   wait(5000);
   setDescription("Click place your order");
-  click(fallback(`span("Place Your Order")`));
+  click(fallback(`span("Order")`));
   wait(10000);
   click(fallback(`span("Checkout")`));
   //setDescription("Verfy Success message");

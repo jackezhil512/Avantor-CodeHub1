@@ -1,111 +1,98 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'Approval - To perform Replenish request and fully approve in Order request approval and then check article activity log.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='null'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"REPOSITORY/IMCM_Harish-Master/IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"REPOSITORY/IMCM CentralRepo/IMCM/ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login With Normal user' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ChangeStockroom($POUStockRoom)' type='web' desc='Change To POU stockroom' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='$PouCatlogNo' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='CatlogNo' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='5' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='QTY' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ReplenishProductinApprovalPage(CatlogNo,QTY)' type='web' desc='Replenish product in POU stock room' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ValidateArtileActivityLogMovementType(CatlogNo,&quot;Stock Replenished&quot;)' type='web' desc='Validate Stock replenished in Article Activity log ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ValidateStockroomActivityPage(CatlogNo,&quot;Stock Replenished&quot;)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='Validate Stock replenished in StockRoom Activity log ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ChangeStockroom($mastersourcemasterroom)' type='web' desc='Change Stockroom to Master' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='NavigateApproval()' type='web' desc='Navigate to Approval Page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ApproveProductinMastor()' type='web' desc='Approved Product in Approval page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ValidateArtileActivityLogMovementType(CatlogNo,&quot;POU Order Approved&quot;)' type='web' desc='Validate PoU Order Approved in Article Activity log' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ValidateStockroomActivityPage(CatlogNo,&quot;POU Order Approved&quot;)' type='web' desc='Validate PoU Order Approved in StockRoom Activity log' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='Harish@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ce77f7fe-22ba-4120-a0a2-a4049b44589e' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/IMCM_Harish-Master/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/IMCM CentralRepo/IMCM/ReUsable Functions/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login With Normal user' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1d77e758-1841-4a90-a8d5-93e18319276b' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ChangeStockroom($POUStockRoom)' type='web' desc='Change To POU stockroom' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d3d6fe63-ad7a-4838-962a-e9eb6eebd596' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b53ea55e-13e9-4e6c-9695-36d8ee4e62b6' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='$PouCatlogNo' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0d7a1eaf-43f9-48ed-a371-dcddae885373' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='CatlogNo' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value='5' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9f15a6e8-7431-49e1-b306-7964ad368047' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='QTY' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='ReplenishProductinApprovalPage(CatlogNo,QTY)' type='web' desc='Replenish product in POU stock room' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e83d0c92-e7fe-43e8-b6f1-0d7f89b2d7b9' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ValidateArtileActivityLogMovementType(CatlogNo,"Stock Replenished")' type='web' desc='Validate Stock replenished in Article Activity log' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cda414be-a96f-45b8-9d25-2c2b24e7a3c8' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cc5a5da9-efb7-4f86-8b6b-cc907b779892' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ValidateStockroomActivityPage(CatlogNo,"Stock Replenished")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='95ca3f97-045d-4a40-8b03-387e82d08960' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='Validate Stock replenished in StockRoom Activity log' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0dbd8396-d9ba-45f4-b7e2-d74c37f634b3' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ChangeStockroom($mastersourcemasterroom)' type='web' desc='Change Stockroom to Master' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9f41612f-bac2-474c-a068-f3ded8296af0' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4d8c44c3-b089-4bfe-ace6-81a74ace959f' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='NavigateApproval()' type='web' desc='Navigate to Approval Page' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1fa82691-96dd-4361-8362-7551defef2b5' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='96bd48a8-7bb1-476e-8e07-7cbfbf831598' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ApproveProductinMastor()' type='web' desc='Approved Product in Approval page' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='868160a2-d09c-4e1b-bcb1-34fbe999386e' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ValidateArtileActivityLogMovementType(CatlogNo,"POU Order Approved")' type='web' desc='Validate PoU Order Approved in Article Activity log' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a775bef4-721a-4062-81a0-5f63b8ee1f6d' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='024ded5d-e940-4c4a-a391-a63f2e65ce25' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ValidateStockroomActivityPage(CatlogNo,"POU Order Approved")' type='web' desc='Validate PoU Order Approved in StockRoom Activity log' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='75b80ed0-0bc5-4307-bf7c-15e776e73598' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='47c0175d-2e73-4167-b750-41da090c9d80' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ChangeStockroom($POUStockRoom)' type='web' desc='Change To POU stockroom' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f4318d9f-bc52-40bf-8cb3-cf2589a2f85b' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='eaf82b47-fac3-459a-a154-d768ac7a7e57' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='StockFullreceiveORStockFullReject(CatlogNo ,"fullreceive")' type='web' desc='Validate Stock Full receive in Receive Page' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6c561bf4-cdb4-42ce-adcd-ac71868b6797' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8c3a61c2-a496-4480-bf4e-f3da40e62315' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ValidateArtileActivityLogMovementType(CatlogNo,"Stock Received")' type='web' desc='Validate Stock Received in Article Activity log' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='cf6bb390-ba7d-42e1-8a8d-f38c517b1686' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64edf632-475e-48a4-8075-ca10580a50b9' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ValidateStockroomActivityPage(CatlogNo,"Stock Received")' type='web' desc='Validate Stock Received in StockRoom Activity log' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6dfbf555-a159-49ae-9fef-f3df88651fff' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+  </testcase>

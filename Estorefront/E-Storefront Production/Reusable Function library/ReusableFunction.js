@@ -1126,7 +1126,7 @@ assertExists(fallback(`link("${ponumber}")`));
   }else{
     log("PoNumber should not displayed")
   }  
- 
+ assertExists(fallback(`link("${input}")`));
 
 }
 

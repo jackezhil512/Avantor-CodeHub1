@@ -1090,13 +1090,15 @@ assertExists(fallback(`div("standard-header")`));
 
 }
 
-function VerifyOrderNumberAndPONumberInOrderHistorypage(){
+function VerifyOrderNumberAndPONumberInOrderHistorypage(input){
 
 
   click(fallback(`label("d-flex justify-content-between search-facet")`));
-  setValue(fallback(`byXPath('//*[@id="search"]')`), "8612832103");
+  //setValue(fallback(`byXPath('//*[@id="search"]')`), "8612832103");
+  setValue(fallback(`byXPath('//*[@id="search"]')`), input);
   click(fallback(`submit({'type':'submit'})`));
-  assertExists(fallback(`link("8612832103")`));
+  //assertExists(fallback(`link("8612832103")`));
+  assertExists(fallback(`link("${input}")`));
 
   var OrderNumber = getText(fallback(`link("8612832103")`));
   log(OrderNumber);

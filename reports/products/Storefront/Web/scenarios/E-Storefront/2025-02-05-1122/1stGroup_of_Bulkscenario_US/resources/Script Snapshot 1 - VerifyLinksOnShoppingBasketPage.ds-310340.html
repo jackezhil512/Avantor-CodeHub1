@@ -1,0 +1,25 @@
+<html><head>
+<style>
+ #recordTable { font-family: "Open Sans", sans-serif !important; border-collapse: collapse; width: 100%;} #recordTable td, #recordTable th { border: 1px solid #ddd; padding: 8px; color: black}  #recordTable tr:nth-child(even){ background-color: #FAFAFA;}
+ #recordTable tr:hover {background-color: #FAFAFA;}
+ .commented-step { text-decoration: line-through; }
+ .successRow { background-color: #90EE90 !important;}
+ .successRow td { color: black !important; }
+ .failure-row{ background-color: #FFA07A !important;}
+ .failure-row td { color: black !important; }
+ #recordTable th { padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #f2f2f2;}
+ .time{  display: block; padding: 12px; color: black; font-size: 18; font-weight: bold;}
+</style>
+</head><label class="time">Timing Option: domComplete</label>
+<body> <table id="recordTable" style="width: 100%;"><thead>
+ <tr><th>No</th>
+ <th>Action</th>
+ <th>Accessor</th>
+ <th>Value</th>
+ <th>Description</th>
+ <th>Duration(msec)</th>
+ </tr>
+ </thead>
+<tbody><tr class= successRow><td>1</td><td>include</td><td>"{ds}/../../Reusable Function library/ReusableFunction.js"</td><td></td><td></td><td>0</td></tr><tr class= successRow><td>2</td><td>js</td><td></td><td>Login($URL,$UserName,$Password)</td><td></td><td>16</td></tr><tr class= successRow><td>3</td><td>js</td><td></td><td>ClearCart()</td><td></td><td>33</td></tr><tr class= successRow><td>4</td><td>js</td><td></td><td>search($Product)</td><td></td><td>10</td></tr><tr class= successRow><td>5</td><td>click</td><td>span("Request a Quote")</td><td></td><td></td><td>18</td></tr><tr class= successRow><td>6</td><td>assertExists</td><td>div("Request a Quote")</td><td></td><td></td><td>23</td></tr><tr class= successRow><td>7</td><td>click</td><td>span("total")</td><td></td><td></td><td>16</td></tr><tr class= successRow><td>8</td><td>click</td><td>submit("View My Cart")</td><td></td><td></td><td>19</td></tr><tr class= successRow><td>9</td><td>click</td><td>span("Save to Shopping list")</td><td></td><td></td><td>771</td></tr><tr class= successRow><td>10</td><td>assertExists</td><td>heading5("Add to Shopping List")</td><td></td><td></td><td>88</td></tr><tr class= successRow><td>11</td><td>wait</td><td></td><td>1000</td><td></td><td>1000</td></tr><tr class= successRow><td>12</td><td>click</td><td>button("btn-close")</td><td></td><td></td><td>25</td></tr><tr class= successRow><td>13</td><td>click</td><td>span("Share Shopping Cart")</td><td></td><td></td><td>18</td></tr><tr class= successRow><td>14</td><td>click</td><td>submit("Cancel")</td><td></td><td></td><td>104</td></tr><tr class= commented-step  successRow><td>15</td><td>click</td><td>span("cart-view-org-chart-icon")</td><td></td><td></td><td>0</td></tr><tr class= commented-step  successRow><td>16</td><td>click</td><td>heading2("Organization Shopping Cart")</td><td></td><td></td><td>0</td></tr><tr class= commented-step  successRow><td>17</td><td>click</td><td>span("fa fa-lg fa-times mt-2")</td><td></td><td></td><td>0</td></tr><tr class= commented-step  successRow><td>18</td><td>click</td><td>span("import-export-products-label")</td><td></td><td></td><td>0</td></tr><tr class= commented-step  successRow><td>19</td><td>assertExists</td><td>div("cx-import-entries-title modal-title").xy(0.65, 0.65 )</td><td></td><td></td><td>0</td></tr><tr class= commented-step  successRow><td>20</td><td>click</td><td>span("Clear Cart")</td><td></td><td></td><td>0</td></tr><tr class= successRow><td>21</td><td>assertExists</td><td>span("Import Products")</td><td></td><td></td><td>785</td></tr><tr class= successRow><td>22</td><td>click</td><td>span("Import Products")</td><td></td><td></td><td>38</td></tr><tr class= successRow><td>23</td><td>assertExists</td><td>div("Import Products[1]")</td><td></td><td></td><td>30</td></tr><tr class= successRow><td>24</td><td>click</td><td>button("Cancel")</td><td></td><td></td><td>24</td></tr><tr class= successRow><td>25</td><td>assertExists</td><td>span("Export Cart to CSV")</td><td></td><td></td><td>29</td></tr><tr class=  successRow><td></td><td></td><td></td><td></td><td><strong> Main script duration (without includes) </strong></td><td><strong>3047</strong></td></tr>  </tbody>
+ </table> </body>
+ </html>

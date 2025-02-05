@@ -78,7 +78,7 @@
    <accessor type='unknown' value='byXPath(&quot;//button[contains(text(),&apos;Request Return&apos;) and @disabled=&apos;&apos;]&quot;)' fallback='true' selected='true'/>
 </dialect>
 </step>
-<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
    <accessor type='unknown' value='byXPath(&apos;//button[contains(text(),&quot;Request Return&quot;)]&apos;)' fallback='true' selected='true'/>
    <accessor type='unknown' value='' fallback='false' selected='false'/>
@@ -94,9 +94,9 @@
    <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-return[1]/div[1]/h1[1]&quot;)' fallback='true' selected='false'/>
 </dialect>
 </step>
-<step action='store' value='getText(byXPath(&apos;//*[text()=&quot; Request Return &quot;]&apos;))' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>
+<step action='store' value='getText(byXPath(&apos;//*[text()=&quot; Request Return &quot;]&apos;))' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
   <dialect type='sahi'>
-   <accessor type='unknown' value='Returnbutton' fallback='true' selected='true'/>
+   <accessor type='unknown' value='text' fallback='true' selected='true'/>
 </dialect>
 </step>
 <step action='log' value='Returnbutton' type='web' desc='' isThinkTime='false' isCommented='true' isMasked='false' isHidden='false' sequence='0'>

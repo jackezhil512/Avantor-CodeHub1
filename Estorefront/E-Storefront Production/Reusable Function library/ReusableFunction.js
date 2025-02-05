@@ -1304,18 +1304,21 @@ assertExists(fallback(`link("${input}")`));
   }else{
     log("Order Number should not displayed")
   }
-    assertExists(fallback(`div("Completely Shipped[1]")`));
+  assertExists(fallback(`div("Processing")`));
 
-  var OrderStatus = _isVisible(fallback(`div("Completely Shipped[1]")`));
+  var OrderStatus = _isVisible(fallback(`div("Processing")`));
   log(OrderStatus);
-  if (true == OrderStatus){
+  if (OrderStatus == true){
   log("Verify OrderStatus is Processing is displayed");   
   
   }else{
     log("Verify OrderStatus is Processing is not displayed");
   }  
  
+// click(fallback(`link("8612849014")`));
+ assertExists(fallback(`link("${input}")`));
  click(fallback(`link("${input}")`));
+ wait (5000);
  assertExists(fallback(`div("order-details")`)); 
 
 }

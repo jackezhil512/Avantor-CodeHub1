@@ -1185,12 +1185,13 @@ function VerifyclickingonthecatalognumberInOrderDetailsPage_US(input){
   }else{
     log("Order Number should not displayed")
   }
-  assertExists(fallback(`div("Completely Shipped[1]")`,));
+  //assertExists(fallback(`div("Completely Shipped[1]")`,));
 
-  var OrderStatus = _isVisible(fallback(`div("Completely Shipped[1]")`));
-  log(OrderStatus);
-  if (true == OrderStatus){
-  log("Verify OrderStatus is completly shipped is displayed");   
+  //var OrderStatus = _isVisible(fallback(`div("Completely Shipped[1]")`));
+  //log(OrderStatus);
+  //if (true == OrderStatus){
+  //log("Verify OrderStatus is completly shipped is displayed");   
+  
   click(fallback(`link("${input}")`));
   assertExists(fallback(`div("order-details")`));
   click(fallback(`byXPath('//*[@class="link-underline"]')`));

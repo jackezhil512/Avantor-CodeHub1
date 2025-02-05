@@ -1,55 +1,43 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testcase   name= 'Replenish - To perform Replenish Stock and then check save receipt and article activity log.ds' description= '' author= 'null' version= ''>
-<dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='null'/>
-<fallback useFallback='true'/>
-<shadowDOM useShadowDOM='true'/>
-<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' fallback='true' selected='true'/>
-   <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"REPOSITORY/IMCM_Harish-Master/IMCM Function Library.js"' fallback='true' selected='false'/>
-   <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' fallback='true' selected='false'/>
-</dialect>
-</step>
-<step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login with Normal user' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='$CatlogNo' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='CatlogNo' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='store' value='250' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='QTY' fallback='true' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ReplenishProduct(CatlogNo,QTY)' type='web' desc='Replenish product in Replenish Page' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ValidateArtileActivityLogMovementType(CatlogNo,&quot;Stock Replenished&quot;)' type='web' desc='Validate Stock Replenished in Article Activity log ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-<step action='js' value='ValidateStockroomActivityPage(CatlogNo,&quot;Stock Replenished&quot;)' type='web' desc='Validate Stock Replenished in StockRoom Activity log ' isThinkTime='false' isCommented='false' isMasked='false' sequence='0'>
-  <dialect type='sahi'>
-   <accessor type='unknown' value='' fallback='false' selected='true'/>
-</dialect>
-</step>
-</testcase>
+  <testcase name='' description='script generated from Web Designer' author='Harish@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep00' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='63f15b60-07c1-4215-afdf-b4e004260eb9' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/IMCM_Harish-Master/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login with Normal user' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fbbda2d2-71f1-4e8b-97cf-75ef2378c5ee' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0fa82332-8a33-47c0-8208-659465ee94bb' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='$CatlogNo' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fbe11c94-15c1-47f2-b914-a664c7e200ce' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='CatlogNo' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value='250' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6fb53fca-7e53-4577-92e7-fb615b656d01' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='QTY' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='ReplenishProduct(CatlogNo,QTY)' type='web' desc='Replenish product in Replenish Page' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='752e3abc-ee1f-4785-a6ab-d5c1d406c0d1' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ValidateArtileActivityLogMovementType(CatlogNo,"Stock Replenished")' type='web' desc='Validate Stock Replenished in Article Activity log' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='64990fbe-239e-4322-963d-77c8b1613ef7' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2605fafb-f8c0-4520-8f44-9eeae29ce0fb' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='ValidateStockroomActivityPage(CatlogNo,"Stock Replenished")' type='web' desc='Validate Stock Replenished in StockRoom Activity log' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dde3030c-35a4-49ce-8a14-e0fba7161bb0' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+  </testcase>

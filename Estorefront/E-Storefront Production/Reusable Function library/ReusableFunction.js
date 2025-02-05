@@ -1090,7 +1090,7 @@ assertExists(fallback(`div("standard-header")`));
 
 }
 
-function VerifyOrderNumberAndPONumberInOrderHistorypage(input){
+function VerifyOrderNumberAndPONumberInOrderHistorypage(input,ponumber){
 
 
   click(fallback(`label("d-flex justify-content-between search-facet")`));
@@ -1111,16 +1111,17 @@ function VerifyOrderNumberAndPONumberInOrderHistorypage(input){
   }  
  
  click(fallback(`submit("clear-filter")`));
-
- setValue(fallback(`byXPath('//*[@id="search"]')`), "4500564265");
+wait (5000);
+ setValue(fallback(`byXPath('//*[@id="search"]')`), ponumber);
   click(fallback(`submit({'type':'submit'})`));
-  assertExists(fallback(`div("4500564265[1]")`));
+  //assertExists(fallback(`div("4500564265[1]")`));
+assertExists(fallback(`link("${ponumber}")`));
 
-
-  var PoNumber = getText(fallback(`div("4500564265[1]")`));
-  log(PoNumber);
-  if (4500564265 == PoNumber){
- log("Verify PoNumber is displayed");   
+  //var VerifyPoNumber = getText(fallback(`div("4500564265[1]")`));
+  var VerifyPoNumber = getText(fallback(`div("${ponumber}")`));
+  log(VerifyPoNumber);
+  if (ponumber == VerifyPoNumber){
+ log("Verify PoNumber is displayed",ponumber);   
   
   }else{
     log("PoNumber should not displayed")

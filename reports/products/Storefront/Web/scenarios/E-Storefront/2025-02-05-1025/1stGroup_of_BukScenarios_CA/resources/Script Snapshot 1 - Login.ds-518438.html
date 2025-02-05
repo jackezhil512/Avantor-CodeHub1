@@ -1,0 +1,25 @@
+<html><head>
+<style>
+ #recordTable { font-family: "Open Sans", sans-serif !important; border-collapse: collapse; width: 100%;} #recordTable td, #recordTable th { border: 1px solid #ddd; padding: 8px; color: black}  #recordTable tr:nth-child(even){ background-color: #FAFAFA;}
+ #recordTable tr:hover {background-color: #FAFAFA;}
+ .commented-step { text-decoration: line-through; }
+ .successRow { background-color: #90EE90 !important;}
+ .successRow td { color: black !important; }
+ .failure-row{ background-color: #FFA07A !important;}
+ .failure-row td { color: black !important; }
+ #recordTable th { padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #f2f2f2;}
+ .time{  display: block; padding: 12px; color: black; font-size: 18; font-weight: bold;}
+</style>
+</head><label class="time">Timing Option: domComplete</label>
+<body> <table id="recordTable" style="width: 100%;"><thead>
+ <tr><th>No</th>
+ <th>Action</th>
+ <th>Accessor</th>
+ <th>Value</th>
+ <th>Description</th>
+ <th>Duration(msec)</th>
+ </tr>
+ </thead>
+<tbody><tr class= successRow><td>1</td><td>navigateTo</td><td></td><td>$URL</td><td>Navigate To application home page</td><td>623</td></tr><tr class= successRow><td>2</td><td>click</td><td>submit("Accept all cookies")</td><td></td><td>click on accpet all cookies button</td><td>3064</td></tr><tr class= successRow><td>3</td><td>click</td><td>link("/ca/en/login")</td><td></td><td>click on login button</td><td>20</td></tr><tr class= successRow><td>4</td><td>wait</td><td></td><td>5000</td><td></td><td>5000</td></tr><tr class= successRow><td>5</td><td>setValue</td><td>textbox("email")</td><td>$UserName</td><td>set username</td><td>16</td></tr><tr class= successRow><td>6</td><td>setValue</td><td>password("password")</td><td>****</td><td>set password</td><td>13</td></tr><tr class= successRow><td>7</td><td>click</td><td>byXPath(&apos;//*[@id="btn-login"]&apos;)</td><td></td><td>click on login button in login page</td><td>18</td></tr><tr class= successRow><td>8</td><td>assertExists</td><td>image(0, _in(header("cx-header"))).xy(0.64, 0.58 )</td><td></td><td>verify logged user displayed</td><td>2302</td></tr><tr class=  successRow><td></td><td></td><td></td><td></td><td><strong> Main script duration (without includes) </strong></td><td><strong>11056</strong></td></tr>  </tbody>
+ </table> </body>
+ </html>

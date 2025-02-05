@@ -32,7 +32,7 @@
     <step action='js' value='NavigateToIntegrationMaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1fbdf257-9d30-413c-9cae-8eb33f2af837' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='wait' value='500&#10;' type='web' desc='&amp;#10;1st integration' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a0e82631-c6e2-4af0-aa26-be8f342ca2f2' uiType='base'>
+    <step action='wait' value='500&#10;' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a0e82631-c6e2-4af0-aa26-be8f342ca2f2' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
     <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='848e9d67-bd72-4350-9192-768d876988c3' uiType='base'>
@@ -62,6 +62,9 @@
         <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-option-1382&apos;)/span[@class=&apos;mat-option-text&apos;]")' selected='false' fallback='true'></accessor>
         <accessor type='JQuery' value='byJQuery(&apos;#mat-option-1382 &gt; .mat-option-text&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e12791bd-4024-400a-b1e2-a8c46f85b0b1' uiType='base'>
+      <dialect type='sahi'></dialect>
     </step>
     <step action='store' value='_eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3656fcad-30c0-489f-a86e-ec91bba9a02e' uiType='base'>
       <dialect type='sahi'>

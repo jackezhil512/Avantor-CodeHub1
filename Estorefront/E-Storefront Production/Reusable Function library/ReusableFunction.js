@@ -1233,7 +1233,7 @@ function VerifyCancelbuttonInOrderdetaispage(input){
 
   var OrderStatus = _isVisible(fallback(`div("Processing")`));
   log(OrderStatus);
-  if (true == OrderStatus){
+  if (OrderStatus == true){
   log("Verify OrderStatus is Processing is displayed");   
   
   }else{

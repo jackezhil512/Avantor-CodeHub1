@@ -1201,9 +1201,9 @@ function VerifyclickingonthecatalognumberInOrderDetailsPage_US(input){
   setDescription("1(PDP Page close after navigate from orderdetails page)");
   closeWindow();
 
-  }else{
-    log("Verify OrderStatus is completly shipped is not displayed");
-  }  
+ // }else{
+   // log("Verify OrderStatus is completly shipped is not displayed");
+ // }  
  
 
 }

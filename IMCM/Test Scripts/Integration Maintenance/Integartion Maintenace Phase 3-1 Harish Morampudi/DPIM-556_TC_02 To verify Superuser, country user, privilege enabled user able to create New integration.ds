@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8'?>
+  <testcase name='' description='script generated from Web Designer' author='Harish@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../../../Test Data/IMCM_INPUTFILE (1).csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='49fdc190-163f-4b7e-aadd-4f6eade49f23' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='filePath' value='"{ds}/../../../Test Data/IMCM Function Library (1).js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='27d1baa1-78fc-4723-8b5a-fb45dd59aa72' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='379f2993-b4a8-4e0d-83c9-0caee814feaf' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='eval(" Math.floor(Math.random()*1000)")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='19adda79-55e4-44d5-8190-a2161a657495' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='RandomVal' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value='datefunc()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4e394bc1-c9cc-499e-98b1-423cc9398915' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='Date' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='Date' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='aa7c9ece-1b66-4eec-aaa0-e7dd84f64846' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='"Automation" +RandomVal' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c7762ded-7be3-480e-9ada-166c00ca641d' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='VendorName' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='VendorName' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f2081b91-d1cf-463f-a58a-32e9ea8f8f96' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='$ConsumptionStockroom' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e658e08d-7324-45dd-84b5-bf5464e7c8e4' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='StockRoomName' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='StockRoomName' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b469155e-4496-48f1-a8a2-db4b4923e372' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='"Automation"+RandomVal+"@gmail.com"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0994faee-9c6d-4e5f-b9e4-f381ef8e7230' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='Email' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='Navigate to Integration Maintennace Page' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='86f280cf-79e6-4ea2-88bc-36d1eb02041d' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='updateResultWithALL()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9c47cf99-11e9-412a-840e-0ef46b6a5be3' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='809aacd5-c0b1-400e-b7fd-cb4854521fea' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='_eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fb33cbc3-3ee8-405e-b394-806cee566fbd' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TotalRow' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='54e6e84d-af78-4869-ab1a-e7f66b67a208' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='while' value='TotalRow&gt;=1' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1bf4b0ed-0c8d-41ab-bd31-5cb436916ab5' uiType='conditional'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TotalRow&gt;=1' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='TotalRow&gt;1' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='deleteAll()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='80bb0867-3cca-4aaf-9f62-f2840086ae72' uid='5f7954bf-9f85-4e86-beb2-e0c1682b67c0' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='80bb0867-3cca-4aaf-9f62-f2840086ae72' uid='061971f5-6ffd-4aea-9af0-701efc56d8c5' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='_eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='80bb0867-3cca-4aaf-9f62-f2840086ae72' uid='5c9a7a57-7820-4604-84dd-32eaeeb103bc' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TotalRow' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4f6b1430-4b54-4c2d-8ea5-bdc597100576' uiType='end' sibling='80bb0867-3cca-4aaf-9f62-f2840086ae72'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='332c0cd4-bb10-4f06-a119-fb84271100bb' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='createALLIntegrationIfNotExist()' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='11d05c59-edb0-4946-9f93-a8d32beb16b8' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='AddALLintegration()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fbd0b4c5-dca3-4c38-8468-88c361f261e6' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='NavigateToVendorMaintenancePage()' type='web' desc='Vendor Maintenance' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='595b870d-f9d4-4678-94fc-6915493244c8' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dc2ee612-8d5f-4d50-a9a0-72acc8903e48' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='Click Add new vendor' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a0703552-d8ac-4fe9-b246-36de2e4bd239' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath(&apos;//*[text()=" Add New Vendor "]&apos;)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value='VendorName' type='web' desc='Set vender Naame' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1fbd8d09-e97a-4842-bbf8-859339ad5d42' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath(&apos;//*[text() =" Create New Vendor "]/following::input[1]&apos;)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='setValue' value='RandomVal' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0652ee98-df28-4e1d-b765-e3207937ff15' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath(&apos;//*[text() =" Create New Vendor "]/following::input[4]&apos;)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='Click next' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e461765a-6f21-412c-b65a-4f99ded94256' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='custom("mat-icon", "arrow_forward")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='Enter vendor name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a3ead4bd-1d7a-4b4c-bb6a-62aff0149833' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath(&apos;//*[text()="${VendorName }"]&apos;)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c6b741a8-1614-4e72-8e46-f2820e197739' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Automation "]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='cell(0, _in(custom("mat-tab-body", {&apos;id&apos;:&apos;mat-tab-content-1-1&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='cell("fixed-width-column")' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='cell("Automation")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-tab-body[@id=&apos;mat-tab-content-1-1&apos;]/div/app-integrations-tab/form/table[2]/tbody/tr[1]/td[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/section/form/mat-tab-group/div/mat-tab-body[2]/div/app-integrations-tab/form/table[2]/tbody/tr/td&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-tab-content-1-1&apos;)/div[@class=&apos;mat-tab-body-content ng-tns-c102-92 ng-trigger ng-trigger-translateTab&apos;]/app-integrations-tab[@class=&apos;ng-star-inserted&apos;]/form[@class=&apos;ng-touched ng-dirty ng-valid&apos;]/table[@class=&apos;integration-table&apos;]/tbody[1]/tr[@class=&apos;ng-star-inserted&apos;]/td[@class=&apos;fixed-width-column&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[1][@class="fixed-width-column"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='TableXPath' value='byXPath(&apos;//tbody//tr[1]//td[1][text()="Automation "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='cell({&apos;style&apos;:&apos;text-align: center;&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;tr[class="ng-star-inserted"] &gt; td[class="fixed-width-column"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.ng-star-inserted &gt; .fixed-width-column&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='cell(0, _in(custom("mat-tab-body", "mat-tab-content-1-1")))' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='Validate PDF OUTPUT' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ab5fd86d-c7e1-43d8-b6f4-907513c785b5' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath(&apos;//*[text()="PDF OUTPUT"]&apos;)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='Click next' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='934df1c1-d26e-4e62-8b55-e869cc9db421' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='custom("mat-icon", "arrow_forward")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='Validate Vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6b5ea4dd-e69f-473c-9893-0057918b5aa3' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath(&apos;//*[text()="${VendorName }"]&apos;)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='Validate out Put type' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='20f48cd9-f5e6-4d81-a574-7a73ebc61a2b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='cell("PDF OUTPUT")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='Click on Save and Add Vendor' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7680cbe4-c95c-431c-b736-fcdee3dbf5d2' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Save &amp; Add Vendor[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='Validate Success Message' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9d71c6d4-f41b-4f70-9b22-2fab888473c5' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='div("VENDOR CREATED SUCCESSFULLY[9]").xy(0.41, 0.32 )' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='481326cc-8531-4873-8bff-175ab7183e75' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='790a8928-15f9-43bb-a92c-2d345d9805b7' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ccc5968b-9745-4acf-ad6c-7a5e80cde538' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;ADD NEW INTEGRATION&apos;)]/ancestor::button")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1049328c-f830-4bc3-ab49-1089b5a4662f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//div[contains(text(),&apos;Vendor&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='57765e49-23b9-492f-a144-c61053d606d3' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;{VendorName}&apos;) and @class=&apos;vendor-option&apos;]")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;${VendorName}&apos;) and @class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ec92ca61-9b69-4fe3-85f2-f9564a29103d' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setValue' value='"{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a9e45395-8ff4-4651-a213-81592d8df74a' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//h4[contains(text(),&apos;Add New Integration&apos;)]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1fa3eca1-9f98-405d-8f9e-319d7a915ecc' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7c1cdf9c-3c78-46a8-a3ce-5454337318c6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//div[contains(text(),&apos;Stockroom&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0d150c80-1bab-40c9-86ee-2ea542dfbe6a' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath(&apos;//*[text()="${StockRoomName}"]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath(&apos;//*[text()=&apos;{StockRoomName}&apos;]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath(&apos;//*[text()=&apos;${StockRoomName}&apos;]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="Automation Regular Stockroom"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(custom("mat-option", "mat-option-155")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(1, _in(custom("mat-option", {&apos;id&apos;:&apos;mat-option-155&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("vendor-option[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='Text' value='span("Automation Regular Stockroom[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-option[@id=&apos;mat-option-155&apos;]/span/span")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[4]/div/div/div/div[2]/mat-option[2]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-option-155&apos;)/span[@class=&apos;mat-option-text&apos;]/span[@class=&apos;vendor-option&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="ng-tns-c89-179 ng-trigger ng-trigger-transformPanel mat-select-panel mat-primary"] &gt; div[class="ng-tns-c89-179"] &gt; mat-option[class="mat-option mat-focus-indicator mat-option-multiple ng-star-inserted"] &gt; span[class="mat-option-text"] &gt; span[class="vendor-option"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-option-155 &gt; .mat-option-text &gt; .vendor-option&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9ac9d8bf-ac04-4129-8475-e0f02d1626b6' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setValue' value='"{{TAB}}"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d1880b0d-06b9-41ea-aeb5-39f90d81dbb9' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//h4[contains(text(),&apos;Add New Integration&apos;)]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7e642eea-d2f1-4d29-bd5b-b807320770fc' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ae7e1175-53c4-42ce-89cc-587b875f654c' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//div[contains(text(),&apos;Output Type&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1e742e2f-cdec-48cb-8339-9d888e8ef264' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;PDF OUTPUT&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4f89909e-f739-4b58-a8af-f5f173464b97' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='eff66608-7ba9-40d8-a40f-0c316ccc0ca8' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='40995e2a-a661-4370-b183-9eb65c9e1ef1' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;Request Integration&apos;)]/ancestor::label")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='dc1a5d07-ff20-405e-acc5-fe0978e527d1' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='501c231d-e607-407d-8d84-a2289af6f642' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//label[contains(text(),&apos;Primary Email&apos;)]/following::div[contains(text(),&apos;Add email&apos;)])[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='9b43beba-7265-4206-a4d5-b9e362b505a0' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='eval("&apos;Auto&apos;+ Math.floor(Math.random()*10000) + &apos;@gmail.com&apos;")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4cdf2305-81a2-4acf-aa86-3bf15e9fda36' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TempEmail' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='TempEmail' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3dc5777a-a521-4c83-8d17-b192a306dbd3' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setValue' value='TempEmail' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6b235abb-b5d0-42c4-bdc9-b4f3e4984a52' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//label[contains(text(),&apos;Primary Email&apos;)]/following::input)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0cf510f1-ceaf-44bf-b099-e85e2134b8d6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//mat-icon[text()=&apos;save&apos;]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='60cf5cd6-bce6-4eb0-a1f3-23d48b0bf37f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='82e2e2f0-68e5-4f98-a9ff-05279bc962b7' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;Save&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c01f7aec-1da5-43af-83fe-3c1435cccf70' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='getText(byXPath("(//td[contains(@class,&apos;mat-column-vendorData&apos;)])[1]"))' type='web' desc='Get Vendor Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='244ca170-6f04-47aa-8f94-dca4001f1e97' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='VendorNameInFirstRow' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='store' value='getText(byXPath("(//td[contains(@class,&apos;mat-column-stockroomData&apos;)])[1]"))' type='web' desc='Get Stockroom Name' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8383e2f5-5cf6-4fbd-a92f-53994030d2b6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='StockroomNameFirstRow' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertEqual' value='VendorName' type='web' desc='verify updfated and searched vendor results are same or not?' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a1c3414f-b0e4-4f8f-b09a-3b71a1e7e8c0' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='VendorNameInFirstRow' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='VendorName' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertEqual' value='StockRoomName' type='web' desc='verify updfated and searched stockroom results are same or not?' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b3cc3cd8-bfc4-4751-867a-1f133ecee1bc' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='StockroomNameFirstRow' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='StockroomName' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+  </testcase>

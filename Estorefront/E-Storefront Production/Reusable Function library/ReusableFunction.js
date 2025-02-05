@@ -1220,6 +1220,7 @@ function VerifyCancelbuttonInOrderdetaispage(input){
   setValue(fallback(`byXPath('//*[@id="search"]')`), input);
   click(fallback(`submit({'type':'submit'})`));
   //assertExists(fallback(`link("8612849014")`));
+ wait (5000);
   assertExists(fallback(`link("${input}")`));
   var OrderNumber = getText(fallback(`link("${input}")`));
   log(OrderNumber);

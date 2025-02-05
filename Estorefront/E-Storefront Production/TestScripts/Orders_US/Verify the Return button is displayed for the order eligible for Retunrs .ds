@@ -49,7 +49,7 @@
     <step action='js' value='VerifyRetunbuttonInOrderdetaispage_US($OrderNumber_Cancellation)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2f2650e9-d421-4d9d-a2e1-2586891e3f68' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ec2e44c6-b45a-4bce-9fb3-a832fe71ff33' uiType='base'>
+    <step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ec2e44c6-b45a-4bce-9fb3-a832fe71ff33' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Text' value='submit("Request Return")' selected='true' fallback='true'></accessor>
         <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Request Return "]&apos;)' selected='false' fallback='true'></accessor>
@@ -72,28 +72,28 @@
         <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-return[1]/div[1]/h1[1]")' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='store' value='getText(byXPath(&apos;//*[text()=" Request Return "]&apos;))' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f70a309a-f81c-4513-beb7-fb10d195f4fd' uiType='base'>
+    <step action='store' value='getText(byXPath(&apos;//*[text()=" Request Return "]&apos;))' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f70a309a-f81c-4513-beb7-fb10d195f4fd' uiType='base'>
       <dialect type='sahi'>
         <accessor type='unknown' value='Returnbutton' selected='true' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='log' value='Returnbutton' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='07ec8015-c2d7-4b4d-8deb-366694b2b083' uiType='base'>
+    <step action='log' value='Returnbutton' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='07ec8015-c2d7-4b4d-8deb-366694b2b083' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='if' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e4a03615-87f5-4f45-b241-4814c5cd313c' uiType='conditional'>
+    <step action='if' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e4a03615-87f5-4f45-b241-4814c5cd313c' uiType='conditional'>
       <dialect type='sahi'>
         <accessor type='unknown' value='Returnbutton=="Request Return"' selected='true' fallback='true'></accessor>
         <accessor type='unknown' value='Returnbutton=' selected='false' fallback='true'></accessor>
         <accessor type='unknown' value='' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='log' value='"Return button is displayed"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='' uid='9b7d8154-c99c-44f3-80d4-54425e19aaf1' uiType='base'>
+    <step action='log' value='"Return button is displayed"' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='' uid='9b7d8154-c99c-44f3-80d4-54425e19aaf1' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='' uid='f96ddba4-3e23-46fc-8e23-1d2b10d4008c' uiType='base'>
+    <step action='' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='' uid='f96ddba4-3e23-46fc-8e23-1d2b10d4008c' uiType='base'>
       <dialect type='sahi'></dialect>
     </step>
-    <step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c5c624cc-d3a4-4cf4-8286-98ea61c30c09' uiType='end' sibling='e4a03615-87f5-4f45-b241-4814c5cd313c'>
+    <step action='endif' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c5c624cc-d3a4-4cf4-8286-98ea61c30c09' uiType='end' sibling='e4a03615-87f5-4f45-b241-4814c5cd313c'>
       <dialect type='sahi'></dialect>
     </step>
   </testcase>

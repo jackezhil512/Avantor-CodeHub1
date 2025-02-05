@@ -1100,10 +1100,11 @@ function VerifyOrderNumberAndPONumberInOrderHistorypage(input){
   //assertExists(fallback(`link("8612832103")`));
   assertExists(fallback(`link("${input}")`));
 
-  var OrderNumber = getText(fallback(`link("8612832103")`));
+  //var OrderNumber = getText(fallback(`link("8612832103")`));
+  var OrderNumber = getText(fallback(`link("${input}")`));
   log(OrderNumber);
-  if (8612832103 == OrderNumber){
- log("Verify OrderNumber is displayed");   
+  if (input == OrderNumber){
+ log("Verify OrderNumber is displayed",input);   
   
   }else{
     log("Order Number should not displayed")

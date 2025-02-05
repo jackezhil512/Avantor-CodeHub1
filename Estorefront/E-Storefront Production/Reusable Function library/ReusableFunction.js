@@ -1243,6 +1243,7 @@ function VerifyCancelbuttonInOrderdetaispage(input){
  
 // click(fallback(`link("8612849014")`));
  assertExists(fallback(`link("${input}")`));
+ click(fallback(`link("${input}")`));
  assertExists(fallback(`div("order-details")`)); 
 
 }

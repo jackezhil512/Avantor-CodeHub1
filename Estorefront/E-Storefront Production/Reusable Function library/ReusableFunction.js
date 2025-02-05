@@ -1284,6 +1284,45 @@ assertExists(fallback(`link("${input}")`));
  assertExists(fallback(`div("order-details")`)); 
 
 }
+
+function VerifyRetunbuttonInOrderdetaispage_US(input){
+
+
+  click(fallback(`label("d-flex justify-content-between search-facet")`));
+  setValue(fallback(`byXPath('//*[@id="search"]')`), input);
+  click(fallback(`submit({'type':'submit'})`));
+  //assertExists(fallback(`link("8612823727")`));
+assertExists(fallback(`link("${input}")`));
+
+  //var OrderNumber = getText(fallback(`link("8612823727")`));
+  var OrderNumber = getText(fallback(`link("${input}")`));
+  log(OrderNumber);
+  //if (8612823727 == OrderNumber){
+    if (input == OrderNumber){
+ log("Verify OrderNumber is displayed");   
+  
+  }else{
+    log("Order Number should not displayed")
+  }
+  assertExists(fallback(`div("Completely Shipped[1]")`));
+
+  var OrderStatus = _isVisible(fallback(`div("Completely Shipped[1]")`));
+  log(OrderStatus);
+  if (true == OrderStatus){
+  log("Verify OrderStatus is Processing is displayed");   
+  
+  }else{
+    log("Verify OrderStatus is Processing is not displayed");
+  }  
+ 
+ click(fallback(`link("${input}")`));
+ assertExists(fallback(`div("order-details")`)); 
+
+}
+
+
+
+
 function placeorderProd(){
 
  	wait(3000);

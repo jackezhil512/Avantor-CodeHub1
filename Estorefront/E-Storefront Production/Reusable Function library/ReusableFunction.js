@@ -1304,7 +1304,7 @@ assertExists(fallback(`link("${input}")`));
   }else{
     log("Order Number should not displayed")
   }
-  assertExists(fallback(`div("Completely Shipped[1]")`));
+    assertExists(fallback(`div("Completely Shipped[1]")`));
 
   var OrderStatus = _isVisible(fallback(`div("Completely Shipped[1]")`));
   log(OrderStatus);

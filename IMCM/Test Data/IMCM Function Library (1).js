@@ -107,6 +107,12 @@ wait(100);
 
 }
 
+function updateResultWithAutomationVendor() {
+click(fallback(`byXPath("(//div[text()=' Vendor ']/following::mat-select)[1]")`));
+click(fallback(`byXPath("//span[text()=' auto1215 ']/parent::mat-option")`));
+click(fallback(`byXPath("//span[text()='Update Results']/ancestor::button")`));
+}
+
 function NavigateToIntegrationmaintenance(){
 setShadowDOM(true);
 wait(1000);

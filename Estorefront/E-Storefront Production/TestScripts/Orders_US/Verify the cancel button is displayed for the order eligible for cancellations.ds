@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testcase   name= 'Verify the cancel button is displayed for the order eligible for cancellations.ds' description= '' author= 'Muralikrishna.g@avantorsciences.com' version= ''>
+<dpl filename='{ds}/../../TestData/InputSheet_Production_US.csv' exectype='runstepbystep' errorhandling='' type='HashDPL' locale='en_US'/>
+<fallback useFallback='true'/>
+<shadowDOM useShadowDOM='true'/>
+<step action='setFindOnlyVisible' value='false' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='setShadowDOM' value='true' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='"{ds}/../../Reusable Function library/ReusableFunction.js"' fallback='true' selected='true'/>
+   <accessor type='unknown' value='"REPOSITORY/Estorefront/E-Storefront Regression/ReusableFunction.js"' fallback='true' selected='false'/>
+   <accessor type='unknown' value='"{ds}/../../ReusableFunction.js"' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='Login($URL,$UserName,$Password)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='link(&quot;Your Orders&quot;)' fallback='true' selected='true'/>
+   <accessor type='Parent' value='link(15, _in(header(&quot;cx-header&quot;)))' fallback='true' selected='false'/>
+   <accessor type='Parent' value='link(15, _in(header({&apos;id&apos;:&apos;cx-header&apos;})))' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Your Orders &quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/header/cx-page-layout/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[2]/div/div/nav/app-generic-link/a&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&quot;//header[@id=&apos;cx-header&apos;]/cx-page-layout[1]/cx-page-slot[3]/app-login/div/cx-page-slot/app-avtr-navigation/app-avtr-navigation-ui/nav/div[3]/div/nav[2]/div/div/nav[1]/app-generic-link/a&quot;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;id(&apos;cx-header&apos;)/cx-page-layout[@class=&apos;header&apos;]/cx-page-slot[@class=&apos;SiteLogin has-components&apos;]/app-login[1]/div[@class=&apos;loggedIN&apos;]/cx-page-slot[@class=&apos;HeaderLinks has-components&apos;]/app-avtr-navigation[1]/app-avtr-navigation-ui[@class=&apos;accNavComponent flyout&apos;]/nav[1]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[2]/div[@class=&apos;wrapper my-acc-wrapper my-acc-hover-animation&apos;]/div[@class=&apos;childs&apos;]/nav[1]/app-generic-link[1]/a[1]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/orders&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/orders&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='10000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='link(&quot;Last 90 days&quot;)' fallback='true' selected='true'/>
+   <accessor type='AttrHref' value='link(&quot;/ca/en/my-account/orders?query=:date-desc&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div[1]/section[1]/app-order-history-active-facets/div/div/a[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot[2]/app-order-history-facet-list/div/div[2]/div/section/app-order-history-active-facets/div/div/a[2]&apos;)' fallback='true' selected='false'/>
+   <accessor type='Attribute' value='link({&apos;routerlink&apos;:&apos;./&apos;})' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;a[href=&quot;/ca/en/my-account/orders?query=:date-desc&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='link(&quot;active-facet[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='js' value='VerifyCancelbuttonInOrderdetaispage($OrderNumber_Cancellation)' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot; Cancel Lines &quot;]&apos;)' fallback='true' selected='true'/>
+   <accessor type='Text' value='submit(&quot;Cancel Lines&quot;)' fallback='true' selected='false'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[2]/div/div[7]/button[1]&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathClass' value='byXPath(&apos;//*[@class=&quot;btn btn-white w-100&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div[2]/div/div[7]/button&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-order-approval-order-details[1]/div[@class=&apos;container p-0&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;order-summary-container col-md-3 col-sm-12 pl-3&apos;]/div[@class=&apos;border-box font-description&apos;]/div[@class=&apos;d-flex flex-column btn-container&apos;]/button[@class=&apos;btn btn-white w-100&apos;]&quot;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;div[class=&quot;row&quot;] &gt; div[class=&quot;order-summary-container col-md-3 col-sm-12 pl-3&quot;] &gt; div[class=&quot;border-box font-description&quot;] &gt; div[class=&quot;d-flex flex-column btn-container&quot;] &gt; button[class=&quot;btn btn-white w-100&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='JQuery' value='byJQuery(&apos;.row &gt; .order-summary-container.col-md-3.col-sm-12.pl-3 &gt; .border-box.font-description &gt; .d-flex.flex-column.btn-container &gt; .btn.btn-white.w-100&apos;)' fallback='true' selected='false'/>
+   <accessor type='AttrClass' value='submit(&quot;btn btn-white w-100&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+<step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='unknown' value='' fallback='false' selected='true'/>
+</dialect>
+</step>
+<step action='assertExists' value='' type='web' desc='' isThinkTime='false' isCommented='false' isMasked='false' isHidden='false' sequence='0'>
+  <dialect type='sahi'>
+   <accessor type='Text' value='heading1(&quot;Lines Eligible for Cancellation&quot;)' fallback='true' selected='true'/>
+   <accessor type='XPath' value='byXPath(&apos;//app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-cancel-lines/div/h1&apos;)' fallback='true' selected='false'/>
+   <accessor type='XPathText' value='byXPath(&apos;//*[text()=&quot;Lines Eligible for Cancellation&quot;]&apos;)' fallback='true' selected='false'/>
+   <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-cancel-lines/div/h1&apos;)' fallback='true' selected='false'/>
+   <accessor type='RelativeXPath' value='byXPath(&quot;/html[1]/body[1]/app-root[1]/cx-storefront[@class=&apos;AccountPageTemplate stop-navigating&apos;]/main[@class=&apos;mouse-focus&apos;]/cx-page-layout[@class=&apos;AccountPageTemplate&apos;]/cx-page-slot[@class=&apos;BodyContent has-components&apos;]/app-cancel-lines[1]/div[1]/h1[1]&quot;)' fallback='true' selected='false'/>
+</dialect>
+</step>
+</testcase>

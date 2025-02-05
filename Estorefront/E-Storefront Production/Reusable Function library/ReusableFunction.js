@@ -1223,7 +1223,7 @@ function VerifyCancelbuttonInOrderdetaispage(input){
   assertExists(fallback(`link("${input}")`));
   var OrderNumber = getText(fallback(`link("${input}")`));
   log(OrderNumber);
-  if (8612849014 == OrderNumber){
+  if (input == OrderNumber){
  log("Verify OrderNumber is displayed");   
   
   }else{

@@ -1115,7 +1115,7 @@ wait (5000);
  setValue(fallback(`byXPath('//*[@id="search"]')`), ponumber);
   click(fallback(`submit({'type':'submit'})`));
   //assertExists(fallback(`div("4500564265[1]")`));
-assertExists(fallback(`link("${ponumber}")`));
+assertExists(fallback(`div("${ponumber}")`));
 
   //var VerifyPoNumber = getText(fallback(`div("4500564265[1]")`));
   var VerifyPoNumber = getText(fallback(`div("${ponumber}")`));

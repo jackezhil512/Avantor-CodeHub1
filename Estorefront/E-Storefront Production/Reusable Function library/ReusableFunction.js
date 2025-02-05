@@ -1213,15 +1213,15 @@ function VerifyclickingonthecatalognumberInOrderDetailsPage_US(input){
 
 
 
-function VerifyCancelbuttonInOrderdetaispage(){
+function VerifyCancelbuttonInOrderdetaispage(input){
 
 
   click(fallback(`label("d-flex justify-content-between search-facet")`));
-  setValue(fallback(`byXPath('//*[@id="search"]')`), "8612849014");
+  setValue(fallback(`byXPath('//*[@id="search"]')`), input);
   click(fallback(`submit({'type':'submit'})`));
-  assertExists(fallback(`link("8612849014")`));
-
-  var OrderNumber = getText(fallback(`link("8612849014")`));
+  //assertExists(fallback(`link("8612849014")`));
+  assertExists(fallback(`link("${input}")`));
+  var OrderNumber = getText(fallback(`link("${input}")`));
   log(OrderNumber);
   if (8612849014 == OrderNumber){
  log("Verify OrderNumber is displayed");   

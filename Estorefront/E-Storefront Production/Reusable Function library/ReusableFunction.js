@@ -1169,6 +1169,47 @@ function VerifyclickingonthecatalognumberInOrderDetailsPage(input){
 
 }
 
+function VerifyclickingonthecatalognumberInOrderDetailsPage_US(input){
+
+
+  click(fallback(`label("d-flex justify-content-between search-facet")`));
+  setValue(fallback(`byXPath('//*[@id="search"]')`), input);
+  click(fallback(`submit({'type':'submit'})`));
+  assertExists(fallback(`link("${input}")`));
+
+  var OrderNumber = getText(fallback(`link("${input}")`));
+  log(OrderNumber);
+  if (input == OrderNumber){
+ log("Verify OrderNumber is displayed");   
+  
+  }else{
+    log("Order Number should not displayed")
+  }
+  assertExists(fallback(`div("Completely Shipped[1]")`,));
+
+  var OrderStatus = _isVisible(fallback(`div("Completely Shipped[1]")`));
+  log(OrderStatus);
+  if (true == OrderStatus){
+  log("Verify OrderStatus is completly shipped is displayed");   
+  click(fallback(`link("${input}")`));
+  assertExists(fallback(`div("order-details")`));
+  click(fallback(`byXPath('//*[@class="link-underline"]')`));
+  selectWindow("Avantor is setting science in motion for a better world | Avantor");
+  selectWindow("Sulfuric acid ≥96%, CMOS, J.T.Baker®");
+  assertExists(fallback(`byXPath('/html/body/app-root/cx-storefront/cx-page-slot/app-breadcrumb')`));
+  setDescription("1(PDP Page close after navigate from orderdetails page)");
+  closeWindow();
+
+  }else{
+    log("Verify OrderStatus is completly shipped is not displayed");
+  }  
+ 
+
+}
+
+
+
+
 
 
 function VerifyCancelbuttonInOrderdetaispage(){

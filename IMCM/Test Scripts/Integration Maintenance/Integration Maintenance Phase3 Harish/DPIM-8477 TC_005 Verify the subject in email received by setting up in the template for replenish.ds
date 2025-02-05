@@ -895,10 +895,7 @@
         <accessor type='JQuery' value='byJQuery(&apos;input[value=""]&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
-    <step action='selectWindow' value='"Inbox"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='553a61c9-a315-4e23-be85-47bc07b7a9cc' uiType='base'>
-      <dialect type='sahi'></dialect>
-    </step>
-    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a04eae85-3b4d-49d8-b842-4a3850f278ae' uiType='base'>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='3e19a8a5-6b85-41e5-883d-328428df9660' uiType='base'>
       <dialect type='sahi'>
         <accessor type='Parent' value='italic(0, _in(div("refreshbut")))' selected='true' fallback='true'></accessor>
         <accessor type='Parent' value='italic(0, _in(div({&apos;id&apos;:&apos;refreshbut&apos;})))' selected='false' fallback='true'></accessor>
@@ -909,6 +906,23 @@
         <accessor type='RelativeXPath' value='byXPath("id(&apos;refreshbut&apos;)/button[@class=&apos;md&apos;]/i[@class=&apos;material-icons-outlined f36&apos;]")' selected='false' fallback='true'></accessor>
         <accessor type='JQuery' value='byJQuery(&apos;button[class="md"] &gt; i[class="material-icons-outlined f36"]&apos;)' selected='false' fallback='true'></accessor>
         <accessor type='JQuery' value='byJQuery(&apos;#refreshbut &gt; .md &gt; .material-icons-outlined.f36&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='selectWindow' value='"Inbox"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='553a61c9-a315-4e23-be85-47bc07b7a9cc' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='fc6f3013-d447-42f7-88e5-6e511250b507' uid='1fbcc19f-70d9-4ad4-b968-99482573bd21' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='XPathId' value='byXPath(&apos;//*[@id="refresh"]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='AttrClass' value='submit("but f36 md textu")' selected='false' fallback='true'></accessor>
+        <accessor type='Id' value='submit("refresh")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//button[@id=&apos;refresh&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="md but textu f36"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div/div/div/main/div[2]/div/div/div/div[6]/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;refresh&apos;)")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='submit({&apos;onclick&apos;:&apos;if(chkl())r();&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;button[class="md but textu f36"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#refresh&apos;)' selected='false' fallback='true'></accessor>
       </dialect>
     </step>
     <step action='takeElementPicture' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='85d1523b-149f-4357-9d13-a4eb9844cedf' uiType='base'>

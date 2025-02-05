@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8'?>
+  <testcase name='' description='script generated from Web Designer' author='Harish@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../../../Test Data/IMCM_INPUTFILE (1).csv' exectype='runspecificstep1' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='aaba81aa-e6ac-405a-8fb6-ce201547d165' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='filePath' value='"{ds}/../../../Test Data/IMCM Function Library (1).js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/EV1/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='fc99e45f-3c38-4d10-aac6-d152ffeda9f9' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2d2defeb-db4a-4758-8c63-d469c3c7d5ff' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='NavigateToIntegrationmaintenance()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7f1e4710-c125-4065-a9db-5b709cc9022f' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='updateResultWithAutomationVendor()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='51614b58-abff-4e39-abe5-b0bc0d595c15' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='74f1c4ba-c82d-40d3-ab3b-c8398a1e1748' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='_eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='19502b33-a76f-4a5c-9fb7-a451751b20c8' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TotalRow' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='TotalRow' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='83571d88-073c-4dcd-a402-03271ca5e844' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='while' value='TotalRow&gt;=1' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f78c3091-483a-472b-ad05-2656ddeba6c2' uiType='conditional'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TotalRow&gt;=1' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='TotalRow&gt;1' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='deleteAll()' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='f78c3091-483a-472b-ad05-2656ddeba6c2' uid='97b8d163-d66d-4ad0-85ae-364398309d3f' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='f78c3091-483a-472b-ad05-2656ddeba6c2' uid='04ef4be7-7812-4946-b9d5-8bd46626ecee' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='_eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='1' isVisible='true' parentId='f78c3091-483a-472b-ad05-2656ddeba6c2' uid='7c809062-ee86-4cd7-a7e9-52fa9480a473' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TotalRow' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='endWhile' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='7dd43b95-5625-420e-8754-1bae14ccae69' uiType='end' sibling='f78c3091-483a-472b-ad05-2656ddeba6c2'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='f77d7480-7dbb-4251-a080-55b70eea0ea4' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='eval("&apos;Auto&apos;+ Math.floor(Math.random()*10000) + &apos;@gmail.com&apos;")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5ad51aa2-8049-42e8-896c-2534a26a11fb' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TempEmail' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='TempEmail' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b747ab4e-ea75-4f35-819d-01bb68a1e941' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='eval("&apos;Automation&apos;+ Math.floor(Math.random()*10000) + &apos;@gmail.com&apos;")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6feaa9b1-d9fb-4ff0-8a38-1abc9205d488' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TempEmail1' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='TempEmail1' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='590f1cfe-ed50-401c-8b52-51a8f6311c21' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='eval("&apos;Autotech&apos;+ Math.floor(Math.random()*10000) + &apos;@gmail.com&apos;")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6dc600cd-2f75-40b6-830b-ed56b649e4d6' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TempEmail2' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='TempEmail2' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='b06e066f-e8d6-4d1a-995c-80c2d8cce851' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='js' value='AddIntegrationWithVendorAndOutPutTpe("auto1215","Ev_Automation_Regular_Stockroom","TEXT FILE CONFIGURATOR")' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='41cc596a-c8e3-468f-b660-3405b5084b6e' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='selectWindow' value='"Avantor Inventory Manager"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0e67dab9-003a-44e5-a815-8840d546acfa' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='68e6b3fa-90f6-4450-9ddd-c27fe03f50ea' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='click on ecilips menu' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4da40f4d-bddc-42d0-bd4f-c43c42395785' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr/td[15]/button/span/img&apos;).xy(0.56, 0.57 )' selected='true' fallback='true'></accessor>
+        <accessor type='AttrAlt' value='image("..").xy(0.56, 0.57 )' selected='false' fallback='true'></accessor>
+        <accessor type='Src' value='image("https://im-stage3.avantorsciences.com/assets/icons/ellipsis-icon.svg").xy(0.56, 0.57 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath(&apos;//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[4]/div/avantor-table/div[2]/table/tbody/tr[1]/td[15]/button/span[1]/img&apos;).xy(0.56, 0.57 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class=&apos;ng-star-inserted&apos;]/mat-drawer-container[@class=&apos;mat-drawer-container example-container&apos;]/mat-drawer-content[@class=&apos;mat-drawer-content ng-star-inserted&apos;]/div[@class=&apos;example-sidenav-content&apos;]/div[@class=&apos;fixed-header min-vh-100&apos;]/app-layout[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-4&apos;]/app-list[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;row&apos;]/div[@class=&apos;col customTable&apos;]/avantor-table[@class=&apos;table-container fullWidth ng-tns-c330-171 ng-star-inserted&apos;]/div[@class=&apos;avantor-table-container ng-tns-c330-171&apos;]/table[@class=&apos;mat-table cdk-table ng-tns-c330-171 table -table&apos;]/tbody[1]/tr[@class=&apos;mat-row cdk-row ng-tns-c330-171 striped-rows ng-star-inserted&apos;]/td[@class=&apos;mat-cell cdk-cell cdk-column-Widget mat-column-Widget ng-tns-c330-171 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-right&apos;]/button[@class=&apos;mat-focus-indicator mat-menu-trigger mat-icon-button mat-button-base ng-star-inserted cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/img[1]").xy(0.56, 0.57 )' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='image({&apos;src&apos;:&apos;/assets/icons/ellipsis-icon.svg&apos;}).xy(0.56, 0.57 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;img[alt=".."]&apos;).xy(0.56, 0.57 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='selectWindow' value='"Avantor Inventory Manager"' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5dd22dad-8f16-4d43-8b67-dd87b650daad' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='3000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8b63cb71-4bb1-45c4-891e-bf8dfc875ea3' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='e8e2f193-5faa-4fff-9673-22411854b1ae' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='submit("Edit")' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(0, _in(div("mat-menu-panel-60")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='submit(0, _in(div({&apos;id&apos;:&apos;mat-menu-panel-60&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='submit("cdk-focused cdk-mouse-focused mat-focus-indicator mat-menu-item ng-tns-c220-210")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-menu-panel-60&apos;]/div/button[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-focus-indicator mat-menu-item ng-tns-c220-210 cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()=" Edit "]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/div/div/button&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-menu-panel-60&apos;)/div[@class=&apos;mat-menu-content ng-tns-c220-210&apos;]/button[@class=&apos;mat-focus-indicator mat-menu-item ng-tns-c220-210 cdk-focused cdk-mouse-focused&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='Attribute' value='submit({&apos;role&apos;:&apos;menuitem&apos;})' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-connected-position-bounding-box"] &gt; div[class="cdk-overlay-pane"] &gt; div[class="mat-menu-panel ng-trigger ng-trigger-transformMenu ng-tns-c220-210 mat-menu-before mat-menu-below mat-shadow vendor-maintenance ng-star-inserted mat-elevation-z4"] &gt; div[class="mat-menu-content ng-tns-c220-210"] &gt; button[class="mat-focus-indicator mat-menu-item ng-tns-c220-210 cdk-focused cdk-mouse-focused"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-menu-panel-60 &gt; .mat-menu-content.ng-tns-c220-210 &gt; .mat-focus-indicator.mat-menu-item.ng-tns-c220-210.cdk-focused.cdk-mouse-focused&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='6e725fef-a127-43ce-850b-660b207d90b2' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='207f2771-301b-4bef-82e5-814d6c479aff' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//div[contains(text(),&apos;Output Type&apos;)]/span/following::mat-select)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='65d5c2f2-75a2-4cac-82a5-79c5fd1c0024' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;SAP XML REQUISITION&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;PDF OUTPUT&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='Click on empty Space' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='c643d454-a27d-49eb-8e6b-2117ba2aaecc' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='AttrClass' value='div("cdk-overlay-backdrop cdk-overlay-backdrop-showing cdk-overlay-transparent-backdrop").xy(0.51, 0.28 )' selected='true' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[3]&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("/html[@class=&apos;cdk-global-scrollblock&apos;]/body[1]/div[@class=&apos;cdk-overlay-container&apos;]/div[@class=&apos;cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing&apos;]").xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="cdk-overlay-container"] &gt; div[class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"]&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;.cdk-overlay-container &gt; .cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing&apos;).xy(0.51, 0.28 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ae02b4cd-055b-4a2c-bf81-06f50ffc6236' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='db806ba7-5ce6-4211-beaa-9021b38cfa48' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;Next&apos;)]/parent::span")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertNotExists' value='' type='web' desc='Verify Email value is not pre populated' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ee890e00-f2c6-4a30-87da-1c440e84c942' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//mat-icon[@color=&apos;remove-email&apos;]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertExists' value='' type='web' desc='verify Order Integration auto checked and disabled' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8d651be4-a1e3-47cf-96a4-e2fc7eb99c7d' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='JQuery' value='byJQuery(&apos;mat-checkbox[class="mat-checkbox large mat-accent mat-checkbox-checked mat-checkbox-disabled ng-untouched ng-pristine ng-valid"] &gt; label[class="mat-checkbox-layout"] &gt; span[class="mat-checkbox-inner-container"]&apos;)' selected='true' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(custom("mat-checkbox", "mat-checkbox-109")))' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='span(0, _in(custom("mat-checkbox", {&apos;id&apos;:&apos;mat-checkbox-109&apos;})))' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='span("mat-checkbox-inner-container[3]")' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//mat-checkbox[@id=&apos;mat-checkbox-109&apos;]/label/span[1]")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/form/section/div[3]/mat-checkbox/label/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-checkbox-109&apos;)/label[@class=&apos;mat-checkbox-layout&apos;]/span[@class=&apos;mat-checkbox-inner-container&apos;]")' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-checkbox-109 &gt; .mat-checkbox-layout &gt; .mat-checkbox-inner-container&apos;)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='62cb552f-9e9b-4bc2-b931-7ffd8b7f14d4' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a744e0a9-9696-4217-a884-106cd455b209' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;Request Integration&apos;)]/ancestor::label")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a1f9220d-f990-426c-ae3c-89349203bb0c' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='059ef672-8f64-4de5-bfb2-0ec9bd43e48d' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//label[contains(text(),&apos;Primary Email&apos;)]/following::div[contains(text(),&apos;Add email&apos;)])[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='4d847886-383c-4265-a853-c8e328e1f702' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='eval("&apos;Auto&apos;+ Math.floor(Math.random()*10000) + &apos;@gmail.com&apos;")' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d91dfa0a-486a-43cf-a844-e137abc382db' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='TempEmail4' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='TempEmail4' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='8c8d86de-0c10-470e-8e6b-3e819b2f44c3' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='setValue' value='TempEmail' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='45e5614c-be7e-42a1-9ec1-552ec26ecfc4' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("(//label[contains(text(),&apos;Primary Email&apos;)]/following::input)[1]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='be9c29cf-ba9a-4108-8b1b-fb096078181f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//mat-icon[text()=&apos;save&apos;]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='0b05dae0-5df6-4234-83da-d857ecbdac35' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='span("Next[1]")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-1-1&apos;]/app-integrations-emails-section/div/button[3]/span[1]/span")' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[2]/app-integrations-emails-section/div/button[3]/span/span&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-1-1&apos;)/app-integrations-emails-section[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;px-2 vendor-btns integration-actions mt-2&apos;]/button[@class=&apos;mat-focus-indicator py-1 next ml-sm-2 mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused&apos;]/span[@class=&apos;mat-button-wrapper&apos;]/span[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='a821190f-7199-4294-9a9a-87b1a291cfb6' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='verify no email showing' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='ad5506d0-0f0c-4500-8fef-17d98bbe3899' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Text' value='paragraph("-")' selected='true' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;cdk-step-content-1-2&apos;]/app-review-section/section/section/div[2]/div/div[3]/div/p")' selected='false' fallback='true'></accessor>
+        <accessor type='XPathText' value='byXPath(&apos;//*[text()="-"]&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/div[2]/div[2]/div/mat-dialog-container/app-create-update-wizard/mat-dialog-content/div/mat-stepper/div[2]/div[3]/app-review-section/section/section/div[2]/div/div[3]/div/p&apos;)' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;cdk-step-content-1-2&apos;)/app-review-section[@class=&apos;review-integration ng-star-inserted&apos;]/section[@class=&apos;px-1 py-2 pr-3 email_integration-div&apos;]/section[1]/div[@class=&apos;row my-2 ml-2&apos;]/div[@class=&apos;col-md&apos;]/div[@class=&apos;ng-star-inserted&apos;]/div[@class=&apos;ml-1&apos;]/p[1]")' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='bf731426-6fa5-48c4-a968-8d0091601880' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='af013ed1-f0a0-46d5-a8c2-4d8ad4968e48' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;Save&apos;)]/parent::span")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='2000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='176d1c99-416a-44e7-b709-888eea887872' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='click' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='08e7b8ed-c75f-40f6-a0c2-95ff13026202' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='Parent' value='div(1, _in(custom("mat-select", {&apos;id&apos;:&apos;mat-select-20&apos;}))).xy(0.54, 0.97 )' selected='true' fallback='true'></accessor>
+        <accessor type='Text' value='div("All Emails[4]").xy(0.54, 0.97 )' selected='false' fallback='true'></accessor>
+        <accessor type='Parent' value='div(1, _in(custom("mat-select", "mat-select-20"))).xy(0.54, 0.97 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathId' value='byXPath(&apos;//*[@id="mat-select-value-21"]&apos;).xy(0.54, 0.97 )' selected='false' fallback='true'></accessor>
+        <accessor type='AttrClass' value='div("mat-select-value ng-tns-c89-91").xy(0.54, 0.97 )' selected='false' fallback='true'></accessor>
+        <accessor type='Id' value='div("mat-select-value-21").xy(0.54, 0.97 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPath' value='byXPath("//div[@id=&apos;mat-select-value-21&apos;]").xy(0.54, 0.97 )' selected='false' fallback='true'></accessor>
+        <accessor type='XPathClass' value='byXPath(&apos;//*[@class="mat-select-value ng-tns-c89-91"]&apos;).xy(0.54, 0.97 )' selected='false' fallback='true'></accessor>
+        <accessor type='AbsoluteXPath' value='byXPath(&apos;/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-layout/div/app-list/div[3]/div/div/div[3]/mat-form-field/div/div/div[4]/mat-select/div/div&apos;).xy(0.54, 0.97 )' selected='false' fallback='true'></accessor>
+        <accessor type='RelativeXPath' value='byXPath("id(&apos;mat-select-value-21&apos;)").xy(0.54, 0.97 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;div[class="mat-form-field-flex ng-tns-c49-90"] &gt; div[class="mat-form-field-infix ng-tns-c49-90"] &gt; mat-select[class="mat-select ng-tns-c89-91 ng-tns-c49-90 ng-untouched ng-pristine ng-valid ng-star-inserted"] &gt; div[class="mat-select-trigger ng-tns-c89-91"] &gt; div[class="mat-select-value ng-tns-c89-91"]&apos;).xy(0.54, 0.97 )' selected='false' fallback='true'></accessor>
+        <accessor type='JQuery' value='byJQuery(&apos;#mat-select-value-21&apos;).xy(0.54, 0.97 )' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='assertNotExists' value='' type='web' desc='verify existing email not exist in dropdown filter for SAP output type' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5c4f4451-c5ee-45b8-a201-f3f8c6908135' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='span(${TempEmail})' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='span(TempEmail)' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='SelectVendorStockroomAndEmailInInterations(&apos;ALL&apos;,&apos;All Stockrooms&apos;,TempEmail4)' type='web' desc='Verify updated email exist in email dropdown' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='19470066-9139-44f3-86f4-a5562b47c48f' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='SelectVendorStockroomAndEmailInInterations(Vendor,Stockroom,Email)' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='click' value='' type='web' desc='click on update results' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='5ed2fba4-588b-42cd-b767-a27923ac052b' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='byXPath("//span[contains(text(),&apos;Update Results&apos;)]")' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='wait' value='5000' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='660f0715-625b-4ef8-8509-0fe2c6a0d88f' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='store' value='_eval("ds$(&apos;tr.striped-rows&apos;).length")' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='2e5ef2de-55db-4774-9bb3-76607c9c01bc' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='strRows2' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='log' value='strRows2' type='web' desc='' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='841fa776-0aaa-440c-81dd-d0bb4b20b555' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='assertEqual' value='1' type='web' desc='verify no records found for email' isThinkTime='false' isCommented='true' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='d1ace206-2e7d-4b0c-9fcc-a785665f0b90' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='strRows2' selected='true' fallback='true'></accessor>
+      </dialect>
+    </step>
+  </testcase>

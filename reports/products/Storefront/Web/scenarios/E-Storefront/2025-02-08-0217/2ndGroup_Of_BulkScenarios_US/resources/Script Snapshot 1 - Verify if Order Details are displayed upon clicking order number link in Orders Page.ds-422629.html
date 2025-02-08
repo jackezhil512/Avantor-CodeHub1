@@ -1,0 +1,25 @@
+<html><head>
+<style>
+ #recordTable { font-family: "Open Sans", sans-serif !important; border-collapse: collapse; width: 100%;} #recordTable td, #recordTable th { border: 1px solid #ddd; padding: 8px; color: black}  #recordTable tr:nth-child(even){ background-color: #FAFAFA;}
+ #recordTable tr:hover {background-color: #FAFAFA;}
+ .commented-step { text-decoration: line-through; }
+ .successRow { background-color: #90EE90 !important;}
+ .successRow td { color: black !important; }
+ .failure-row{ background-color: #FFA07A !important;}
+ .failure-row td { color: black !important; }
+ #recordTable th { padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #f2f2f2;}
+ .time{  display: block; padding: 12px; color: black; font-size: 18; font-weight: bold;}
+</style>
+</head><label class="time">Timing Option: domComplete</label>
+<body> <table id="recordTable" style="width: 100%;"><thead>
+ <tr><th>No</th>
+ <th>Action</th>
+ <th>Accessor</th>
+ <th>Value</th>
+ <th>Description</th>
+ <th>Duration(msec)</th>
+ </tr>
+ </thead>
+<tbody><tr class= successRow><td>1</td><td>setFindOnlyVisible</td><td></td><td>false</td><td></td><td>0</td></tr><tr class= successRow><td>2</td><td>setShadowDOM</td><td></td><td>true</td><td></td><td>0</td></tr><tr class= successRow><td>3</td><td>include</td><td>"{ds}/../../Reusable Function library/ReusableFunction.js"</td><td></td><td></td><td>0</td></tr><tr class= successRow><td>4</td><td>js</td><td></td><td>Login($URL,$UserName,$Password)</td><td></td><td>23</td></tr><tr class= successRow><td>5</td><td>click</td><td>link("Your Orders")</td><td></td><td></td><td>23</td></tr><tr class= commented-step  successRow><td>6</td><td>click</td><td>byXPath(&apos;//*[text()="Completely Shipped"]&apos;).xy(0.38, 0.59 )</td><td></td><td></td><td>0</td></tr><tr class= successRow><td>7</td><td>wait</td><td></td><td>20000</td><td></td><td>20000</td></tr><tr class= successRow><td>8</td><td>store</td><td>OrderNumber</td><td>getText(link("cx-link"))</td><td></td><td>19</td></tr><tr class= successRow><td>9</td><td>click</td><td>link("cx-link")</td><td></td><td></td><td>24</td></tr><tr class= successRow><td>10</td><td>log</td><td></td><td>OrderNumber</td><td></td><td>24</td></tr><tr class= successRow><td>11</td><td>wait</td><td></td><td>10000</td><td></td><td>10000</td></tr><tr class= failure-row ><td>12</td><td>store</td><td>OrderNumberInOrderDetailspage</td><td>getText(byXPath(&apos;/html/body/app-root/cx-storefront/main/cx-page-layout/cx-page-slot/app-order-approval-order-details/div[2]/div[2]/div/div/div/div[2]/div&apos;))</td><td></td><td>0</td></tr><tr class=><td>13</td><td>if</td><td>OrderNumber == OrderNumberInOrderDetailspage</td><td>OrderNumber == OrderNumberInOrderDetailspage</td><td></td><td>0</td></tr><tr class=><td>14</td><td>log</td><td></td><td>"OrderNumber is matched in orderdetails page"</td><td></td><td>0</td></tr><tr class=><td>15</td><td>else</td><td></td><td></td><td></td><td>0</td></tr><tr class=><td>16</td><td>log</td><td></td><td>"OrderNumber is not matched in orderdetailspage"</td><td></td><td>0</td></tr><tr class=><td>17</td><td>endif</td><td></td><td></td><td></td><td>0</td></tr><tr class=><td>18</td><td>assertExists</td><td>strong("Order Number")</td><td></td><td></td><td>0</td></tr><tr class=><td>19</td><td>assertExists</td><td>heading4("Shipping")</td><td></td><td></td><td>0</td></tr><tr class=><td>20</td><td>assertExists</td><td>heading4("Payment")</td><td></td><td></td><td>0</td></tr><tr class=><td>21</td><td>assertExists</td><td>strong("Web Tracking Number")</td><td></td><td></td><td>0</td></tr><tr class=><td>22</td><td>assertExists</td><td>strong("Order Method")</td><td></td><td></td><td>0</td></tr><tr class=><td>23</td><td>assertExists</td><td>strong("Order Total")</td><td></td><td></td><td>0</td></tr><tr class=  successRow><td></td><td></td><td></td><td></td><td><strong> Main script duration (without includes) </strong></td><td><strong>30113</strong></td></tr>  </tbody>
+ </table> </body>
+ </html>

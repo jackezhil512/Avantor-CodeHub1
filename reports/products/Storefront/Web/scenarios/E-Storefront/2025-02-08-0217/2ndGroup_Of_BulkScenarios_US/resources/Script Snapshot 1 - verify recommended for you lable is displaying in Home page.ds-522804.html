@@ -1,0 +1,25 @@
+<html><head>
+<style>
+ #recordTable { font-family: "Open Sans", sans-serif !important; border-collapse: collapse; width: 100%;} #recordTable td, #recordTable th { border: 1px solid #ddd; padding: 8px; color: black}  #recordTable tr:nth-child(even){ background-color: #FAFAFA;}
+ #recordTable tr:hover {background-color: #FAFAFA;}
+ .commented-step { text-decoration: line-through; }
+ .successRow { background-color: #90EE90 !important;}
+ .successRow td { color: black !important; }
+ .failure-row{ background-color: #FFA07A !important;}
+ .failure-row td { color: black !important; }
+ #recordTable th { padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #f2f2f2;}
+ .time{  display: block; padding: 12px; color: black; font-size: 18; font-weight: bold;}
+</style>
+</head><label class="time">Timing Option: domComplete</label>
+<body> <table id="recordTable" style="width: 100%;"><thead>
+ <tr><th>No</th>
+ <th>Action</th>
+ <th>Accessor</th>
+ <th>Value</th>
+ <th>Description</th>
+ <th>Duration(msec)</th>
+ </tr>
+ </thead>
+<tbody><tr class= successRow><td>1</td><td>include</td><td>"{ds}/../../Reusable Function library/ReusableFunction.js"</td><td></td><td></td><td>0</td></tr><tr class= failure-row ><td>2</td><td>js</td><td></td><td>Login($URL,$UserName,$Password)</td><td></td><td>0</td></tr><tr class=><td>3</td><td>js</td><td>ProductPageNavigation($Product)</td><td>RecommendedProductsInHomepage()</td><td></td><td>0</td></tr><tr class=><td>4</td><td>js</td><td></td><td>RecommendedProductsInPDP()</td><td></td><td>0</td></tr><tr class=  successRow><td></td><td></td><td></td><td></td><td><strong> Main script duration (without includes) </strong></td><td><strong>0</strong></td></tr>  </tbody>
+ </table> </body>
+ </html>

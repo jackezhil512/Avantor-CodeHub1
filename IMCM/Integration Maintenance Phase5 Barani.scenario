@@ -156,7 +156,12 @@
     <testcase name="Integration Maintenance Phase5 Barani" importance="normal">
       <test>
         <run name="Untitled1" langtype="bulkds3" resource="central repo/IMCM/Test Scripts/Integration Maintenance/Integration Maintenance Phase5 Barani/" method="ds" testclass="Chrome" regex="*.ds">
-          <argument name="Untitled1" method="getData" dpl="TheLocker"/>
+          <argument name="Untitled1" method="getDataByIndex" dpl="Untitled1">
+            <argument name="index" value="0"/>
+          </argument>
+          <argument name="Untitled2" method="getDataByIndex" dpl="Untitled1">
+            <argument name="index" value="1"/>
+          </argument>
         </run>
       </test>
     </testcase>

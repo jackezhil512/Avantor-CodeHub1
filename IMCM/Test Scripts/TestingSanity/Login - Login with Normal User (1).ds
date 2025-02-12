@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+  <testcase name='' description='script generated from Web Designer' author='Harish@avantorsciences.com' version='webDesigner'>
+    <dpl filename='{ds}/../../Test Data/IMCM_INPUTFILE.csv' exectype='runspecificstep0' errorhandling='' type='HashDPL' locale='en_US'></dpl>
+    <fallback useFallback='true'></fallback>
+    <shadowDOM useShadowDOM='true'></shadowDOM>
+    <step action='include' value='' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1e55a803-d054-4bda-8905-14a54b8b0598' uiType='base'>
+      <dialect type='sahi'>
+        <accessor type='unknown' value='"{ds}/../../ReUsable Functions/IMCM Function Library.js"' selected='true' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/IMCM/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"REPOSITORY/IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+        <accessor type='unknown' value='"{ds}/../IMCM Function Library.js"' selected='false' fallback='true'></accessor>
+      </dialect>
+    </step>
+    <step action='js' value='Login($URL,$NormalUser,$Password,$ConsumptionOrg,$ConsumptionStockroom)' type='web' desc='Login With Normal user' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='1bcb443a-4371-4e37-8713-a6a2f4864167' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+    <step action='wait' value='1000' type='web' desc='' isThinkTime='false' isCommented='false' sequence='0' hasBreakPoint='false' indentLevel='0' isVisible='true' parentId='' uid='119dadbb-a055-436d-8299-eea173e54a69' uiType='base'>
+      <dialect type='sahi'></dialect>
+    </step>
+  </testcase>

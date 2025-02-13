@@ -49,7 +49,6 @@ assertExists(fallback(`span("User Maintenance")`));
 
 
 
-
 function Login(url, username, password, org, stockroom) {
     setVariablesIfNeeded('{ds}/../IMCM_INPUTFILE/IMCM_INPUTFILE.csv','HashDPL',0,'en_US');
     setShadowDOM(true);

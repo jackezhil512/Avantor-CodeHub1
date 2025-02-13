@@ -526,8 +526,18 @@ function ReplenishProductinApprovalPage(CatlogNo,QTY){
   SearchProductinReplenishPage(CatlogNo,QTY);
   wait(5000);
   setDescription("Click place your order");
-  click(fallback(`span("Order")`));
-  wait(10000);
+   click(fallback(`byXPath('//*[text()=" Place Your Order "]')`,
+   `byXPath('//*[text()="Order"]')`,
+   `byXPath('//*[text()="Order "]')`,
+   `span("Place Your Order")`,
+   `span("mat-button-wrapper[7]")`,
+   `byXPath('//app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-replenish-consumption/div/app-consumption-component/div/div[2]/div[2]/button[1]/span[1]')`,
+   `byXPath('/html/body/app-root/app-avantor-layout/mat-drawer-container/mat-drawer-content/div/div/app-replenish-consumption/div/app-consumption-component/div/div[2]/div[2]/button/span')`,
+   `byXPath("/html[1]/body[1]/app-root[1]/app-avantor-layout[@class='ng-star-inserted']/mat-drawer-container[@class='mat-drawer-container example-container']/mat-drawer-content[@class='mat-drawer-content ng-star-inserted']/div[@class='example-sidenav-content']/div[@class='fixed-header min-vh-100']/app-replenish-consumption[@class='ng-star-inserted']/div[@class='px-4']/app-consumption-component[1]/div[@class='ng-star-inserted']/div[@class='d-flex align-items-start justify-content-between flex-wrap']/div[@class='d-flex align-items-lg-end department flex-row mt-2 button-row']/button[@class='mat-focus-indicator py-2 px-3 product-order-btn mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused']/span[@class='mat-button-wrapper']")`,
+   `byJQuery('div[class="ng-star-inserted"] > div[class="d-flex align-items-start justify-content-between flex-wrap"] > div[class="d-flex align-items-lg-end department flex-row mt-2 button-row"] > button[class="mat-focus-indicator py-2 px-3 product-order-btn mat-flat-button mat-button-base mat-primary cdk-focused cdk-mouse-focused"] > span[class="mat-button-wrapper"]')`,
+   `byJQuery('.ng-star-inserted > .d-flex.align-items-start.justify-content-between.flex-wrap > .d-flex.align-items-lg-end.department.flex-row.mt-2.button-row > .mat-focus-indicator.py-2.px-3.product-order-btn.mat-flat-button.mat-button-base.mat-primary.cdk-focused.cdk-mouse-focused > .mat-button-wrapper')`));
+  //click(fallback(`span("Order")`));
+  wait(5000);
   click(fallback(`span("Checkout")`));
   //setDescription("Verfy Success message");
   //assertExists(fallback(`byXPath('//*[text()=" Stock Replenished Successfully! Your products were successfully replenished. "]').xy(0.24, 0.33 )`));

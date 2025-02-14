@@ -20,7 +20,7 @@
 -->
 <testscenario xmlns="www.pushtotest.com/tm5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="www.pushtotest.com/XSD/testscenario.xsd" version="2.0">
   <basics>
-    <name>Integration Maintenance_Regression_Barani.scenario</name>
+    <name>Integration Maintenance Phase2 Ezhil.scenario</name>
     <defaultdirectory/>
     <basicName/>
     <creator/>
@@ -29,10 +29,10 @@
     <userinfo/>
   </basics>
   <resources>
-    <resource name="IMCM" type="folder" path="{scenario}/"/>
+    <resource name="Avantor_Codehub" type="folder" path="REPOSITORY/Avantor_Codehub/"/>
   </resources>
   <testnodes>
-    <node name="localhost" location="http://3.143.160.233:8080/TMServer/ws/TestNode"/>
+    <node name="localhost" location="http://3.143.160.233:8080/TMServer/ws/TestNode" username="appvance" password="/yMrNLpwRj7+SbyXpumbhA=="/>
   </testnodes>
   <bundles>
     <bundle name="hibernate" version="3.0"/>
@@ -43,7 +43,7 @@
   <datasources>
     <dpl name="Untitled1" type="HashDPL" langtype="java" method="setup">
       <argument name="resource" dpl="Resources" method="getResourceByName">
-        <argument name="file" value="IMCM/Test Data/IMCM_INPUTFILE.csv"/>
+        <argument name="file" value="Avantor_Codehub/IMCM/Test Data/IMCM_INPUTFILE.csv"/>
       </argument>
     </dpl>
   </datasources>
@@ -153,10 +153,15 @@
     <controller name="Iteration1">
       <round iterations="1" totalusers="1"/>
     </controller>
-    <testcase name="Integration Maintenance" importance="normal">
+    <testcase name="Integration Maintenance Phase2 Ezhil" importance="normal">
       <test>
-        <run name="Untitled1" langtype="bulkds3" resource="IMCM/Test Scripts/Integration Maintenance/" method="ds" testclass="Chrome" regex="*.ds">
-          <argument name="Untitled1" method="getNextData" dpl="Untitled1"/>
+        <run name="Untitled1" langtype="bulkds3" resource="Avantor_Codehub/IMCM/Test Scripts/Integration Maintenance/Integration Maintenance Phase2 Ezhil/" method="ds" testclass="Chrome" regex="*.ds">
+          <argument name="Untitled1" method="getDataByIndex" dpl="Untitled1">
+            <argument name="index" value="0"/>
+          </argument>
+          <argument name="Untitled2" method="getDataByIndex" dpl="Untitled1">
+            <argument name="index" value="1"/>
+          </argument>
         </run>
       </test>
     </testcase>
@@ -166,7 +171,7 @@
   <monitoring enablednodes="true" enabledtarget="false"/>
   <execution type="functionaltest" subtype="bulk">
     <iteration name="Iteration1" controller="Iteration1">
-      <testcase name="Integration Maintenance" users="1" totalexecutions="1"/>
+      <testcase name="Integration Maintenance Phase2 Ezhil" users="1" totalexecutions="1"/>
     </iteration>
   </execution>
   <logs/>

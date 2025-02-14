@@ -512,8 +512,11 @@
 		<taskdef name="executeScenario" classname="com.appvance.ci.ExecuteScenario">
 			<classpath refid="RestClientLibPath" />
 		</taskdef>
+		<parallel>
 		<executeScenario aiqCreds="${aiqCreds}" dir="${dir}" scenario="${scenario}" consoleDetails="${consoleDetails}" resultsFolder="${scenarioResults}" />
-		
+		<executeScenario aiqCreds="${aiqCreds}" dir="${dir}" scenario="${scenario1}" consoleDetails="${consoleDetails}" resultsFolder="${scenarioResults}" />
+		<executeScenario aiqCreds="${aiqCreds}" dir="${dir}" scenario="${scenario2}" consoleDetails="${consoleDetails}" resultsFolder="${scenarioResults}" />
+		</parallel>	
 		<taskdef name="gitReporter" classname="com.appvance.ci.git.GitReporter">
 			<classpath refid="RestClientLibPath" />
 		</taskdef>

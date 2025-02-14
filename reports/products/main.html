@@ -9,10 +9,10 @@
     <title> Dashboard | production</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/css-material.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/dashboard.css">    
+   <link rel="stylesheet" type="text/css" href="resources/css/css-material.css" />
+   <link rel="stylesheet" href="resources/css/font-awesome.min.css">
+   <link rel="stylesheet" href="resources/css/bootstrap/bootstrap.min.css" >
+   <link rel="stylesheet" href="resources/css/dashboard.css">
     <style>
         /* Style the collapsible content. Note: hidden by default */
             .containerSelect {
@@ -103,7 +103,7 @@
                     </div>
                     <div class="navbar-wrapper float-left">
                         <a class="navbar-brand" href="#">
-                   <label>2025/02/14 09:33<br></label>
+                   <label>2025/02/14 12:13<br></label>
                </a>
                     </div>
                 </div>
@@ -115,10 +115,10 @@
                         <div class="col-lg-12 col-md-12">
                             <div class="card">                               
                                 <div class="card-body table-responsive">
-                                    <link rel="stylesheet" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/dashboard.css">
-                                    <script src="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/js/jquery-3.4.1.min.js"></script>
-                                    <script src="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/js/bootstrap.min.js"></script>
-                                    <script src="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/js/sorttable.js"></script>
+                                    <link rel="stylesheet" href="resources/css/dashboard.css">
+                                    <script src="resources/js/jquery-3.4.1.min.js"></script>
+                                    <script src="resources/js/bootstrap.min.js"></script>
+                                    <script src="resources/js/sorttable.js"></script>
                                     <script>
                                         $(document).ready(function() {
                                             $('.canHideExecutionId').toggle();
@@ -256,7 +256,7 @@
                                     </script>
                                     <div class="container">
                                         <div class="row">                                            
-                                            <p style="font-weight: bold">Product</p><select class="form-control input-round pull-left" id="select_Products" style="height: 34px;width: 200px;"><option value="all">All</option><option value="storefront">Storefront</option></select><span style="margin-right: 50px;"> </span><p style="font-weight: bold">Environment</p><select class="form-control input-round pull-left" id="select_Environments" style="height: 34px;width: 200px;"><option value="all">All</option><option value="web">Web</option></select><span style="margin-right: 50px;"> </span><p style="font-weight: bold">Type</p><select class="form-control input-round pull-left" id="select_Types" style="height: 34px;width: 200px;"><option value="all">All</option><option value="functional">Functional</option></select><span style="margin-right: 50px;"> </span>
+                                            <p style="font-weight: bold">Product</p><select class="form-control input-round pull-left" id="select_Products" style="height: 34px;width: 200px;"><option value="all">All</option><option value="imcm_sanity">IMCM_Sanity</option><option value="imcm_sanity">Imcm_sanity</option><option value="storefront">Storefront</option></select><span style="margin-right: 50px;"> </span><p style="font-weight: bold">Environment</p><select class="form-control input-round pull-left" id="select_Environments" style="height: 34px;width: 200px;"><option value="all">All</option><option value="web">Web</option></select><span style="margin-right: 50px;"> </span><p style="font-weight: bold">Type</p><select class="form-control input-round pull-left" id="select_Types" style="height: 34px;width: 200px;"><option value="all">All</option><option value="functional">Functional</option></select><span style="margin-right: 50px;"> </span>
                                             <div class="dropdown">
                                                 <button class="form-control input-round pull-left dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Toggle Columns</button>
                                                 <form class="dropdown-menu" aria-labelledby="dropdownMenuButton" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
@@ -305,7 +305,11 @@
                                                     </thead>
                                                     <tbody id="myScenarios">
                                                         
-	<tr style='cursor: default;display:revert;' class='generic' count='1' ><td nowrap class='center canHideBuildId link'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'><div ref='Functional' ><a target='2025-02-14-0931' style='color: #007bff !important;' name='1stGroup_of_BukScenarios_CA' title='Click to navigate to Execution Report on Job Id 2025-02-14-0931
+	<tr style='cursor: default;display:revert;' class='generic' count='1' ><td nowrap class='center canHideBuildId link'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'><div ref='Functional' ><a target='2025-02-14-1210' style='color: #007bff !important;' name='SanityBulkscenario_Stage1' title='Click to navigate to Execution Report on Job Id 2025-02-14-1210
+ Execution Id: 1739534340947
+ Scenario: SanityBulkscenario_Stage1
+ Test Duration: 00:13:56' style='color: #007bff !important;' class='btn view info-blue' href='IMCM_Sanity/Web/scenarios/IMCM/2025-02-14-1210/report.html'><span style='padding-left: 5px;'>2025-02-14-1210</span></a></div></td><td nowrap class='center canHideExecutionId link'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>1739534340947</div></td><td nowrap class='center canHideProduct product link'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>Imcm_sanity</div></td><td nowrap class='center canHideEnvironment branch link'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>Web</div></td><td nowrap="" class="center execType link" title="Click to Navigate to Execution Report" style="cursor: pointer; background-color: unset;"><div class='card-category'  types='Functional' style='padding: 9px;width: 100%;'>Functional</div></td><td nowrap class='center link canHideTestName'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>IMCM</div></td><td nowrap class='center link'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>2025/02/14 12:13 UTC</div></td><td nowrap class='center link canHideScenario'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>SanityBulkscenario_Stage1</div></td><td nowrap class='center link canHideDuration'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>00:13:56</div></td><td nowrap class='center link canHidePipeline'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>00:02:34</div></td><td nowrap class='center link'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>4</td><td nowrap class='center link'><div class='entries' style='display: block;' ><div class='execType  gridCell-border info-red' style='font-weight:100;' ref='Functional' target='2025-02-14-1210' name='SanityBulkscenario_Stage1'  >20%</div></div></td><td nowrap class='center'><button title='Go to Historical Results' class='btn info-green view' onclick='document.location="IMCM_Sanity/Web/history.html?tab=scenarios"' style='display: block;text-align: center;'><i class='fa fa-clock-o'></i><span> </span> </button></td></tr>
+<tr style='cursor: default;display:revert;' class='generic' count='1' ><td nowrap class='center canHideBuildId link'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'><div ref='Functional' ><a target='2025-02-14-0931' style='color: #007bff !important;' name='1stGroup_of_BukScenarios_CA' title='Click to navigate to Execution Report on Job Id 2025-02-14-0931
  Execution Id: 1739525515905
  Scenario: 1stGroup_of_BukScenarios_CA
  Test Duration: 00:01:01' style='color: #007bff !important;' class='btn view info-blue' href='Storefront/Web/scenarios/E-Storefront/2025-02-14-0931/report.html'><span style='padding-left: 5px;'>2025-02-14-0931</span></a></div></td><td nowrap class='center canHideExecutionId link'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>1739525515905</div></td><td nowrap class='center canHideProduct product link'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>Storefront</div></td><td nowrap class='center canHideEnvironment branch link'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>Web</div></td><td nowrap="" class="center execType link" title="Click to Navigate to Execution Report" style="cursor: pointer; background-color: unset;"><div class='card-category'  types='Functional' style='padding: 9px;width: 100%;'>Functional</div></td><td nowrap class='center link canHideTestName'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>E-Storefront</div></td><td nowrap class='center link'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>2025/02/14 09:33 UTC</div></td><td nowrap class='center link canHideScenario'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>1stGroup_of_BukScenarios_CA</div></td><td nowrap class='center link canHideDuration'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>00:01:01</div></td><td nowrap class='center link canHidePipeline'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>00:01:21</div></td><td nowrap class='center link'><div class='card-category' style='padding: 0px;width: 100%;font-weight: bold;'>18</td><td nowrap class='center link'><div class='entries' style='display: block;' ><div class='execType  gridCell-border info-red' style='font-weight:100;' ref='Functional' target='2025-02-14-0931' name='1stGroup_of_BukScenarios_CA'  >0%</div></div></td><td nowrap class='center'><button title='Go to Historical Results' class='btn info-green view' onclick='document.location="Storefront/Web/history.html?tab=scenarios"' style='display: block;text-align: center;'><i class='fa fa-clock-o'></i><span> </span> </button></td></tr>
@@ -329,9 +333,9 @@
             </footer>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/popper.min.js" ></script>
+    <script src="resources/js/bootstrap.min.js" ></script>
     <script>
         $(document).ready(function() {
             $(".input-filter").off("keyup").on("keyup", function() {
@@ -363,34 +367,6 @@
             $(e).find('.material-icons').html() == 'keyboard_arrow_down' ? $(e).find('.material-icons').html('keyboard_arrow_up') : $(e).find('.material-icons').html('keyboard_arrow_down')
         }
     </script>
-    <!-- Modal -->
-<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
-    data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">IMPORTANT!</h5>
-            </div>
-            <div class="modal-body">
-                <p>This dashboard was created with a CICD client downloaded from an Appvance S3 service.</p>
-                <p>
-                    Please follow the steps in this
-                    <a target="_blank"
-                        href="https://appvance.atlassian.net/l/cp/dZwAk8Pe" style="color: #007bff !important; text-decoration: underline; background-color: transparent; -webkit-text-decoration-skip: objects;">document</a>
-                    to point your CICD build.xml to your AIQ controller CICD client.
-                    <br><br>
-                    Questions: contact support@appvance.ai
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    // JavaScript to open the modal when the page loads
-    $(document).ready(function () {
-        $('#exampleModal').modal('show');
-    });
-</script>
+    
 </body>
 </html>

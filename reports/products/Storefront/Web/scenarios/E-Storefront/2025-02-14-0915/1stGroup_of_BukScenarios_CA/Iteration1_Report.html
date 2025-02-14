@@ -1,0 +1,1019 @@
+<html>
+    <head>
+        <title>Iteration1 Report</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/css-material.css">
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/js/sorttable.js"></script>
+        <link rel="stylesheet" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/material-dashboard.css">
+        <link rel="stylesheet" href="https://appvance-dev-cicd.s3.us-west-2.amazonaws.com/resources/css/dashboard.css">        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+        <style>
+            body {  
+                overflow-y: auto;
+            }
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            #reportHeader {
+                background-color: #eee;
+                color: #FFF;
+                padding: 15px;
+                border: 1px solid #ddd;
+                margin: 5px 5px;
+                background: #005677;
+                box-shadow: none;
+                border-radius: 4px;
+            }
+            .report-title {
+                padding: 0;
+                margin: 0;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .report-status {
+                float: right;
+                font-size: 15px;
+                margin-top: 3px;
+                font-weight: bold;
+            }
+            .datetime {
+                margin-right: 30px;
+            }
+            #reportHeader .divider {
+                position: absolute;
+                width: 1px;
+                height: 56px;
+                background: #ddd;
+                top: 0px;
+            }
+            .date-divider {
+                right: 450px;
+            }
+            .date-divider-end {
+                right: 640px;
+            }
+            .success-divider {
+                right: 335px;
+            }
+            .failure-divider {
+                right: 220px;
+            }
+            .report-status .success, .datetime, .report-status .failure{
+                box-shadow: unset;
+                text-shadow: unset;
+                font-weight: 100;
+            }
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            
+            .boxHover :hover{
+                background-color: #d7dde2;
+                border-color: #7a7a7a;
+                width: 100%;
+                display: inline-table;
+            }
+            .box {
+                margin-bottom: 5px;
+                position: relative;
+                background: #F8F9FB;
+                border: 1px solid #EAEBEF;
+                padding: 10px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+            .failure tr[importance=high] {
+                color: red !important;
+                /*color: #fff;*/
+            } 
+            .failure tr[importance= normal] {
+                color: #1e61a5 !important;
+            } 
+            #success span.importance {
+                display : none;
+            }
+            .report-details-contaner {
+                margin: 20px 5px 0;
+            }
+            .testcaseExecutionTable {
+                width: 100%;
+                border: 1px solid #ddd;
+                margin: 0;
+                font-size: 17px;
+                margin-bottom: 50px;
+            }
+            .testcaseExecutionTable thead th{
+                padding: 7px 0;
+                color: #333;
+                border-right: 1px solid #ddd;
+                padding-left: 12px;
+            }            
+            .testcaseExecutionTable tbody td {
+                border-right: 1px solid #ddd !important;
+                padding: 5px 10px;
+            }
+            .testcaseExecutionTable tr:nth-child(odd) {
+                background: #FFF;
+            }
+            .testcaseExecutionTable tr:nth-child(even) {
+                background: #FAFAFA;
+            }
+            .testcaseExecutionTable tbody td:first-child{
+                width: 20%;
+            }
+            .testcaseExecutionTable tbody td:nth-child(2)  {
+                width: 10%;
+            }
+            .testcaseExecutionTable tbody td:nth-child(4)  {
+                width: 50%;
+            }
+            #tsuccess thead th:nth-child(4)  {
+                width: 100% !important;
+            }
+            .testcaseExecutionTable .testcase-row.selcted {
+                border: 2px solid #ddd;
+                border-bottom: none;
+            }
+            .testcaseExecutionTable .testcase-details-row { 
+                font-size: 13px;
+                background: #fff !important;
+                line-height: 24px;
+                border: 2px solid #ddd;
+                border-top: none;
+                word-break: break-word;
+            }
+            .testcaseExecutionTable .testcase-details-row td {
+                border-top: none;
+            }
+            .testcase-details-row span {
+                border: 2px solid #ddd;
+                display: inline-block;
+                width: 96%;
+                padding: 0 0 0 40px;
+                border-radius: 4px;
+                padding-top: 20px;
+            }
+            .testcase-details-row pre {
+                white-space: pre-wrap;
+                word-break: break-word;
+            }
+            .report-header {
+                padding: 5px 10px 8px;
+                border: 1px solid #ddd;
+                background: #eee;
+                border-bottom: 0px;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+            .report-header .title {
+                font-weight: bold;
+                font-size: 15px;
+                color: #005677;
+                padding-top: 6px;
+                display: inline-block;
+            }
+            .notes {
+                float: right;
+                font-style: italic;
+                font-size: 14px;
+                margin-top: 12px;
+            }
+            td {
+                position: relative
+            }
+            .testcase-detail-link {
+                position: absolute;
+                right: 4px;
+                display: unset;
+                background: #005677;
+                color: #fff;
+                padding: 2px 11px;
+                top: 3px;
+                border-radius: 3px;
+                cursor: pointer;
+                display: none;
+
+                color: #005677;
+                top: 8px;
+                font-size: 12px;
+                font-style: italic;
+                text-decoration: underline;
+                background: none;
+            }
+            .testcase-row:hover .testcase-detail-link {
+                display : none;
+            }
+            /*            .testcase-details-row br {
+                            display: none;
+                        }*/
+            .testcase-details-row h2 {
+                padding: 0;
+                margin: 0;
+                font-size: 17px;
+                float: left;
+                color: #005677;
+            }
+            .testcase-details-row a.ui-link {
+                margin-left: 52px !important;
+                float: left;
+                margin-bottom: 20px;
+            }
+            .testcase-details-row iframe {
+                border: none;
+                /*height: 100% !important;*/
+            }
+            .testcase-details-row iframe tbody {
+                margin-left : 0;
+                margin-right : 0;
+            }
+            .testcase-row a {
+                text-decoration: none;
+            }
+            .statuse {
+                margin-right: 20px;
+            }
+            .testcaseExecutionTable .testcase-details-row img {
+                max-width: 98%;
+            }
+            .exception {
+
+            }
+        </style>
+        <style>
+            .modal-open {
+                padding-right: 0px !important;
+            }
+            body { 
+                padding-right: 0 !important;
+                background-color: #eee;
+                color: #3C4858;
+                font-weight: 300;
+            }
+
+            .breadcrumb { 
+                list-style: none; 
+                overflow: hidden; 
+                font: 18px Sans-Serif;
+                background-color: unset;
+                padding: unset;
+                margin-bottom: 0px;
+                border-radius: unset;
+            }
+            .breadcrumb li { 
+                float: left; 
+            }
+            .breadcrumb li a {
+                color: white !important;
+                text-decoration: none; 
+                padding: 10px 11px 10px 65px;
+                background: hsl(194, 85%, 35%); 
+                position: relative; 
+                display: block;
+                float: left;
+            }
+            .breadcrumb li a::after { 
+                content: " "; 
+                display: block; 
+                width: 0; 
+                height: 0;
+                border-top: 50px solid transparent; /* Go big on the size, and let overflow hide */
+                border-bottom: 50px solid transparent;
+                border-left: 30px solid hsl(194, 85%, 35%);
+                position: absolute;
+                top: 50%;
+                margin-top: -50px; 
+                left: 100%;
+                z-index: 2; 
+            }
+            .breadcrumb li a::before { 
+                content: " "; 
+                display: block; 
+                width: 0; 
+                height: 0;
+                border-top: 50px solid transparent;       
+                border-bottom: 50px solid transparent;
+                border-left: 30px solid white;
+                position: absolute;
+                top: 50%;
+                margin-top: -50px; 
+                margin-left: 1px;
+                left: 100%;
+                z-index: 1; 
+            }
+            .breadcrumb li:first-child a {
+                padding-left: 10px;
+            }
+            .breadcrumb li:nth-child(2) a       { background:        hsla(34,85%,45%,1); }
+            .breadcrumb li:nth-child(2) a:after { border-left-color: hsla(34,85%,45%,1); }
+            .breadcrumb li:nth-child(3) a       { background:        hsla(34,85%,55%,1); }
+            .breadcrumb li:nth-child(3) a:after { border-left-color: hsla(34,85%,55%,1); }
+            .breadcrumb li:nth-child(4) a       { background:        hsla(34,85%,65%,1); }
+            .breadcrumb li:nth-child(4) a:after { border-left-color: hsla(34,85%,65%,1); }
+            .breadcrumb li:nth-child(5) a       { background:        hsla(34,85%,75%,1); }
+            .breadcrumb li:nth-child(5) a:after { border-left-color: hsla(34,85%,75%,1); }
+            .breadcrumb li:last-child a {
+                background: hsl(194, 35%, 64%);
+                color: black;
+                pointer-events: none;
+                cursor: default;
+            }
+            .breadcrumb li:last-child a::after { 
+                border: 0; 
+            }
+            .breadcrumb li a:hover { 
+                background: hsl(203, 59%, 58%); 
+            }
+            .breadcrumb li a:hover:after { 
+                border-left-color: hsla(203, 59%, 58%, 1) !important; 
+            }
+            .testcaseExecutionTable tbody tr.testcase-row {
+            }
+
+            table.dataTable {
+                border-collapse: collapse !important;
+            }
+            table{
+                margin: 0 auto;
+                width: 100%;
+                clear: both;
+                border-collapse: collapse;
+                table-layout: fixed; 
+                word-wrap:break-word;
+            }
+            #iterations{
+                margin-left: 10px;
+                margin-bottom: 14px;
+            }
+            
+            .topnav{
+                display: flex;
+            }
+        </style>
+        <script>
+
+            function format(d) {                
+                return '<table><tr class="testcase-details-row"> <td colspan="5"> <span> ' + d[4] + '</span> </td> </tr></table>';
+
+            }
+
+            $(document).ready(function () {
+                var pageTitle = $(document).attr('title').replace(" Report", "");
+                $("#iterations").find("option:contains('" + pageTitle + "')").prop("selected",true);
+
+        
+                $('#iterations').on('change', function(){
+                    window.location = $(this).val();
+                });
+            });
+
+            var pId = null;
+            var url = window.location.href;
+
+            function gup(name) {
+                var sPageURL = window.location.href.substring(window.location.href.lastIndexOf('?') + 1);
+                var sURLVariables = sPageURL.split('&');
+                var sParameterName;
+                var i;
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+                    if (sParameterName[0] === name) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1];
+                    }
+                }
+            }
+            path = decodeURIComponent(gup('path'));
+            dspath = gup("dspath");
+            // });
+            setTimeout(function () {
+                $('h1.ui-collapsible-heading').each(function (index, element) {
+                    var anchor = $(element).find('a');
+                    var attrStr = $(element).attr('href');
+                    $(element).removeAttr('href');
+                    $(anchor).attr('href', attrStr);
+                });
+                $('a.ui-btn').css('width', '97%');
+                $('div.ui-body-inherit').css('width', '97.7%');
+                if (gup('sel')) {
+                    $('#' + gup('sel')).click();
+                    $('html, body').animate({
+                        scrollTop: ($('#' + gup('sel')).offset().top)
+                    }, 500);
+                }
+            }, 100);
+        </script>
+    </head>
+    <body>
+        <div class="wrapper " id="main-content">
+            <div class="main-panel">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top p-0">
+                    <div class="container-fluid">
+
+                        <div class="navbar-wrapper float-right">                
+                            <div class="topnav">
+                                <ul class="breadcrumb">
+                                    <li><a href="../../../../history.html?tab=scenarios">Web</a></li> 
+                                    <li><a href="../report.html">Scenario Execution</a></li> 
+                                    <li><a href="#">Iteration Summary Report</a></li> 
+                                </ul>
+                                <div class="navbar-wrapper float-left">
+                                    <select id="iterations" class="form-select">
+                                        <option value='./Iteration1_Report.html'>Iteration1</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-wrapper float-left" style="width:16%;">                          
+                            <a class="navbar-brand" href="#">
+                                <label> 2025/02/14 09:16 UTC</label>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+
+                <div class="content"  style="margin-top: 35px !important;">
+                    <div class="container-fluid">                        
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card">
+                                    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Summary Report" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Summary Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/jquery-treegrid@0.3.0/css/jquery.treegrid.css" rel="stylesheet">
+    <link href="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery-treegrid@0.3.0/js/jquery.treegrid.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
+    <script
+        src="https://unpkg.com/bootstrap-table@1.19.1/dist/extensions/treegrid/bootstrap-table-treegrid.min.js"></script>
+    <style>
+        body {
+            height: 100%;
+        }
+
+        .card-bod-sm {
+            flex: 1 1 auto;
+            padding: 0.5rem 1px;
+        }
+
+        table {
+            margin: 0 auto;
+            text-align: center;
+            border-collapse: collapse;
+            border: 1px solid #d4d4d4;
+        }
+
+        tr:nth-child(even) {
+            background: #d4d4d4;
+        }
+
+        th,
+        td {
+            padding: 10px 30px;
+        }
+
+        th {
+            border-bottom: 1px solid #d4d4d4;
+        }
+
+        .bootstrap-table .fixed-table-container .table thead th .both {
+            font-weight: bold;
+            color: rgb(0, 86, 119);
+        }
+
+        .fixed-table-toolbar {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .fixed-table-toolbar::after {
+            content: none !important;
+            display: block;
+            clear: both;
+        }
+
+        .bootstrap-table .fixed-table-toolbar .columns .dropdown-menu {
+            text-align: left;
+            max-height: 300px;
+            overflow: auto;
+            -ms-overflow-style: scrollbar;
+            z-index: 1001;
+        }
+
+        .dropdown-menu.show {
+            display: block;
+        }
+
+        .dropdown-menu[x-placement^=bottom],
+        .dropdown-menu[x-placement^=left],
+        .dropdown-menu[x-placement^=right],
+        .dropdown-menu[x-placement^=top] {
+            right: auto;
+            bottom: auto;
+        }
+
+        .btn-group-vertical>.btn,
+        .btn-group>.btn {
+            position: relative;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+        }
+
+        .btn-secondary:not(:disabled):not(.disabled).active,
+        .btn-secondary:not(:disabled):not(.disabled):active,
+        .show>.btn-secondary.dropdown-toggle {
+            color: #fff;
+            background-color: #545b62;
+            border-color: #4e555b;
+        }
+
+        .btn:not(:disabled):not(.disabled) {
+            cursor: pointer;
+        }
+
+        .bootstrap-table .fixed-table-toolbar .columns-right {
+            margin-left: 5px;
+        }
+
+        .bootstrap-table .fixed-table-toolbar .bs-bars,
+        .bootstrap-table .fixed-table-toolbar .columns,
+        .bootstrap-table .fixed-table-toolbar .search {
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .float-right {
+            float: right !important;
+        }
+
+        .btn-group,
+        .btn-group-vertical {
+            position: relative;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            vertical-align: middle;
+        }
+
+        .firstColumn {
+            white-space: nowrap;
+            overflow-x: auto;
+            width: 400px;
+            max-width: 400px;
+        }
+    </style>
+    <script>
+        var csvData = "U2NlbmFyaW86ICwxc3RHcm91cF9vZl9CdWtTY2VuYXJpb3NfQ0Euc2NlbmFyaW8KQXV0aG9yOiAsTm90IHNwZWNpZmllZAoKCkR1cmF0aW9uLDU1IHMKU3RhcnQgVGltZSxGcmkgRmViIDE0IDA5OjE1OjQxIFVUQyAyMDI1CkVuZCBUaW1lLEZyaSBGZWIgMTQgMDk6MTY6MjggVVRDIDIwMjUKVG90YWwgVXNlcnMsMTgKVG90YWwgSGl0cywwClRvdGFsIFRocm91Z2hwdXQgLDAgS0IKQXZlcmFnZSBIaXRzLDAgaGl0cy9zCkF2ZXJhZ2UgVGhyb3VnaHB1dC9zLDAgS0IvcwpDb25zdW1lZCBCYW5kd2lkdGgsMCBrYnBzClRlc3RjYXNlcyBwYXNzZWQsMApUZXN0Y2FzZXMgZmFpbGVkLDE4ClRlc3RjYXNlcyBlcnJvciByYXRlLDEwMApTdGVwIHBhc3NlZCwwClN0ZXAgZmFpbGVkLDE4ClN0ZXAgZXJyb3IgcmF0ZSAlLDEwMApBbGwgZHVyYXRpb25zIGFuZCBzaXplcyBhcmUgZm9yIHN1Y2Nlc3NlcyBvbmx5CgoKVGVzdGNhc2UgbmFtZSxUb3RhbCBVc2VycyxBY3RpdmUgVXNlcnMsU3RlcCBuYW1lLFJlcXVlc3QgbmFtZSxSZXNwb25zZSBDb2RlLFN1Y2Nlc3MgQ291bnQsRmFpbHVyZSBDb3VudCxUb3RhbCBTdGVwLFRvdGFsIFJlcXVlc3QsQXZlcmFnZSBEdXJhdGlvbiAoc2VjKSxTdGFuZGFyZCBEZXZpYXRpb24gRHVyYXRpb24gKHNlYyksTWluaW11bSBEdXJhdGlvbiAoc2VjKSxNZWRpYW4gRHVyYXRpb24gKHNlYyksTW9kZSBEdXJhdGlvbiAoc2VjKSxEdXJhdGlvbiA4NSBQZXJjZW50aWxlIChzZWMpLER1cmF0aW9uIDkwIFBlcmNlbnRpbGUgKHNlYyksRHVyYXRpb24gOTUgUGVyY2VudGlsZSAoc2VjKSxNYXhpbXVtIER1cmF0aW9uIChzZWMpLEF2ZXJhZ2UgU2l6ZSAoS2IpLFN0YW5kYXJkIERldmlhdGlvbiBTaXplIChLYiksTWluaW11bSBTaXplIChLYiksTWVkaWFuIFNpemUgKEtiKSxNb2RlIFNpemUgKEtiKSxTaXplIDg1IFBlcmNlbnRpbGUgKEtiKSxTaXplIDkwIFBlcmNlbnRpbGUgKEtiKSxTaXplIDk1IFBlcmNlbnRpbGUgKEtiKSxNYXhpbXVtIFNpemUgKEtiKQpDYXJ0LU1vZHVsZS1WZXJpZnlMaW5rc09uU2hvcHBpbmdCYXNrZXRQYWdlLmRzLDEsMCwsLCwwLDEsMCwwLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtCiIiLCwsMSkgVW50aXRsZWQxLCwsMCwxLDAsMCwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLQpBZHZhbmNlIFNlYXJjaC1BZHZhY25jZVNlYXJjaF9NREwgTnVtYmVyLmRzLDEsMCwsLCwwLDEsMCwwLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtCiIiLCwsMSkgVW50aXRsZWQxLCwsMCwxLDAsMCwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLQpBZHZhbmNlIFNlYXJjaC1TbW9rZV9BZHZhbmNlU2VhcmNoX0Nhc051bWJlci5kcywxLDAsLCwsMCwxLDAsMCwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLQoiIiwsLDEpIFVudGl0bGVkMSwsLDAsMSwwLDAsLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0KQWR2YW5jZSBTZWFyY2gtQWR2YW5jZVNlYXJjaF9DaGVtaWNhbEZvcm11bGFfLmRzLDEsMCwsLCwwLDEsMCwwLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtCiIiLCwsMSkgVW50aXRsZWQxLCwsMCwxLDAsMCwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLQpDYXJ0LU1vZHVsZS12ZXJpZnkgdGhlIHVzZXIgY2FuIGFibGUgdG8gRGVjcmVhc2UgdGhlIHByb2R1Y3QgcXVhbnRpdHkgaW4gY2FydCBwYWdlLmRzLDEsMCwsLCwwLDEsMCwwLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtCiIiLCwsMSkgVW50aXRsZWQxLCwsMCwxLDAsMCwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLQpBZHZhbmNlIFNlYXJjaC1DZXJ0aWZpY2F0ZVNlYXJjaF9Mb3ROdW1iZXIuZHMsMSwwLCwsLDAsMSwwLDAsLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0KIiIsLCwxKSBVbnRpdGxlZDEsLCwwLDEsMCwwLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtCkFkdmFuY2UgU2VhcmNoLUFkdmFuY2VzZWFyY2hfU3VwcGxpZXJOYW1lLmRzLDEsMCwsLCwwLDEsMCwwLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtCiIiLCwsMSkgVW50aXRsZWQxLCwsMCwxLDAsMCwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLQpMb2dpbi1Mb2dpbi5kcywxLDAsLCwsMCwxLDAsMCwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLQoiIiwsLDEpIFVudGl0bGVkMSwsLDAsMSwwLDAsLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0KQWR2YW5jZSBTZWFyY2gtQWR2YW5jZVNlYXJjaF9LZXl3b3JkLmRzLDEsMCwsLCwwLDEsMCwwLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtCiIiLCwsMSkgVW50aXRsZWQxLCwsMCwxLDAsMCwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLQpBZHZhbmNlIFNlYXJjaC1BZHZhbmNlU2VhcmNoX0NoaW1pY2FsTmFtZS5kcywxLDAsLCwsMCwxLDAsMCwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLQoiIiwsLDEpIFVudGl0bGVkMSwsLDAsMSwwLDAsLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0KQWR2YW5jZSBTZWFyY2gtU0RTX01hbnVmYWN0dXJlci5kcywxLDAsLCwsMCwxLDAsMCwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLQoiIiwsLDEpIFVudGl0bGVkMSwsLDAsMSwwLDAsLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0KQWR2YW5jZSBTZWFyY2gtU0RTX0tleXdvcmRTZWFyY2guZHMsMSwwLCwsLDAsMSwwLDAsLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0KIiIsLCwxKSBVbnRpdGxlZDEsLCwwLDEsMCwwLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtCkNhcnQtTW9kdWxlLVVwZGF0ZSBRdWFudGl0eSBpbiBTaG9wcGluZyBDYXJ0LmRzLDEsMCwsLCwwLDEsMCwwLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtCiIiLCwsMSkgVW50aXRsZWQxLCwsMCwxLDAsMCwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLQpBZHZhbmNlIFNlYXJjaC1DZXJ0aWZpY2F0ZVNlYXJjaF9QYXJ0TnVtYmVyLmRzLDEsMCwsLCwwLDEsMCwwLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtCiIiLCwsMSkgVW50aXRsZWQxLCwsMCwxLDAsMCwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLQpBZHZhbmNlIFNlYXJjaC1TRFNfUGFydE51bWJlci5kcywxLDAsLCwsMCwxLDAsMCwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLQoiIiwsLDEpIFVudGl0bGVkMSwsLDAsMSwwLDAsLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0KQ2FydC1Nb2R1bGUtQWRkcHJvZHVjdHF0eXRvY2FydF8xLmRzLDEsMCwsLCwwLDEsMCwwLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtCiIiLCwsMSkgVW50aXRsZWQxLCwsMCwxLDAsMCwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLQpBZHZhbmNlIFNlYXJjaC1BZHZhbmNlU2VhcmNoX1BhcnROdW1iZXIuZHMsMSwwLCwsLDAsMSwwLDAsLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0KIiIsLCwxKSBVbnRpdGxlZDEsLCwwLDEsMCwwLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtCkFkdmFuY2UgU2VhcmNoLUFkdmFuY2VTZWFyY2hfTW9sZWN1bGFyd2VpZ2h0LmRzLDEsMCwsLCwwLDEsMCwwLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtCiIiLCwsMSkgVW50aXRsZWQxLCwsMCwxLDAsMCwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLSwtLC0sLQo=";
+        csvData = atob(csvData);
+
+        $(document).ready(function () {
+            parseCSV();
+            detectFailures();
+            $("div.fixed-table-toolbar").prepend('<div class="columns columns-left btn-group" style="color: darkgray;">'
+                + '<span>Important: The data showed in this report is based only on successful transactions.</span>'
+                + '</div>');
+        });
+
+        function parseCSV() {
+            const data = [];
+            const lines = csvData.split("\n");
+            for (let i = 0; i < lines.length; i++) {
+                data[i] = lines[i].split(",");
+            }
+            csvToJson(data);
+
+        }
+
+        function csvToJson(csvData) {
+            const json = {};
+            json.scenario = csvData[0][1];
+            json.author = csvData[1][1];
+            json.duration = csvData[4][1];
+            json.startTime = csvData[5][1];
+            json.endTime = csvData[6][1];
+            json.totalUsers = csvData[7][1];
+            json.totalHits = csvData[8][1];
+            json.totalThroughputs = csvData[9][1];
+            json.averageHits = csvData[10][1];
+            json.averageThroughputs = csvData[11][1];
+            json.consumedBandwidth = csvData[12][1];
+            json.testcasesPassed = csvData[13][1];
+            json.testcasesFailed = csvData[14][1];
+            json.testcasesErrorRate = csvData[15][1];
+            json.stepPassed = csvData[16][1];
+            json.stepFailed = csvData[17][1];
+            json.stepErrorRate = csvData[18][1];
+            let timeString = (csvData[4][1].toString());
+            json.tps = json.testcasesPassed > 0 ? (timeArrayToSeconds(csvData[4][1].match(/\d+/g)) / (csvData[13][1].match(/\d+/g))) : 0;
+            json.tps = json.tps.toFixed(3);
+            json.testcases = [];
+            let lastTestCase = undefined;
+            let testcaseId = 0;
+            let stepId = 0;
+            let requestId = 0;
+            let responseId = 0;
+            for (let i = 23; i < csvData.length - 1; i++) {
+                //is testcase
+                if (csvData[i][0] !== "\"\"") {
+                    testcaseId++;
+                    stepId = 0;
+                    requestId = 0;
+                    responseId = 0;
+                    const testcase = { id: testcaseId.toString(), pid: (0).toString() };
+                    testcase.name = csvData[i][0];
+                    testcase.activeUsers = csvData[i][2];
+                    testcase.successCount = csvData[i][6];
+                    testcase.failureCount = csvData[i][7];
+                    var durationAverage = (csvData[i][10]) * 1000;
+                    testcase.durationAverage = isNaN(durationAverage) ? "-" : durationAverage;
+                    var testcaseTPS = (csvData[i][10] / (csvData[i][6].match(/\d+/g)));
+                    testcaseTPS = testcaseTPS.toFixed(3);
+                    testcase.testcaseTPS = isNaN(testcaseTPS) ? "-" : testcaseTPS;
+                    //testcase.durationMin = csvData[i][12];    
+                    testcase.totalRequest = csvData[i][9];
+                    var durationMax = (csvData[i][18]) * 1000;
+                    testcase.durationMax = isNaN(durationMax) ? "-" : durationMax;
+                    testcase.standardDeviation = csvData[i][11];
+                    testcase.percentile90 = csvData[i][16];
+                    testcase.percentile95 = csvData[i][17];
+                    testcase.percentile99 = undefined;
+                    testcase.thoughput = undefined;
+                    testcase.error = csvData[18][1];
+                    lastTestcase = testcase;
+                    json.testcases.push(testcase);
+                }
+                //is step
+                else if (csvData[i][3]) {
+                    stepId++;
+                    requestId = 0;
+                    responseId = 0;
+                    const step = { id: `${testcaseId}${stepId}`, pid: `${testcaseId}` };
+                    var cont = 4
+                    var name = csvData[i][3];
+                    while (csvData[i][cont] !== "") {
+                        name = name + csvData[i][cont];
+                        cont = cont + 1;
+                    }
+                    step.name = name;
+                    step.activeUsers = lastTestcase.activeUsers;
+                    step.successCount = csvData[i][cont + 2];
+                    step.failureCount = csvData[i][cont + 3];
+                    var durationAverage = (csvData[i][cont + 6]) * 1000;
+                    step.durationAverage = isNaN(durationAverage) ? "-" : durationAverage;
+                    var testcaseTPS = ((csvData[i][cont + 6]) / (csvData[i][cont + 2].match(/\d+/g)));
+                    testcaseTPS = testcaseTPS.toFixed(3);
+                    step.testcaseTPS = isNaN(testcaseTPS) ? "-" : testcaseTPS;
+                    //step.durationMin = csvData[i][cont+8];
+                    step.totalRequest = csvData[i][cont + 5];
+                    var durationMax = (csvData[i][cont + 14]) * 1000;
+                    step.durationMax = isNaN(durationMax) ? "-" : durationMax;
+                    step.standardDeviation = csvData[i][cont + 7];
+                    step.percentile90 = csvData[i][cont + 12];
+                    step.percentile95 = csvData[i][cont + 13];
+                    step.percentile99 = undefined;
+                    step.thoughput = undefined;
+                    step.error = csvData[18][1];
+                    json.testcases.push(step);
+                }
+                //is request
+                else if (csvData[i][4]) {
+                    requestId++;
+                    responseId = 0;
+                    const request = {
+                        id: `${testcaseId}${stepId}${requestId}`,
+                        pid: `${testcaseId}${stepId}`
+                    };
+                    request.name = csvData[i][4];
+                    request.activeUsers = lastTestcase.activeUsers;
+                    request.successCount = csvData[i][6];
+                    request.failureCount = csvData[i][7];
+                    var durationAverage = (csvData[i][10]) * 1000;
+                    request.durationAverage = isNaN(durationAverage) ? "-" : durationAverage;
+                    var testcaseTPS = ((csvData[i][10]) / (csvData[i][6].match(/\d+/g)));
+                    testcaseTPS = testcaseTPS.toFixed(3);
+                    request.testcaseTPS = isNaN(testcaseTPS) ? "-" : testcaseTPS;
+                    //testcase.durationMin = csvData[i][12];    
+                    request.totalRequest = csvData[i][9];
+                    var durationMax = (csvData[i][18]) * 1000;
+                    request.durationMax = isNaN(durationMax) ? "-" : durationMax;
+                    request.standardDeviation = csvData[i][11];
+                    request.percentile90 = csvData[i][16];
+                    request.percentile95 = csvData[i][17];
+                    request.percentile99 = undefined;
+                    request.thoughput = undefined;
+                    request.error = csvData[18][1];
+                    json.testcases.push(request);
+                }
+                //is response
+                else if (csvData[i][5]) {
+                    responseId++;
+                    const response = {
+                        id: `${testcaseId}${stepId}${requestId}${responseId}`,
+                        pid: `${testcaseId}${stepId}${requestId}`
+                    };
+                    response.name = csvData[i][5];
+                    response.activeUsers = lastTestcase.activeUsers;
+                    response.successCount = csvData[i][6];
+                    response.failureCount = csvData[i][7];
+                    var durationAverage = (csvData[i][10]) * 1000;
+                    response.durationAverage = isNaN(durationAverage) ? "-" : durationAverage;
+                    var testcaseTPS = ((csvData[i][10]) / (csvData[i][6].match(/\d+/g)));
+                    testcaseTPS = testcaseTPS.toFixed(3);
+                    response.testcaseTPS = isNaN(testcaseTPS) ? "-" : testcaseTPS;
+                    //response.durationMin = csvData[i][12];
+                    response.totalRequest = csvData[i][9];
+                    var durationMax = (csvData[i][18]) * 1000;
+                    response.durationMax = isNaN(durationMax) ? "-" : durationMax;
+                    response.standardDeviation = csvData[i][11];
+                    response.percentile90 = csvData[i][16];
+                    response.percentile95 = csvData[i][17];
+                    response.percentile99 = undefined;
+                    response.thoughput = undefined;
+                    response.error = csvData[18][1];
+                    json.testcases.push(response);
+                }
+            }
+            generateHeader(json);
+        }
+        function generateHeader(json) {
+            $("#duration").html(json.duration);
+            var date = new Date(json.startTime);
+            $("#startTime").html('Start Time: ' + date.toLocaleString('en-US'));
+            $("#totalUsers").html(json.totalUsers);
+            $("#totalHits").html(json.totalHits);
+            $("#totalThroughputs").html(json.totalThroughputs);
+            $("#averageHits").html(json.averageHits);
+            $("#averageThroughputs").html(json.averageThroughputs);
+            $("#consumedBandwidth").html(json.consumedBandwidth);
+            $("#testcasesPassed").html(json.testcasesPassed);
+            if (json.testcasesPassed == 0) {
+                $("#testcasesPassed").css("color", "red");
+            }
+            $("#testcasesFailed").html(json.testcasesFailed);
+            $("#testcasesErrorRate").html(json.testcasesErrorRate);
+            $("#tps").html(json.tps);
+            generateTable(json.testcases);
+        }
+        function generateTable(json) {
+            $('#table').bootstrapTable({
+                data: json,
+                dataType: json,
+                idField: 'id',
+                showColumns: true,
+                columns: [
+                    {
+                        field: 'name',
+                        title: 'Test Case',
+                        sortable: true,
+                        align: 'left',
+                        class: 'firstColumn'
+                    },
+                    {
+                        field: 'successCount',
+                        title: 'Success',
+                        sortable: true,
+                        align: 'left',
+                    },
+                    {
+                        field: 'failureCount',
+                        title: 'Failures',
+                        sortable: true,
+                        align: 'left',
+                    },
+                    {
+                        field: 'durationAverage',
+                        title: 'Average (msc)',
+                        sortable: true,
+                        align: 'left',
+                    },
+                    {
+                        field: 'totalRequest',
+                        title: 'Total Request',
+                        sortable: true,
+                        align: 'left',
+                    },
+                    {
+                        field: 'durationMax',
+                        title: 'Max (msc)',
+                        sortable: true,
+                        align: 'left',
+                    },
+                    {
+                        field: 'standardDeviation',
+                        title: 'Std Dev',
+                        sortable: true,
+                        align: 'left',
+                    },
+                    {
+                        field: 'percentile90',
+                        title: 'Perc. 90%',
+                        sortable: true,
+                        align: 'left',
+                    },
+                    {
+                        field: 'percentile95',
+                        title: 'Perc. 95%',
+                        sortable: true,
+                        align: 'left',
+                    },
+                    {
+                        field: 'error',
+                        title: 'Error (%)',
+                        sortable: true,
+                        align: 'left',
+                    },
+                    {
+                        field: 'testcaseTPS',
+                        title: 'TPS',
+                        sortable: true,
+                        align: 'left',
+                    },
+                ],
+                treeShowField: 'name',
+                parentIdField: 'pid',
+                onPostBody: function () {
+                    var columns = $('#table').bootstrapTable('getOptions').columns
+                    if (columns && columns[0][1].visible) {
+                        $('#table').treegrid({
+                            treeColumn: 0,
+                            initialState: 'collapsed',
+                            onChange: function () {
+                                $('#table').bootstrapTable('resetView')
+                            }
+                        })
+                    }
+                }
+            });
+            const btn = document.querySelector('[title="Columns"]');
+            btn.addEventListener('click', e => {
+                if (btn.classList.contains("show")) {
+                    btn.classList.remove("show");
+                    btn.childNodes[3].setAttribute("style", "");
+                    btn.childNodes[3].classList.remove("show");
+                } else {
+                    btn.classList.add("show");
+                    btn.childNodes[3].classList.add("show");
+                    btn.childNodes[3].setAttribute("style", "position: absolute; transform: translate3d(-250px, 38px, 0px); top: 0px; left: 100px; will-change: transform;");
+                    btn.childNodes[3].setAttribute("x-placement", "bottom-end");
+                }
+            });
+
+        }
+        function detectFailures() {
+            var table = document.getElementById('table');
+            for (var i = 0, row; row = table.rows[i]; i++) {
+                for (var j = 0, col; col = row.cells[j]; j++) {
+                    if (table.rows[i].cells[2] == table.rows[i].cells[j]) {
+                        if (table.rows[i].cells[j].innerHTML > 0) {
+                            table.rows[i].style.backgroundColor = "#f7aeae;";
+                        }
+                    }
+                }
+            }
+        }
+
+        function timeArrayToSeconds(array) {
+            if (array.length == 1) {
+                return (parseInt(array[0])).toFixed(2);
+            }
+            if (array.length == 2) {
+                minutesToSeconds = (parseInt(array[0]) * 60);
+                seconds = parseInt(array[1])
+                return (minutesToSeconds + seconds).toFixed(2);
+            }
+            if (array.length == 3) {
+                hoursToSeconds = (parseInt(array[0]) * 60) * 60;
+                minutesToSeconds = parseInt(array[1]) * 60;
+                seconds = parseInt(array[2])
+                return (hoursToSeconds + minutesToSeconds + seconds).toFixed(2);
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color: #CCCCCC;">
+    <div style="background-color: #F6F8F9; margin: 1%; height: 95% !important;">
+        <div class="row" style="margin: 0% 1%;">
+            <div class="col-md-9">
+                <h2 class="mt-4">Totals</h2>
+            </div>
+            <div class="col-md-3" style="width: fit-content;">
+                <br>
+                <h6 id="startTime"></h6>
+            </div>
+        </div>
+        <div class="row" style="margin: 0% 1%;">
+            <div class="card text-center me-2" style="width: fit-content;">
+                <div class="card-bod-sm">
+                    <h4 id="duration"></h4>
+                    <p class="card-text">Duration</p>
+                </div>
+            </div>
+            <div class="card text-center me-2" style="width: fit-content;">
+                <div class="card-bod-sm">
+                    <h4 id="totalUsers"></h4>
+                    <p class="card-text">Total Users</p>
+                </div>
+            </div>
+            <div class="card text-center me-2" style="width: fit-content;">
+                <div class="card-bod-sm">
+                    <h4 id="totalHits"></h4>
+                    <p class="card-text">Total Hits</p>
+                </div>
+            </div>
+            <div class="card text-center me-2" style="width: fit-content;">
+                <div class="card-bod-sm">
+                    <h4 id="totalThroughputs"></h4>
+                    <p class="card-text">Total Throughput</p>
+                </div>
+            </div>
+            <div class="card text-center me-2" style="width: fit-content;">
+                <div class="card-bod-sm">
+                    <h4 id="averageHits"></h4>
+                    <p class="card-text">Avg Hits/s</p>
+                </div>
+            </div>
+            <div class="card text-center me-2" style="width: fit-content;">
+                <div class="card-bod-sm">
+                    <h4 id="averageThroughputs"></h4>
+                    <p class="card-text">Avg Throughput/s</p>
+                </div>
+            </div>
+            <div class="card text-center me-2" style="width: fit-content;">
+                <div class="card-bod-sm">
+                    <h4 id="consumedBandwidth"></h4>
+                    <p class="card-text">Bandwidth</p>
+                </div>
+            </div>
+            <div class="card text-center me-2" style="width: fit-content;">
+                <div class="card-bod-sm">
+                    <h4 id="testcasesPassed"></h4>
+                    <p class="card-text">Passed</p>
+                </div>
+            </div>
+            <div class="card text-center me-2" style="width: fit-content;">
+                <div class="card-bod-sm">
+                    <h4 id="testcasesFailed"></h4>
+                    <p class="card-text">Failed</p>
+                </div>
+            </div>
+            <div class="card text-center me-2" style="width: fit-content;">
+                <div class="card-bod-sm">
+                    <h4 id="testcasesErrorRate"></h4>
+                    <p class="card-text">Error rate</p>
+                </div>
+            </div>
+            <div class="card text-center me-2" style="width: fit-content;">
+                <div class="card-bod-sm">
+                    <h4 id="tps"></h4>
+                    <p class="card-text">Transactions/s</p>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin: 1%; margin-bottom: 20px;">
+            <h2>Subtotals</h2>
+            <table id="table" style="overflow-x: scroll"></table>
+            <br>
+            <br>
+        </div>
+    </div>
+</body>
+
+</html>
+
+                                </div>
+                            </div>
+                        </div>                                                                            
+                    </div>
+                </div>
+                <footer class="footer">         
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
